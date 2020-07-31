@@ -1,0 +1,739 @@
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided cores: 24
+Rules claiming more threads will be scaled down.
+Job counts:
+	count	jobs
+	1	all
+	60	bmat_plot_ext_HEK4
+	61
+
+[Fri Jul 31 01:36:08 2020]
+rule bmat_plot_ext_HEK4:
+    input: ../TargetSeq-MCF7-HEK4-BE4-rep1/cutoff_3/mapping/HK4-mcf-10_bwa_sort.bmat
+    output: ../all_plot/cutoff_3.ext50/TargetSeq-MCF7-HEK4-BE4-rep1_HK4-mcf-10_cutoff_3_indel.ext50.pdf
+    jobid: 229
+    wildcards: cutoff=3, lib=MCF7-HEK4-BE4-rep1, sample=HK4-mcf-10
+
+/home/zhaohuanan/miniconda3/envs/py27/bin/python ./program/plot-targetseq-bmat-V02.py -i ../TargetSeq-MCF7-HEK4-BE4-rep1/cutoff_3/mapping/HK4-mcf-10_bwa_sort.bmat -o ../all_plot/cutoff_3.ext50/TargetSeq-MCF7-HEK4-BE4-rep1_HK4-mcf-10_cutoff_3_indel.ext50.pdf --region_extend_length 50 --sgRNA GGCACTGCGGCTGGAGGTGGGGG
+
+[Fri Jul 31 01:36:08 2020]
+rule bmat_plot_ext_HEK4:
+    input: ../TargetSeq-MCF7-HEK4-BE4-rep2/cutoff_3/mapping/HK4-mcf-12_bwa_sort.bmat
+    output: ../all_plot/cutoff_3.ext50/TargetSeq-MCF7-HEK4-BE4-rep2_HK4-mcf-12_cutoff_3_indel.ext50.pdf
+    jobid: 91
+    wildcards: cutoff=3, lib=MCF7-HEK4-BE4-rep2, sample=HK4-mcf-12
+
+/home/zhaohuanan/miniconda3/envs/py27/bin/python ./program/plot-targetseq-bmat-V02.py -i ../TargetSeq-MCF7-HEK4-BE4-rep2/cutoff_3/mapping/HK4-mcf-12_bwa_sort.bmat -o ../all_plot/cutoff_3.ext50/TargetSeq-MCF7-HEK4-BE4-rep2_HK4-mcf-12_cutoff_3_indel.ext50.pdf --region_extend_length 50 --sgRNA GGCACTGCGGCTGGAGGTGGGGG
+
+[Fri Jul 31 01:36:08 2020]
+rule bmat_plot_ext_HEK4:
+    input: ../TargetSeq-MCF7-HEK4-BE4-rep2/cutoff_3/mapping/HK4-mcf-5_bwa_sort.bmat
+    output: ../all_plot/cutoff_3.ext50/TargetSeq-MCF7-HEK4-BE4-rep2_HK4-mcf-5_cutoff_3_indel.ext50.pdf
+    jobid: 293
+    wildcards: cutoff=3, lib=MCF7-HEK4-BE4-rep2, sample=HK4-mcf-5
+
+/home/zhaohuanan/miniconda3/envs/py27/bin/python ./program/plot-targetseq-bmat-V02.py -i ../TargetSeq-MCF7-HEK4-BE4-rep2/cutoff_3/mapping/HK4-mcf-5_bwa_sort.bmat -o ../all_plot/cutoff_3.ext50/TargetSeq-MCF7-HEK4-BE4-rep2_HK4-mcf-5_cutoff_3_indel.ext50.pdf --region_extend_length 50 --sgRNA GGCACTGCGGCTGGAGGTGGGGG
+
+[Fri Jul 31 01:36:08 2020]
+rule bmat_plot_ext_HEK4:
+    input: ../TargetSeq-293T-HEK4-BE4-rep2/cutoff_3/mapping/HK4-mcf-2_bwa_sort.bmat
+    output: ../all_plot/cutoff_3.ext50/TargetSeq-293T-HEK4-BE4-rep2_HK4-mcf-2_cutoff_3_indel.ext50.pdf
+    jobid: 198
+    wildcards: cutoff=3, lib=293T-HEK4-BE4-rep2, sample=HK4-mcf-2
+
+/home/zhaohuanan/miniconda3/envs/py27/bin/python ./program/plot-targetseq-bmat-V02.py -i ../TargetSeq-293T-HEK4-BE4-rep2/cutoff_3/mapping/HK4-mcf-2_bwa_sort.bmat -o ../all_plot/cutoff_3.ext50/TargetSeq-293T-HEK4-BE4-rep2_HK4-mcf-2_cutoff_3_indel.ext50.pdf --region_extend_length 50 --sgRNA GGCACTGCGGCTGGAGGTGGGGG
+
+[Fri Jul 31 01:36:08 2020]
+rule bmat_plot_ext_HEK4:
+    input: ../TargetSeq-293T-HEK4-BE4-rep2/cutoff_3/mapping/HK4-mcf-10_bwa_sort.bmat
+    output: ../all_plot/cutoff_3.ext50/TargetSeq-293T-HEK4-BE4-rep2_HK4-mcf-10_cutoff_3_indel.ext50.pdf
+    jobid: 142
+    wildcards: cutoff=3, lib=293T-HEK4-BE4-rep2, sample=HK4-mcf-10
+
+/home/zhaohuanan/miniconda3/envs/py27/bin/python ./program/plot-targetseq-bmat-V02.py -i ../TargetSeq-293T-HEK4-BE4-rep2/cutoff_3/mapping/HK4-mcf-10_bwa_sort.bmat -o ../all_plot/cutoff_3.ext50/TargetSeq-293T-HEK4-BE4-rep2_HK4-mcf-10_cutoff_3_indel.ext50.pdf --region_extend_length 50 --sgRNA GGCACTGCGGCTGGAGGTGGGGG
+
+[Fri Jul 31 01:36:08 2020]
+rule bmat_plot_ext_HEK4:
+    input: ../TargetSeq-293T-HEK4-BE4-rep2/cutoff_3/mapping/HK4-mcf-7_bwa_sort.bmat
+    output: ../all_plot/cutoff_3.ext50/TargetSeq-293T-HEK4-BE4-rep2_HK4-mcf-7_cutoff_3_indel.ext50.pdf
+    jobid: 234
+    wildcards: cutoff=3, lib=293T-HEK4-BE4-rep2, sample=HK4-mcf-7
+
+/home/zhaohuanan/miniconda3/envs/py27/bin/python ./program/plot-targetseq-bmat-V02.py -i ../TargetSeq-293T-HEK4-BE4-rep2/cutoff_3/mapping/HK4-mcf-7_bwa_sort.bmat -o ../all_plot/cutoff_3.ext50/TargetSeq-293T-HEK4-BE4-rep2_HK4-mcf-7_cutoff_3_indel.ext50.pdf --region_extend_length 50 --sgRNA GGCACTGCGGCTGGAGGTGGGGG
+
+[Fri Jul 31 01:36:08 2020]
+rule bmat_plot_ext_HEK4:
+    input: ../TargetSeq-293T-HEK4-BE4-rep1/cutoff_3/mapping/HK4-mcf-5_bwa_sort.bmat
+    output: ../all_plot/cutoff_3.ext50/TargetSeq-293T-HEK4-BE4-rep1_HK4-mcf-5_cutoff_3_indel.ext50.pdf
+    jobid: 158
+    wildcards: cutoff=3, lib=293T-HEK4-BE4-rep1, sample=HK4-mcf-5
+
+/home/zhaohuanan/miniconda3/envs/py27/bin/python ./program/plot-targetseq-bmat-V02.py -i ../TargetSeq-293T-HEK4-BE4-rep1/cutoff_3/mapping/HK4-mcf-5_bwa_sort.bmat -o ../all_plot/cutoff_3.ext50/TargetSeq-293T-HEK4-BE4-rep1_HK4-mcf-5_cutoff_3_indel.ext50.pdf --region_extend_length 50 --sgRNA GGCACTGCGGCTGGAGGTGGGGG
+
+[Fri Jul 31 01:36:08 2020]
+rule bmat_plot_ext_HEK4:
+    input: ../TargetSeq-293T-HEK4-BE4-rep1/cutoff_3/mapping/HK4-mcf-12_bwa_sort.bmat
+    output: ../all_plot/cutoff_3.ext50/TargetSeq-293T-HEK4-BE4-rep1_HK4-mcf-12_cutoff_3_indel.ext50.pdf
+    jobid: 339
+    wildcards: cutoff=3, lib=293T-HEK4-BE4-rep1, sample=HK4-mcf-12
+
+/home/zhaohuanan/miniconda3/envs/py27/bin/python ./program/plot-targetseq-bmat-V02.py -i ../TargetSeq-293T-HEK4-BE4-rep1/cutoff_3/mapping/HK4-mcf-12_bwa_sort.bmat -o ../all_plot/cutoff_3.ext50/TargetSeq-293T-HEK4-BE4-rep1_HK4-mcf-12_cutoff_3_indel.ext50.pdf --region_extend_length 50 --sgRNA GGCACTGCGGCTGGAGGTGGGGG
+
+[Fri Jul 31 01:36:08 2020]
+rule bmat_plot_ext_HEK4:
+    input: ../TargetSeq-293T-HEK4-BE4-rep1/cutoff_3/mapping/HK4-mcf-2_bwa_sort.bmat
+    output: ../all_plot/cutoff_3.ext50/TargetSeq-293T-HEK4-BE4-rep1_HK4-mcf-2_cutoff_3_indel.ext50.pdf
+    jobid: 220
+    wildcards: cutoff=3, lib=293T-HEK4-BE4-rep1, sample=HK4-mcf-2
+
+/home/zhaohuanan/miniconda3/envs/py27/bin/python ./program/plot-targetseq-bmat-V02.py -i ../TargetSeq-293T-HEK4-BE4-rep1/cutoff_3/mapping/HK4-mcf-2_bwa_sort.bmat -o ../all_plot/cutoff_3.ext50/TargetSeq-293T-HEK4-BE4-rep1_HK4-mcf-2_cutoff_3_indel.ext50.pdf --region_extend_length 50 --sgRNA GGCACTGCGGCTGGAGGTGGGGG
+
+[Fri Jul 31 01:36:08 2020]
+rule bmat_plot_ext_HEK4:
+    input: ../TargetSeq-293T-HEK4-BE4-rep1/cutoff_3/mapping/HK4-mcf-10_bwa_sort.bmat
+    output: ../all_plot/cutoff_3.ext50/TargetSeq-293T-HEK4-BE4-rep1_HK4-mcf-10_cutoff_3_indel.ext50.pdf
+    jobid: 109
+    wildcards: cutoff=3, lib=293T-HEK4-BE4-rep1, sample=HK4-mcf-10
+
+/home/zhaohuanan/miniconda3/envs/py27/bin/python ./program/plot-targetseq-bmat-V02.py -i ../TargetSeq-293T-HEK4-BE4-rep1/cutoff_3/mapping/HK4-mcf-10_bwa_sort.bmat -o ../all_plot/cutoff_3.ext50/TargetSeq-293T-HEK4-BE4-rep1_HK4-mcf-10_cutoff_3_indel.ext50.pdf --region_extend_length 50 --sgRNA GGCACTGCGGCTGGAGGTGGGGG
+
+[Fri Jul 31 01:36:09 2020]
+rule bmat_plot_ext_HEK4:
+    input: ../TargetSeq-MCF7-HEK4-BE4-rep2/cutoff_3/mapping/HK4-mcf-10_bwa_sort.bmat
+    output: ../all_plot/cutoff_3.ext50/TargetSeq-MCF7-HEK4-BE4-rep2_HK4-mcf-10_cutoff_3_indel.ext50.pdf
+    jobid: 357
+    wildcards: cutoff=3, lib=MCF7-HEK4-BE4-rep2, sample=HK4-mcf-10
+
+/home/zhaohuanan/miniconda3/envs/py27/bin/python ./program/plot-targetseq-bmat-V02.py -i ../TargetSeq-MCF7-HEK4-BE4-rep2/cutoff_3/mapping/HK4-mcf-10_bwa_sort.bmat -o ../all_plot/cutoff_3.ext50/TargetSeq-MCF7-HEK4-BE4-rep2_HK4-mcf-10_cutoff_3_indel.ext50.pdf --region_extend_length 50 --sgRNA GGCACTGCGGCTGGAGGTGGGGG
+
+[Fri Jul 31 01:36:09 2020]
+rule bmat_plot_ext_HEK4:
+    input: ../TargetSeq-293T-HEK4-BE4-rep1/cutoff_3/mapping/HK4-mcf-7_bwa_sort.bmat
+    output: ../all_plot/cutoff_3.ext50/TargetSeq-293T-HEK4-BE4-rep1_HK4-mcf-7_cutoff_3_indel.ext50.pdf
+    jobid: 193
+    wildcards: cutoff=3, lib=293T-HEK4-BE4-rep1, sample=HK4-mcf-7
+
+/home/zhaohuanan/miniconda3/envs/py27/bin/python ./program/plot-targetseq-bmat-V02.py -i ../TargetSeq-293T-HEK4-BE4-rep1/cutoff_3/mapping/HK4-mcf-7_bwa_sort.bmat -o ../all_plot/cutoff_3.ext50/TargetSeq-293T-HEK4-BE4-rep1_HK4-mcf-7_cutoff_3_indel.ext50.pdf --region_extend_length 50 --sgRNA GGCACTGCGGCTGGAGGTGGGGG
+
+[Fri Jul 31 01:36:09 2020]
+rule bmat_plot_ext_HEK4:
+    input: ../TargetSeq-293T-HEK4-BE4-rep2/cutoff_3/mapping/HK4-mcf-5_bwa_sort.bmat
+    output: ../all_plot/cutoff_3.ext50/TargetSeq-293T-HEK4-BE4-rep2_HK4-mcf-5_cutoff_3_indel.ext50.pdf
+    jobid: 15
+    wildcards: cutoff=3, lib=293T-HEK4-BE4-rep2, sample=HK4-mcf-5
+
+/home/zhaohuanan/miniconda3/envs/py27/bin/python ./program/plot-targetseq-bmat-V02.py -i ../TargetSeq-293T-HEK4-BE4-rep2/cutoff_3/mapping/HK4-mcf-5_bwa_sort.bmat -o ../all_plot/cutoff_3.ext50/TargetSeq-293T-HEK4-BE4-rep2_HK4-mcf-5_cutoff_3_indel.ext50.pdf --region_extend_length 50 --sgRNA GGCACTGCGGCTGGAGGTGGGGG
+
+[Fri Jul 31 01:36:09 2020]
+rule bmat_plot_ext_HEK4:
+    input: ../TargetSeq-293T-HEK4-BE4-rep2/cutoff_3/mapping/HK4-mcf-12_bwa_sort.bmat
+    output: ../all_plot/cutoff_3.ext50/TargetSeq-293T-HEK4-BE4-rep2_HK4-mcf-12_cutoff_3_indel.ext50.pdf
+    jobid: 334
+    wildcards: cutoff=3, lib=293T-HEK4-BE4-rep2, sample=HK4-mcf-12
+
+/home/zhaohuanan/miniconda3/envs/py27/bin/python ./program/plot-targetseq-bmat-V02.py -i ../TargetSeq-293T-HEK4-BE4-rep2/cutoff_3/mapping/HK4-mcf-12_bwa_sort.bmat -o ../all_plot/cutoff_3.ext50/TargetSeq-293T-HEK4-BE4-rep2_HK4-mcf-12_cutoff_3_indel.ext50.pdf --region_extend_length 50 --sgRNA GGCACTGCGGCTGGAGGTGGGGG
+
+[Fri Jul 31 01:36:09 2020]
+rule bmat_plot_ext_HEK4:
+    input: ../TargetSeq-MCF7-HEK4-BE4-rep1/cutoff_3/mapping/HK4-mcf-5_bwa_sort.bmat
+    output: ../all_plot/cutoff_3.ext50/TargetSeq-MCF7-HEK4-BE4-rep1_HK4-mcf-5_cutoff_3_indel.ext50.pdf
+    jobid: 45
+    wildcards: cutoff=3, lib=MCF7-HEK4-BE4-rep1, sample=HK4-mcf-5
+
+/home/zhaohuanan/miniconda3/envs/py27/bin/python ./program/plot-targetseq-bmat-V02.py -i ../TargetSeq-MCF7-HEK4-BE4-rep1/cutoff_3/mapping/HK4-mcf-5_bwa_sort.bmat -o ../all_plot/cutoff_3.ext50/TargetSeq-MCF7-HEK4-BE4-rep1_HK4-mcf-5_cutoff_3_indel.ext50.pdf --region_extend_length 50 --sgRNA GGCACTGCGGCTGGAGGTGGGGG
+
+[Fri Jul 31 01:36:09 2020]
+rule bmat_plot_ext_HEK4:
+    input: ../TargetSeq-MCF7-HEK4-BE4-rep1/cutoff_3/mapping/HK4-mcf-12_bwa_sort.bmat
+    output: ../all_plot/cutoff_3.ext50/TargetSeq-MCF7-HEK4-BE4-rep1_HK4-mcf-12_cutoff_3_indel.ext50.pdf
+    jobid: 135
+    wildcards: cutoff=3, lib=MCF7-HEK4-BE4-rep1, sample=HK4-mcf-12
+
+/home/zhaohuanan/miniconda3/envs/py27/bin/python ./program/plot-targetseq-bmat-V02.py -i ../TargetSeq-MCF7-HEK4-BE4-rep1/cutoff_3/mapping/HK4-mcf-12_bwa_sort.bmat -o ../all_plot/cutoff_3.ext50/TargetSeq-MCF7-HEK4-BE4-rep1_HK4-mcf-12_cutoff_3_indel.ext50.pdf --region_extend_length 50 --sgRNA GGCACTGCGGCTGGAGGTGGGGG
+
+[Fri Jul 31 01:36:09 2020]
+rule bmat_plot_ext_HEK4:
+    input: ../TargetSeq-MCF7-HEK4-BE4-rep1/cutoff_3/mapping/HK4-mcf-1_bwa_sort.bmat
+    output: ../all_plot/cutoff_3.ext50/TargetSeq-MCF7-HEK4-BE4-rep1_HK4-mcf-1_cutoff_3_indel.ext50.pdf
+    jobid: 290
+    wildcards: cutoff=3, lib=MCF7-HEK4-BE4-rep1, sample=HK4-mcf-1
+
+/home/zhaohuanan/miniconda3/envs/py27/bin/python ./program/plot-targetseq-bmat-V02.py -i ../TargetSeq-MCF7-HEK4-BE4-rep1/cutoff_3/mapping/HK4-mcf-1_bwa_sort.bmat -o ../all_plot/cutoff_3.ext50/TargetSeq-MCF7-HEK4-BE4-rep1_HK4-mcf-1_cutoff_3_indel.ext50.pdf --region_extend_length 50 --sgRNA GGCACTGCGGCTGGAGGTGGGGG
+
+[Fri Jul 31 01:36:09 2020]
+rule bmat_plot_ext_HEK4:
+    input: ../TargetSeq-MCF7-HEK4-BE4-rep2/cutoff_3/mapping/HK4-mcf-11_bwa_sort.bmat
+    output: ../all_plot/cutoff_3.ext50/TargetSeq-MCF7-HEK4-BE4-rep2_HK4-mcf-11_cutoff_3_indel.ext50.pdf
+    jobid: 118
+    wildcards: cutoff=3, lib=MCF7-HEK4-BE4-rep2, sample=HK4-mcf-11
+
+/home/zhaohuanan/miniconda3/envs/py27/bin/python ./program/plot-targetseq-bmat-V02.py -i ../TargetSeq-MCF7-HEK4-BE4-rep2/cutoff_3/mapping/HK4-mcf-11_bwa_sort.bmat -o ../all_plot/cutoff_3.ext50/TargetSeq-MCF7-HEK4-BE4-rep2_HK4-mcf-11_cutoff_3_indel.ext50.pdf --region_extend_length 50 --sgRNA GGCACTGCGGCTGGAGGTGGGGG
+
+[Fri Jul 31 01:36:09 2020]
+rule bmat_plot_ext_HEK4:
+    input: ../TargetSeq-293T-HEK4-BE4-rep2/cutoff_3/mapping/HK4-mcf-1_bwa_sort.bmat
+    output: ../all_plot/cutoff_3.ext50/TargetSeq-293T-HEK4-BE4-rep2_HK4-mcf-1_cutoff_3_indel.ext50.pdf
+    jobid: 360
+    wildcards: cutoff=3, lib=293T-HEK4-BE4-rep2, sample=HK4-mcf-1
+
+/home/zhaohuanan/miniconda3/envs/py27/bin/python ./program/plot-targetseq-bmat-V02.py -i ../TargetSeq-293T-HEK4-BE4-rep2/cutoff_3/mapping/HK4-mcf-1_bwa_sort.bmat -o ../all_plot/cutoff_3.ext50/TargetSeq-293T-HEK4-BE4-rep2_HK4-mcf-1_cutoff_3_indel.ext50.pdf --region_extend_length 50 --sgRNA GGCACTGCGGCTGGAGGTGGGGG
+
+[Fri Jul 31 01:36:09 2020]
+rule bmat_plot_ext_HEK4:
+    input: ../TargetSeq-293T-HEK4-BE4-rep1/cutoff_3/mapping/HK4-mcf-11_bwa_sort.bmat
+    output: ../all_plot/cutoff_3.ext50/TargetSeq-293T-HEK4-BE4-rep1_HK4-mcf-11_cutoff_3_indel.ext50.pdf
+    jobid: 278
+    wildcards: cutoff=3, lib=293T-HEK4-BE4-rep1, sample=HK4-mcf-11
+
+/home/zhaohuanan/miniconda3/envs/py27/bin/python ./program/plot-targetseq-bmat-V02.py -i ../TargetSeq-293T-HEK4-BE4-rep1/cutoff_3/mapping/HK4-mcf-11_bwa_sort.bmat -o ../all_plot/cutoff_3.ext50/TargetSeq-293T-HEK4-BE4-rep1_HK4-mcf-11_cutoff_3_indel.ext50.pdf --region_extend_length 50 --sgRNA GGCACTGCGGCTGGAGGTGGGGG
+
+[Fri Jul 31 01:36:10 2020]
+rule bmat_plot_ext_HEK4:
+    input: ../TargetSeq-293T-HEK4-BE4-rep1/cutoff_3/mapping/HK4-mcf-1_bwa_sort.bmat
+    output: ../all_plot/cutoff_3.ext50/TargetSeq-293T-HEK4-BE4-rep1_HK4-mcf-1_cutoff_3_indel.ext50.pdf
+    jobid: 320
+    wildcards: cutoff=3, lib=293T-HEK4-BE4-rep1, sample=HK4-mcf-1
+
+/home/zhaohuanan/miniconda3/envs/py27/bin/python ./program/plot-targetseq-bmat-V02.py -i ../TargetSeq-293T-HEK4-BE4-rep1/cutoff_3/mapping/HK4-mcf-1_bwa_sort.bmat -o ../all_plot/cutoff_3.ext50/TargetSeq-293T-HEK4-BE4-rep1_HK4-mcf-1_cutoff_3_indel.ext50.pdf --region_extend_length 50 --sgRNA GGCACTGCGGCTGGAGGTGGGGG
+
+[Fri Jul 31 01:36:10 2020]
+rule bmat_plot_ext_HEK4:
+    input: ../TargetSeq-MCF7-HEK4-BE4-rep2/cutoff_3/mapping/HK4-mcf-1_bwa_sort.bmat
+    output: ../all_plot/cutoff_3.ext50/TargetSeq-MCF7-HEK4-BE4-rep2_HK4-mcf-1_cutoff_3_indel.ext50.pdf
+    jobid: 41
+    wildcards: cutoff=3, lib=MCF7-HEK4-BE4-rep2, sample=HK4-mcf-1
+
+/home/zhaohuanan/miniconda3/envs/py27/bin/python ./program/plot-targetseq-bmat-V02.py -i ../TargetSeq-MCF7-HEK4-BE4-rep2/cutoff_3/mapping/HK4-mcf-1_bwa_sort.bmat -o ../all_plot/cutoff_3.ext50/TargetSeq-MCF7-HEK4-BE4-rep2_HK4-mcf-1_cutoff_3_indel.ext50.pdf --region_extend_length 50 --sgRNA GGCACTGCGGCTGGAGGTGGGGG
+
+[Fri Jul 31 01:36:10 2020]
+rule bmat_plot_ext_HEK4:
+    input: ../TargetSeq-293T-HEK4-BE4-rep2/cutoff_3/mapping/HK4-mcf-11_bwa_sort.bmat
+    output: ../all_plot/cutoff_3.ext50/TargetSeq-293T-HEK4-BE4-rep2_HK4-mcf-11_cutoff_3_indel.ext50.pdf
+    jobid: 50
+    wildcards: cutoff=3, lib=293T-HEK4-BE4-rep2, sample=HK4-mcf-11
+
+/home/zhaohuanan/miniconda3/envs/py27/bin/python ./program/plot-targetseq-bmat-V02.py -i ../TargetSeq-293T-HEK4-BE4-rep2/cutoff_3/mapping/HK4-mcf-11_bwa_sort.bmat -o ../all_plot/cutoff_3.ext50/TargetSeq-293T-HEK4-BE4-rep2_HK4-mcf-11_cutoff_3_indel.ext50.pdf --region_extend_length 50 --sgRNA GGCACTGCGGCTGGAGGTGGGGG
+
+[Fri Jul 31 01:36:10 2020]
+rule bmat_plot_ext_HEK4:
+    input: ../TargetSeq-MCF7-HEK4-BE4-rep1/cutoff_3/mapping/HK4-mcf-11_bwa_sort.bmat
+    output: ../all_plot/cutoff_3.ext50/TargetSeq-MCF7-HEK4-BE4-rep1_HK4-mcf-11_cutoff_3_indel.ext50.pdf
+    jobid: 358
+    wildcards: cutoff=3, lib=MCF7-HEK4-BE4-rep1, sample=HK4-mcf-11
+
+/home/zhaohuanan/miniconda3/envs/py27/bin/python ./program/plot-targetseq-bmat-V02.py -i ../TargetSeq-MCF7-HEK4-BE4-rep1/cutoff_3/mapping/HK4-mcf-11_bwa_sort.bmat -o ../all_plot/cutoff_3.ext50/TargetSeq-MCF7-HEK4-BE4-rep1_HK4-mcf-11_cutoff_3_indel.ext50.pdf --region_extend_length 50 --sgRNA GGCACTGCGGCTGGAGGTGGGGG
+[Fri Jul 31 01:38:59 2020]
+Finished job 142.
+1 of 61 steps (2%) done
+
+[Fri Jul 31 01:38:59 2020]
+rule bmat_plot_ext_HEK4:
+    input: ../TargetSeq-293T-HEK4-BE4-rep2/cutoff_3/mapping/HK4-mcf-8_bwa_sort.bmat
+    output: ../all_plot/cutoff_3.ext50/TargetSeq-293T-HEK4-BE4-rep2_HK4-mcf-8_cutoff_3_indel.ext50.pdf
+    jobid: 106
+    wildcards: cutoff=3, lib=293T-HEK4-BE4-rep2, sample=HK4-mcf-8
+
+/home/zhaohuanan/miniconda3/envs/py27/bin/python ./program/plot-targetseq-bmat-V02.py -i ../TargetSeq-293T-HEK4-BE4-rep2/cutoff_3/mapping/HK4-mcf-8_bwa_sort.bmat -o ../all_plot/cutoff_3.ext50/TargetSeq-293T-HEK4-BE4-rep2_HK4-mcf-8_cutoff_3_indel.ext50.pdf --region_extend_length 50 --sgRNA GGCACTGCGGCTGGAGGTGGGGG
+[Fri Jul 31 01:38:59 2020]
+Finished job 234.
+2 of 61 steps (3%) done
+
+[Fri Jul 31 01:38:59 2020]
+rule bmat_plot_ext_HEK4:
+    input: ../TargetSeq-293T-HEK4-BE4-rep2/cutoff_3/mapping/HK4-mcf-6_bwa_sort.bmat
+    output: ../all_plot/cutoff_3.ext50/TargetSeq-293T-HEK4-BE4-rep2_HK4-mcf-6_cutoff_3_indel.ext50.pdf
+    jobid: 287
+    wildcards: cutoff=3, lib=293T-HEK4-BE4-rep2, sample=HK4-mcf-6
+
+/home/zhaohuanan/miniconda3/envs/py27/bin/python ./program/plot-targetseq-bmat-V02.py -i ../TargetSeq-293T-HEK4-BE4-rep2/cutoff_3/mapping/HK4-mcf-6_bwa_sort.bmat -o ../all_plot/cutoff_3.ext50/TargetSeq-293T-HEK4-BE4-rep2_HK4-mcf-6_cutoff_3_indel.ext50.pdf --region_extend_length 50 --sgRNA GGCACTGCGGCTGGAGGTGGGGG
+[Fri Jul 31 01:38:59 2020]
+Finished job 109.
+3 of 61 steps (5%) done
+
+[Fri Jul 31 01:38:59 2020]
+rule bmat_plot_ext_HEK4:
+    input: ../TargetSeq-MCF7-HEK4-BE4-rep1/cutoff_3/mapping/HK4-mcf-8_bwa_sort.bmat
+    output: ../all_plot/cutoff_3.ext50/TargetSeq-MCF7-HEK4-BE4-rep1_HK4-mcf-8_cutoff_3_indel.ext50.pdf
+    jobid: 251
+    wildcards: cutoff=3, lib=MCF7-HEK4-BE4-rep1, sample=HK4-mcf-8
+
+/home/zhaohuanan/miniconda3/envs/py27/bin/python ./program/plot-targetseq-bmat-V02.py -i ../TargetSeq-MCF7-HEK4-BE4-rep1/cutoff_3/mapping/HK4-mcf-8_bwa_sort.bmat -o ../all_plot/cutoff_3.ext50/TargetSeq-MCF7-HEK4-BE4-rep1_HK4-mcf-8_cutoff_3_indel.ext50.pdf --region_extend_length 50 --sgRNA GGCACTGCGGCTGGAGGTGGGGG
+[Fri Jul 31 01:39:00 2020]
+Finished job 360.
+4 of 61 steps (7%) done
+
+[Fri Jul 31 01:39:00 2020]
+rule bmat_plot_ext_HEK4:
+    input: ../TargetSeq-293T-HEK4-BE4-rep1/cutoff_3/mapping/HK4-mcf-8_bwa_sort.bmat
+    output: ../all_plot/cutoff_3.ext50/TargetSeq-293T-HEK4-BE4-rep1_HK4-mcf-8_cutoff_3_indel.ext50.pdf
+    jobid: 8
+    wildcards: cutoff=3, lib=293T-HEK4-BE4-rep1, sample=HK4-mcf-8
+
+/home/zhaohuanan/miniconda3/envs/py27/bin/python ./program/plot-targetseq-bmat-V02.py -i ../TargetSeq-293T-HEK4-BE4-rep1/cutoff_3/mapping/HK4-mcf-8_bwa_sort.bmat -o ../all_plot/cutoff_3.ext50/TargetSeq-293T-HEK4-BE4-rep1_HK4-mcf-8_cutoff_3_indel.ext50.pdf --region_extend_length 50 --sgRNA GGCACTGCGGCTGGAGGTGGGGG
+[Fri Jul 31 01:39:01 2020]
+Finished job 135.
+5 of 61 steps (8%) done
+
+[Fri Jul 31 01:39:01 2020]
+rule bmat_plot_ext_HEK4:
+    input: ../TargetSeq-MCF7-HEK4-BE4-rep1/cutoff_3/mapping/HK4-mcf-15_bwa_sort.bmat
+    output: ../all_plot/cutoff_3.ext50/TargetSeq-MCF7-HEK4-BE4-rep1_HK4-mcf-15_cutoff_3_indel.ext50.pdf
+    jobid: 140
+    wildcards: cutoff=3, lib=MCF7-HEK4-BE4-rep1, sample=HK4-mcf-15
+
+/home/zhaohuanan/miniconda3/envs/py27/bin/python ./program/plot-targetseq-bmat-V02.py -i ../TargetSeq-MCF7-HEK4-BE4-rep1/cutoff_3/mapping/HK4-mcf-15_bwa_sort.bmat -o ../all_plot/cutoff_3.ext50/TargetSeq-MCF7-HEK4-BE4-rep1_HK4-mcf-15_cutoff_3_indel.ext50.pdf --region_extend_length 50 --sgRNA GGCACTGCGGCTGGAGGTGGGGG
+[Fri Jul 31 01:39:01 2020]
+Finished job 320.
+6 of 61 steps (10%) done
+
+[Fri Jul 31 01:39:01 2020]
+rule bmat_plot_ext_HEK4:
+    input: ../TargetSeq-MCF7-HEK4-BE4-rep2/cutoff_3/mapping/HK4-mcf-15_bwa_sort.bmat
+    output: ../all_plot/cutoff_3.ext50/TargetSeq-MCF7-HEK4-BE4-rep2_HK4-mcf-15_cutoff_3_indel.ext50.pdf
+    jobid: 188
+    wildcards: cutoff=3, lib=MCF7-HEK4-BE4-rep2, sample=HK4-mcf-15
+
+/home/zhaohuanan/miniconda3/envs/py27/bin/python ./program/plot-targetseq-bmat-V02.py -i ../TargetSeq-MCF7-HEK4-BE4-rep2/cutoff_3/mapping/HK4-mcf-15_bwa_sort.bmat -o ../all_plot/cutoff_3.ext50/TargetSeq-MCF7-HEK4-BE4-rep2_HK4-mcf-15_cutoff_3_indel.ext50.pdf --region_extend_length 50 --sgRNA GGCACTGCGGCTGGAGGTGGGGG
+[Fri Jul 31 01:39:01 2020]
+Finished job 15.
+7 of 61 steps (11%) done
+
+[Fri Jul 31 01:39:01 2020]
+rule bmat_plot_ext_HEK4:
+    input: ../TargetSeq-MCF7-HEK4-BE4-rep1/cutoff_3/mapping/HK4-mcf-7_bwa_sort.bmat
+    output: ../all_plot/cutoff_3.ext50/TargetSeq-MCF7-HEK4-BE4-rep1_HK4-mcf-7_cutoff_3_indel.ext50.pdf
+    jobid: 89
+    wildcards: cutoff=3, lib=MCF7-HEK4-BE4-rep1, sample=HK4-mcf-7
+
+/home/zhaohuanan/miniconda3/envs/py27/bin/python ./program/plot-targetseq-bmat-V02.py -i ../TargetSeq-MCF7-HEK4-BE4-rep1/cutoff_3/mapping/HK4-mcf-7_bwa_sort.bmat -o ../all_plot/cutoff_3.ext50/TargetSeq-MCF7-HEK4-BE4-rep1_HK4-mcf-7_cutoff_3_indel.ext50.pdf --region_extend_length 50 --sgRNA GGCACTGCGGCTGGAGGTGGGGG
+[Fri Jul 31 01:39:02 2020]
+Finished job 357.
+8 of 61 steps (13%) done
+
+[Fri Jul 31 01:39:02 2020]
+rule bmat_plot_ext_HEK4:
+    input: ../TargetSeq-MCF7-HEK4-BE4-rep2/cutoff_3/mapping/HK4-mcf-8_bwa_sort.bmat
+    output: ../all_plot/cutoff_3.ext50/TargetSeq-MCF7-HEK4-BE4-rep2_HK4-mcf-8_cutoff_3_indel.ext50.pdf
+    jobid: 176
+    wildcards: cutoff=3, lib=MCF7-HEK4-BE4-rep2, sample=HK4-mcf-8
+
+/home/zhaohuanan/miniconda3/envs/py27/bin/python ./program/plot-targetseq-bmat-V02.py -i ../TargetSeq-MCF7-HEK4-BE4-rep2/cutoff_3/mapping/HK4-mcf-8_bwa_sort.bmat -o ../all_plot/cutoff_3.ext50/TargetSeq-MCF7-HEK4-BE4-rep2_HK4-mcf-8_cutoff_3_indel.ext50.pdf --region_extend_length 50 --sgRNA GGCACTGCGGCTGGAGGTGGGGG
+[Fri Jul 31 01:39:02 2020]
+Finished job 45.
+9 of 61 steps (15%) done
+
+[Fri Jul 31 01:39:02 2020]
+rule bmat_plot_ext_HEK4:
+    input: ../TargetSeq-293T-HEK4-BE4-rep1/cutoff_3/mapping/HK4-mcf-6_bwa_sort.bmat
+    output: ../all_plot/cutoff_3.ext50/TargetSeq-293T-HEK4-BE4-rep1_HK4-mcf-6_cutoff_3_indel.ext50.pdf
+    jobid: 60
+    wildcards: cutoff=3, lib=293T-HEK4-BE4-rep1, sample=HK4-mcf-6
+
+/home/zhaohuanan/miniconda3/envs/py27/bin/python ./program/plot-targetseq-bmat-V02.py -i ../TargetSeq-293T-HEK4-BE4-rep1/cutoff_3/mapping/HK4-mcf-6_bwa_sort.bmat -o ../all_plot/cutoff_3.ext50/TargetSeq-293T-HEK4-BE4-rep1_HK4-mcf-6_cutoff_3_indel.ext50.pdf --region_extend_length 50 --sgRNA GGCACTGCGGCTGGAGGTGGGGG
+[Fri Jul 31 01:39:02 2020]
+Finished job 193.
+10 of 61 steps (16%) done
+
+[Fri Jul 31 01:39:02 2020]
+rule bmat_plot_ext_HEK4:
+    input: ../TargetSeq-MCF7-HEK4-BE4-rep2/cutoff_3/mapping/HK4-mcf-7_bwa_sort.bmat
+    output: ../all_plot/cutoff_3.ext50/TargetSeq-MCF7-HEK4-BE4-rep2_HK4-mcf-7_cutoff_3_indel.ext50.pdf
+    jobid: 143
+    wildcards: cutoff=3, lib=MCF7-HEK4-BE4-rep2, sample=HK4-mcf-7
+
+/home/zhaohuanan/miniconda3/envs/py27/bin/python ./program/plot-targetseq-bmat-V02.py -i ../TargetSeq-MCF7-HEK4-BE4-rep2/cutoff_3/mapping/HK4-mcf-7_bwa_sort.bmat -o ../all_plot/cutoff_3.ext50/TargetSeq-MCF7-HEK4-BE4-rep2_HK4-mcf-7_cutoff_3_indel.ext50.pdf --region_extend_length 50 --sgRNA GGCACTGCGGCTGGAGGTGGGGG
+[Fri Jul 31 01:39:03 2020]
+Finished job 290.
+11 of 61 steps (18%) done
+
+[Fri Jul 31 01:39:03 2020]
+rule bmat_plot_ext_HEK4:
+    input: ../TargetSeq-293T-HEK4-BE4-rep2/cutoff_3/mapping/HK4-mcf-3_bwa_sort.bmat
+    output: ../all_plot/cutoff_3.ext50/TargetSeq-293T-HEK4-BE4-rep2_HK4-mcf-3_cutoff_3_indel.ext50.pdf
+    jobid: 96
+    wildcards: cutoff=3, lib=293T-HEK4-BE4-rep2, sample=HK4-mcf-3
+
+/home/zhaohuanan/miniconda3/envs/py27/bin/python ./program/plot-targetseq-bmat-V02.py -i ../TargetSeq-293T-HEK4-BE4-rep2/cutoff_3/mapping/HK4-mcf-3_bwa_sort.bmat -o ../all_plot/cutoff_3.ext50/TargetSeq-293T-HEK4-BE4-rep2_HK4-mcf-3_cutoff_3_indel.ext50.pdf --region_extend_length 50 --sgRNA GGCACTGCGGCTGGAGGTGGGGG
+[Fri Jul 31 01:39:04 2020]
+Finished job 358.
+12 of 61 steps (20%) done
+
+[Fri Jul 31 01:39:04 2020]
+rule bmat_plot_ext_HEK4:
+    input: ../TargetSeq-MCF7-HEK4-BE4-rep1/cutoff_3/mapping/HK4-mcf-2_bwa_sort.bmat
+    output: ../all_plot/cutoff_3.ext50/TargetSeq-MCF7-HEK4-BE4-rep1_HK4-mcf-2_cutoff_3_indel.ext50.pdf
+    jobid: 16
+    wildcards: cutoff=3, lib=MCF7-HEK4-BE4-rep1, sample=HK4-mcf-2
+
+/home/zhaohuanan/miniconda3/envs/py27/bin/python ./program/plot-targetseq-bmat-V02.py -i ../TargetSeq-MCF7-HEK4-BE4-rep1/cutoff_3/mapping/HK4-mcf-2_bwa_sort.bmat -o ../all_plot/cutoff_3.ext50/TargetSeq-MCF7-HEK4-BE4-rep1_HK4-mcf-2_cutoff_3_indel.ext50.pdf --region_extend_length 50 --sgRNA GGCACTGCGGCTGGAGGTGGGGG
+[Fri Jul 31 01:39:05 2020]
+Finished job 334.
+13 of 61 steps (21%) done
+
+[Fri Jul 31 01:39:05 2020]
+rule bmat_plot_ext_HEK4:
+    input: ../TargetSeq-MCF7-HEK4-BE4-rep2/cutoff_3/mapping/HK4-mcf-2_bwa_sort.bmat
+    output: ../all_plot/cutoff_3.ext50/TargetSeq-MCF7-HEK4-BE4-rep2_HK4-mcf-2_cutoff_3_indel.ext50.pdf
+    jobid: 154
+    wildcards: cutoff=3, lib=MCF7-HEK4-BE4-rep2, sample=HK4-mcf-2
+
+/home/zhaohuanan/miniconda3/envs/py27/bin/python ./program/plot-targetseq-bmat-V02.py -i ../TargetSeq-MCF7-HEK4-BE4-rep2/cutoff_3/mapping/HK4-mcf-2_bwa_sort.bmat -o ../all_plot/cutoff_3.ext50/TargetSeq-MCF7-HEK4-BE4-rep2_HK4-mcf-2_cutoff_3_indel.ext50.pdf --region_extend_length 50 --sgRNA GGCACTGCGGCTGGAGGTGGGGG
+[Fri Jul 31 01:39:07 2020]
+Finished job 220.
+14 of 61 steps (23%) done
+
+[Fri Jul 31 01:39:07 2020]
+rule bmat_plot_ext_HEK4:
+    input: ../TargetSeq-293T-HEK4-BE4-rep1/cutoff_3/mapping/HK4-mcf-3_bwa_sort.bmat
+    output: ../all_plot/cutoff_3.ext50/TargetSeq-293T-HEK4-BE4-rep1_HK4-mcf-3_cutoff_3_indel.ext50.pdf
+    jobid: 163
+    wildcards: cutoff=3, lib=293T-HEK4-BE4-rep1, sample=HK4-mcf-3
+
+/home/zhaohuanan/miniconda3/envs/py27/bin/python ./program/plot-targetseq-bmat-V02.py -i ../TargetSeq-293T-HEK4-BE4-rep1/cutoff_3/mapping/HK4-mcf-3_bwa_sort.bmat -o ../all_plot/cutoff_3.ext50/TargetSeq-293T-HEK4-BE4-rep1_HK4-mcf-3_cutoff_3_indel.ext50.pdf --region_extend_length 50 --sgRNA GGCACTGCGGCTGGAGGTGGGGG
+[Fri Jul 31 01:39:08 2020]
+Finished job 91.
+15 of 61 steps (25%) done
+
+[Fri Jul 31 01:39:08 2020]
+rule bmat_plot_ext_HEK4:
+    input: ../TargetSeq-MCF7-HEK4-BE4-rep1/cutoff_3/mapping/HK4-mcf-6_bwa_sort.bmat
+    output: ../all_plot/cutoff_3.ext50/TargetSeq-MCF7-HEK4-BE4-rep1_HK4-mcf-6_cutoff_3_indel.ext50.pdf
+    jobid: 114
+    wildcards: cutoff=3, lib=MCF7-HEK4-BE4-rep1, sample=HK4-mcf-6
+
+/home/zhaohuanan/miniconda3/envs/py27/bin/python ./program/plot-targetseq-bmat-V02.py -i ../TargetSeq-MCF7-HEK4-BE4-rep1/cutoff_3/mapping/HK4-mcf-6_bwa_sort.bmat -o ../all_plot/cutoff_3.ext50/TargetSeq-MCF7-HEK4-BE4-rep1_HK4-mcf-6_cutoff_3_indel.ext50.pdf --region_extend_length 50 --sgRNA GGCACTGCGGCTGGAGGTGGGGG
+[Fri Jul 31 01:39:08 2020]
+Finished job 41.
+16 of 61 steps (26%) done
+
+[Fri Jul 31 01:39:08 2020]
+rule bmat_plot_ext_HEK4:
+    input: ../TargetSeq-MCF7-HEK4-BE4-rep1/cutoff_3/mapping/HK4-mcf-3_bwa_sort.bmat
+    output: ../all_plot/cutoff_3.ext50/TargetSeq-MCF7-HEK4-BE4-rep1_HK4-mcf-3_cutoff_3_indel.ext50.pdf
+    jobid: 128
+    wildcards: cutoff=3, lib=MCF7-HEK4-BE4-rep1, sample=HK4-mcf-3
+
+/home/zhaohuanan/miniconda3/envs/py27/bin/python ./program/plot-targetseq-bmat-V02.py -i ../TargetSeq-MCF7-HEK4-BE4-rep1/cutoff_3/mapping/HK4-mcf-3_bwa_sort.bmat -o ../all_plot/cutoff_3.ext50/TargetSeq-MCF7-HEK4-BE4-rep1_HK4-mcf-3_cutoff_3_indel.ext50.pdf --region_extend_length 50 --sgRNA GGCACTGCGGCTGGAGGTGGGGG
+[Fri Jul 31 01:39:10 2020]
+Finished job 278.
+17 of 61 steps (28%) done
+
+[Fri Jul 31 01:39:10 2020]
+rule bmat_plot_ext_HEK4:
+    input: ../TargetSeq-MCF7-HEK4-BE4-rep2/cutoff_3/mapping/HK4-mcf-6_bwa_sort.bmat
+    output: ../all_plot/cutoff_3.ext50/TargetSeq-MCF7-HEK4-BE4-rep2_HK4-mcf-6_cutoff_3_indel.ext50.pdf
+    jobid: 169
+    wildcards: cutoff=3, lib=MCF7-HEK4-BE4-rep2, sample=HK4-mcf-6
+
+/home/zhaohuanan/miniconda3/envs/py27/bin/python ./program/plot-targetseq-bmat-V02.py -i ../TargetSeq-MCF7-HEK4-BE4-rep2/cutoff_3/mapping/HK4-mcf-6_bwa_sort.bmat -o ../all_plot/cutoff_3.ext50/TargetSeq-MCF7-HEK4-BE4-rep2_HK4-mcf-6_cutoff_3_indel.ext50.pdf --region_extend_length 50 --sgRNA GGCACTGCGGCTGGAGGTGGGGG
+[Fri Jul 31 01:39:16 2020]
+Finished job 339.
+18 of 61 steps (30%) done
+
+[Fri Jul 31 01:39:16 2020]
+rule bmat_plot_ext_HEK4:
+    input: ../TargetSeq-293T-HEK4-BE4-rep2/cutoff_3/mapping/HK4-mcf-14_bwa_sort.bmat
+    output: ../all_plot/cutoff_3.ext50/TargetSeq-293T-HEK4-BE4-rep2_HK4-mcf-14_cutoff_3_indel.ext50.pdf
+    jobid: 145
+    wildcards: cutoff=3, lib=293T-HEK4-BE4-rep2, sample=HK4-mcf-14
+
+/home/zhaohuanan/miniconda3/envs/py27/bin/python ./program/plot-targetseq-bmat-V02.py -i ../TargetSeq-293T-HEK4-BE4-rep2/cutoff_3/mapping/HK4-mcf-14_bwa_sort.bmat -o ../all_plot/cutoff_3.ext50/TargetSeq-293T-HEK4-BE4-rep2_HK4-mcf-14_cutoff_3_indel.ext50.pdf --region_extend_length 50 --sgRNA GGCACTGCGGCTGGAGGTGGGGG
+[Fri Jul 31 01:39:17 2020]
+Finished job 158.
+19 of 61 steps (31%) done
+
+[Fri Jul 31 01:39:17 2020]
+rule bmat_plot_ext_HEK4:
+    input: ../TargetSeq-MCF7-HEK4-BE4-rep2/cutoff_3/mapping/HK4-mcf-14_bwa_sort.bmat
+    output: ../all_plot/cutoff_3.ext50/TargetSeq-MCF7-HEK4-BE4-rep2_HK4-mcf-14_cutoff_3_indel.ext50.pdf
+    jobid: 272
+    wildcards: cutoff=3, lib=MCF7-HEK4-BE4-rep2, sample=HK4-mcf-14
+
+/home/zhaohuanan/miniconda3/envs/py27/bin/python ./program/plot-targetseq-bmat-V02.py -i ../TargetSeq-MCF7-HEK4-BE4-rep2/cutoff_3/mapping/HK4-mcf-14_bwa_sort.bmat -o ../all_plot/cutoff_3.ext50/TargetSeq-MCF7-HEK4-BE4-rep2_HK4-mcf-14_cutoff_3_indel.ext50.pdf --region_extend_length 50 --sgRNA GGCACTGCGGCTGGAGGTGGGGG
+[Fri Jul 31 01:39:19 2020]
+Finished job 118.
+20 of 61 steps (33%) done
+
+[Fri Jul 31 01:39:19 2020]
+rule bmat_plot_ext_HEK4:
+    input: ../TargetSeq-293T-HEK4-BE4-rep1/cutoff_3/mapping/HK4-mcf-14_bwa_sort.bmat
+    output: ../all_plot/cutoff_3.ext50/TargetSeq-293T-HEK4-BE4-rep1_HK4-mcf-14_cutoff_3_indel.ext50.pdf
+    jobid: 164
+    wildcards: cutoff=3, lib=293T-HEK4-BE4-rep1, sample=HK4-mcf-14
+
+/home/zhaohuanan/miniconda3/envs/py27/bin/python ./program/plot-targetseq-bmat-V02.py -i ../TargetSeq-293T-HEK4-BE4-rep1/cutoff_3/mapping/HK4-mcf-14_bwa_sort.bmat -o ../all_plot/cutoff_3.ext50/TargetSeq-293T-HEK4-BE4-rep1_HK4-mcf-14_cutoff_3_indel.ext50.pdf --region_extend_length 50 --sgRNA GGCACTGCGGCTGGAGGTGGGGG
+[Fri Jul 31 01:39:20 2020]
+Finished job 50.
+21 of 61 steps (34%) done
+
+[Fri Jul 31 01:39:20 2020]
+rule bmat_plot_ext_HEK4:
+    input: ../TargetSeq-MCF7-HEK4-BE4-rep1/cutoff_3/mapping/HK4-mcf-14_bwa_sort.bmat
+    output: ../all_plot/cutoff_3.ext50/TargetSeq-MCF7-HEK4-BE4-rep1_HK4-mcf-14_cutoff_3_indel.ext50.pdf
+    jobid: 65
+    wildcards: cutoff=3, lib=MCF7-HEK4-BE4-rep1, sample=HK4-mcf-14
+
+/home/zhaohuanan/miniconda3/envs/py27/bin/python ./program/plot-targetseq-bmat-V02.py -i ../TargetSeq-MCF7-HEK4-BE4-rep1/cutoff_3/mapping/HK4-mcf-14_bwa_sort.bmat -o ../all_plot/cutoff_3.ext50/TargetSeq-MCF7-HEK4-BE4-rep1_HK4-mcf-14_cutoff_3_indel.ext50.pdf --region_extend_length 50 --sgRNA GGCACTGCGGCTGGAGGTGGGGG
+[Fri Jul 31 01:39:22 2020]
+Finished job 198.
+22 of 61 steps (36%) done
+
+[Fri Jul 31 01:39:22 2020]
+rule bmat_plot_ext_HEK4:
+    input: ../TargetSeq-MCF7-HEK4-BE4-rep2/cutoff_3/mapping/HK4-mcf-3_bwa_sort.bmat
+    output: ../all_plot/cutoff_3.ext50/TargetSeq-MCF7-HEK4-BE4-rep2_HK4-mcf-3_cutoff_3_indel.ext50.pdf
+    jobid: 57
+    wildcards: cutoff=3, lib=MCF7-HEK4-BE4-rep2, sample=HK4-mcf-3
+
+/home/zhaohuanan/miniconda3/envs/py27/bin/python ./program/plot-targetseq-bmat-V02.py -i ../TargetSeq-MCF7-HEK4-BE4-rep2/cutoff_3/mapping/HK4-mcf-3_bwa_sort.bmat -o ../all_plot/cutoff_3.ext50/TargetSeq-MCF7-HEK4-BE4-rep2_HK4-mcf-3_cutoff_3_indel.ext50.pdf --region_extend_length 50 --sgRNA GGCACTGCGGCTGGAGGTGGGGG
+[Fri Jul 31 01:39:23 2020]
+Finished job 229.
+23 of 61 steps (38%) done
+
+[Fri Jul 31 01:39:23 2020]
+rule bmat_plot_ext_HEK4:
+    input: ../TargetSeq-MCF7-HEK4-BE4-rep1/cutoff_3/mapping/HK4-mcf-13_bwa_sort.bmat
+    output: ../all_plot/cutoff_3.ext50/TargetSeq-MCF7-HEK4-BE4-rep1_HK4-mcf-13_cutoff_3_indel.ext50.pdf
+    jobid: 245
+    wildcards: cutoff=3, lib=MCF7-HEK4-BE4-rep1, sample=HK4-mcf-13
+
+/home/zhaohuanan/miniconda3/envs/py27/bin/python ./program/plot-targetseq-bmat-V02.py -i ../TargetSeq-MCF7-HEK4-BE4-rep1/cutoff_3/mapping/HK4-mcf-13_bwa_sort.bmat -o ../all_plot/cutoff_3.ext50/TargetSeq-MCF7-HEK4-BE4-rep1_HK4-mcf-13_cutoff_3_indel.ext50.pdf --region_extend_length 50 --sgRNA GGCACTGCGGCTGGAGGTGGGGG
+[Fri Jul 31 01:39:27 2020]
+Finished job 293.
+24 of 61 steps (39%) done
+
+[Fri Jul 31 01:39:27 2020]
+rule bmat_plot_ext_HEK4:
+    input: ../TargetSeq-MCF7-HEK4-BE4-rep1/cutoff_3/mapping/HK4-mcf-4_bwa_sort.bmat
+    output: ../all_plot/cutoff_3.ext50/TargetSeq-MCF7-HEK4-BE4-rep1_HK4-mcf-4_cutoff_3_indel.ext50.pdf
+    jobid: 305
+    wildcards: cutoff=3, lib=MCF7-HEK4-BE4-rep1, sample=HK4-mcf-4
+
+/home/zhaohuanan/miniconda3/envs/py27/bin/python ./program/plot-targetseq-bmat-V02.py -i ../TargetSeq-MCF7-HEK4-BE4-rep1/cutoff_3/mapping/HK4-mcf-4_bwa_sort.bmat -o ../all_plot/cutoff_3.ext50/TargetSeq-MCF7-HEK4-BE4-rep1_HK4-mcf-4_cutoff_3_indel.ext50.pdf --region_extend_length 50 --sgRNA GGCACTGCGGCTGGAGGTGGGGG
+[Fri Jul 31 01:41:49 2020]
+Finished job 287.
+25 of 61 steps (41%) done
+
+[Fri Jul 31 01:41:49 2020]
+rule bmat_plot_ext_HEK4:
+    input: ../TargetSeq-293T-HEK4-BE4-rep2/cutoff_3/mapping/HK4-mcf-15_bwa_sort.bmat
+    output: ../all_plot/cutoff_3.ext50/TargetSeq-293T-HEK4-BE4-rep2_HK4-mcf-15_cutoff_3_indel.ext50.pdf
+    jobid: 79
+    wildcards: cutoff=3, lib=293T-HEK4-BE4-rep2, sample=HK4-mcf-15
+
+/home/zhaohuanan/miniconda3/envs/py27/bin/python ./program/plot-targetseq-bmat-V02.py -i ../TargetSeq-293T-HEK4-BE4-rep2/cutoff_3/mapping/HK4-mcf-15_bwa_sort.bmat -o ../all_plot/cutoff_3.ext50/TargetSeq-293T-HEK4-BE4-rep2_HK4-mcf-15_cutoff_3_indel.ext50.pdf --region_extend_length 50 --sgRNA GGCACTGCGGCTGGAGGTGGGGG
+[Fri Jul 31 01:41:50 2020]
+Finished job 106.
+26 of 61 steps (43%) done
+
+[Fri Jul 31 01:41:50 2020]
+rule bmat_plot_ext_HEK4:
+    input: ../TargetSeq-MCF7-HEK4-BE4-rep2/cutoff_3/mapping/HK4-mcf-4_bwa_sort.bmat
+    output: ../all_plot/cutoff_3.ext50/TargetSeq-MCF7-HEK4-BE4-rep2_HK4-mcf-4_cutoff_3_indel.ext50.pdf
+    jobid: 342
+    wildcards: cutoff=3, lib=MCF7-HEK4-BE4-rep2, sample=HK4-mcf-4
+
+/home/zhaohuanan/miniconda3/envs/py27/bin/python ./program/plot-targetseq-bmat-V02.py -i ../TargetSeq-MCF7-HEK4-BE4-rep2/cutoff_3/mapping/HK4-mcf-4_bwa_sort.bmat -o ../all_plot/cutoff_3.ext50/TargetSeq-MCF7-HEK4-BE4-rep2_HK4-mcf-4_cutoff_3_indel.ext50.pdf --region_extend_length 50 --sgRNA GGCACTGCGGCTGGAGGTGGGGG
+[Fri Jul 31 01:41:53 2020]
+Finished job 143.
+27 of 61 steps (44%) done
+
+[Fri Jul 31 01:41:53 2020]
+rule bmat_plot_ext_HEK4:
+    input: ../TargetSeq-MCF7-HEK4-BE4-rep2/cutoff_3/mapping/HK4-mcf-13_bwa_sort.bmat
+    output: ../all_plot/cutoff_3.ext50/TargetSeq-MCF7-HEK4-BE4-rep2_HK4-mcf-13_cutoff_3_indel.ext50.pdf
+    jobid: 318
+    wildcards: cutoff=3, lib=MCF7-HEK4-BE4-rep2, sample=HK4-mcf-13
+
+/home/zhaohuanan/miniconda3/envs/py27/bin/python ./program/plot-targetseq-bmat-V02.py -i ../TargetSeq-MCF7-HEK4-BE4-rep2/cutoff_3/mapping/HK4-mcf-13_bwa_sort.bmat -o ../all_plot/cutoff_3.ext50/TargetSeq-MCF7-HEK4-BE4-rep2_HK4-mcf-13_cutoff_3_indel.ext50.pdf --region_extend_length 50 --sgRNA GGCACTGCGGCTGGAGGTGGGGG
+[Fri Jul 31 01:41:56 2020]
+Finished job 60.
+28 of 61 steps (46%) done
+
+[Fri Jul 31 01:41:56 2020]
+rule bmat_plot_ext_HEK4:
+    input: ../TargetSeq-293T-HEK4-BE4-rep1/cutoff_3/mapping/HK4-mcf-4_bwa_sort.bmat
+    output: ../all_plot/cutoff_3.ext50/TargetSeq-293T-HEK4-BE4-rep1_HK4-mcf-4_cutoff_3_indel.ext50.pdf
+    jobid: 175
+    wildcards: cutoff=3, lib=293T-HEK4-BE4-rep1, sample=HK4-mcf-4
+
+/home/zhaohuanan/miniconda3/envs/py27/bin/python ./program/plot-targetseq-bmat-V02.py -i ../TargetSeq-293T-HEK4-BE4-rep1/cutoff_3/mapping/HK4-mcf-4_bwa_sort.bmat -o ../all_plot/cutoff_3.ext50/TargetSeq-293T-HEK4-BE4-rep1_HK4-mcf-4_cutoff_3_indel.ext50.pdf --region_extend_length 50 --sgRNA GGCACTGCGGCTGGAGGTGGGGG
+[Fri Jul 31 01:41:58 2020]
+Finished job 114.
+29 of 61 steps (48%) done
+
+[Fri Jul 31 01:41:58 2020]
+rule bmat_plot_ext_HEK4:
+    input: ../TargetSeq-293T-HEK4-BE4-rep2/cutoff_3/mapping/HK4-mcf-4_bwa_sort.bmat
+    output: ../all_plot/cutoff_3.ext50/TargetSeq-293T-HEK4-BE4-rep2_HK4-mcf-4_cutoff_3_indel.ext50.pdf
+    jobid: 153
+    wildcards: cutoff=3, lib=293T-HEK4-BE4-rep2, sample=HK4-mcf-4
+
+/home/zhaohuanan/miniconda3/envs/py27/bin/python ./program/plot-targetseq-bmat-V02.py -i ../TargetSeq-293T-HEK4-BE4-rep2/cutoff_3/mapping/HK4-mcf-4_bwa_sort.bmat -o ../all_plot/cutoff_3.ext50/TargetSeq-293T-HEK4-BE4-rep2_HK4-mcf-4_cutoff_3_indel.ext50.pdf --region_extend_length 50 --sgRNA GGCACTGCGGCTGGAGGTGGGGG
+[Fri Jul 31 01:41:59 2020]
+Finished job 96.
+30 of 61 steps (49%) done
+
+[Fri Jul 31 01:41:59 2020]
+rule bmat_plot_ext_HEK4:
+    input: ../TargetSeq-293T-HEK4-BE4-rep1/cutoff_3/mapping/HK4-mcf-15_bwa_sort.bmat
+    output: ../all_plot/cutoff_3.ext50/TargetSeq-293T-HEK4-BE4-rep1_HK4-mcf-15_cutoff_3_indel.ext50.pdf
+    jobid: 344
+    wildcards: cutoff=3, lib=293T-HEK4-BE4-rep1, sample=HK4-mcf-15
+
+/home/zhaohuanan/miniconda3/envs/py27/bin/python ./program/plot-targetseq-bmat-V02.py -i ../TargetSeq-293T-HEK4-BE4-rep1/cutoff_3/mapping/HK4-mcf-15_bwa_sort.bmat -o ../all_plot/cutoff_3.ext50/TargetSeq-293T-HEK4-BE4-rep1_HK4-mcf-15_cutoff_3_indel.ext50.pdf --region_extend_length 50 --sgRNA GGCACTGCGGCTGGAGGTGGGGG
+[Fri Jul 31 01:41:59 2020]
+Finished job 154.
+31 of 61 steps (51%) done
+
+[Fri Jul 31 01:41:59 2020]
+rule bmat_plot_ext_HEK4:
+    input: ../TargetSeq-293T-HEK4-BE4-rep1/cutoff_3/mapping/HK4-mcf-13_bwa_sort.bmat
+    output: ../all_plot/cutoff_3.ext50/TargetSeq-293T-HEK4-BE4-rep1_HK4-mcf-13_cutoff_3_indel.ext50.pdf
+    jobid: 309
+    wildcards: cutoff=3, lib=293T-HEK4-BE4-rep1, sample=HK4-mcf-13
+
+/home/zhaohuanan/miniconda3/envs/py27/bin/python ./program/plot-targetseq-bmat-V02.py -i ../TargetSeq-293T-HEK4-BE4-rep1/cutoff_3/mapping/HK4-mcf-13_bwa_sort.bmat -o ../all_plot/cutoff_3.ext50/TargetSeq-293T-HEK4-BE4-rep1_HK4-mcf-13_cutoff_3_indel.ext50.pdf --region_extend_length 50 --sgRNA GGCACTGCGGCTGGAGGTGGGGG
+[Fri Jul 31 01:42:01 2020]
+Finished job 176.
+32 of 61 steps (52%) done
+
+[Fri Jul 31 01:42:01 2020]
+rule bmat_plot_ext_HEK4:
+    input: ../TargetSeq-293T-HEK4-BE4-rep2/cutoff_3/mapping/HK4-mcf-13_bwa_sort.bmat
+    output: ../all_plot/cutoff_3.ext50/TargetSeq-293T-HEK4-BE4-rep2_HK4-mcf-13_cutoff_3_indel.ext50.pdf
+    jobid: 238
+    wildcards: cutoff=3, lib=293T-HEK4-BE4-rep2, sample=HK4-mcf-13
+
+/home/zhaohuanan/miniconda3/envs/py27/bin/python ./program/plot-targetseq-bmat-V02.py -i ../TargetSeq-293T-HEK4-BE4-rep2/cutoff_3/mapping/HK4-mcf-13_bwa_sort.bmat -o ../all_plot/cutoff_3.ext50/TargetSeq-293T-HEK4-BE4-rep2_HK4-mcf-13_cutoff_3_indel.ext50.pdf --region_extend_length 50 --sgRNA GGCACTGCGGCTGGAGGTGGGGG
+[Fri Jul 31 01:42:04 2020]
+Finished job 8.
+33 of 61 steps (54%) done
+
+[Fri Jul 31 01:42:04 2020]
+rule bmat_plot_ext_HEK4:
+    input: ../TargetSeq-MCF7-HEK4-BE4-rep1/cutoff_3/mapping/HK4-mcf-9_bwa_sort.bmat
+    output: ../all_plot/cutoff_3.ext50/TargetSeq-MCF7-HEK4-BE4-rep1_HK4-mcf-9_cutoff_3_indel.ext50.pdf
+    jobid: 291
+    wildcards: cutoff=3, lib=MCF7-HEK4-BE4-rep1, sample=HK4-mcf-9
+
+/home/zhaohuanan/miniconda3/envs/py27/bin/python ./program/plot-targetseq-bmat-V02.py -i ../TargetSeq-MCF7-HEK4-BE4-rep1/cutoff_3/mapping/HK4-mcf-9_bwa_sort.bmat -o ../all_plot/cutoff_3.ext50/TargetSeq-MCF7-HEK4-BE4-rep1_HK4-mcf-9_cutoff_3_indel.ext50.pdf --region_extend_length 50 --sgRNA GGCACTGCGGCTGGAGGTGGGGG
+[Fri Jul 31 01:42:06 2020]
+Finished job 169.
+34 of 61 steps (56%) done
+
+[Fri Jul 31 01:42:06 2020]
+rule bmat_plot_ext_HEK4:
+    input: ../TargetSeq-MCF7-HEK4-BE4-rep2/cutoff_3/mapping/HK4-mcf-9_bwa_sort.bmat
+    output: ../all_plot/cutoff_3.ext50/TargetSeq-MCF7-HEK4-BE4-rep2_HK4-mcf-9_cutoff_3_indel.ext50.pdf
+    jobid: 248
+    wildcards: cutoff=3, lib=MCF7-HEK4-BE4-rep2, sample=HK4-mcf-9
+
+/home/zhaohuanan/miniconda3/envs/py27/bin/python ./program/plot-targetseq-bmat-V02.py -i ../TargetSeq-MCF7-HEK4-BE4-rep2/cutoff_3/mapping/HK4-mcf-9_bwa_sort.bmat -o ../all_plot/cutoff_3.ext50/TargetSeq-MCF7-HEK4-BE4-rep2_HK4-mcf-9_cutoff_3_indel.ext50.pdf --region_extend_length 50 --sgRNA GGCACTGCGGCTGGAGGTGGGGG
+[Fri Jul 31 01:42:10 2020]
+Finished job 65.
+35 of 61 steps (57%) done
+
+[Fri Jul 31 01:42:10 2020]
+rule bmat_plot_ext_HEK4:
+    input: ../TargetSeq-293T-HEK4-BE4-rep2/cutoff_3/mapping/HK4-mcf-9_bwa_sort.bmat
+    output: ../all_plot/cutoff_3.ext50/TargetSeq-293T-HEK4-BE4-rep2_HK4-mcf-9_cutoff_3_indel.ext50.pdf
+    jobid: 46
+    wildcards: cutoff=3, lib=293T-HEK4-BE4-rep2, sample=HK4-mcf-9
+
+/home/zhaohuanan/miniconda3/envs/py27/bin/python ./program/plot-targetseq-bmat-V02.py -i ../TargetSeq-293T-HEK4-BE4-rep2/cutoff_3/mapping/HK4-mcf-9_bwa_sort.bmat -o ../all_plot/cutoff_3.ext50/TargetSeq-293T-HEK4-BE4-rep2_HK4-mcf-9_cutoff_3_indel.ext50.pdf --region_extend_length 50 --sgRNA GGCACTGCGGCTGGAGGTGGGGG
+[Fri Jul 31 01:42:12 2020]
+Finished job 145.
+36 of 61 steps (59%) done
+
+[Fri Jul 31 01:42:12 2020]
+rule bmat_plot_ext_HEK4:
+    input: ../TargetSeq-293T-HEK4-BE4-rep1/cutoff_3/mapping/HK4-mcf-9_bwa_sort.bmat
+    output: ../all_plot/cutoff_3.ext50/TargetSeq-293T-HEK4-BE4-rep1_HK4-mcf-9_cutoff_3_indel.ext50.pdf
+    jobid: 29
+    wildcards: cutoff=3, lib=293T-HEK4-BE4-rep1, sample=HK4-mcf-9
+
+/home/zhaohuanan/miniconda3/envs/py27/bin/python ./program/plot-targetseq-bmat-V02.py -i ../TargetSeq-293T-HEK4-BE4-rep1/cutoff_3/mapping/HK4-mcf-9_bwa_sort.bmat -o ../all_plot/cutoff_3.ext50/TargetSeq-293T-HEK4-BE4-rep1_HK4-mcf-9_cutoff_3_indel.ext50.pdf --region_extend_length 50 --sgRNA GGCACTGCGGCTGGAGGTGGGGG
+[Fri Jul 31 01:42:13 2020]
+Finished job 272.
+37 of 61 steps (61%) done
+[Fri Jul 31 01:42:14 2020]
+Finished job 188.
+38 of 61 steps (62%) done
+[Fri Jul 31 01:42:17 2020]
+Finished job 251.
+39 of 61 steps (64%) done
+[Fri Jul 31 01:42:17 2020]
+Finished job 89.
+40 of 61 steps (66%) done
+[Fri Jul 31 01:42:18 2020]
+Finished job 140.
+41 of 61 steps (67%) done
+[Fri Jul 31 01:42:23 2020]
+Finished job 16.
+42 of 61 steps (69%) done
+[Fri Jul 31 01:42:24 2020]
+Finished job 305.
+43 of 61 steps (70%) done
+[Fri Jul 31 01:42:26 2020]
+Finished job 163.
+44 of 61 steps (72%) done
+[Fri Jul 31 01:42:28 2020]
+Finished job 128.
+45 of 61 steps (74%) done
+[Fri Jul 31 01:42:35 2020]
+Finished job 245.
+46 of 61 steps (75%) done
+[Fri Jul 31 01:42:40 2020]
+Finished job 57.
+47 of 61 steps (77%) done
+[Fri Jul 31 01:42:42 2020]
+Finished job 164.
+48 of 61 steps (79%) done
+[Fri Jul 31 01:44:43 2020]
+Finished job 342.
+49 of 61 steps (80%) done
+[Fri Jul 31 01:44:48 2020]
+Finished job 175.
+50 of 61 steps (82%) done
+[Fri Jul 31 01:44:48 2020]
+Finished job 153.
+51 of 61 steps (84%) done
+[Fri Jul 31 01:44:49 2020]
+Finished job 309.
+52 of 61 steps (85%) done
+[Fri Jul 31 01:44:50 2020]
+Finished job 344.
+53 of 61 steps (87%) done
+[Fri Jul 31 01:44:50 2020]
+Finished job 238.
+54 of 61 steps (89%) done
+[Fri Jul 31 01:44:52 2020]
+Finished job 291.
+55 of 61 steps (90%) done
+[Fri Jul 31 01:44:56 2020]
+Finished job 248.
+56 of 61 steps (92%) done
+[Fri Jul 31 01:45:04 2020]
+Finished job 79.
+57 of 61 steps (93%) done
+[Fri Jul 31 01:45:08 2020]
+Finished job 318.
+58 of 61 steps (95%) done
+[Fri Jul 31 01:45:15 2020]
+Finished job 46.
+59 of 61 steps (97%) done
+[Fri Jul 31 01:45:24 2020]
+Finished job 29.
+60 of 61 steps (98%) done
+
+[Fri Jul 31 01:45:25 2020]
+localrule all:
+    input: ../TargetSeq-293T-HEK4-BE4-rep1/cutoff_3/mapping/HK4-mcf-1_R1_cutadapt.fq.gz, ../TargetSeq-293T-HEK4-BE4-rep1/cutoff_3/mapping/HK4-mcf-1_R2_cutadapt.fq.gz, ../TargetSeq-293T-HEK4-BE4-rep1/cutoff_3/mapping/HK4-mcf-2_R1_cutadapt.fq.gz, ../TargetSeq-293T-HEK4-BE4-rep1/cutoff_3/mapping/HK4-mcf-2_R2_cutadapt.fq.gz, ../TargetSeq-293T-HEK4-BE4-rep1/cutoff_3/mapping/HK4-mcf-3_R1_cutadapt.fq.gz, ../TargetSeq-293T-HEK4-BE4-rep1/cutoff_3/mapping/HK4-mcf-3_R2_cutadapt.fq.gz, ../TargetSeq-293T-HEK4-BE4-rep1/cutoff_3/mapping/HK4-mcf-4_R1_cutadapt.fq.gz, ../TargetSeq-293T-HEK4-BE4-rep1/cutoff_3/mapping/HK4-mcf-4_R2_cutadapt.fq.gz, ../TargetSeq-293T-HEK4-BE4-rep1/cutoff_3/mapping/HK4-mcf-5_R1_cutadapt.fq.gz, ../TargetSeq-293T-HEK4-BE4-rep1/cutoff_3/mapping/HK4-mcf-5_R2_cutadapt.fq.gz, ../TargetSeq-293T-HEK4-BE4-rep1/cutoff_3/mapping/HK4-mcf-6_R1_cutadapt.fq.gz, ../TargetSeq-293T-HEK4-BE4-rep1/cutoff_3/mapping/HK4-mcf-6_R2_cutadapt.fq.gz, ../TargetSeq-293T-HEK4-BE4-rep1/cutoff_3/mapping/HK4-mcf-7_R1_cutadapt.fq.gz, ../TargetSeq-293T-HEK4-BE4-rep1/cutoff_3/mapping/HK4-mcf-7_R2_cutadapt.fq.gz, ../TargetSeq-293T-HEK4-BE4-rep1/cutoff_3/mapping/HK4-mcf-8_R1_cutadapt.fq.gz, ../TargetSeq-293T-HEK4-BE4-rep1/cutoff_3/mapping/HK4-mcf-8_R2_cutadapt.fq.gz, ../TargetSeq-293T-HEK4-BE4-rep1/cutoff_3/mapping/HK4-mcf-9_R1_cutadapt.fq.gz, ../TargetSeq-293T-HEK4-BE4-rep1/cutoff_3/mapping/HK4-mcf-9_R2_cutadapt.fq.gz, ../TargetSeq-293T-HEK4-BE4-rep1/cutoff_3/mapping/HK4-mcf-10_R1_cutadapt.fq.gz, ../TargetSeq-293T-HEK4-BE4-rep1/cutoff_3/mapping/HK4-mcf-10_R2_cutadapt.fq.gz, ../TargetSeq-293T-HEK4-BE4-rep1/cutoff_3/mapping/HK4-mcf-11_R1_cutadapt.fq.gz, ../TargetSeq-293T-HEK4-BE4-rep1/cutoff_3/mapping/HK4-mcf-11_R2_cutadapt.fq.gz, ../TargetSeq-293T-HEK4-BE4-rep1/cutoff_3/mapping/HK4-mcf-12_R1_cutadapt.fq.gz, ../TargetSeq-293T-HEK4-BE4-rep1/cutoff_3/mapping/HK4-mcf-12_R2_cutadapt.fq.gz, ../TargetSeq-293T-HEK4-BE4-rep1/cutoff_3/mapping/HK4-mcf-13_R1_cutadapt.fq.gz, ../TargetSeq-293T-HEK4-BE4-rep1/cutoff_3/mapping/HK4-mcf-13_R2_cutadapt.fq.gz, ../TargetSeq-293T-HEK4-BE4-rep1/cutoff_3/mapping/HK4-mcf-14_R1_cutadapt.fq.gz, ../TargetSeq-293T-HEK4-BE4-rep1/cutoff_3/mapping/HK4-mcf-14_R2_cutadapt.fq.gz, ../TargetSeq-293T-HEK4-BE4-rep1/cutoff_3/mapping/HK4-mcf-15_R1_cutadapt.fq.gz, ../TargetSeq-293T-HEK4-BE4-rep1/cutoff_3/mapping/HK4-mcf-15_R2_cutadapt.fq.gz, ../TargetSeq-293T-HEK4-BE4-rep2/cutoff_3/mapping/HK4-mcf-1_R1_cutadapt.fq.gz, ../TargetSeq-293T-HEK4-BE4-rep2/cutoff_3/mapping/HK4-mcf-1_R2_cutadapt.fq.gz, ../TargetSeq-293T-HEK4-BE4-rep2/cutoff_3/mapping/HK4-mcf-2_R1_cutadapt.fq.gz, ../TargetSeq-293T-HEK4-BE4-rep2/cutoff_3/mapping/HK4-mcf-2_R2_cutadapt.fq.gz, ../TargetSeq-293T-HEK4-BE4-rep2/cutoff_3/mapping/HK4-mcf-3_R1_cutadapt.fq.gz, ../TargetSeq-293T-HEK4-BE4-rep2/cutoff_3/mapping/HK4-mcf-3_R2_cutadapt.fq.gz, ../TargetSeq-293T-HEK4-BE4-rep2/cutoff_3/mapping/HK4-mcf-4_R1_cutadapt.fq.gz, ../TargetSeq-293T-HEK4-BE4-rep2/cutoff_3/mapping/HK4-mcf-4_R2_cutadapt.fq.gz, ../TargetSeq-293T-HEK4-BE4-rep2/cutoff_3/mapping/HK4-mcf-5_R1_cutadapt.fq.gz, ../TargetSeq-293T-HEK4-BE4-rep2/cutoff_3/mapping/HK4-mcf-5_R2_cutadapt.fq.gz, ../TargetSeq-293T-HEK4-BE4-rep2/cutoff_3/mapping/HK4-mcf-6_R1_cutadapt.fq.gz, ../TargetSeq-293T-HEK4-BE4-rep2/cutoff_3/mapping/HK4-mcf-6_R2_cutadapt.fq.gz, ../TargetSeq-293T-HEK4-BE4-rep2/cutoff_3/mapping/HK4-mcf-7_R1_cutadapt.fq.gz, ../TargetSeq-293T-HEK4-BE4-rep2/cutoff_3/mapping/HK4-mcf-7_R2_cutadapt.fq.gz, ../TargetSeq-293T-HEK4-BE4-rep2/cutoff_3/mapping/HK4-mcf-8_R1_cutadapt.fq.gz, ../TargetSeq-293T-HEK4-BE4-rep2/cutoff_3/mapping/HK4-mcf-8_R2_cutadapt.fq.gz, ../TargetSeq-293T-HEK4-BE4-rep2/cutoff_3/mapping/HK4-mcf-9_R1_cutadapt.fq.gz, ../TargetSeq-293T-HEK4-BE4-rep2/cutoff_3/mapping/HK4-mcf-9_R2_cutadapt.fq.gz, ../TargetSeq-293T-HEK4-BE4-rep2/cutoff_3/mapping/HK4-mcf-10_R1_cutadapt.fq.gz, ../TargetSeq-293T-HEK4-BE4-rep2/cutoff_3/mapping/HK4-mcf-10_R2_cutadapt.fq.gz, ../TargetSeq-293T-HEK4-BE4-rep2/cutoff_3/mapping/HK4-mcf-11_R1_cutadapt.fq.gz, ../TargetSeq-293T-HEK4-BE4-rep2/cutoff_3/mapping/HK4-mcf-11_R2_cutadapt.fq.gz, ../TargetSeq-293T-HEK4-BE4-rep2/cutoff_3/mapping/HK4-mcf-12_R1_cutadapt.fq.gz, ../TargetSeq-293T-HEK4-BE4-rep2/cutoff_3/mapping/HK4-mcf-12_R2_cutadapt.fq.gz, ../TargetSeq-293T-HEK4-BE4-rep2/cutoff_3/mapping/HK4-mcf-13_R1_cutadapt.fq.gz, ../TargetSeq-293T-HEK4-BE4-rep2/cutoff_3/mapping/HK4-mcf-13_R2_cutadapt.fq.gz, ../TargetSeq-293T-HEK4-BE4-rep2/cutoff_3/mapping/HK4-mcf-14_R1_cutadapt.fq.gz, ../TargetSeq-293T-HEK4-BE4-rep2/cutoff_3/mapping/HK4-mcf-14_R2_cutadapt.fq.gz, ../TargetSeq-293T-HEK4-BE4-rep2/cutoff_3/mapping/HK4-mcf-15_R1_cutadapt.fq.gz, ../TargetSeq-293T-HEK4-BE4-rep2/cutoff_3/mapping/HK4-mcf-15_R2_cutadapt.fq.gz, ../TargetSeq-MCF7-HEK4-BE4-rep1/cutoff_3/mapping/HK4-mcf-1_R1_cutadapt.fq.gz, ../TargetSeq-MCF7-HEK4-BE4-rep1/cutoff_3/mapping/HK4-mcf-1_R2_cutadapt.fq.gz, ../TargetSeq-MCF7-HEK4-BE4-rep1/cutoff_3/mapping/HK4-mcf-2_R1_cutadapt.fq.gz, ../TargetSeq-MCF7-HEK4-BE4-rep1/cutoff_3/mapping/HK4-mcf-2_R2_cutadapt.fq.gz, ../TargetSeq-MCF7-HEK4-BE4-rep1/cutoff_3/mapping/HK4-mcf-3_R1_cutadapt.fq.gz, ../TargetSeq-MCF7-HEK4-BE4-rep1/cutoff_3/mapping/HK4-mcf-3_R2_cutadapt.fq.gz, ../TargetSeq-MCF7-HEK4-BE4-rep1/cutoff_3/mapping/HK4-mcf-4_R1_cutadapt.fq.gz, ../TargetSeq-MCF7-HEK4-BE4-rep1/cutoff_3/mapping/HK4-mcf-4_R2_cutadapt.fq.gz, ../TargetSeq-MCF7-HEK4-BE4-rep1/cutoff_3/mapping/HK4-mcf-5_R1_cutadapt.fq.gz, ../TargetSeq-MCF7-HEK4-BE4-rep1/cutoff_3/mapping/HK4-mcf-5_R2_cutadapt.fq.gz, ../TargetSeq-MCF7-HEK4-BE4-rep1/cutoff_3/mapping/HK4-mcf-6_R1_cutadapt.fq.gz, ../TargetSeq-MCF7-HEK4-BE4-rep1/cutoff_3/mapping/HK4-mcf-6_R2_cutadapt.fq.gz, ../TargetSeq-MCF7-HEK4-BE4-rep1/cutoff_3/mapping/HK4-mcf-7_R1_cutadapt.fq.gz, ../TargetSeq-MCF7-HEK4-BE4-rep1/cutoff_3/mapping/HK4-mcf-7_R2_cutadapt.fq.gz, ../TargetSeq-MCF7-HEK4-BE4-rep1/cutoff_3/mapping/HK4-mcf-8_R1_cutadapt.fq.gz, ../TargetSeq-MCF7-HEK4-BE4-rep1/cutoff_3/mapping/HK4-mcf-8_R2_cutadapt.fq.gz, ../TargetSeq-MCF7-HEK4-BE4-rep1/cutoff_3/mapping/HK4-mcf-9_R1_cutadapt.fq.gz, ../TargetSeq-MCF7-HEK4-BE4-rep1/cutoff_3/mapping/HK4-mcf-9_R2_cutadapt.fq.gz, ../TargetSeq-MCF7-HEK4-BE4-rep1/cutoff_3/mapping/HK4-mcf-10_R1_cutadapt.fq.gz, ../TargetSeq-MCF7-HEK4-BE4-rep1/cutoff_3/mapping/HK4-mcf-10_R2_cutadapt.fq.gz, ../TargetSeq-MCF7-HEK4-BE4-rep1/cutoff_3/mapping/HK4-mcf-11_R1_cutadapt.fq.gz, ../TargetSeq-MCF7-HEK4-BE4-rep1/cutoff_3/mapping/HK4-mcf-11_R2_cutadapt.fq.gz, ../TargetSeq-MCF7-HEK4-BE4-rep1/cutoff_3/mapping/HK4-mcf-12_R1_cutadapt.fq.gz, ../TargetSeq-MCF7-HEK4-BE4-rep1/cutoff_3/mapping/HK4-mcf-12_R2_cutadapt.fq.gz, ../TargetSeq-MCF7-HEK4-BE4-rep1/cutoff_3/mapping/HK4-mcf-13_R1_cutadapt.fq.gz, ../TargetSeq-MCF7-HEK4-BE4-rep1/cutoff_3/mapping/HK4-mcf-13_R2_cutadapt.fq.gz, ../TargetSeq-MCF7-HEK4-BE4-rep1/cutoff_3/mapping/HK4-mcf-14_R1_cutadapt.fq.gz, ../TargetSeq-MCF7-HEK4-BE4-rep1/cutoff_3/mapping/HK4-mcf-14_R2_cutadapt.fq.gz, ../TargetSeq-MCF7-HEK4-BE4-rep1/cutoff_3/mapping/HK4-mcf-15_R1_cutadapt.fq.gz, ../TargetSeq-MCF7-HEK4-BE4-rep1/cutoff_3/mapping/HK4-mcf-15_R2_cutadapt.fq.gz, ../TargetSeq-MCF7-HEK4-BE4-rep2/cutoff_3/mapping/HK4-mcf-1_R1_cutadapt.fq.gz, ../TargetSeq-MCF7-HEK4-BE4-rep2/cutoff_3/mapping/HK4-mcf-1_R2_cutadapt.fq.gz, ../TargetSeq-MCF7-HEK4-BE4-rep2/cutoff_3/mapping/HK4-mcf-2_R1_cutadapt.fq.gz, ../TargetSeq-MCF7-HEK4-BE4-rep2/cutoff_3/mapping/HK4-mcf-2_R2_cutadapt.fq.gz, ../TargetSeq-MCF7-HEK4-BE4-rep2/cutoff_3/mapping/HK4-mcf-3_R1_cutadapt.fq.gz, ../TargetSeq-MCF7-HEK4-BE4-rep2/cutoff_3/mapping/HK4-mcf-3_R2_cutadapt.fq.gz, ../TargetSeq-MCF7-HEK4-BE4-rep2/cutoff_3/mapping/HK4-mcf-4_R1_cutadapt.fq.gz, ../TargetSeq-MCF7-HEK4-BE4-rep2/cutoff_3/mapping/HK4-mcf-4_R2_cutadapt.fq.gz, ../TargetSeq-MCF7-HEK4-BE4-rep2/cutoff_3/mapping/HK4-mcf-5_R1_cutadapt.fq.gz, ../TargetSeq-MCF7-HEK4-BE4-rep2/cutoff_3/mapping/HK4-mcf-5_R2_cutadapt.fq.gz, ../TargetSeq-MCF7-HEK4-BE4-rep2/cutoff_3/mapping/HK4-mcf-6_R1_cutadapt.fq.gz, ../TargetSeq-MCF7-HEK4-BE4-rep2/cutoff_3/mapping/HK4-mcf-6_R2_cutadapt.fq.gz, ../TargetSeq-MCF7-HEK4-BE4-rep2/cutoff_3/mapping/HK4-mcf-7_R1_cutadapt.fq.gz, ../TargetSeq-MCF7-HEK4-BE4-rep2/cutoff_3/mapping/HK4-mcf-7_R2_cutadapt.fq.gz, ../TargetSeq-MCF7-HEK4-BE4-rep2/cutoff_3/mapping/HK4-mcf-8_R1_cutadapt.fq.gz, ../TargetSeq-MCF7-HEK4-BE4-rep2/cutoff_3/mapping/HK4-mcf-8_R2_cutadapt.fq.gz, ../TargetSeq-MCF7-HEK4-BE4-rep2/cutoff_3/mapping/HK4-mcf-9_R1_cutadapt.fq.gz, ../TargetSeq-MCF7-HEK4-BE4-rep2/cutoff_3/mapping/HK4-mcf-9_R2_cutadapt.fq.gz, ../TargetSeq-MCF7-HEK4-BE4-rep2/cutoff_3/mapping/HK4-mcf-10_R1_cutadapt.fq.gz, ../TargetSeq-MCF7-HEK4-BE4-rep2/cutoff_3/mapping/HK4-mcf-10_R2_cutadapt.fq.gz, ../TargetSeq-MCF7-HEK4-BE4-rep2/cutoff_3/mapping/HK4-mcf-11_R1_cutadapt.fq.gz, ../TargetSeq-MCF7-HEK4-BE4-rep2/cutoff_3/mapping/HK4-mcf-11_R2_cutadapt.fq.gz, ../TargetSeq-MCF7-HEK4-BE4-rep2/cutoff_3/mapping/HK4-mcf-12_R1_cutadapt.fq.gz, ../TargetSeq-MCF7-HEK4-BE4-rep2/cutoff_3/mapping/HK4-mcf-12_R2_cutadapt.fq.gz, ../TargetSeq-MCF7-HEK4-BE4-rep2/cutoff_3/mapping/HK4-mcf-13_R1_cutadapt.fq.gz, ../TargetSeq-MCF7-HEK4-BE4-rep2/cutoff_3/mapping/HK4-mcf-13_R2_cutadapt.fq.gz, ../TargetSeq-MCF7-HEK4-BE4-rep2/cutoff_3/mapping/HK4-mcf-14_R1_cutadapt.fq.gz, ../TargetSeq-MCF7-HEK4-BE4-rep2/cutoff_3/mapping/HK4-mcf-14_R2_cutadapt.fq.gz, ../TargetSeq-MCF7-HEK4-BE4-rep2/cutoff_3/mapping/HK4-mcf-15_R1_cutadapt.fq.gz, ../TargetSeq-MCF7-HEK4-BE4-rep2/cutoff_3/mapping/HK4-mcf-15_R2_cutadapt.fq.gz, ../TargetSeq-293T-HEK4-BE4-rep1/cutoff_3/mapping/HK4-mcf-1_bwa_sort.bam, ../TargetSeq-293T-HEK4-BE4-rep1/cutoff_3/mapping/HK4-mcf-2_bwa_sort.bam, ../TargetSeq-293T-HEK4-BE4-rep1/cutoff_3/mapping/HK4-mcf-3_bwa_sort.bam, ../TargetSeq-293T-HEK4-BE4-rep1/cutoff_3/mapping/HK4-mcf-4_bwa_sort.bam, ../TargetSeq-293T-HEK4-BE4-rep1/cutoff_3/mapping/HK4-mcf-5_bwa_sort.bam, ../TargetSeq-293T-HEK4-BE4-rep1/cutoff_3/mapping/HK4-mcf-6_bwa_sort.bam, ../TargetSeq-293T-HEK4-BE4-rep1/cutoff_3/mapping/HK4-mcf-7_bwa_sort.bam, ../TargetSeq-293T-HEK4-BE4-rep1/cutoff_3/mapping/HK4-mcf-8_bwa_sort.bam, ../TargetSeq-293T-HEK4-BE4-rep1/cutoff_3/mapping/HK4-mcf-9_bwa_sort.bam, ../TargetSeq-293T-HEK4-BE4-rep1/cutoff_3/mapping/HK4-mcf-10_bwa_sort.bam, ../TargetSeq-293T-HEK4-BE4-rep1/cutoff_3/mapping/HK4-mcf-11_bwa_sort.bam, ../TargetSeq-293T-HEK4-BE4-rep1/cutoff_3/mapping/HK4-mcf-12_bwa_sort.bam, ../TargetSeq-293T-HEK4-BE4-rep1/cutoff_3/mapping/HK4-mcf-13_bwa_sort.bam, ../TargetSeq-293T-HEK4-BE4-rep1/cutoff_3/mapping/HK4-mcf-14_bwa_sort.bam, ../TargetSeq-293T-HEK4-BE4-rep1/cutoff_3/mapping/HK4-mcf-15_bwa_sort.bam, ../TargetSeq-293T-HEK4-BE4-rep2/cutoff_3/mapping/HK4-mcf-1_bwa_sort.bam, ../TargetSeq-293T-HEK4-BE4-rep2/cutoff_3/mapping/HK4-mcf-2_bwa_sort.bam, ../TargetSeq-293T-HEK4-BE4-rep2/cutoff_3/mapping/HK4-mcf-3_bwa_sort.bam, ../TargetSeq-293T-HEK4-BE4-rep2/cutoff_3/mapping/HK4-mcf-4_bwa_sort.bam, ../TargetSeq-293T-HEK4-BE4-rep2/cutoff_3/mapping/HK4-mcf-5_bwa_sort.bam, ../TargetSeq-293T-HEK4-BE4-rep2/cutoff_3/mapping/HK4-mcf-6_bwa_sort.bam, ../TargetSeq-293T-HEK4-BE4-rep2/cutoff_3/mapping/HK4-mcf-7_bwa_sort.bam, ../TargetSeq-293T-HEK4-BE4-rep2/cutoff_3/mapping/HK4-mcf-8_bwa_sort.bam, ../TargetSeq-293T-HEK4-BE4-rep2/cutoff_3/mapping/HK4-mcf-9_bwa_sort.bam, ../TargetSeq-293T-HEK4-BE4-rep2/cutoff_3/mapping/HK4-mcf-10_bwa_sort.bam, ../TargetSeq-293T-HEK4-BE4-rep2/cutoff_3/mapping/HK4-mcf-11_bwa_sort.bam, ../TargetSeq-293T-HEK4-BE4-rep2/cutoff_3/mapping/HK4-mcf-12_bwa_sort.bam, ../TargetSeq-293T-HEK4-BE4-rep2/cutoff_3/mapping/HK4-mcf-13_bwa_sort.bam, ../TargetSeq-293T-HEK4-BE4-rep2/cutoff_3/mapping/HK4-mcf-14_bwa_sort.bam, ../TargetSeq-293T-HEK4-BE4-rep2/cutoff_3/mapping/HK4-mcf-15_bwa_sort.bam, ../TargetSeq-MCF7-HEK4-BE4-rep1/cutoff_3/mapping/HK4-mcf-1_bwa_sort.bam, ../TargetSeq-MCF7-HEK4-BE4-rep1/cutoff_3/mapping/HK4-mcf-2_bwa_sort.bam, ../TargetSeq-MCF7-HEK4-BE4-rep1/cutoff_3/mapping/HK4-mcf-3_bwa_sort.bam, ../TargetSeq-MCF7-HEK4-BE4-rep1/cutoff_3/mapping/HK4-mcf-4_bwa_sort.bam, ../TargetSeq-MCF7-HEK4-BE4-rep1/cutoff_3/mapping/HK4-mcf-5_bwa_sort.bam, ../TargetSeq-MCF7-HEK4-BE4-rep1/cutoff_3/mapping/HK4-mcf-6_bwa_sort.bam, ../TargetSeq-MCF7-HEK4-BE4-rep1/cutoff_3/mapping/HK4-mcf-7_bwa_sort.bam, ../TargetSeq-MCF7-HEK4-BE4-rep1/cutoff_3/mapping/HK4-mcf-8_bwa_sort.bam, ../TargetSeq-MCF7-HEK4-BE4-rep1/cutoff_3/mapping/HK4-mcf-9_bwa_sort.bam, ../TargetSeq-MCF7-HEK4-BE4-rep1/cutoff_3/mapping/HK4-mcf-10_bwa_sort.bam, ../TargetSeq-MCF7-HEK4-BE4-rep1/cutoff_3/mapping/HK4-mcf-11_bwa_sort.bam, ../TargetSeq-MCF7-HEK4-BE4-rep1/cutoff_3/mapping/HK4-mcf-12_bwa_sort.bam, ../TargetSeq-MCF7-HEK4-BE4-rep1/cutoff_3/mapping/HK4-mcf-13_bwa_sort.bam, ../TargetSeq-MCF7-HEK4-BE4-rep1/cutoff_3/mapping/HK4-mcf-14_bwa_sort.bam, ../TargetSeq-MCF7-HEK4-BE4-rep1/cutoff_3/mapping/HK4-mcf-15_bwa_sort.bam, ../TargetSeq-MCF7-HEK4-BE4-rep2/cutoff_3/mapping/HK4-mcf-1_bwa_sort.bam, ../TargetSeq-MCF7-HEK4-BE4-rep2/cutoff_3/mapping/HK4-mcf-2_bwa_sort.bam, ../TargetSeq-MCF7-HEK4-BE4-rep2/cutoff_3/mapping/HK4-mcf-3_bwa_sort.bam, ../TargetSeq-MCF7-HEK4-BE4-rep2/cutoff_3/mapping/HK4-mcf-4_bwa_sort.bam, ../TargetSeq-MCF7-HEK4-BE4-rep2/cutoff_3/mapping/HK4-mcf-5_bwa_sort.bam, ../TargetSeq-MCF7-HEK4-BE4-rep2/cutoff_3/mapping/HK4-mcf-6_bwa_sort.bam, ../TargetSeq-MCF7-HEK4-BE4-rep2/cutoff_3/mapping/HK4-mcf-7_bwa_sort.bam, ../TargetSeq-MCF7-HEK4-BE4-rep2/cutoff_3/mapping/HK4-mcf-8_bwa_sort.bam, ../TargetSeq-MCF7-HEK4-BE4-rep2/cutoff_3/mapping/HK4-mcf-9_bwa_sort.bam, ../TargetSeq-MCF7-HEK4-BE4-rep2/cutoff_3/mapping/HK4-mcf-10_bwa_sort.bam, ../TargetSeq-MCF7-HEK4-BE4-rep2/cutoff_3/mapping/HK4-mcf-11_bwa_sort.bam, ../TargetSeq-MCF7-HEK4-BE4-rep2/cutoff_3/mapping/HK4-mcf-12_bwa_sort.bam, ../TargetSeq-MCF7-HEK4-BE4-rep2/cutoff_3/mapping/HK4-mcf-13_bwa_sort.bam, ../TargetSeq-MCF7-HEK4-BE4-rep2/cutoff_3/mapping/HK4-mcf-14_bwa_sort.bam, ../TargetSeq-MCF7-HEK4-BE4-rep2/cutoff_3/mapping/HK4-mcf-15_bwa_sort.bam, ../TargetSeq-293T-HEK4-BE4-rep1/cutoff_3/mapping/HK4-mcf-1_bwa_sort.bam.bai, ../TargetSeq-293T-HEK4-BE4-rep1/cutoff_3/mapping/HK4-mcf-2_bwa_sort.bam.bai, ../TargetSeq-293T-HEK4-BE4-rep1/cutoff_3/mapping/HK4-mcf-3_bwa_sort.bam.bai, ../TargetSeq-293T-HEK4-BE4-rep1/cutoff_3/mapping/HK4-mcf-4_bwa_sort.bam.bai, ../TargetSeq-293T-HEK4-BE4-rep1/cutoff_3/mapping/HK4-mcf-5_bwa_sort.bam.bai, ../TargetSeq-293T-HEK4-BE4-rep1/cutoff_3/mapping/HK4-mcf-6_bwa_sort.bam.bai, ../TargetSeq-293T-HEK4-BE4-rep1/cutoff_3/mapping/HK4-mcf-7_bwa_sort.bam.bai, ../TargetSeq-293T-HEK4-BE4-rep1/cutoff_3/mapping/HK4-mcf-8_bwa_sort.bam.bai, ../TargetSeq-293T-HEK4-BE4-rep1/cutoff_3/mapping/HK4-mcf-9_bwa_sort.bam.bai, ../TargetSeq-293T-HEK4-BE4-rep1/cutoff_3/mapping/HK4-mcf-10_bwa_sort.bam.bai, ../TargetSeq-293T-HEK4-BE4-rep1/cutoff_3/mapping/HK4-mcf-11_bwa_sort.bam.bai, ../TargetSeq-293T-HEK4-BE4-rep1/cutoff_3/mapping/HK4-mcf-12_bwa_sort.bam.bai, ../TargetSeq-293T-HEK4-BE4-rep1/cutoff_3/mapping/HK4-mcf-13_bwa_sort.bam.bai, ../TargetSeq-293T-HEK4-BE4-rep1/cutoff_3/mapping/HK4-mcf-14_bwa_sort.bam.bai, ../TargetSeq-293T-HEK4-BE4-rep1/cutoff_3/mapping/HK4-mcf-15_bwa_sort.bam.bai, ../TargetSeq-293T-HEK4-BE4-rep2/cutoff_3/mapping/HK4-mcf-1_bwa_sort.bam.bai, ../TargetSeq-293T-HEK4-BE4-rep2/cutoff_3/mapping/HK4-mcf-2_bwa_sort.bam.bai, ../TargetSeq-293T-HEK4-BE4-rep2/cutoff_3/mapping/HK4-mcf-3_bwa_sort.bam.bai, ../TargetSeq-293T-HEK4-BE4-rep2/cutoff_3/mapping/HK4-mcf-4_bwa_sort.bam.bai, ../TargetSeq-293T-HEK4-BE4-rep2/cutoff_3/mapping/HK4-mcf-5_bwa_sort.bam.bai, ../TargetSeq-293T-HEK4-BE4-rep2/cutoff_3/mapping/HK4-mcf-6_bwa_sort.bam.bai, ../TargetSeq-293T-HEK4-BE4-rep2/cutoff_3/mapping/HK4-mcf-7_bwa_sort.bam.bai, ../TargetSeq-293T-HEK4-BE4-rep2/cutoff_3/mapping/HK4-mcf-8_bwa_sort.bam.bai, ../TargetSeq-293T-HEK4-BE4-rep2/cutoff_3/mapping/HK4-mcf-9_bwa_sort.bam.bai, ../TargetSeq-293T-HEK4-BE4-rep2/cutoff_3/mapping/HK4-mcf-10_bwa_sort.bam.bai, ../TargetSeq-293T-HEK4-BE4-rep2/cutoff_3/mapping/HK4-mcf-11_bwa_sort.bam.bai, ../TargetSeq-293T-HEK4-BE4-rep2/cutoff_3/mapping/HK4-mcf-12_bwa_sort.bam.bai, ../TargetSeq-293T-HEK4-BE4-rep2/cutoff_3/mapping/HK4-mcf-13_bwa_sort.bam.bai, ../TargetSeq-293T-HEK4-BE4-rep2/cutoff_3/mapping/HK4-mcf-14_bwa_sort.bam.bai, ../TargetSeq-293T-HEK4-BE4-rep2/cutoff_3/mapping/HK4-mcf-15_bwa_sort.bam.bai, ../TargetSeq-MCF7-HEK4-BE4-rep1/cutoff_3/mapping/HK4-mcf-1_bwa_sort.bam.bai, ../TargetSeq-MCF7-HEK4-BE4-rep1/cutoff_3/mapping/HK4-mcf-2_bwa_sort.bam.bai, ../TargetSeq-MCF7-HEK4-BE4-rep1/cutoff_3/mapping/HK4-mcf-3_bwa_sort.bam.bai, ../TargetSeq-MCF7-HEK4-BE4-rep1/cutoff_3/mapping/HK4-mcf-4_bwa_sort.bam.bai, ../TargetSeq-MCF7-HEK4-BE4-rep1/cutoff_3/mapping/HK4-mcf-5_bwa_sort.bam.bai, ../TargetSeq-MCF7-HEK4-BE4-rep1/cutoff_3/mapping/HK4-mcf-6_bwa_sort.bam.bai, ../TargetSeq-MCF7-HEK4-BE4-rep1/cutoff_3/mapping/HK4-mcf-7_bwa_sort.bam.bai, ../TargetSeq-MCF7-HEK4-BE4-rep1/cutoff_3/mapping/HK4-mcf-8_bwa_sort.bam.bai, ../TargetSeq-MCF7-HEK4-BE4-rep1/cutoff_3/mapping/HK4-mcf-9_bwa_sort.bam.bai, ../TargetSeq-MCF7-HEK4-BE4-rep1/cutoff_3/mapping/HK4-mcf-10_bwa_sort.bam.bai, ../TargetSeq-MCF7-HEK4-BE4-rep1/cutoff_3/mapping/HK4-mcf-11_bwa_sort.bam.bai, ../TargetSeq-MCF7-HEK4-BE4-rep1/cutoff_3/mapping/HK4-mcf-12_bwa_sort.bam.bai, ../TargetSeq-MCF7-HEK4-BE4-rep1/cutoff_3/mapping/HK4-mcf-13_bwa_sort.bam.bai, ../TargetSeq-MCF7-HEK4-BE4-rep1/cutoff_3/mapping/HK4-mcf-14_bwa_sort.bam.bai, ../TargetSeq-MCF7-HEK4-BE4-rep1/cutoff_3/mapping/HK4-mcf-15_bwa_sort.bam.bai, ../TargetSeq-MCF7-HEK4-BE4-rep2/cutoff_3/mapping/HK4-mcf-1_bwa_sort.bam.bai, ../TargetSeq-MCF7-HEK4-BE4-rep2/cutoff_3/mapping/HK4-mcf-2_bwa_sort.bam.bai, ../TargetSeq-MCF7-HEK4-BE4-rep2/cutoff_3/mapping/HK4-mcf-3_bwa_sort.bam.bai, ../TargetSeq-MCF7-HEK4-BE4-rep2/cutoff_3/mapping/HK4-mcf-4_bwa_sort.bam.bai, ../TargetSeq-MCF7-HEK4-BE4-rep2/cutoff_3/mapping/HK4-mcf-5_bwa_sort.bam.bai, ../TargetSeq-MCF7-HEK4-BE4-rep2/cutoff_3/mapping/HK4-mcf-6_bwa_sort.bam.bai, ../TargetSeq-MCF7-HEK4-BE4-rep2/cutoff_3/mapping/HK4-mcf-7_bwa_sort.bam.bai, ../TargetSeq-MCF7-HEK4-BE4-rep2/cutoff_3/mapping/HK4-mcf-8_bwa_sort.bam.bai, ../TargetSeq-MCF7-HEK4-BE4-rep2/cutoff_3/mapping/HK4-mcf-9_bwa_sort.bam.bai, ../TargetSeq-MCF7-HEK4-BE4-rep2/cutoff_3/mapping/HK4-mcf-10_bwa_sort.bam.bai, ../TargetSeq-MCF7-HEK4-BE4-rep2/cutoff_3/mapping/HK4-mcf-11_bwa_sort.bam.bai, ../TargetSeq-MCF7-HEK4-BE4-rep2/cutoff_3/mapping/HK4-mcf-12_bwa_sort.bam.bai, ../TargetSeq-MCF7-HEK4-BE4-rep2/cutoff_3/mapping/HK4-mcf-13_bwa_sort.bam.bai, ../TargetSeq-MCF7-HEK4-BE4-rep2/cutoff_3/mapping/HK4-mcf-14_bwa_sort.bam.bai, ../TargetSeq-MCF7-HEK4-BE4-rep2/cutoff_3/mapping/HK4-mcf-15_bwa_sort.bam.bai, ../TargetSeq-293T-HEK4-BE4-rep1/cutoff_3/mapping/HK4-mcf-1_bwa_sort.mpileup, ../TargetSeq-293T-HEK4-BE4-rep1/cutoff_3/mapping/HK4-mcf-2_bwa_sort.mpileup, ../TargetSeq-293T-HEK4-BE4-rep1/cutoff_3/mapping/HK4-mcf-3_bwa_sort.mpileup, ../TargetSeq-293T-HEK4-BE4-rep1/cutoff_3/mapping/HK4-mcf-4_bwa_sort.mpileup, ../TargetSeq-293T-HEK4-BE4-rep1/cutoff_3/mapping/HK4-mcf-5_bwa_sort.mpileup, ../TargetSeq-293T-HEK4-BE4-rep1/cutoff_3/mapping/HK4-mcf-6_bwa_sort.mpileup, ../TargetSeq-293T-HEK4-BE4-rep1/cutoff_3/mapping/HK4-mcf-7_bwa_sort.mpileup, ../TargetSeq-293T-HEK4-BE4-rep1/cutoff_3/mapping/HK4-mcf-8_bwa_sort.mpileup, ../TargetSeq-293T-HEK4-BE4-rep1/cutoff_3/mapping/HK4-mcf-9_bwa_sort.mpileup, ../TargetSeq-293T-HEK4-BE4-rep1/cutoff_3/mapping/HK4-mcf-10_bwa_sort.mpileup, ../TargetSeq-293T-HEK4-BE4-rep1/cutoff_3/mapping/HK4-mcf-11_bwa_sort.mpileup, ../TargetSeq-293T-HEK4-BE4-rep1/cutoff_3/mapping/HK4-mcf-12_bwa_sort.mpileup, ../TargetSeq-293T-HEK4-BE4-rep1/cutoff_3/mapping/HK4-mcf-13_bwa_sort.mpileup, ../TargetSeq-293T-HEK4-BE4-rep1/cutoff_3/mapping/HK4-mcf-14_bwa_sort.mpileup, ../TargetSeq-293T-HEK4-BE4-rep1/cutoff_3/mapping/HK4-mcf-15_bwa_sort.mpileup, ../TargetSeq-293T-HEK4-BE4-rep2/cutoff_3/mapping/HK4-mcf-1_bwa_sort.mpileup, ../TargetSeq-293T-HEK4-BE4-rep2/cutoff_3/mapping/HK4-mcf-2_bwa_sort.mpileup, ../TargetSeq-293T-HEK4-BE4-rep2/cutoff_3/mapping/HK4-mcf-3_bwa_sort.mpileup, ../TargetSeq-293T-HEK4-BE4-rep2/cutoff_3/mapping/HK4-mcf-4_bwa_sort.mpileup, ../TargetSeq-293T-HEK4-BE4-rep2/cutoff_3/mapping/HK4-mcf-5_bwa_sort.mpileup, ../TargetSeq-293T-HEK4-BE4-rep2/cutoff_3/mapping/HK4-mcf-6_bwa_sort.mpileup, ../TargetSeq-293T-HEK4-BE4-rep2/cutoff_3/mapping/HK4-mcf-7_bwa_sort.mpileup, ../TargetSeq-293T-HEK4-BE4-rep2/cutoff_3/mapping/HK4-mcf-8_bwa_sort.mpileup, ../TargetSeq-293T-HEK4-BE4-rep2/cutoff_3/mapping/HK4-mcf-9_bwa_sort.mpileup, ../TargetSeq-293T-HEK4-BE4-rep2/cutoff_3/mapping/HK4-mcf-10_bwa_sort.mpileup, ../TargetSeq-293T-HEK4-BE4-rep2/cutoff_3/mapping/HK4-mcf-11_bwa_sort.mpileup, ../TargetSeq-293T-HEK4-BE4-rep2/cutoff_3/mapping/HK4-mcf-12_bwa_sort.mpileup, ../TargetSeq-293T-HEK4-BE4-rep2/cutoff_3/mapping/HK4-mcf-13_bwa_sort.mpileup, ../TargetSeq-293T-HEK4-BE4-rep2/cutoff_3/mapping/HK4-mcf-14_bwa_sort.mpileup, ../TargetSeq-293T-HEK4-BE4-rep2/cutoff_3/mapping/HK4-mcf-15_bwa_sort.mpileup, ../TargetSeq-MCF7-HEK4-BE4-rep1/cutoff_3/mapping/HK4-mcf-1_bwa_sort.mpileup, ../TargetSeq-MCF7-HEK4-BE4-rep1/cutoff_3/mapping/HK4-mcf-2_bwa_sort.mpileup, ../TargetSeq-MCF7-HEK4-BE4-rep1/cutoff_3/mapping/HK4-mcf-3_bwa_sort.mpileup, ../TargetSeq-MCF7-HEK4-BE4-rep1/cutoff_3/mapping/HK4-mcf-4_bwa_sort.mpileup, ../TargetSeq-MCF7-HEK4-BE4-rep1/cutoff_3/mapping/HK4-mcf-5_bwa_sort.mpileup, ../TargetSeq-MCF7-HEK4-BE4-rep1/cutoff_3/mapping/HK4-mcf-6_bwa_sort.mpileup, ../TargetSeq-MCF7-HEK4-BE4-rep1/cutoff_3/mapping/HK4-mcf-7_bwa_sort.mpileup, ../TargetSeq-MCF7-HEK4-BE4-rep1/cutoff_3/mapping/HK4-mcf-8_bwa_sort.mpileup, ../TargetSeq-MCF7-HEK4-BE4-rep1/cutoff_3/mapping/HK4-mcf-9_bwa_sort.mpileup, ../TargetSeq-MCF7-HEK4-BE4-rep1/cutoff_3/mapping/HK4-mcf-10_bwa_sort.mpileup, ../TargetSeq-MCF7-HEK4-BE4-rep1/cutoff_3/mapping/HK4-mcf-11_bwa_sort.mpileup, ../TargetSeq-MCF7-HEK4-BE4-rep1/cutoff_3/mapping/HK4-mcf-12_bwa_sort.mpileup, ../TargetSeq-MCF7-HEK4-BE4-rep1/cutoff_3/mapping/HK4-mcf-13_bwa_sort.mpileup, ../TargetSeq-MCF7-HEK4-BE4-rep1/cutoff_3/mapping/HK4-mcf-14_bwa_sort.mpileup, ../TargetSeq-MCF7-HEK4-BE4-rep1/cutoff_3/mapping/HK4-mcf-15_bwa_sort.mpileup, ../TargetSeq-MCF7-HEK4-BE4-rep2/cutoff_3/mapping/HK4-mcf-1_bwa_sort.mpileup, ../TargetSeq-MCF7-HEK4-BE4-rep2/cutoff_3/mapping/HK4-mcf-2_bwa_sort.mpileup, ../TargetSeq-MCF7-HEK4-BE4-rep2/cutoff_3/mapping/HK4-mcf-3_bwa_sort.mpileup, ../TargetSeq-MCF7-HEK4-BE4-rep2/cutoff_3/mapping/HK4-mcf-4_bwa_sort.mpileup, ../TargetSeq-MCF7-HEK4-BE4-rep2/cutoff_3/mapping/HK4-mcf-5_bwa_sort.mpileup, ../TargetSeq-MCF7-HEK4-BE4-rep2/cutoff_3/mapping/HK4-mcf-6_bwa_sort.mpileup, ../TargetSeq-MCF7-HEK4-BE4-rep2/cutoff_3/mapping/HK4-mcf-7_bwa_sort.mpileup, ../TargetSeq-MCF7-HEK4-BE4-rep2/cutoff_3/mapping/HK4-mcf-8_bwa_sort.mpileup, ../TargetSeq-MCF7-HEK4-BE4-rep2/cutoff_3/mapping/HK4-mcf-9_bwa_sort.mpileup, ../TargetSeq-MCF7-HEK4-BE4-rep2/cutoff_3/mapping/HK4-mcf-10_bwa_sort.mpileup, ../TargetSeq-MCF7-HEK4-BE4-rep2/cutoff_3/mapping/HK4-mcf-11_bwa_sort.mpileup, ../TargetSeq-MCF7-HEK4-BE4-rep2/cutoff_3/mapping/HK4-mcf-12_bwa_sort.mpileup, ../TargetSeq-MCF7-HEK4-BE4-rep2/cutoff_3/mapping/HK4-mcf-13_bwa_sort.mpileup, ../TargetSeq-MCF7-HEK4-BE4-rep2/cutoff_3/mapping/HK4-mcf-14_bwa_sort.mpileup, ../TargetSeq-MCF7-HEK4-BE4-rep2/cutoff_3/mapping/HK4-mcf-15_bwa_sort.mpileup, ../TargetSeq-293T-HEK4-BE4-rep1/cutoff_3/mapping/HK4-mcf-1_bwa_sort.bmat, ../TargetSeq-293T-HEK4-BE4-rep1/cutoff_3/mapping/HK4-mcf-2_bwa_sort.bmat, ../TargetSeq-293T-HEK4-BE4-rep1/cutoff_3/mapping/HK4-mcf-3_bwa_sort.bmat, ../TargetSeq-293T-HEK4-BE4-rep1/cutoff_3/mapping/HK4-mcf-4_bwa_sort.bmat, ../TargetSeq-293T-HEK4-BE4-rep1/cutoff_3/mapping/HK4-mcf-5_bwa_sort.bmat, ../TargetSeq-293T-HEK4-BE4-rep1/cutoff_3/mapping/HK4-mcf-6_bwa_sort.bmat, ../TargetSeq-293T-HEK4-BE4-rep1/cutoff_3/mapping/HK4-mcf-7_bwa_sort.bmat, ../TargetSeq-293T-HEK4-BE4-rep1/cutoff_3/mapping/HK4-mcf-8_bwa_sort.bmat, ../TargetSeq-293T-HEK4-BE4-rep1/cutoff_3/mapping/HK4-mcf-9_bwa_sort.bmat, ../TargetSeq-293T-HEK4-BE4-rep1/cutoff_3/mapping/HK4-mcf-10_bwa_sort.bmat, ../TargetSeq-293T-HEK4-BE4-rep1/cutoff_3/mapping/HK4-mcf-11_bwa_sort.bmat, ../TargetSeq-293T-HEK4-BE4-rep1/cutoff_3/mapping/HK4-mcf-12_bwa_sort.bmat, ../TargetSeq-293T-HEK4-BE4-rep1/cutoff_3/mapping/HK4-mcf-13_bwa_sort.bmat, ../TargetSeq-293T-HEK4-BE4-rep1/cutoff_3/mapping/HK4-mcf-14_bwa_sort.bmat, ../TargetSeq-293T-HEK4-BE4-rep1/cutoff_3/mapping/HK4-mcf-15_bwa_sort.bmat, ../TargetSeq-293T-HEK4-BE4-rep2/cutoff_3/mapping/HK4-mcf-1_bwa_sort.bmat, ../TargetSeq-293T-HEK4-BE4-rep2/cutoff_3/mapping/HK4-mcf-2_bwa_sort.bmat, ../TargetSeq-293T-HEK4-BE4-rep2/cutoff_3/mapping/HK4-mcf-3_bwa_sort.bmat, ../TargetSeq-293T-HEK4-BE4-rep2/cutoff_3/mapping/HK4-mcf-4_bwa_sort.bmat, ../TargetSeq-293T-HEK4-BE4-rep2/cutoff_3/mapping/HK4-mcf-5_bwa_sort.bmat, ../TargetSeq-293T-HEK4-BE4-rep2/cutoff_3/mapping/HK4-mcf-6_bwa_sort.bmat, ../TargetSeq-293T-HEK4-BE4-rep2/cutoff_3/mapping/HK4-mcf-7_bwa_sort.bmat, ../TargetSeq-293T-HEK4-BE4-rep2/cutoff_3/mapping/HK4-mcf-8_bwa_sort.bmat, ../TargetSeq-293T-HEK4-BE4-rep2/cutoff_3/mapping/HK4-mcf-9_bwa_sort.bmat, ../TargetSeq-293T-HEK4-BE4-rep2/cutoff_3/mapping/HK4-mcf-10_bwa_sort.bmat, ../TargetSeq-293T-HEK4-BE4-rep2/cutoff_3/mapping/HK4-mcf-11_bwa_sort.bmat, ../TargetSeq-293T-HEK4-BE4-rep2/cutoff_3/mapping/HK4-mcf-12_bwa_sort.bmat, ../TargetSeq-293T-HEK4-BE4-rep2/cutoff_3/mapping/HK4-mcf-13_bwa_sort.bmat, ../TargetSeq-293T-HEK4-BE4-rep2/cutoff_3/mapping/HK4-mcf-14_bwa_sort.bmat, ../TargetSeq-293T-HEK4-BE4-rep2/cutoff_3/mapping/HK4-mcf-15_bwa_sort.bmat, ../TargetSeq-MCF7-HEK4-BE4-rep1/cutoff_3/mapping/HK4-mcf-1_bwa_sort.bmat, ../TargetSeq-MCF7-HEK4-BE4-rep1/cutoff_3/mapping/HK4-mcf-2_bwa_sort.bmat, ../TargetSeq-MCF7-HEK4-BE4-rep1/cutoff_3/mapping/HK4-mcf-3_bwa_sort.bmat, ../TargetSeq-MCF7-HEK4-BE4-rep1/cutoff_3/mapping/HK4-mcf-4_bwa_sort.bmat, ../TargetSeq-MCF7-HEK4-BE4-rep1/cutoff_3/mapping/HK4-mcf-5_bwa_sort.bmat, ../TargetSeq-MCF7-HEK4-BE4-rep1/cutoff_3/mapping/HK4-mcf-6_bwa_sort.bmat, ../TargetSeq-MCF7-HEK4-BE4-rep1/cutoff_3/mapping/HK4-mcf-7_bwa_sort.bmat, ../TargetSeq-MCF7-HEK4-BE4-rep1/cutoff_3/mapping/HK4-mcf-8_bwa_sort.bmat, ../TargetSeq-MCF7-HEK4-BE4-rep1/cutoff_3/mapping/HK4-mcf-9_bwa_sort.bmat, ../TargetSeq-MCF7-HEK4-BE4-rep1/cutoff_3/mapping/HK4-mcf-10_bwa_sort.bmat, ../TargetSeq-MCF7-HEK4-BE4-rep1/cutoff_3/mapping/HK4-mcf-11_bwa_sort.bmat, ../TargetSeq-MCF7-HEK4-BE4-rep1/cutoff_3/mapping/HK4-mcf-12_bwa_sort.bmat, ../TargetSeq-MCF7-HEK4-BE4-rep1/cutoff_3/mapping/HK4-mcf-13_bwa_sort.bmat, ../TargetSeq-MCF7-HEK4-BE4-rep1/cutoff_3/mapping/HK4-mcf-14_bwa_sort.bmat, ../TargetSeq-MCF7-HEK4-BE4-rep1/cutoff_3/mapping/HK4-mcf-15_bwa_sort.bmat, ../TargetSeq-MCF7-HEK4-BE4-rep2/cutoff_3/mapping/HK4-mcf-1_bwa_sort.bmat, ../TargetSeq-MCF7-HEK4-BE4-rep2/cutoff_3/mapping/HK4-mcf-2_bwa_sort.bmat, ../TargetSeq-MCF7-HEK4-BE4-rep2/cutoff_3/mapping/HK4-mcf-3_bwa_sort.bmat, ../TargetSeq-MCF7-HEK4-BE4-rep2/cutoff_3/mapping/HK4-mcf-4_bwa_sort.bmat, ../TargetSeq-MCF7-HEK4-BE4-rep2/cutoff_3/mapping/HK4-mcf-5_bwa_sort.bmat, ../TargetSeq-MCF7-HEK4-BE4-rep2/cutoff_3/mapping/HK4-mcf-6_bwa_sort.bmat, ../TargetSeq-MCF7-HEK4-BE4-rep2/cutoff_3/mapping/HK4-mcf-7_bwa_sort.bmat, ../TargetSeq-MCF7-HEK4-BE4-rep2/cutoff_3/mapping/HK4-mcf-8_bwa_sort.bmat, ../TargetSeq-MCF7-HEK4-BE4-rep2/cutoff_3/mapping/HK4-mcf-9_bwa_sort.bmat, ../TargetSeq-MCF7-HEK4-BE4-rep2/cutoff_3/mapping/HK4-mcf-10_bwa_sort.bmat, ../TargetSeq-MCF7-HEK4-BE4-rep2/cutoff_3/mapping/HK4-mcf-11_bwa_sort.bmat, ../TargetSeq-MCF7-HEK4-BE4-rep2/cutoff_3/mapping/HK4-mcf-12_bwa_sort.bmat, ../TargetSeq-MCF7-HEK4-BE4-rep2/cutoff_3/mapping/HK4-mcf-13_bwa_sort.bmat, ../TargetSeq-MCF7-HEK4-BE4-rep2/cutoff_3/mapping/HK4-mcf-14_bwa_sort.bmat, ../TargetSeq-MCF7-HEK4-BE4-rep2/cutoff_3/mapping/HK4-mcf-15_bwa_sort.bmat, ../all_plot/cutoff_3.ext50/TargetSeq-293T-HEK4-BE4-rep1_HK4-mcf-1_cutoff_3_indel.ext50.pdf, ../all_plot/cutoff_3.ext50/TargetSeq-293T-HEK4-BE4-rep1_HK4-mcf-2_cutoff_3_indel.ext50.pdf, ../all_plot/cutoff_3.ext50/TargetSeq-293T-HEK4-BE4-rep1_HK4-mcf-3_cutoff_3_indel.ext50.pdf, ../all_plot/cutoff_3.ext50/TargetSeq-293T-HEK4-BE4-rep1_HK4-mcf-4_cutoff_3_indel.ext50.pdf, ../all_plot/cutoff_3.ext50/TargetSeq-293T-HEK4-BE4-rep1_HK4-mcf-5_cutoff_3_indel.ext50.pdf, ../all_plot/cutoff_3.ext50/TargetSeq-293T-HEK4-BE4-rep1_HK4-mcf-6_cutoff_3_indel.ext50.pdf, ../all_plot/cutoff_3.ext50/TargetSeq-293T-HEK4-BE4-rep1_HK4-mcf-7_cutoff_3_indel.ext50.pdf, ../all_plot/cutoff_3.ext50/TargetSeq-293T-HEK4-BE4-rep1_HK4-mcf-8_cutoff_3_indel.ext50.pdf, ../all_plot/cutoff_3.ext50/TargetSeq-293T-HEK4-BE4-rep1_HK4-mcf-9_cutoff_3_indel.ext50.pdf, ../all_plot/cutoff_3.ext50/TargetSeq-293T-HEK4-BE4-rep1_HK4-mcf-10_cutoff_3_indel.ext50.pdf, ../all_plot/cutoff_3.ext50/TargetSeq-293T-HEK4-BE4-rep1_HK4-mcf-11_cutoff_3_indel.ext50.pdf, ../all_plot/cutoff_3.ext50/TargetSeq-293T-HEK4-BE4-rep1_HK4-mcf-12_cutoff_3_indel.ext50.pdf, ../all_plot/cutoff_3.ext50/TargetSeq-293T-HEK4-BE4-rep1_HK4-mcf-13_cutoff_3_indel.ext50.pdf, ../all_plot/cutoff_3.ext50/TargetSeq-293T-HEK4-BE4-rep1_HK4-mcf-14_cutoff_3_indel.ext50.pdf, ../all_plot/cutoff_3.ext50/TargetSeq-293T-HEK4-BE4-rep1_HK4-mcf-15_cutoff_3_indel.ext50.pdf, ../all_plot/cutoff_3.ext50/TargetSeq-293T-HEK4-BE4-rep2_HK4-mcf-1_cutoff_3_indel.ext50.pdf, ../all_plot/cutoff_3.ext50/TargetSeq-293T-HEK4-BE4-rep2_HK4-mcf-2_cutoff_3_indel.ext50.pdf, ../all_plot/cutoff_3.ext50/TargetSeq-293T-HEK4-BE4-rep2_HK4-mcf-3_cutoff_3_indel.ext50.pdf, ../all_plot/cutoff_3.ext50/TargetSeq-293T-HEK4-BE4-rep2_HK4-mcf-4_cutoff_3_indel.ext50.pdf, ../all_plot/cutoff_3.ext50/TargetSeq-293T-HEK4-BE4-rep2_HK4-mcf-5_cutoff_3_indel.ext50.pdf, ../all_plot/cutoff_3.ext50/TargetSeq-293T-HEK4-BE4-rep2_HK4-mcf-6_cutoff_3_indel.ext50.pdf, ../all_plot/cutoff_3.ext50/TargetSeq-293T-HEK4-BE4-rep2_HK4-mcf-7_cutoff_3_indel.ext50.pdf, ../all_plot/cutoff_3.ext50/TargetSeq-293T-HEK4-BE4-rep2_HK4-mcf-8_cutoff_3_indel.ext50.pdf, ../all_plot/cutoff_3.ext50/TargetSeq-293T-HEK4-BE4-rep2_HK4-mcf-9_cutoff_3_indel.ext50.pdf, ../all_plot/cutoff_3.ext50/TargetSeq-293T-HEK4-BE4-rep2_HK4-mcf-10_cutoff_3_indel.ext50.pdf, ../all_plot/cutoff_3.ext50/TargetSeq-293T-HEK4-BE4-rep2_HK4-mcf-11_cutoff_3_indel.ext50.pdf, ../all_plot/cutoff_3.ext50/TargetSeq-293T-HEK4-BE4-rep2_HK4-mcf-12_cutoff_3_indel.ext50.pdf, ../all_plot/cutoff_3.ext50/TargetSeq-293T-HEK4-BE4-rep2_HK4-mcf-13_cutoff_3_indel.ext50.pdf, ../all_plot/cutoff_3.ext50/TargetSeq-293T-HEK4-BE4-rep2_HK4-mcf-14_cutoff_3_indel.ext50.pdf, ../all_plot/cutoff_3.ext50/TargetSeq-293T-HEK4-BE4-rep2_HK4-mcf-15_cutoff_3_indel.ext50.pdf, ../all_plot/cutoff_3.ext50/TargetSeq-MCF7-HEK4-BE4-rep1_HK4-mcf-1_cutoff_3_indel.ext50.pdf, ../all_plot/cutoff_3.ext50/TargetSeq-MCF7-HEK4-BE4-rep1_HK4-mcf-2_cutoff_3_indel.ext50.pdf, ../all_plot/cutoff_3.ext50/TargetSeq-MCF7-HEK4-BE4-rep1_HK4-mcf-3_cutoff_3_indel.ext50.pdf, ../all_plot/cutoff_3.ext50/TargetSeq-MCF7-HEK4-BE4-rep1_HK4-mcf-4_cutoff_3_indel.ext50.pdf, ../all_plot/cutoff_3.ext50/TargetSeq-MCF7-HEK4-BE4-rep1_HK4-mcf-5_cutoff_3_indel.ext50.pdf, ../all_plot/cutoff_3.ext50/TargetSeq-MCF7-HEK4-BE4-rep1_HK4-mcf-6_cutoff_3_indel.ext50.pdf, ../all_plot/cutoff_3.ext50/TargetSeq-MCF7-HEK4-BE4-rep1_HK4-mcf-7_cutoff_3_indel.ext50.pdf, ../all_plot/cutoff_3.ext50/TargetSeq-MCF7-HEK4-BE4-rep1_HK4-mcf-8_cutoff_3_indel.ext50.pdf, ../all_plot/cutoff_3.ext50/TargetSeq-MCF7-HEK4-BE4-rep1_HK4-mcf-9_cutoff_3_indel.ext50.pdf, ../all_plot/cutoff_3.ext50/TargetSeq-MCF7-HEK4-BE4-rep1_HK4-mcf-10_cutoff_3_indel.ext50.pdf, ../all_plot/cutoff_3.ext50/TargetSeq-MCF7-HEK4-BE4-rep1_HK4-mcf-11_cutoff_3_indel.ext50.pdf, ../all_plot/cutoff_3.ext50/TargetSeq-MCF7-HEK4-BE4-rep1_HK4-mcf-12_cutoff_3_indel.ext50.pdf, ../all_plot/cutoff_3.ext50/TargetSeq-MCF7-HEK4-BE4-rep1_HK4-mcf-13_cutoff_3_indel.ext50.pdf, ../all_plot/cutoff_3.ext50/TargetSeq-MCF7-HEK4-BE4-rep1_HK4-mcf-14_cutoff_3_indel.ext50.pdf, ../all_plot/cutoff_3.ext50/TargetSeq-MCF7-HEK4-BE4-rep1_HK4-mcf-15_cutoff_3_indel.ext50.pdf, ../all_plot/cutoff_3.ext50/TargetSeq-MCF7-HEK4-BE4-rep2_HK4-mcf-1_cutoff_3_indel.ext50.pdf, ../all_plot/cutoff_3.ext50/TargetSeq-MCF7-HEK4-BE4-rep2_HK4-mcf-2_cutoff_3_indel.ext50.pdf, ../all_plot/cutoff_3.ext50/TargetSeq-MCF7-HEK4-BE4-rep2_HK4-mcf-3_cutoff_3_indel.ext50.pdf, ../all_plot/cutoff_3.ext50/TargetSeq-MCF7-HEK4-BE4-rep2_HK4-mcf-4_cutoff_3_indel.ext50.pdf, ../all_plot/cutoff_3.ext50/TargetSeq-MCF7-HEK4-BE4-rep2_HK4-mcf-5_cutoff_3_indel.ext50.pdf, ../all_plot/cutoff_3.ext50/TargetSeq-MCF7-HEK4-BE4-rep2_HK4-mcf-6_cutoff_3_indel.ext50.pdf, ../all_plot/cutoff_3.ext50/TargetSeq-MCF7-HEK4-BE4-rep2_HK4-mcf-7_cutoff_3_indel.ext50.pdf, ../all_plot/cutoff_3.ext50/TargetSeq-MCF7-HEK4-BE4-rep2_HK4-mcf-8_cutoff_3_indel.ext50.pdf, ../all_plot/cutoff_3.ext50/TargetSeq-MCF7-HEK4-BE4-rep2_HK4-mcf-9_cutoff_3_indel.ext50.pdf, ../all_plot/cutoff_3.ext50/TargetSeq-MCF7-HEK4-BE4-rep2_HK4-mcf-10_cutoff_3_indel.ext50.pdf, ../all_plot/cutoff_3.ext50/TargetSeq-MCF7-HEK4-BE4-rep2_HK4-mcf-11_cutoff_3_indel.ext50.pdf, ../all_plot/cutoff_3.ext50/TargetSeq-MCF7-HEK4-BE4-rep2_HK4-mcf-12_cutoff_3_indel.ext50.pdf, ../all_plot/cutoff_3.ext50/TargetSeq-MCF7-HEK4-BE4-rep2_HK4-mcf-13_cutoff_3_indel.ext50.pdf, ../all_plot/cutoff_3.ext50/TargetSeq-MCF7-HEK4-BE4-rep2_HK4-mcf-14_cutoff_3_indel.ext50.pdf, ../all_plot/cutoff_3.ext50/TargetSeq-MCF7-HEK4-BE4-rep2_HK4-mcf-15_cutoff_3_indel.ext50.pdf
+    jobid: 0
+
+[Fri Jul 31 01:45:25 2020]
+Finished job 0.
+61 of 61 steps (100%) done
+Complete log: /gpfs/user/zhaohuanan/3.project/7.2020-08_practice_Target-seq/snakepipes_target-seq-from-table-to-plot/.snakemake/log/2020-07-31T013607.416697.snakemake.log
