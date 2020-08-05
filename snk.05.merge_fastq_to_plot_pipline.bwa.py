@@ -102,7 +102,7 @@ rule bwa_mapping:
     output:
         "../TargetSeq-{lib}/cutoff_{cutoff}/mapping/{sample}_bwa.sam"
     params:
-        ref = '../TargetSeq_BED_sample_lib/{sample}.ref.fa'
+        ref = '../TargetSeq_BED_sample_lib/{sample}.ref.upper.fa'
     log:
         "../TargetSeq-{lib}/cutoff_{cutoff}/mapping/{sample}_bwa.log"
     shell:
@@ -112,7 +112,7 @@ rule bwa_mapping:
 rule sam_to_bam:
     input:
         sam = "../TargetSeq-{lib}/cutoff_{cutoff}/mapping/{sample}_bwa.sam",
-        ref = '../TargetSeq_BED_sample_lib/{sample}.ref.fa'
+        ref = '../TargetSeq_BED_sample_lib/{sample}.ref.upper.fa'
     output:
         "../TargetSeq-{lib}/cutoff_{cutoff}/mapping/{sample}_bwa.bam"
     shell:
@@ -149,7 +149,7 @@ rule spike_in_mpileup:
     output:
         "../TargetSeq-{lib}/cutoff_{cutoff}/mapping/{sample}_bwa_sort.mpileup"
     params:
-        ref = '../TargetSeq_BED_sample_lib/{sample}.ref.fa'
+        ref = '../TargetSeq_BED_sample_lib/{sample}.ref.upper.fa'
     shell:
         "{SAMTOOLS} mpileup {input[0]} --reference {params.ref} --max-depth 10000000 -q 20 -Q 20 > {output} " 
 

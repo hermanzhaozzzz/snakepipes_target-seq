@@ -46,7 +46,7 @@ snakemake --jobs 6 --cores 24 --snakefile snk.05.merge_fastq_to_plot_pipline.bwa
 1. 环境
 snakemake                 5.3.0
 python                    2.7.15
-biopython                 1.76
+biopython                 1.76  !1.72
 numpy                     1.16.5
 pandas                    0.24.2 
 bedtools                  2.29.2
@@ -62,3 +62,9 @@ line 312
 ![](https://tva1.sinaimg.cn/large/007S8ZIlly1gh9iqqqhidj30y80mkq7c.jpg)
 
 ![](https://tva1.sinaimg.cn/large/007S8ZIlly1gh9iww7avoj30iw08mmxk.jpg)
+
+
+
+全转大写字母
+UCSC标记为准
+getfasta的index问题
