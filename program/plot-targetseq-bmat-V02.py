@@ -309,8 +309,8 @@ def cmp_align_list(align_a, align_b):
     HELP
         compare function for align_list 
     """
-    align_alphabet = {"-":0, "X":1, "|":2,".":1.5}
-#     align_alphabet = {"-":0, "X":1, "|":2}
+#     align_alphabet = {"-":0, "X":1, "|":2,".":1.5}
+    align_alphabet = {"-":0, "X":1, "|":2}
 
     sort_index_list = [3, 2, 1, 0]
     sort_rev_state_list = [True, False, False, True]    
