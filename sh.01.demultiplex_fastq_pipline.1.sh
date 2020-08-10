@@ -14,7 +14,7 @@
 PYTHON2=/home/zhaohuanan/miniconda3/envs/py27/bin/python
 PRIMER_INFO=./primer_table/1.txt
 
-for case_name in test
+for case_name in B-1 B-2 M1-1 M1-2 M2-1 M2-2 M3-1 M3-2 M4-1 M4-2 M5-1 M5-2 M6-1 M6-2 M7-1 M7-2 M8-B-1 M8-B-2 M9-Y-1 M9-Y-2 S334-1 S334-2 Y-1 Y-2
 do
 
     fq1=../fix.fastq/TargetSeq-${case_name}_R1.fastq.gz

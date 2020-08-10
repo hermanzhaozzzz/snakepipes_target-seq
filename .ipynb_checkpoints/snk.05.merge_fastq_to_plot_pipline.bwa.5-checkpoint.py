@@ -21,29 +21,24 @@ PYTHON = "/home/zhaohuanan/miniconda3/envs/snakepipes_target-seq-from-table-to-p
 CUTOFF = ["3"]
 
 LIBS = [
-    "293T-HEK4-BE4-rep1",
-    "293T-HEK4-BE4-rep2",
-    "MCF7-HEK4-BE4-rep1",
-    "MCF7-HEK4-BE4-rep2"
+    "V-A"
 ]
 
-SAMPLES = [
-    "HK4-mcf-1",
-    "HK4-mcf-2",
-    "HK4-mcf-3",
-    "HK4-mcf-4",
-    "HK4-mcf-5",
-    "HK4-mcf-6",
-    "HK4-mcf-7",
-    "HK4-mcf-8",
-    "HK4-mcf-9",
-    "HK4-mcf-10",
-    "HK4-mcf-11",
-    "HK4-mcf-12",
-    "HK4-mcf-13",
-    "HK4-mcf-14",
-    "HK4-mcf-15"
-]
+SAMPLES = ['VEGFA-OffNo_GDNo-01',
+ 'VEGFA-OffNo_GDNo-02',
+ 'VEGFA-OffNo_GDNo-03',
+ 'VEGFA-OffNo_GDNo-04',
+ 'VEGFA-OffNo_GDNo-05',
+ 'VEGFA-OffNo_GDNo-06',
+ 'VEGFA-OffNo_GDNo-07',
+ 'VEGFA-OffNo_GDNo-08',
+ 'VEGFA-OffNo_GDNo-10',
+ 'VEGFA-OffNo_GDNo-11',
+ 'VEGFA-OffNo_GDNo-12',
+ 'VEGFA-OffNo_GDNo-13',
+ 'VEGFA-OffNo_GDNo-14',
+ 'VEGFA-OffNo_GDNo-15',
+ 'VEGFA-OffNo_GDNo-16']
 
 READ_IDX = ["1","2"]
 

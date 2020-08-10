@@ -1,26 +1,77 @@
 GENOME_HG38 = "/home/zhaohuanan/zhaohn_HD/2.database/bwa_hg38/hg38_only_chromosome.fa"
-BWA = "/home/zhaohuanan/miniconda3/bin/bwa"
+
+
+BWA = "/home/zhaohuanan/miniconda3/envs/snakepipes_target-seq-from-table-to-plot/bin/bwa"
 SAMTOOLS = "/home/zhaohuanan/miniconda3/envs/snakepipes_cutadapt-STARmapping-FPKM-sortBAM/bin/samtools"
-BEDTOOLS = "/home/zhaohuanan/miniconda3/envs/py27/bin/bedtools"
+BEDTOOLS = "/home/zhaohuanan/miniconda3/envs/snakepipes_target-seq-from-table-to-plot/bin/bedtools"
 
 
-SAMPLES = [
-    "HK4-mcf-1",
-    "HK4-mcf-2",
-    "HK4-mcf-3",
-    "HK4-mcf-4",
-    "HK4-mcf-5",
-    "HK4-mcf-6",
-    "HK4-mcf-7",
-    "HK4-mcf-8",
-    "HK4-mcf-9",
-    "HK4-mcf-10",
-    "HK4-mcf-11",
-    "HK4-mcf-12",
-    "HK4-mcf-13",
-    "HK4-mcf-14",
-    "HK4-mcf-15"
-]
+# 记得修改getbed中的txt地址
+
+SAMPLES = ['EMX1-Dis-1',
+ 'EMX1-Dis-2',
+ 'EMX1-Dis-3',
+ 'EMX1-guide-10',
+ 'EMX1-guide-13',
+ 'EMX1-guide-2',
+ 'EMX1-guide-4',
+ 'EMX1-notOFF-01',
+ 'EMX1-notOFF-02',
+ 'EMX1-notOFF-03',
+ 'EMX1-on-target',
+ 'HEK4-Dis-1',
+ 'HEK4-Dis-5',
+ 'HEK4-Guideseq-3',
+ 'HEK4-Guideseq-4',
+ 'HEK4-Guideseq-6',
+ 'VEGFA-Dis-1',
+ 'VEGFA-Dis-10',
+ 'VEGFA-Dis-11',
+ 'VEGFA-Dis-12',
+ 'VEGFA-Dis-13',
+ 'VEGFA-Dis-14',
+ 'VEGFA-Dis-2',
+ 'VEGFA-Dis-3',
+ 'VEGFA-Dis-4',
+ 'VEGFA-Dis-5',
+ 'VEGFA-Dis-6',
+ 'VEGFA-Dis-7',
+ 'VEGFA-Dis-8',
+ 'VEGFA-OffNo_GDNo-01',
+ 'VEGFA-OffNo_GDNo-02',
+ 'VEGFA-OffNo_GDNo-03',
+ 'VEGFA-OffNo_GDNo-04',
+ 'VEGFA-OffNo_GDNo-05',
+ 'VEGFA-OffNo_GDNo-06',
+ 'VEGFA-OffNo_GDNo-07',
+ 'VEGFA-OffNo_GDNo-08',
+ 'VEGFA-OffNo_GDNo-10',
+ 'VEGFA-OffNo_GDNo-11',
+ 'VEGFA-OffNo_GDNo-12',
+ 'VEGFA-OffNo_GDNo-13',
+ 'VEGFA-OffNo_GDNo-14',
+ 'VEGFA-OffNo_GDNo-15',
+ 'VEGFA-OffNo_GDNo-16',
+ 'VEGFA-OffNot_GDYes-108',
+ 'VEGFA-OffNot_GDYes-116',
+ 'VEGFA-OffNot_GDYes-138',
+ 'VEGFA-OffNot_GDYes-93',
+ 'VEGFA-OffYes_GDNo-1',
+ 'VEGFA-OffYes_GDNo-2',
+ 'VEGFA-OffYes_GDNo-3',
+ 'VEGFA-OffYes_GDNo-4',
+ 'VEGFA-OffYes_GDYes-105',
+ 'VEGFA-OffYes_GDYes-12',
+ 'VEGFA-OffYes_GDYes-13',
+ 'VEGFA-OffYes_GDYes-16',
+ 'VEGFA-OffYes_GDYes-30',
+ 'VEGFA-OffYes_GDYes-78',
+ 'VEGFA-off-target-01',
+ 'VEGFA-off-target-02',
+ 'VEGFA-off-target-06',
+ 'VEGFA-off-target-07',
+ 'VEGFA-off-target-18',
+ 'VEGFA-off-target-9']
 
 rule all:
     input:
@@ -37,25 +88,47 @@ rule getbed:
     output:
         '../TargetSeq_BED_sample_lib/{sample}.bed'
     run:
+#         import os
+# #         path = "./primer_table/primer_info.txt"
+#         path = 
+#         f = open(path,'r')
+#         ls = [x.split("\t") for x in f.readlines()][1:]
+#         # ls
+#         lib = "../TargetSeq_BED_sample_lib"
+#         try:
+#             os.makedirs(lib)
+#         except:
+#             pass
+#         for ls_line in ls:
+#         #     print(ls_line)
+#             flag = ls_line[3]
+#             chr_ = ls_line[0]
+#             tss = str(int(ls_line[1])-1)
+#             tes = ls_line[2]
+#             strand = ls_line[8]
+#             with open(os.path.join(lib,flag)+".bed",'w') as bed:
+#                 bed.write('{chr}\t{tss}\t{tes}\t{flag}\t0\t{strand}\n'.format(chr=chr_,tss=tss,tes=tes,flag=flag,strand=strand))
         import os
-        path = "./primer_table/primer_info.txt"
-        f = open(path,'r')
-        ls = [x.split("\t") for x in f.readlines()][1:]
-        # ls
-        lib = "../TargetSeq_BED_sample_lib"
-        try:
-            os.makedirs(lib)
-        except:
-            pass
-        for ls_line in ls:
-        #     print(ls_line)
-            flag = ls_line[3]
-            chr_ = ls_line[0]
-            tss = str(int(ls_line[1])-1)
-            tes = ls_line[2]
-            strand = ls_line[8]
-            with open(os.path.join(lib,flag)+".bed",'w') as bed:
-                bed.write('{chr}\t{tss}\t{tes}\t{flag}\t0\t{strand}\n'.format(chr=chr_,tss=tss,tes=tes,flag=flag,strand=strand))
+        # 1.txt 2.txt 3.txt.......7.txt
+        for tab in range(1,8):
+            path = './primer_table/{index}.txt'.format(index=tab)
+            f = open(path,'r')
+            ls = [x.split("\t") for x in f.readlines()][1:]
+            # ls
+            lib = "../TargetSeq_BED_sample_lib"
+            try:
+                os.makedirs(lib)
+            except:
+                pass
+            for ls_line in ls:
+            #     print(ls_line)
+                flag = ls_line[3]
+                chr_ = ls_line[0]
+                tss = str(int(ls_line[1])-1)
+                tes = ls_line[2]
+                strand = ls_line[8]
+                with open(os.path.join(lib,flag)+".bed",'w') as bed:
+                    bed.write('{chr}\t{tss}\t{tes}\t{flag}\t0\t{strand}\n'.format(chr=chr_,tss=tss,tes=tes,flag=flag,strand=strand))
 rule getfasta:
     input:
         '../TargetSeq_BED_sample_lib/{sample}.bed'

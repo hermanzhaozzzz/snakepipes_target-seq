@@ -8,11 +8,11 @@
 # run on abyss
 # /home/menghaowei/menghw_HD/BE_project/20.target_seq_all/16.APOmut_screen.20200707
 CUTADAPT = "/home/zhaohuanan/miniconda3/envs/cutadapt/bin/cutadapt"
-BWA = "/home/zhaohuanan/miniconda3/bin/bwa"
+BWA = "/home/zhaohuanan/miniconda3/envs/snakepipes_target-seq-from-table-to-plot/bin/bwa"
 SAMTOOLS = "/home/zhaohuanan/miniconda3/envs/snakepipes_cutadapt-STARmapping-FPKM-sortBAM/bin/samtools"
-BEDTOOLS = "/home/zhaohuanan/miniconda3/envs/py27/bin/bedtools"
-SAMCLIP = "/home/zhaohuanan/miniconda3/bin/samclip"
-PYTHON = "/home/zhaohuanan/miniconda3/envs/py27/bin/python"
+BEDTOOLS = "/home/zhaohuanan/miniconda3/envs/snakepipes_target-seq-from-table-to-plot/bin/bedtools"
+SAMCLIP = "/home/zhaohuanan/miniconda3/envs/snakepipes_target-seq-from-table-to-plot/bin/samclip"
+PYTHON = "/home/zhaohuanan/miniconda3/envs/snakepipes_target-seq-from-table-to-plot/bin/python"
 
 
 

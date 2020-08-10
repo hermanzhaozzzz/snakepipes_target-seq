@@ -12,9 +12,9 @@
 
 # 先salloc节点，再跑
 PYTHON2=/home/zhaohuanan/miniconda3/envs/py27/bin/python
-PRIMER_INFO=./primer_table/primer_info.txt
+PRIMER_INFO=./primer_table/1.txt
 
-for case_name in 293T-HEK4-BE4-rep1 293T-HEK4-BE4-rep2 MCF7-HEK4-BE4-rep1 MCF7-HEK4-BE4-rep2
+for case_name in test
 do
 
     fq1=../fix.fastq/TargetSeq-${case_name}_R1.fastq.gz
