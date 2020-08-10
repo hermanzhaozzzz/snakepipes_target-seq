@@ -45,7 +45,7 @@ snakemake --jobs 6 --cores 24 --snakefile snk.05.merge_fastq_to_plot_pipline.bwa
 
 1. 环境
 ```
-conda create -n snakepipes_target-seq-from-table-to-plot python=2.7.15 biopython=1.72 pandas=0.24.2 numpy=1.16.5 bedtools=2.29.2 bwa
+conda create -n snakepipes_target-seq-from-table-to-plot python=2.7.15 biopython=1.72 pandas=0.24.2 numpy=1.16.5 matplotlib bedtools=2.29.2 bwa
 ```
 
 2. bug1: 327行 【.】 得分为1？？？
