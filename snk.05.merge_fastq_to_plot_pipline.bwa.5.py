@@ -24,21 +24,21 @@ LIBS = [
     "V-A"
 ]
 
-SAMPLES = ['VEGFA-OffNo_GDNo-01',
- 'VEGFA-OffNo_GDNo-02',
- 'VEGFA-OffNo_GDNo-03',
- 'VEGFA-OffNo_GDNo-04',
- 'VEGFA-OffNo_GDNo-05',
- 'VEGFA-OffNo_GDNo-06',
- 'VEGFA-OffNo_GDNo-07',
- 'VEGFA-OffNo_GDNo-08',
- 'VEGFA-OffNo_GDNo-10',
- 'VEGFA-OffNo_GDNo-11',
- 'VEGFA-OffNo_GDNo-12',
- 'VEGFA-OffNo_GDNo-13',
- 'VEGFA-OffNo_GDNo-14',
- 'VEGFA-OffNo_GDNo-15',
- 'VEGFA-OffNo_GDNo-16']
+SAMPLES = ['VEGFA-OffNo-GDNo-01',
+ 'VEGFA-OffNo-GDNo-02',
+ 'VEGFA-OffNo-GDNo-03',
+ 'VEGFA-OffNo-GDNo-04',
+ 'VEGFA-OffNo-GDNo-05',
+ 'VEGFA-OffNo-GDNo-06',
+ 'VEGFA-OffNo-GDNo-07',
+ 'VEGFA-OffNo-GDNo-08',
+ 'VEGFA-OffNo-GDNo-10',
+ 'VEGFA-OffNo-GDNo-11',
+ 'VEGFA-OffNo-GDNo-12',
+ 'VEGFA-OffNo-GDNo-13',
+ 'VEGFA-OffNo-GDNo-14',
+ 'VEGFA-OffNo-GDNo-15',
+ 'VEGFA-OffNo-GDNo-16']
 
 READ_IDX = ["1","2"]
 

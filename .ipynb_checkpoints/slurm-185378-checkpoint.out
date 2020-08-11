@@ -1,0 +1,19 @@
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided cores: 24
+Rules claiming more threads will be scaled down.
+Job counts:
+	count	jobs
+	1	bmat_plot_ext_HEK4
+	1
+
+[Tue Aug 11 18:46:30 2020]
+rule bmat_plot_ext_HEK4:
+    input: ../TargetSeq-V-B/cutoff_3/mapping/VEGFA-OffYes-GDYes-16_bwa_sort.bmat
+    output: ../all_plot/cutoff_3.ext50/TargetSeq-V-B_VEGFA-OffYes-GDYes-16_cutoff_3_indel.ext50.pdf
+    jobid: 0
+    wildcards: cutoff=3, lib=V-B, sample=VEGFA-OffYes-GDYes-16
+
+/home/zhaohuanan/miniconda3/envs/snakepipes_target-seq-from-table-to-plot/bin/python ./program/plot-targetseq-bmat-V02.py -i ../TargetSeq-V-B/cutoff_3/mapping/VEGFA-OffYes-GDYes-16_bwa_sort.bmat -o ../all_plot/cutoff_3.ext50/TargetSeq-V-B_VEGFA-OffYes-GDYes-16_cutoff_3_indel.ext50.pdf --region_extend_length 50 --sgRNA GGCACTGCGGCTGGAGGTGGGGG
+/home/zhaohuanan/miniconda3/envs/snakepipes_target-seq-from-table-to-plot/lib/python2.7/site-packages/matplotlib/font_manager.py:1333: UserWarning: findfont: Font family [u'Arial'] not found. Falling back to DejaVu Sans
+  (prop.get_family(), self.defaultFamily[fontext]))
