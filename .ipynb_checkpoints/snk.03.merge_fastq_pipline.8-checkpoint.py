@@ -7,14 +7,21 @@
 ########################################################################
 # run on abyss
 PYTHON = "/home/zhaohuanan/miniconda3/envs/py27/bin/python"
-PRIMER_INFO = "./primer_table/3.txt"
+
+
+
+
+PRIMER_INFO = "./primer_table/8.txt"
 
 
 
 CUTOFF = ["3"]
 
 LIBS = [
-    'Ed'
+    'M8-B-1',
+    'M8-B-2',
+    'M9-Y-1',
+    'M9-Y-2'
 ]
 
 

@@ -7,10 +7,13 @@ BEDTOOLS = "/home/zhaohuanan/miniconda3/envs/snakepipes_target-seq-from-table-to
 
 
 # 记得修改getbed中的txt地址
+# 决定了txt table的数量！！！
+# 不改会缺文件
 
 SAMPLES = ['EMX1-Dis-1',
  'EMX1-Dis-2',
  'EMX1-Dis-3',
+ 'EMX1-guide-1',
  'EMX1-guide-10',
  'EMX1-guide-13',
  'EMX1-guide-2',
@@ -72,8 +75,6 @@ SAMPLES = ['EMX1-Dis-1',
  'VEGFA-off-target-07',
  'VEGFA-off-target-18',
  'VEGFA-off-target-9']
-
-
 rule all:
     input:
         expand('../TargetSeq_BED_sample_lib/{sample}.bed',sample=SAMPLES),
@@ -111,7 +112,7 @@ rule getbed:
 #                 bed.write('{chr}\t{tss}\t{tes}\t{flag}\t0\t{strand}\n'.format(chr=chr_,tss=tss,tes=tes,flag=flag,strand=strand))
         import os
         # 1.txt 2.txt 3.txt.......7.txt
-        for tab in range(1,8):
+        for tab in range(1,9):
             path = './primer_table/{index}.txt'.format(index=tab)
             f = open(path,'r')
             ls = [x.split("\t") for x in f.readlines()][1:]

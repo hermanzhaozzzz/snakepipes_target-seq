@@ -30,6 +30,13 @@ SAMPLES = ['EMX1-Dis-1', 'EMX1-Dis-2', 'EMX1-Dis-3']
 
 READ_IDX = ["1","2"]
 
+defult_sgRNA_dict_for_plot = {
+    'VEGFA': "GACCCCCTCCACCCCGCCTCCGG", 
+    'EMX1': "GAGTCCGAGCAGAAGAAGAAGGG", 
+    'HEK3': "GGCCCAGACTGAGCACGTGATGG", 
+    "HEK4":"GGCACTGCGGCTGGAGGTGGGGG", 
+    "RNF2":"GTCATCTTAGTCATTACCTGAGG"
+}
 
 rule all:
     input:
@@ -146,21 +153,15 @@ rule parse_mpileup:
         "{PYTHON} ./program/parse-mpileup-V04.py -i {input} -o {output} -n 0"
 
 
-# rule bmat_plot_ext_EMX1:
-#     input: 
-#         "../TargetSeq-{lib}/cutoff_{cutoff}/mapping/{sample}_bwa_sort.bmat"
-#     output:
-#         "../all_plot/cutoff_{cutoff}.ext50/TargetSeq-{lib}_{sample}_cutoff_{cutoff}_indel.ext50.pdf"
-#     shell:
-#         "{PYTHON} ./program/plot-targetseq-bmat-V02.py -i {input} -o {output} --region_extend_length 50 --sgRNA GAGTCCGAGCAGAAGAAGAAGGG"
-
-rule bmat_plot_ext_HEK4:
+rule bmat_plot:
     input: 
         "../TargetSeq-{lib}/cutoff_{cutoff}/mapping/{sample}_bwa_sort.bmat"
     output:
         "../all_plot/cutoff_{cutoff}.ext50/TargetSeq-{lib}_{sample}_cutoff_{cutoff}_indel.ext50.pdf"
+    params:
+        sgRNA_seq = lambda wildcards, input: defult_sgRNA_dict_for_plot[input[0].split("/")[4].split("-")[0]]
     shell:
-        "{PYTHON} ./program/plot-targetseq-bmat-V02.py -i {input} -o {output} --region_extend_length 50 --sgRNA GGCACTGCGGCTGGAGGTGGGGG"
+        "{PYTHON} ./program/plot-targetseq-bmat-V02.py -i {input} -o {output} --region_extend_length 50 --sgRNA {params.sgRNA_seq}"
 ######################################################################## 
 # separate plot
 ######################################################################## 

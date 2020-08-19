@@ -21,29 +21,22 @@ PYTHON = "/home/zhaohuanan/miniconda3/envs/snakepipes_target-seq-from-table-to-p
 CUTOFF = ["3"]
 
 LIBS = [
-    "293T-HEK4-BE4-rep1",
-    "293T-HEK4-BE4-rep2",
-    "MCF7-HEK4-BE4-rep1",
-    "MCF7-HEK4-BE4-rep2"
+    'M8-B-1',
+    'M8-B-2',
+    'M9-Y-1',
+    'M9-Y-2'
 ]
 
-SAMPLES = [
-    "HK4-mcf-1",
-    "HK4-mcf-2",
-    "HK4-mcf-3",
-    "HK4-mcf-4",
-    "HK4-mcf-5",
-    "HK4-mcf-6",
-    "HK4-mcf-7",
-    "HK4-mcf-8",
-    "HK4-mcf-9",
-    "HK4-mcf-10",
-    "HK4-mcf-11",
-    "HK4-mcf-12",
-    "HK4-mcf-13",
-    "HK4-mcf-14",
-    "HK4-mcf-15"
-]
+SAMPLES = ['EMX1-guide-1',
+ 'EMX1-Dis-1',
+ 'EMX1-Dis-2',
+ 'EMX1-Dis-3',
+ 'EMX1-guide-10',
+ 'EMX1-guide-13',
+ 'EMX1-guide-2',
+ 'EMX1-guide-4',
+ 'EMX1-notOFF-02',
+ 'EMX1-on-target']
 
 READ_IDX = ["1","2"]
 
@@ -180,6 +173,11 @@ rule bmat_plot:
         sgRNA_seq = lambda wildcards, input: defult_sgRNA_dict_for_plot[input[0].split("/")[4].split("-")[0]]
     shell:
         "{PYTHON} ./program/plot-targetseq-bmat-V02.py -i {input} -o {output} --region_extend_length 50 --sgRNA {params.sgRNA_seq}"
+        
+        
+        
+        
+        
 ######################################################################## 
 # separate plot
 ######################################################################## 

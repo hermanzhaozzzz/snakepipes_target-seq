@@ -34,6 +34,7 @@ rule MergeFastq:
         cutoff = "{cutoff}"
     shell:
         """
+         srun -T 24 \
         {PYTHON} ./program/target_seq_merge_fq_V03.py \
         -i {input[0]} \
         -p {PRIMER_INFO} \

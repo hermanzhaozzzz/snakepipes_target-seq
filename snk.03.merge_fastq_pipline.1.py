@@ -34,10 +34,6 @@ LIBS = [
     'M6-2',
     'M7-1',
     'M7-2',
-    'M8-B-1',
-    'M8-B-2',
-    'M9-Y-1',
-    'M9-Y-2',
     'S334-1',
     'S334-2',
     'Y-1',
@@ -61,6 +57,7 @@ rule MergeFastq:
         cutoff = "{cutoff}"
     shell:
         """
+        srun -T 24 \
         {PYTHON} ./program/target_seq_merge_fq_V03.py \
         -i {input[0]} \
         -p {PRIMER_INFO} \
