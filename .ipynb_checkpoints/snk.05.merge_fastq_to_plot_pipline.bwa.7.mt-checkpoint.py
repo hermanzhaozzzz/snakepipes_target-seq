@@ -10,10 +10,9 @@
 CUTADAPT = "/home/zhaohuanan/miniconda3/envs/cutadapt/bin/cutadapt"
 BWA = "/home/zhaohuanan/miniconda3/envs/snakepipes_target-seq-from-table-to-plot/bin/bwa"
 SAMTOOLS = "/home/zhaohuanan/miniconda3/envs/snakepipes_cutadapt-STARmapping-FPKM-sortBAM/bin/samtools"
-BEDTOOLS = "/home/zhaohuanan/miniconda3/envs/snakepipes_target-seq-from-table-to-plot/bin/bedtools"
-SAMCLIP = "/home/zhaohuanan/miniconda3/envs/snakepipes_target-seq-from-table-to-plot/bin/samclip"
-PYTHON = "/home/zhaohuanan/miniconda3/envs/snakepipes_target-seq-from-table-to-plot/bin/python"
-
+BEDTOOLS = "/home/zhaohuanan/miniconda3/envs/snakepipes_target-seq-from-table-to-plot/bin/bedtools" # ok
+SAMCLIP = "/home/zhaohuanan/miniconda3/envs/snakepipes_target-seq-from-table-to-plot/bin/samclip" # ok
+PYTHON = "/home/zhaohuanan/miniconda3/envs/snakepipes_target-seq-from-table-to-plot/bin/python" # ok
 
 
 
@@ -21,22 +20,19 @@ PYTHON = "/home/zhaohuanan/miniconda3/envs/snakepipes_target-seq-from-table-to-p
 CUTOFF = ["3"]
 
 LIBS = [
-    "V-D"
+    '5',
+    '6',
+    '7'
 ]
 
-SAMPLES = ['VEGFA-Dis-1',
- 'VEGFA-Dis-10',
- 'VEGFA-Dis-11',
- 'VEGFA-Dis-12',
- 'VEGFA-Dis-13',
- 'VEGFA-Dis-14',
- 'VEGFA-Dis-2',
- 'VEGFA-Dis-3',
- 'VEGFA-Dis-4',
- 'VEGFA-Dis-5',
- 'VEGFA-Dis-6',
- 'VEGFA-Dis-7',
- 'VEGFA-Dis-8']
+SAMPLES = [
+#     'MTND5P11-N5.1',
+ 'VEGFA-OffNo-GDNo-08',
+ 'VEGFA-Off-Target-2',
+ 'VEGFA-Off-Target-3',
+ 'VEGFA-Off-Target-6',
+ 'VEGFA-Off-Target-7',
+ 'VEGFA-On-Target']
 
 READ_IDX = ["1","2"]
 
@@ -161,6 +157,7 @@ rule parse_mpileup:
         "../TargetSeq-{lib}/cutoff_{cutoff}/mapping/{sample}_bwa_sort.bmat"
     shell:
         "{PYTHON} ./program/parse-mpileup-V04.py -i {input} -o {output} -n 0"
+
 
 rule bmat_plot:
     input: 

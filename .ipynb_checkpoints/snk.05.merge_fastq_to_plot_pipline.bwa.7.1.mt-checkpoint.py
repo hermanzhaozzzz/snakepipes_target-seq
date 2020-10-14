@@ -10,10 +10,9 @@
 CUTADAPT = "/home/zhaohuanan/miniconda3/envs/cutadapt/bin/cutadapt"
 BWA = "/home/zhaohuanan/miniconda3/envs/snakepipes_target-seq-from-table-to-plot/bin/bwa"
 SAMTOOLS = "/home/zhaohuanan/miniconda3/envs/snakepipes_cutadapt-STARmapping-FPKM-sortBAM/bin/samtools"
-BEDTOOLS = "/home/zhaohuanan/miniconda3/envs/snakepipes_target-seq-from-table-to-plot/bin/bedtools"
-SAMCLIP = "/home/zhaohuanan/miniconda3/envs/snakepipes_target-seq-from-table-to-plot/bin/samclip"
-PYTHON = "/home/zhaohuanan/miniconda3/envs/snakepipes_target-seq-from-table-to-plot/bin/python"
-
+BEDTOOLS = "/home/zhaohuanan/miniconda3/envs/snakepipes_target-seq-from-table-to-plot/bin/bedtools" # ok
+SAMCLIP = "/home/zhaohuanan/miniconda3/envs/snakepipes_target-seq-from-table-to-plot/bin/samclip" # ok
+PYTHON = "/home/zhaohuanan/miniconda3/envs/snakepipes_target-seq-from-table-to-plot/bin/python" # ok
 
 
 
@@ -21,32 +20,30 @@ PYTHON = "/home/zhaohuanan/miniconda3/envs/snakepipes_target-seq-from-table-to-p
 CUTOFF = ["3"]
 
 LIBS = [
-    'M8-B-1',
-    'M8-B-2',
-    'M9-Y-1',
-    'M9-Y-2'
+    '5',
+    '6',
+    '7'
 ]
 
-SAMPLES = ['EMX1-guide-1',
- 'EMX1-Dis-1',
- 'EMX1-Dis-2',
- 'EMX1-Dis-3',
- 'EMX1-guide-10',
- 'EMX1-guide-13',
- 'EMX1-guide-2',
- 'EMX1-guide-4',
- 'EMX1-notOFF-02',
- 'EMX1-on-target']
+SAMPLES = [
+    'MTND5P11-N5.1',
+#  'VEGFA-OffNo-GDNo-08',
+#  'VEGFA-Off-Target-2',
+#  'VEGFA-Off-Target-3',
+#  'VEGFA-Off-Target-6',
+#  'VEGFA-Off-Target-7',
+#  'VEGFA-On-Target'
+]
 
 READ_IDX = ["1","2"]
 
-
 defult_sgRNA_dict_for_plot = {
-    'VEGFA': "GACCCCCTCCACCCCGCCTCCGG", 
-    'EMX1': "GAGTCCGAGCAGAAGAAGAAGGG", 
-    'HEK3': "GGCCCAGACTGAGCACGTGATGG", 
-    "HEK4":"GGCACTGCGGCTGGAGGTGGGGG", 
-    "RNF2":"GTCATCTTAGTCATTACCTGAGG"
+#     'VEGFA': "GACCCCCTCCACCCCGCCTCCGG", 
+#     'EMX1': "GAGTCCGAGCAGAAGAAGAAGGG", 
+#     'HEK3': "GGCCCAGACTGAGCACGTGATGG", 
+#     "HEK4":"GGCACTGCGGCTGGAGGTGGGGG", 
+#     "RNF2":"GTCATCTTAGTCATTACCTGAGG",
+    "MTND5P11":""
 }
 
 rule all:
@@ -173,11 +170,6 @@ rule bmat_plot:
         sgRNA_seq = lambda wildcards, input: defult_sgRNA_dict_for_plot[input[0].split("/")[4].split("-")[0]]
     shell:
         "{PYTHON} ./program/plot-targetseq-bmat-V02.py -i {input} -o {output} --region_extend_length 50 --sgRNA {params.sgRNA_seq}"
-        
-        
-        
-        
-        
 ######################################################################## 
 # separate plot
 ######################################################################## 

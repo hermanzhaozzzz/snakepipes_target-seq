@@ -18,41 +18,42 @@ PYTHON = "/home/zhaohuanan/miniconda3/envs/snakepipes_target-seq-from-table-to-p
 
 
 
-CUTOFF = ["3"]
+CUTOFF = ["10"]
 
 LIBS = [
-    "V-B"
+    'quanquan',
+    'sanjiao'
 ]
 
-SAMPLES = ['VEGFA-off-target-01',
- 'VEGFA-off-target-02',
- 'VEGFA-off-target-06',
- 'VEGFA-off-target-07',
- 'VEGFA-off-target-18',
- 'VEGFA-off-target-9',
- 'VEGFA-OffNot-GDYes-108',
- 'VEGFA-OffNot-GDYes-116',
- 'VEGFA-OffNot-GDYes-138',
- 'VEGFA-OffNot-GDYes-93',
- 'VEGFA-OffYes-GDNo-1',
- 'VEGFA-OffYes-GDNo-2',
- 'VEGFA-OffYes-GDNo-3',
- 'VEGFA-OffYes-GDNo-4',
- 'VEGFA-OffYes-GDYes-105',
- 'VEGFA-OffYes-GDYes-12',
- 'VEGFA-OffYes-GDYes-13',
- 'VEGFA-OffYes-GDYes-16',
- 'VEGFA-OffYes-GDYes-30',
- 'VEGFA-OffYes-GDYes-78']
+SAMPLES = ['ABE-Site-7-On',
+ 'EMX1-2-On',
+ 'HEK2-On-Target',
+ 'HEK4-Guideseq-2',
+ 'HEK4-Guideseq-3',
+ 'HEK4-Guideseq-4',
+ 'HEK4-Guideseq-5',
+ 'HEK4-On-Target',
+ 'HEK5-On-Target',
+ 'PP2-On-Target',
+ 'PP6-On-Target',
+ 'RNF2-ON-Target']
 
 READ_IDX = ["1","2"]
 
 defult_sgRNA_dict_for_plot = {
-    'VEGFA': "GACCCCCTCCACCCCGCCTCCGG", 
+    "ABE":"GAATACTAAGCATAGACTCC", # 这里指的ABE-Site-7-On-Target
     'EMX1': "GAGTCCGAGCAGAAGAAGAAGGG", 
+    'HEK2':'GAACACAAAGCATAGACTGC',
     'HEK3': "GGCCCAGACTGAGCACGTGATGG", 
     "HEK4":"GGCACTGCGGCTGGAGGTGGGGG", 
-    "RNF2":"GTCATCTTAGTCATTACCTGAGG"
+    "HEK5":'CTGGCCTGGGTCAATCCTTG',
+    "MTND4P12":"TGCTAGTAACCACATTCTCCTGATCAAATATCACTCTCCTACTTACAGGA",
+    "MTND5P11":"TAGCATTGGCAGGAATACCCTTCCTCACAGGTTTCTACTCCAAAGA",
+    "MTND6P4":"TGACCCCCATGCCTCAGGATACTCCTCAATAGCCACCG",
+    "PP2":"GGCACTCGGGGGCGAGAGGA",
+    "PP6":"GGGGCTCAACATCGGAAGAG",
+    "RNF2":"GTCATCTTAGTCATTACCTGAGG",
+    'VEGFA': "GACCCCCTCCACCCCGCCTCCGG", 
 }
 
 rule all:

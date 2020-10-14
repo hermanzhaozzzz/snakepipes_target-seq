@@ -7,14 +7,16 @@
 ########################################################################
 # run on abyss
 PYTHON = "/home/zhaohuanan/miniconda3/envs/py27/bin/python"
-PRIMER_INFO = "./primer_table/3.txt"
+PRIMER_INFO = "./primer_table/11-12-13.txt"
 
 
 
-CUTOFF = ["3"]
+CUTOFF = ["10"]
 
 LIBS = [
-    'Ed'
+    '11',
+    '12',
+    '13'
 ]
 
 
@@ -33,8 +35,9 @@ rule MergeFastq:
         out_dir = "../TargetSeq-{lib}/cutoff_{cutoff}",
         cutoff = "{cutoff}"
     shell:
+#         """
+#         srun -T 24 \
         """
-         srun -T 24 \
         {PYTHON} ./program/target_seq_merge_fq_V03.py \
         -i {input[0]} \
         -p {PRIMER_INFO} \

@@ -4,12 +4,30 @@
     https://genome.ucsc.edu/cgi-bin/hgBlat?command=start
     ![](https://tva1.sinaimg.cn/large/007S8ZIlly1gh5ozmlaurj31jg0u0av2.jpg)
     然后将./primer_table里的xlsx转成txt格式和
+- check primer 
+```
+zcat foo.fq.gz | grep primer-sequence
+```
 - 找到strand
-    方向！找strand
+    方向！从IGV里找strand
     T for +
     A for -
+    
+    
+
+    
+    
+    
+    
 # 2. 先跑质控的pipeline
 直接使用之前写的snakepipes
+https://github.com/hermanzhaozzzz/snakepipes_fastqc-multiqc
+```
+git@github.com:hermanzhaozzzz/snakepipes_fastqc-multiqc.git
+```
+
+
+
 
 # 3. split raw FASTQ
 - 接下来跑脚本按照primer info拆分不同的target位点
@@ -28,7 +46,7 @@ tail -f ../TargetSeq*/*.log
 - 这一步是通过barcode来merge duplicate和校正测序错误
 - 注意选择cutoff！
 - check一下cutoff取值的区别【还未测试】
-
+## 注意和建议！！！！！
 用snakemake --profile slurm参数来运行任务，不容易导致崩溃】，因为这样子一个node只跑一个，我测试过，如果salloc node跑任务，一个node最多跑三个merge的并行任务，要不然会因为内存溢出而报错
 ```
 snakemake --profile slurm --jobs 6 --snakefile snk.03.merge_fastq_pipline.py -p
@@ -41,6 +59,9 @@ tail -f ../TargetSeq*/cutoff*/*.log
 先使用flag_for_snk04_and_snk05.ipynb这个笔记本文件得到需要的SAMPLE list，并更改snk04的文件内容
 再运行
 直接提交在登录节点即可，耗资源很少，而且slurm队列IO很慢反而降低效率
+注意两点
+1. 记得更改txt路径信息！
+2. 多跑几次，容易漏
 ```
 snakemake --jobs 6 --cores 24 --snakefile snk.04.getfast.py -p
 ```

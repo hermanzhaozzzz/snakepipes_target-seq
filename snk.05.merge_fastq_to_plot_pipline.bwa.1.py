@@ -10,54 +10,45 @@
 CUTADAPT = "/home/zhaohuanan/miniconda3/envs/cutadapt/bin/cutadapt"
 BWA = "/home/zhaohuanan/miniconda3/envs/snakepipes_target-seq-from-table-to-plot/bin/bwa"
 SAMTOOLS = "/home/zhaohuanan/miniconda3/envs/snakepipes_cutadapt-STARmapping-FPKM-sortBAM/bin/samtools"
-BEDTOOLS = "/home/zhaohuanan/miniconda3/envs/snakepipes_target-seq-from-table-to-plot/bin/bedtools"
-SAMCLIP = "/home/zhaohuanan/miniconda3/envs/snakepipes_target-seq-from-table-to-plot/bin/samclip"
-PYTHON = "/home/zhaohuanan/miniconda3/envs/snakepipes_target-seq-from-table-to-plot/bin/python"
+BEDTOOLS = "/home/zhaohuanan/miniconda3/envs/snakepipes_target-seq-from-table-to-plot/bin/bedtools" # ok
+SAMCLIP = "/home/zhaohuanan/miniconda3/envs/snakepipes_target-seq-from-table-to-plot/bin/samclip" # ok
+PYTHON = "/home/zhaohuanan/miniconda3/envs/snakepipes_target-seq-from-table-to-plot/bin/python" # ok
 
 
 
 
-
-CUTOFF = ["3"]
+CUTOFF = ["10"]
 
 LIBS = [
-    'B-1',
-    'B-2',
-    'M1-1',
-    'M1-2',
-    'M2-1',
-    'M2-2', 
-    'M3-1',
-    'M3-2',
-    'M4-1',
-    'M4-2',
-    'M5-1',
-    'M5-2',
-    'M6-1',
-    'M6-2',
-    'M7-1',
-    'M7-2',
-    'S334-1',
-    'S334-2',
-    'Y-1',
-    'Y-2'
+    '5',
+    '6',
+    '7'
 ]
 
-SAMPLES = ['EMX1-guide-10',
- 'EMX1-guide-13',
- 'EMX1-guide-2',
- 'EMX1-guide-4',
- 'EMX1-notOFF-02',
- 'EMX1-on-target']
+SAMPLES = ['MTND4P12-N4',
+ 'VEGFA-OffNo-GDNo-08',
+ 'VEGFA-Off-Target-2',
+ 'VEGFA-Off-Target-3',
+ 'VEGFA-Off-Target-6',
+ 'VEGFA-Off-Target-7',
+ 'VEGFA-On-Target']
 
 READ_IDX = ["1","2"]
 
 defult_sgRNA_dict_for_plot = {
-    'VEGFA': "GACCCCCTCCACCCCGCCTCCGG", 
+    "ABE":"GAATACTAAGCATAGACTCC", # 这里指的ABE-Site-7-On-Target
     'EMX1': "GAGTCCGAGCAGAAGAAGAAGGG", 
+    'HEK2':'GAACACAAAGCATAGACTGC',
     'HEK3': "GGCCCAGACTGAGCACGTGATGG", 
     "HEK4":"GGCACTGCGGCTGGAGGTGGGGG", 
-    "RNF2":"GTCATCTTAGTCATTACCTGAGG"
+    "HEK5":'CTGGCCTGGGTCAATCCTTG',
+    "MTND4P12":"TGCTAGTAACCACATTCTCCTGATCAAATATCACTCTCCTACTTACAGGA",
+    "MTND5P11":"TAGCATTGGCAGGAATACCCTTCCTCACAGGTTTCTACTCCAAAGA",
+    "MTND6P4":"TGACCCCCATGCCTCAGGATACTCCTCAATAGCCACCG",
+    "PP2":"GGCACTCGGGGGCGAGAGGA",
+    "PP6":"GGGGCTCAACATCGGAAGAG",
+    "RNF2":"GTCATCTTAGTCATTACCTGAGG",
+    'VEGFA': "GACCCCCTCCACCCCGCCTCCGG", 
 }
 
 rule all:
