@@ -10,9 +10,10 @@ BEDTOOLS = "/home/zhaohuanan/miniconda3/envs/snakepipes_target-seq-from-table-to
 # 决定了txt table的数量！！！
 # 不改会缺文件
 
-SAMPLES = ['ABE-Site-7-On',
- 'EMX1-2-On',
+SAMPLES = ['ABESite7-On',
+ 'EMX1Site2-On',
  'HEK2-On-Target',
+ 'HEK4-Guideseq-1',
  'HEK4-Guideseq-2',
  'HEK4-Guideseq-3',
  'HEK4-Guideseq-4',

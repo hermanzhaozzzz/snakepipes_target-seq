@@ -18,15 +18,15 @@ PYTHON = "/home/zhaohuanan/miniconda3/envs/snakepipes_target-seq-from-table-to-p
 
 
 
-CUTOFF = ["3"]
+CUTOFF = ["10"]
 
 LIBS = [
     'duigou',
     'jiantou'
 ]
 
-SAMPLES = ['ABE-Site-7-On',
- 'EMX1-2-On',
+SAMPLES = ['ABESite7-On',
+ 'EMX1Site2-On',
  'HEK5-On-Target',
  'PP2-On-Target',
  'PP6-On-Target',
@@ -35,8 +35,8 @@ SAMPLES = ['ABE-Site-7-On',
 READ_IDX = ["1","2"]
 
 defult_sgRNA_dict_for_plot = {
-    "ABE":"GAATACTAAGCATAGACTCC", # 这里指的ABE-Site-7-On-Target
-    'EMX1': "GAGTCCGAGCAGAAGAAGAAGGG", 
+    "ABESite7":"GAATACTAAGCATAGACTCC", # 这里指的ABE-Site-7-On-Target
+    'EMX1Site2': "GTATTCACCTGAAAGTGTGC", 
     'HEK2':'GAACACAAAGCATAGACTGC',
     'HEK3': "GGCCCAGACTGAGCACGTGATGG", 
     "HEK4":"GGCACTGCGGCTGGAGGTGGGGG", 
@@ -55,9 +55,9 @@ rule all:
         expand("../TargetSeq-{lib}/cutoff_{cutoff}/mapping/{sample}_R{read_idx}_cutadapt.fq.gz",lib=LIBS,sample=SAMPLES,read_idx=READ_IDX,cutoff=CUTOFF),
         expand("../TargetSeq-{lib}/cutoff_{cutoff}/mapping/{sample}_bwa_sort.bam",lib=LIBS,sample=SAMPLES,cutoff=CUTOFF),
         expand("../TargetSeq-{lib}/cutoff_{cutoff}/mapping/{sample}_bwa_sort.bam.bai",lib=LIBS,sample=SAMPLES,cutoff=CUTOFF),
-#         expand("../TargetSeq-{lib}/cutoff_{cutoff}/mapping/{sample}_bwa_sort.mpileup",lib=LIBS,sample=SAMPLES,cutoff=CUTOFF),
-#         expand("../TargetSeq-{lib}/cutoff_{cutoff}/mapping/{sample}_bwa_sort.bmat",lib=LIBS,sample=SAMPLES,cutoff=CUTOFF),
-#         expand("../all_plot/cutoff_{cutoff}.ext50/TargetSeq-{lib}_{sample}_cutoff_{cutoff}_indel.ext50.pdf",lib=LIBS,sample=SAMPLES,cutoff=CUTOFF)
+        expand("../TargetSeq-{lib}/cutoff_{cutoff}/mapping/{sample}_bwa_sort.mpileup",lib=LIBS,sample=SAMPLES,cutoff=CUTOFF),
+        expand("../TargetSeq-{lib}/cutoff_{cutoff}/mapping/{sample}_bwa_sort.bmat",lib=LIBS,sample=SAMPLES,cutoff=CUTOFF),
+        expand("../all_plot/cutoff_{cutoff}.ext50/TargetSeq-{lib}_{sample}_cutoff_{cutoff}_indel.ext50.pdf",lib=LIBS,sample=SAMPLES,cutoff=CUTOFF)
         
 
 # wildcard_constraints:

@@ -1,4 +1,0 @@
-Building DAG of jobs...
-WildcardError in line 95 of /gpfs/user/zhaohuanan/3.project/14.2020-10_1010_TargetSeq-GBE-DdCBE_recheck/snakepipes_target-seq-from-table-to-plot/snk.07.for_igv_check.py:
-Wildcards in input files cannot be determined from output files:
-'GENOME_HG38'

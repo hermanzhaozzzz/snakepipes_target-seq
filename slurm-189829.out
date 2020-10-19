@@ -1,0 +1,20 @@
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided cores: 24
+Rules claiming more threads will be scaled down.
+Job counts:
+	count	jobs
+	1	MergeFastq
+	1
+
+[Mon Oct 19 15:05:22 2020]
+rule MergeFastq:
+    input: ../TargetSeq-sanjiao
+    output: ../TargetSeq-sanjiao/cutoff_10/sanjiao_cutoff_10.report
+    log: ../TargetSeq-sanjiao/cutoff_10/sanjiao_cutoff_10.log
+    jobid: 0
+    wildcards: lib=sanjiao, cutoff=10
+
+[Mon Oct 19 16:44:02 2020]
+Finished job 0.
+1 of 1 steps (100%) done
