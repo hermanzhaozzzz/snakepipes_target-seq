@@ -95,3 +95,11 @@ conda create -n snakepipes_target-seq-from-table-to-plot python=2.7.15 biopython
 ![](https://tva1.sinaimg.cn/large/007S8ZIlly1gh9iqqqhidj30y80mkq7c.jpg)
 
 ![](https://tva1.sinaimg.cn/large/007S8ZIlly1gh9iww7avoj30iw08mmxk.jpg)
+
+
+
+
+# 6. check igv
+```
+$ tar -zcvf igv.tgz TargetSeq*/cutoff_3/map*/*sort.bam* TargetSeq_BED_sample_lib
+```

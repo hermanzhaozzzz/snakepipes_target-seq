@@ -1,0 +1,405 @@
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided cores: 24
+Rules claiming more threads will be scaled down.
+Job counts:
+	count	jobs
+	1	all
+	22	bwa_idex
+	22	faidx
+	22	getbed
+	22	getfasta
+	22	letter2LETTER
+	111
+
+[Fri Oct 16 14:53:03 2020]
+rule getbed:
+    output: ../TargetSeq_BED_sample_lib/PP2-On-Target.bed
+    jobid: 13
+    reason: Missing output files: ../TargetSeq_BED_sample_lib/PP2-On-Target.bed
+    wildcards: sample=PP2-On-Target
+
+[Fri Oct 16 14:53:03 2020]
+rule getbed:
+    output: ../TargetSeq_BED_sample_lib/HEK4-Guideseq-5.bed
+    jobid: 7
+    reason: Missing output files: ../TargetSeq_BED_sample_lib/HEK4-Guideseq-5.bed
+    wildcards: sample=HEK4-Guideseq-5
+
+[Fri Oct 16 14:53:03 2020]
+rule getbed:
+    output: ../TargetSeq_BED_sample_lib/VEGFA-OffNo-GDNo-12.bed
+    jobid: 21
+    reason: Missing output files: ../TargetSeq_BED_sample_lib/VEGFA-OffNo-GDNo-12.bed
+    wildcards: sample=VEGFA-OffNo-GDNo-12
+
+[Fri Oct 16 14:53:03 2020]
+rule getbed:
+    output: ../TargetSeq_BED_sample_lib/PP6-On-Target.bed
+    jobid: 14
+    reason: Missing output files: ../TargetSeq_BED_sample_lib/PP6-On-Target.bed
+    wildcards: sample=PP6-On-Target
+
+[Fri Oct 16 14:53:03 2020]
+rule getbed:
+    output: ../TargetSeq_BED_sample_lib/HEK4-On-Target.bed
+    jobid: 8
+    reason: Missing output files: ../TargetSeq_BED_sample_lib/HEK4-On-Target.bed
+    wildcards: sample=HEK4-On-Target
+
+[Fri Oct 16 14:53:03 2020]
+rule getbed:
+    output: ../TargetSeq_BED_sample_lib/VEGFA-On-Target.bed
+    jobid: 22
+    reason: Missing output files: ../TargetSeq_BED_sample_lib/VEGFA-On-Target.bed
+    wildcards: sample=VEGFA-On-Target
+
+[Fri Oct 16 14:53:03 2020]
+rule getbed:
+    output: ../TargetSeq_BED_sample_lib/ABE-Site-7-On.bed
+    jobid: 1
+    reason: Missing output files: ../TargetSeq_BED_sample_lib/ABE-Site-7-On.bed
+    wildcards: sample=ABE-Site-7-On
+
+[Fri Oct 16 14:53:03 2020]
+rule getbed:
+    output: ../TargetSeq_BED_sample_lib/RNF2-ON-Target.bed
+    jobid: 15
+    reason: Missing output files: ../TargetSeq_BED_sample_lib/RNF2-ON-Target.bed
+    wildcards: sample=RNF2-ON-Target
+
+[Fri Oct 16 14:53:03 2020]
+rule getbed:
+    output: ../TargetSeq_BED_sample_lib/HEK5-On-Target.bed
+    jobid: 9
+    reason: Missing output files: ../TargetSeq_BED_sample_lib/HEK5-On-Target.bed
+    wildcards: sample=HEK5-On-Target
+
+[Fri Oct 16 14:53:03 2020]
+rule getbed:
+    output: ../TargetSeq_BED_sample_lib/VEGFA-Off-Target-2.bed
+    jobid: 16
+    reason: Missing output files: ../TargetSeq_BED_sample_lib/VEGFA-Off-Target-2.bed
+    wildcards: sample=VEGFA-Off-Target-2
+
+[Fri Oct 16 14:53:03 2020]
+rule getbed:
+    output: ../TargetSeq_BED_sample_lib/EMX1-2-On.bed
+    jobid: 2
+    reason: Missing output files: ../TargetSeq_BED_sample_lib/EMX1-2-On.bed
+    wildcards: sample=EMX1-2-On
+
+[Fri Oct 16 14:53:03 2020]
+rule getbed:
+    output: ../TargetSeq_BED_sample_lib/MTND4P12-N4.bed
+    jobid: 10
+    reason: Missing output files: ../TargetSeq_BED_sample_lib/MTND4P12-N4.bed
+    wildcards: sample=MTND4P12-N4
+
+[Fri Oct 16 14:53:03 2020]
+rule getbed:
+    output: ../TargetSeq_BED_sample_lib/HEK2-On-Target.bed
+    jobid: 3
+    reason: Missing output files: ../TargetSeq_BED_sample_lib/HEK2-On-Target.bed
+    wildcards: sample=HEK2-On-Target
+
+[Fri Oct 16 14:53:03 2020]
+rule getbed:
+    output: ../TargetSeq_BED_sample_lib/VEGFA-Off-Target-3.bed
+    jobid: 17
+    reason: Missing output files: ../TargetSeq_BED_sample_lib/VEGFA-Off-Target-3.bed
+    wildcards: sample=VEGFA-Off-Target-3
+
+[Fri Oct 16 14:53:03 2020]
+rule getbed:
+    output: ../TargetSeq_BED_sample_lib/MTND5P11-N5.1.bed
+    jobid: 11
+    reason: Missing output files: ../TargetSeq_BED_sample_lib/MTND5P11-N5.1.bed
+    wildcards: sample=MTND5P11-N5.1
+
+[Fri Oct 16 14:53:03 2020]
+rule getbed:
+    output: ../TargetSeq_BED_sample_lib/VEGFA-Off-Target-6.bed
+    jobid: 18
+    reason: Missing output files: ../TargetSeq_BED_sample_lib/VEGFA-Off-Target-6.bed
+    wildcards: sample=VEGFA-Off-Target-6
+
+[Fri Oct 16 14:53:03 2020]
+rule getbed:
+    output: ../TargetSeq_BED_sample_lib/HEK4-Guideseq-2.bed
+    jobid: 4
+    reason: Missing output files: ../TargetSeq_BED_sample_lib/HEK4-Guideseq-2.bed
+    wildcards: sample=HEK4-Guideseq-2
+
+[Fri Oct 16 14:53:03 2020]
+rule getbed:
+    output: ../TargetSeq_BED_sample_lib/MTND6P4-N6.bed
+    jobid: 12
+    reason: Missing output files: ../TargetSeq_BED_sample_lib/MTND6P4-N6.bed
+    wildcards: sample=MTND6P4-N6
+
+[Fri Oct 16 14:53:03 2020]
+rule getbed:
+    output: ../TargetSeq_BED_sample_lib/HEK4-Guideseq-3.bed
+    jobid: 5
+    reason: Missing output files: ../TargetSeq_BED_sample_lib/HEK4-Guideseq-3.bed
+    wildcards: sample=HEK4-Guideseq-3
+
+[Fri Oct 16 14:53:03 2020]
+rule getbed:
+    output: ../TargetSeq_BED_sample_lib/VEGFA-Off-Target-7.bed
+    jobid: 19
+    reason: Missing output files: ../TargetSeq_BED_sample_lib/VEGFA-Off-Target-7.bed
+    wildcards: sample=VEGFA-Off-Target-7
+
+[Fri Oct 16 14:53:03 2020]
+rule getbed:
+    output: ../TargetSeq_BED_sample_lib/VEGFA-OffNo-GDNo-08.bed
+    jobid: 20
+    reason: Missing output files: ../TargetSeq_BED_sample_lib/VEGFA-OffNo-GDNo-08.bed
+    wildcards: sample=VEGFA-OffNo-GDNo-08
+
+[Fri Oct 16 14:53:03 2020]
+rule getbed:
+    output: ../TargetSeq_BED_sample_lib/HEK4-Guideseq-4.bed
+    jobid: 6
+    reason: Missing output files: ../TargetSeq_BED_sample_lib/HEK4-Guideseq-4.bed
+    wildcards: sample=HEK4-Guideseq-4
+
+[Fri Oct 16 14:53:03 2020]
+Finished job 7.
+1 of 111 steps (0.90%) done
+
+[Fri Oct 16 14:53:03 2020]
+rule getfasta:
+    input: ../TargetSeq_BED_sample_lib/HEK4-Guideseq-5.bed
+    output: ../TargetSeq_BED_sample_lib/HEK4-Guideseq-5.ref.fa
+    jobid: 29
+    reason: Missing output files: ../TargetSeq_BED_sample_lib/HEK4-Guideseq-5.ref.fa; Input files updated by another job: ../TargetSeq_BED_sample_lib/HEK4-Guideseq-5.bed
+    wildcards: sample=HEK4-Guideseq-5
+
+
+        /home/zhaohuanan/miniconda3/envs/snakepipes_target-seq-from-table-to-plot/bin/bedtools getfasta -s -bed ../TargetSeq_BED_sample_lib/HEK4-Guideseq-5.bed -fi -nameOnly /home/zhaohuanan/zhaohn_HD/2.database/bwa_hg38/hg38_only_chromosome.fa > ../TargetSeq_BED_sample_lib/HEK4-Guideseq-5.ref.fa
+        
+[Fri Oct 16 14:53:03 2020]
+Finished job 8.
+2 of 111 steps (2%) done
+
+[Fri Oct 16 14:53:03 2020]
+rule getfasta:
+    input: ../TargetSeq_BED_sample_lib/HEK4-On-Target.bed
+    output: ../TargetSeq_BED_sample_lib/HEK4-On-Target.ref.fa
+    jobid: 30
+    reason: Missing output files: ../TargetSeq_BED_sample_lib/HEK4-On-Target.ref.fa; Input files updated by another job: ../TargetSeq_BED_sample_lib/HEK4-On-Target.bed
+    wildcards: sample=HEK4-On-Target
+
+
+        /home/zhaohuanan/miniconda3/envs/snakepipes_target-seq-from-table-to-plot/bin/bedtools getfasta -s -bed ../TargetSeq_BED_sample_lib/HEK4-On-Target.bed -fi -nameOnly /home/zhaohuanan/zhaohn_HD/2.database/bwa_hg38/hg38_only_chromosome.fa > ../TargetSeq_BED_sample_lib/HEK4-On-Target.ref.fa
+        
+[Fri Oct 16 14:53:03 2020]
+Finished job 21.
+3 of 111 steps (3%) done
+[Fri Oct 16 14:53:03 2020]
+Finished job 13.
+4 of 111 steps (4%) done
+
+[Fri Oct 16 14:53:03 2020]
+rule getfasta:
+    input: ../TargetSeq_BED_sample_lib/PP2-On-Target.bed
+    output: ../TargetSeq_BED_sample_lib/PP2-On-Target.ref.fa
+    jobid: 35
+    reason: Missing output files: ../TargetSeq_BED_sample_lib/PP2-On-Target.ref.fa; Input files updated by another job: ../TargetSeq_BED_sample_lib/PP2-On-Target.bed
+    wildcards: sample=PP2-On-Target
+
+
+        /home/zhaohuanan/miniconda3/envs/snakepipes_target-seq-from-table-to-plot/bin/bedtools getfasta -s -bed ../TargetSeq_BED_sample_lib/PP2-On-Target.bed -fi -nameOnly /home/zhaohuanan/zhaohn_HD/2.database/bwa_hg38/hg38_only_chromosome.fa > ../TargetSeq_BED_sample_lib/PP2-On-Target.ref.fa
+        
+[Fri Oct 16 14:53:03 2020]
+Finished job 14.
+5 of 111 steps (5%) done
+[Fri Oct 16 14:53:03 2020]
+
+Finished job 15.
+[Fri Oct 16 14:53:03 2020]
+6 of 111 steps (5%) done
+rule getfasta:
+    input: ../TargetSeq_BED_sample_lib/VEGFA-OffNo-GDNo-12.bed
+    output: ../TargetSeq_BED_sample_lib/VEGFA-OffNo-GDNo-12.ref.fa
+    jobid: 43
+    reason: Missing output files: ../TargetSeq_BED_sample_lib/VEGFA-OffNo-GDNo-12.ref.fa; Input files updated by another job: ../TargetSeq_BED_sample_lib/VEGFA-OffNo-GDNo-12.bed
+    wildcards: sample=VEGFA-OffNo-GDNo-12
+
+
+        /home/zhaohuanan/miniconda3/envs/snakepipes_target-seq-from-table-to-plot/bin/bedtools getfasta -s -bed ../TargetSeq_BED_sample_lib/VEGFA-OffNo-GDNo-12.bed -fi -nameOnly /home/zhaohuanan/zhaohn_HD/2.database/bwa_hg38/hg38_only_chromosome.fa > ../TargetSeq_BED_sample_lib/VEGFA-OffNo-GDNo-12.ref.fa
+        
+[Fri Oct 16 14:53:03 2020]
+Finished job 1.
+7 of 111 steps (6%) done
+
+[Fri Oct 16 14:53:03 2020]
+rule getfasta:
+    input: ../TargetSeq_BED_sample_lib/PP6-On-Target.bed
+    output: ../TargetSeq_BED_sample_lib/PP6-On-Target.ref.fa
+    jobid: 36
+    reason: Missing output files: ../TargetSeq_BED_sample_lib/PP6-On-Target.ref.fa; Input files updated by another job: ../TargetSeq_BED_sample_lib/PP6-On-Target.bed
+    wildcards: sample=PP6-On-Target
+
+
+        /home/zhaohuanan/miniconda3/envs/snakepipes_target-seq-from-table-to-plot/bin/bedtools getfasta -s -bed ../TargetSeq_BED_sample_lib/PP6-On-Target.bed -fi -nameOnly /home/zhaohuanan/zhaohn_HD/2.database/bwa_hg38/hg38_only_chromosome.fa > ../TargetSeq_BED_sample_lib/PP6-On-Target.ref.fa
+        
+
+[Fri Oct 16 14:53:03 2020]
+rule getfasta:
+    input: ../TargetSeq_BED_sample_lib/RNF2-ON-Target.bed
+    output: ../TargetSeq_BED_sample_lib/RNF2-ON-Target.ref.fa
+    jobid: 37
+    reason: Missing output files: ../TargetSeq_BED_sample_lib/RNF2-ON-Target.ref.fa; Input files updated by another job: ../TargetSeq_BED_sample_lib/RNF2-ON-Target.bed
+    wildcards: sample=RNF2-ON-Target
+
+
+        /home/zhaohuanan/miniconda3/envs/snakepipes_target-seq-from-table-to-plot/bin/bedtools getfasta -s -bed ../TargetSeq_BED_sample_lib/RNF2-ON-Target.bed -fi -nameOnly /home/zhaohuanan/zhaohn_HD/2.database/bwa_hg38/hg38_only_chromosome.fa > ../TargetSeq_BED_sample_lib/RNF2-ON-Target.ref.fa
+        
+[Fri Oct 16 14:53:03 2020]
+Error in rule getfasta:
+    jobid: 30
+    output: ../TargetSeq_BED_sample_lib/HEK4-On-Target.ref.fa
+    shell:
+        
+        /home/zhaohuanan/miniconda3/envs/snakepipes_target-seq-from-table-to-plot/bin/bedtools getfasta -s -bed ../TargetSeq_BED_sample_lib/HEK4-On-Target.bed -fi -nameOnly /home/zhaohuanan/zhaohn_HD/2.database/bwa_hg38/hg38_only_chromosome.fa > ../TargetSeq_BED_sample_lib/HEK4-On-Target.ref.fa
+        
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+Removing output files of failed job getfasta since they might be corrupted:
+../TargetSeq_BED_sample_lib/HEK4-On-Target.ref.fa
+[Fri Oct 16 14:53:03 2020]
+Error in rule getfasta:
+    jobid: 29
+    output: ../TargetSeq_BED_sample_lib/HEK4-Guideseq-5.ref.fa
+    shell:
+        
+        /home/zhaohuanan/miniconda3/envs/snakepipes_target-seq-from-table-to-plot/bin/bedtools getfasta -s -bed ../TargetSeq_BED_sample_lib/HEK4-Guideseq-5.bed -fi -nameOnly /home/zhaohuanan/zhaohn_HD/2.database/bwa_hg38/hg38_only_chromosome.fa > ../TargetSeq_BED_sample_lib/HEK4-Guideseq-5.ref.fa
+        
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+Removing output files of failed job getfasta since they might be corrupted:
+../TargetSeq_BED_sample_lib/HEK4-Guideseq-5.ref.fa
+
+[Fri Oct 16 14:53:03 2020]
+rule getfasta:
+    input: ../TargetSeq_BED_sample_lib/ABE-Site-7-On.bed
+    output: ../TargetSeq_BED_sample_lib/ABE-Site-7-On.ref.fa
+    jobid: 23
+    reason: Missing output files: ../TargetSeq_BED_sample_lib/ABE-Site-7-On.ref.fa; Input files updated by another job: ../TargetSeq_BED_sample_lib/ABE-Site-7-On.bed
+    wildcards: sample=ABE-Site-7-On
+
+
+        /home/zhaohuanan/miniconda3/envs/snakepipes_target-seq-from-table-to-plot/bin/bedtools getfasta -s -bed ../TargetSeq_BED_sample_lib/ABE-Site-7-On.bed -fi -nameOnly /home/zhaohuanan/zhaohn_HD/2.database/bwa_hg38/hg38_only_chromosome.fa > ../TargetSeq_BED_sample_lib/ABE-Site-7-On.ref.fa
+        
+[Fri Oct 16 14:53:03 2020]
+Error in rule getfasta:
+    jobid: 35
+    output: ../TargetSeq_BED_sample_lib/PP2-On-Target.ref.fa
+    shell:
+        
+        /home/zhaohuanan/miniconda3/envs/snakepipes_target-seq-from-table-to-plot/bin/bedtools getfasta -s -bed ../TargetSeq_BED_sample_lib/PP2-On-Target.bed -fi -nameOnly /home/zhaohuanan/zhaohn_HD/2.database/bwa_hg38/hg38_only_chromosome.fa > ../TargetSeq_BED_sample_lib/PP2-On-Target.ref.fa
+        
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+[Fri Oct 16 14:53:03 2020]
+Finished job 2.
+8 of 111 steps (7%) done
+Removing output files of failed job getfasta since they might be corrupted:
+../TargetSeq_BED_sample_lib/PP2-On-Target.ref.fa
+[Fri Oct 16 14:53:03 2020]
+Error in rule getfasta:
+    jobid: 36
+[Fri Oct 16 14:53:03 2020]
+Error in rule getfasta:
+    output: ../TargetSeq_BED_sample_lib/PP6-On-Target.ref.fa
+    shell:
+        
+        /home/zhaohuanan/miniconda3/envs/snakepipes_target-seq-from-table-to-plot/bin/bedtools getfasta -s -bed ../TargetSeq_BED_sample_lib/PP6-On-Target.bed -fi -nameOnly /home/zhaohuanan/zhaohn_HD/2.database/bwa_hg38/hg38_only_chromosome.fa > ../TargetSeq_BED_sample_lib/PP6-On-Target.ref.fa
+        
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+    jobid: 43
+    output: ../TargetSeq_BED_sample_lib/VEGFA-OffNo-GDNo-12.ref.fa
+[Fri Oct 16 14:53:03 2020]
+    shell:
+        
+        /home/zhaohuanan/miniconda3/envs/snakepipes_target-seq-from-table-to-plot/bin/bedtools getfasta -s -bed ../TargetSeq_BED_sample_lib/VEGFA-OffNo-GDNo-12.bed -fi -nameOnly /home/zhaohuanan/zhaohn_HD/2.database/bwa_hg38/hg38_only_chromosome.fa > ../TargetSeq_BED_sample_lib/VEGFA-OffNo-GDNo-12.ref.fa
+        
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+Finished job 22.
+
+9 of 111 steps (8%) done
+[Fri Oct 16 14:53:03 2020]
+Removing output files of failed job getfasta since they might be corrupted:
+../TargetSeq_BED_sample_lib/PP6-On-Target.ref.fa
+Error in rule getfasta:
+    jobid: 37
+    output: ../TargetSeq_BED_sample_lib/RNF2-ON-Target.ref.fa
+    shell:
+        
+        /home/zhaohuanan/miniconda3/envs/snakepipes_target-seq-from-table-to-plot/bin/bedtools getfasta -s -bed ../TargetSeq_BED_sample_lib/RNF2-ON-Target.bed -fi -nameOnly /home/zhaohuanan/zhaohn_HD/2.database/bwa_hg38/hg38_only_chromosome.fa > ../TargetSeq_BED_sample_lib/RNF2-ON-Target.ref.fa
+        
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+Removing output files of failed job getfasta since they might be corrupted:
+../TargetSeq_BED_sample_lib/VEGFA-OffNo-GDNo-12.ref.fa
+
+Removing output files of failed job getfasta since they might be corrupted:
+../TargetSeq_BED_sample_lib/RNF2-ON-Target.ref.fa
+[Fri Oct 16 14:53:03 2020]
+Error in rule getfasta:
+    jobid: 23
+    output: ../TargetSeq_BED_sample_lib/ABE-Site-7-On.ref.fa
+    shell:
+        
+        /home/zhaohuanan/miniconda3/envs/snakepipes_target-seq-from-table-to-plot/bin/bedtools getfasta -s -bed ../TargetSeq_BED_sample_lib/ABE-Site-7-On.bed -fi -nameOnly /home/zhaohuanan/zhaohn_HD/2.database/bwa_hg38/hg38_only_chromosome.fa > ../TargetSeq_BED_sample_lib/ABE-Site-7-On.ref.fa
+        
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+Removing output files of failed job getfasta since they might be corrupted:
+../TargetSeq_BED_sample_lib/ABE-Site-7-On.ref.fa
+[Fri Oct 16 14:53:03 2020]
+Finished job 9.
+10 of 111 steps (9%) done
+[Fri Oct 16 14:53:03 2020]
+Finished job 16.
+11 of 111 steps (10%) done
+[Fri Oct 16 14:53:03 2020]
+Finished job 11.
+12 of 111 steps (11%) done
+[Fri Oct 16 14:53:03 2020]
+Finished job 12.
+13 of 111 steps (12%) done
+[Fri Oct 16 14:53:03 2020]
+Finished job 10.
+14 of 111 steps (13%) done
+[Fri Oct 16 14:53:03 2020]
+Finished job 3.
+15 of 111 steps (14%) done
+[Fri Oct 16 14:53:03 2020]
+Finished job 19.
+16 of 111 steps (14%) done
+[Fri Oct 16 14:53:03 2020]
+Finished job 18.
+17 of 111 steps (15%) done
+[Fri Oct 16 14:53:03 2020]
+Finished job 17.
+18 of 111 steps (16%) done
+[Fri Oct 16 14:53:03 2020]
+Finished job 6.
+19 of 111 steps (17%) done
+[Fri Oct 16 14:53:03 2020]
+Finished job 5.
+20 of 111 steps (18%) done
+[Fri Oct 16 14:53:03 2020]
+Finished job 20.
+21 of 111 steps (19%) done
+[Fri Oct 16 14:53:03 2020]
+Finished job 4.
+22 of 111 steps (20%) done
+Shutting down, this might take some time.
+Exiting because a job execution failed. Look above for error message
+Complete log: /gpfs/user/zhaohuanan/3.project/14.2020-10_1010_TargetSeq-GBE-DdCBE_recheck/snakepipes_target-seq-from-table-to-plot/.snakemake/log/2020-10-16T145302.980352.snakemake.log

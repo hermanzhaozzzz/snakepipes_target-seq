@@ -1,0 +1,518 @@
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided cores: 24
+Rules claiming more threads will be scaled down.
+Job counts:
+	count	jobs
+	1	all
+	21	sam_to_bam
+	21	samtools_index
+	21	samtools_sort_by_position
+	64
+
+[Fri Oct 16 15:27:55 2020]
+rule sam_to_bam:
+    input: ../TargetSeq-5/cutoff_3/mapping/VEGFA-On-Target_bwa.sam, ../TargetSeq_BED_sample_lib/VEGFA-On-Target.ref.upper.fa
+    output: ../TargetSeq-5/cutoff_3/mapping/VEGFA-On-Target_bwa.bam
+    jobid: 91
+    reason: Updated input files: ../TargetSeq_BED_sample_lib/VEGFA-On-Target.ref.upper.fa
+    wildcards: lib=5, cutoff=3, sample=VEGFA-On-Target
+
+
+        /home/zhaohuanan/miniconda3/envs/snakepipes_cutadapt-STARmapping-FPKM-sortBAM/bin/samtools view -h -f 1 -F 268 ../TargetSeq-5/cutoff_3/mapping/VEGFA-On-Target_bwa.sam         | /home/zhaohuanan/miniconda3/envs/snakepipes_target-seq-from-table-to-plot/bin/samclip --ref ../TargetSeq_BED_sample_lib/VEGFA-On-Target.ref.upper.fa --max 3 --progress 0         | awk 'function abs(v) {return v < 0 ? -v : v} $1~"@" || ($7 == "=" && abs($9) <= 600 ) {print $0}'         | /home/zhaohuanan/miniconda3/envs/snakepipes_cutadapt-STARmapping-FPKM-sortBAM/bin/samtools view -hb > ../TargetSeq-5/cutoff_3/mapping/VEGFA-On-Target_bwa.bam
+        
+
+[Fri Oct 16 15:27:55 2020]
+rule sam_to_bam:
+    input: ../TargetSeq-6/cutoff_3/mapping/VEGFA-On-Target_bwa.sam, ../TargetSeq_BED_sample_lib/VEGFA-On-Target.ref.upper.fa
+    output: ../TargetSeq-6/cutoff_3/mapping/VEGFA-On-Target_bwa.bam
+    jobid: 98
+    reason: Updated input files: ../TargetSeq_BED_sample_lib/VEGFA-On-Target.ref.upper.fa
+    wildcards: lib=6, cutoff=3, sample=VEGFA-On-Target
+
+
+        /home/zhaohuanan/miniconda3/envs/snakepipes_cutadapt-STARmapping-FPKM-sortBAM/bin/samtools view -h -f 1 -F 268 ../TargetSeq-6/cutoff_3/mapping/VEGFA-On-Target_bwa.sam         | /home/zhaohuanan/miniconda3/envs/snakepipes_target-seq-from-table-to-plot/bin/samclip --ref ../TargetSeq_BED_sample_lib/VEGFA-On-Target.ref.upper.fa --max 3 --progress 0         | awk 'function abs(v) {return v < 0 ? -v : v} $1~"@" || ($7 == "=" && abs($9) <= 600 ) {print $0}'         | /home/zhaohuanan/miniconda3/envs/snakepipes_cutadapt-STARmapping-FPKM-sortBAM/bin/samtools view -hb > ../TargetSeq-6/cutoff_3/mapping/VEGFA-On-Target_bwa.bam
+        
+
+[Fri Oct 16 15:27:55 2020]
+rule sam_to_bam:
+    input: ../TargetSeq-7/cutoff_3/mapping/VEGFA-On-Target_bwa.sam, ../TargetSeq_BED_sample_lib/VEGFA-On-Target.ref.upper.fa
+    output: ../TargetSeq-7/cutoff_3/mapping/VEGFA-On-Target_bwa.bam
+    jobid: 105
+    reason: Updated input files: ../TargetSeq_BED_sample_lib/VEGFA-On-Target.ref.upper.fa
+    wildcards: lib=7, cutoff=3, sample=VEGFA-On-Target
+
+
+        /home/zhaohuanan/miniconda3/envs/snakepipes_cutadapt-STARmapping-FPKM-sortBAM/bin/samtools view -h -f 1 -F 268 ../TargetSeq-7/cutoff_3/mapping/VEGFA-On-Target_bwa.sam         | /home/zhaohuanan/miniconda3/envs/snakepipes_target-seq-from-table-to-plot/bin/samclip --ref ../TargetSeq_BED_sample_lib/VEGFA-On-Target.ref.upper.fa --max 3 --progress 0         | awk 'function abs(v) {return v < 0 ? -v : v} $1~"@" || ($7 == "=" && abs($9) <= 600 ) {print $0}'         | /home/zhaohuanan/miniconda3/envs/snakepipes_cutadapt-STARmapping-FPKM-sortBAM/bin/samtools view -hb > ../TargetSeq-7/cutoff_3/mapping/VEGFA-On-Target_bwa.bam
+        
+
+[Fri Oct 16 15:27:55 2020]
+rule sam_to_bam:
+    input: ../TargetSeq-5/cutoff_3/mapping/VEGFA-Off-Target-3_bwa.sam, ../TargetSeq_BED_sample_lib/VEGFA-Off-Target-3.ref.upper.fa
+    output: ../TargetSeq-5/cutoff_3/mapping/VEGFA-Off-Target-3_bwa.bam
+    jobid: 88
+    reason: Updated input files: ../TargetSeq_BED_sample_lib/VEGFA-Off-Target-3.ref.upper.fa
+    wildcards: lib=5, cutoff=3, sample=VEGFA-Off-Target-3
+
+
+        /home/zhaohuanan/miniconda3/envs/snakepipes_cutadapt-STARmapping-FPKM-sortBAM/bin/samtools view -h -f 1 -F 268 ../TargetSeq-5/cutoff_3/mapping/VEGFA-Off-Target-3_bwa.sam         | /home/zhaohuanan/miniconda3/envs/snakepipes_target-seq-from-table-to-plot/bin/samclip --ref ../TargetSeq_BED_sample_lib/VEGFA-Off-Target-3.ref.upper.fa --max 3 --progress 0         | awk 'function abs(v) {return v < 0 ? -v : v} $1~"@" || ($7 == "=" && abs($9) <= 600 ) {print $0}'         | /home/zhaohuanan/miniconda3/envs/snakepipes_cutadapt-STARmapping-FPKM-sortBAM/bin/samtools view -hb > ../TargetSeq-5/cutoff_3/mapping/VEGFA-Off-Target-3_bwa.bam
+        
+
+[Fri Oct 16 15:27:55 2020]
+rule sam_to_bam:
+    input: ../TargetSeq-6/cutoff_3/mapping/VEGFA-Off-Target-3_bwa.sam, ../TargetSeq_BED_sample_lib/VEGFA-Off-Target-3.ref.upper.fa
+    output: ../TargetSeq-6/cutoff_3/mapping/VEGFA-Off-Target-3_bwa.bam
+    jobid: 95
+    reason: Updated input files: ../TargetSeq_BED_sample_lib/VEGFA-Off-Target-3.ref.upper.fa
+    wildcards: lib=6, cutoff=3, sample=VEGFA-Off-Target-3
+
+
+        /home/zhaohuanan/miniconda3/envs/snakepipes_cutadapt-STARmapping-FPKM-sortBAM/bin/samtools view -h -f 1 -F 268 ../TargetSeq-6/cutoff_3/mapping/VEGFA-Off-Target-3_bwa.sam         | /home/zhaohuanan/miniconda3/envs/snakepipes_target-seq-from-table-to-plot/bin/samclip --ref ../TargetSeq_BED_sample_lib/VEGFA-Off-Target-3.ref.upper.fa --max 3 --progress 0         | awk 'function abs(v) {return v < 0 ? -v : v} $1~"@" || ($7 == "=" && abs($9) <= 600 ) {print $0}'         | /home/zhaohuanan/miniconda3/envs/snakepipes_cutadapt-STARmapping-FPKM-sortBAM/bin/samtools view -hb > ../TargetSeq-6/cutoff_3/mapping/VEGFA-Off-Target-3_bwa.bam
+        
+
+[Fri Oct 16 15:27:55 2020]
+rule sam_to_bam:
+    input: ../TargetSeq-7/cutoff_3/mapping/VEGFA-Off-Target-3_bwa.sam, ../TargetSeq_BED_sample_lib/VEGFA-Off-Target-3.ref.upper.fa
+    output: ../TargetSeq-7/cutoff_3/mapping/VEGFA-Off-Target-3_bwa.bam
+    jobid: 102
+    reason: Updated input files: ../TargetSeq_BED_sample_lib/VEGFA-Off-Target-3.ref.upper.fa
+    wildcards: lib=7, cutoff=3, sample=VEGFA-Off-Target-3
+
+
+        /home/zhaohuanan/miniconda3/envs/snakepipes_cutadapt-STARmapping-FPKM-sortBAM/bin/samtools view -h -f 1 -F 268 ../TargetSeq-7/cutoff_3/mapping/VEGFA-Off-Target-3_bwa.sam         | /home/zhaohuanan/miniconda3/envs/snakepipes_target-seq-from-table-to-plot/bin/samclip --ref ../TargetSeq_BED_sample_lib/VEGFA-Off-Target-3.ref.upper.fa --max 3 --progress 0         | awk 'function abs(v) {return v < 0 ? -v : v} $1~"@" || ($7 == "=" && abs($9) <= 600 ) {print $0}'         | /home/zhaohuanan/miniconda3/envs/snakepipes_cutadapt-STARmapping-FPKM-sortBAM/bin/samtools view -hb > ../TargetSeq-7/cutoff_3/mapping/VEGFA-Off-Target-3_bwa.bam
+        
+
+[Fri Oct 16 15:27:55 2020]
+rule sam_to_bam:
+    input: ../TargetSeq-7/cutoff_3/mapping/MTND4P12-N4_bwa.sam, ../TargetSeq_BED_sample_lib/MTND4P12-N4.ref.upper.fa
+    output: ../TargetSeq-7/cutoff_3/mapping/MTND4P12-N4_bwa.bam
+    jobid: 99
+    reason: Updated input files: ../TargetSeq_BED_sample_lib/MTND4P12-N4.ref.upper.fa
+    wildcards: lib=7, cutoff=3, sample=MTND4P12-N4
+
+
+        /home/zhaohuanan/miniconda3/envs/snakepipes_cutadapt-STARmapping-FPKM-sortBAM/bin/samtools view -h -f 1 -F 268 ../TargetSeq-7/cutoff_3/mapping/MTND4P12-N4_bwa.sam         | /home/zhaohuanan/miniconda3/envs/snakepipes_target-seq-from-table-to-plot/bin/samclip --ref ../TargetSeq_BED_sample_lib/MTND4P12-N4.ref.upper.fa --max 3 --progress 0         | awk 'function abs(v) {return v < 0 ? -v : v} $1~"@" || ($7 == "=" && abs($9) <= 600 ) {print $0}'         | /home/zhaohuanan/miniconda3/envs/snakepipes_cutadapt-STARmapping-FPKM-sortBAM/bin/samtools view -hb > ../TargetSeq-7/cutoff_3/mapping/MTND4P12-N4_bwa.bam
+        
+
+[Fri Oct 16 15:27:55 2020]
+rule sam_to_bam:
+    input: ../TargetSeq-5/cutoff_3/mapping/MTND4P12-N4_bwa.sam, ../TargetSeq_BED_sample_lib/MTND4P12-N4.ref.upper.fa
+    output: ../TargetSeq-5/cutoff_3/mapping/MTND4P12-N4_bwa.bam
+    jobid: 85
+    reason: Updated input files: ../TargetSeq_BED_sample_lib/MTND4P12-N4.ref.upper.fa
+    wildcards: lib=5, cutoff=3, sample=MTND4P12-N4
+
+
+        /home/zhaohuanan/miniconda3/envs/snakepipes_cutadapt-STARmapping-FPKM-sortBAM/bin/samtools view -h -f 1 -F 268 ../TargetSeq-5/cutoff_3/mapping/MTND4P12-N4_bwa.sam         | /home/zhaohuanan/miniconda3/envs/snakepipes_target-seq-from-table-to-plot/bin/samclip --ref ../TargetSeq_BED_sample_lib/MTND4P12-N4.ref.upper.fa --max 3 --progress 0         | awk 'function abs(v) {return v < 0 ? -v : v} $1~"@" || ($7 == "=" && abs($9) <= 600 ) {print $0}'         | /home/zhaohuanan/miniconda3/envs/snakepipes_cutadapt-STARmapping-FPKM-sortBAM/bin/samtools view -hb > ../TargetSeq-5/cutoff_3/mapping/MTND4P12-N4_bwa.bam
+        
+
+[Fri Oct 16 15:27:55 2020]
+rule sam_to_bam:
+    input: ../TargetSeq-6/cutoff_3/mapping/MTND4P12-N4_bwa.sam, ../TargetSeq_BED_sample_lib/MTND4P12-N4.ref.upper.fa
+    output: ../TargetSeq-6/cutoff_3/mapping/MTND4P12-N4_bwa.bam
+    jobid: 92
+    reason: Updated input files: ../TargetSeq_BED_sample_lib/MTND4P12-N4.ref.upper.fa
+    wildcards: lib=6, cutoff=3, sample=MTND4P12-N4
+
+
+        /home/zhaohuanan/miniconda3/envs/snakepipes_cutadapt-STARmapping-FPKM-sortBAM/bin/samtools view -h -f 1 -F 268 ../TargetSeq-6/cutoff_3/mapping/MTND4P12-N4_bwa.sam         | /home/zhaohuanan/miniconda3/envs/snakepipes_target-seq-from-table-to-plot/bin/samclip --ref ../TargetSeq_BED_sample_lib/MTND4P12-N4.ref.upper.fa --max 3 --progress 0         | awk 'function abs(v) {return v < 0 ? -v : v} $1~"@" || ($7 == "=" && abs($9) <= 600 ) {print $0}'         | /home/zhaohuanan/miniconda3/envs/snakepipes_cutadapt-STARmapping-FPKM-sortBAM/bin/samtools view -hb > ../TargetSeq-6/cutoff_3/mapping/MTND4P12-N4_bwa.bam
+        
+
+[Fri Oct 16 15:27:55 2020]
+rule sam_to_bam:
+    input: ../TargetSeq-5/cutoff_3/mapping/VEGFA-Off-Target-6_bwa.sam, ../TargetSeq_BED_sample_lib/VEGFA-Off-Target-6.ref.upper.fa
+    output: ../TargetSeq-5/cutoff_3/mapping/VEGFA-Off-Target-6_bwa.bam
+    jobid: 89
+    reason: Updated input files: ../TargetSeq_BED_sample_lib/VEGFA-Off-Target-6.ref.upper.fa
+    wildcards: lib=5, cutoff=3, sample=VEGFA-Off-Target-6
+
+
+        /home/zhaohuanan/miniconda3/envs/snakepipes_cutadapt-STARmapping-FPKM-sortBAM/bin/samtools view -h -f 1 -F 268 ../TargetSeq-5/cutoff_3/mapping/VEGFA-Off-Target-6_bwa.sam         | /home/zhaohuanan/miniconda3/envs/snakepipes_target-seq-from-table-to-plot/bin/samclip --ref ../TargetSeq_BED_sample_lib/VEGFA-Off-Target-6.ref.upper.fa --max 3 --progress 0         | awk 'function abs(v) {return v < 0 ? -v : v} $1~"@" || ($7 == "=" && abs($9) <= 600 ) {print $0}'         | /home/zhaohuanan/miniconda3/envs/snakepipes_cutadapt-STARmapping-FPKM-sortBAM/bin/samtools view -hb > ../TargetSeq-5/cutoff_3/mapping/VEGFA-Off-Target-6_bwa.bam
+        
+
+[Fri Oct 16 15:27:55 2020]
+rule sam_to_bam:
+    input: ../TargetSeq-6/cutoff_3/mapping/VEGFA-Off-Target-6_bwa.sam, ../TargetSeq_BED_sample_lib/VEGFA-Off-Target-6.ref.upper.fa
+    output: ../TargetSeq-6/cutoff_3/mapping/VEGFA-Off-Target-6_bwa.bam
+    jobid: 96
+    reason: Updated input files: ../TargetSeq_BED_sample_lib/VEGFA-Off-Target-6.ref.upper.fa
+    wildcards: lib=6, cutoff=3, sample=VEGFA-Off-Target-6
+
+
+        /home/zhaohuanan/miniconda3/envs/snakepipes_cutadapt-STARmapping-FPKM-sortBAM/bin/samtools view -h -f 1 -F 268 ../TargetSeq-6/cutoff_3/mapping/VEGFA-Off-Target-6_bwa.sam         | /home/zhaohuanan/miniconda3/envs/snakepipes_target-seq-from-table-to-plot/bin/samclip --ref ../TargetSeq_BED_sample_lib/VEGFA-Off-Target-6.ref.upper.fa --max 3 --progress 0         | awk 'function abs(v) {return v < 0 ? -v : v} $1~"@" || ($7 == "=" && abs($9) <= 600 ) {print $0}'         | /home/zhaohuanan/miniconda3/envs/snakepipes_cutadapt-STARmapping-FPKM-sortBAM/bin/samtools view -hb > ../TargetSeq-6/cutoff_3/mapping/VEGFA-Off-Target-6_bwa.bam
+        
+
+[Fri Oct 16 15:27:55 2020]
+rule sam_to_bam:
+    input: ../TargetSeq-7/cutoff_3/mapping/VEGFA-Off-Target-6_bwa.sam, ../TargetSeq_BED_sample_lib/VEGFA-Off-Target-6.ref.upper.fa
+    output: ../TargetSeq-7/cutoff_3/mapping/VEGFA-Off-Target-6_bwa.bam
+    jobid: 103
+    reason: Updated input files: ../TargetSeq_BED_sample_lib/VEGFA-Off-Target-6.ref.upper.fa
+    wildcards: lib=7, cutoff=3, sample=VEGFA-Off-Target-6
+
+
+        /home/zhaohuanan/miniconda3/envs/snakepipes_cutadapt-STARmapping-FPKM-sortBAM/bin/samtools view -h -f 1 -F 268 ../TargetSeq-7/cutoff_3/mapping/VEGFA-Off-Target-6_bwa.sam         | /home/zhaohuanan/miniconda3/envs/snakepipes_target-seq-from-table-to-plot/bin/samclip --ref ../TargetSeq_BED_sample_lib/VEGFA-Off-Target-6.ref.upper.fa --max 3 --progress 0         | awk 'function abs(v) {return v < 0 ? -v : v} $1~"@" || ($7 == "=" && abs($9) <= 600 ) {print $0}'         | /home/zhaohuanan/miniconda3/envs/snakepipes_cutadapt-STARmapping-FPKM-sortBAM/bin/samtools view -hb > ../TargetSeq-7/cutoff_3/mapping/VEGFA-Off-Target-6_bwa.bam
+        
+
+[Fri Oct 16 15:27:56 2020]
+rule sam_to_bam:
+    input: ../TargetSeq-5/cutoff_3/mapping/VEGFA-OffNo-GDNo-08_bwa.sam, ../TargetSeq_BED_sample_lib/VEGFA-OffNo-GDNo-08.ref.upper.fa
+    output: ../TargetSeq-5/cutoff_3/mapping/VEGFA-OffNo-GDNo-08_bwa.bam
+    jobid: 86
+    reason: Updated input files: ../TargetSeq_BED_sample_lib/VEGFA-OffNo-GDNo-08.ref.upper.fa
+    wildcards: lib=5, cutoff=3, sample=VEGFA-OffNo-GDNo-08
+
+
+        /home/zhaohuanan/miniconda3/envs/snakepipes_cutadapt-STARmapping-FPKM-sortBAM/bin/samtools view -h -f 1 -F 268 ../TargetSeq-5/cutoff_3/mapping/VEGFA-OffNo-GDNo-08_bwa.sam         | /home/zhaohuanan/miniconda3/envs/snakepipes_target-seq-from-table-to-plot/bin/samclip --ref ../TargetSeq_BED_sample_lib/VEGFA-OffNo-GDNo-08.ref.upper.fa --max 3 --progress 0         | awk 'function abs(v) {return v < 0 ? -v : v} $1~"@" || ($7 == "=" && abs($9) <= 600 ) {print $0}'         | /home/zhaohuanan/miniconda3/envs/snakepipes_cutadapt-STARmapping-FPKM-sortBAM/bin/samtools view -hb > ../TargetSeq-5/cutoff_3/mapping/VEGFA-OffNo-GDNo-08_bwa.bam
+        
+
+[Fri Oct 16 15:27:56 2020]
+rule sam_to_bam:
+    input: ../TargetSeq-6/cutoff_3/mapping/VEGFA-OffNo-GDNo-08_bwa.sam, ../TargetSeq_BED_sample_lib/VEGFA-OffNo-GDNo-08.ref.upper.fa
+    output: ../TargetSeq-6/cutoff_3/mapping/VEGFA-OffNo-GDNo-08_bwa.bam
+    jobid: 93
+    reason: Updated input files: ../TargetSeq_BED_sample_lib/VEGFA-OffNo-GDNo-08.ref.upper.fa
+    wildcards: lib=6, cutoff=3, sample=VEGFA-OffNo-GDNo-08
+
+
+        /home/zhaohuanan/miniconda3/envs/snakepipes_cutadapt-STARmapping-FPKM-sortBAM/bin/samtools view -h -f 1 -F 268 ../TargetSeq-6/cutoff_3/mapping/VEGFA-OffNo-GDNo-08_bwa.sam         | /home/zhaohuanan/miniconda3/envs/snakepipes_target-seq-from-table-to-plot/bin/samclip --ref ../TargetSeq_BED_sample_lib/VEGFA-OffNo-GDNo-08.ref.upper.fa --max 3 --progress 0         | awk 'function abs(v) {return v < 0 ? -v : v} $1~"@" || ($7 == "=" && abs($9) <= 600 ) {print $0}'         | /home/zhaohuanan/miniconda3/envs/snakepipes_cutadapt-STARmapping-FPKM-sortBAM/bin/samtools view -hb > ../TargetSeq-6/cutoff_3/mapping/VEGFA-OffNo-GDNo-08_bwa.bam
+        
+
+[Fri Oct 16 15:27:56 2020]
+rule sam_to_bam:
+    input: ../TargetSeq-7/cutoff_3/mapping/VEGFA-OffNo-GDNo-08_bwa.sam, ../TargetSeq_BED_sample_lib/VEGFA-OffNo-GDNo-08.ref.upper.fa
+    output: ../TargetSeq-7/cutoff_3/mapping/VEGFA-OffNo-GDNo-08_bwa.bam
+    jobid: 100
+    reason: Updated input files: ../TargetSeq_BED_sample_lib/VEGFA-OffNo-GDNo-08.ref.upper.fa
+    wildcards: lib=7, cutoff=3, sample=VEGFA-OffNo-GDNo-08
+
+
+        /home/zhaohuanan/miniconda3/envs/snakepipes_cutadapt-STARmapping-FPKM-sortBAM/bin/samtools view -h -f 1 -F 268 ../TargetSeq-7/cutoff_3/mapping/VEGFA-OffNo-GDNo-08_bwa.sam         | /home/zhaohuanan/miniconda3/envs/snakepipes_target-seq-from-table-to-plot/bin/samclip --ref ../TargetSeq_BED_sample_lib/VEGFA-OffNo-GDNo-08.ref.upper.fa --max 3 --progress 0         | awk 'function abs(v) {return v < 0 ? -v : v} $1~"@" || ($7 == "=" && abs($9) <= 600 ) {print $0}'         | /home/zhaohuanan/miniconda3/envs/snakepipes_cutadapt-STARmapping-FPKM-sortBAM/bin/samtools view -hb > ../TargetSeq-7/cutoff_3/mapping/VEGFA-OffNo-GDNo-08_bwa.bam
+        
+
+[Fri Oct 16 15:27:56 2020]
+rule sam_to_bam:
+    input: ../TargetSeq-5/cutoff_3/mapping/VEGFA-Off-Target-7_bwa.sam, ../TargetSeq_BED_sample_lib/VEGFA-Off-Target-7.ref.upper.fa
+    output: ../TargetSeq-5/cutoff_3/mapping/VEGFA-Off-Target-7_bwa.bam
+    jobid: 90
+    reason: Updated input files: ../TargetSeq_BED_sample_lib/VEGFA-Off-Target-7.ref.upper.fa
+    wildcards: lib=5, cutoff=3, sample=VEGFA-Off-Target-7
+
+
+        /home/zhaohuanan/miniconda3/envs/snakepipes_cutadapt-STARmapping-FPKM-sortBAM/bin/samtools view -h -f 1 -F 268 ../TargetSeq-5/cutoff_3/mapping/VEGFA-Off-Target-7_bwa.sam         | /home/zhaohuanan/miniconda3/envs/snakepipes_target-seq-from-table-to-plot/bin/samclip --ref ../TargetSeq_BED_sample_lib/VEGFA-Off-Target-7.ref.upper.fa --max 3 --progress 0         | awk 'function abs(v) {return v < 0 ? -v : v} $1~"@" || ($7 == "=" && abs($9) <= 600 ) {print $0}'         | /home/zhaohuanan/miniconda3/envs/snakepipes_cutadapt-STARmapping-FPKM-sortBAM/bin/samtools view -hb > ../TargetSeq-5/cutoff_3/mapping/VEGFA-Off-Target-7_bwa.bam
+        
+
+[Fri Oct 16 15:27:56 2020]
+rule sam_to_bam:
+    input: ../TargetSeq-6/cutoff_3/mapping/VEGFA-Off-Target-7_bwa.sam, ../TargetSeq_BED_sample_lib/VEGFA-Off-Target-7.ref.upper.fa
+    output: ../TargetSeq-6/cutoff_3/mapping/VEGFA-Off-Target-7_bwa.bam
+    jobid: 97
+    reason: Updated input files: ../TargetSeq_BED_sample_lib/VEGFA-Off-Target-7.ref.upper.fa
+    wildcards: lib=6, cutoff=3, sample=VEGFA-Off-Target-7
+
+
+        /home/zhaohuanan/miniconda3/envs/snakepipes_cutadapt-STARmapping-FPKM-sortBAM/bin/samtools view -h -f 1 -F 268 ../TargetSeq-6/cutoff_3/mapping/VEGFA-Off-Target-7_bwa.sam         | /home/zhaohuanan/miniconda3/envs/snakepipes_target-seq-from-table-to-plot/bin/samclip --ref ../TargetSeq_BED_sample_lib/VEGFA-Off-Target-7.ref.upper.fa --max 3 --progress 0         | awk 'function abs(v) {return v < 0 ? -v : v} $1~"@" || ($7 == "=" && abs($9) <= 600 ) {print $0}'         | /home/zhaohuanan/miniconda3/envs/snakepipes_cutadapt-STARmapping-FPKM-sortBAM/bin/samtools view -hb > ../TargetSeq-6/cutoff_3/mapping/VEGFA-Off-Target-7_bwa.bam
+        
+[Fri Oct 16 15:27:56 2020]
+Error in rule sam_to_bam:
+    jobid: 98
+    output: ../TargetSeq-6/cutoff_3/mapping/VEGFA-On-Target_bwa.bam
+    shell:
+        
+        /home/zhaohuanan/miniconda3/envs/snakepipes_cutadapt-STARmapping-FPKM-sortBAM/bin/samtools view -h -f 1 -F 268 ../TargetSeq-6/cutoff_3/mapping/VEGFA-On-Target_bwa.sam         | /home/zhaohuanan/miniconda3/envs/snakepipes_target-seq-from-table-to-plot/bin/samclip --ref ../TargetSeq_BED_sample_lib/VEGFA-On-Target.ref.upper.fa --max 3 --progress 0         | awk 'function abs(v) {return v < 0 ? -v : v} $1~"@" || ($7 == "=" && abs($9) <= 600 ) {print $0}'         | /home/zhaohuanan/miniconda3/envs/snakepipes_cutadapt-STARmapping-FPKM-sortBAM/bin/samtools view -hb > ../TargetSeq-6/cutoff_3/mapping/VEGFA-On-Target_bwa.bam
+        
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+[Fri Oct 16 15:27:56 2020]
+
+Error in rule sam_to_bam:
+Removing output files of failed job sam_to_bam since they might be corrupted:
+../TargetSeq-6/cutoff_3/mapping/VEGFA-On-Target_bwa.bam
+    jobid: 91
+    output: ../TargetSeq-5/cutoff_3/mapping/VEGFA-On-Target_bwa.bam
+    shell:
+        
+        /home/zhaohuanan/miniconda3/envs/snakepipes_cutadapt-STARmapping-FPKM-sortBAM/bin/samtools view -h -f 1 -F 268 ../TargetSeq-5/cutoff_3/mapping/VEGFA-On-Target_bwa.sam         | /home/zhaohuanan/miniconda3/envs/snakepipes_target-seq-from-table-to-plot/bin/samclip --ref ../TargetSeq_BED_sample_lib/VEGFA-On-Target.ref.upper.fa --max 3 --progress 0         | awk 'function abs(v) {return v < 0 ? -v : v} $1~"@" || ($7 == "=" && abs($9) <= 600 ) {print $0}'         | /home/zhaohuanan/miniconda3/envs/snakepipes_cutadapt-STARmapping-FPKM-sortBAM/bin/samtools view -hb > ../TargetSeq-5/cutoff_3/mapping/VEGFA-On-Target_bwa.bam
+        
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+Removing output files of failed job sam_to_bam since they might be corrupted:
+../TargetSeq-5/cutoff_3/mapping/VEGFA-On-Target_bwa.bam
+[Fri Oct 16 15:27:56 2020]
+[Fri Oct 16 15:27:56 2020]
+Error in rule sam_to_bam:
+Error in rule sam_to_bam:
+    jobid: 105
+    jobid: 95
+    output: ../TargetSeq-7/cutoff_3/mapping/VEGFA-On-Target_bwa.bam
+    output: ../TargetSeq-6/cutoff_3/mapping/VEGFA-Off-Target-3_bwa.bam
+    shell:
+        
+        /home/zhaohuanan/miniconda3/envs/snakepipes_cutadapt-STARmapping-FPKM-sortBAM/bin/samtools view -h -f 1 -F 268 ../TargetSeq-7/cutoff_3/mapping/VEGFA-On-Target_bwa.sam         | /home/zhaohuanan/miniconda3/envs/snakepipes_target-seq-from-table-to-plot/bin/samclip --ref ../TargetSeq_BED_sample_lib/VEGFA-On-Target.ref.upper.fa --max 3 --progress 0         | awk 'function abs(v) {return v < 0 ? -v : v} $1~"@" || ($7 == "=" && abs($9) <= 600 ) {print $0}'         | /home/zhaohuanan/miniconda3/envs/snakepipes_cutadapt-STARmapping-FPKM-sortBAM/bin/samtools view -hb > ../TargetSeq-7/cutoff_3/mapping/VEGFA-On-Target_bwa.bam
+        
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+    shell:
+        
+        /home/zhaohuanan/miniconda3/envs/snakepipes_cutadapt-STARmapping-FPKM-sortBAM/bin/samtools view -h -f 1 -F 268 ../TargetSeq-6/cutoff_3/mapping/VEGFA-Off-Target-3_bwa.sam         | /home/zhaohuanan/miniconda3/envs/snakepipes_target-seq-from-table-to-plot/bin/samclip --ref ../TargetSeq_BED_sample_lib/VEGFA-Off-Target-3.ref.upper.fa --max 3 --progress 0         | awk 'function abs(v) {return v < 0 ? -v : v} $1~"@" || ($7 == "=" && abs($9) <= 600 ) {print $0}'         | /home/zhaohuanan/miniconda3/envs/snakepipes_cutadapt-STARmapping-FPKM-sortBAM/bin/samtools view -hb > ../TargetSeq-6/cutoff_3/mapping/VEGFA-Off-Target-3_bwa.bam
+        
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+
+Removing output files of failed job sam_to_bam since they might be corrupted:
+../TargetSeq-7/cutoff_3/mapping/VEGFA-On-Target_bwa.bam
+
+[Fri Oct 16 15:27:56 2020]
+rule sam_to_bam:
+    input: ../TargetSeq-7/cutoff_3/mapping/VEGFA-Off-Target-7_bwa.sam, ../TargetSeq_BED_sample_lib/VEGFA-Off-Target-7.ref.upper.fa
+    output: ../TargetSeq-7/cutoff_3/mapping/VEGFA-Off-Target-7_bwa.bam
+    jobid: 104
+    reason: Updated input files: ../TargetSeq_BED_sample_lib/VEGFA-Off-Target-7.ref.upper.fa
+    wildcards: lib=7, cutoff=3, sample=VEGFA-Off-Target-7
+
+
+        /home/zhaohuanan/miniconda3/envs/snakepipes_cutadapt-STARmapping-FPKM-sortBAM/bin/samtools view -h -f 1 -F 268 ../TargetSeq-7/cutoff_3/mapping/VEGFA-Off-Target-7_bwa.sam         | /home/zhaohuanan/miniconda3/envs/snakepipes_target-seq-from-table-to-plot/bin/samclip --ref ../TargetSeq_BED_sample_lib/VEGFA-Off-Target-7.ref.upper.fa --max 3 --progress 0         | awk 'function abs(v) {return v < 0 ? -v : v} $1~"@" || ($7 == "=" && abs($9) <= 600 ) {print $0}'         | /home/zhaohuanan/miniconda3/envs/snakepipes_cutadapt-STARmapping-FPKM-sortBAM/bin/samtools view -hb > ../TargetSeq-7/cutoff_3/mapping/VEGFA-Off-Target-7_bwa.bam
+        
+Removing output files of failed job sam_to_bam since they might be corrupted:
+../TargetSeq-6/cutoff_3/mapping/VEGFA-Off-Target-3_bwa.bam
+
+[Fri Oct 16 15:27:56 2020]
+rule sam_to_bam:
+    input: ../TargetSeq-5/cutoff_3/mapping/VEGFA-Off-Target-2_bwa.sam, ../TargetSeq_BED_sample_lib/VEGFA-Off-Target-2.ref.upper.fa
+    output: ../TargetSeq-5/cutoff_3/mapping/VEGFA-Off-Target-2_bwa.bam
+    jobid: 87
+    reason: Updated input files: ../TargetSeq_BED_sample_lib/VEGFA-Off-Target-2.ref.upper.fa
+    wildcards: lib=5, cutoff=3, sample=VEGFA-Off-Target-2
+
+
+        /home/zhaohuanan/miniconda3/envs/snakepipes_cutadapt-STARmapping-FPKM-sortBAM/bin/samtools view -h -f 1 -F 268 ../TargetSeq-5/cutoff_3/mapping/VEGFA-Off-Target-2_bwa.sam         | /home/zhaohuanan/miniconda3/envs/snakepipes_target-seq-from-table-to-plot/bin/samclip --ref ../TargetSeq_BED_sample_lib/VEGFA-Off-Target-2.ref.upper.fa --max 3 --progress 0         | awk 'function abs(v) {return v < 0 ? -v : v} $1~"@" || ($7 == "=" && abs($9) <= 600 ) {print $0}'         | /home/zhaohuanan/miniconda3/envs/snakepipes_cutadapt-STARmapping-FPKM-sortBAM/bin/samtools view -hb > ../TargetSeq-5/cutoff_3/mapping/VEGFA-Off-Target-2_bwa.bam
+        
+
+[Fri Oct 16 15:27:56 2020]
+rule sam_to_bam:
+    input: ../TargetSeq-6/cutoff_3/mapping/VEGFA-Off-Target-2_bwa.sam, ../TargetSeq_BED_sample_lib/VEGFA-Off-Target-2.ref.upper.fa
+    output: ../TargetSeq-6/cutoff_3/mapping/VEGFA-Off-Target-2_bwa.bam
+    jobid: 94
+    reason: Updated input files: ../TargetSeq_BED_sample_lib/VEGFA-Off-Target-2.ref.upper.fa
+    wildcards: lib=6, cutoff=3, sample=VEGFA-Off-Target-2
+
+
+        /home/zhaohuanan/miniconda3/envs/snakepipes_cutadapt-STARmapping-FPKM-sortBAM/bin/samtools view -h -f 1 -F 268 ../TargetSeq-6/cutoff_3/mapping/VEGFA-Off-Target-2_bwa.sam         | /home/zhaohuanan/miniconda3/envs/snakepipes_target-seq-from-table-to-plot/bin/samclip --ref ../TargetSeq_BED_sample_lib/VEGFA-Off-Target-2.ref.upper.fa --max 3 --progress 0         | awk 'function abs(v) {return v < 0 ? -v : v} $1~"@" || ($7 == "=" && abs($9) <= 600 ) {print $0}'         | /home/zhaohuanan/miniconda3/envs/snakepipes_cutadapt-STARmapping-FPKM-sortBAM/bin/samtools view -hb > ../TargetSeq-6/cutoff_3/mapping/VEGFA-Off-Target-2_bwa.bam
+        
+[Fri Oct 16 15:27:56 2020]
+[Fri Oct 16 15:27:56 2020]
+Error in rule sam_to_bam:
+Error in rule sam_to_bam:
+    jobid: 88
+    jobid: 99
+    output: ../TargetSeq-5/cutoff_3/mapping/VEGFA-Off-Target-3_bwa.bam
+    output: ../TargetSeq-7/cutoff_3/mapping/MTND4P12-N4_bwa.bam
+    shell:
+        
+        /home/zhaohuanan/miniconda3/envs/snakepipes_cutadapt-STARmapping-FPKM-sortBAM/bin/samtools view -h -f 1 -F 268 ../TargetSeq-5/cutoff_3/mapping/VEGFA-Off-Target-3_bwa.sam         | /home/zhaohuanan/miniconda3/envs/snakepipes_target-seq-from-table-to-plot/bin/samclip --ref ../TargetSeq_BED_sample_lib/VEGFA-Off-Target-3.ref.upper.fa --max 3 --progress 0         | awk 'function abs(v) {return v < 0 ? -v : v} $1~"@" || ($7 == "=" && abs($9) <= 600 ) {print $0}'         | /home/zhaohuanan/miniconda3/envs/snakepipes_cutadapt-STARmapping-FPKM-sortBAM/bin/samtools view -hb > ../TargetSeq-5/cutoff_3/mapping/VEGFA-Off-Target-3_bwa.bam
+        
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+    shell:
+        
+        /home/zhaohuanan/miniconda3/envs/snakepipes_cutadapt-STARmapping-FPKM-sortBAM/bin/samtools view -h -f 1 -F 268 ../TargetSeq-7/cutoff_3/mapping/MTND4P12-N4_bwa.sam         | /home/zhaohuanan/miniconda3/envs/snakepipes_target-seq-from-table-to-plot/bin/samclip --ref ../TargetSeq_BED_sample_lib/MTND4P12-N4.ref.upper.fa --max 3 --progress 0         | awk 'function abs(v) {return v < 0 ? -v : v} $1~"@" || ($7 == "=" && abs($9) <= 600 ) {print $0}'         | /home/zhaohuanan/miniconda3/envs/snakepipes_cutadapt-STARmapping-FPKM-sortBAM/bin/samtools view -hb > ../TargetSeq-7/cutoff_3/mapping/MTND4P12-N4_bwa.bam
+        
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+
+Removing output files of failed job sam_to_bam since they might be corrupted:
+../TargetSeq-5/cutoff_3/mapping/VEGFA-Off-Target-3_bwa.bam
+Removing output files of failed job sam_to_bam since they might be corrupted:
+../TargetSeq-7/cutoff_3/mapping/MTND4P12-N4_bwa.bam
+
+[Fri Oct 16 15:27:56 2020]
+rule sam_to_bam:
+    input: ../TargetSeq-7/cutoff_3/mapping/VEGFA-Off-Target-2_bwa.sam, ../TargetSeq_BED_sample_lib/VEGFA-Off-Target-2.ref.upper.fa
+    output: ../TargetSeq-7/cutoff_3/mapping/VEGFA-Off-Target-2_bwa.bam
+    jobid: 101
+    reason: Updated input files: ../TargetSeq_BED_sample_lib/VEGFA-Off-Target-2.ref.upper.fa
+    wildcards: lib=7, cutoff=3, sample=VEGFA-Off-Target-2
+
+
+        /home/zhaohuanan/miniconda3/envs/snakepipes_cutadapt-STARmapping-FPKM-sortBAM/bin/samtools view -h -f 1 -F 268 ../TargetSeq-7/cutoff_3/mapping/VEGFA-Off-Target-2_bwa.sam         | /home/zhaohuanan/miniconda3/envs/snakepipes_target-seq-from-table-to-plot/bin/samclip --ref ../TargetSeq_BED_sample_lib/VEGFA-Off-Target-2.ref.upper.fa --max 3 --progress 0         | awk 'function abs(v) {return v < 0 ? -v : v} $1~"@" || ($7 == "=" && abs($9) <= 600 ) {print $0}'         | /home/zhaohuanan/miniconda3/envs/snakepipes_cutadapt-STARmapping-FPKM-sortBAM/bin/samtools view -hb > ../TargetSeq-7/cutoff_3/mapping/VEGFA-Off-Target-2_bwa.bam
+        
+[Fri Oct 16 15:27:56 2020]
+Error in rule sam_to_bam:
+    jobid: 102
+    output: ../TargetSeq-7/cutoff_3/mapping/VEGFA-Off-Target-3_bwa.bam
+    shell:
+        
+        /home/zhaohuanan/miniconda3/envs/snakepipes_cutadapt-STARmapping-FPKM-sortBAM/bin/samtools view -h -f 1 -F 268 ../TargetSeq-7/cutoff_3/mapping/VEGFA-Off-Target-3_bwa.sam         | /home/zhaohuanan/miniconda3/envs/snakepipes_target-seq-from-table-to-plot/bin/samclip --ref ../TargetSeq_BED_sample_lib/VEGFA-Off-Target-3.ref.upper.fa --max 3 --progress 0         | awk 'function abs(v) {return v < 0 ? -v : v} $1~"@" || ($7 == "=" && abs($9) <= 600 ) {print $0}'         | /home/zhaohuanan/miniconda3/envs/snakepipes_cutadapt-STARmapping-FPKM-sortBAM/bin/samtools view -hb > ../TargetSeq-7/cutoff_3/mapping/VEGFA-Off-Target-3_bwa.bam
+        
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+Removing output files of failed job sam_to_bam since they might be corrupted:
+../TargetSeq-7/cutoff_3/mapping/VEGFA-Off-Target-3_bwa.bam
+[Fri Oct 16 15:27:56 2020]
+[Fri Oct 16 15:27:56 2020]
+[Fri Oct 16 15:27:56 2020]
+[Fri Oct 16 15:27:56 2020]
+[Fri Oct 16 15:27:56 2020]
+Error in rule sam_to_bam:
+Error in rule sam_to_bam:
+    jobid: 92
+Error in rule sam_to_bam:
+Error in rule sam_to_bam:
+    jobid: 103
+    output: ../TargetSeq-6/cutoff_3/mapping/MTND4P12-N4_bwa.bam
+    shell:
+        
+        /home/zhaohuanan/miniconda3/envs/snakepipes_cutadapt-STARmapping-FPKM-sortBAM/bin/samtools view -h -f 1 -F 268 ../TargetSeq-6/cutoff_3/mapping/MTND4P12-N4_bwa.sam         | /home/zhaohuanan/miniconda3/envs/snakepipes_target-seq-from-table-to-plot/bin/samclip --ref ../TargetSeq_BED_sample_lib/MTND4P12-N4.ref.upper.fa --max 3 --progress 0         | awk 'function abs(v) {return v < 0 ? -v : v} $1~"@" || ($7 == "=" && abs($9) <= 600 ) {print $0}'         | /home/zhaohuanan/miniconda3/envs/snakepipes_cutadapt-STARmapping-FPKM-sortBAM/bin/samtools view -hb > ../TargetSeq-6/cutoff_3/mapping/MTND4P12-N4_bwa.bam
+        
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+    jobid: 85
+    jobid: 89
+    output: ../TargetSeq-7/cutoff_3/mapping/VEGFA-Off-Target-6_bwa.bam
+
+Removing output files of failed job sam_to_bam since they might be corrupted:
+../TargetSeq-6/cutoff_3/mapping/MTND4P12-N4_bwa.bam
+    output: ../TargetSeq-5/cutoff_3/mapping/MTND4P12-N4_bwa.bam
+    output: ../TargetSeq-5/cutoff_3/mapping/VEGFA-Off-Target-6_bwa.bam
+    shell:
+        
+        /home/zhaohuanan/miniconda3/envs/snakepipes_cutadapt-STARmapping-FPKM-sortBAM/bin/samtools view -h -f 1 -F 268 ../TargetSeq-7/cutoff_3/mapping/VEGFA-Off-Target-6_bwa.sam         | /home/zhaohuanan/miniconda3/envs/snakepipes_target-seq-from-table-to-plot/bin/samclip --ref ../TargetSeq_BED_sample_lib/VEGFA-Off-Target-6.ref.upper.fa --max 3 --progress 0         | awk 'function abs(v) {return v < 0 ? -v : v} $1~"@" || ($7 == "=" && abs($9) <= 600 ) {print $0}'         | /home/zhaohuanan/miniconda3/envs/snakepipes_cutadapt-STARmapping-FPKM-sortBAM/bin/samtools view -hb > ../TargetSeq-7/cutoff_3/mapping/VEGFA-Off-Target-6_bwa.bam
+        
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+Error in rule sam_to_bam:
+    shell:
+        
+        /home/zhaohuanan/miniconda3/envs/snakepipes_cutadapt-STARmapping-FPKM-sortBAM/bin/samtools view -h -f 1 -F 268 ../TargetSeq-5/cutoff_3/mapping/MTND4P12-N4_bwa.sam         | /home/zhaohuanan/miniconda3/envs/snakepipes_target-seq-from-table-to-plot/bin/samclip --ref ../TargetSeq_BED_sample_lib/MTND4P12-N4.ref.upper.fa --max 3 --progress 0         | awk 'function abs(v) {return v < 0 ? -v : v} $1~"@" || ($7 == "=" && abs($9) <= 600 ) {print $0}'         | /home/zhaohuanan/miniconda3/envs/snakepipes_cutadapt-STARmapping-FPKM-sortBAM/bin/samtools view -hb > ../TargetSeq-5/cutoff_3/mapping/MTND4P12-N4_bwa.bam
+        
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+    shell:
+        
+        /home/zhaohuanan/miniconda3/envs/snakepipes_cutadapt-STARmapping-FPKM-sortBAM/bin/samtools view -h -f 1 -F 268 ../TargetSeq-5/cutoff_3/mapping/VEGFA-Off-Target-6_bwa.sam         | /home/zhaohuanan/miniconda3/envs/snakepipes_target-seq-from-table-to-plot/bin/samclip --ref ../TargetSeq_BED_sample_lib/VEGFA-Off-Target-6.ref.upper.fa --max 3 --progress 0         | awk 'function abs(v) {return v < 0 ? -v : v} $1~"@" || ($7 == "=" && abs($9) <= 600 ) {print $0}'         | /home/zhaohuanan/miniconda3/envs/snakepipes_cutadapt-STARmapping-FPKM-sortBAM/bin/samtools view -hb > ../TargetSeq-5/cutoff_3/mapping/VEGFA-Off-Target-6_bwa.bam
+        
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+    jobid: 96
+
+
+Removing output files of failed job sam_to_bam since they might be corrupted:
+../TargetSeq-7/cutoff_3/mapping/VEGFA-Off-Target-6_bwa.bam
+    output: ../TargetSeq-6/cutoff_3/mapping/VEGFA-Off-Target-6_bwa.bam
+    shell:
+        
+        /home/zhaohuanan/miniconda3/envs/snakepipes_cutadapt-STARmapping-FPKM-sortBAM/bin/samtools view -h -f 1 -F 268 ../TargetSeq-6/cutoff_3/mapping/VEGFA-Off-Target-6_bwa.sam         | /home/zhaohuanan/miniconda3/envs/snakepipes_target-seq-from-table-to-plot/bin/samclip --ref ../TargetSeq_BED_sample_lib/VEGFA-Off-Target-6.ref.upper.fa --max 3 --progress 0         | awk 'function abs(v) {return v < 0 ? -v : v} $1~"@" || ($7 == "=" && abs($9) <= 600 ) {print $0}'         | /home/zhaohuanan/miniconda3/envs/snakepipes_cutadapt-STARmapping-FPKM-sortBAM/bin/samtools view -hb > ../TargetSeq-6/cutoff_3/mapping/VEGFA-Off-Target-6_bwa.bam
+        
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+Removing output files of failed job sam_to_bam since they might be corrupted:
+../TargetSeq-5/cutoff_3/mapping/MTND4P12-N4_bwa.bam
+Removing output files of failed job sam_to_bam since they might be corrupted:
+../TargetSeq-5/cutoff_3/mapping/VEGFA-Off-Target-6_bwa.bam
+Removing output files of failed job sam_to_bam since they might be corrupted:
+../TargetSeq-6/cutoff_3/mapping/VEGFA-Off-Target-6_bwa.bam
+[Fri Oct 16 15:27:56 2020]
+Error in rule sam_to_bam:
+    jobid: 90
+    output: ../TargetSeq-5/cutoff_3/mapping/VEGFA-Off-Target-7_bwa.bam
+    shell:
+        
+        /home/zhaohuanan/miniconda3/envs/snakepipes_cutadapt-STARmapping-FPKM-sortBAM/bin/samtools view -h -f 1 -F 268 ../TargetSeq-5/cutoff_3/mapping/VEGFA-Off-Target-7_bwa.sam         | /home/zhaohuanan/miniconda3/envs/snakepipes_target-seq-from-table-to-plot/bin/samclip --ref ../TargetSeq_BED_sample_lib/VEGFA-Off-Target-7.ref.upper.fa --max 3 --progress 0         | awk 'function abs(v) {return v < 0 ? -v : v} $1~"@" || ($7 == "=" && abs($9) <= 600 ) {print $0}'         | /home/zhaohuanan/miniconda3/envs/snakepipes_cutadapt-STARmapping-FPKM-sortBAM/bin/samtools view -hb > ../TargetSeq-5/cutoff_3/mapping/VEGFA-Off-Target-7_bwa.bam
+        
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+Removing output files of failed job sam_to_bam since they might be corrupted:
+../TargetSeq-5/cutoff_3/mapping/VEGFA-Off-Target-7_bwa.bam
+[Fri Oct 16 15:27:56 2020]
+[Fri Oct 16 15:27:56 2020]
+[Fri Oct 16 15:27:56 2020]
+Error in rule sam_to_bam:
+Error in rule sam_to_bam:
+Error in rule sam_to_bam:
+    jobid: 93
+    jobid: 104
+    jobid: 97
+    output: ../TargetSeq-6/cutoff_3/mapping/VEGFA-OffNo-GDNo-08_bwa.bam
+    output: ../TargetSeq-7/cutoff_3/mapping/VEGFA-Off-Target-7_bwa.bam
+    output: ../TargetSeq-6/cutoff_3/mapping/VEGFA-Off-Target-7_bwa.bam
+    shell:
+        
+        /home/zhaohuanan/miniconda3/envs/snakepipes_cutadapt-STARmapping-FPKM-sortBAM/bin/samtools view -h -f 1 -F 268 ../TargetSeq-6/cutoff_3/mapping/VEGFA-OffNo-GDNo-08_bwa.sam         | /home/zhaohuanan/miniconda3/envs/snakepipes_target-seq-from-table-to-plot/bin/samclip --ref ../TargetSeq_BED_sample_lib/VEGFA-OffNo-GDNo-08.ref.upper.fa --max 3 --progress 0         | awk 'function abs(v) {return v < 0 ? -v : v} $1~"@" || ($7 == "=" && abs($9) <= 600 ) {print $0}'         | /home/zhaohuanan/miniconda3/envs/snakepipes_cutadapt-STARmapping-FPKM-sortBAM/bin/samtools view -hb > ../TargetSeq-6/cutoff_3/mapping/VEGFA-OffNo-GDNo-08_bwa.bam
+        
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+    shell:
+        
+        /home/zhaohuanan/miniconda3/envs/snakepipes_cutadapt-STARmapping-FPKM-sortBAM/bin/samtools view -h -f 1 -F 268 ../TargetSeq-7/cutoff_3/mapping/VEGFA-Off-Target-7_bwa.sam         | /home/zhaohuanan/miniconda3/envs/snakepipes_target-seq-from-table-to-plot/bin/samclip --ref ../TargetSeq_BED_sample_lib/VEGFA-Off-Target-7.ref.upper.fa --max 3 --progress 0         | awk 'function abs(v) {return v < 0 ? -v : v} $1~"@" || ($7 == "=" && abs($9) <= 600 ) {print $0}'         | /home/zhaohuanan/miniconda3/envs/snakepipes_cutadapt-STARmapping-FPKM-sortBAM/bin/samtools view -hb > ../TargetSeq-7/cutoff_3/mapping/VEGFA-Off-Target-7_bwa.bam
+        
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+    shell:
+        
+        /home/zhaohuanan/miniconda3/envs/snakepipes_cutadapt-STARmapping-FPKM-sortBAM/bin/samtools view -h -f 1 -F 268 ../TargetSeq-6/cutoff_3/mapping/VEGFA-Off-Target-7_bwa.sam         | /home/zhaohuanan/miniconda3/envs/snakepipes_target-seq-from-table-to-plot/bin/samclip --ref ../TargetSeq_BED_sample_lib/VEGFA-Off-Target-7.ref.upper.fa --max 3 --progress 0         | awk 'function abs(v) {return v < 0 ? -v : v} $1~"@" || ($7 == "=" && abs($9) <= 600 ) {print $0}'         | /home/zhaohuanan/miniconda3/envs/snakepipes_cutadapt-STARmapping-FPKM-sortBAM/bin/samtools view -hb > ../TargetSeq-6/cutoff_3/mapping/VEGFA-Off-Target-7_bwa.bam
+        
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+
+
+Removing output files of failed job sam_to_bam since they might be corrupted:
+../TargetSeq-6/cutoff_3/mapping/VEGFA-OffNo-GDNo-08_bwa.bam
+Removing output files of failed job sam_to_bam since they might be corrupted:
+../TargetSeq-7/cutoff_3/mapping/VEGFA-Off-Target-7_bwa.bam
+Removing output files of failed job sam_to_bam since they might be corrupted:
+../TargetSeq-6/cutoff_3/mapping/VEGFA-Off-Target-7_bwa.bam
+[Fri Oct 16 15:27:56 2020]
+[Fri Oct 16 15:27:56 2020]
+Error in rule sam_to_bam:
+Error in rule sam_to_bam:
+    jobid: 94
+    jobid: 101
+    output: ../TargetSeq-6/cutoff_3/mapping/VEGFA-Off-Target-2_bwa.bam
+    output: ../TargetSeq-7/cutoff_3/mapping/VEGFA-Off-Target-2_bwa.bam
+    shell:
+        
+        /home/zhaohuanan/miniconda3/envs/snakepipes_cutadapt-STARmapping-FPKM-sortBAM/bin/samtools view -h -f 1 -F 268 ../TargetSeq-6/cutoff_3/mapping/VEGFA-Off-Target-2_bwa.sam         | /home/zhaohuanan/miniconda3/envs/snakepipes_target-seq-from-table-to-plot/bin/samclip --ref ../TargetSeq_BED_sample_lib/VEGFA-Off-Target-2.ref.upper.fa --max 3 --progress 0         | awk 'function abs(v) {return v < 0 ? -v : v} $1~"@" || ($7 == "=" && abs($9) <= 600 ) {print $0}'         | /home/zhaohuanan/miniconda3/envs/snakepipes_cutadapt-STARmapping-FPKM-sortBAM/bin/samtools view -hb > ../TargetSeq-6/cutoff_3/mapping/VEGFA-Off-Target-2_bwa.bam
+        
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+    shell:
+        
+        /home/zhaohuanan/miniconda3/envs/snakepipes_cutadapt-STARmapping-FPKM-sortBAM/bin/samtools view -h -f 1 -F 268 ../TargetSeq-7/cutoff_3/mapping/VEGFA-Off-Target-2_bwa.sam         | /home/zhaohuanan/miniconda3/envs/snakepipes_target-seq-from-table-to-plot/bin/samclip --ref ../TargetSeq_BED_sample_lib/VEGFA-Off-Target-2.ref.upper.fa --max 3 --progress 0         | awk 'function abs(v) {return v < 0 ? -v : v} $1~"@" || ($7 == "=" && abs($9) <= 600 ) {print $0}'         | /home/zhaohuanan/miniconda3/envs/snakepipes_cutadapt-STARmapping-FPKM-sortBAM/bin/samtools view -hb > ../TargetSeq-7/cutoff_3/mapping/VEGFA-Off-Target-2_bwa.bam
+        
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+
+Removing output files of failed job sam_to_bam since they might be corrupted:
+../TargetSeq-6/cutoff_3/mapping/VEGFA-Off-Target-2_bwa.bam
+Removing output files of failed job sam_to_bam since they might be corrupted:
+../TargetSeq-7/cutoff_3/mapping/VEGFA-Off-Target-2_bwa.bam
+[Fri Oct 16 15:27:56 2020]
+Error in rule sam_to_bam:
+    jobid: 87
+    output: ../TargetSeq-5/cutoff_3/mapping/VEGFA-Off-Target-2_bwa.bam
+    shell:
+        
+        /home/zhaohuanan/miniconda3/envs/snakepipes_cutadapt-STARmapping-FPKM-sortBAM/bin/samtools view -h -f 1 -F 268 ../TargetSeq-5/cutoff_3/mapping/VEGFA-Off-Target-2_bwa.sam         | /home/zhaohuanan/miniconda3/envs/snakepipes_target-seq-from-table-to-plot/bin/samclip --ref ../TargetSeq_BED_sample_lib/VEGFA-Off-Target-2.ref.upper.fa --max 3 --progress 0         | awk 'function abs(v) {return v < 0 ? -v : v} $1~"@" || ($7 == "=" && abs($9) <= 600 ) {print $0}'         | /home/zhaohuanan/miniconda3/envs/snakepipes_cutadapt-STARmapping-FPKM-sortBAM/bin/samtools view -hb > ../TargetSeq-5/cutoff_3/mapping/VEGFA-Off-Target-2_bwa.bam
+        
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+Removing output files of failed job sam_to_bam since they might be corrupted:
+../TargetSeq-5/cutoff_3/mapping/VEGFA-Off-Target-2_bwa.bam
+[Fri Oct 16 15:27:56 2020]
+Error in rule sam_to_bam:
+    jobid: 100
+    output: ../TargetSeq-7/cutoff_3/mapping/VEGFA-OffNo-GDNo-08_bwa.bam
+    shell:
+        
+        /home/zhaohuanan/miniconda3/envs/snakepipes_cutadapt-STARmapping-FPKM-sortBAM/bin/samtools view -h -f 1 -F 268 ../TargetSeq-7/cutoff_3/mapping/VEGFA-OffNo-GDNo-08_bwa.sam         | /home/zhaohuanan/miniconda3/envs/snakepipes_target-seq-from-table-to-plot/bin/samclip --ref ../TargetSeq_BED_sample_lib/VEGFA-OffNo-GDNo-08.ref.upper.fa --max 3 --progress 0         | awk 'function abs(v) {return v < 0 ? -v : v} $1~"@" || ($7 == "=" && abs($9) <= 600 ) {print $0}'         | /home/zhaohuanan/miniconda3/envs/snakepipes_cutadapt-STARmapping-FPKM-sortBAM/bin/samtools view -hb > ../TargetSeq-7/cutoff_3/mapping/VEGFA-OffNo-GDNo-08_bwa.bam
+        
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+Removing output files of failed job sam_to_bam since they might be corrupted:
+../TargetSeq-7/cutoff_3/mapping/VEGFA-OffNo-GDNo-08_bwa.bam
+[Fri Oct 16 15:27:56 2020]
+Error in rule sam_to_bam:
+    jobid: 86
+    output: ../TargetSeq-5/cutoff_3/mapping/VEGFA-OffNo-GDNo-08_bwa.bam
+    shell:
+        
+        /home/zhaohuanan/miniconda3/envs/snakepipes_cutadapt-STARmapping-FPKM-sortBAM/bin/samtools view -h -f 1 -F 268 ../TargetSeq-5/cutoff_3/mapping/VEGFA-OffNo-GDNo-08_bwa.sam         | /home/zhaohuanan/miniconda3/envs/snakepipes_target-seq-from-table-to-plot/bin/samclip --ref ../TargetSeq_BED_sample_lib/VEGFA-OffNo-GDNo-08.ref.upper.fa --max 3 --progress 0         | awk 'function abs(v) {return v < 0 ? -v : v} $1~"@" || ($7 == "=" && abs($9) <= 600 ) {print $0}'         | /home/zhaohuanan/miniconda3/envs/snakepipes_cutadapt-STARmapping-FPKM-sortBAM/bin/samtools view -hb > ../TargetSeq-5/cutoff_3/mapping/VEGFA-OffNo-GDNo-08_bwa.bam
+        
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+Removing output files of failed job sam_to_bam since they might be corrupted:
+../TargetSeq-5/cutoff_3/mapping/VEGFA-OffNo-GDNo-08_bwa.bam
+Shutting down, this might take some time.
+Exiting because a job execution failed. Look above for error message
+Complete log: /gpfs/user/zhaohuanan/3.project/14.2020-10_1010_TargetSeq-GBE-DdCBE_recheck/snakepipes_target-seq-from-table-to-plot/.snakemake/log/2020-10-16T152755.486063.snakemake.log

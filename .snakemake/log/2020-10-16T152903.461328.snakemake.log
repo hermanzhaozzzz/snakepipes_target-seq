@@ -1,0 +1,1557 @@
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided cores: 24
+Rules claiming more threads will be scaled down.
+Job counts:
+	count	jobs
+	1	all
+	21	bwa_mapping
+	21	cutadapt
+	21	sam_to_bam
+	21	samtools_index
+	21	samtools_sort_by_position
+	106
+
+[Fri Oct 16 15:29:03 2020]
+rule cutadapt:
+    input: ../TargetSeq-6/cutoff_3/merge.fastq/VEGFA-Off-Target-7_merge_barcode_R1.fastq, ../TargetSeq-6/cutoff_3/merge.fastq/VEGFA-Off-Target-7_merge_barcode_R2.fastq
+    output: ../TargetSeq-6/cutoff_3/mapping/VEGFA-Off-Target-7_R1_cutadapt.fq.gz, ../TargetSeq-6/cutoff_3/mapping/VEGFA-Off-Target-7_R2_cutadapt.fq.gz
+    log: ../TargetSeq-6/cutoff_3/mapping/VEGFA-Off-Target-7_cutadapt.log
+    jobid: 13
+    reason: Missing output files: ../TargetSeq-6/cutoff_3/mapping/VEGFA-Off-Target-7_R2_cutadapt.fq.gz, ../TargetSeq-6/cutoff_3/mapping/VEGFA-Off-Target-7_R1_cutadapt.fq.gz
+    wildcards: lib=6, cutoff=3, sample=VEGFA-Off-Target-7
+
+
+        /home/zhaohuanan/miniconda3/envs/cutadapt/bin/cutadapt -j 24 --times 1  -e 0.1  -O 3  --quality-cutoff 25         -m 100 -a AGATCGGAAGAGCACACGTCTGAACTCCAGTCAC         -A AGATCGGAAGAGCGTCGTGTAGGGAAAGAGTGTAGATCTCGGTGGTCGCCGTATCATT         -o ../TargetSeq-6/cutoff_3/mapping/VEGFA-Off-Target-7_R1_cutadapt.fq.gz -p ../TargetSeq-6/cutoff_3/mapping/VEGFA-Off-Target-7_R2_cutadapt.fq.gz ../TargetSeq-6/cutoff_3/merge.fastq/VEGFA-Off-Target-7_merge_barcode_R1.fastq ../TargetSeq-6/cutoff_3/merge.fastq/VEGFA-Off-Target-7_merge_barcode_R2.fastq > ../TargetSeq-6/cutoff_3/mapping/VEGFA-Off-Target-7_cutadapt.log 2>&1
+        
+
+[Fri Oct 16 15:29:03 2020]
+rule cutadapt:
+    input: ../TargetSeq-5/cutoff_3/merge.fastq/VEGFA-On-Target_merge_barcode_R1.fastq, ../TargetSeq-5/cutoff_3/merge.fastq/VEGFA-On-Target_merge_barcode_R2.fastq
+    output: ../TargetSeq-5/cutoff_3/mapping/VEGFA-On-Target_R1_cutadapt.fq.gz, ../TargetSeq-5/cutoff_3/mapping/VEGFA-On-Target_R2_cutadapt.fq.gz
+    log: ../TargetSeq-5/cutoff_3/mapping/VEGFA-On-Target_cutadapt.log
+    jobid: 7
+    reason: Missing output files: ../TargetSeq-5/cutoff_3/mapping/VEGFA-On-Target_R2_cutadapt.fq.gz, ../TargetSeq-5/cutoff_3/mapping/VEGFA-On-Target_R1_cutadapt.fq.gz
+    wildcards: lib=5, cutoff=3, sample=VEGFA-On-Target
+
+
+        /home/zhaohuanan/miniconda3/envs/cutadapt/bin/cutadapt -j 24 --times 1  -e 0.1  -O 3  --quality-cutoff 25         -m 100 -a AGATCGGAAGAGCACACGTCTGAACTCCAGTCAC         -A AGATCGGAAGAGCGTCGTGTAGGGAAAGAGTGTAGATCTCGGTGGTCGCCGTATCATT         -o ../TargetSeq-5/cutoff_3/mapping/VEGFA-On-Target_R1_cutadapt.fq.gz -p ../TargetSeq-5/cutoff_3/mapping/VEGFA-On-Target_R2_cutadapt.fq.gz ../TargetSeq-5/cutoff_3/merge.fastq/VEGFA-On-Target_merge_barcode_R1.fastq ../TargetSeq-5/cutoff_3/merge.fastq/VEGFA-On-Target_merge_barcode_R2.fastq > ../TargetSeq-5/cutoff_3/mapping/VEGFA-On-Target_cutadapt.log 2>&1
+        
+
+[Fri Oct 16 15:29:03 2020]
+rule cutadapt:
+    input: ../TargetSeq-7/cutoff_3/merge.fastq/VEGFA-On-Target_merge_barcode_R1.fastq, ../TargetSeq-7/cutoff_3/merge.fastq/VEGFA-On-Target_merge_barcode_R2.fastq
+    output: ../TargetSeq-7/cutoff_3/mapping/VEGFA-On-Target_R1_cutadapt.fq.gz, ../TargetSeq-7/cutoff_3/mapping/VEGFA-On-Target_R2_cutadapt.fq.gz
+    log: ../TargetSeq-7/cutoff_3/mapping/VEGFA-On-Target_cutadapt.log
+    jobid: 21
+    reason: Missing output files: ../TargetSeq-7/cutoff_3/mapping/VEGFA-On-Target_R2_cutadapt.fq.gz, ../TargetSeq-7/cutoff_3/mapping/VEGFA-On-Target_R1_cutadapt.fq.gz
+    wildcards: lib=7, cutoff=3, sample=VEGFA-On-Target
+
+
+        /home/zhaohuanan/miniconda3/envs/cutadapt/bin/cutadapt -j 24 --times 1  -e 0.1  -O 3  --quality-cutoff 25         -m 100 -a AGATCGGAAGAGCACACGTCTGAACTCCAGTCAC         -A AGATCGGAAGAGCGTCGTGTAGGGAAAGAGTGTAGATCTCGGTGGTCGCCGTATCATT         -o ../TargetSeq-7/cutoff_3/mapping/VEGFA-On-Target_R1_cutadapt.fq.gz -p ../TargetSeq-7/cutoff_3/mapping/VEGFA-On-Target_R2_cutadapt.fq.gz ../TargetSeq-7/cutoff_3/merge.fastq/VEGFA-On-Target_merge_barcode_R1.fastq ../TargetSeq-7/cutoff_3/merge.fastq/VEGFA-On-Target_merge_barcode_R2.fastq > ../TargetSeq-7/cutoff_3/mapping/VEGFA-On-Target_cutadapt.log 2>&1
+        
+
+[Fri Oct 16 15:29:03 2020]
+rule cutadapt:
+    input: ../TargetSeq-6/cutoff_3/merge.fastq/VEGFA-On-Target_merge_barcode_R1.fastq, ../TargetSeq-6/cutoff_3/merge.fastq/VEGFA-On-Target_merge_barcode_R2.fastq
+    output: ../TargetSeq-6/cutoff_3/mapping/VEGFA-On-Target_R1_cutadapt.fq.gz, ../TargetSeq-6/cutoff_3/mapping/VEGFA-On-Target_R2_cutadapt.fq.gz
+    log: ../TargetSeq-6/cutoff_3/mapping/VEGFA-On-Target_cutadapt.log
+    jobid: 14
+    reason: Missing output files: ../TargetSeq-6/cutoff_3/mapping/VEGFA-On-Target_R1_cutadapt.fq.gz, ../TargetSeq-6/cutoff_3/mapping/VEGFA-On-Target_R2_cutadapt.fq.gz
+    wildcards: lib=6, cutoff=3, sample=VEGFA-On-Target
+
+
+        /home/zhaohuanan/miniconda3/envs/cutadapt/bin/cutadapt -j 24 --times 1  -e 0.1  -O 3  --quality-cutoff 25         -m 100 -a AGATCGGAAGAGCACACGTCTGAACTCCAGTCAC         -A AGATCGGAAGAGCGTCGTGTAGGGAAAGAGTGTAGATCTCGGTGGTCGCCGTATCATT         -o ../TargetSeq-6/cutoff_3/mapping/VEGFA-On-Target_R1_cutadapt.fq.gz -p ../TargetSeq-6/cutoff_3/mapping/VEGFA-On-Target_R2_cutadapt.fq.gz ../TargetSeq-6/cutoff_3/merge.fastq/VEGFA-On-Target_merge_barcode_R1.fastq ../TargetSeq-6/cutoff_3/merge.fastq/VEGFA-On-Target_merge_barcode_R2.fastq > ../TargetSeq-6/cutoff_3/mapping/VEGFA-On-Target_cutadapt.log 2>&1
+        
+
+[Fri Oct 16 15:29:03 2020]
+rule cutadapt:
+    input: ../TargetSeq-6/cutoff_3/merge.fastq/MTND4P12-N4_merge_barcode_R1.fastq, ../TargetSeq-6/cutoff_3/merge.fastq/MTND4P12-N4_merge_barcode_R2.fastq
+    output: ../TargetSeq-6/cutoff_3/mapping/MTND4P12-N4_R1_cutadapt.fq.gz, ../TargetSeq-6/cutoff_3/mapping/MTND4P12-N4_R2_cutadapt.fq.gz
+    log: ../TargetSeq-6/cutoff_3/mapping/MTND4P12-N4_cutadapt.log
+    jobid: 8
+    reason: Missing output files: ../TargetSeq-6/cutoff_3/mapping/MTND4P12-N4_R1_cutadapt.fq.gz, ../TargetSeq-6/cutoff_3/mapping/MTND4P12-N4_R2_cutadapt.fq.gz
+    wildcards: lib=6, cutoff=3, sample=MTND4P12-N4
+
+
+        /home/zhaohuanan/miniconda3/envs/cutadapt/bin/cutadapt -j 24 --times 1  -e 0.1  -O 3  --quality-cutoff 25         -m 100 -a AGATCGGAAGAGCACACGTCTGAACTCCAGTCAC         -A AGATCGGAAGAGCGTCGTGTAGGGAAAGAGTGTAGATCTCGGTGGTCGCCGTATCATT         -o ../TargetSeq-6/cutoff_3/mapping/MTND4P12-N4_R1_cutadapt.fq.gz -p ../TargetSeq-6/cutoff_3/mapping/MTND4P12-N4_R2_cutadapt.fq.gz ../TargetSeq-6/cutoff_3/merge.fastq/MTND4P12-N4_merge_barcode_R1.fastq ../TargetSeq-6/cutoff_3/merge.fastq/MTND4P12-N4_merge_barcode_R2.fastq > ../TargetSeq-6/cutoff_3/mapping/MTND4P12-N4_cutadapt.log 2>&1
+        
+
+[Fri Oct 16 15:29:03 2020]
+rule cutadapt:
+    input: ../TargetSeq-5/cutoff_3/merge.fastq/MTND4P12-N4_merge_barcode_R1.fastq, ../TargetSeq-5/cutoff_3/merge.fastq/MTND4P12-N4_merge_barcode_R2.fastq
+    output: ../TargetSeq-5/cutoff_3/mapping/MTND4P12-N4_R1_cutadapt.fq.gz, ../TargetSeq-5/cutoff_3/mapping/MTND4P12-N4_R2_cutadapt.fq.gz
+    log: ../TargetSeq-5/cutoff_3/mapping/MTND4P12-N4_cutadapt.log
+    jobid: 1
+    reason: Missing output files: ../TargetSeq-5/cutoff_3/mapping/MTND4P12-N4_R1_cutadapt.fq.gz, ../TargetSeq-5/cutoff_3/mapping/MTND4P12-N4_R2_cutadapt.fq.gz
+    wildcards: lib=5, cutoff=3, sample=MTND4P12-N4
+
+
+        /home/zhaohuanan/miniconda3/envs/cutadapt/bin/cutadapt -j 24 --times 1  -e 0.1  -O 3  --quality-cutoff 25         -m 100 -a AGATCGGAAGAGCACACGTCTGAACTCCAGTCAC         -A AGATCGGAAGAGCGTCGTGTAGGGAAAGAGTGTAGATCTCGGTGGTCGCCGTATCATT         -o ../TargetSeq-5/cutoff_3/mapping/MTND4P12-N4_R1_cutadapt.fq.gz -p ../TargetSeq-5/cutoff_3/mapping/MTND4P12-N4_R2_cutadapt.fq.gz ../TargetSeq-5/cutoff_3/merge.fastq/MTND4P12-N4_merge_barcode_R1.fastq ../TargetSeq-5/cutoff_3/merge.fastq/MTND4P12-N4_merge_barcode_R2.fastq > ../TargetSeq-5/cutoff_3/mapping/MTND4P12-N4_cutadapt.log 2>&1
+        
+
+[Fri Oct 16 15:29:03 2020]
+rule cutadapt:
+    input: ../TargetSeq-7/cutoff_3/merge.fastq/MTND4P12-N4_merge_barcode_R1.fastq, ../TargetSeq-7/cutoff_3/merge.fastq/MTND4P12-N4_merge_barcode_R2.fastq
+    output: ../TargetSeq-7/cutoff_3/mapping/MTND4P12-N4_R1_cutadapt.fq.gz, ../TargetSeq-7/cutoff_3/mapping/MTND4P12-N4_R2_cutadapt.fq.gz
+    log: ../TargetSeq-7/cutoff_3/mapping/MTND4P12-N4_cutadapt.log
+    jobid: 15
+    reason: Missing output files: ../TargetSeq-7/cutoff_3/mapping/MTND4P12-N4_R2_cutadapt.fq.gz, ../TargetSeq-7/cutoff_3/mapping/MTND4P12-N4_R1_cutadapt.fq.gz
+    wildcards: lib=7, cutoff=3, sample=MTND4P12-N4
+
+
+        /home/zhaohuanan/miniconda3/envs/cutadapt/bin/cutadapt -j 24 --times 1  -e 0.1  -O 3  --quality-cutoff 25         -m 100 -a AGATCGGAAGAGCACACGTCTGAACTCCAGTCAC         -A AGATCGGAAGAGCGTCGTGTAGGGAAAGAGTGTAGATCTCGGTGGTCGCCGTATCATT         -o ../TargetSeq-7/cutoff_3/mapping/MTND4P12-N4_R1_cutadapt.fq.gz -p ../TargetSeq-7/cutoff_3/mapping/MTND4P12-N4_R2_cutadapt.fq.gz ../TargetSeq-7/cutoff_3/merge.fastq/MTND4P12-N4_merge_barcode_R1.fastq ../TargetSeq-7/cutoff_3/merge.fastq/MTND4P12-N4_merge_barcode_R2.fastq > ../TargetSeq-7/cutoff_3/mapping/MTND4P12-N4_cutadapt.log 2>&1
+        
+
+[Fri Oct 16 15:29:03 2020]
+rule cutadapt:
+    input: ../TargetSeq-6/cutoff_3/merge.fastq/VEGFA-OffNo-GDNo-08_merge_barcode_R1.fastq, ../TargetSeq-6/cutoff_3/merge.fastq/VEGFA-OffNo-GDNo-08_merge_barcode_R2.fastq
+    output: ../TargetSeq-6/cutoff_3/mapping/VEGFA-OffNo-GDNo-08_R1_cutadapt.fq.gz, ../TargetSeq-6/cutoff_3/mapping/VEGFA-OffNo-GDNo-08_R2_cutadapt.fq.gz
+    log: ../TargetSeq-6/cutoff_3/mapping/VEGFA-OffNo-GDNo-08_cutadapt.log
+    jobid: 9
+    reason: Missing output files: ../TargetSeq-6/cutoff_3/mapping/VEGFA-OffNo-GDNo-08_R1_cutadapt.fq.gz, ../TargetSeq-6/cutoff_3/mapping/VEGFA-OffNo-GDNo-08_R2_cutadapt.fq.gz
+    wildcards: lib=6, cutoff=3, sample=VEGFA-OffNo-GDNo-08
+
+
+        /home/zhaohuanan/miniconda3/envs/cutadapt/bin/cutadapt -j 24 --times 1  -e 0.1  -O 3  --quality-cutoff 25         -m 100 -a AGATCGGAAGAGCACACGTCTGAACTCCAGTCAC         -A AGATCGGAAGAGCGTCGTGTAGGGAAAGAGTGTAGATCTCGGTGGTCGCCGTATCATT         -o ../TargetSeq-6/cutoff_3/mapping/VEGFA-OffNo-GDNo-08_R1_cutadapt.fq.gz -p ../TargetSeq-6/cutoff_3/mapping/VEGFA-OffNo-GDNo-08_R2_cutadapt.fq.gz ../TargetSeq-6/cutoff_3/merge.fastq/VEGFA-OffNo-GDNo-08_merge_barcode_R1.fastq ../TargetSeq-6/cutoff_3/merge.fastq/VEGFA-OffNo-GDNo-08_merge_barcode_R2.fastq > ../TargetSeq-6/cutoff_3/mapping/VEGFA-OffNo-GDNo-08_cutadapt.log 2>&1
+        
+
+[Fri Oct 16 15:29:03 2020]
+rule cutadapt:
+    input: ../TargetSeq-7/cutoff_3/merge.fastq/VEGFA-OffNo-GDNo-08_merge_barcode_R1.fastq, ../TargetSeq-7/cutoff_3/merge.fastq/VEGFA-OffNo-GDNo-08_merge_barcode_R2.fastq
+    output: ../TargetSeq-7/cutoff_3/mapping/VEGFA-OffNo-GDNo-08_R1_cutadapt.fq.gz, ../TargetSeq-7/cutoff_3/mapping/VEGFA-OffNo-GDNo-08_R2_cutadapt.fq.gz
+    log: ../TargetSeq-7/cutoff_3/mapping/VEGFA-OffNo-GDNo-08_cutadapt.log
+    jobid: 16
+    reason: Missing output files: ../TargetSeq-7/cutoff_3/mapping/VEGFA-OffNo-GDNo-08_R1_cutadapt.fq.gz, ../TargetSeq-7/cutoff_3/mapping/VEGFA-OffNo-GDNo-08_R2_cutadapt.fq.gz
+    wildcards: lib=7, cutoff=3, sample=VEGFA-OffNo-GDNo-08
+
+
+        /home/zhaohuanan/miniconda3/envs/cutadapt/bin/cutadapt -j 24 --times 1  -e 0.1  -O 3  --quality-cutoff 25         -m 100 -a AGATCGGAAGAGCACACGTCTGAACTCCAGTCAC         -A AGATCGGAAGAGCGTCGTGTAGGGAAAGAGTGTAGATCTCGGTGGTCGCCGTATCATT         -o ../TargetSeq-7/cutoff_3/mapping/VEGFA-OffNo-GDNo-08_R1_cutadapt.fq.gz -p ../TargetSeq-7/cutoff_3/mapping/VEGFA-OffNo-GDNo-08_R2_cutadapt.fq.gz ../TargetSeq-7/cutoff_3/merge.fastq/VEGFA-OffNo-GDNo-08_merge_barcode_R1.fastq ../TargetSeq-7/cutoff_3/merge.fastq/VEGFA-OffNo-GDNo-08_merge_barcode_R2.fastq > ../TargetSeq-7/cutoff_3/mapping/VEGFA-OffNo-GDNo-08_cutadapt.log 2>&1
+        
+
+[Fri Oct 16 15:29:03 2020]
+rule cutadapt:
+    input: ../TargetSeq-5/cutoff_3/merge.fastq/VEGFA-OffNo-GDNo-08_merge_barcode_R1.fastq, ../TargetSeq-5/cutoff_3/merge.fastq/VEGFA-OffNo-GDNo-08_merge_barcode_R2.fastq
+    output: ../TargetSeq-5/cutoff_3/mapping/VEGFA-OffNo-GDNo-08_R1_cutadapt.fq.gz, ../TargetSeq-5/cutoff_3/mapping/VEGFA-OffNo-GDNo-08_R2_cutadapt.fq.gz
+    log: ../TargetSeq-5/cutoff_3/mapping/VEGFA-OffNo-GDNo-08_cutadapt.log
+    jobid: 2
+    reason: Missing output files: ../TargetSeq-5/cutoff_3/mapping/VEGFA-OffNo-GDNo-08_R1_cutadapt.fq.gz, ../TargetSeq-5/cutoff_3/mapping/VEGFA-OffNo-GDNo-08_R2_cutadapt.fq.gz
+    wildcards: lib=5, cutoff=3, sample=VEGFA-OffNo-GDNo-08
+
+
+        /home/zhaohuanan/miniconda3/envs/cutadapt/bin/cutadapt -j 24 --times 1  -e 0.1  -O 3  --quality-cutoff 25         -m 100 -a AGATCGGAAGAGCACACGTCTGAACTCCAGTCAC         -A AGATCGGAAGAGCGTCGTGTAGGGAAAGAGTGTAGATCTCGGTGGTCGCCGTATCATT         -o ../TargetSeq-5/cutoff_3/mapping/VEGFA-OffNo-GDNo-08_R1_cutadapt.fq.gz -p ../TargetSeq-5/cutoff_3/mapping/VEGFA-OffNo-GDNo-08_R2_cutadapt.fq.gz ../TargetSeq-5/cutoff_3/merge.fastq/VEGFA-OffNo-GDNo-08_merge_barcode_R1.fastq ../TargetSeq-5/cutoff_3/merge.fastq/VEGFA-OffNo-GDNo-08_merge_barcode_R2.fastq > ../TargetSeq-5/cutoff_3/mapping/VEGFA-OffNo-GDNo-08_cutadapt.log 2>&1
+        
+
+[Fri Oct 16 15:29:03 2020]
+rule cutadapt:
+    input: ../TargetSeq-6/cutoff_3/merge.fastq/VEGFA-Off-Target-2_merge_barcode_R1.fastq, ../TargetSeq-6/cutoff_3/merge.fastq/VEGFA-Off-Target-2_merge_barcode_R2.fastq
+    output: ../TargetSeq-6/cutoff_3/mapping/VEGFA-Off-Target-2_R1_cutadapt.fq.gz, ../TargetSeq-6/cutoff_3/mapping/VEGFA-Off-Target-2_R2_cutadapt.fq.gz
+    log: ../TargetSeq-6/cutoff_3/mapping/VEGFA-Off-Target-2_cutadapt.log
+    jobid: 10
+    reason: Missing output files: ../TargetSeq-6/cutoff_3/mapping/VEGFA-Off-Target-2_R1_cutadapt.fq.gz, ../TargetSeq-6/cutoff_3/mapping/VEGFA-Off-Target-2_R2_cutadapt.fq.gz
+    wildcards: lib=6, cutoff=3, sample=VEGFA-Off-Target-2
+
+
+        /home/zhaohuanan/miniconda3/envs/cutadapt/bin/cutadapt -j 24 --times 1  -e 0.1  -O 3  --quality-cutoff 25         -m 100 -a AGATCGGAAGAGCACACGTCTGAACTCCAGTCAC         -A AGATCGGAAGAGCGTCGTGTAGGGAAAGAGTGTAGATCTCGGTGGTCGCCGTATCATT         -o ../TargetSeq-6/cutoff_3/mapping/VEGFA-Off-Target-2_R1_cutadapt.fq.gz -p ../TargetSeq-6/cutoff_3/mapping/VEGFA-Off-Target-2_R2_cutadapt.fq.gz ../TargetSeq-6/cutoff_3/merge.fastq/VEGFA-Off-Target-2_merge_barcode_R1.fastq ../TargetSeq-6/cutoff_3/merge.fastq/VEGFA-Off-Target-2_merge_barcode_R2.fastq > ../TargetSeq-6/cutoff_3/mapping/VEGFA-Off-Target-2_cutadapt.log 2>&1
+        
+
+[Fri Oct 16 15:29:03 2020]
+rule cutadapt:
+    input: ../TargetSeq-5/cutoff_3/merge.fastq/VEGFA-Off-Target-2_merge_barcode_R1.fastq, ../TargetSeq-5/cutoff_3/merge.fastq/VEGFA-Off-Target-2_merge_barcode_R2.fastq
+    output: ../TargetSeq-5/cutoff_3/mapping/VEGFA-Off-Target-2_R1_cutadapt.fq.gz, ../TargetSeq-5/cutoff_3/mapping/VEGFA-Off-Target-2_R2_cutadapt.fq.gz
+    log: ../TargetSeq-5/cutoff_3/mapping/VEGFA-Off-Target-2_cutadapt.log
+    jobid: 3
+    reason: Missing output files: ../TargetSeq-5/cutoff_3/mapping/VEGFA-Off-Target-2_R2_cutadapt.fq.gz, ../TargetSeq-5/cutoff_3/mapping/VEGFA-Off-Target-2_R1_cutadapt.fq.gz
+    wildcards: lib=5, cutoff=3, sample=VEGFA-Off-Target-2
+
+
+        /home/zhaohuanan/miniconda3/envs/cutadapt/bin/cutadapt -j 24 --times 1  -e 0.1  -O 3  --quality-cutoff 25         -m 100 -a AGATCGGAAGAGCACACGTCTGAACTCCAGTCAC         -A AGATCGGAAGAGCGTCGTGTAGGGAAAGAGTGTAGATCTCGGTGGTCGCCGTATCATT         -o ../TargetSeq-5/cutoff_3/mapping/VEGFA-Off-Target-2_R1_cutadapt.fq.gz -p ../TargetSeq-5/cutoff_3/mapping/VEGFA-Off-Target-2_R2_cutadapt.fq.gz ../TargetSeq-5/cutoff_3/merge.fastq/VEGFA-Off-Target-2_merge_barcode_R1.fastq ../TargetSeq-5/cutoff_3/merge.fastq/VEGFA-Off-Target-2_merge_barcode_R2.fastq > ../TargetSeq-5/cutoff_3/mapping/VEGFA-Off-Target-2_cutadapt.log 2>&1
+        
+
+[Fri Oct 16 15:29:03 2020]
+rule cutadapt:
+    input: ../TargetSeq-7/cutoff_3/merge.fastq/VEGFA-Off-Target-2_merge_barcode_R1.fastq, ../TargetSeq-7/cutoff_3/merge.fastq/VEGFA-Off-Target-2_merge_barcode_R2.fastq
+    output: ../TargetSeq-7/cutoff_3/mapping/VEGFA-Off-Target-2_R1_cutadapt.fq.gz, ../TargetSeq-7/cutoff_3/mapping/VEGFA-Off-Target-2_R2_cutadapt.fq.gz
+    log: ../TargetSeq-7/cutoff_3/mapping/VEGFA-Off-Target-2_cutadapt.log
+    jobid: 17
+    reason: Missing output files: ../TargetSeq-7/cutoff_3/mapping/VEGFA-Off-Target-2_R2_cutadapt.fq.gz, ../TargetSeq-7/cutoff_3/mapping/VEGFA-Off-Target-2_R1_cutadapt.fq.gz
+    wildcards: lib=7, cutoff=3, sample=VEGFA-Off-Target-2
+
+
+        /home/zhaohuanan/miniconda3/envs/cutadapt/bin/cutadapt -j 24 --times 1  -e 0.1  -O 3  --quality-cutoff 25         -m 100 -a AGATCGGAAGAGCACACGTCTGAACTCCAGTCAC         -A AGATCGGAAGAGCGTCGTGTAGGGAAAGAGTGTAGATCTCGGTGGTCGCCGTATCATT         -o ../TargetSeq-7/cutoff_3/mapping/VEGFA-Off-Target-2_R1_cutadapt.fq.gz -p ../TargetSeq-7/cutoff_3/mapping/VEGFA-Off-Target-2_R2_cutadapt.fq.gz ../TargetSeq-7/cutoff_3/merge.fastq/VEGFA-Off-Target-2_merge_barcode_R1.fastq ../TargetSeq-7/cutoff_3/merge.fastq/VEGFA-Off-Target-2_merge_barcode_R2.fastq > ../TargetSeq-7/cutoff_3/mapping/VEGFA-Off-Target-2_cutadapt.log 2>&1
+        
+
+[Fri Oct 16 15:29:03 2020]
+rule cutadapt:
+    input: ../TargetSeq-7/cutoff_3/merge.fastq/VEGFA-Off-Target-7_merge_barcode_R1.fastq, ../TargetSeq-7/cutoff_3/merge.fastq/VEGFA-Off-Target-7_merge_barcode_R2.fastq
+    output: ../TargetSeq-7/cutoff_3/mapping/VEGFA-Off-Target-7_R1_cutadapt.fq.gz, ../TargetSeq-7/cutoff_3/mapping/VEGFA-Off-Target-7_R2_cutadapt.fq.gz
+    log: ../TargetSeq-7/cutoff_3/mapping/VEGFA-Off-Target-7_cutadapt.log
+    jobid: 20
+    reason: Missing output files: ../TargetSeq-7/cutoff_3/mapping/VEGFA-Off-Target-7_R2_cutadapt.fq.gz, ../TargetSeq-7/cutoff_3/mapping/VEGFA-Off-Target-7_R1_cutadapt.fq.gz
+    wildcards: lib=7, cutoff=3, sample=VEGFA-Off-Target-7
+
+
+        /home/zhaohuanan/miniconda3/envs/cutadapt/bin/cutadapt -j 24 --times 1  -e 0.1  -O 3  --quality-cutoff 25         -m 100 -a AGATCGGAAGAGCACACGTCTGAACTCCAGTCAC         -A AGATCGGAAGAGCGTCGTGTAGGGAAAGAGTGTAGATCTCGGTGGTCGCCGTATCATT         -o ../TargetSeq-7/cutoff_3/mapping/VEGFA-Off-Target-7_R1_cutadapt.fq.gz -p ../TargetSeq-7/cutoff_3/mapping/VEGFA-Off-Target-7_R2_cutadapt.fq.gz ../TargetSeq-7/cutoff_3/merge.fastq/VEGFA-Off-Target-7_merge_barcode_R1.fastq ../TargetSeq-7/cutoff_3/merge.fastq/VEGFA-Off-Target-7_merge_barcode_R2.fastq > ../TargetSeq-7/cutoff_3/mapping/VEGFA-Off-Target-7_cutadapt.log 2>&1
+        
+
+[Fri Oct 16 15:29:03 2020]
+rule cutadapt:
+    input: ../TargetSeq-6/cutoff_3/merge.fastq/VEGFA-Off-Target-3_merge_barcode_R1.fastq, ../TargetSeq-6/cutoff_3/merge.fastq/VEGFA-Off-Target-3_merge_barcode_R2.fastq
+    output: ../TargetSeq-6/cutoff_3/mapping/VEGFA-Off-Target-3_R1_cutadapt.fq.gz, ../TargetSeq-6/cutoff_3/mapping/VEGFA-Off-Target-3_R2_cutadapt.fq.gz
+    log: ../TargetSeq-6/cutoff_3/mapping/VEGFA-Off-Target-3_cutadapt.log
+    jobid: 11
+    reason: Missing output files: ../TargetSeq-6/cutoff_3/mapping/VEGFA-Off-Target-3_R2_cutadapt.fq.gz, ../TargetSeq-6/cutoff_3/mapping/VEGFA-Off-Target-3_R1_cutadapt.fq.gz
+    wildcards: lib=6, cutoff=3, sample=VEGFA-Off-Target-3
+
+
+        /home/zhaohuanan/miniconda3/envs/cutadapt/bin/cutadapt -j 24 --times 1  -e 0.1  -O 3  --quality-cutoff 25         -m 100 -a AGATCGGAAGAGCACACGTCTGAACTCCAGTCAC         -A AGATCGGAAGAGCGTCGTGTAGGGAAAGAGTGTAGATCTCGGTGGTCGCCGTATCATT         -o ../TargetSeq-6/cutoff_3/mapping/VEGFA-Off-Target-3_R1_cutadapt.fq.gz -p ../TargetSeq-6/cutoff_3/mapping/VEGFA-Off-Target-3_R2_cutadapt.fq.gz ../TargetSeq-6/cutoff_3/merge.fastq/VEGFA-Off-Target-3_merge_barcode_R1.fastq ../TargetSeq-6/cutoff_3/merge.fastq/VEGFA-Off-Target-3_merge_barcode_R2.fastq > ../TargetSeq-6/cutoff_3/mapping/VEGFA-Off-Target-3_cutadapt.log 2>&1
+        
+
+[Fri Oct 16 15:29:03 2020]
+rule cutadapt:
+    input: ../TargetSeq-7/cutoff_3/merge.fastq/VEGFA-Off-Target-3_merge_barcode_R1.fastq, ../TargetSeq-7/cutoff_3/merge.fastq/VEGFA-Off-Target-3_merge_barcode_R2.fastq
+    output: ../TargetSeq-7/cutoff_3/mapping/VEGFA-Off-Target-3_R1_cutadapt.fq.gz, ../TargetSeq-7/cutoff_3/mapping/VEGFA-Off-Target-3_R2_cutadapt.fq.gz
+    log: ../TargetSeq-7/cutoff_3/mapping/VEGFA-Off-Target-3_cutadapt.log
+    jobid: 18
+    reason: Missing output files: ../TargetSeq-7/cutoff_3/mapping/VEGFA-Off-Target-3_R2_cutadapt.fq.gz, ../TargetSeq-7/cutoff_3/mapping/VEGFA-Off-Target-3_R1_cutadapt.fq.gz
+    wildcards: lib=7, cutoff=3, sample=VEGFA-Off-Target-3
+
+
+        /home/zhaohuanan/miniconda3/envs/cutadapt/bin/cutadapt -j 24 --times 1  -e 0.1  -O 3  --quality-cutoff 25         -m 100 -a AGATCGGAAGAGCACACGTCTGAACTCCAGTCAC         -A AGATCGGAAGAGCGTCGTGTAGGGAAAGAGTGTAGATCTCGGTGGTCGCCGTATCATT         -o ../TargetSeq-7/cutoff_3/mapping/VEGFA-Off-Target-3_R1_cutadapt.fq.gz -p ../TargetSeq-7/cutoff_3/mapping/VEGFA-Off-Target-3_R2_cutadapt.fq.gz ../TargetSeq-7/cutoff_3/merge.fastq/VEGFA-Off-Target-3_merge_barcode_R1.fastq ../TargetSeq-7/cutoff_3/merge.fastq/VEGFA-Off-Target-3_merge_barcode_R2.fastq > ../TargetSeq-7/cutoff_3/mapping/VEGFA-Off-Target-3_cutadapt.log 2>&1
+        
+
+[Fri Oct 16 15:29:03 2020]
+rule cutadapt:
+    input: ../TargetSeq-5/cutoff_3/merge.fastq/VEGFA-Off-Target-3_merge_barcode_R1.fastq, ../TargetSeq-5/cutoff_3/merge.fastq/VEGFA-Off-Target-3_merge_barcode_R2.fastq
+    output: ../TargetSeq-5/cutoff_3/mapping/VEGFA-Off-Target-3_R1_cutadapt.fq.gz, ../TargetSeq-5/cutoff_3/mapping/VEGFA-Off-Target-3_R2_cutadapt.fq.gz
+    log: ../TargetSeq-5/cutoff_3/mapping/VEGFA-Off-Target-3_cutadapt.log
+    jobid: 4
+    reason: Missing output files: ../TargetSeq-5/cutoff_3/mapping/VEGFA-Off-Target-3_R1_cutadapt.fq.gz, ../TargetSeq-5/cutoff_3/mapping/VEGFA-Off-Target-3_R2_cutadapt.fq.gz
+    wildcards: lib=5, cutoff=3, sample=VEGFA-Off-Target-3
+
+
+        /home/zhaohuanan/miniconda3/envs/cutadapt/bin/cutadapt -j 24 --times 1  -e 0.1  -O 3  --quality-cutoff 25         -m 100 -a AGATCGGAAGAGCACACGTCTGAACTCCAGTCAC         -A AGATCGGAAGAGCGTCGTGTAGGGAAAGAGTGTAGATCTCGGTGGTCGCCGTATCATT         -o ../TargetSeq-5/cutoff_3/mapping/VEGFA-Off-Target-3_R1_cutadapt.fq.gz -p ../TargetSeq-5/cutoff_3/mapping/VEGFA-Off-Target-3_R2_cutadapt.fq.gz ../TargetSeq-5/cutoff_3/merge.fastq/VEGFA-Off-Target-3_merge_barcode_R1.fastq ../TargetSeq-5/cutoff_3/merge.fastq/VEGFA-Off-Target-3_merge_barcode_R2.fastq > ../TargetSeq-5/cutoff_3/mapping/VEGFA-Off-Target-3_cutadapt.log 2>&1
+        
+
+[Fri Oct 16 15:29:03 2020]
+rule cutadapt:
+    input: ../TargetSeq-6/cutoff_3/merge.fastq/VEGFA-Off-Target-6_merge_barcode_R1.fastq, ../TargetSeq-6/cutoff_3/merge.fastq/VEGFA-Off-Target-6_merge_barcode_R2.fastq
+    output: ../TargetSeq-6/cutoff_3/mapping/VEGFA-Off-Target-6_R1_cutadapt.fq.gz, ../TargetSeq-6/cutoff_3/mapping/VEGFA-Off-Target-6_R2_cutadapt.fq.gz
+    log: ../TargetSeq-6/cutoff_3/mapping/VEGFA-Off-Target-6_cutadapt.log
+    jobid: 12
+    reason: Missing output files: ../TargetSeq-6/cutoff_3/mapping/VEGFA-Off-Target-6_R2_cutadapt.fq.gz, ../TargetSeq-6/cutoff_3/mapping/VEGFA-Off-Target-6_R1_cutadapt.fq.gz
+    wildcards: lib=6, cutoff=3, sample=VEGFA-Off-Target-6
+
+
+        /home/zhaohuanan/miniconda3/envs/cutadapt/bin/cutadapt -j 24 --times 1  -e 0.1  -O 3  --quality-cutoff 25         -m 100 -a AGATCGGAAGAGCACACGTCTGAACTCCAGTCAC         -A AGATCGGAAGAGCGTCGTGTAGGGAAAGAGTGTAGATCTCGGTGGTCGCCGTATCATT         -o ../TargetSeq-6/cutoff_3/mapping/VEGFA-Off-Target-6_R1_cutadapt.fq.gz -p ../TargetSeq-6/cutoff_3/mapping/VEGFA-Off-Target-6_R2_cutadapt.fq.gz ../TargetSeq-6/cutoff_3/merge.fastq/VEGFA-Off-Target-6_merge_barcode_R1.fastq ../TargetSeq-6/cutoff_3/merge.fastq/VEGFA-Off-Target-6_merge_barcode_R2.fastq > ../TargetSeq-6/cutoff_3/mapping/VEGFA-Off-Target-6_cutadapt.log 2>&1
+        
+
+[Fri Oct 16 15:29:03 2020]
+rule cutadapt:
+    input: ../TargetSeq-5/cutoff_3/merge.fastq/VEGFA-Off-Target-6_merge_barcode_R1.fastq, ../TargetSeq-5/cutoff_3/merge.fastq/VEGFA-Off-Target-6_merge_barcode_R2.fastq
+    output: ../TargetSeq-5/cutoff_3/mapping/VEGFA-Off-Target-6_R1_cutadapt.fq.gz, ../TargetSeq-5/cutoff_3/mapping/VEGFA-Off-Target-6_R2_cutadapt.fq.gz
+    log: ../TargetSeq-5/cutoff_3/mapping/VEGFA-Off-Target-6_cutadapt.log
+    jobid: 5
+    reason: Missing output files: ../TargetSeq-5/cutoff_3/mapping/VEGFA-Off-Target-6_R2_cutadapt.fq.gz, ../TargetSeq-5/cutoff_3/mapping/VEGFA-Off-Target-6_R1_cutadapt.fq.gz
+    wildcards: lib=5, cutoff=3, sample=VEGFA-Off-Target-6
+
+
+        /home/zhaohuanan/miniconda3/envs/cutadapt/bin/cutadapt -j 24 --times 1  -e 0.1  -O 3  --quality-cutoff 25         -m 100 -a AGATCGGAAGAGCACACGTCTGAACTCCAGTCAC         -A AGATCGGAAGAGCGTCGTGTAGGGAAAGAGTGTAGATCTCGGTGGTCGCCGTATCATT         -o ../TargetSeq-5/cutoff_3/mapping/VEGFA-Off-Target-6_R1_cutadapt.fq.gz -p ../TargetSeq-5/cutoff_3/mapping/VEGFA-Off-Target-6_R2_cutadapt.fq.gz ../TargetSeq-5/cutoff_3/merge.fastq/VEGFA-Off-Target-6_merge_barcode_R1.fastq ../TargetSeq-5/cutoff_3/merge.fastq/VEGFA-Off-Target-6_merge_barcode_R2.fastq > ../TargetSeq-5/cutoff_3/mapping/VEGFA-Off-Target-6_cutadapt.log 2>&1
+        
+
+[Fri Oct 16 15:29:03 2020]
+rule cutadapt:
+    input: ../TargetSeq-7/cutoff_3/merge.fastq/VEGFA-Off-Target-6_merge_barcode_R1.fastq, ../TargetSeq-7/cutoff_3/merge.fastq/VEGFA-Off-Target-6_merge_barcode_R2.fastq
+    output: ../TargetSeq-7/cutoff_3/mapping/VEGFA-Off-Target-6_R1_cutadapt.fq.gz, ../TargetSeq-7/cutoff_3/mapping/VEGFA-Off-Target-6_R2_cutadapt.fq.gz
+    log: ../TargetSeq-7/cutoff_3/mapping/VEGFA-Off-Target-6_cutadapt.log
+    jobid: 19
+    reason: Missing output files: ../TargetSeq-7/cutoff_3/mapping/VEGFA-Off-Target-6_R1_cutadapt.fq.gz, ../TargetSeq-7/cutoff_3/mapping/VEGFA-Off-Target-6_R2_cutadapt.fq.gz
+    wildcards: lib=7, cutoff=3, sample=VEGFA-Off-Target-6
+
+
+        /home/zhaohuanan/miniconda3/envs/cutadapt/bin/cutadapt -j 24 --times 1  -e 0.1  -O 3  --quality-cutoff 25         -m 100 -a AGATCGGAAGAGCACACGTCTGAACTCCAGTCAC         -A AGATCGGAAGAGCGTCGTGTAGGGAAAGAGTGTAGATCTCGGTGGTCGCCGTATCATT         -o ../TargetSeq-7/cutoff_3/mapping/VEGFA-Off-Target-6_R1_cutadapt.fq.gz -p ../TargetSeq-7/cutoff_3/mapping/VEGFA-Off-Target-6_R2_cutadapt.fq.gz ../TargetSeq-7/cutoff_3/merge.fastq/VEGFA-Off-Target-6_merge_barcode_R1.fastq ../TargetSeq-7/cutoff_3/merge.fastq/VEGFA-Off-Target-6_merge_barcode_R2.fastq > ../TargetSeq-7/cutoff_3/mapping/VEGFA-Off-Target-6_cutadapt.log 2>&1
+        
+
+[Fri Oct 16 15:29:03 2020]
+rule cutadapt:
+    input: ../TargetSeq-5/cutoff_3/merge.fastq/VEGFA-Off-Target-7_merge_barcode_R1.fastq, ../TargetSeq-5/cutoff_3/merge.fastq/VEGFA-Off-Target-7_merge_barcode_R2.fastq
+    output: ../TargetSeq-5/cutoff_3/mapping/VEGFA-Off-Target-7_R1_cutadapt.fq.gz, ../TargetSeq-5/cutoff_3/mapping/VEGFA-Off-Target-7_R2_cutadapt.fq.gz
+    log: ../TargetSeq-5/cutoff_3/mapping/VEGFA-Off-Target-7_cutadapt.log
+    jobid: 6
+    reason: Missing output files: ../TargetSeq-5/cutoff_3/mapping/VEGFA-Off-Target-7_R1_cutadapt.fq.gz, ../TargetSeq-5/cutoff_3/mapping/VEGFA-Off-Target-7_R2_cutadapt.fq.gz
+    wildcards: lib=5, cutoff=3, sample=VEGFA-Off-Target-7
+
+
+        /home/zhaohuanan/miniconda3/envs/cutadapt/bin/cutadapt -j 24 --times 1  -e 0.1  -O 3  --quality-cutoff 25         -m 100 -a AGATCGGAAGAGCACACGTCTGAACTCCAGTCAC         -A AGATCGGAAGAGCGTCGTGTAGGGAAAGAGTGTAGATCTCGGTGGTCGCCGTATCATT         -o ../TargetSeq-5/cutoff_3/mapping/VEGFA-Off-Target-7_R1_cutadapt.fq.gz -p ../TargetSeq-5/cutoff_3/mapping/VEGFA-Off-Target-7_R2_cutadapt.fq.gz ../TargetSeq-5/cutoff_3/merge.fastq/VEGFA-Off-Target-7_merge_barcode_R1.fastq ../TargetSeq-5/cutoff_3/merge.fastq/VEGFA-Off-Target-7_merge_barcode_R2.fastq > ../TargetSeq-5/cutoff_3/mapping/VEGFA-Off-Target-7_cutadapt.log 2>&1
+        
+[Fri Oct 16 15:29:08 2020]
+Finished job 17.
+1 of 106 steps (0.94%) done
+
+[Fri Oct 16 15:29:08 2020]
+rule bwa_mapping:
+    input: ../TargetSeq-7/cutoff_3/mapping/VEGFA-Off-Target-2_R1_cutadapt.fq.gz, ../TargetSeq-7/cutoff_3/mapping/VEGFA-Off-Target-2_R2_cutadapt.fq.gz
+    output: ../TargetSeq-7/cutoff_3/mapping/VEGFA-Off-Target-2_bwa.sam
+    log: ../TargetSeq-7/cutoff_3/mapping/VEGFA-Off-Target-2_bwa.log
+    jobid: 122
+    reason: Missing output files: ../TargetSeq-7/cutoff_3/mapping/VEGFA-Off-Target-2_bwa.sam; Input files updated by another job: ../TargetSeq-7/cutoff_3/mapping/VEGFA-Off-Target-2_R2_cutadapt.fq.gz, ../TargetSeq-7/cutoff_3/mapping/VEGFA-Off-Target-2_R1_cutadapt.fq.gz
+    wildcards: lib=7, cutoff=3, sample=VEGFA-Off-Target-2
+
+
+        /home/zhaohuanan/miniconda3/envs/snakepipes_target-seq-from-table-to-plot/bin/bwa mem ../TargetSeq_BED_sample_lib/VEGFA-Off-Target-2.ref.upper.fa ../TargetSeq-7/cutoff_3/mapping/VEGFA-Off-Target-2_R1_cutadapt.fq.gz ../TargetSeq-7/cutoff_3/mapping/VEGFA-Off-Target-2_R2_cutadapt.fq.gz -t 24 -M > ../TargetSeq-7/cutoff_3/mapping/VEGFA-Off-Target-2_bwa.sam 2>../TargetSeq-7/cutoff_3/mapping/VEGFA-Off-Target-2_bwa.log
+        
+[Fri Oct 16 15:29:08 2020]
+Finished job 3.
+2 of 106 steps (2%) done
+
+[Fri Oct 16 15:29:08 2020]
+rule bwa_mapping:
+    input: ../TargetSeq-5/cutoff_3/mapping/VEGFA-Off-Target-2_R1_cutadapt.fq.gz, ../TargetSeq-5/cutoff_3/mapping/VEGFA-Off-Target-2_R2_cutadapt.fq.gz
+    output: ../TargetSeq-5/cutoff_3/mapping/VEGFA-Off-Target-2_bwa.sam
+    log: ../TargetSeq-5/cutoff_3/mapping/VEGFA-Off-Target-2_bwa.log
+    jobid: 108
+    reason: Missing output files: ../TargetSeq-5/cutoff_3/mapping/VEGFA-Off-Target-2_bwa.sam; Input files updated by another job: ../TargetSeq-5/cutoff_3/mapping/VEGFA-Off-Target-2_R2_cutadapt.fq.gz, ../TargetSeq-5/cutoff_3/mapping/VEGFA-Off-Target-2_R1_cutadapt.fq.gz
+    wildcards: lib=5, cutoff=3, sample=VEGFA-Off-Target-2
+
+
+        /home/zhaohuanan/miniconda3/envs/snakepipes_target-seq-from-table-to-plot/bin/bwa mem ../TargetSeq_BED_sample_lib/VEGFA-Off-Target-2.ref.upper.fa ../TargetSeq-5/cutoff_3/mapping/VEGFA-Off-Target-2_R1_cutadapt.fq.gz ../TargetSeq-5/cutoff_3/mapping/VEGFA-Off-Target-2_R2_cutadapt.fq.gz -t 24 -M > ../TargetSeq-5/cutoff_3/mapping/VEGFA-Off-Target-2_bwa.sam 2>../TargetSeq-5/cutoff_3/mapping/VEGFA-Off-Target-2_bwa.log
+        
+[Fri Oct 16 15:29:08 2020]
+Finished job 19.
+3 of 106 steps (3%) done
+
+[Fri Oct 16 15:29:08 2020]
+rule bwa_mapping:
+    input: ../TargetSeq-7/cutoff_3/mapping/VEGFA-Off-Target-6_R1_cutadapt.fq.gz, ../TargetSeq-7/cutoff_3/mapping/VEGFA-Off-Target-6_R2_cutadapt.fq.gz
+    output: ../TargetSeq-7/cutoff_3/mapping/VEGFA-Off-Target-6_bwa.sam
+    log: ../TargetSeq-7/cutoff_3/mapping/VEGFA-Off-Target-6_bwa.log
+    jobid: 124
+    reason: Missing output files: ../TargetSeq-7/cutoff_3/mapping/VEGFA-Off-Target-6_bwa.sam; Input files updated by another job: ../TargetSeq-7/cutoff_3/mapping/VEGFA-Off-Target-6_R1_cutadapt.fq.gz, ../TargetSeq-7/cutoff_3/mapping/VEGFA-Off-Target-6_R2_cutadapt.fq.gz
+    wildcards: lib=7, cutoff=3, sample=VEGFA-Off-Target-6
+
+
+        /home/zhaohuanan/miniconda3/envs/snakepipes_target-seq-from-table-to-plot/bin/bwa mem ../TargetSeq_BED_sample_lib/VEGFA-Off-Target-6.ref.upper.fa ../TargetSeq-7/cutoff_3/mapping/VEGFA-Off-Target-6_R1_cutadapt.fq.gz ../TargetSeq-7/cutoff_3/mapping/VEGFA-Off-Target-6_R2_cutadapt.fq.gz -t 24 -M > ../TargetSeq-7/cutoff_3/mapping/VEGFA-Off-Target-6_bwa.sam 2>../TargetSeq-7/cutoff_3/mapping/VEGFA-Off-Target-6_bwa.log
+        
+[Fri Oct 16 15:29:08 2020]
+Finished job 10.
+4 of 106 steps (4%) done
+
+[Fri Oct 16 15:29:08 2020]
+rule bwa_mapping:
+    input: ../TargetSeq-6/cutoff_3/mapping/VEGFA-Off-Target-2_R1_cutadapt.fq.gz, ../TargetSeq-6/cutoff_3/mapping/VEGFA-Off-Target-2_R2_cutadapt.fq.gz
+    output: ../TargetSeq-6/cutoff_3/mapping/VEGFA-Off-Target-2_bwa.sam
+    log: ../TargetSeq-6/cutoff_3/mapping/VEGFA-Off-Target-2_bwa.log
+    jobid: 115
+    reason: Missing output files: ../TargetSeq-6/cutoff_3/mapping/VEGFA-Off-Target-2_bwa.sam; Input files updated by another job: ../TargetSeq-6/cutoff_3/mapping/VEGFA-Off-Target-2_R1_cutadapt.fq.gz, ../TargetSeq-6/cutoff_3/mapping/VEGFA-Off-Target-2_R2_cutadapt.fq.gz
+    wildcards: lib=6, cutoff=3, sample=VEGFA-Off-Target-2
+
+
+        /home/zhaohuanan/miniconda3/envs/snakepipes_target-seq-from-table-to-plot/bin/bwa mem ../TargetSeq_BED_sample_lib/VEGFA-Off-Target-2.ref.upper.fa ../TargetSeq-6/cutoff_3/mapping/VEGFA-Off-Target-2_R1_cutadapt.fq.gz ../TargetSeq-6/cutoff_3/mapping/VEGFA-Off-Target-2_R2_cutadapt.fq.gz -t 24 -M > ../TargetSeq-6/cutoff_3/mapping/VEGFA-Off-Target-2_bwa.sam 2>../TargetSeq-6/cutoff_3/mapping/VEGFA-Off-Target-2_bwa.log
+        
+[Fri Oct 16 15:29:09 2020]
+Finished job 122.
+5 of 106 steps (5%) done
+
+[Fri Oct 16 15:29:09 2020]
+rule sam_to_bam:
+    input: ../TargetSeq-7/cutoff_3/mapping/VEGFA-Off-Target-2_bwa.sam, ../TargetSeq_BED_sample_lib/VEGFA-Off-Target-2.ref.upper.fa
+    output: ../TargetSeq-7/cutoff_3/mapping/VEGFA-Off-Target-2_bwa.bam
+    jobid: 101
+    reason: Missing output files: ../TargetSeq-7/cutoff_3/mapping/VEGFA-Off-Target-2_bwa.bam; Input files updated by another job: ../TargetSeq-7/cutoff_3/mapping/VEGFA-Off-Target-2_bwa.sam
+    wildcards: lib=7, cutoff=3, sample=VEGFA-Off-Target-2
+
+
+        /home/zhaohuanan/miniconda3/envs/snakepipes_cutadapt-STARmapping-FPKM-sortBAM/bin/samtools view -h -f 1 -F 268 ../TargetSeq-7/cutoff_3/mapping/VEGFA-Off-Target-2_bwa.sam         | /home/zhaohuanan/miniconda3/envs/snakepipes_target-seq-from-table-to-plot/bin/samclip --ref ../TargetSeq_BED_sample_lib/VEGFA-Off-Target-2.ref.upper.fa --max 3 --progress 0         | awk 'function abs(v) {return v < 0 ? -v : v} $1~"@" || ($7 == "=" && abs($9) <= 600 ) {print $0}'         | /home/zhaohuanan/miniconda3/envs/snakepipes_cutadapt-STARmapping-FPKM-sortBAM/bin/samtools view -hb > ../TargetSeq-7/cutoff_3/mapping/VEGFA-Off-Target-2_bwa.bam
+        
+[Fri Oct 16 15:29:09 2020]
+Finished job 18.
+6 of 106 steps (6%) done
+
+[Fri Oct 16 15:29:09 2020]
+rule bwa_mapping:
+    input: ../TargetSeq-7/cutoff_3/mapping/VEGFA-Off-Target-3_R1_cutadapt.fq.gz, ../TargetSeq-7/cutoff_3/mapping/VEGFA-Off-Target-3_R2_cutadapt.fq.gz
+    output: ../TargetSeq-7/cutoff_3/mapping/VEGFA-Off-Target-3_bwa.sam
+    log: ../TargetSeq-7/cutoff_3/mapping/VEGFA-Off-Target-3_bwa.log
+    jobid: 123
+    reason: Missing output files: ../TargetSeq-7/cutoff_3/mapping/VEGFA-Off-Target-3_bwa.sam; Input files updated by another job: ../TargetSeq-7/cutoff_3/mapping/VEGFA-Off-Target-3_R2_cutadapt.fq.gz, ../TargetSeq-7/cutoff_3/mapping/VEGFA-Off-Target-3_R1_cutadapt.fq.gz
+    wildcards: lib=7, cutoff=3, sample=VEGFA-Off-Target-3
+
+
+        /home/zhaohuanan/miniconda3/envs/snakepipes_target-seq-from-table-to-plot/bin/bwa mem ../TargetSeq_BED_sample_lib/VEGFA-Off-Target-3.ref.upper.fa ../TargetSeq-7/cutoff_3/mapping/VEGFA-Off-Target-3_R1_cutadapt.fq.gz ../TargetSeq-7/cutoff_3/mapping/VEGFA-Off-Target-3_R2_cutadapt.fq.gz -t 24 -M > ../TargetSeq-7/cutoff_3/mapping/VEGFA-Off-Target-3_bwa.sam 2>../TargetSeq-7/cutoff_3/mapping/VEGFA-Off-Target-3_bwa.log
+        
+[Fri Oct 16 15:29:09 2020]
+Finished job 21.
+7 of 106 steps (7%) done
+
+[Fri Oct 16 15:29:09 2020]
+rule bwa_mapping:
+    input: ../TargetSeq-7/cutoff_3/mapping/VEGFA-On-Target_R1_cutadapt.fq.gz, ../TargetSeq-7/cutoff_3/mapping/VEGFA-On-Target_R2_cutadapt.fq.gz
+    output: ../TargetSeq-7/cutoff_3/mapping/VEGFA-On-Target_bwa.sam
+    log: ../TargetSeq-7/cutoff_3/mapping/VEGFA-On-Target_bwa.log
+    jobid: 126
+    reason: Missing output files: ../TargetSeq-7/cutoff_3/mapping/VEGFA-On-Target_bwa.sam; Input files updated by another job: ../TargetSeq-7/cutoff_3/mapping/VEGFA-On-Target_R2_cutadapt.fq.gz, ../TargetSeq-7/cutoff_3/mapping/VEGFA-On-Target_R1_cutadapt.fq.gz
+    wildcards: lib=7, cutoff=3, sample=VEGFA-On-Target
+
+
+        /home/zhaohuanan/miniconda3/envs/snakepipes_target-seq-from-table-to-plot/bin/bwa mem ../TargetSeq_BED_sample_lib/VEGFA-On-Target.ref.upper.fa ../TargetSeq-7/cutoff_3/mapping/VEGFA-On-Target_R1_cutadapt.fq.gz ../TargetSeq-7/cutoff_3/mapping/VEGFA-On-Target_R2_cutadapt.fq.gz -t 24 -M > ../TargetSeq-7/cutoff_3/mapping/VEGFA-On-Target_bwa.sam 2>../TargetSeq-7/cutoff_3/mapping/VEGFA-On-Target_bwa.log
+        
+[Fri Oct 16 15:29:09 2020]
+Finished job 108.
+8 of 106 steps (8%) done
+
+[Fri Oct 16 15:29:09 2020]
+rule sam_to_bam:
+    input: ../TargetSeq-5/cutoff_3/mapping/VEGFA-Off-Target-2_bwa.sam, ../TargetSeq_BED_sample_lib/VEGFA-Off-Target-2.ref.upper.fa
+    output: ../TargetSeq-5/cutoff_3/mapping/VEGFA-Off-Target-2_bwa.bam
+    jobid: 87
+    reason: Missing output files: ../TargetSeq-5/cutoff_3/mapping/VEGFA-Off-Target-2_bwa.bam; Input files updated by another job: ../TargetSeq-5/cutoff_3/mapping/VEGFA-Off-Target-2_bwa.sam
+    wildcards: lib=5, cutoff=3, sample=VEGFA-Off-Target-2
+
+
+        /home/zhaohuanan/miniconda3/envs/snakepipes_cutadapt-STARmapping-FPKM-sortBAM/bin/samtools view -h -f 1 -F 268 ../TargetSeq-5/cutoff_3/mapping/VEGFA-Off-Target-2_bwa.sam         | /home/zhaohuanan/miniconda3/envs/snakepipes_target-seq-from-table-to-plot/bin/samclip --ref ../TargetSeq_BED_sample_lib/VEGFA-Off-Target-2.ref.upper.fa --max 3 --progress 0         | awk 'function abs(v) {return v < 0 ? -v : v} $1~"@" || ($7 == "=" && abs($9) <= 600 ) {print $0}'         | /home/zhaohuanan/miniconda3/envs/snakepipes_cutadapt-STARmapping-FPKM-sortBAM/bin/samtools view -hb > ../TargetSeq-5/cutoff_3/mapping/VEGFA-Off-Target-2_bwa.bam
+        
+[Fri Oct 16 15:29:09 2020]
+Finished job 101.
+9 of 106 steps (8%) done
+
+[Fri Oct 16 15:29:09 2020]
+rule samtools_sort_by_position:
+    input: ../TargetSeq-7/cutoff_3/mapping/VEGFA-Off-Target-2_bwa.bam
+    output: ../TargetSeq-7/cutoff_3/mapping/VEGFA-Off-Target-2_bwa_sort.bam
+    jobid: 38
+    reason: Missing output files: ../TargetSeq-7/cutoff_3/mapping/VEGFA-Off-Target-2_bwa_sort.bam; Input files updated by another job: ../TargetSeq-7/cutoff_3/mapping/VEGFA-Off-Target-2_bwa.bam
+    wildcards: lib=7, cutoff=3, sample=VEGFA-Off-Target-2
+
+/home/zhaohuanan/miniconda3/envs/snakepipes_cutadapt-STARmapping-FPKM-sortBAM/bin/samtools sort -O BAM -o ../TargetSeq-7/cutoff_3/mapping/VEGFA-Off-Target-2_bwa_sort.bam -T ../TargetSeq-7/cutoff_3/mapping/VEGFA-Off-Target-2_bwa_sort.bam.temp -@ 6 -m 2G ../TargetSeq-7/cutoff_3/mapping/VEGFA-Off-Target-2_bwa.bam
+[Fri Oct 16 15:29:09 2020]
+Finished job 11.
+10 of 106 steps (9%) done
+
+[Fri Oct 16 15:29:09 2020]
+rule bwa_mapping:
+    input: ../TargetSeq-6/cutoff_3/mapping/VEGFA-Off-Target-3_R1_cutadapt.fq.gz, ../TargetSeq-6/cutoff_3/mapping/VEGFA-Off-Target-3_R2_cutadapt.fq.gz
+    output: ../TargetSeq-6/cutoff_3/mapping/VEGFA-Off-Target-3_bwa.sam
+    log: ../TargetSeq-6/cutoff_3/mapping/VEGFA-Off-Target-3_bwa.log
+    jobid: 116
+    reason: Missing output files: ../TargetSeq-6/cutoff_3/mapping/VEGFA-Off-Target-3_bwa.sam; Input files updated by another job: ../TargetSeq-6/cutoff_3/mapping/VEGFA-Off-Target-3_R2_cutadapt.fq.gz, ../TargetSeq-6/cutoff_3/mapping/VEGFA-Off-Target-3_R1_cutadapt.fq.gz
+    wildcards: lib=6, cutoff=3, sample=VEGFA-Off-Target-3
+
+
+        /home/zhaohuanan/miniconda3/envs/snakepipes_target-seq-from-table-to-plot/bin/bwa mem ../TargetSeq_BED_sample_lib/VEGFA-Off-Target-3.ref.upper.fa ../TargetSeq-6/cutoff_3/mapping/VEGFA-Off-Target-3_R1_cutadapt.fq.gz ../TargetSeq-6/cutoff_3/mapping/VEGFA-Off-Target-3_R2_cutadapt.fq.gz -t 24 -M > ../TargetSeq-6/cutoff_3/mapping/VEGFA-Off-Target-3_bwa.sam 2>../TargetSeq-6/cutoff_3/mapping/VEGFA-Off-Target-3_bwa.log
+        
+[Fri Oct 16 15:29:09 2020]
+Finished job 20.
+11 of 106 steps (10%) done
+
+[Fri Oct 16 15:29:09 2020]
+rule bwa_mapping:
+    input: ../TargetSeq-7/cutoff_3/mapping/VEGFA-Off-Target-7_R1_cutadapt.fq.gz, ../TargetSeq-7/cutoff_3/mapping/VEGFA-Off-Target-7_R2_cutadapt.fq.gz
+    output: ../TargetSeq-7/cutoff_3/mapping/VEGFA-Off-Target-7_bwa.sam
+    log: ../TargetSeq-7/cutoff_3/mapping/VEGFA-Off-Target-7_bwa.log
+    jobid: 125
+    reason: Missing output files: ../TargetSeq-7/cutoff_3/mapping/VEGFA-Off-Target-7_bwa.sam; Input files updated by another job: ../TargetSeq-7/cutoff_3/mapping/VEGFA-Off-Target-7_R2_cutadapt.fq.gz, ../TargetSeq-7/cutoff_3/mapping/VEGFA-Off-Target-7_R1_cutadapt.fq.gz
+    wildcards: lib=7, cutoff=3, sample=VEGFA-Off-Target-7
+
+
+        /home/zhaohuanan/miniconda3/envs/snakepipes_target-seq-from-table-to-plot/bin/bwa mem ../TargetSeq_BED_sample_lib/VEGFA-Off-Target-7.ref.upper.fa ../TargetSeq-7/cutoff_3/mapping/VEGFA-Off-Target-7_R1_cutadapt.fq.gz ../TargetSeq-7/cutoff_3/mapping/VEGFA-Off-Target-7_R2_cutadapt.fq.gz -t 24 -M > ../TargetSeq-7/cutoff_3/mapping/VEGFA-Off-Target-7_bwa.sam 2>../TargetSeq-7/cutoff_3/mapping/VEGFA-Off-Target-7_bwa.log
+        
+[Fri Oct 16 15:29:09 2020]
+Finished job 38.
+12 of 106 steps (11%) done
+
+[Fri Oct 16 15:29:09 2020]
+rule samtools_index:
+    input: ../TargetSeq-7/cutoff_3/mapping/VEGFA-Off-Target-2_bwa_sort.bam
+    output: ../TargetSeq-7/cutoff_3/mapping/VEGFA-Off-Target-2_bwa_sort.bam.bai
+    jobid: 59
+    reason: Missing output files: ../TargetSeq-7/cutoff_3/mapping/VEGFA-Off-Target-2_bwa_sort.bam.bai; Input files updated by another job: ../TargetSeq-7/cutoff_3/mapping/VEGFA-Off-Target-2_bwa_sort.bam
+    wildcards: lib=7, cutoff=3, sample=VEGFA-Off-Target-2
+
+/home/zhaohuanan/miniconda3/envs/snakepipes_cutadapt-STARmapping-FPKM-sortBAM/bin/samtools index -@ 6 ../TargetSeq-7/cutoff_3/mapping/VEGFA-Off-Target-2_bwa_sort.bam ../TargetSeq-7/cutoff_3/mapping/VEGFA-Off-Target-2_bwa_sort.bam.bai
+[Fri Oct 16 15:29:09 2020]
+Finished job 7.
+13 of 106 steps (12%) done
+
+[Fri Oct 16 15:29:09 2020]
+rule bwa_mapping:
+    input: ../TargetSeq-5/cutoff_3/mapping/VEGFA-On-Target_R1_cutadapt.fq.gz, ../TargetSeq-5/cutoff_3/mapping/VEGFA-On-Target_R2_cutadapt.fq.gz
+    output: ../TargetSeq-5/cutoff_3/mapping/VEGFA-On-Target_bwa.sam
+    log: ../TargetSeq-5/cutoff_3/mapping/VEGFA-On-Target_bwa.log
+    jobid: 112
+    reason: Missing output files: ../TargetSeq-5/cutoff_3/mapping/VEGFA-On-Target_bwa.sam; Input files updated by another job: ../TargetSeq-5/cutoff_3/mapping/VEGFA-On-Target_R2_cutadapt.fq.gz, ../TargetSeq-5/cutoff_3/mapping/VEGFA-On-Target_R1_cutadapt.fq.gz
+    wildcards: lib=5, cutoff=3, sample=VEGFA-On-Target
+
+
+        /home/zhaohuanan/miniconda3/envs/snakepipes_target-seq-from-table-to-plot/bin/bwa mem ../TargetSeq_BED_sample_lib/VEGFA-On-Target.ref.upper.fa ../TargetSeq-5/cutoff_3/mapping/VEGFA-On-Target_R1_cutadapt.fq.gz ../TargetSeq-5/cutoff_3/mapping/VEGFA-On-Target_R2_cutadapt.fq.gz -t 24 -M > ../TargetSeq-5/cutoff_3/mapping/VEGFA-On-Target_bwa.sam 2>../TargetSeq-5/cutoff_3/mapping/VEGFA-On-Target_bwa.log
+        
+[Fri Oct 16 15:29:10 2020]
+Finished job 59.
+14 of 106 steps (13%) done
+[Fri Oct 16 15:29:10 2020]
+Finished job 124.
+15 of 106 steps (14%) done
+
+[Fri Oct 16 15:29:10 2020]
+rule sam_to_bam:
+    input: ../TargetSeq-7/cutoff_3/mapping/VEGFA-Off-Target-6_bwa.sam, ../TargetSeq_BED_sample_lib/VEGFA-Off-Target-6.ref.upper.fa
+    output: ../TargetSeq-7/cutoff_3/mapping/VEGFA-Off-Target-6_bwa.bam
+    jobid: 103
+    reason: Missing output files: ../TargetSeq-7/cutoff_3/mapping/VEGFA-Off-Target-6_bwa.bam; Input files updated by another job: ../TargetSeq-7/cutoff_3/mapping/VEGFA-Off-Target-6_bwa.sam
+    wildcards: lib=7, cutoff=3, sample=VEGFA-Off-Target-6
+
+
+        /home/zhaohuanan/miniconda3/envs/snakepipes_cutadapt-STARmapping-FPKM-sortBAM/bin/samtools view -h -f 1 -F 268 ../TargetSeq-7/cutoff_3/mapping/VEGFA-Off-Target-6_bwa.sam         | /home/zhaohuanan/miniconda3/envs/snakepipes_target-seq-from-table-to-plot/bin/samclip --ref ../TargetSeq_BED_sample_lib/VEGFA-Off-Target-6.ref.upper.fa --max 3 --progress 0         | awk 'function abs(v) {return v < 0 ? -v : v} $1~"@" || ($7 == "=" && abs($9) <= 600 ) {print $0}'         | /home/zhaohuanan/miniconda3/envs/snakepipes_cutadapt-STARmapping-FPKM-sortBAM/bin/samtools view -hb > ../TargetSeq-7/cutoff_3/mapping/VEGFA-Off-Target-6_bwa.bam
+        
+[Fri Oct 16 15:29:10 2020]
+Finished job 115.
+16 of 106 steps (15%) done
+[Fri Oct 16 15:29:10 2020]
+Finished job 13.
+17 of 106 steps (16%) done
+
+[Fri Oct 16 15:29:10 2020]
+rule bwa_mapping:
+    input: ../TargetSeq-6/cutoff_3/mapping/VEGFA-Off-Target-7_R1_cutadapt.fq.gz, ../TargetSeq-6/cutoff_3/mapping/VEGFA-Off-Target-7_R2_cutadapt.fq.gz
+    output: ../TargetSeq-6/cutoff_3/mapping/VEGFA-Off-Target-7_bwa.sam
+    log: ../TargetSeq-6/cutoff_3/mapping/VEGFA-Off-Target-7_bwa.log
+    jobid: 118
+    reason: Missing output files: ../TargetSeq-6/cutoff_3/mapping/VEGFA-Off-Target-7_bwa.sam; Input files updated by another job: ../TargetSeq-6/cutoff_3/mapping/VEGFA-Off-Target-7_R2_cutadapt.fq.gz, ../TargetSeq-6/cutoff_3/mapping/VEGFA-Off-Target-7_R1_cutadapt.fq.gz
+    wildcards: lib=6, cutoff=3, sample=VEGFA-Off-Target-7
+
+
+        /home/zhaohuanan/miniconda3/envs/snakepipes_target-seq-from-table-to-plot/bin/bwa mem ../TargetSeq_BED_sample_lib/VEGFA-Off-Target-7.ref.upper.fa ../TargetSeq-6/cutoff_3/mapping/VEGFA-Off-Target-7_R1_cutadapt.fq.gz ../TargetSeq-6/cutoff_3/mapping/VEGFA-Off-Target-7_R2_cutadapt.fq.gz -t 24 -M > ../TargetSeq-6/cutoff_3/mapping/VEGFA-Off-Target-7_bwa.sam 2>../TargetSeq-6/cutoff_3/mapping/VEGFA-Off-Target-7_bwa.log
+        
+
+[Fri Oct 16 15:29:10 2020]
+rule sam_to_bam:
+    input: ../TargetSeq-6/cutoff_3/mapping/VEGFA-Off-Target-2_bwa.sam, ../TargetSeq_BED_sample_lib/VEGFA-Off-Target-2.ref.upper.fa
+    output: ../TargetSeq-6/cutoff_3/mapping/VEGFA-Off-Target-2_bwa.bam
+    jobid: 94
+    reason: Missing output files: ../TargetSeq-6/cutoff_3/mapping/VEGFA-Off-Target-2_bwa.bam; Input files updated by another job: ../TargetSeq-6/cutoff_3/mapping/VEGFA-Off-Target-2_bwa.sam
+    wildcards: lib=6, cutoff=3, sample=VEGFA-Off-Target-2
+
+
+        /home/zhaohuanan/miniconda3/envs/snakepipes_cutadapt-STARmapping-FPKM-sortBAM/bin/samtools view -h -f 1 -F 268 ../TargetSeq-6/cutoff_3/mapping/VEGFA-Off-Target-2_bwa.sam         | /home/zhaohuanan/miniconda3/envs/snakepipes_target-seq-from-table-to-plot/bin/samclip --ref ../TargetSeq_BED_sample_lib/VEGFA-Off-Target-2.ref.upper.fa --max 3 --progress 0         | awk 'function abs(v) {return v < 0 ? -v : v} $1~"@" || ($7 == "=" && abs($9) <= 600 ) {print $0}'         | /home/zhaohuanan/miniconda3/envs/snakepipes_cutadapt-STARmapping-FPKM-sortBAM/bin/samtools view -hb > ../TargetSeq-6/cutoff_3/mapping/VEGFA-Off-Target-2_bwa.bam
+        
+[Fri Oct 16 15:29:10 2020]
+Finished job 4.
+18 of 106 steps (17%) done
+
+[Fri Oct 16 15:29:10 2020]
+rule bwa_mapping:
+    input: ../TargetSeq-5/cutoff_3/mapping/VEGFA-Off-Target-3_R1_cutadapt.fq.gz, ../TargetSeq-5/cutoff_3/mapping/VEGFA-Off-Target-3_R2_cutadapt.fq.gz
+    output: ../TargetSeq-5/cutoff_3/mapping/VEGFA-Off-Target-3_bwa.sam
+    log: ../TargetSeq-5/cutoff_3/mapping/VEGFA-Off-Target-3_bwa.log
+    jobid: 109
+    reason: Missing output files: ../TargetSeq-5/cutoff_3/mapping/VEGFA-Off-Target-3_bwa.sam; Input files updated by another job: ../TargetSeq-5/cutoff_3/mapping/VEGFA-Off-Target-3_R1_cutadapt.fq.gz, ../TargetSeq-5/cutoff_3/mapping/VEGFA-Off-Target-3_R2_cutadapt.fq.gz
+    wildcards: lib=5, cutoff=3, sample=VEGFA-Off-Target-3
+
+
+        /home/zhaohuanan/miniconda3/envs/snakepipes_target-seq-from-table-to-plot/bin/bwa mem ../TargetSeq_BED_sample_lib/VEGFA-Off-Target-3.ref.upper.fa ../TargetSeq-5/cutoff_3/mapping/VEGFA-Off-Target-3_R1_cutadapt.fq.gz ../TargetSeq-5/cutoff_3/mapping/VEGFA-Off-Target-3_R2_cutadapt.fq.gz -t 24 -M > ../TargetSeq-5/cutoff_3/mapping/VEGFA-Off-Target-3_bwa.sam 2>../TargetSeq-5/cutoff_3/mapping/VEGFA-Off-Target-3_bwa.log
+        
+[Fri Oct 16 15:29:10 2020]
+Finished job 123.
+19 of 106 steps (18%) done
+
+[Fri Oct 16 15:29:10 2020]
+rule sam_to_bam:
+    input: ../TargetSeq-7/cutoff_3/mapping/VEGFA-Off-Target-3_bwa.sam, ../TargetSeq_BED_sample_lib/VEGFA-Off-Target-3.ref.upper.fa
+    output: ../TargetSeq-7/cutoff_3/mapping/VEGFA-Off-Target-3_bwa.bam
+    jobid: 102
+    reason: Missing output files: ../TargetSeq-7/cutoff_3/mapping/VEGFA-Off-Target-3_bwa.bam; Input files updated by another job: ../TargetSeq-7/cutoff_3/mapping/VEGFA-Off-Target-3_bwa.sam
+    wildcards: lib=7, cutoff=3, sample=VEGFA-Off-Target-3
+
+
+        /home/zhaohuanan/miniconda3/envs/snakepipes_cutadapt-STARmapping-FPKM-sortBAM/bin/samtools view -h -f 1 -F 268 ../TargetSeq-7/cutoff_3/mapping/VEGFA-Off-Target-3_bwa.sam         | /home/zhaohuanan/miniconda3/envs/snakepipes_target-seq-from-table-to-plot/bin/samclip --ref ../TargetSeq_BED_sample_lib/VEGFA-Off-Target-3.ref.upper.fa --max 3 --progress 0         | awk 'function abs(v) {return v < 0 ? -v : v} $1~"@" || ($7 == "=" && abs($9) <= 600 ) {print $0}'         | /home/zhaohuanan/miniconda3/envs/snakepipes_cutadapt-STARmapping-FPKM-sortBAM/bin/samtools view -hb > ../TargetSeq-7/cutoff_3/mapping/VEGFA-Off-Target-3_bwa.bam
+        
+[Fri Oct 16 15:29:10 2020]
+Finished job 87.
+20 of 106 steps (19%) done
+
+[Fri Oct 16 15:29:10 2020]
+rule samtools_sort_by_position:
+    input: ../TargetSeq-5/cutoff_3/mapping/VEGFA-Off-Target-2_bwa.bam
+    output: ../TargetSeq-5/cutoff_3/mapping/VEGFA-Off-Target-2_bwa_sort.bam
+    jobid: 24
+    reason: Missing output files: ../TargetSeq-5/cutoff_3/mapping/VEGFA-Off-Target-2_bwa_sort.bam; Input files updated by another job: ../TargetSeq-5/cutoff_3/mapping/VEGFA-Off-Target-2_bwa.bam
+    wildcards: lib=5, cutoff=3, sample=VEGFA-Off-Target-2
+
+/home/zhaohuanan/miniconda3/envs/snakepipes_cutadapt-STARmapping-FPKM-sortBAM/bin/samtools sort -O BAM -o ../TargetSeq-5/cutoff_3/mapping/VEGFA-Off-Target-2_bwa_sort.bam -T ../TargetSeq-5/cutoff_3/mapping/VEGFA-Off-Target-2_bwa_sort.bam.temp -@ 6 -m 2G ../TargetSeq-5/cutoff_3/mapping/VEGFA-Off-Target-2_bwa.bam
+[Fri Oct 16 15:29:10 2020]
+Finished job 12.
+21 of 106 steps (20%) done
+
+[Fri Oct 16 15:29:10 2020]
+rule bwa_mapping:
+    input: ../TargetSeq-6/cutoff_3/mapping/VEGFA-Off-Target-6_R1_cutadapt.fq.gz, ../TargetSeq-6/cutoff_3/mapping/VEGFA-Off-Target-6_R2_cutadapt.fq.gz
+    output: ../TargetSeq-6/cutoff_3/mapping/VEGFA-Off-Target-6_bwa.sam
+    log: ../TargetSeq-6/cutoff_3/mapping/VEGFA-Off-Target-6_bwa.log
+    jobid: 117
+    reason: Missing output files: ../TargetSeq-6/cutoff_3/mapping/VEGFA-Off-Target-6_bwa.sam; Input files updated by another job: ../TargetSeq-6/cutoff_3/mapping/VEGFA-Off-Target-6_R2_cutadapt.fq.gz, ../TargetSeq-6/cutoff_3/mapping/VEGFA-Off-Target-6_R1_cutadapt.fq.gz
+    wildcards: lib=6, cutoff=3, sample=VEGFA-Off-Target-6
+
+
+        /home/zhaohuanan/miniconda3/envs/snakepipes_target-seq-from-table-to-plot/bin/bwa mem ../TargetSeq_BED_sample_lib/VEGFA-Off-Target-6.ref.upper.fa ../TargetSeq-6/cutoff_3/mapping/VEGFA-Off-Target-6_R1_cutadapt.fq.gz ../TargetSeq-6/cutoff_3/mapping/VEGFA-Off-Target-6_R2_cutadapt.fq.gz -t 24 -M > ../TargetSeq-6/cutoff_3/mapping/VEGFA-Off-Target-6_bwa.sam 2>../TargetSeq-6/cutoff_3/mapping/VEGFA-Off-Target-6_bwa.log
+        
+[Fri Oct 16 15:29:10 2020]
+Finished job 24.
+22 of 106 steps (21%) done
+
+[Fri Oct 16 15:29:10 2020]
+rule samtools_index:
+    input: ../TargetSeq-5/cutoff_3/mapping/VEGFA-Off-Target-2_bwa_sort.bam
+    output: ../TargetSeq-5/cutoff_3/mapping/VEGFA-Off-Target-2_bwa_sort.bam.bai
+    jobid: 45
+    reason: Missing output files: ../TargetSeq-5/cutoff_3/mapping/VEGFA-Off-Target-2_bwa_sort.bam.bai; Input files updated by another job: ../TargetSeq-5/cutoff_3/mapping/VEGFA-Off-Target-2_bwa_sort.bam
+    wildcards: lib=5, cutoff=3, sample=VEGFA-Off-Target-2
+
+/home/zhaohuanan/miniconda3/envs/snakepipes_cutadapt-STARmapping-FPKM-sortBAM/bin/samtools index -@ 6 ../TargetSeq-5/cutoff_3/mapping/VEGFA-Off-Target-2_bwa_sort.bam ../TargetSeq-5/cutoff_3/mapping/VEGFA-Off-Target-2_bwa_sort.bam.bai
+[Fri Oct 16 15:29:10 2020]
+Finished job 5.
+23 of 106 steps (22%) done
+
+[Fri Oct 16 15:29:10 2020]
+rule bwa_mapping:
+    input: ../TargetSeq-5/cutoff_3/mapping/VEGFA-Off-Target-6_R1_cutadapt.fq.gz, ../TargetSeq-5/cutoff_3/mapping/VEGFA-Off-Target-6_R2_cutadapt.fq.gz
+    output: ../TargetSeq-5/cutoff_3/mapping/VEGFA-Off-Target-6_bwa.sam
+    log: ../TargetSeq-5/cutoff_3/mapping/VEGFA-Off-Target-6_bwa.log
+    jobid: 110
+    reason: Missing output files: ../TargetSeq-5/cutoff_3/mapping/VEGFA-Off-Target-6_bwa.sam; Input files updated by another job: ../TargetSeq-5/cutoff_3/mapping/VEGFA-Off-Target-6_R2_cutadapt.fq.gz, ../TargetSeq-5/cutoff_3/mapping/VEGFA-Off-Target-6_R1_cutadapt.fq.gz
+    wildcards: lib=5, cutoff=3, sample=VEGFA-Off-Target-6
+
+
+        /home/zhaohuanan/miniconda3/envs/snakepipes_target-seq-from-table-to-plot/bin/bwa mem ../TargetSeq_BED_sample_lib/VEGFA-Off-Target-6.ref.upper.fa ../TargetSeq-5/cutoff_3/mapping/VEGFA-Off-Target-6_R1_cutadapt.fq.gz ../TargetSeq-5/cutoff_3/mapping/VEGFA-Off-Target-6_R2_cutadapt.fq.gz -t 24 -M > ../TargetSeq-5/cutoff_3/mapping/VEGFA-Off-Target-6_bwa.sam 2>../TargetSeq-5/cutoff_3/mapping/VEGFA-Off-Target-6_bwa.log
+        
+[Fri Oct 16 15:29:10 2020]
+Finished job 94.
+24 of 106 steps (23%) done
+[Fri Oct 16 15:29:10 2020]
+Finished job 45.
+25 of 106 steps (24%) done
+
+[Fri Oct 16 15:29:10 2020]
+rule samtools_sort_by_position:
+    input: ../TargetSeq-6/cutoff_3/mapping/VEGFA-Off-Target-2_bwa.bam
+    output: ../TargetSeq-6/cutoff_3/mapping/VEGFA-Off-Target-2_bwa_sort.bam
+    jobid: 31
+    reason: Missing output files: ../TargetSeq-6/cutoff_3/mapping/VEGFA-Off-Target-2_bwa_sort.bam; Input files updated by another job: ../TargetSeq-6/cutoff_3/mapping/VEGFA-Off-Target-2_bwa.bam
+    wildcards: lib=6, cutoff=3, sample=VEGFA-Off-Target-2
+
+/home/zhaohuanan/miniconda3/envs/snakepipes_cutadapt-STARmapping-FPKM-sortBAM/bin/samtools sort -O BAM -o ../TargetSeq-6/cutoff_3/mapping/VEGFA-Off-Target-2_bwa_sort.bam -T ../TargetSeq-6/cutoff_3/mapping/VEGFA-Off-Target-2_bwa_sort.bam.temp -@ 6 -m 2G ../TargetSeq-6/cutoff_3/mapping/VEGFA-Off-Target-2_bwa.bam
+[Fri Oct 16 15:29:10 2020]
+Finished job 16.
+26 of 106 steps (25%) done
+
+[Fri Oct 16 15:29:10 2020]
+rule bwa_mapping:
+    input: ../TargetSeq-7/cutoff_3/mapping/VEGFA-OffNo-GDNo-08_R1_cutadapt.fq.gz, ../TargetSeq-7/cutoff_3/mapping/VEGFA-OffNo-GDNo-08_R2_cutadapt.fq.gz
+    output: ../TargetSeq-7/cutoff_3/mapping/VEGFA-OffNo-GDNo-08_bwa.sam
+    log: ../TargetSeq-7/cutoff_3/mapping/VEGFA-OffNo-GDNo-08_bwa.log
+    jobid: 121
+    reason: Missing output files: ../TargetSeq-7/cutoff_3/mapping/VEGFA-OffNo-GDNo-08_bwa.sam; Input files updated by another job: ../TargetSeq-7/cutoff_3/mapping/VEGFA-OffNo-GDNo-08_R1_cutadapt.fq.gz, ../TargetSeq-7/cutoff_3/mapping/VEGFA-OffNo-GDNo-08_R2_cutadapt.fq.gz
+    wildcards: lib=7, cutoff=3, sample=VEGFA-OffNo-GDNo-08
+
+
+        /home/zhaohuanan/miniconda3/envs/snakepipes_target-seq-from-table-to-plot/bin/bwa mem ../TargetSeq_BED_sample_lib/VEGFA-OffNo-GDNo-08.ref.upper.fa ../TargetSeq-7/cutoff_3/mapping/VEGFA-OffNo-GDNo-08_R1_cutadapt.fq.gz ../TargetSeq-7/cutoff_3/mapping/VEGFA-OffNo-GDNo-08_R2_cutadapt.fq.gz -t 24 -M > ../TargetSeq-7/cutoff_3/mapping/VEGFA-OffNo-GDNo-08_bwa.sam 2>../TargetSeq-7/cutoff_3/mapping/VEGFA-OffNo-GDNo-08_bwa.log
+        
+[Fri Oct 16 15:29:10 2020]
+Finished job 6.
+27 of 106 steps (25%) done
+
+[Fri Oct 16 15:29:10 2020]
+rule bwa_mapping:
+    input: ../TargetSeq-5/cutoff_3/mapping/VEGFA-Off-Target-7_R1_cutadapt.fq.gz, ../TargetSeq-5/cutoff_3/mapping/VEGFA-Off-Target-7_R2_cutadapt.fq.gz
+    output: ../TargetSeq-5/cutoff_3/mapping/VEGFA-Off-Target-7_bwa.sam
+    log: ../TargetSeq-5/cutoff_3/mapping/VEGFA-Off-Target-7_bwa.log
+    jobid: 111
+    reason: Missing output files: ../TargetSeq-5/cutoff_3/mapping/VEGFA-Off-Target-7_bwa.sam; Input files updated by another job: ../TargetSeq-5/cutoff_3/mapping/VEGFA-Off-Target-7_R1_cutadapt.fq.gz, ../TargetSeq-5/cutoff_3/mapping/VEGFA-Off-Target-7_R2_cutadapt.fq.gz
+    wildcards: lib=5, cutoff=3, sample=VEGFA-Off-Target-7
+
+
+        /home/zhaohuanan/miniconda3/envs/snakepipes_target-seq-from-table-to-plot/bin/bwa mem ../TargetSeq_BED_sample_lib/VEGFA-Off-Target-7.ref.upper.fa ../TargetSeq-5/cutoff_3/mapping/VEGFA-Off-Target-7_R1_cutadapt.fq.gz ../TargetSeq-5/cutoff_3/mapping/VEGFA-Off-Target-7_R2_cutadapt.fq.gz -t 24 -M > ../TargetSeq-5/cutoff_3/mapping/VEGFA-Off-Target-7_bwa.sam 2>../TargetSeq-5/cutoff_3/mapping/VEGFA-Off-Target-7_bwa.log
+        
+[Fri Oct 16 15:29:10 2020]
+Finished job 14.
+28 of 106 steps (26%) done
+
+[Fri Oct 16 15:29:10 2020]
+rule bwa_mapping:
+    input: ../TargetSeq-6/cutoff_3/mapping/VEGFA-On-Target_R1_cutadapt.fq.gz, ../TargetSeq-6/cutoff_3/mapping/VEGFA-On-Target_R2_cutadapt.fq.gz
+    output: ../TargetSeq-6/cutoff_3/mapping/VEGFA-On-Target_bwa.sam
+    log: ../TargetSeq-6/cutoff_3/mapping/VEGFA-On-Target_bwa.log
+    jobid: 119
+    reason: Missing output files: ../TargetSeq-6/cutoff_3/mapping/VEGFA-On-Target_bwa.sam; Input files updated by another job: ../TargetSeq-6/cutoff_3/mapping/VEGFA-On-Target_R1_cutadapt.fq.gz, ../TargetSeq-6/cutoff_3/mapping/VEGFA-On-Target_R2_cutadapt.fq.gz
+    wildcards: lib=6, cutoff=3, sample=VEGFA-On-Target
+
+
+        /home/zhaohuanan/miniconda3/envs/snakepipes_target-seq-from-table-to-plot/bin/bwa mem ../TargetSeq_BED_sample_lib/VEGFA-On-Target.ref.upper.fa ../TargetSeq-6/cutoff_3/mapping/VEGFA-On-Target_R1_cutadapt.fq.gz ../TargetSeq-6/cutoff_3/mapping/VEGFA-On-Target_R2_cutadapt.fq.gz -t 24 -M > ../TargetSeq-6/cutoff_3/mapping/VEGFA-On-Target_bwa.sam 2>../TargetSeq-6/cutoff_3/mapping/VEGFA-On-Target_bwa.log
+        
+[Fri Oct 16 15:29:11 2020]
+Finished job 31.
+29 of 106 steps (27%) done
+
+[Fri Oct 16 15:29:11 2020]
+rule samtools_index:
+    input: ../TargetSeq-6/cutoff_3/mapping/VEGFA-Off-Target-2_bwa_sort.bam
+    output: ../TargetSeq-6/cutoff_3/mapping/VEGFA-Off-Target-2_bwa_sort.bam.bai
+    jobid: 52
+    reason: Missing output files: ../TargetSeq-6/cutoff_3/mapping/VEGFA-Off-Target-2_bwa_sort.bam.bai; Input files updated by another job: ../TargetSeq-6/cutoff_3/mapping/VEGFA-Off-Target-2_bwa_sort.bam
+    wildcards: lib=6, cutoff=3, sample=VEGFA-Off-Target-2
+
+/home/zhaohuanan/miniconda3/envs/snakepipes_cutadapt-STARmapping-FPKM-sortBAM/bin/samtools index -@ 6 ../TargetSeq-6/cutoff_3/mapping/VEGFA-Off-Target-2_bwa_sort.bam ../TargetSeq-6/cutoff_3/mapping/VEGFA-Off-Target-2_bwa_sort.bam.bai
+[Fri Oct 16 15:29:11 2020]
+Finished job 52.
+30 of 106 steps (28%) done
+[Fri Oct 16 15:29:11 2020]
+Finished job 103.
+31 of 106 steps (29%) done
+
+[Fri Oct 16 15:29:11 2020]
+rule samtools_sort_by_position:
+    input: ../TargetSeq-7/cutoff_3/mapping/VEGFA-Off-Target-6_bwa.bam
+    output: ../TargetSeq-7/cutoff_3/mapping/VEGFA-Off-Target-6_bwa_sort.bam
+    jobid: 40
+    reason: Missing output files: ../TargetSeq-7/cutoff_3/mapping/VEGFA-Off-Target-6_bwa_sort.bam; Input files updated by another job: ../TargetSeq-7/cutoff_3/mapping/VEGFA-Off-Target-6_bwa.bam
+    wildcards: lib=7, cutoff=3, sample=VEGFA-Off-Target-6
+
+/home/zhaohuanan/miniconda3/envs/snakepipes_cutadapt-STARmapping-FPKM-sortBAM/bin/samtools sort -O BAM -o ../TargetSeq-7/cutoff_3/mapping/VEGFA-Off-Target-6_bwa_sort.bam -T ../TargetSeq-7/cutoff_3/mapping/VEGFA-Off-Target-6_bwa_sort.bam.temp -@ 6 -m 2G ../TargetSeq-7/cutoff_3/mapping/VEGFA-Off-Target-6_bwa.bam
+[Fri Oct 16 15:29:11 2020]
+Finished job 126.
+32 of 106 steps (30%) done
+
+[Fri Oct 16 15:29:11 2020]
+rule sam_to_bam:
+    input: ../TargetSeq-7/cutoff_3/mapping/VEGFA-On-Target_bwa.sam, ../TargetSeq_BED_sample_lib/VEGFA-On-Target.ref.upper.fa
+    output: ../TargetSeq-7/cutoff_3/mapping/VEGFA-On-Target_bwa.bam
+    jobid: 105
+    reason: Missing output files: ../TargetSeq-7/cutoff_3/mapping/VEGFA-On-Target_bwa.bam; Input files updated by another job: ../TargetSeq-7/cutoff_3/mapping/VEGFA-On-Target_bwa.sam
+    wildcards: lib=7, cutoff=3, sample=VEGFA-On-Target
+
+
+        /home/zhaohuanan/miniconda3/envs/snakepipes_cutadapt-STARmapping-FPKM-sortBAM/bin/samtools view -h -f 1 -F 268 ../TargetSeq-7/cutoff_3/mapping/VEGFA-On-Target_bwa.sam         | /home/zhaohuanan/miniconda3/envs/snakepipes_target-seq-from-table-to-plot/bin/samclip --ref ../TargetSeq_BED_sample_lib/VEGFA-On-Target.ref.upper.fa --max 3 --progress 0         | awk 'function abs(v) {return v < 0 ? -v : v} $1~"@" || ($7 == "=" && abs($9) <= 600 ) {print $0}'         | /home/zhaohuanan/miniconda3/envs/snakepipes_cutadapt-STARmapping-FPKM-sortBAM/bin/samtools view -hb > ../TargetSeq-7/cutoff_3/mapping/VEGFA-On-Target_bwa.bam
+        
+[Fri Oct 16 15:29:11 2020]
+Finished job 102.
+33 of 106 steps (31%) done
+
+[Fri Oct 16 15:29:11 2020]
+rule samtools_sort_by_position:
+    input: ../TargetSeq-7/cutoff_3/mapping/VEGFA-Off-Target-3_bwa.bam
+    output: ../TargetSeq-7/cutoff_3/mapping/VEGFA-Off-Target-3_bwa_sort.bam
+    jobid: 39
+    reason: Missing output files: ../TargetSeq-7/cutoff_3/mapping/VEGFA-Off-Target-3_bwa_sort.bam; Input files updated by another job: ../TargetSeq-7/cutoff_3/mapping/VEGFA-Off-Target-3_bwa.bam
+    wildcards: lib=7, cutoff=3, sample=VEGFA-Off-Target-3
+
+/home/zhaohuanan/miniconda3/envs/snakepipes_cutadapt-STARmapping-FPKM-sortBAM/bin/samtools sort -O BAM -o ../TargetSeq-7/cutoff_3/mapping/VEGFA-Off-Target-3_bwa_sort.bam -T ../TargetSeq-7/cutoff_3/mapping/VEGFA-Off-Target-3_bwa_sort.bam.temp -@ 6 -m 2G ../TargetSeq-7/cutoff_3/mapping/VEGFA-Off-Target-3_bwa.bam
+[Fri Oct 16 15:29:11 2020]
+Finished job 40.
+34 of 106 steps (32%) done
+
+[Fri Oct 16 15:29:11 2020]
+rule samtools_index:
+    input: ../TargetSeq-7/cutoff_3/mapping/VEGFA-Off-Target-6_bwa_sort.bam
+    output: ../TargetSeq-7/cutoff_3/mapping/VEGFA-Off-Target-6_bwa_sort.bam.bai
+    jobid: 61
+    reason: Missing output files: ../TargetSeq-7/cutoff_3/mapping/VEGFA-Off-Target-6_bwa_sort.bam.bai; Input files updated by another job: ../TargetSeq-7/cutoff_3/mapping/VEGFA-Off-Target-6_bwa_sort.bam
+    wildcards: lib=7, cutoff=3, sample=VEGFA-Off-Target-6
+
+/home/zhaohuanan/miniconda3/envs/snakepipes_cutadapt-STARmapping-FPKM-sortBAM/bin/samtools index -@ 6 ../TargetSeq-7/cutoff_3/mapping/VEGFA-Off-Target-6_bwa_sort.bam ../TargetSeq-7/cutoff_3/mapping/VEGFA-Off-Target-6_bwa_sort.bam.bai
+[Fri Oct 16 15:29:11 2020]
+Finished job 116.
+35 of 106 steps (33%) done
+
+[Fri Oct 16 15:29:11 2020]
+rule sam_to_bam:
+    input: ../TargetSeq-6/cutoff_3/mapping/VEGFA-Off-Target-3_bwa.sam, ../TargetSeq_BED_sample_lib/VEGFA-Off-Target-3.ref.upper.fa
+    output: ../TargetSeq-6/cutoff_3/mapping/VEGFA-Off-Target-3_bwa.bam
+    jobid: 95
+    reason: Missing output files: ../TargetSeq-6/cutoff_3/mapping/VEGFA-Off-Target-3_bwa.bam; Input files updated by another job: ../TargetSeq-6/cutoff_3/mapping/VEGFA-Off-Target-3_bwa.sam
+    wildcards: lib=6, cutoff=3, sample=VEGFA-Off-Target-3
+
+
+        /home/zhaohuanan/miniconda3/envs/snakepipes_cutadapt-STARmapping-FPKM-sortBAM/bin/samtools view -h -f 1 -F 268 ../TargetSeq-6/cutoff_3/mapping/VEGFA-Off-Target-3_bwa.sam         | /home/zhaohuanan/miniconda3/envs/snakepipes_target-seq-from-table-to-plot/bin/samclip --ref ../TargetSeq_BED_sample_lib/VEGFA-Off-Target-3.ref.upper.fa --max 3 --progress 0         | awk 'function abs(v) {return v < 0 ? -v : v} $1~"@" || ($7 == "=" && abs($9) <= 600 ) {print $0}'         | /home/zhaohuanan/miniconda3/envs/snakepipes_cutadapt-STARmapping-FPKM-sortBAM/bin/samtools view -hb > ../TargetSeq-6/cutoff_3/mapping/VEGFA-Off-Target-3_bwa.bam
+        
+[Fri Oct 16 15:29:11 2020]
+Finished job 61.
+36 of 106 steps (34%) done
+[Fri Oct 16 15:29:11 2020]
+Finished job 125.
+37 of 106 steps (35%) done
+
+[Fri Oct 16 15:29:11 2020]
+rule sam_to_bam:
+    input: ../TargetSeq-7/cutoff_3/mapping/VEGFA-Off-Target-7_bwa.sam, ../TargetSeq_BED_sample_lib/VEGFA-Off-Target-7.ref.upper.fa
+    output: ../TargetSeq-7/cutoff_3/mapping/VEGFA-Off-Target-7_bwa.bam
+    jobid: 104
+    reason: Missing output files: ../TargetSeq-7/cutoff_3/mapping/VEGFA-Off-Target-7_bwa.bam; Input files updated by another job: ../TargetSeq-7/cutoff_3/mapping/VEGFA-Off-Target-7_bwa.sam
+    wildcards: lib=7, cutoff=3, sample=VEGFA-Off-Target-7
+
+
+        /home/zhaohuanan/miniconda3/envs/snakepipes_cutadapt-STARmapping-FPKM-sortBAM/bin/samtools view -h -f 1 -F 268 ../TargetSeq-7/cutoff_3/mapping/VEGFA-Off-Target-7_bwa.sam         | /home/zhaohuanan/miniconda3/envs/snakepipes_target-seq-from-table-to-plot/bin/samclip --ref ../TargetSeq_BED_sample_lib/VEGFA-Off-Target-7.ref.upper.fa --max 3 --progress 0         | awk 'function abs(v) {return v < 0 ? -v : v} $1~"@" || ($7 == "=" && abs($9) <= 600 ) {print $0}'         | /home/zhaohuanan/miniconda3/envs/snakepipes_cutadapt-STARmapping-FPKM-sortBAM/bin/samtools view -hb > ../TargetSeq-7/cutoff_3/mapping/VEGFA-Off-Target-7_bwa.bam
+        
+[Fri Oct 16 15:29:11 2020]
+Finished job 39.
+38 of 106 steps (36%) done
+
+[Fri Oct 16 15:29:11 2020]
+rule samtools_index:
+    input: ../TargetSeq-7/cutoff_3/mapping/VEGFA-Off-Target-3_bwa_sort.bam
+    output: ../TargetSeq-7/cutoff_3/mapping/VEGFA-Off-Target-3_bwa_sort.bam.bai
+    jobid: 60
+    reason: Missing output files: ../TargetSeq-7/cutoff_3/mapping/VEGFA-Off-Target-3_bwa_sort.bam.bai; Input files updated by another job: ../TargetSeq-7/cutoff_3/mapping/VEGFA-Off-Target-3_bwa_sort.bam
+    wildcards: lib=7, cutoff=3, sample=VEGFA-Off-Target-3
+
+/home/zhaohuanan/miniconda3/envs/snakepipes_cutadapt-STARmapping-FPKM-sortBAM/bin/samtools index -@ 6 ../TargetSeq-7/cutoff_3/mapping/VEGFA-Off-Target-3_bwa_sort.bam ../TargetSeq-7/cutoff_3/mapping/VEGFA-Off-Target-3_bwa_sort.bam.bai
+[Fri Oct 16 15:29:12 2020]
+Finished job 60.
+39 of 106 steps (37%) done
+[Fri Oct 16 15:29:12 2020]
+Finished job 9.
+40 of 106 steps (38%) done
+
+[Fri Oct 16 15:29:12 2020]
+rule bwa_mapping:
+    input: ../TargetSeq-6/cutoff_3/mapping/VEGFA-OffNo-GDNo-08_R1_cutadapt.fq.gz, ../TargetSeq-6/cutoff_3/mapping/VEGFA-OffNo-GDNo-08_R2_cutadapt.fq.gz
+    output: ../TargetSeq-6/cutoff_3/mapping/VEGFA-OffNo-GDNo-08_bwa.sam
+    log: ../TargetSeq-6/cutoff_3/mapping/VEGFA-OffNo-GDNo-08_bwa.log
+    jobid: 114
+    reason: Missing output files: ../TargetSeq-6/cutoff_3/mapping/VEGFA-OffNo-GDNo-08_bwa.sam; Input files updated by another job: ../TargetSeq-6/cutoff_3/mapping/VEGFA-OffNo-GDNo-08_R1_cutadapt.fq.gz, ../TargetSeq-6/cutoff_3/mapping/VEGFA-OffNo-GDNo-08_R2_cutadapt.fq.gz
+    wildcards: lib=6, cutoff=3, sample=VEGFA-OffNo-GDNo-08
+
+
+        /home/zhaohuanan/miniconda3/envs/snakepipes_target-seq-from-table-to-plot/bin/bwa mem ../TargetSeq_BED_sample_lib/VEGFA-OffNo-GDNo-08.ref.upper.fa ../TargetSeq-6/cutoff_3/mapping/VEGFA-OffNo-GDNo-08_R1_cutadapt.fq.gz ../TargetSeq-6/cutoff_3/mapping/VEGFA-OffNo-GDNo-08_R2_cutadapt.fq.gz -t 24 -M > ../TargetSeq-6/cutoff_3/mapping/VEGFA-OffNo-GDNo-08_bwa.sam 2>../TargetSeq-6/cutoff_3/mapping/VEGFA-OffNo-GDNo-08_bwa.log
+        
+[Fri Oct 16 15:29:12 2020]
+Finished job 2.
+41 of 106 steps (39%) done
+[Fri Oct 16 15:29:12 2020]
+Finished job 109.
+42 of 106 steps (40%) done
+
+[Fri Oct 16 15:29:12 2020]
+rule sam_to_bam:
+    input: ../TargetSeq-5/cutoff_3/mapping/VEGFA-Off-Target-3_bwa.sam, ../TargetSeq_BED_sample_lib/VEGFA-Off-Target-3.ref.upper.fa
+    output: ../TargetSeq-5/cutoff_3/mapping/VEGFA-Off-Target-3_bwa.bam
+    jobid: 88
+    reason: Missing output files: ../TargetSeq-5/cutoff_3/mapping/VEGFA-Off-Target-3_bwa.bam; Input files updated by another job: ../TargetSeq-5/cutoff_3/mapping/VEGFA-Off-Target-3_bwa.sam
+    wildcards: lib=5, cutoff=3, sample=VEGFA-Off-Target-3
+
+
+        /home/zhaohuanan/miniconda3/envs/snakepipes_cutadapt-STARmapping-FPKM-sortBAM/bin/samtools view -h -f 1 -F 268 ../TargetSeq-5/cutoff_3/mapping/VEGFA-Off-Target-3_bwa.sam         | /home/zhaohuanan/miniconda3/envs/snakepipes_target-seq-from-table-to-plot/bin/samclip --ref ../TargetSeq_BED_sample_lib/VEGFA-Off-Target-3.ref.upper.fa --max 3 --progress 0         | awk 'function abs(v) {return v < 0 ? -v : v} $1~"@" || ($7 == "=" && abs($9) <= 600 ) {print $0}'         | /home/zhaohuanan/miniconda3/envs/snakepipes_cutadapt-STARmapping-FPKM-sortBAM/bin/samtools view -hb > ../TargetSeq-5/cutoff_3/mapping/VEGFA-Off-Target-3_bwa.bam
+        
+
+[Fri Oct 16 15:29:12 2020]
+rule bwa_mapping:
+    input: ../TargetSeq-5/cutoff_3/mapping/VEGFA-OffNo-GDNo-08_R1_cutadapt.fq.gz, ../TargetSeq-5/cutoff_3/mapping/VEGFA-OffNo-GDNo-08_R2_cutadapt.fq.gz
+    output: ../TargetSeq-5/cutoff_3/mapping/VEGFA-OffNo-GDNo-08_bwa.sam
+    log: ../TargetSeq-5/cutoff_3/mapping/VEGFA-OffNo-GDNo-08_bwa.log
+    jobid: 107
+    reason: Missing output files: ../TargetSeq-5/cutoff_3/mapping/VEGFA-OffNo-GDNo-08_bwa.sam; Input files updated by another job: ../TargetSeq-5/cutoff_3/mapping/VEGFA-OffNo-GDNo-08_R1_cutadapt.fq.gz, ../TargetSeq-5/cutoff_3/mapping/VEGFA-OffNo-GDNo-08_R2_cutadapt.fq.gz
+    wildcards: lib=5, cutoff=3, sample=VEGFA-OffNo-GDNo-08
+
+
+        /home/zhaohuanan/miniconda3/envs/snakepipes_target-seq-from-table-to-plot/bin/bwa mem ../TargetSeq_BED_sample_lib/VEGFA-OffNo-GDNo-08.ref.upper.fa ../TargetSeq-5/cutoff_3/mapping/VEGFA-OffNo-GDNo-08_R1_cutadapt.fq.gz ../TargetSeq-5/cutoff_3/mapping/VEGFA-OffNo-GDNo-08_R2_cutadapt.fq.gz -t 24 -M > ../TargetSeq-5/cutoff_3/mapping/VEGFA-OffNo-GDNo-08_bwa.sam 2>../TargetSeq-5/cutoff_3/mapping/VEGFA-OffNo-GDNo-08_bwa.log
+        
+[Fri Oct 16 15:29:12 2020]
+Finished job 118.
+43 of 106 steps (41%) done
+
+[Fri Oct 16 15:29:12 2020]
+rule sam_to_bam:
+    input: ../TargetSeq-6/cutoff_3/mapping/VEGFA-Off-Target-7_bwa.sam, ../TargetSeq_BED_sample_lib/VEGFA-Off-Target-7.ref.upper.fa
+    output: ../TargetSeq-6/cutoff_3/mapping/VEGFA-Off-Target-7_bwa.bam
+    jobid: 97
+    reason: Missing output files: ../TargetSeq-6/cutoff_3/mapping/VEGFA-Off-Target-7_bwa.bam; Input files updated by another job: ../TargetSeq-6/cutoff_3/mapping/VEGFA-Off-Target-7_bwa.sam
+    wildcards: lib=6, cutoff=3, sample=VEGFA-Off-Target-7
+
+
+        /home/zhaohuanan/miniconda3/envs/snakepipes_cutadapt-STARmapping-FPKM-sortBAM/bin/samtools view -h -f 1 -F 268 ../TargetSeq-6/cutoff_3/mapping/VEGFA-Off-Target-7_bwa.sam         | /home/zhaohuanan/miniconda3/envs/snakepipes_target-seq-from-table-to-plot/bin/samclip --ref ../TargetSeq_BED_sample_lib/VEGFA-Off-Target-7.ref.upper.fa --max 3 --progress 0         | awk 'function abs(v) {return v < 0 ? -v : v} $1~"@" || ($7 == "=" && abs($9) <= 600 ) {print $0}'         | /home/zhaohuanan/miniconda3/envs/snakepipes_cutadapt-STARmapping-FPKM-sortBAM/bin/samtools view -hb > ../TargetSeq-6/cutoff_3/mapping/VEGFA-Off-Target-7_bwa.bam
+        
+[Fri Oct 16 15:29:12 2020]
+Finished job 112.
+44 of 106 steps (42%) done
+
+[Fri Oct 16 15:29:12 2020]
+rule sam_to_bam:
+    input: ../TargetSeq-5/cutoff_3/mapping/VEGFA-On-Target_bwa.sam, ../TargetSeq_BED_sample_lib/VEGFA-On-Target.ref.upper.fa
+    output: ../TargetSeq-5/cutoff_3/mapping/VEGFA-On-Target_bwa.bam
+    jobid: 91
+    reason: Missing output files: ../TargetSeq-5/cutoff_3/mapping/VEGFA-On-Target_bwa.bam; Input files updated by another job: ../TargetSeq-5/cutoff_3/mapping/VEGFA-On-Target_bwa.sam
+    wildcards: lib=5, cutoff=3, sample=VEGFA-On-Target
+
+
+        /home/zhaohuanan/miniconda3/envs/snakepipes_cutadapt-STARmapping-FPKM-sortBAM/bin/samtools view -h -f 1 -F 268 ../TargetSeq-5/cutoff_3/mapping/VEGFA-On-Target_bwa.sam         | /home/zhaohuanan/miniconda3/envs/snakepipes_target-seq-from-table-to-plot/bin/samclip --ref ../TargetSeq_BED_sample_lib/VEGFA-On-Target.ref.upper.fa --max 3 --progress 0         | awk 'function abs(v) {return v < 0 ? -v : v} $1~"@" || ($7 == "=" && abs($9) <= 600 ) {print $0}'         | /home/zhaohuanan/miniconda3/envs/snakepipes_cutadapt-STARmapping-FPKM-sortBAM/bin/samtools view -hb > ../TargetSeq-5/cutoff_3/mapping/VEGFA-On-Target_bwa.bam
+        
+[Fri Oct 16 15:29:12 2020]
+Finished job 105.
+45 of 106 steps (42%) done
+
+[Fri Oct 16 15:29:12 2020]
+rule samtools_sort_by_position:
+    input: ../TargetSeq-7/cutoff_3/mapping/VEGFA-On-Target_bwa.bam
+    output: ../TargetSeq-7/cutoff_3/mapping/VEGFA-On-Target_bwa_sort.bam
+    jobid: 42
+    reason: Missing output files: ../TargetSeq-7/cutoff_3/mapping/VEGFA-On-Target_bwa_sort.bam; Input files updated by another job: ../TargetSeq-7/cutoff_3/mapping/VEGFA-On-Target_bwa.bam
+    wildcards: lib=7, cutoff=3, sample=VEGFA-On-Target
+
+/home/zhaohuanan/miniconda3/envs/snakepipes_cutadapt-STARmapping-FPKM-sortBAM/bin/samtools sort -O BAM -o ../TargetSeq-7/cutoff_3/mapping/VEGFA-On-Target_bwa_sort.bam -T ../TargetSeq-7/cutoff_3/mapping/VEGFA-On-Target_bwa_sort.bam.temp -@ 6 -m 2G ../TargetSeq-7/cutoff_3/mapping/VEGFA-On-Target_bwa.bam
+[Fri Oct 16 15:29:13 2020]
+Finished job 95.
+46 of 106 steps (43%) done
+
+[Fri Oct 16 15:29:13 2020]
+rule samtools_sort_by_position:
+    input: ../TargetSeq-6/cutoff_3/mapping/VEGFA-Off-Target-3_bwa.bam
+    output: ../TargetSeq-6/cutoff_3/mapping/VEGFA-Off-Target-3_bwa_sort.bam
+    jobid: 32
+    reason: Missing output files: ../TargetSeq-6/cutoff_3/mapping/VEGFA-Off-Target-3_bwa_sort.bam; Input files updated by another job: ../TargetSeq-6/cutoff_3/mapping/VEGFA-Off-Target-3_bwa.bam
+    wildcards: lib=6, cutoff=3, sample=VEGFA-Off-Target-3
+
+/home/zhaohuanan/miniconda3/envs/snakepipes_cutadapt-STARmapping-FPKM-sortBAM/bin/samtools sort -O BAM -o ../TargetSeq-6/cutoff_3/mapping/VEGFA-Off-Target-3_bwa_sort.bam -T ../TargetSeq-6/cutoff_3/mapping/VEGFA-Off-Target-3_bwa_sort.bam.temp -@ 6 -m 2G ../TargetSeq-6/cutoff_3/mapping/VEGFA-Off-Target-3_bwa.bam
+[Fri Oct 16 15:29:13 2020]
+Finished job 42.
+47 of 106 steps (44%) done
+
+[Fri Oct 16 15:29:13 2020]
+rule samtools_index:
+    input: ../TargetSeq-7/cutoff_3/mapping/VEGFA-On-Target_bwa_sort.bam
+    output: ../TargetSeq-7/cutoff_3/mapping/VEGFA-On-Target_bwa_sort.bam.bai
+    jobid: 63
+    reason: Missing output files: ../TargetSeq-7/cutoff_3/mapping/VEGFA-On-Target_bwa_sort.bam.bai; Input files updated by another job: ../TargetSeq-7/cutoff_3/mapping/VEGFA-On-Target_bwa_sort.bam
+    wildcards: lib=7, cutoff=3, sample=VEGFA-On-Target
+
+/home/zhaohuanan/miniconda3/envs/snakepipes_cutadapt-STARmapping-FPKM-sortBAM/bin/samtools index -@ 6 ../TargetSeq-7/cutoff_3/mapping/VEGFA-On-Target_bwa_sort.bam ../TargetSeq-7/cutoff_3/mapping/VEGFA-On-Target_bwa_sort.bam.bai
+[Fri Oct 16 15:29:13 2020]
+Finished job 63.
+48 of 106 steps (45%) done
+[Fri Oct 16 15:29:13 2020]
+Finished job 104.
+49 of 106 steps (46%) done
+
+[Fri Oct 16 15:29:13 2020]
+rule samtools_sort_by_position:
+    input: ../TargetSeq-7/cutoff_3/mapping/VEGFA-Off-Target-7_bwa.bam
+    output: ../TargetSeq-7/cutoff_3/mapping/VEGFA-Off-Target-7_bwa_sort.bam
+    jobid: 41
+    reason: Missing output files: ../TargetSeq-7/cutoff_3/mapping/VEGFA-Off-Target-7_bwa_sort.bam; Input files updated by another job: ../TargetSeq-7/cutoff_3/mapping/VEGFA-Off-Target-7_bwa.bam
+    wildcards: lib=7, cutoff=3, sample=VEGFA-Off-Target-7
+
+/home/zhaohuanan/miniconda3/envs/snakepipes_cutadapt-STARmapping-FPKM-sortBAM/bin/samtools sort -O BAM -o ../TargetSeq-7/cutoff_3/mapping/VEGFA-Off-Target-7_bwa_sort.bam -T ../TargetSeq-7/cutoff_3/mapping/VEGFA-Off-Target-7_bwa_sort.bam.temp -@ 6 -m 2G ../TargetSeq-7/cutoff_3/mapping/VEGFA-Off-Target-7_bwa.bam
+[Fri Oct 16 15:29:13 2020]
+Finished job 110.
+50 of 106 steps (47%) done
+
+[Fri Oct 16 15:29:13 2020]
+rule sam_to_bam:
+    input: ../TargetSeq-5/cutoff_3/mapping/VEGFA-Off-Target-6_bwa.sam, ../TargetSeq_BED_sample_lib/VEGFA-Off-Target-6.ref.upper.fa
+    output: ../TargetSeq-5/cutoff_3/mapping/VEGFA-Off-Target-6_bwa.bam
+    jobid: 89
+    reason: Missing output files: ../TargetSeq-5/cutoff_3/mapping/VEGFA-Off-Target-6_bwa.bam; Input files updated by another job: ../TargetSeq-5/cutoff_3/mapping/VEGFA-Off-Target-6_bwa.sam
+    wildcards: lib=5, cutoff=3, sample=VEGFA-Off-Target-6
+
+
+        /home/zhaohuanan/miniconda3/envs/snakepipes_cutadapt-STARmapping-FPKM-sortBAM/bin/samtools view -h -f 1 -F 268 ../TargetSeq-5/cutoff_3/mapping/VEGFA-Off-Target-6_bwa.sam         | /home/zhaohuanan/miniconda3/envs/snakepipes_target-seq-from-table-to-plot/bin/samclip --ref ../TargetSeq_BED_sample_lib/VEGFA-Off-Target-6.ref.upper.fa --max 3 --progress 0         | awk 'function abs(v) {return v < 0 ? -v : v} $1~"@" || ($7 == "=" && abs($9) <= 600 ) {print $0}'         | /home/zhaohuanan/miniconda3/envs/snakepipes_cutadapt-STARmapping-FPKM-sortBAM/bin/samtools view -hb > ../TargetSeq-5/cutoff_3/mapping/VEGFA-Off-Target-6_bwa.bam
+        
+[Fri Oct 16 15:29:13 2020]
+Finished job 117.
+51 of 106 steps (48%) done
+
+[Fri Oct 16 15:29:13 2020]
+rule sam_to_bam:
+    input: ../TargetSeq-6/cutoff_3/mapping/VEGFA-Off-Target-6_bwa.sam, ../TargetSeq_BED_sample_lib/VEGFA-Off-Target-6.ref.upper.fa
+    output: ../TargetSeq-6/cutoff_3/mapping/VEGFA-Off-Target-6_bwa.bam
+    jobid: 96
+    reason: Missing output files: ../TargetSeq-6/cutoff_3/mapping/VEGFA-Off-Target-6_bwa.bam; Input files updated by another job: ../TargetSeq-6/cutoff_3/mapping/VEGFA-Off-Target-6_bwa.sam
+    wildcards: lib=6, cutoff=3, sample=VEGFA-Off-Target-6
+
+
+        /home/zhaohuanan/miniconda3/envs/snakepipes_cutadapt-STARmapping-FPKM-sortBAM/bin/samtools view -h -f 1 -F 268 ../TargetSeq-6/cutoff_3/mapping/VEGFA-Off-Target-6_bwa.sam         | /home/zhaohuanan/miniconda3/envs/snakepipes_target-seq-from-table-to-plot/bin/samclip --ref ../TargetSeq_BED_sample_lib/VEGFA-Off-Target-6.ref.upper.fa --max 3 --progress 0         | awk 'function abs(v) {return v < 0 ? -v : v} $1~"@" || ($7 == "=" && abs($9) <= 600 ) {print $0}'         | /home/zhaohuanan/miniconda3/envs/snakepipes_cutadapt-STARmapping-FPKM-sortBAM/bin/samtools view -hb > ../TargetSeq-6/cutoff_3/mapping/VEGFA-Off-Target-6_bwa.bam
+        
+[Fri Oct 16 15:29:13 2020]
+Finished job 32.
+52 of 106 steps (49%) done
+
+[Fri Oct 16 15:29:13 2020]
+rule samtools_index:
+    input: ../TargetSeq-6/cutoff_3/mapping/VEGFA-Off-Target-3_bwa_sort.bam
+    output: ../TargetSeq-6/cutoff_3/mapping/VEGFA-Off-Target-3_bwa_sort.bam.bai
+    jobid: 53
+    reason: Missing output files: ../TargetSeq-6/cutoff_3/mapping/VEGFA-Off-Target-3_bwa_sort.bam.bai; Input files updated by another job: ../TargetSeq-6/cutoff_3/mapping/VEGFA-Off-Target-3_bwa_sort.bam
+    wildcards: lib=6, cutoff=3, sample=VEGFA-Off-Target-3
+
+/home/zhaohuanan/miniconda3/envs/snakepipes_cutadapt-STARmapping-FPKM-sortBAM/bin/samtools index -@ 6 ../TargetSeq-6/cutoff_3/mapping/VEGFA-Off-Target-3_bwa_sort.bam ../TargetSeq-6/cutoff_3/mapping/VEGFA-Off-Target-3_bwa_sort.bam.bai
+[Fri Oct 16 15:29:13 2020]
+Finished job 53.
+53 of 106 steps (50%) done
+[Fri Oct 16 15:29:13 2020]
+Finished job 111.
+54 of 106 steps (51%) done
+
+[Fri Oct 16 15:29:13 2020]
+rule sam_to_bam:
+    input: ../TargetSeq-5/cutoff_3/mapping/VEGFA-Off-Target-7_bwa.sam, ../TargetSeq_BED_sample_lib/VEGFA-Off-Target-7.ref.upper.fa
+    output: ../TargetSeq-5/cutoff_3/mapping/VEGFA-Off-Target-7_bwa.bam
+    jobid: 90
+    reason: Missing output files: ../TargetSeq-5/cutoff_3/mapping/VEGFA-Off-Target-7_bwa.bam; Input files updated by another job: ../TargetSeq-5/cutoff_3/mapping/VEGFA-Off-Target-7_bwa.sam
+    wildcards: lib=5, cutoff=3, sample=VEGFA-Off-Target-7
+
+
+        /home/zhaohuanan/miniconda3/envs/snakepipes_cutadapt-STARmapping-FPKM-sortBAM/bin/samtools view -h -f 1 -F 268 ../TargetSeq-5/cutoff_3/mapping/VEGFA-Off-Target-7_bwa.sam         | /home/zhaohuanan/miniconda3/envs/snakepipes_target-seq-from-table-to-plot/bin/samclip --ref ../TargetSeq_BED_sample_lib/VEGFA-Off-Target-7.ref.upper.fa --max 3 --progress 0         | awk 'function abs(v) {return v < 0 ? -v : v} $1~"@" || ($7 == "=" && abs($9) <= 600 ) {print $0}'         | /home/zhaohuanan/miniconda3/envs/snakepipes_cutadapt-STARmapping-FPKM-sortBAM/bin/samtools view -hb > ../TargetSeq-5/cutoff_3/mapping/VEGFA-Off-Target-7_bwa.bam
+        
+[Fri Oct 16 15:29:14 2020]
+Finished job 41.
+55 of 106 steps (52%) done
+
+[Fri Oct 16 15:29:14 2020]
+rule samtools_index:
+    input: ../TargetSeq-7/cutoff_3/mapping/VEGFA-Off-Target-7_bwa_sort.bam
+    output: ../TargetSeq-7/cutoff_3/mapping/VEGFA-Off-Target-7_bwa_sort.bam.bai
+    jobid: 62
+    reason: Missing output files: ../TargetSeq-7/cutoff_3/mapping/VEGFA-Off-Target-7_bwa_sort.bam.bai; Input files updated by another job: ../TargetSeq-7/cutoff_3/mapping/VEGFA-Off-Target-7_bwa_sort.bam
+    wildcards: lib=7, cutoff=3, sample=VEGFA-Off-Target-7
+
+/home/zhaohuanan/miniconda3/envs/snakepipes_cutadapt-STARmapping-FPKM-sortBAM/bin/samtools index -@ 6 ../TargetSeq-7/cutoff_3/mapping/VEGFA-Off-Target-7_bwa_sort.bam ../TargetSeq-7/cutoff_3/mapping/VEGFA-Off-Target-7_bwa_sort.bam.bai
+[Fri Oct 16 15:29:14 2020]
+Finished job 62.
+56 of 106 steps (53%) done
+[Fri Oct 16 15:29:14 2020]
+Finished job 88.
+57 of 106 steps (54%) done
+
+[Fri Oct 16 15:29:14 2020]
+rule samtools_sort_by_position:
+    input: ../TargetSeq-5/cutoff_3/mapping/VEGFA-Off-Target-3_bwa.bam
+    output: ../TargetSeq-5/cutoff_3/mapping/VEGFA-Off-Target-3_bwa_sort.bam
+    jobid: 25
+    reason: Missing output files: ../TargetSeq-5/cutoff_3/mapping/VEGFA-Off-Target-3_bwa_sort.bam; Input files updated by another job: ../TargetSeq-5/cutoff_3/mapping/VEGFA-Off-Target-3_bwa.bam
+    wildcards: lib=5, cutoff=3, sample=VEGFA-Off-Target-3
+
+/home/zhaohuanan/miniconda3/envs/snakepipes_cutadapt-STARmapping-FPKM-sortBAM/bin/samtools sort -O BAM -o ../TargetSeq-5/cutoff_3/mapping/VEGFA-Off-Target-3_bwa_sort.bam -T ../TargetSeq-5/cutoff_3/mapping/VEGFA-Off-Target-3_bwa_sort.bam.temp -@ 6 -m 2G ../TargetSeq-5/cutoff_3/mapping/VEGFA-Off-Target-3_bwa.bam
+[Fri Oct 16 15:29:14 2020]
+Finished job 121.
+58 of 106 steps (55%) done
+
+[Fri Oct 16 15:29:14 2020]
+rule sam_to_bam:
+    input: ../TargetSeq-7/cutoff_3/mapping/VEGFA-OffNo-GDNo-08_bwa.sam, ../TargetSeq_BED_sample_lib/VEGFA-OffNo-GDNo-08.ref.upper.fa
+    output: ../TargetSeq-7/cutoff_3/mapping/VEGFA-OffNo-GDNo-08_bwa.bam
+    jobid: 100
+    reason: Missing output files: ../TargetSeq-7/cutoff_3/mapping/VEGFA-OffNo-GDNo-08_bwa.bam; Input files updated by another job: ../TargetSeq-7/cutoff_3/mapping/VEGFA-OffNo-GDNo-08_bwa.sam
+    wildcards: lib=7, cutoff=3, sample=VEGFA-OffNo-GDNo-08
+
+
+        /home/zhaohuanan/miniconda3/envs/snakepipes_cutadapt-STARmapping-FPKM-sortBAM/bin/samtools view -h -f 1 -F 268 ../TargetSeq-7/cutoff_3/mapping/VEGFA-OffNo-GDNo-08_bwa.sam         | /home/zhaohuanan/miniconda3/envs/snakepipes_target-seq-from-table-to-plot/bin/samclip --ref ../TargetSeq_BED_sample_lib/VEGFA-OffNo-GDNo-08.ref.upper.fa --max 3 --progress 0         | awk 'function abs(v) {return v < 0 ? -v : v} $1~"@" || ($7 == "=" && abs($9) <= 600 ) {print $0}'         | /home/zhaohuanan/miniconda3/envs/snakepipes_cutadapt-STARmapping-FPKM-sortBAM/bin/samtools view -hb > ../TargetSeq-7/cutoff_3/mapping/VEGFA-OffNo-GDNo-08_bwa.bam
+        
+[Fri Oct 16 15:29:14 2020]
+Finished job 97.
+59 of 106 steps (56%) done
+
+[Fri Oct 16 15:29:14 2020]
+rule samtools_sort_by_position:
+    input: ../TargetSeq-6/cutoff_3/mapping/VEGFA-Off-Target-7_bwa.bam
+    output: ../TargetSeq-6/cutoff_3/mapping/VEGFA-Off-Target-7_bwa_sort.bam
+    jobid: 34
+    reason: Missing output files: ../TargetSeq-6/cutoff_3/mapping/VEGFA-Off-Target-7_bwa_sort.bam; Input files updated by another job: ../TargetSeq-6/cutoff_3/mapping/VEGFA-Off-Target-7_bwa.bam
+    wildcards: lib=6, cutoff=3, sample=VEGFA-Off-Target-7
+
+/home/zhaohuanan/miniconda3/envs/snakepipes_cutadapt-STARmapping-FPKM-sortBAM/bin/samtools sort -O BAM -o ../TargetSeq-6/cutoff_3/mapping/VEGFA-Off-Target-7_bwa_sort.bam -T ../TargetSeq-6/cutoff_3/mapping/VEGFA-Off-Target-7_bwa_sort.bam.temp -@ 6 -m 2G ../TargetSeq-6/cutoff_3/mapping/VEGFA-Off-Target-7_bwa.bam
+[Fri Oct 16 15:29:14 2020]
+Finished job 119.
+60 of 106 steps (57%) done
+
+[Fri Oct 16 15:29:14 2020]
+rule sam_to_bam:
+    input: ../TargetSeq-6/cutoff_3/mapping/VEGFA-On-Target_bwa.sam, ../TargetSeq_BED_sample_lib/VEGFA-On-Target.ref.upper.fa
+    output: ../TargetSeq-6/cutoff_3/mapping/VEGFA-On-Target_bwa.bam
+    jobid: 98
+    reason: Missing output files: ../TargetSeq-6/cutoff_3/mapping/VEGFA-On-Target_bwa.bam; Input files updated by another job: ../TargetSeq-6/cutoff_3/mapping/VEGFA-On-Target_bwa.sam
+    wildcards: lib=6, cutoff=3, sample=VEGFA-On-Target
+
+
+        /home/zhaohuanan/miniconda3/envs/snakepipes_cutadapt-STARmapping-FPKM-sortBAM/bin/samtools view -h -f 1 -F 268 ../TargetSeq-6/cutoff_3/mapping/VEGFA-On-Target_bwa.sam         | /home/zhaohuanan/miniconda3/envs/snakepipes_target-seq-from-table-to-plot/bin/samclip --ref ../TargetSeq_BED_sample_lib/VEGFA-On-Target.ref.upper.fa --max 3 --progress 0         | awk 'function abs(v) {return v < 0 ? -v : v} $1~"@" || ($7 == "=" && abs($9) <= 600 ) {print $0}'         | /home/zhaohuanan/miniconda3/envs/snakepipes_cutadapt-STARmapping-FPKM-sortBAM/bin/samtools view -hb > ../TargetSeq-6/cutoff_3/mapping/VEGFA-On-Target_bwa.bam
+        
+[Fri Oct 16 15:29:14 2020]
+Finished job 91.
+61 of 106 steps (58%) done
+
+[Fri Oct 16 15:29:14 2020]
+rule samtools_sort_by_position:
+    input: ../TargetSeq-5/cutoff_3/mapping/VEGFA-On-Target_bwa.bam
+    output: ../TargetSeq-5/cutoff_3/mapping/VEGFA-On-Target_bwa_sort.bam
+    jobid: 28
+    reason: Missing output files: ../TargetSeq-5/cutoff_3/mapping/VEGFA-On-Target_bwa_sort.bam; Input files updated by another job: ../TargetSeq-5/cutoff_3/mapping/VEGFA-On-Target_bwa.bam
+    wildcards: lib=5, cutoff=3, sample=VEGFA-On-Target
+
+/home/zhaohuanan/miniconda3/envs/snakepipes_cutadapt-STARmapping-FPKM-sortBAM/bin/samtools sort -O BAM -o ../TargetSeq-5/cutoff_3/mapping/VEGFA-On-Target_bwa_sort.bam -T ../TargetSeq-5/cutoff_3/mapping/VEGFA-On-Target_bwa_sort.bam.temp -@ 6 -m 2G ../TargetSeq-5/cutoff_3/mapping/VEGFA-On-Target_bwa.bam
+[Fri Oct 16 15:29:14 2020]
+Finished job 25.
+62 of 106 steps (58%) done
+
+[Fri Oct 16 15:29:14 2020]
+rule samtools_index:
+    input: ../TargetSeq-5/cutoff_3/mapping/VEGFA-Off-Target-3_bwa_sort.bam
+    output: ../TargetSeq-5/cutoff_3/mapping/VEGFA-Off-Target-3_bwa_sort.bam.bai
+    jobid: 46
+    reason: Missing output files: ../TargetSeq-5/cutoff_3/mapping/VEGFA-Off-Target-3_bwa_sort.bam.bai; Input files updated by another job: ../TargetSeq-5/cutoff_3/mapping/VEGFA-Off-Target-3_bwa_sort.bam
+    wildcards: lib=5, cutoff=3, sample=VEGFA-Off-Target-3
+
+/home/zhaohuanan/miniconda3/envs/snakepipes_cutadapt-STARmapping-FPKM-sortBAM/bin/samtools index -@ 6 ../TargetSeq-5/cutoff_3/mapping/VEGFA-Off-Target-3_bwa_sort.bam ../TargetSeq-5/cutoff_3/mapping/VEGFA-Off-Target-3_bwa_sort.bam.bai
+[Fri Oct 16 15:29:14 2020]
+Finished job 46.
+63 of 106 steps (59%) done
+[Fri Oct 16 15:29:15 2020]
+Finished job 34.
+64 of 106 steps (60%) done
+
+[Fri Oct 16 15:29:15 2020]
+rule samtools_index:
+    input: ../TargetSeq-6/cutoff_3/mapping/VEGFA-Off-Target-7_bwa_sort.bam
+    output: ../TargetSeq-6/cutoff_3/mapping/VEGFA-Off-Target-7_bwa_sort.bam.bai
+    jobid: 55
+    reason: Missing output files: ../TargetSeq-6/cutoff_3/mapping/VEGFA-Off-Target-7_bwa_sort.bam.bai; Input files updated by another job: ../TargetSeq-6/cutoff_3/mapping/VEGFA-Off-Target-7_bwa_sort.bam
+    wildcards: lib=6, cutoff=3, sample=VEGFA-Off-Target-7
+
+/home/zhaohuanan/miniconda3/envs/snakepipes_cutadapt-STARmapping-FPKM-sortBAM/bin/samtools index -@ 6 ../TargetSeq-6/cutoff_3/mapping/VEGFA-Off-Target-7_bwa_sort.bam ../TargetSeq-6/cutoff_3/mapping/VEGFA-Off-Target-7_bwa_sort.bam.bai
+[Fri Oct 16 15:29:15 2020]
+Finished job 28.
+65 of 106 steps (61%) done
+
+[Fri Oct 16 15:29:15 2020]
+rule samtools_index:
+    input: ../TargetSeq-5/cutoff_3/mapping/VEGFA-On-Target_bwa_sort.bam
+    output: ../TargetSeq-5/cutoff_3/mapping/VEGFA-On-Target_bwa_sort.bam.bai
+    jobid: 49
+    reason: Missing output files: ../TargetSeq-5/cutoff_3/mapping/VEGFA-On-Target_bwa_sort.bam.bai; Input files updated by another job: ../TargetSeq-5/cutoff_3/mapping/VEGFA-On-Target_bwa_sort.bam
+    wildcards: lib=5, cutoff=3, sample=VEGFA-On-Target
+
+/home/zhaohuanan/miniconda3/envs/snakepipes_cutadapt-STARmapping-FPKM-sortBAM/bin/samtools index -@ 6 ../TargetSeq-5/cutoff_3/mapping/VEGFA-On-Target_bwa_sort.bam ../TargetSeq-5/cutoff_3/mapping/VEGFA-On-Target_bwa_sort.bam.bai
+[Fri Oct 16 15:29:15 2020]
+Finished job 55.
+66 of 106 steps (62%) done
+[Fri Oct 16 15:29:15 2020]
+Finished job 49.
+67 of 106 steps (63%) done
+[Fri Oct 16 15:29:15 2020]
+Finished job 114.
+68 of 106 steps (64%) done
+
+[Fri Oct 16 15:29:15 2020]
+rule sam_to_bam:
+    input: ../TargetSeq-6/cutoff_3/mapping/VEGFA-OffNo-GDNo-08_bwa.sam, ../TargetSeq_BED_sample_lib/VEGFA-OffNo-GDNo-08.ref.upper.fa
+    output: ../TargetSeq-6/cutoff_3/mapping/VEGFA-OffNo-GDNo-08_bwa.bam
+    jobid: 93
+    reason: Missing output files: ../TargetSeq-6/cutoff_3/mapping/VEGFA-OffNo-GDNo-08_bwa.bam; Input files updated by another job: ../TargetSeq-6/cutoff_3/mapping/VEGFA-OffNo-GDNo-08_bwa.sam
+    wildcards: lib=6, cutoff=3, sample=VEGFA-OffNo-GDNo-08
+
+
+        /home/zhaohuanan/miniconda3/envs/snakepipes_cutadapt-STARmapping-FPKM-sortBAM/bin/samtools view -h -f 1 -F 268 ../TargetSeq-6/cutoff_3/mapping/VEGFA-OffNo-GDNo-08_bwa.sam         | /home/zhaohuanan/miniconda3/envs/snakepipes_target-seq-from-table-to-plot/bin/samclip --ref ../TargetSeq_BED_sample_lib/VEGFA-OffNo-GDNo-08.ref.upper.fa --max 3 --progress 0         | awk 'function abs(v) {return v < 0 ? -v : v} $1~"@" || ($7 == "=" && abs($9) <= 600 ) {print $0}'         | /home/zhaohuanan/miniconda3/envs/snakepipes_cutadapt-STARmapping-FPKM-sortBAM/bin/samtools view -hb > ../TargetSeq-6/cutoff_3/mapping/VEGFA-OffNo-GDNo-08_bwa.bam
+        
+[Fri Oct 16 15:29:15 2020]
+Finished job 90.
+69 of 106 steps (65%) done
+
+[Fri Oct 16 15:29:15 2020]
+rule samtools_sort_by_position:
+    input: ../TargetSeq-5/cutoff_3/mapping/VEGFA-Off-Target-7_bwa.bam
+    output: ../TargetSeq-5/cutoff_3/mapping/VEGFA-Off-Target-7_bwa_sort.bam
+    jobid: 27
+    reason: Missing output files: ../TargetSeq-5/cutoff_3/mapping/VEGFA-Off-Target-7_bwa_sort.bam; Input files updated by another job: ../TargetSeq-5/cutoff_3/mapping/VEGFA-Off-Target-7_bwa.bam
+    wildcards: lib=5, cutoff=3, sample=VEGFA-Off-Target-7
+
+/home/zhaohuanan/miniconda3/envs/snakepipes_cutadapt-STARmapping-FPKM-sortBAM/bin/samtools sort -O BAM -o ../TargetSeq-5/cutoff_3/mapping/VEGFA-Off-Target-7_bwa_sort.bam -T ../TargetSeq-5/cutoff_3/mapping/VEGFA-Off-Target-7_bwa_sort.bam.temp -@ 6 -m 2G ../TargetSeq-5/cutoff_3/mapping/VEGFA-Off-Target-7_bwa.bam
+[Fri Oct 16 15:29:15 2020]
+Finished job 89.
+70 of 106 steps (66%) done
+
+[Fri Oct 16 15:29:15 2020]
+rule samtools_sort_by_position:
+    input: ../TargetSeq-5/cutoff_3/mapping/VEGFA-Off-Target-6_bwa.bam
+    output: ../TargetSeq-5/cutoff_3/mapping/VEGFA-Off-Target-6_bwa_sort.bam
+    jobid: 26
+    reason: Missing output files: ../TargetSeq-5/cutoff_3/mapping/VEGFA-Off-Target-6_bwa_sort.bam; Input files updated by another job: ../TargetSeq-5/cutoff_3/mapping/VEGFA-Off-Target-6_bwa.bam
+    wildcards: lib=5, cutoff=3, sample=VEGFA-Off-Target-6
+
+/home/zhaohuanan/miniconda3/envs/snakepipes_cutadapt-STARmapping-FPKM-sortBAM/bin/samtools sort -O BAM -o ../TargetSeq-5/cutoff_3/mapping/VEGFA-Off-Target-6_bwa_sort.bam -T ../TargetSeq-5/cutoff_3/mapping/VEGFA-Off-Target-6_bwa_sort.bam.temp -@ 6 -m 2G ../TargetSeq-5/cutoff_3/mapping/VEGFA-Off-Target-6_bwa.bam
+[Fri Oct 16 15:29:15 2020]
+Finished job 96.
+71 of 106 steps (67%) done
+
+[Fri Oct 16 15:29:15 2020]
+rule samtools_sort_by_position:
+    input: ../TargetSeq-6/cutoff_3/mapping/VEGFA-Off-Target-6_bwa.bam
+    output: ../TargetSeq-6/cutoff_3/mapping/VEGFA-Off-Target-6_bwa_sort.bam
+    jobid: 33
+    reason: Missing output files: ../TargetSeq-6/cutoff_3/mapping/VEGFA-Off-Target-6_bwa_sort.bam; Input files updated by another job: ../TargetSeq-6/cutoff_3/mapping/VEGFA-Off-Target-6_bwa.bam
+    wildcards: lib=6, cutoff=3, sample=VEGFA-Off-Target-6
+
+/home/zhaohuanan/miniconda3/envs/snakepipes_cutadapt-STARmapping-FPKM-sortBAM/bin/samtools sort -O BAM -o ../TargetSeq-6/cutoff_3/mapping/VEGFA-Off-Target-6_bwa_sort.bam -T ../TargetSeq-6/cutoff_3/mapping/VEGFA-Off-Target-6_bwa_sort.bam.temp -@ 6 -m 2G ../TargetSeq-6/cutoff_3/mapping/VEGFA-Off-Target-6_bwa.bam
+[Fri Oct 16 15:29:16 2020]
+Finished job 27.
+72 of 106 steps (68%) done
+
+[Fri Oct 16 15:29:16 2020]
+rule samtools_index:
+    input: ../TargetSeq-5/cutoff_3/mapping/VEGFA-Off-Target-7_bwa_sort.bam
+    output: ../TargetSeq-5/cutoff_3/mapping/VEGFA-Off-Target-7_bwa_sort.bam.bai
+    jobid: 48
+    reason: Missing output files: ../TargetSeq-5/cutoff_3/mapping/VEGFA-Off-Target-7_bwa_sort.bam.bai; Input files updated by another job: ../TargetSeq-5/cutoff_3/mapping/VEGFA-Off-Target-7_bwa_sort.bam
+    wildcards: lib=5, cutoff=3, sample=VEGFA-Off-Target-7
+
+/home/zhaohuanan/miniconda3/envs/snakepipes_cutadapt-STARmapping-FPKM-sortBAM/bin/samtools index -@ 6 ../TargetSeq-5/cutoff_3/mapping/VEGFA-Off-Target-7_bwa_sort.bam ../TargetSeq-5/cutoff_3/mapping/VEGFA-Off-Target-7_bwa_sort.bam.bai
+[Fri Oct 16 15:29:16 2020]
+Finished job 48.
+73 of 106 steps (69%) done
+[Fri Oct 16 15:29:16 2020]
+Finished job 26.
+74 of 106 steps (70%) done
+
+[Fri Oct 16 15:29:16 2020]
+rule samtools_index:
+    input: ../TargetSeq-5/cutoff_3/mapping/VEGFA-Off-Target-6_bwa_sort.bam
+    output: ../TargetSeq-5/cutoff_3/mapping/VEGFA-Off-Target-6_bwa_sort.bam.bai
+    jobid: 47
+    reason: Missing output files: ../TargetSeq-5/cutoff_3/mapping/VEGFA-Off-Target-6_bwa_sort.bam.bai; Input files updated by another job: ../TargetSeq-5/cutoff_3/mapping/VEGFA-Off-Target-6_bwa_sort.bam
+    wildcards: lib=5, cutoff=3, sample=VEGFA-Off-Target-6
+
+/home/zhaohuanan/miniconda3/envs/snakepipes_cutadapt-STARmapping-FPKM-sortBAM/bin/samtools index -@ 6 ../TargetSeq-5/cutoff_3/mapping/VEGFA-Off-Target-6_bwa_sort.bam ../TargetSeq-5/cutoff_3/mapping/VEGFA-Off-Target-6_bwa_sort.bam.bai
+[Fri Oct 16 15:29:16 2020]
+Finished job 33.
+75 of 106 steps (71%) done
+
+[Fri Oct 16 15:29:16 2020]
+rule samtools_index:
+    input: ../TargetSeq-6/cutoff_3/mapping/VEGFA-Off-Target-6_bwa_sort.bam
+    output: ../TargetSeq-6/cutoff_3/mapping/VEGFA-Off-Target-6_bwa_sort.bam.bai
+    jobid: 54
+    reason: Missing output files: ../TargetSeq-6/cutoff_3/mapping/VEGFA-Off-Target-6_bwa_sort.bam.bai; Input files updated by another job: ../TargetSeq-6/cutoff_3/mapping/VEGFA-Off-Target-6_bwa_sort.bam
+    wildcards: lib=6, cutoff=3, sample=VEGFA-Off-Target-6
+
+/home/zhaohuanan/miniconda3/envs/snakepipes_cutadapt-STARmapping-FPKM-sortBAM/bin/samtools index -@ 6 ../TargetSeq-6/cutoff_3/mapping/VEGFA-Off-Target-6_bwa_sort.bam ../TargetSeq-6/cutoff_3/mapping/VEGFA-Off-Target-6_bwa_sort.bam.bai
+[Fri Oct 16 15:29:16 2020]
+Finished job 47.
+76 of 106 steps (72%) done
+[Fri Oct 16 15:29:16 2020]
+Finished job 107.
+77 of 106 steps (73%) done
+
+[Fri Oct 16 15:29:16 2020]
+rule sam_to_bam:
+    input: ../TargetSeq-5/cutoff_3/mapping/VEGFA-OffNo-GDNo-08_bwa.sam, ../TargetSeq_BED_sample_lib/VEGFA-OffNo-GDNo-08.ref.upper.fa
+    output: ../TargetSeq-5/cutoff_3/mapping/VEGFA-OffNo-GDNo-08_bwa.bam
+    jobid: 86
+    reason: Missing output files: ../TargetSeq-5/cutoff_3/mapping/VEGFA-OffNo-GDNo-08_bwa.bam; Input files updated by another job: ../TargetSeq-5/cutoff_3/mapping/VEGFA-OffNo-GDNo-08_bwa.sam
+    wildcards: lib=5, cutoff=3, sample=VEGFA-OffNo-GDNo-08
+
+
+        /home/zhaohuanan/miniconda3/envs/snakepipes_cutadapt-STARmapping-FPKM-sortBAM/bin/samtools view -h -f 1 -F 268 ../TargetSeq-5/cutoff_3/mapping/VEGFA-OffNo-GDNo-08_bwa.sam         | /home/zhaohuanan/miniconda3/envs/snakepipes_target-seq-from-table-to-plot/bin/samclip --ref ../TargetSeq_BED_sample_lib/VEGFA-OffNo-GDNo-08.ref.upper.fa --max 3 --progress 0         | awk 'function abs(v) {return v < 0 ? -v : v} $1~"@" || ($7 == "=" && abs($9) <= 600 ) {print $0}'         | /home/zhaohuanan/miniconda3/envs/snakepipes_cutadapt-STARmapping-FPKM-sortBAM/bin/samtools view -hb > ../TargetSeq-5/cutoff_3/mapping/VEGFA-OffNo-GDNo-08_bwa.bam
+        
+[Fri Oct 16 15:29:16 2020]
+Finished job 54.
+78 of 106 steps (74%) done
+[Fri Oct 16 15:29:17 2020]
+Finished job 98.
+79 of 106 steps (75%) done
+
+[Fri Oct 16 15:29:17 2020]
+rule samtools_sort_by_position:
+    input: ../TargetSeq-6/cutoff_3/mapping/VEGFA-On-Target_bwa.bam
+    output: ../TargetSeq-6/cutoff_3/mapping/VEGFA-On-Target_bwa_sort.bam
+    jobid: 35
+    reason: Missing output files: ../TargetSeq-6/cutoff_3/mapping/VEGFA-On-Target_bwa_sort.bam; Input files updated by another job: ../TargetSeq-6/cutoff_3/mapping/VEGFA-On-Target_bwa.bam
+    wildcards: lib=6, cutoff=3, sample=VEGFA-On-Target
+
+/home/zhaohuanan/miniconda3/envs/snakepipes_cutadapt-STARmapping-FPKM-sortBAM/bin/samtools sort -O BAM -o ../TargetSeq-6/cutoff_3/mapping/VEGFA-On-Target_bwa_sort.bam -T ../TargetSeq-6/cutoff_3/mapping/VEGFA-On-Target_bwa_sort.bam.temp -@ 6 -m 2G ../TargetSeq-6/cutoff_3/mapping/VEGFA-On-Target_bwa.bam
+[Fri Oct 16 15:29:17 2020]
+Finished job 100.
+80 of 106 steps (75%) done
+
+[Fri Oct 16 15:29:17 2020]
+rule samtools_sort_by_position:
+    input: ../TargetSeq-7/cutoff_3/mapping/VEGFA-OffNo-GDNo-08_bwa.bam
+    output: ../TargetSeq-7/cutoff_3/mapping/VEGFA-OffNo-GDNo-08_bwa_sort.bam
+    jobid: 37
+    reason: Missing output files: ../TargetSeq-7/cutoff_3/mapping/VEGFA-OffNo-GDNo-08_bwa_sort.bam; Input files updated by another job: ../TargetSeq-7/cutoff_3/mapping/VEGFA-OffNo-GDNo-08_bwa.bam
+    wildcards: lib=7, cutoff=3, sample=VEGFA-OffNo-GDNo-08
+
+/home/zhaohuanan/miniconda3/envs/snakepipes_cutadapt-STARmapping-FPKM-sortBAM/bin/samtools sort -O BAM -o ../TargetSeq-7/cutoff_3/mapping/VEGFA-OffNo-GDNo-08_bwa_sort.bam -T ../TargetSeq-7/cutoff_3/mapping/VEGFA-OffNo-GDNo-08_bwa_sort.bam.temp -@ 6 -m 2G ../TargetSeq-7/cutoff_3/mapping/VEGFA-OffNo-GDNo-08_bwa.bam
+[Fri Oct 16 15:29:17 2020]
+Finished job 35.
+81 of 106 steps (76%) done
+
+[Fri Oct 16 15:29:17 2020]
+rule samtools_index:
+    input: ../TargetSeq-6/cutoff_3/mapping/VEGFA-On-Target_bwa_sort.bam
+    output: ../TargetSeq-6/cutoff_3/mapping/VEGFA-On-Target_bwa_sort.bam.bai
+    jobid: 56
+    reason: Missing output files: ../TargetSeq-6/cutoff_3/mapping/VEGFA-On-Target_bwa_sort.bam.bai; Input files updated by another job: ../TargetSeq-6/cutoff_3/mapping/VEGFA-On-Target_bwa_sort.bam
+    wildcards: lib=6, cutoff=3, sample=VEGFA-On-Target
+
+/home/zhaohuanan/miniconda3/envs/snakepipes_cutadapt-STARmapping-FPKM-sortBAM/bin/samtools index -@ 6 ../TargetSeq-6/cutoff_3/mapping/VEGFA-On-Target_bwa_sort.bam ../TargetSeq-6/cutoff_3/mapping/VEGFA-On-Target_bwa_sort.bam.bai
+[Fri Oct 16 15:29:17 2020]
+Finished job 56.
+82 of 106 steps (77%) done
+[Fri Oct 16 15:29:17 2020]
+Finished job 37.
+83 of 106 steps (78%) done
+
+[Fri Oct 16 15:29:17 2020]
+rule samtools_index:
+    input: ../TargetSeq-7/cutoff_3/mapping/VEGFA-OffNo-GDNo-08_bwa_sort.bam
+    output: ../TargetSeq-7/cutoff_3/mapping/VEGFA-OffNo-GDNo-08_bwa_sort.bam.bai
+    jobid: 58
+    reason: Missing output files: ../TargetSeq-7/cutoff_3/mapping/VEGFA-OffNo-GDNo-08_bwa_sort.bam.bai; Input files updated by another job: ../TargetSeq-7/cutoff_3/mapping/VEGFA-OffNo-GDNo-08_bwa_sort.bam
+    wildcards: lib=7, cutoff=3, sample=VEGFA-OffNo-GDNo-08
+
+/home/zhaohuanan/miniconda3/envs/snakepipes_cutadapt-STARmapping-FPKM-sortBAM/bin/samtools index -@ 6 ../TargetSeq-7/cutoff_3/mapping/VEGFA-OffNo-GDNo-08_bwa_sort.bam ../TargetSeq-7/cutoff_3/mapping/VEGFA-OffNo-GDNo-08_bwa_sort.bam.bai
+[Fri Oct 16 15:29:17 2020]
+Finished job 58.
+84 of 106 steps (79%) done
+[Fri Oct 16 15:29:18 2020]
+Finished job 93.
+85 of 106 steps (80%) done
+
+[Fri Oct 16 15:29:18 2020]
+rule samtools_sort_by_position:
+    input: ../TargetSeq-6/cutoff_3/mapping/VEGFA-OffNo-GDNo-08_bwa.bam
+    output: ../TargetSeq-6/cutoff_3/mapping/VEGFA-OffNo-GDNo-08_bwa_sort.bam
+    jobid: 30
+    reason: Missing output files: ../TargetSeq-6/cutoff_3/mapping/VEGFA-OffNo-GDNo-08_bwa_sort.bam; Input files updated by another job: ../TargetSeq-6/cutoff_3/mapping/VEGFA-OffNo-GDNo-08_bwa.bam
+    wildcards: lib=6, cutoff=3, sample=VEGFA-OffNo-GDNo-08
+
+/home/zhaohuanan/miniconda3/envs/snakepipes_cutadapt-STARmapping-FPKM-sortBAM/bin/samtools sort -O BAM -o ../TargetSeq-6/cutoff_3/mapping/VEGFA-OffNo-GDNo-08_bwa_sort.bam -T ../TargetSeq-6/cutoff_3/mapping/VEGFA-OffNo-GDNo-08_bwa_sort.bam.temp -@ 6 -m 2G ../TargetSeq-6/cutoff_3/mapping/VEGFA-OffNo-GDNo-08_bwa.bam
+[Fri Oct 16 15:29:18 2020]
+Finished job 30.
+86 of 106 steps (81%) done
+
+[Fri Oct 16 15:29:18 2020]
+rule samtools_index:
+    input: ../TargetSeq-6/cutoff_3/mapping/VEGFA-OffNo-GDNo-08_bwa_sort.bam
+    output: ../TargetSeq-6/cutoff_3/mapping/VEGFA-OffNo-GDNo-08_bwa_sort.bam.bai
+    jobid: 51
+    reason: Missing output files: ../TargetSeq-6/cutoff_3/mapping/VEGFA-OffNo-GDNo-08_bwa_sort.bam.bai; Input files updated by another job: ../TargetSeq-6/cutoff_3/mapping/VEGFA-OffNo-GDNo-08_bwa_sort.bam
+    wildcards: lib=6, cutoff=3, sample=VEGFA-OffNo-GDNo-08
+
+/home/zhaohuanan/miniconda3/envs/snakepipes_cutadapt-STARmapping-FPKM-sortBAM/bin/samtools index -@ 6 ../TargetSeq-6/cutoff_3/mapping/VEGFA-OffNo-GDNo-08_bwa_sort.bam ../TargetSeq-6/cutoff_3/mapping/VEGFA-OffNo-GDNo-08_bwa_sort.bam.bai
+[Fri Oct 16 15:29:18 2020]
+Finished job 51.
+87 of 106 steps (82%) done
+[Fri Oct 16 15:29:18 2020]
+Finished job 86.
+88 of 106 steps (83%) done
+
+[Fri Oct 16 15:29:18 2020]
+rule samtools_sort_by_position:
+    input: ../TargetSeq-5/cutoff_3/mapping/VEGFA-OffNo-GDNo-08_bwa.bam
+    output: ../TargetSeq-5/cutoff_3/mapping/VEGFA-OffNo-GDNo-08_bwa_sort.bam
+    jobid: 23
+    reason: Missing output files: ../TargetSeq-5/cutoff_3/mapping/VEGFA-OffNo-GDNo-08_bwa_sort.bam; Input files updated by another job: ../TargetSeq-5/cutoff_3/mapping/VEGFA-OffNo-GDNo-08_bwa.bam
+    wildcards: lib=5, cutoff=3, sample=VEGFA-OffNo-GDNo-08
+
+/home/zhaohuanan/miniconda3/envs/snakepipes_cutadapt-STARmapping-FPKM-sortBAM/bin/samtools sort -O BAM -o ../TargetSeq-5/cutoff_3/mapping/VEGFA-OffNo-GDNo-08_bwa_sort.bam -T ../TargetSeq-5/cutoff_3/mapping/VEGFA-OffNo-GDNo-08_bwa_sort.bam.temp -@ 6 -m 2G ../TargetSeq-5/cutoff_3/mapping/VEGFA-OffNo-GDNo-08_bwa.bam
+[Fri Oct 16 15:29:19 2020]
+Finished job 23.
+89 of 106 steps (84%) done
+
+[Fri Oct 16 15:29:19 2020]
+rule samtools_index:
+    input: ../TargetSeq-5/cutoff_3/mapping/VEGFA-OffNo-GDNo-08_bwa_sort.bam
+    output: ../TargetSeq-5/cutoff_3/mapping/VEGFA-OffNo-GDNo-08_bwa_sort.bam.bai
+    jobid: 44
+    reason: Missing output files: ../TargetSeq-5/cutoff_3/mapping/VEGFA-OffNo-GDNo-08_bwa_sort.bam.bai; Input files updated by another job: ../TargetSeq-5/cutoff_3/mapping/VEGFA-OffNo-GDNo-08_bwa_sort.bam
+    wildcards: lib=5, cutoff=3, sample=VEGFA-OffNo-GDNo-08
+
+/home/zhaohuanan/miniconda3/envs/snakepipes_cutadapt-STARmapping-FPKM-sortBAM/bin/samtools index -@ 6 ../TargetSeq-5/cutoff_3/mapping/VEGFA-OffNo-GDNo-08_bwa_sort.bam ../TargetSeq-5/cutoff_3/mapping/VEGFA-OffNo-GDNo-08_bwa_sort.bam.bai
+[Fri Oct 16 15:29:19 2020]
+Finished job 44.
+90 of 106 steps (85%) done
+[Fri Oct 16 15:29:23 2020]
+Finished job 8.
+91 of 106 steps (86%) done
+
+[Fri Oct 16 15:29:23 2020]
+rule bwa_mapping:
+    input: ../TargetSeq-6/cutoff_3/mapping/MTND4P12-N4_R1_cutadapt.fq.gz, ../TargetSeq-6/cutoff_3/mapping/MTND4P12-N4_R2_cutadapt.fq.gz
+    output: ../TargetSeq-6/cutoff_3/mapping/MTND4P12-N4_bwa.sam
+    log: ../TargetSeq-6/cutoff_3/mapping/MTND4P12-N4_bwa.log
+    jobid: 113
+    reason: Missing output files: ../TargetSeq-6/cutoff_3/mapping/MTND4P12-N4_bwa.sam; Input files updated by another job: ../TargetSeq-6/cutoff_3/mapping/MTND4P12-N4_R1_cutadapt.fq.gz, ../TargetSeq-6/cutoff_3/mapping/MTND4P12-N4_R2_cutadapt.fq.gz
+    wildcards: lib=6, cutoff=3, sample=MTND4P12-N4
+
+
+        /home/zhaohuanan/miniconda3/envs/snakepipes_target-seq-from-table-to-plot/bin/bwa mem ../TargetSeq_BED_sample_lib/MTND4P12-N4.ref.upper.fa ../TargetSeq-6/cutoff_3/mapping/MTND4P12-N4_R1_cutadapt.fq.gz ../TargetSeq-6/cutoff_3/mapping/MTND4P12-N4_R2_cutadapt.fq.gz -t 24 -M > ../TargetSeq-6/cutoff_3/mapping/MTND4P12-N4_bwa.sam 2>../TargetSeq-6/cutoff_3/mapping/MTND4P12-N4_bwa.log
+        
+[Fri Oct 16 15:29:29 2020]
+Finished job 15.
+92 of 106 steps (87%) done
+
+[Fri Oct 16 15:29:29 2020]
+rule bwa_mapping:
+    input: ../TargetSeq-7/cutoff_3/mapping/MTND4P12-N4_R1_cutadapt.fq.gz, ../TargetSeq-7/cutoff_3/mapping/MTND4P12-N4_R2_cutadapt.fq.gz
+    output: ../TargetSeq-7/cutoff_3/mapping/MTND4P12-N4_bwa.sam
+    log: ../TargetSeq-7/cutoff_3/mapping/MTND4P12-N4_bwa.log
+    jobid: 120
+    reason: Missing output files: ../TargetSeq-7/cutoff_3/mapping/MTND4P12-N4_bwa.sam; Input files updated by another job: ../TargetSeq-7/cutoff_3/mapping/MTND4P12-N4_R2_cutadapt.fq.gz, ../TargetSeq-7/cutoff_3/mapping/MTND4P12-N4_R1_cutadapt.fq.gz
+    wildcards: lib=7, cutoff=3, sample=MTND4P12-N4
+
+
+        /home/zhaohuanan/miniconda3/envs/snakepipes_target-seq-from-table-to-plot/bin/bwa mem ../TargetSeq_BED_sample_lib/MTND4P12-N4.ref.upper.fa ../TargetSeq-7/cutoff_3/mapping/MTND4P12-N4_R1_cutadapt.fq.gz ../TargetSeq-7/cutoff_3/mapping/MTND4P12-N4_R2_cutadapt.fq.gz -t 24 -M > ../TargetSeq-7/cutoff_3/mapping/MTND4P12-N4_bwa.sam 2>../TargetSeq-7/cutoff_3/mapping/MTND4P12-N4_bwa.log
+        
+[Fri Oct 16 15:29:29 2020]
+Finished job 1.
+93 of 106 steps (88%) done
+
+[Fri Oct 16 15:29:29 2020]
+rule bwa_mapping:
+    input: ../TargetSeq-5/cutoff_3/mapping/MTND4P12-N4_R1_cutadapt.fq.gz, ../TargetSeq-5/cutoff_3/mapping/MTND4P12-N4_R2_cutadapt.fq.gz
+    output: ../TargetSeq-5/cutoff_3/mapping/MTND4P12-N4_bwa.sam
+    log: ../TargetSeq-5/cutoff_3/mapping/MTND4P12-N4_bwa.log
+    jobid: 106
+    reason: Missing output files: ../TargetSeq-5/cutoff_3/mapping/MTND4P12-N4_bwa.sam; Input files updated by another job: ../TargetSeq-5/cutoff_3/mapping/MTND4P12-N4_R1_cutadapt.fq.gz, ../TargetSeq-5/cutoff_3/mapping/MTND4P12-N4_R2_cutadapt.fq.gz
+    wildcards: lib=5, cutoff=3, sample=MTND4P12-N4
+
+
+        /home/zhaohuanan/miniconda3/envs/snakepipes_target-seq-from-table-to-plot/bin/bwa mem ../TargetSeq_BED_sample_lib/MTND4P12-N4.ref.upper.fa ../TargetSeq-5/cutoff_3/mapping/MTND4P12-N4_R1_cutadapt.fq.gz ../TargetSeq-5/cutoff_3/mapping/MTND4P12-N4_R2_cutadapt.fq.gz -t 24 -M > ../TargetSeq-5/cutoff_3/mapping/MTND4P12-N4_bwa.sam 2>../TargetSeq-5/cutoff_3/mapping/MTND4P12-N4_bwa.log
+        
+[Fri Oct 16 15:29:33 2020]
+Finished job 113.
+94 of 106 steps (89%) done
+
+[Fri Oct 16 15:29:33 2020]
+rule sam_to_bam:
+    input: ../TargetSeq-6/cutoff_3/mapping/MTND4P12-N4_bwa.sam, ../TargetSeq_BED_sample_lib/MTND4P12-N4.ref.upper.fa
+    output: ../TargetSeq-6/cutoff_3/mapping/MTND4P12-N4_bwa.bam
+    jobid: 92
+    reason: Missing output files: ../TargetSeq-6/cutoff_3/mapping/MTND4P12-N4_bwa.bam; Input files updated by another job: ../TargetSeq-6/cutoff_3/mapping/MTND4P12-N4_bwa.sam
+    wildcards: lib=6, cutoff=3, sample=MTND4P12-N4
+
+
+        /home/zhaohuanan/miniconda3/envs/snakepipes_cutadapt-STARmapping-FPKM-sortBAM/bin/samtools view -h -f 1 -F 268 ../TargetSeq-6/cutoff_3/mapping/MTND4P12-N4_bwa.sam         | /home/zhaohuanan/miniconda3/envs/snakepipes_target-seq-from-table-to-plot/bin/samclip --ref ../TargetSeq_BED_sample_lib/MTND4P12-N4.ref.upper.fa --max 3 --progress 0         | awk 'function abs(v) {return v < 0 ? -v : v} $1~"@" || ($7 == "=" && abs($9) <= 600 ) {print $0}'         | /home/zhaohuanan/miniconda3/envs/snakepipes_cutadapt-STARmapping-FPKM-sortBAM/bin/samtools view -hb > ../TargetSeq-6/cutoff_3/mapping/MTND4P12-N4_bwa.bam
+        
+[Fri Oct 16 15:29:42 2020]
+Finished job 92.
+95 of 106 steps (90%) done
+
+[Fri Oct 16 15:29:42 2020]
+rule samtools_sort_by_position:
+    input: ../TargetSeq-6/cutoff_3/mapping/MTND4P12-N4_bwa.bam
+    output: ../TargetSeq-6/cutoff_3/mapping/MTND4P12-N4_bwa_sort.bam
+    jobid: 29
+    reason: Missing output files: ../TargetSeq-6/cutoff_3/mapping/MTND4P12-N4_bwa_sort.bam; Input files updated by another job: ../TargetSeq-6/cutoff_3/mapping/MTND4P12-N4_bwa.bam
+    wildcards: lib=6, cutoff=3, sample=MTND4P12-N4
+
+/home/zhaohuanan/miniconda3/envs/snakepipes_cutadapt-STARmapping-FPKM-sortBAM/bin/samtools sort -O BAM -o ../TargetSeq-6/cutoff_3/mapping/MTND4P12-N4_bwa_sort.bam -T ../TargetSeq-6/cutoff_3/mapping/MTND4P12-N4_bwa_sort.bam.temp -@ 6 -m 2G ../TargetSeq-6/cutoff_3/mapping/MTND4P12-N4_bwa.bam
+[Fri Oct 16 15:29:44 2020]
+Finished job 29.
+96 of 106 steps (91%) done
+
+[Fri Oct 16 15:29:44 2020]
+rule samtools_index:
+    input: ../TargetSeq-6/cutoff_3/mapping/MTND4P12-N4_bwa_sort.bam
+    output: ../TargetSeq-6/cutoff_3/mapping/MTND4P12-N4_bwa_sort.bam.bai
+    jobid: 50
+    reason: Missing output files: ../TargetSeq-6/cutoff_3/mapping/MTND4P12-N4_bwa_sort.bam.bai; Input files updated by another job: ../TargetSeq-6/cutoff_3/mapping/MTND4P12-N4_bwa_sort.bam
+    wildcards: lib=6, cutoff=3, sample=MTND4P12-N4
+
+/home/zhaohuanan/miniconda3/envs/snakepipes_cutadapt-STARmapping-FPKM-sortBAM/bin/samtools index -@ 6 ../TargetSeq-6/cutoff_3/mapping/MTND4P12-N4_bwa_sort.bam ../TargetSeq-6/cutoff_3/mapping/MTND4P12-N4_bwa_sort.bam.bai
+[Fri Oct 16 15:29:44 2020]
+Finished job 50.
+97 of 106 steps (92%) done
+[Fri Oct 16 15:29:48 2020]
+Finished job 120.
+98 of 106 steps (92%) done
+
+[Fri Oct 16 15:29:48 2020]
+rule sam_to_bam:
+    input: ../TargetSeq-7/cutoff_3/mapping/MTND4P12-N4_bwa.sam, ../TargetSeq_BED_sample_lib/MTND4P12-N4.ref.upper.fa
+    output: ../TargetSeq-7/cutoff_3/mapping/MTND4P12-N4_bwa.bam
+    jobid: 99
+    reason: Missing output files: ../TargetSeq-7/cutoff_3/mapping/MTND4P12-N4_bwa.bam; Input files updated by another job: ../TargetSeq-7/cutoff_3/mapping/MTND4P12-N4_bwa.sam
+    wildcards: lib=7, cutoff=3, sample=MTND4P12-N4
+
+
+        /home/zhaohuanan/miniconda3/envs/snakepipes_cutadapt-STARmapping-FPKM-sortBAM/bin/samtools view -h -f 1 -F 268 ../TargetSeq-7/cutoff_3/mapping/MTND4P12-N4_bwa.sam         | /home/zhaohuanan/miniconda3/envs/snakepipes_target-seq-from-table-to-plot/bin/samclip --ref ../TargetSeq_BED_sample_lib/MTND4P12-N4.ref.upper.fa --max 3 --progress 0         | awk 'function abs(v) {return v < 0 ? -v : v} $1~"@" || ($7 == "=" && abs($9) <= 600 ) {print $0}'         | /home/zhaohuanan/miniconda3/envs/snakepipes_cutadapt-STARmapping-FPKM-sortBAM/bin/samtools view -hb > ../TargetSeq-7/cutoff_3/mapping/MTND4P12-N4_bwa.bam
+        
+[Fri Oct 16 15:29:48 2020]
+Finished job 106.
+99 of 106 steps (93%) done
+
+[Fri Oct 16 15:29:48 2020]
+rule sam_to_bam:
+    input: ../TargetSeq-5/cutoff_3/mapping/MTND4P12-N4_bwa.sam, ../TargetSeq_BED_sample_lib/MTND4P12-N4.ref.upper.fa
+    output: ../TargetSeq-5/cutoff_3/mapping/MTND4P12-N4_bwa.bam
+    jobid: 85
+    reason: Missing output files: ../TargetSeq-5/cutoff_3/mapping/MTND4P12-N4_bwa.bam; Input files updated by another job: ../TargetSeq-5/cutoff_3/mapping/MTND4P12-N4_bwa.sam
+    wildcards: lib=5, cutoff=3, sample=MTND4P12-N4
+
+
+        /home/zhaohuanan/miniconda3/envs/snakepipes_cutadapt-STARmapping-FPKM-sortBAM/bin/samtools view -h -f 1 -F 268 ../TargetSeq-5/cutoff_3/mapping/MTND4P12-N4_bwa.sam         | /home/zhaohuanan/miniconda3/envs/snakepipes_target-seq-from-table-to-plot/bin/samclip --ref ../TargetSeq_BED_sample_lib/MTND4P12-N4.ref.upper.fa --max 3 --progress 0         | awk 'function abs(v) {return v < 0 ? -v : v} $1~"@" || ($7 == "=" && abs($9) <= 600 ) {print $0}'         | /home/zhaohuanan/miniconda3/envs/snakepipes_cutadapt-STARmapping-FPKM-sortBAM/bin/samtools view -hb > ../TargetSeq-5/cutoff_3/mapping/MTND4P12-N4_bwa.bam
+        
+[Fri Oct 16 15:29:55 2020]
+Finished job 99.
+100 of 106 steps (94%) done
+
+[Fri Oct 16 15:29:55 2020]
+rule samtools_sort_by_position:
+    input: ../TargetSeq-7/cutoff_3/mapping/MTND4P12-N4_bwa.bam
+    output: ../TargetSeq-7/cutoff_3/mapping/MTND4P12-N4_bwa_sort.bam
+    jobid: 36
+    reason: Missing output files: ../TargetSeq-7/cutoff_3/mapping/MTND4P12-N4_bwa_sort.bam; Input files updated by another job: ../TargetSeq-7/cutoff_3/mapping/MTND4P12-N4_bwa.bam
+    wildcards: lib=7, cutoff=3, sample=MTND4P12-N4
+
+/home/zhaohuanan/miniconda3/envs/snakepipes_cutadapt-STARmapping-FPKM-sortBAM/bin/samtools sort -O BAM -o ../TargetSeq-7/cutoff_3/mapping/MTND4P12-N4_bwa_sort.bam -T ../TargetSeq-7/cutoff_3/mapping/MTND4P12-N4_bwa_sort.bam.temp -@ 6 -m 2G ../TargetSeq-7/cutoff_3/mapping/MTND4P12-N4_bwa.bam
+[Fri Oct 16 15:29:55 2020]
+Finished job 85.
+101 of 106 steps (95%) done
+
+[Fri Oct 16 15:29:55 2020]
+rule samtools_sort_by_position:
+    input: ../TargetSeq-5/cutoff_3/mapping/MTND4P12-N4_bwa.bam
+    output: ../TargetSeq-5/cutoff_3/mapping/MTND4P12-N4_bwa_sort.bam
+    jobid: 22
+    reason: Missing output files: ../TargetSeq-5/cutoff_3/mapping/MTND4P12-N4_bwa_sort.bam; Input files updated by another job: ../TargetSeq-5/cutoff_3/mapping/MTND4P12-N4_bwa.bam
+    wildcards: lib=5, cutoff=3, sample=MTND4P12-N4
+
+/home/zhaohuanan/miniconda3/envs/snakepipes_cutadapt-STARmapping-FPKM-sortBAM/bin/samtools sort -O BAM -o ../TargetSeq-5/cutoff_3/mapping/MTND4P12-N4_bwa_sort.bam -T ../TargetSeq-5/cutoff_3/mapping/MTND4P12-N4_bwa_sort.bam.temp -@ 6 -m 2G ../TargetSeq-5/cutoff_3/mapping/MTND4P12-N4_bwa.bam
+[Fri Oct 16 15:29:57 2020]
+Finished job 36.
+102 of 106 steps (96%) done
+
+[Fri Oct 16 15:29:57 2020]
+rule samtools_index:
+    input: ../TargetSeq-7/cutoff_3/mapping/MTND4P12-N4_bwa_sort.bam
+    output: ../TargetSeq-7/cutoff_3/mapping/MTND4P12-N4_bwa_sort.bam.bai
+    jobid: 57
+    reason: Missing output files: ../TargetSeq-7/cutoff_3/mapping/MTND4P12-N4_bwa_sort.bam.bai; Input files updated by another job: ../TargetSeq-7/cutoff_3/mapping/MTND4P12-N4_bwa_sort.bam
+    wildcards: lib=7, cutoff=3, sample=MTND4P12-N4
+
+/home/zhaohuanan/miniconda3/envs/snakepipes_cutadapt-STARmapping-FPKM-sortBAM/bin/samtools index -@ 6 ../TargetSeq-7/cutoff_3/mapping/MTND4P12-N4_bwa_sort.bam ../TargetSeq-7/cutoff_3/mapping/MTND4P12-N4_bwa_sort.bam.bai
+[Fri Oct 16 15:29:57 2020]
+Finished job 22.
+103 of 106 steps (97%) done
+
+[Fri Oct 16 15:29:57 2020]
+rule samtools_index:
+    input: ../TargetSeq-5/cutoff_3/mapping/MTND4P12-N4_bwa_sort.bam
+    output: ../TargetSeq-5/cutoff_3/mapping/MTND4P12-N4_bwa_sort.bam.bai
+    jobid: 43
+    reason: Missing output files: ../TargetSeq-5/cutoff_3/mapping/MTND4P12-N4_bwa_sort.bam.bai; Input files updated by another job: ../TargetSeq-5/cutoff_3/mapping/MTND4P12-N4_bwa_sort.bam
+    wildcards: lib=5, cutoff=3, sample=MTND4P12-N4
+
+/home/zhaohuanan/miniconda3/envs/snakepipes_cutadapt-STARmapping-FPKM-sortBAM/bin/samtools index -@ 6 ../TargetSeq-5/cutoff_3/mapping/MTND4P12-N4_bwa_sort.bam ../TargetSeq-5/cutoff_3/mapping/MTND4P12-N4_bwa_sort.bam.bai
+[Fri Oct 16 15:29:58 2020]
+Finished job 57.
+104 of 106 steps (98%) done
+[Fri Oct 16 15:29:58 2020]
+Finished job 43.
+105 of 106 steps (99%) done
+
+[Fri Oct 16 15:29:58 2020]
+localrule all:
+    input: ../TargetSeq-5/cutoff_3/mapping/MTND4P12-N4_R1_cutadapt.fq.gz, ../TargetSeq-5/cutoff_3/mapping/MTND4P12-N4_R2_cutadapt.fq.gz, ../TargetSeq-5/cutoff_3/mapping/VEGFA-OffNo-GDNo-08_R1_cutadapt.fq.gz, ../TargetSeq-5/cutoff_3/mapping/VEGFA-OffNo-GDNo-08_R2_cutadapt.fq.gz, ../TargetSeq-5/cutoff_3/mapping/VEGFA-Off-Target-2_R1_cutadapt.fq.gz, ../TargetSeq-5/cutoff_3/mapping/VEGFA-Off-Target-2_R2_cutadapt.fq.gz, ../TargetSeq-5/cutoff_3/mapping/VEGFA-Off-Target-3_R1_cutadapt.fq.gz, ../TargetSeq-5/cutoff_3/mapping/VEGFA-Off-Target-3_R2_cutadapt.fq.gz, ../TargetSeq-5/cutoff_3/mapping/VEGFA-Off-Target-6_R1_cutadapt.fq.gz, ../TargetSeq-5/cutoff_3/mapping/VEGFA-Off-Target-6_R2_cutadapt.fq.gz, ../TargetSeq-5/cutoff_3/mapping/VEGFA-Off-Target-7_R1_cutadapt.fq.gz, ../TargetSeq-5/cutoff_3/mapping/VEGFA-Off-Target-7_R2_cutadapt.fq.gz, ../TargetSeq-5/cutoff_3/mapping/VEGFA-On-Target_R1_cutadapt.fq.gz, ../TargetSeq-5/cutoff_3/mapping/VEGFA-On-Target_R2_cutadapt.fq.gz, ../TargetSeq-6/cutoff_3/mapping/MTND4P12-N4_R1_cutadapt.fq.gz, ../TargetSeq-6/cutoff_3/mapping/MTND4P12-N4_R2_cutadapt.fq.gz, ../TargetSeq-6/cutoff_3/mapping/VEGFA-OffNo-GDNo-08_R1_cutadapt.fq.gz, ../TargetSeq-6/cutoff_3/mapping/VEGFA-OffNo-GDNo-08_R2_cutadapt.fq.gz, ../TargetSeq-6/cutoff_3/mapping/VEGFA-Off-Target-2_R1_cutadapt.fq.gz, ../TargetSeq-6/cutoff_3/mapping/VEGFA-Off-Target-2_R2_cutadapt.fq.gz, ../TargetSeq-6/cutoff_3/mapping/VEGFA-Off-Target-3_R1_cutadapt.fq.gz, ../TargetSeq-6/cutoff_3/mapping/VEGFA-Off-Target-3_R2_cutadapt.fq.gz, ../TargetSeq-6/cutoff_3/mapping/VEGFA-Off-Target-6_R1_cutadapt.fq.gz, ../TargetSeq-6/cutoff_3/mapping/VEGFA-Off-Target-6_R2_cutadapt.fq.gz, ../TargetSeq-6/cutoff_3/mapping/VEGFA-Off-Target-7_R1_cutadapt.fq.gz, ../TargetSeq-6/cutoff_3/mapping/VEGFA-Off-Target-7_R2_cutadapt.fq.gz, ../TargetSeq-6/cutoff_3/mapping/VEGFA-On-Target_R1_cutadapt.fq.gz, ../TargetSeq-6/cutoff_3/mapping/VEGFA-On-Target_R2_cutadapt.fq.gz, ../TargetSeq-7/cutoff_3/mapping/MTND4P12-N4_R1_cutadapt.fq.gz, ../TargetSeq-7/cutoff_3/mapping/MTND4P12-N4_R2_cutadapt.fq.gz, ../TargetSeq-7/cutoff_3/mapping/VEGFA-OffNo-GDNo-08_R1_cutadapt.fq.gz, ../TargetSeq-7/cutoff_3/mapping/VEGFA-OffNo-GDNo-08_R2_cutadapt.fq.gz, ../TargetSeq-7/cutoff_3/mapping/VEGFA-Off-Target-2_R1_cutadapt.fq.gz, ../TargetSeq-7/cutoff_3/mapping/VEGFA-Off-Target-2_R2_cutadapt.fq.gz, ../TargetSeq-7/cutoff_3/mapping/VEGFA-Off-Target-3_R1_cutadapt.fq.gz, ../TargetSeq-7/cutoff_3/mapping/VEGFA-Off-Target-3_R2_cutadapt.fq.gz, ../TargetSeq-7/cutoff_3/mapping/VEGFA-Off-Target-6_R1_cutadapt.fq.gz, ../TargetSeq-7/cutoff_3/mapping/VEGFA-Off-Target-6_R2_cutadapt.fq.gz, ../TargetSeq-7/cutoff_3/mapping/VEGFA-Off-Target-7_R1_cutadapt.fq.gz, ../TargetSeq-7/cutoff_3/mapping/VEGFA-Off-Target-7_R2_cutadapt.fq.gz, ../TargetSeq-7/cutoff_3/mapping/VEGFA-On-Target_R1_cutadapt.fq.gz, ../TargetSeq-7/cutoff_3/mapping/VEGFA-On-Target_R2_cutadapt.fq.gz, ../TargetSeq-5/cutoff_3/mapping/MTND4P12-N4_bwa_sort.bam, ../TargetSeq-5/cutoff_3/mapping/VEGFA-OffNo-GDNo-08_bwa_sort.bam, ../TargetSeq-5/cutoff_3/mapping/VEGFA-Off-Target-2_bwa_sort.bam, ../TargetSeq-5/cutoff_3/mapping/VEGFA-Off-Target-3_bwa_sort.bam, ../TargetSeq-5/cutoff_3/mapping/VEGFA-Off-Target-6_bwa_sort.bam, ../TargetSeq-5/cutoff_3/mapping/VEGFA-Off-Target-7_bwa_sort.bam, ../TargetSeq-5/cutoff_3/mapping/VEGFA-On-Target_bwa_sort.bam, ../TargetSeq-6/cutoff_3/mapping/MTND4P12-N4_bwa_sort.bam, ../TargetSeq-6/cutoff_3/mapping/VEGFA-OffNo-GDNo-08_bwa_sort.bam, ../TargetSeq-6/cutoff_3/mapping/VEGFA-Off-Target-2_bwa_sort.bam, ../TargetSeq-6/cutoff_3/mapping/VEGFA-Off-Target-3_bwa_sort.bam, ../TargetSeq-6/cutoff_3/mapping/VEGFA-Off-Target-6_bwa_sort.bam, ../TargetSeq-6/cutoff_3/mapping/VEGFA-Off-Target-7_bwa_sort.bam, ../TargetSeq-6/cutoff_3/mapping/VEGFA-On-Target_bwa_sort.bam, ../TargetSeq-7/cutoff_3/mapping/MTND4P12-N4_bwa_sort.bam, ../TargetSeq-7/cutoff_3/mapping/VEGFA-OffNo-GDNo-08_bwa_sort.bam, ../TargetSeq-7/cutoff_3/mapping/VEGFA-Off-Target-2_bwa_sort.bam, ../TargetSeq-7/cutoff_3/mapping/VEGFA-Off-Target-3_bwa_sort.bam, ../TargetSeq-7/cutoff_3/mapping/VEGFA-Off-Target-6_bwa_sort.bam, ../TargetSeq-7/cutoff_3/mapping/VEGFA-Off-Target-7_bwa_sort.bam, ../TargetSeq-7/cutoff_3/mapping/VEGFA-On-Target_bwa_sort.bam, ../TargetSeq-5/cutoff_3/mapping/MTND4P12-N4_bwa_sort.bam.bai, ../TargetSeq-5/cutoff_3/mapping/VEGFA-OffNo-GDNo-08_bwa_sort.bam.bai, ../TargetSeq-5/cutoff_3/mapping/VEGFA-Off-Target-2_bwa_sort.bam.bai, ../TargetSeq-5/cutoff_3/mapping/VEGFA-Off-Target-3_bwa_sort.bam.bai, ../TargetSeq-5/cutoff_3/mapping/VEGFA-Off-Target-6_bwa_sort.bam.bai, ../TargetSeq-5/cutoff_3/mapping/VEGFA-Off-Target-7_bwa_sort.bam.bai, ../TargetSeq-5/cutoff_3/mapping/VEGFA-On-Target_bwa_sort.bam.bai, ../TargetSeq-6/cutoff_3/mapping/MTND4P12-N4_bwa_sort.bam.bai, ../TargetSeq-6/cutoff_3/mapping/VEGFA-OffNo-GDNo-08_bwa_sort.bam.bai, ../TargetSeq-6/cutoff_3/mapping/VEGFA-Off-Target-2_bwa_sort.bam.bai, ../TargetSeq-6/cutoff_3/mapping/VEGFA-Off-Target-3_bwa_sort.bam.bai, ../TargetSeq-6/cutoff_3/mapping/VEGFA-Off-Target-6_bwa_sort.bam.bai, ../TargetSeq-6/cutoff_3/mapping/VEGFA-Off-Target-7_bwa_sort.bam.bai, ../TargetSeq-6/cutoff_3/mapping/VEGFA-On-Target_bwa_sort.bam.bai, ../TargetSeq-7/cutoff_3/mapping/MTND4P12-N4_bwa_sort.bam.bai, ../TargetSeq-7/cutoff_3/mapping/VEGFA-OffNo-GDNo-08_bwa_sort.bam.bai, ../TargetSeq-7/cutoff_3/mapping/VEGFA-Off-Target-2_bwa_sort.bam.bai, ../TargetSeq-7/cutoff_3/mapping/VEGFA-Off-Target-3_bwa_sort.bam.bai, ../TargetSeq-7/cutoff_3/mapping/VEGFA-Off-Target-6_bwa_sort.bam.bai, ../TargetSeq-7/cutoff_3/mapping/VEGFA-Off-Target-7_bwa_sort.bam.bai, ../TargetSeq-7/cutoff_3/mapping/VEGFA-On-Target_bwa_sort.bam.bai
+    jobid: 0
+    reason: Input files updated by another job: ../TargetSeq-5/cutoff_3/mapping/VEGFA-Off-Target-6_bwa_sort.bam, ../TargetSeq-7/cutoff_3/mapping/VEGFA-Off-Target-2_R2_cutadapt.fq.gz, ../TargetSeq-6/cutoff_3/mapping/MTND4P12-N4_R2_cutadapt.fq.gz, ../TargetSeq-7/cutoff_3/mapping/VEGFA-Off-Target-6_R2_cutadapt.fq.gz, ../TargetSeq-7/cutoff_3/mapping/VEGFA-Off-Target-7_R2_cutadapt.fq.gz, ../TargetSeq-7/cutoff_3/mapping/VEGFA-On-Target_R2_cutadapt.fq.gz, ../TargetSeq-7/cutoff_3/mapping/VEGFA-Off-Target-3_bwa_sort.bam, ../TargetSeq-7/cutoff_3/mapping/VEGFA-Off-Target-3_R1_cutadapt.fq.gz, ../TargetSeq-7/cutoff_3/mapping/VEGFA-OffNo-GDNo-08_R2_cutadapt.fq.gz, ../TargetSeq-5/cutoff_3/mapping/VEGFA-On-Target_R1_cutadapt.fq.gz, ../TargetSeq-6/cutoff_3/mapping/VEGFA-Off-Target-3_R2_cutadapt.fq.gz, ../TargetSeq-6/cutoff_3/mapping/VEGFA-Off-Target-3_bwa_sort.bam, ../TargetSeq-6/cutoff_3/mapping/VEGFA-On-Target_R2_cutadapt.fq.gz, ../TargetSeq-5/cutoff_3/mapping/MTND4P12-N4_bwa_sort.bam.bai, ../TargetSeq-6/cutoff_3/mapping/VEGFA-Off-Target-6_R1_cutadapt.fq.gz, ../TargetSeq-7/cutoff_3/mapping/VEGFA-Off-Target-3_R2_cutadapt.fq.gz, ../TargetSeq-7/cutoff_3/mapping/VEGFA-Off-Target-3_bwa_sort.bam.bai, ../TargetSeq-5/cutoff_3/mapping/MTND4P12-N4_bwa_sort.bam, ../TargetSeq-6/cutoff_3/mapping/VEGFA-Off-Target-2_R1_cutadapt.fq.gz, ../TargetSeq-7/cutoff_3/mapping/VEGFA-OffNo-GDNo-08_bwa_sort.bam.bai, ../TargetSeq-7/cutoff_3/mapping/MTND4P12-N4_R2_cutadapt.fq.gz, ../TargetSeq-7/cutoff_3/mapping/VEGFA-On-Target_bwa_sort.bam.bai, ../TargetSeq-5/cutoff_3/mapping/VEGFA-Off-Target-3_R2_cutadapt.fq.gz, ../TargetSeq-7/cutoff_3/mapping/VEGFA-Off-Target-6_R1_cutadapt.fq.gz, ../TargetSeq-7/cutoff_3/mapping/VEGFA-Off-Target-7_bwa_sort.bam.bai, ../TargetSeq-5/cutoff_3/mapping/VEGFA-OffNo-GDNo-08_bwa_sort.bam, ../TargetSeq-7/cutoff_3/mapping/VEGFA-OffNo-GDNo-08_R1_cutadapt.fq.gz, ../TargetSeq-5/cutoff_3/mapping/VEGFA-On-Target_bwa_sort.bam, ../TargetSeq-7/cutoff_3/mapping/MTND4P12-N4_bwa_sort.bam, ../TargetSeq-6/cutoff_3/mapping/VEGFA-Off-Target-7_bwa_sort.bam, ../TargetSeq-6/cutoff_3/mapping/VEGFA-On-Target_bwa_sort.bam, ../TargetSeq-5/cutoff_3/mapping/VEGFA-OffNo-GDNo-08_R1_cutadapt.fq.gz, ../TargetSeq-6/cutoff_3/mapping/VEGFA-Off-Target-2_bwa_sort.bam, ../TargetSeq-5/cutoff_3/mapping/VEGFA-Off-Target-6_R2_cutadapt.fq.gz, ../TargetSeq-7/cutoff_3/mapping/VEGFA-Off-Target-2_bwa_sort.bam, ../TargetSeq-6/cutoff_3/mapping/VEGFA-Off-Target-7_R2_cutadapt.fq.gz, ../TargetSeq-6/cutoff_3/mapping/VEGFA-Off-Target-3_R1_cutadapt.fq.gz, ../TargetSeq-5/cutoff_3/mapping/MTND4P12-N4_R1_cutadapt.fq.gz, ../TargetSeq-5/cutoff_3/mapping/VEGFA-OffNo-GDNo-08_R2_cutadapt.fq.gz, ../TargetSeq-6/cutoff_3/mapping/VEGFA-Off-Target-2_bwa_sort.bam.bai, ../TargetSeq-5/cutoff_3/mapping/VEGFA-Off-Target-7_bwa_sort.bam.bai, ../TargetSeq-6/cutoff_3/mapping/VEGFA-Off-Target-6_bwa_sort.bam.bai, ../TargetSeq-5/cutoff_3/mapping/VEGFA-Off-Target-7_R1_cutadapt.fq.gz, ../TargetSeq-6/cutoff_3/mapping/VEGFA-OffNo-GDNo-08_R2_cutadapt.fq.gz, ../TargetSeq-7/cutoff_3/mapping/VEGFA-Off-Target-2_bwa_sort.bam.bai, ../TargetSeq-5/cutoff_3/mapping/VEGFA-On-Target_R2_cutadapt.fq.gz, ../TargetSeq-5/cutoff_3/mapping/VEGFA-Off-Target-2_bwa_sort.bam, ../TargetSeq-7/cutoff_3/mapping/VEGFA-Off-Target-7_R1_cutadapt.fq.gz, ../TargetSeq-6/cutoff_3/mapping/VEGFA-Off-Target-6_R2_cutadapt.fq.gz, ../TargetSeq-7/cutoff_3/mapping/VEGFA-Off-Target-7_bwa_sort.bam, ../TargetSeq-6/cutoff_3/mapping/VEGFA-OffNo-GDNo-08_bwa_sort.bam.bai, ../TargetSeq-7/cutoff_3/mapping/MTND4P12-N4_R1_cutadapt.fq.gz, ../TargetSeq-6/cutoff_3/mapping/MTND4P12-N4_bwa_sort.bam, ../TargetSeq-5/cutoff_3/mapping/VEGFA-Off-Target-2_bwa_sort.bam.bai, ../TargetSeq-5/cutoff_3/mapping/MTND4P12-N4_R2_cutadapt.fq.gz, ../TargetSeq-7/cutoff_3/mapping/VEGFA-Off-Target-2_R1_cutadapt.fq.gz, ../TargetSeq-5/cutoff_3/mapping/VEGFA-Off-Target-3_bwa_sort.bam.bai, ../TargetSeq-6/cutoff_3/mapping/VEGFA-OffNo-GDNo-08_R1_cutadapt.fq.gz, ../TargetSeq-5/cutoff_3/mapping/VEGFA-Off-Target-7_R2_cutadapt.fq.gz, ../TargetSeq-6/cutoff_3/mapping/VEGFA-On-Target_bwa_sort.bam.bai, ../TargetSeq-7/cutoff_3/mapping/VEGFA-On-Target_R1_cutadapt.fq.gz, ../TargetSeq-5/cutoff_3/mapping/VEGFA-On-Target_bwa_sort.bam.bai, ../TargetSeq-5/cutoff_3/mapping/VEGFA-Off-Target-6_R1_cutadapt.fq.gz, ../TargetSeq-7/cutoff_3/mapping/MTND4P12-N4_bwa_sort.bam.bai, ../TargetSeq-6/cutoff_3/mapping/MTND4P12-N4_bwa_sort.bam.bai, ../TargetSeq-5/cutoff_3/mapping/VEGFA-Off-Target-7_bwa_sort.bam, ../TargetSeq-7/cutoff_3/mapping/VEGFA-On-Target_bwa_sort.bam, ../TargetSeq-6/cutoff_3/mapping/MTND4P12-N4_R1_cutadapt.fq.gz, ../TargetSeq-6/cutoff_3/mapping/VEGFA-On-Target_R1_cutadapt.fq.gz, ../TargetSeq-7/cutoff_3/mapping/VEGFA-OffNo-GDNo-08_bwa_sort.bam, ../TargetSeq-6/cutoff_3/mapping/VEGFA-Off-Target-7_bwa_sort.bam.bai, ../TargetSeq-6/cutoff_3/mapping/VEGFA-Off-Target-6_bwa_sort.bam, ../TargetSeq-5/cutoff_3/mapping/VEGFA-Off-Target-2_R2_cutadapt.fq.gz, ../TargetSeq-5/cutoff_3/mapping/VEGFA-Off-Target-2_R1_cutadapt.fq.gz, ../TargetSeq-6/cutoff_3/mapping/VEGFA-OffNo-GDNo-08_bwa_sort.bam, ../TargetSeq-5/cutoff_3/mapping/VEGFA-OffNo-GDNo-08_bwa_sort.bam.bai, ../TargetSeq-5/cutoff_3/mapping/VEGFA-Off-Target-6_bwa_sort.bam.bai, ../TargetSeq-5/cutoff_3/mapping/VEGFA-Off-Target-3_R1_cutadapt.fq.gz, ../TargetSeq-6/cutoff_3/mapping/VEGFA-Off-Target-3_bwa_sort.bam.bai, ../TargetSeq-5/cutoff_3/mapping/VEGFA-Off-Target-3_bwa_sort.bam, ../TargetSeq-6/cutoff_3/mapping/VEGFA-Off-Target-7_R1_cutadapt.fq.gz, ../TargetSeq-6/cutoff_3/mapping/VEGFA-Off-Target-2_R2_cutadapt.fq.gz, ../TargetSeq-7/cutoff_3/mapping/VEGFA-Off-Target-6_bwa_sort.bam.bai, ../TargetSeq-7/cutoff_3/mapping/VEGFA-Off-Target-6_bwa_sort.bam
+
+[Fri Oct 16 15:29:58 2020]
+Finished job 0.
+106 of 106 steps (100%) done
+Complete log: /gpfs/user/zhaohuanan/3.project/14.2020-10_1010_TargetSeq-GBE-DdCBE_recheck/snakepipes_target-seq-from-table-to-plot/.snakemake/log/2020-10-16T152903.461328.snakemake.log

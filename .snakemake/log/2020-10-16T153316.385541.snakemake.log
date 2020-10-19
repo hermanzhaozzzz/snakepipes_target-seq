@@ -1,0 +1,1776 @@
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided cores: 48
+Rules claiming more threads will be scaled down.
+Job counts:
+	count	jobs
+	1	all
+	24	bwa_mapping
+	24	cutadapt
+	24	sam_to_bam
+	24	samtools_index
+	24	samtools_sort_by_position
+	121
+
+[Fri Oct 16 15:33:16 2020]
+rule cutadapt:
+    input: ../TargetSeq-sanjiao/cutoff_3/merge.fastq/ABE-Site-7-On_merge_barcode_R1.fastq, ../TargetSeq-sanjiao/cutoff_3/merge.fastq/ABE-Site-7-On_merge_barcode_R2.fastq
+    output: ../TargetSeq-sanjiao/cutoff_3/mapping/ABE-Site-7-On_R1_cutadapt.fq.gz, ../TargetSeq-sanjiao/cutoff_3/mapping/ABE-Site-7-On_R2_cutadapt.fq.gz
+    log: ../TargetSeq-sanjiao/cutoff_3/mapping/ABE-Site-7-On_cutadapt.log
+    jobid: 13
+    reason: Missing output files: ../TargetSeq-sanjiao/cutoff_3/mapping/ABE-Site-7-On_R2_cutadapt.fq.gz, ../TargetSeq-sanjiao/cutoff_3/mapping/ABE-Site-7-On_R1_cutadapt.fq.gz
+    wildcards: lib=sanjiao, cutoff=3, sample=ABE-Site-7-On
+
+
+        /home/zhaohuanan/miniconda3/envs/cutadapt/bin/cutadapt -j 24 --times 1  -e 0.1  -O 3  --quality-cutoff 25         -m 100 -a AGATCGGAAGAGCACACGTCTGAACTCCAGTCAC         -A AGATCGGAAGAGCGTCGTGTAGGGAAAGAGTGTAGATCTCGGTGGTCGCCGTATCATT         -o ../TargetSeq-sanjiao/cutoff_3/mapping/ABE-Site-7-On_R1_cutadapt.fq.gz -p ../TargetSeq-sanjiao/cutoff_3/mapping/ABE-Site-7-On_R2_cutadapt.fq.gz ../TargetSeq-sanjiao/cutoff_3/merge.fastq/ABE-Site-7-On_merge_barcode_R1.fastq ../TargetSeq-sanjiao/cutoff_3/merge.fastq/ABE-Site-7-On_merge_barcode_R2.fastq > ../TargetSeq-sanjiao/cutoff_3/mapping/ABE-Site-7-On_cutadapt.log 2>&1
+        
+
+[Fri Oct 16 15:33:16 2020]
+rule cutadapt:
+    input: ../TargetSeq-quanquan/cutoff_3/merge.fastq/HEK4-Guideseq-5_merge_barcode_R1.fastq, ../TargetSeq-quanquan/cutoff_3/merge.fastq/HEK4-Guideseq-5_merge_barcode_R2.fastq
+    output: ../TargetSeq-quanquan/cutoff_3/mapping/HEK4-Guideseq-5_R1_cutadapt.fq.gz, ../TargetSeq-quanquan/cutoff_3/mapping/HEK4-Guideseq-5_R2_cutadapt.fq.gz
+    log: ../TargetSeq-quanquan/cutoff_3/mapping/HEK4-Guideseq-5_cutadapt.log
+    jobid: 7
+    reason: Missing output files: ../TargetSeq-quanquan/cutoff_3/mapping/HEK4-Guideseq-5_R2_cutadapt.fq.gz, ../TargetSeq-quanquan/cutoff_3/mapping/HEK4-Guideseq-5_R1_cutadapt.fq.gz
+    wildcards: lib=quanquan, cutoff=3, sample=HEK4-Guideseq-5
+
+
+        /home/zhaohuanan/miniconda3/envs/cutadapt/bin/cutadapt -j 24 --times 1  -e 0.1  -O 3  --quality-cutoff 25         -m 100 -a AGATCGGAAGAGCACACGTCTGAACTCCAGTCAC         -A AGATCGGAAGAGCGTCGTGTAGGGAAAGAGTGTAGATCTCGGTGGTCGCCGTATCATT         -o ../TargetSeq-quanquan/cutoff_3/mapping/HEK4-Guideseq-5_R1_cutadapt.fq.gz -p ../TargetSeq-quanquan/cutoff_3/mapping/HEK4-Guideseq-5_R2_cutadapt.fq.gz ../TargetSeq-quanquan/cutoff_3/merge.fastq/HEK4-Guideseq-5_merge_barcode_R1.fastq ../TargetSeq-quanquan/cutoff_3/merge.fastq/HEK4-Guideseq-5_merge_barcode_R2.fastq > ../TargetSeq-quanquan/cutoff_3/mapping/HEK4-Guideseq-5_cutadapt.log 2>&1
+        
+
+[Fri Oct 16 15:33:16 2020]
+rule cutadapt:
+    input: ../TargetSeq-sanjiao/cutoff_3/merge.fastq/HEK5-On-Target_merge_barcode_R1.fastq, ../TargetSeq-sanjiao/cutoff_3/merge.fastq/HEK5-On-Target_merge_barcode_R2.fastq
+    output: ../TargetSeq-sanjiao/cutoff_3/mapping/HEK5-On-Target_R1_cutadapt.fq.gz, ../TargetSeq-sanjiao/cutoff_3/mapping/HEK5-On-Target_R2_cutadapt.fq.gz
+    log: ../TargetSeq-sanjiao/cutoff_3/mapping/HEK5-On-Target_cutadapt.log
+    jobid: 21
+    reason: Missing output files: ../TargetSeq-sanjiao/cutoff_3/mapping/HEK5-On-Target_R2_cutadapt.fq.gz, ../TargetSeq-sanjiao/cutoff_3/mapping/HEK5-On-Target_R1_cutadapt.fq.gz
+    wildcards: lib=sanjiao, cutoff=3, sample=HEK5-On-Target
+
+
+        /home/zhaohuanan/miniconda3/envs/cutadapt/bin/cutadapt -j 24 --times 1  -e 0.1  -O 3  --quality-cutoff 25         -m 100 -a AGATCGGAAGAGCACACGTCTGAACTCCAGTCAC         -A AGATCGGAAGAGCGTCGTGTAGGGAAAGAGTGTAGATCTCGGTGGTCGCCGTATCATT         -o ../TargetSeq-sanjiao/cutoff_3/mapping/HEK5-On-Target_R1_cutadapt.fq.gz -p ../TargetSeq-sanjiao/cutoff_3/mapping/HEK5-On-Target_R2_cutadapt.fq.gz ../TargetSeq-sanjiao/cutoff_3/merge.fastq/HEK5-On-Target_merge_barcode_R1.fastq ../TargetSeq-sanjiao/cutoff_3/merge.fastq/HEK5-On-Target_merge_barcode_R2.fastq > ../TargetSeq-sanjiao/cutoff_3/mapping/HEK5-On-Target_cutadapt.log 2>&1
+        
+
+[Fri Oct 16 15:33:16 2020]
+rule cutadapt:
+    input: ../TargetSeq-sanjiao/cutoff_3/merge.fastq/EMX1-2-On_merge_barcode_R1.fastq, ../TargetSeq-sanjiao/cutoff_3/merge.fastq/EMX1-2-On_merge_barcode_R2.fastq
+    output: ../TargetSeq-sanjiao/cutoff_3/mapping/EMX1-2-On_R1_cutadapt.fq.gz, ../TargetSeq-sanjiao/cutoff_3/mapping/EMX1-2-On_R2_cutadapt.fq.gz
+    log: ../TargetSeq-sanjiao/cutoff_3/mapping/EMX1-2-On_cutadapt.log
+    jobid: 14
+    reason: Missing output files: ../TargetSeq-sanjiao/cutoff_3/mapping/EMX1-2-On_R1_cutadapt.fq.gz, ../TargetSeq-sanjiao/cutoff_3/mapping/EMX1-2-On_R2_cutadapt.fq.gz
+    wildcards: lib=sanjiao, cutoff=3, sample=EMX1-2-On
+
+
+        /home/zhaohuanan/miniconda3/envs/cutadapt/bin/cutadapt -j 24 --times 1  -e 0.1  -O 3  --quality-cutoff 25         -m 100 -a AGATCGGAAGAGCACACGTCTGAACTCCAGTCAC         -A AGATCGGAAGAGCGTCGTGTAGGGAAAGAGTGTAGATCTCGGTGGTCGCCGTATCATT         -o ../TargetSeq-sanjiao/cutoff_3/mapping/EMX1-2-On_R1_cutadapt.fq.gz -p ../TargetSeq-sanjiao/cutoff_3/mapping/EMX1-2-On_R2_cutadapt.fq.gz ../TargetSeq-sanjiao/cutoff_3/merge.fastq/EMX1-2-On_merge_barcode_R1.fastq ../TargetSeq-sanjiao/cutoff_3/merge.fastq/EMX1-2-On_merge_barcode_R2.fastq > ../TargetSeq-sanjiao/cutoff_3/mapping/EMX1-2-On_cutadapt.log 2>&1
+        
+
+[Fri Oct 16 15:33:16 2020]
+rule cutadapt:
+    input: ../TargetSeq-quanquan/cutoff_3/merge.fastq/HEK4-On-Target_merge_barcode_R1.fastq, ../TargetSeq-quanquan/cutoff_3/merge.fastq/HEK4-On-Target_merge_barcode_R2.fastq
+    output: ../TargetSeq-quanquan/cutoff_3/mapping/HEK4-On-Target_R1_cutadapt.fq.gz, ../TargetSeq-quanquan/cutoff_3/mapping/HEK4-On-Target_R2_cutadapt.fq.gz
+    log: ../TargetSeq-quanquan/cutoff_3/mapping/HEK4-On-Target_cutadapt.log
+    jobid: 8
+    reason: Missing output files: ../TargetSeq-quanquan/cutoff_3/mapping/HEK4-On-Target_R1_cutadapt.fq.gz, ../TargetSeq-quanquan/cutoff_3/mapping/HEK4-On-Target_R2_cutadapt.fq.gz
+    wildcards: lib=quanquan, cutoff=3, sample=HEK4-On-Target
+
+
+        /home/zhaohuanan/miniconda3/envs/cutadapt/bin/cutadapt -j 24 --times 1  -e 0.1  -O 3  --quality-cutoff 25         -m 100 -a AGATCGGAAGAGCACACGTCTGAACTCCAGTCAC         -A AGATCGGAAGAGCGTCGTGTAGGGAAAGAGTGTAGATCTCGGTGGTCGCCGTATCATT         -o ../TargetSeq-quanquan/cutoff_3/mapping/HEK4-On-Target_R1_cutadapt.fq.gz -p ../TargetSeq-quanquan/cutoff_3/mapping/HEK4-On-Target_R2_cutadapt.fq.gz ../TargetSeq-quanquan/cutoff_3/merge.fastq/HEK4-On-Target_merge_barcode_R1.fastq ../TargetSeq-quanquan/cutoff_3/merge.fastq/HEK4-On-Target_merge_barcode_R2.fastq > ../TargetSeq-quanquan/cutoff_3/mapping/HEK4-On-Target_cutadapt.log 2>&1
+        
+
+[Fri Oct 16 15:33:16 2020]
+rule cutadapt:
+    input: ../TargetSeq-sanjiao/cutoff_3/merge.fastq/PP2-On-Target_merge_barcode_R1.fastq, ../TargetSeq-sanjiao/cutoff_3/merge.fastq/PP2-On-Target_merge_barcode_R2.fastq
+    output: ../TargetSeq-sanjiao/cutoff_3/mapping/PP2-On-Target_R1_cutadapt.fq.gz, ../TargetSeq-sanjiao/cutoff_3/mapping/PP2-On-Target_R2_cutadapt.fq.gz
+    log: ../TargetSeq-sanjiao/cutoff_3/mapping/PP2-On-Target_cutadapt.log
+    jobid: 22
+    reason: Missing output files: ../TargetSeq-sanjiao/cutoff_3/mapping/PP2-On-Target_R1_cutadapt.fq.gz, ../TargetSeq-sanjiao/cutoff_3/mapping/PP2-On-Target_R2_cutadapt.fq.gz
+    wildcards: lib=sanjiao, cutoff=3, sample=PP2-On-Target
+
+
+        /home/zhaohuanan/miniconda3/envs/cutadapt/bin/cutadapt -j 24 --times 1  -e 0.1  -O 3  --quality-cutoff 25         -m 100 -a AGATCGGAAGAGCACACGTCTGAACTCCAGTCAC         -A AGATCGGAAGAGCGTCGTGTAGGGAAAGAGTGTAGATCTCGGTGGTCGCCGTATCATT         -o ../TargetSeq-sanjiao/cutoff_3/mapping/PP2-On-Target_R1_cutadapt.fq.gz -p ../TargetSeq-sanjiao/cutoff_3/mapping/PP2-On-Target_R2_cutadapt.fq.gz ../TargetSeq-sanjiao/cutoff_3/merge.fastq/PP2-On-Target_merge_barcode_R1.fastq ../TargetSeq-sanjiao/cutoff_3/merge.fastq/PP2-On-Target_merge_barcode_R2.fastq > ../TargetSeq-sanjiao/cutoff_3/mapping/PP2-On-Target_cutadapt.log 2>&1
+        
+
+[Fri Oct 16 15:33:16 2020]
+rule cutadapt:
+    input: ../TargetSeq-quanquan/cutoff_3/merge.fastq/ABE-Site-7-On_merge_barcode_R1.fastq, ../TargetSeq-quanquan/cutoff_3/merge.fastq/ABE-Site-7-On_merge_barcode_R2.fastq
+    output: ../TargetSeq-quanquan/cutoff_3/mapping/ABE-Site-7-On_R1_cutadapt.fq.gz, ../TargetSeq-quanquan/cutoff_3/mapping/ABE-Site-7-On_R2_cutadapt.fq.gz
+    log: ../TargetSeq-quanquan/cutoff_3/mapping/ABE-Site-7-On_cutadapt.log
+    jobid: 1
+    reason: Missing output files: ../TargetSeq-quanquan/cutoff_3/mapping/ABE-Site-7-On_R1_cutadapt.fq.gz, ../TargetSeq-quanquan/cutoff_3/mapping/ABE-Site-7-On_R2_cutadapt.fq.gz
+    wildcards: lib=quanquan, cutoff=3, sample=ABE-Site-7-On
+
+
+        /home/zhaohuanan/miniconda3/envs/cutadapt/bin/cutadapt -j 24 --times 1  -e 0.1  -O 3  --quality-cutoff 25         -m 100 -a AGATCGGAAGAGCACACGTCTGAACTCCAGTCAC         -A AGATCGGAAGAGCGTCGTGTAGGGAAAGAGTGTAGATCTCGGTGGTCGCCGTATCATT         -o ../TargetSeq-quanquan/cutoff_3/mapping/ABE-Site-7-On_R1_cutadapt.fq.gz -p ../TargetSeq-quanquan/cutoff_3/mapping/ABE-Site-7-On_R2_cutadapt.fq.gz ../TargetSeq-quanquan/cutoff_3/merge.fastq/ABE-Site-7-On_merge_barcode_R1.fastq ../TargetSeq-quanquan/cutoff_3/merge.fastq/ABE-Site-7-On_merge_barcode_R2.fastq > ../TargetSeq-quanquan/cutoff_3/mapping/ABE-Site-7-On_cutadapt.log 2>&1
+        
+
+[Fri Oct 16 15:33:16 2020]
+rule cutadapt:
+    input: ../TargetSeq-sanjiao/cutoff_3/merge.fastq/HEK2-On-Target_merge_barcode_R1.fastq, ../TargetSeq-sanjiao/cutoff_3/merge.fastq/HEK2-On-Target_merge_barcode_R2.fastq
+    output: ../TargetSeq-sanjiao/cutoff_3/mapping/HEK2-On-Target_R1_cutadapt.fq.gz, ../TargetSeq-sanjiao/cutoff_3/mapping/HEK2-On-Target_R2_cutadapt.fq.gz
+    log: ../TargetSeq-sanjiao/cutoff_3/mapping/HEK2-On-Target_cutadapt.log
+    jobid: 15
+    reason: Missing output files: ../TargetSeq-sanjiao/cutoff_3/mapping/HEK2-On-Target_R2_cutadapt.fq.gz, ../TargetSeq-sanjiao/cutoff_3/mapping/HEK2-On-Target_R1_cutadapt.fq.gz
+    wildcards: lib=sanjiao, cutoff=3, sample=HEK2-On-Target
+
+
+        /home/zhaohuanan/miniconda3/envs/cutadapt/bin/cutadapt -j 24 --times 1  -e 0.1  -O 3  --quality-cutoff 25         -m 100 -a AGATCGGAAGAGCACACGTCTGAACTCCAGTCAC         -A AGATCGGAAGAGCGTCGTGTAGGGAAAGAGTGTAGATCTCGGTGGTCGCCGTATCATT         -o ../TargetSeq-sanjiao/cutoff_3/mapping/HEK2-On-Target_R1_cutadapt.fq.gz -p ../TargetSeq-sanjiao/cutoff_3/mapping/HEK2-On-Target_R2_cutadapt.fq.gz ../TargetSeq-sanjiao/cutoff_3/merge.fastq/HEK2-On-Target_merge_barcode_R1.fastq ../TargetSeq-sanjiao/cutoff_3/merge.fastq/HEK2-On-Target_merge_barcode_R2.fastq > ../TargetSeq-sanjiao/cutoff_3/mapping/HEK2-On-Target_cutadapt.log 2>&1
+        
+
+[Fri Oct 16 15:33:16 2020]
+rule cutadapt:
+    input: ../TargetSeq-quanquan/cutoff_3/merge.fastq/HEK5-On-Target_merge_barcode_R1.fastq, ../TargetSeq-quanquan/cutoff_3/merge.fastq/HEK5-On-Target_merge_barcode_R2.fastq
+    output: ../TargetSeq-quanquan/cutoff_3/mapping/HEK5-On-Target_R1_cutadapt.fq.gz, ../TargetSeq-quanquan/cutoff_3/mapping/HEK5-On-Target_R2_cutadapt.fq.gz
+    log: ../TargetSeq-quanquan/cutoff_3/mapping/HEK5-On-Target_cutadapt.log
+    jobid: 9
+    reason: Missing output files: ../TargetSeq-quanquan/cutoff_3/mapping/HEK5-On-Target_R1_cutadapt.fq.gz, ../TargetSeq-quanquan/cutoff_3/mapping/HEK5-On-Target_R2_cutadapt.fq.gz
+    wildcards: lib=quanquan, cutoff=3, sample=HEK5-On-Target
+
+
+        /home/zhaohuanan/miniconda3/envs/cutadapt/bin/cutadapt -j 24 --times 1  -e 0.1  -O 3  --quality-cutoff 25         -m 100 -a AGATCGGAAGAGCACACGTCTGAACTCCAGTCAC         -A AGATCGGAAGAGCGTCGTGTAGGGAAAGAGTGTAGATCTCGGTGGTCGCCGTATCATT         -o ../TargetSeq-quanquan/cutoff_3/mapping/HEK5-On-Target_R1_cutadapt.fq.gz -p ../TargetSeq-quanquan/cutoff_3/mapping/HEK5-On-Target_R2_cutadapt.fq.gz ../TargetSeq-quanquan/cutoff_3/merge.fastq/HEK5-On-Target_merge_barcode_R1.fastq ../TargetSeq-quanquan/cutoff_3/merge.fastq/HEK5-On-Target_merge_barcode_R2.fastq > ../TargetSeq-quanquan/cutoff_3/mapping/HEK5-On-Target_cutadapt.log 2>&1
+        
+
+[Fri Oct 16 15:33:16 2020]
+rule cutadapt:
+    input: ../TargetSeq-sanjiao/cutoff_3/merge.fastq/PP6-On-Target_merge_barcode_R1.fastq, ../TargetSeq-sanjiao/cutoff_3/merge.fastq/PP6-On-Target_merge_barcode_R2.fastq
+    output: ../TargetSeq-sanjiao/cutoff_3/mapping/PP6-On-Target_R1_cutadapt.fq.gz, ../TargetSeq-sanjiao/cutoff_3/mapping/PP6-On-Target_R2_cutadapt.fq.gz
+    log: ../TargetSeq-sanjiao/cutoff_3/mapping/PP6-On-Target_cutadapt.log
+    jobid: 23
+    reason: Missing output files: ../TargetSeq-sanjiao/cutoff_3/mapping/PP6-On-Target_R2_cutadapt.fq.gz, ../TargetSeq-sanjiao/cutoff_3/mapping/PP6-On-Target_R1_cutadapt.fq.gz
+    wildcards: lib=sanjiao, cutoff=3, sample=PP6-On-Target
+
+
+        /home/zhaohuanan/miniconda3/envs/cutadapt/bin/cutadapt -j 24 --times 1  -e 0.1  -O 3  --quality-cutoff 25         -m 100 -a AGATCGGAAGAGCACACGTCTGAACTCCAGTCAC         -A AGATCGGAAGAGCGTCGTGTAGGGAAAGAGTGTAGATCTCGGTGGTCGCCGTATCATT         -o ../TargetSeq-sanjiao/cutoff_3/mapping/PP6-On-Target_R1_cutadapt.fq.gz -p ../TargetSeq-sanjiao/cutoff_3/mapping/PP6-On-Target_R2_cutadapt.fq.gz ../TargetSeq-sanjiao/cutoff_3/merge.fastq/PP6-On-Target_merge_barcode_R1.fastq ../TargetSeq-sanjiao/cutoff_3/merge.fastq/PP6-On-Target_merge_barcode_R2.fastq > ../TargetSeq-sanjiao/cutoff_3/mapping/PP6-On-Target_cutadapt.log 2>&1
+        
+
+[Fri Oct 16 15:33:16 2020]
+rule cutadapt:
+    input: ../TargetSeq-sanjiao/cutoff_3/merge.fastq/HEK4-Guideseq-2_merge_barcode_R1.fastq, ../TargetSeq-sanjiao/cutoff_3/merge.fastq/HEK4-Guideseq-2_merge_barcode_R2.fastq
+    output: ../TargetSeq-sanjiao/cutoff_3/mapping/HEK4-Guideseq-2_R1_cutadapt.fq.gz, ../TargetSeq-sanjiao/cutoff_3/mapping/HEK4-Guideseq-2_R2_cutadapt.fq.gz
+    log: ../TargetSeq-sanjiao/cutoff_3/mapping/HEK4-Guideseq-2_cutadapt.log
+    jobid: 16
+    reason: Missing output files: ../TargetSeq-sanjiao/cutoff_3/mapping/HEK4-Guideseq-2_R1_cutadapt.fq.gz, ../TargetSeq-sanjiao/cutoff_3/mapping/HEK4-Guideseq-2_R2_cutadapt.fq.gz
+    wildcards: lib=sanjiao, cutoff=3, sample=HEK4-Guideseq-2
+
+
+        /home/zhaohuanan/miniconda3/envs/cutadapt/bin/cutadapt -j 24 --times 1  -e 0.1  -O 3  --quality-cutoff 25         -m 100 -a AGATCGGAAGAGCACACGTCTGAACTCCAGTCAC         -A AGATCGGAAGAGCGTCGTGTAGGGAAAGAGTGTAGATCTCGGTGGTCGCCGTATCATT         -o ../TargetSeq-sanjiao/cutoff_3/mapping/HEK4-Guideseq-2_R1_cutadapt.fq.gz -p ../TargetSeq-sanjiao/cutoff_3/mapping/HEK4-Guideseq-2_R2_cutadapt.fq.gz ../TargetSeq-sanjiao/cutoff_3/merge.fastq/HEK4-Guideseq-2_merge_barcode_R1.fastq ../TargetSeq-sanjiao/cutoff_3/merge.fastq/HEK4-Guideseq-2_merge_barcode_R2.fastq > ../TargetSeq-sanjiao/cutoff_3/mapping/HEK4-Guideseq-2_cutadapt.log 2>&1
+        
+
+[Fri Oct 16 15:33:16 2020]
+rule cutadapt:
+    input: ../TargetSeq-quanquan/cutoff_3/merge.fastq/EMX1-2-On_merge_barcode_R1.fastq, ../TargetSeq-quanquan/cutoff_3/merge.fastq/EMX1-2-On_merge_barcode_R2.fastq
+    output: ../TargetSeq-quanquan/cutoff_3/mapping/EMX1-2-On_R1_cutadapt.fq.gz, ../TargetSeq-quanquan/cutoff_3/mapping/EMX1-2-On_R2_cutadapt.fq.gz
+    log: ../TargetSeq-quanquan/cutoff_3/mapping/EMX1-2-On_cutadapt.log
+    jobid: 2
+    reason: Missing output files: ../TargetSeq-quanquan/cutoff_3/mapping/EMX1-2-On_R2_cutadapt.fq.gz, ../TargetSeq-quanquan/cutoff_3/mapping/EMX1-2-On_R1_cutadapt.fq.gz
+    wildcards: lib=quanquan, cutoff=3, sample=EMX1-2-On
+
+
+        /home/zhaohuanan/miniconda3/envs/cutadapt/bin/cutadapt -j 24 --times 1  -e 0.1  -O 3  --quality-cutoff 25         -m 100 -a AGATCGGAAGAGCACACGTCTGAACTCCAGTCAC         -A AGATCGGAAGAGCGTCGTGTAGGGAAAGAGTGTAGATCTCGGTGGTCGCCGTATCATT         -o ../TargetSeq-quanquan/cutoff_3/mapping/EMX1-2-On_R1_cutadapt.fq.gz -p ../TargetSeq-quanquan/cutoff_3/mapping/EMX1-2-On_R2_cutadapt.fq.gz ../TargetSeq-quanquan/cutoff_3/merge.fastq/EMX1-2-On_merge_barcode_R1.fastq ../TargetSeq-quanquan/cutoff_3/merge.fastq/EMX1-2-On_merge_barcode_R2.fastq > ../TargetSeq-quanquan/cutoff_3/mapping/EMX1-2-On_cutadapt.log 2>&1
+        
+
+[Fri Oct 16 15:33:16 2020]
+rule cutadapt:
+    input: ../TargetSeq-quanquan/cutoff_3/merge.fastq/PP2-On-Target_merge_barcode_R1.fastq, ../TargetSeq-quanquan/cutoff_3/merge.fastq/PP2-On-Target_merge_barcode_R2.fastq
+    output: ../TargetSeq-quanquan/cutoff_3/mapping/PP2-On-Target_R1_cutadapt.fq.gz, ../TargetSeq-quanquan/cutoff_3/mapping/PP2-On-Target_R2_cutadapt.fq.gz
+    log: ../TargetSeq-quanquan/cutoff_3/mapping/PP2-On-Target_cutadapt.log
+    jobid: 10
+    reason: Missing output files: ../TargetSeq-quanquan/cutoff_3/mapping/PP2-On-Target_R2_cutadapt.fq.gz, ../TargetSeq-quanquan/cutoff_3/mapping/PP2-On-Target_R1_cutadapt.fq.gz
+    wildcards: lib=quanquan, cutoff=3, sample=PP2-On-Target
+
+
+        /home/zhaohuanan/miniconda3/envs/cutadapt/bin/cutadapt -j 24 --times 1  -e 0.1  -O 3  --quality-cutoff 25         -m 100 -a AGATCGGAAGAGCACACGTCTGAACTCCAGTCAC         -A AGATCGGAAGAGCGTCGTGTAGGGAAAGAGTGTAGATCTCGGTGGTCGCCGTATCATT         -o ../TargetSeq-quanquan/cutoff_3/mapping/PP2-On-Target_R1_cutadapt.fq.gz -p ../TargetSeq-quanquan/cutoff_3/mapping/PP2-On-Target_R2_cutadapt.fq.gz ../TargetSeq-quanquan/cutoff_3/merge.fastq/PP2-On-Target_merge_barcode_R1.fastq ../TargetSeq-quanquan/cutoff_3/merge.fastq/PP2-On-Target_merge_barcode_R2.fastq > ../TargetSeq-quanquan/cutoff_3/mapping/PP2-On-Target_cutadapt.log 2>&1
+        
+
+[Fri Oct 16 15:33:16 2020]
+rule cutadapt:
+    input: ../TargetSeq-sanjiao/cutoff_3/merge.fastq/RNF2-ON-Target_merge_barcode_R1.fastq, ../TargetSeq-sanjiao/cutoff_3/merge.fastq/RNF2-ON-Target_merge_barcode_R2.fastq
+    output: ../TargetSeq-sanjiao/cutoff_3/mapping/RNF2-ON-Target_R1_cutadapt.fq.gz, ../TargetSeq-sanjiao/cutoff_3/mapping/RNF2-ON-Target_R2_cutadapt.fq.gz
+    log: ../TargetSeq-sanjiao/cutoff_3/mapping/RNF2-ON-Target_cutadapt.log
+    jobid: 24
+    reason: Missing output files: ../TargetSeq-sanjiao/cutoff_3/mapping/RNF2-ON-Target_R2_cutadapt.fq.gz, ../TargetSeq-sanjiao/cutoff_3/mapping/RNF2-ON-Target_R1_cutadapt.fq.gz
+    wildcards: lib=sanjiao, cutoff=3, sample=RNF2-ON-Target
+
+
+        /home/zhaohuanan/miniconda3/envs/cutadapt/bin/cutadapt -j 24 --times 1  -e 0.1  -O 3  --quality-cutoff 25         -m 100 -a AGATCGGAAGAGCACACGTCTGAACTCCAGTCAC         -A AGATCGGAAGAGCGTCGTGTAGGGAAAGAGTGTAGATCTCGGTGGTCGCCGTATCATT         -o ../TargetSeq-sanjiao/cutoff_3/mapping/RNF2-ON-Target_R1_cutadapt.fq.gz -p ../TargetSeq-sanjiao/cutoff_3/mapping/RNF2-ON-Target_R2_cutadapt.fq.gz ../TargetSeq-sanjiao/cutoff_3/merge.fastq/RNF2-ON-Target_merge_barcode_R1.fastq ../TargetSeq-sanjiao/cutoff_3/merge.fastq/RNF2-ON-Target_merge_barcode_R2.fastq > ../TargetSeq-sanjiao/cutoff_3/mapping/RNF2-ON-Target_cutadapt.log 2>&1
+        
+
+[Fri Oct 16 15:33:16 2020]
+rule cutadapt:
+    input: ../TargetSeq-quanquan/cutoff_3/merge.fastq/HEK2-On-Target_merge_barcode_R1.fastq, ../TargetSeq-quanquan/cutoff_3/merge.fastq/HEK2-On-Target_merge_barcode_R2.fastq
+    output: ../TargetSeq-quanquan/cutoff_3/mapping/HEK2-On-Target_R1_cutadapt.fq.gz, ../TargetSeq-quanquan/cutoff_3/mapping/HEK2-On-Target_R2_cutadapt.fq.gz
+    log: ../TargetSeq-quanquan/cutoff_3/mapping/HEK2-On-Target_cutadapt.log
+    jobid: 3
+    reason: Missing output files: ../TargetSeq-quanquan/cutoff_3/mapping/HEK2-On-Target_R1_cutadapt.fq.gz, ../TargetSeq-quanquan/cutoff_3/mapping/HEK2-On-Target_R2_cutadapt.fq.gz
+    wildcards: lib=quanquan, cutoff=3, sample=HEK2-On-Target
+
+
+        /home/zhaohuanan/miniconda3/envs/cutadapt/bin/cutadapt -j 24 --times 1  -e 0.1  -O 3  --quality-cutoff 25         -m 100 -a AGATCGGAAGAGCACACGTCTGAACTCCAGTCAC         -A AGATCGGAAGAGCGTCGTGTAGGGAAAGAGTGTAGATCTCGGTGGTCGCCGTATCATT         -o ../TargetSeq-quanquan/cutoff_3/mapping/HEK2-On-Target_R1_cutadapt.fq.gz -p ../TargetSeq-quanquan/cutoff_3/mapping/HEK2-On-Target_R2_cutadapt.fq.gz ../TargetSeq-quanquan/cutoff_3/merge.fastq/HEK2-On-Target_merge_barcode_R1.fastq ../TargetSeq-quanquan/cutoff_3/merge.fastq/HEK2-On-Target_merge_barcode_R2.fastq > ../TargetSeq-quanquan/cutoff_3/mapping/HEK2-On-Target_cutadapt.log 2>&1
+        
+
+[Fri Oct 16 15:33:16 2020]
+rule cutadapt:
+    input: ../TargetSeq-sanjiao/cutoff_3/merge.fastq/HEK4-Guideseq-3_merge_barcode_R1.fastq, ../TargetSeq-sanjiao/cutoff_3/merge.fastq/HEK4-Guideseq-3_merge_barcode_R2.fastq
+    output: ../TargetSeq-sanjiao/cutoff_3/mapping/HEK4-Guideseq-3_R1_cutadapt.fq.gz, ../TargetSeq-sanjiao/cutoff_3/mapping/HEK4-Guideseq-3_R2_cutadapt.fq.gz
+    log: ../TargetSeq-sanjiao/cutoff_3/mapping/HEK4-Guideseq-3_cutadapt.log
+    jobid: 17
+    reason: Missing output files: ../TargetSeq-sanjiao/cutoff_3/mapping/HEK4-Guideseq-3_R1_cutadapt.fq.gz, ../TargetSeq-sanjiao/cutoff_3/mapping/HEK4-Guideseq-3_R2_cutadapt.fq.gz
+    wildcards: lib=sanjiao, cutoff=3, sample=HEK4-Guideseq-3
+
+
+        /home/zhaohuanan/miniconda3/envs/cutadapt/bin/cutadapt -j 24 --times 1  -e 0.1  -O 3  --quality-cutoff 25         -m 100 -a AGATCGGAAGAGCACACGTCTGAACTCCAGTCAC         -A AGATCGGAAGAGCGTCGTGTAGGGAAAGAGTGTAGATCTCGGTGGTCGCCGTATCATT         -o ../TargetSeq-sanjiao/cutoff_3/mapping/HEK4-Guideseq-3_R1_cutadapt.fq.gz -p ../TargetSeq-sanjiao/cutoff_3/mapping/HEK4-Guideseq-3_R2_cutadapt.fq.gz ../TargetSeq-sanjiao/cutoff_3/merge.fastq/HEK4-Guideseq-3_merge_barcode_R1.fastq ../TargetSeq-sanjiao/cutoff_3/merge.fastq/HEK4-Guideseq-3_merge_barcode_R2.fastq > ../TargetSeq-sanjiao/cutoff_3/mapping/HEK4-Guideseq-3_cutadapt.log 2>&1
+        
+
+[Fri Oct 16 15:33:16 2020]
+rule cutadapt:
+    input: ../TargetSeq-sanjiao/cutoff_3/merge.fastq/HEK4-On-Target_merge_barcode_R1.fastq, ../TargetSeq-sanjiao/cutoff_3/merge.fastq/HEK4-On-Target_merge_barcode_R2.fastq
+    output: ../TargetSeq-sanjiao/cutoff_3/mapping/HEK4-On-Target_R1_cutadapt.fq.gz, ../TargetSeq-sanjiao/cutoff_3/mapping/HEK4-On-Target_R2_cutadapt.fq.gz
+    log: ../TargetSeq-sanjiao/cutoff_3/mapping/HEK4-On-Target_cutadapt.log
+    jobid: 20
+    reason: Missing output files: ../TargetSeq-sanjiao/cutoff_3/mapping/HEK4-On-Target_R2_cutadapt.fq.gz, ../TargetSeq-sanjiao/cutoff_3/mapping/HEK4-On-Target_R1_cutadapt.fq.gz
+    wildcards: lib=sanjiao, cutoff=3, sample=HEK4-On-Target
+
+
+        /home/zhaohuanan/miniconda3/envs/cutadapt/bin/cutadapt -j 24 --times 1  -e 0.1  -O 3  --quality-cutoff 25         -m 100 -a AGATCGGAAGAGCACACGTCTGAACTCCAGTCAC         -A AGATCGGAAGAGCGTCGTGTAGGGAAAGAGTGTAGATCTCGGTGGTCGCCGTATCATT         -o ../TargetSeq-sanjiao/cutoff_3/mapping/HEK4-On-Target_R1_cutadapt.fq.gz -p ../TargetSeq-sanjiao/cutoff_3/mapping/HEK4-On-Target_R2_cutadapt.fq.gz ../TargetSeq-sanjiao/cutoff_3/merge.fastq/HEK4-On-Target_merge_barcode_R1.fastq ../TargetSeq-sanjiao/cutoff_3/merge.fastq/HEK4-On-Target_merge_barcode_R2.fastq > ../TargetSeq-sanjiao/cutoff_3/mapping/HEK4-On-Target_cutadapt.log 2>&1
+        
+
+[Fri Oct 16 15:33:16 2020]
+rule cutadapt:
+    input: ../TargetSeq-quanquan/cutoff_3/merge.fastq/PP6-On-Target_merge_barcode_R1.fastq, ../TargetSeq-quanquan/cutoff_3/merge.fastq/PP6-On-Target_merge_barcode_R2.fastq
+    output: ../TargetSeq-quanquan/cutoff_3/mapping/PP6-On-Target_R1_cutadapt.fq.gz, ../TargetSeq-quanquan/cutoff_3/mapping/PP6-On-Target_R2_cutadapt.fq.gz
+    log: ../TargetSeq-quanquan/cutoff_3/mapping/PP6-On-Target_cutadapt.log
+    jobid: 11
+    reason: Missing output files: ../TargetSeq-quanquan/cutoff_3/mapping/PP6-On-Target_R1_cutadapt.fq.gz, ../TargetSeq-quanquan/cutoff_3/mapping/PP6-On-Target_R2_cutadapt.fq.gz
+    wildcards: lib=quanquan, cutoff=3, sample=PP6-On-Target
+
+
+        /home/zhaohuanan/miniconda3/envs/cutadapt/bin/cutadapt -j 24 --times 1  -e 0.1  -O 3  --quality-cutoff 25         -m 100 -a AGATCGGAAGAGCACACGTCTGAACTCCAGTCAC         -A AGATCGGAAGAGCGTCGTGTAGGGAAAGAGTGTAGATCTCGGTGGTCGCCGTATCATT         -o ../TargetSeq-quanquan/cutoff_3/mapping/PP6-On-Target_R1_cutadapt.fq.gz -p ../TargetSeq-quanquan/cutoff_3/mapping/PP6-On-Target_R2_cutadapt.fq.gz ../TargetSeq-quanquan/cutoff_3/merge.fastq/PP6-On-Target_merge_barcode_R1.fastq ../TargetSeq-quanquan/cutoff_3/merge.fastq/PP6-On-Target_merge_barcode_R2.fastq > ../TargetSeq-quanquan/cutoff_3/mapping/PP6-On-Target_cutadapt.log 2>&1
+        
+
+[Fri Oct 16 15:33:16 2020]
+rule cutadapt:
+    input: ../TargetSeq-sanjiao/cutoff_3/merge.fastq/HEK4-Guideseq-4_merge_barcode_R1.fastq, ../TargetSeq-sanjiao/cutoff_3/merge.fastq/HEK4-Guideseq-4_merge_barcode_R2.fastq
+    output: ../TargetSeq-sanjiao/cutoff_3/mapping/HEK4-Guideseq-4_R1_cutadapt.fq.gz, ../TargetSeq-sanjiao/cutoff_3/mapping/HEK4-Guideseq-4_R2_cutadapt.fq.gz
+    log: ../TargetSeq-sanjiao/cutoff_3/mapping/HEK4-Guideseq-4_cutadapt.log
+    jobid: 18
+    reason: Missing output files: ../TargetSeq-sanjiao/cutoff_3/mapping/HEK4-Guideseq-4_R2_cutadapt.fq.gz, ../TargetSeq-sanjiao/cutoff_3/mapping/HEK4-Guideseq-4_R1_cutadapt.fq.gz
+    wildcards: lib=sanjiao, cutoff=3, sample=HEK4-Guideseq-4
+
+
+        /home/zhaohuanan/miniconda3/envs/cutadapt/bin/cutadapt -j 24 --times 1  -e 0.1  -O 3  --quality-cutoff 25         -m 100 -a AGATCGGAAGAGCACACGTCTGAACTCCAGTCAC         -A AGATCGGAAGAGCGTCGTGTAGGGAAAGAGTGTAGATCTCGGTGGTCGCCGTATCATT         -o ../TargetSeq-sanjiao/cutoff_3/mapping/HEK4-Guideseq-4_R1_cutadapt.fq.gz -p ../TargetSeq-sanjiao/cutoff_3/mapping/HEK4-Guideseq-4_R2_cutadapt.fq.gz ../TargetSeq-sanjiao/cutoff_3/merge.fastq/HEK4-Guideseq-4_merge_barcode_R1.fastq ../TargetSeq-sanjiao/cutoff_3/merge.fastq/HEK4-Guideseq-4_merge_barcode_R2.fastq > ../TargetSeq-sanjiao/cutoff_3/mapping/HEK4-Guideseq-4_cutadapt.log 2>&1
+        
+
+[Fri Oct 16 15:33:16 2020]
+rule cutadapt:
+    input: ../TargetSeq-quanquan/cutoff_3/merge.fastq/HEK4-Guideseq-2_merge_barcode_R1.fastq, ../TargetSeq-quanquan/cutoff_3/merge.fastq/HEK4-Guideseq-2_merge_barcode_R2.fastq
+    output: ../TargetSeq-quanquan/cutoff_3/mapping/HEK4-Guideseq-2_R1_cutadapt.fq.gz, ../TargetSeq-quanquan/cutoff_3/mapping/HEK4-Guideseq-2_R2_cutadapt.fq.gz
+    log: ../TargetSeq-quanquan/cutoff_3/mapping/HEK4-Guideseq-2_cutadapt.log
+    jobid: 4
+    reason: Missing output files: ../TargetSeq-quanquan/cutoff_3/mapping/HEK4-Guideseq-2_R1_cutadapt.fq.gz, ../TargetSeq-quanquan/cutoff_3/mapping/HEK4-Guideseq-2_R2_cutadapt.fq.gz
+    wildcards: lib=quanquan, cutoff=3, sample=HEK4-Guideseq-2
+
+
+        /home/zhaohuanan/miniconda3/envs/cutadapt/bin/cutadapt -j 24 --times 1  -e 0.1  -O 3  --quality-cutoff 25         -m 100 -a AGATCGGAAGAGCACACGTCTGAACTCCAGTCAC         -A AGATCGGAAGAGCGTCGTGTAGGGAAAGAGTGTAGATCTCGGTGGTCGCCGTATCATT         -o ../TargetSeq-quanquan/cutoff_3/mapping/HEK4-Guideseq-2_R1_cutadapt.fq.gz -p ../TargetSeq-quanquan/cutoff_3/mapping/HEK4-Guideseq-2_R2_cutadapt.fq.gz ../TargetSeq-quanquan/cutoff_3/merge.fastq/HEK4-Guideseq-2_merge_barcode_R1.fastq ../TargetSeq-quanquan/cutoff_3/merge.fastq/HEK4-Guideseq-2_merge_barcode_R2.fastq > ../TargetSeq-quanquan/cutoff_3/mapping/HEK4-Guideseq-2_cutadapt.log 2>&1
+        
+
+[Fri Oct 16 15:33:16 2020]
+rule cutadapt:
+    input: ../TargetSeq-quanquan/cutoff_3/merge.fastq/RNF2-ON-Target_merge_barcode_R1.fastq, ../TargetSeq-quanquan/cutoff_3/merge.fastq/RNF2-ON-Target_merge_barcode_R2.fastq
+    output: ../TargetSeq-quanquan/cutoff_3/mapping/RNF2-ON-Target_R1_cutadapt.fq.gz, ../TargetSeq-quanquan/cutoff_3/mapping/RNF2-ON-Target_R2_cutadapt.fq.gz
+    log: ../TargetSeq-quanquan/cutoff_3/mapping/RNF2-ON-Target_cutadapt.log
+    jobid: 12
+    reason: Missing output files: ../TargetSeq-quanquan/cutoff_3/mapping/RNF2-ON-Target_R1_cutadapt.fq.gz, ../TargetSeq-quanquan/cutoff_3/mapping/RNF2-ON-Target_R2_cutadapt.fq.gz
+    wildcards: lib=quanquan, cutoff=3, sample=RNF2-ON-Target
+
+
+        /home/zhaohuanan/miniconda3/envs/cutadapt/bin/cutadapt -j 24 --times 1  -e 0.1  -O 3  --quality-cutoff 25         -m 100 -a AGATCGGAAGAGCACACGTCTGAACTCCAGTCAC         -A AGATCGGAAGAGCGTCGTGTAGGGAAAGAGTGTAGATCTCGGTGGTCGCCGTATCATT         -o ../TargetSeq-quanquan/cutoff_3/mapping/RNF2-ON-Target_R1_cutadapt.fq.gz -p ../TargetSeq-quanquan/cutoff_3/mapping/RNF2-ON-Target_R2_cutadapt.fq.gz ../TargetSeq-quanquan/cutoff_3/merge.fastq/RNF2-ON-Target_merge_barcode_R1.fastq ../TargetSeq-quanquan/cutoff_3/merge.fastq/RNF2-ON-Target_merge_barcode_R2.fastq > ../TargetSeq-quanquan/cutoff_3/mapping/RNF2-ON-Target_cutadapt.log 2>&1
+        
+
+[Fri Oct 16 15:33:16 2020]
+rule cutadapt:
+    input: ../TargetSeq-quanquan/cutoff_3/merge.fastq/HEK4-Guideseq-3_merge_barcode_R1.fastq, ../TargetSeq-quanquan/cutoff_3/merge.fastq/HEK4-Guideseq-3_merge_barcode_R2.fastq
+    output: ../TargetSeq-quanquan/cutoff_3/mapping/HEK4-Guideseq-3_R1_cutadapt.fq.gz, ../TargetSeq-quanquan/cutoff_3/mapping/HEK4-Guideseq-3_R2_cutadapt.fq.gz
+    log: ../TargetSeq-quanquan/cutoff_3/mapping/HEK4-Guideseq-3_cutadapt.log
+    jobid: 5
+    reason: Missing output files: ../TargetSeq-quanquan/cutoff_3/mapping/HEK4-Guideseq-3_R1_cutadapt.fq.gz, ../TargetSeq-quanquan/cutoff_3/mapping/HEK4-Guideseq-3_R2_cutadapt.fq.gz
+    wildcards: lib=quanquan, cutoff=3, sample=HEK4-Guideseq-3
+
+
+        /home/zhaohuanan/miniconda3/envs/cutadapt/bin/cutadapt -j 24 --times 1  -e 0.1  -O 3  --quality-cutoff 25         -m 100 -a AGATCGGAAGAGCACACGTCTGAACTCCAGTCAC         -A AGATCGGAAGAGCGTCGTGTAGGGAAAGAGTGTAGATCTCGGTGGTCGCCGTATCATT         -o ../TargetSeq-quanquan/cutoff_3/mapping/HEK4-Guideseq-3_R1_cutadapt.fq.gz -p ../TargetSeq-quanquan/cutoff_3/mapping/HEK4-Guideseq-3_R2_cutadapt.fq.gz ../TargetSeq-quanquan/cutoff_3/merge.fastq/HEK4-Guideseq-3_merge_barcode_R1.fastq ../TargetSeq-quanquan/cutoff_3/merge.fastq/HEK4-Guideseq-3_merge_barcode_R2.fastq > ../TargetSeq-quanquan/cutoff_3/mapping/HEK4-Guideseq-3_cutadapt.log 2>&1
+        
+
+[Fri Oct 16 15:33:16 2020]
+rule cutadapt:
+    input: ../TargetSeq-sanjiao/cutoff_3/merge.fastq/HEK4-Guideseq-5_merge_barcode_R1.fastq, ../TargetSeq-sanjiao/cutoff_3/merge.fastq/HEK4-Guideseq-5_merge_barcode_R2.fastq
+    output: ../TargetSeq-sanjiao/cutoff_3/mapping/HEK4-Guideseq-5_R1_cutadapt.fq.gz, ../TargetSeq-sanjiao/cutoff_3/mapping/HEK4-Guideseq-5_R2_cutadapt.fq.gz
+    log: ../TargetSeq-sanjiao/cutoff_3/mapping/HEK4-Guideseq-5_cutadapt.log
+    jobid: 19
+    reason: Missing output files: ../TargetSeq-sanjiao/cutoff_3/mapping/HEK4-Guideseq-5_R2_cutadapt.fq.gz, ../TargetSeq-sanjiao/cutoff_3/mapping/HEK4-Guideseq-5_R1_cutadapt.fq.gz
+    wildcards: lib=sanjiao, cutoff=3, sample=HEK4-Guideseq-5
+
+
+        /home/zhaohuanan/miniconda3/envs/cutadapt/bin/cutadapt -j 24 --times 1  -e 0.1  -O 3  --quality-cutoff 25         -m 100 -a AGATCGGAAGAGCACACGTCTGAACTCCAGTCAC         -A AGATCGGAAGAGCGTCGTGTAGGGAAAGAGTGTAGATCTCGGTGGTCGCCGTATCATT         -o ../TargetSeq-sanjiao/cutoff_3/mapping/HEK4-Guideseq-5_R1_cutadapt.fq.gz -p ../TargetSeq-sanjiao/cutoff_3/mapping/HEK4-Guideseq-5_R2_cutadapt.fq.gz ../TargetSeq-sanjiao/cutoff_3/merge.fastq/HEK4-Guideseq-5_merge_barcode_R1.fastq ../TargetSeq-sanjiao/cutoff_3/merge.fastq/HEK4-Guideseq-5_merge_barcode_R2.fastq > ../TargetSeq-sanjiao/cutoff_3/mapping/HEK4-Guideseq-5_cutadapt.log 2>&1
+        
+
+[Fri Oct 16 15:33:16 2020]
+rule cutadapt:
+    input: ../TargetSeq-quanquan/cutoff_3/merge.fastq/HEK4-Guideseq-4_merge_barcode_R1.fastq, ../TargetSeq-quanquan/cutoff_3/merge.fastq/HEK4-Guideseq-4_merge_barcode_R2.fastq
+    output: ../TargetSeq-quanquan/cutoff_3/mapping/HEK4-Guideseq-4_R1_cutadapt.fq.gz, ../TargetSeq-quanquan/cutoff_3/mapping/HEK4-Guideseq-4_R2_cutadapt.fq.gz
+    log: ../TargetSeq-quanquan/cutoff_3/mapping/HEK4-Guideseq-4_cutadapt.log
+    jobid: 6
+    reason: Missing output files: ../TargetSeq-quanquan/cutoff_3/mapping/HEK4-Guideseq-4_R1_cutadapt.fq.gz, ../TargetSeq-quanquan/cutoff_3/mapping/HEK4-Guideseq-4_R2_cutadapt.fq.gz
+    wildcards: lib=quanquan, cutoff=3, sample=HEK4-Guideseq-4
+
+
+        /home/zhaohuanan/miniconda3/envs/cutadapt/bin/cutadapt -j 24 --times 1  -e 0.1  -O 3  --quality-cutoff 25         -m 100 -a AGATCGGAAGAGCACACGTCTGAACTCCAGTCAC         -A AGATCGGAAGAGCGTCGTGTAGGGAAAGAGTGTAGATCTCGGTGGTCGCCGTATCATT         -o ../TargetSeq-quanquan/cutoff_3/mapping/HEK4-Guideseq-4_R1_cutadapt.fq.gz -p ../TargetSeq-quanquan/cutoff_3/mapping/HEK4-Guideseq-4_R2_cutadapt.fq.gz ../TargetSeq-quanquan/cutoff_3/merge.fastq/HEK4-Guideseq-4_merge_barcode_R1.fastq ../TargetSeq-quanquan/cutoff_3/merge.fastq/HEK4-Guideseq-4_merge_barcode_R2.fastq > ../TargetSeq-quanquan/cutoff_3/mapping/HEK4-Guideseq-4_cutadapt.log 2>&1
+        
+[Fri Oct 16 15:33:18 2020]
+Finished job 17.
+1 of 121 steps (0.83%) done
+
+[Fri Oct 16 15:33:18 2020]
+rule bwa_mapping:
+    input: ../TargetSeq-sanjiao/cutoff_3/mapping/HEK4-Guideseq-3_R1_cutadapt.fq.gz, ../TargetSeq-sanjiao/cutoff_3/mapping/HEK4-Guideseq-3_R2_cutadapt.fq.gz
+    output: ../TargetSeq-sanjiao/cutoff_3/mapping/HEK4-Guideseq-3_bwa.sam
+    log: ../TargetSeq-sanjiao/cutoff_3/mapping/HEK4-Guideseq-3_bwa.log
+    jobid: 137
+    reason: Missing output files: ../TargetSeq-sanjiao/cutoff_3/mapping/HEK4-Guideseq-3_bwa.sam; Input files updated by another job: ../TargetSeq-sanjiao/cutoff_3/mapping/HEK4-Guideseq-3_R1_cutadapt.fq.gz, ../TargetSeq-sanjiao/cutoff_3/mapping/HEK4-Guideseq-3_R2_cutadapt.fq.gz
+    wildcards: lib=sanjiao, cutoff=3, sample=HEK4-Guideseq-3
+
+
+        /home/zhaohuanan/miniconda3/envs/snakepipes_target-seq-from-table-to-plot/bin/bwa mem ../TargetSeq_BED_sample_lib/HEK4-Guideseq-3.ref.upper.fa ../TargetSeq-sanjiao/cutoff_3/mapping/HEK4-Guideseq-3_R1_cutadapt.fq.gz ../TargetSeq-sanjiao/cutoff_3/mapping/HEK4-Guideseq-3_R2_cutadapt.fq.gz -t 24 -M > ../TargetSeq-sanjiao/cutoff_3/mapping/HEK4-Guideseq-3_bwa.sam 2>../TargetSeq-sanjiao/cutoff_3/mapping/HEK4-Guideseq-3_bwa.log
+        
+[Fri Oct 16 15:33:18 2020]
+Finished job 5.
+2 of 121 steps (2%) done
+
+[Fri Oct 16 15:33:18 2020]
+rule bwa_mapping:
+    input: ../TargetSeq-quanquan/cutoff_3/mapping/HEK4-Guideseq-3_R1_cutadapt.fq.gz, ../TargetSeq-quanquan/cutoff_3/mapping/HEK4-Guideseq-3_R2_cutadapt.fq.gz
+    output: ../TargetSeq-quanquan/cutoff_3/mapping/HEK4-Guideseq-3_bwa.sam
+    log: ../TargetSeq-quanquan/cutoff_3/mapping/HEK4-Guideseq-3_bwa.log
+    jobid: 125
+    reason: Missing output files: ../TargetSeq-quanquan/cutoff_3/mapping/HEK4-Guideseq-3_bwa.sam; Input files updated by another job: ../TargetSeq-quanquan/cutoff_3/mapping/HEK4-Guideseq-3_R1_cutadapt.fq.gz, ../TargetSeq-quanquan/cutoff_3/mapping/HEK4-Guideseq-3_R2_cutadapt.fq.gz
+    wildcards: lib=quanquan, cutoff=3, sample=HEK4-Guideseq-3
+
+
+        /home/zhaohuanan/miniconda3/envs/snakepipes_target-seq-from-table-to-plot/bin/bwa mem ../TargetSeq_BED_sample_lib/HEK4-Guideseq-3.ref.upper.fa ../TargetSeq-quanquan/cutoff_3/mapping/HEK4-Guideseq-3_R1_cutadapt.fq.gz ../TargetSeq-quanquan/cutoff_3/mapping/HEK4-Guideseq-3_R2_cutadapt.fq.gz -t 24 -M > ../TargetSeq-quanquan/cutoff_3/mapping/HEK4-Guideseq-3_bwa.sam 2>../TargetSeq-quanquan/cutoff_3/mapping/HEK4-Guideseq-3_bwa.log
+        
+[Fri Oct 16 15:33:19 2020]
+Finished job 137.
+3 of 121 steps (2%) done
+
+[Fri Oct 16 15:33:19 2020]
+rule sam_to_bam:
+    input: ../TargetSeq-sanjiao/cutoff_3/mapping/HEK4-Guideseq-3_bwa.sam, ../TargetSeq_BED_sample_lib/HEK4-Guideseq-3.ref.upper.fa
+    output: ../TargetSeq-sanjiao/cutoff_3/mapping/HEK4-Guideseq-3_bwa.bam
+    jobid: 113
+    reason: Missing output files: ../TargetSeq-sanjiao/cutoff_3/mapping/HEK4-Guideseq-3_bwa.bam; Input files updated by another job: ../TargetSeq-sanjiao/cutoff_3/mapping/HEK4-Guideseq-3_bwa.sam
+    wildcards: lib=sanjiao, cutoff=3, sample=HEK4-Guideseq-3
+
+
+        /home/zhaohuanan/miniconda3/envs/snakepipes_cutadapt-STARmapping-FPKM-sortBAM/bin/samtools view -h -f 1 -F 268 ../TargetSeq-sanjiao/cutoff_3/mapping/HEK4-Guideseq-3_bwa.sam         | /home/zhaohuanan/miniconda3/envs/snakepipes_target-seq-from-table-to-plot/bin/samclip --ref ../TargetSeq_BED_sample_lib/HEK4-Guideseq-3.ref.upper.fa --max 3 --progress 0         | awk 'function abs(v) {return v < 0 ? -v : v} $1~"@" || ($7 == "=" && abs($9) <= 600 ) {print $0}'         | /home/zhaohuanan/miniconda3/envs/snakepipes_cutadapt-STARmapping-FPKM-sortBAM/bin/samtools view -hb > ../TargetSeq-sanjiao/cutoff_3/mapping/HEK4-Guideseq-3_bwa.bam
+        
+[Fri Oct 16 15:33:19 2020]
+Finished job 125.
+4 of 121 steps (3%) done
+
+[Fri Oct 16 15:33:19 2020]
+rule sam_to_bam:
+    input: ../TargetSeq-quanquan/cutoff_3/mapping/HEK4-Guideseq-3_bwa.sam, ../TargetSeq_BED_sample_lib/HEK4-Guideseq-3.ref.upper.fa
+    output: ../TargetSeq-quanquan/cutoff_3/mapping/HEK4-Guideseq-3_bwa.bam
+    jobid: 101
+    reason: Missing output files: ../TargetSeq-quanquan/cutoff_3/mapping/HEK4-Guideseq-3_bwa.bam; Input files updated by another job: ../TargetSeq-quanquan/cutoff_3/mapping/HEK4-Guideseq-3_bwa.sam
+    wildcards: lib=quanquan, cutoff=3, sample=HEK4-Guideseq-3
+
+
+        /home/zhaohuanan/miniconda3/envs/snakepipes_cutadapt-STARmapping-FPKM-sortBAM/bin/samtools view -h -f 1 -F 268 ../TargetSeq-quanquan/cutoff_3/mapping/HEK4-Guideseq-3_bwa.sam         | /home/zhaohuanan/miniconda3/envs/snakepipes_target-seq-from-table-to-plot/bin/samclip --ref ../TargetSeq_BED_sample_lib/HEK4-Guideseq-3.ref.upper.fa --max 3 --progress 0         | awk 'function abs(v) {return v < 0 ? -v : v} $1~"@" || ($7 == "=" && abs($9) <= 600 ) {print $0}'         | /home/zhaohuanan/miniconda3/envs/snakepipes_cutadapt-STARmapping-FPKM-sortBAM/bin/samtools view -hb > ../TargetSeq-quanquan/cutoff_3/mapping/HEK4-Guideseq-3_bwa.bam
+        
+[Fri Oct 16 15:33:19 2020]
+Finished job 113.
+5 of 121 steps (4%) done
+
+[Fri Oct 16 15:33:19 2020]
+rule samtools_sort_by_position:
+    input: ../TargetSeq-sanjiao/cutoff_3/mapping/HEK4-Guideseq-3_bwa.bam
+    output: ../TargetSeq-sanjiao/cutoff_3/mapping/HEK4-Guideseq-3_bwa_sort.bam
+    jobid: 41
+    reason: Missing output files: ../TargetSeq-sanjiao/cutoff_3/mapping/HEK4-Guideseq-3_bwa_sort.bam; Input files updated by another job: ../TargetSeq-sanjiao/cutoff_3/mapping/HEK4-Guideseq-3_bwa.bam
+    wildcards: lib=sanjiao, cutoff=3, sample=HEK4-Guideseq-3
+
+/home/zhaohuanan/miniconda3/envs/snakepipes_cutadapt-STARmapping-FPKM-sortBAM/bin/samtools sort -O BAM -o ../TargetSeq-sanjiao/cutoff_3/mapping/HEK4-Guideseq-3_bwa_sort.bam -T ../TargetSeq-sanjiao/cutoff_3/mapping/HEK4-Guideseq-3_bwa_sort.bam.temp -@ 6 -m 2G ../TargetSeq-sanjiao/cutoff_3/mapping/HEK4-Guideseq-3_bwa.bam
+[Fri Oct 16 15:33:19 2020]
+Finished job 101.
+6 of 121 steps (5%) done
+
+[Fri Oct 16 15:33:19 2020]
+rule samtools_sort_by_position:
+    input: ../TargetSeq-quanquan/cutoff_3/mapping/HEK4-Guideseq-3_bwa.bam
+    output: ../TargetSeq-quanquan/cutoff_3/mapping/HEK4-Guideseq-3_bwa_sort.bam
+    jobid: 29
+    reason: Missing output files: ../TargetSeq-quanquan/cutoff_3/mapping/HEK4-Guideseq-3_bwa_sort.bam; Input files updated by another job: ../TargetSeq-quanquan/cutoff_3/mapping/HEK4-Guideseq-3_bwa.bam
+    wildcards: lib=quanquan, cutoff=3, sample=HEK4-Guideseq-3
+
+/home/zhaohuanan/miniconda3/envs/snakepipes_cutadapt-STARmapping-FPKM-sortBAM/bin/samtools sort -O BAM -o ../TargetSeq-quanquan/cutoff_3/mapping/HEK4-Guideseq-3_bwa_sort.bam -T ../TargetSeq-quanquan/cutoff_3/mapping/HEK4-Guideseq-3_bwa_sort.bam.temp -@ 6 -m 2G ../TargetSeq-quanquan/cutoff_3/mapping/HEK4-Guideseq-3_bwa.bam
+[Fri Oct 16 15:33:19 2020]
+Finished job 41.
+7 of 121 steps (6%) done
+
+[Fri Oct 16 15:33:19 2020]
+rule samtools_index:
+    input: ../TargetSeq-sanjiao/cutoff_3/mapping/HEK4-Guideseq-3_bwa_sort.bam
+    output: ../TargetSeq-sanjiao/cutoff_3/mapping/HEK4-Guideseq-3_bwa_sort.bam.bai
+    jobid: 65
+    reason: Missing output files: ../TargetSeq-sanjiao/cutoff_3/mapping/HEK4-Guideseq-3_bwa_sort.bam.bai; Input files updated by another job: ../TargetSeq-sanjiao/cutoff_3/mapping/HEK4-Guideseq-3_bwa_sort.bam
+    wildcards: lib=sanjiao, cutoff=3, sample=HEK4-Guideseq-3
+
+/home/zhaohuanan/miniconda3/envs/snakepipes_cutadapt-STARmapping-FPKM-sortBAM/bin/samtools index -@ 6 ../TargetSeq-sanjiao/cutoff_3/mapping/HEK4-Guideseq-3_bwa_sort.bam ../TargetSeq-sanjiao/cutoff_3/mapping/HEK4-Guideseq-3_bwa_sort.bam.bai
+[Fri Oct 16 15:33:19 2020]
+Finished job 29.
+8 of 121 steps (7%) done
+
+[Fri Oct 16 15:33:19 2020]
+rule samtools_index:
+    input: ../TargetSeq-quanquan/cutoff_3/mapping/HEK4-Guideseq-3_bwa_sort.bam
+    output: ../TargetSeq-quanquan/cutoff_3/mapping/HEK4-Guideseq-3_bwa_sort.bam.bai
+    jobid: 53
+    reason: Missing output files: ../TargetSeq-quanquan/cutoff_3/mapping/HEK4-Guideseq-3_bwa_sort.bam.bai; Input files updated by another job: ../TargetSeq-quanquan/cutoff_3/mapping/HEK4-Guideseq-3_bwa_sort.bam
+    wildcards: lib=quanquan, cutoff=3, sample=HEK4-Guideseq-3
+
+/home/zhaohuanan/miniconda3/envs/snakepipes_cutadapt-STARmapping-FPKM-sortBAM/bin/samtools index -@ 6 ../TargetSeq-quanquan/cutoff_3/mapping/HEK4-Guideseq-3_bwa_sort.bam ../TargetSeq-quanquan/cutoff_3/mapping/HEK4-Guideseq-3_bwa_sort.bam.bai
+[Fri Oct 16 15:33:19 2020]
+Finished job 65.
+9 of 121 steps (7%) done
+[Fri Oct 16 15:33:19 2020]
+Finished job 53.
+10 of 121 steps (8%) done
+[Fri Oct 16 15:33:24 2020]
+Finished job 21.
+11 of 121 steps (9%) done
+
+[Fri Oct 16 15:33:24 2020]
+rule bwa_mapping:
+    input: ../TargetSeq-sanjiao/cutoff_3/mapping/HEK5-On-Target_R1_cutadapt.fq.gz, ../TargetSeq-sanjiao/cutoff_3/mapping/HEK5-On-Target_R2_cutadapt.fq.gz
+    output: ../TargetSeq-sanjiao/cutoff_3/mapping/HEK5-On-Target_bwa.sam
+    log: ../TargetSeq-sanjiao/cutoff_3/mapping/HEK5-On-Target_bwa.log
+    jobid: 141
+    reason: Missing output files: ../TargetSeq-sanjiao/cutoff_3/mapping/HEK5-On-Target_bwa.sam; Input files updated by another job: ../TargetSeq-sanjiao/cutoff_3/mapping/HEK5-On-Target_R2_cutadapt.fq.gz, ../TargetSeq-sanjiao/cutoff_3/mapping/HEK5-On-Target_R1_cutadapt.fq.gz
+    wildcards: lib=sanjiao, cutoff=3, sample=HEK5-On-Target
+
+
+        /home/zhaohuanan/miniconda3/envs/snakepipes_target-seq-from-table-to-plot/bin/bwa mem ../TargetSeq_BED_sample_lib/HEK5-On-Target.ref.upper.fa ../TargetSeq-sanjiao/cutoff_3/mapping/HEK5-On-Target_R1_cutadapt.fq.gz ../TargetSeq-sanjiao/cutoff_3/mapping/HEK5-On-Target_R2_cutadapt.fq.gz -t 24 -M > ../TargetSeq-sanjiao/cutoff_3/mapping/HEK5-On-Target_bwa.sam 2>../TargetSeq-sanjiao/cutoff_3/mapping/HEK5-On-Target_bwa.log
+        
+[Fri Oct 16 15:33:24 2020]
+Finished job 15.
+12 of 121 steps (10%) done
+[Fri Oct 16 15:33:24 2020]
+Finished job 10.
+13 of 121 steps (11%) done
+
+[Fri Oct 16 15:33:24 2020]
+rule bwa_mapping:
+    input: ../TargetSeq-sanjiao/cutoff_3/mapping/HEK2-On-Target_R1_cutadapt.fq.gz, ../TargetSeq-sanjiao/cutoff_3/mapping/HEK2-On-Target_R2_cutadapt.fq.gz
+    output: ../TargetSeq-sanjiao/cutoff_3/mapping/HEK2-On-Target_bwa.sam
+    log: ../TargetSeq-sanjiao/cutoff_3/mapping/HEK2-On-Target_bwa.log
+    jobid: 135
+    reason: Missing output files: ../TargetSeq-sanjiao/cutoff_3/mapping/HEK2-On-Target_bwa.sam; Input files updated by another job: ../TargetSeq-sanjiao/cutoff_3/mapping/HEK2-On-Target_R2_cutadapt.fq.gz, ../TargetSeq-sanjiao/cutoff_3/mapping/HEK2-On-Target_R1_cutadapt.fq.gz
+    wildcards: lib=sanjiao, cutoff=3, sample=HEK2-On-Target
+
+
+        /home/zhaohuanan/miniconda3/envs/snakepipes_target-seq-from-table-to-plot/bin/bwa mem ../TargetSeq_BED_sample_lib/HEK2-On-Target.ref.upper.fa ../TargetSeq-sanjiao/cutoff_3/mapping/HEK2-On-Target_R1_cutadapt.fq.gz ../TargetSeq-sanjiao/cutoff_3/mapping/HEK2-On-Target_R2_cutadapt.fq.gz -t 24 -M > ../TargetSeq-sanjiao/cutoff_3/mapping/HEK2-On-Target_bwa.sam 2>../TargetSeq-sanjiao/cutoff_3/mapping/HEK2-On-Target_bwa.log
+        
+
+[Fri Oct 16 15:33:24 2020]
+rule bwa_mapping:
+    input: ../TargetSeq-quanquan/cutoff_3/mapping/PP2-On-Target_R1_cutadapt.fq.gz, ../TargetSeq-quanquan/cutoff_3/mapping/PP2-On-Target_R2_cutadapt.fq.gz
+    output: ../TargetSeq-quanquan/cutoff_3/mapping/PP2-On-Target_bwa.sam
+    log: ../TargetSeq-quanquan/cutoff_3/mapping/PP2-On-Target_bwa.log
+    jobid: 130
+    reason: Missing output files: ../TargetSeq-quanquan/cutoff_3/mapping/PP2-On-Target_bwa.sam; Input files updated by another job: ../TargetSeq-quanquan/cutoff_3/mapping/PP2-On-Target_R2_cutadapt.fq.gz, ../TargetSeq-quanquan/cutoff_3/mapping/PP2-On-Target_R1_cutadapt.fq.gz
+    wildcards: lib=quanquan, cutoff=3, sample=PP2-On-Target
+
+
+        /home/zhaohuanan/miniconda3/envs/snakepipes_target-seq-from-table-to-plot/bin/bwa mem ../TargetSeq_BED_sample_lib/PP2-On-Target.ref.upper.fa ../TargetSeq-quanquan/cutoff_3/mapping/PP2-On-Target_R1_cutadapt.fq.gz ../TargetSeq-quanquan/cutoff_3/mapping/PP2-On-Target_R2_cutadapt.fq.gz -t 24 -M > ../TargetSeq-quanquan/cutoff_3/mapping/PP2-On-Target_bwa.sam 2>../TargetSeq-quanquan/cutoff_3/mapping/PP2-On-Target_bwa.log
+        
+[Fri Oct 16 15:33:25 2020]
+Finished job 11.
+14 of 121 steps (12%) done
+
+[Fri Oct 16 15:33:25 2020]
+rule bwa_mapping:
+    input: ../TargetSeq-quanquan/cutoff_3/mapping/PP6-On-Target_R1_cutadapt.fq.gz, ../TargetSeq-quanquan/cutoff_3/mapping/PP6-On-Target_R2_cutadapt.fq.gz
+    output: ../TargetSeq-quanquan/cutoff_3/mapping/PP6-On-Target_bwa.sam
+    log: ../TargetSeq-quanquan/cutoff_3/mapping/PP6-On-Target_bwa.log
+    jobid: 131
+    reason: Missing output files: ../TargetSeq-quanquan/cutoff_3/mapping/PP6-On-Target_bwa.sam; Input files updated by another job: ../TargetSeq-quanquan/cutoff_3/mapping/PP6-On-Target_R1_cutadapt.fq.gz, ../TargetSeq-quanquan/cutoff_3/mapping/PP6-On-Target_R2_cutadapt.fq.gz
+    wildcards: lib=quanquan, cutoff=3, sample=PP6-On-Target
+
+
+        /home/zhaohuanan/miniconda3/envs/snakepipes_target-seq-from-table-to-plot/bin/bwa mem ../TargetSeq_BED_sample_lib/PP6-On-Target.ref.upper.fa ../TargetSeq-quanquan/cutoff_3/mapping/PP6-On-Target_R1_cutadapt.fq.gz ../TargetSeq-quanquan/cutoff_3/mapping/PP6-On-Target_R2_cutadapt.fq.gz -t 24 -M > ../TargetSeq-quanquan/cutoff_3/mapping/PP6-On-Target_bwa.sam 2>../TargetSeq-quanquan/cutoff_3/mapping/PP6-On-Target_bwa.log
+        
+[Fri Oct 16 15:33:25 2020]
+Finished job 23.
+15 of 121 steps (12%) done
+
+[Fri Oct 16 15:33:25 2020]
+rule bwa_mapping:
+    input: ../TargetSeq-sanjiao/cutoff_3/mapping/PP6-On-Target_R1_cutadapt.fq.gz, ../TargetSeq-sanjiao/cutoff_3/mapping/PP6-On-Target_R2_cutadapt.fq.gz
+    output: ../TargetSeq-sanjiao/cutoff_3/mapping/PP6-On-Target_bwa.sam
+    log: ../TargetSeq-sanjiao/cutoff_3/mapping/PP6-On-Target_bwa.log
+    jobid: 143
+    reason: Missing output files: ../TargetSeq-sanjiao/cutoff_3/mapping/PP6-On-Target_bwa.sam; Input files updated by another job: ../TargetSeq-sanjiao/cutoff_3/mapping/PP6-On-Target_R2_cutadapt.fq.gz, ../TargetSeq-sanjiao/cutoff_3/mapping/PP6-On-Target_R1_cutadapt.fq.gz
+    wildcards: lib=sanjiao, cutoff=3, sample=PP6-On-Target
+
+
+        /home/zhaohuanan/miniconda3/envs/snakepipes_target-seq-from-table-to-plot/bin/bwa mem ../TargetSeq_BED_sample_lib/PP6-On-Target.ref.upper.fa ../TargetSeq-sanjiao/cutoff_3/mapping/PP6-On-Target_R1_cutadapt.fq.gz ../TargetSeq-sanjiao/cutoff_3/mapping/PP6-On-Target_R2_cutadapt.fq.gz -t 24 -M > ../TargetSeq-sanjiao/cutoff_3/mapping/PP6-On-Target_bwa.sam 2>../TargetSeq-sanjiao/cutoff_3/mapping/PP6-On-Target_bwa.log
+        
+[Fri Oct 16 15:33:25 2020]
+Finished job 22.
+16 of 121 steps (13%) done
+
+[Fri Oct 16 15:33:25 2020]
+rule bwa_mapping:
+    input: ../TargetSeq-sanjiao/cutoff_3/mapping/PP2-On-Target_R1_cutadapt.fq.gz, ../TargetSeq-sanjiao/cutoff_3/mapping/PP2-On-Target_R2_cutadapt.fq.gz
+    output: ../TargetSeq-sanjiao/cutoff_3/mapping/PP2-On-Target_bwa.sam
+    log: ../TargetSeq-sanjiao/cutoff_3/mapping/PP2-On-Target_bwa.log
+    jobid: 142
+    reason: Missing output files: ../TargetSeq-sanjiao/cutoff_3/mapping/PP2-On-Target_bwa.sam; Input files updated by another job: ../TargetSeq-sanjiao/cutoff_3/mapping/PP2-On-Target_R1_cutadapt.fq.gz, ../TargetSeq-sanjiao/cutoff_3/mapping/PP2-On-Target_R2_cutadapt.fq.gz
+    wildcards: lib=sanjiao, cutoff=3, sample=PP2-On-Target
+
+
+        /home/zhaohuanan/miniconda3/envs/snakepipes_target-seq-from-table-to-plot/bin/bwa mem ../TargetSeq_BED_sample_lib/PP2-On-Target.ref.upper.fa ../TargetSeq-sanjiao/cutoff_3/mapping/PP2-On-Target_R1_cutadapt.fq.gz ../TargetSeq-sanjiao/cutoff_3/mapping/PP2-On-Target_R2_cutadapt.fq.gz -t 24 -M > ../TargetSeq-sanjiao/cutoff_3/mapping/PP2-On-Target_bwa.sam 2>../TargetSeq-sanjiao/cutoff_3/mapping/PP2-On-Target_bwa.log
+        
+[Fri Oct 16 15:33:25 2020]
+Finished job 6.
+17 of 121 steps (14%) done
+
+[Fri Oct 16 15:33:25 2020]
+rule bwa_mapping:
+    input: ../TargetSeq-quanquan/cutoff_3/mapping/HEK4-Guideseq-4_R1_cutadapt.fq.gz, ../TargetSeq-quanquan/cutoff_3/mapping/HEK4-Guideseq-4_R2_cutadapt.fq.gz
+    output: ../TargetSeq-quanquan/cutoff_3/mapping/HEK4-Guideseq-4_bwa.sam
+    log: ../TargetSeq-quanquan/cutoff_3/mapping/HEK4-Guideseq-4_bwa.log
+    jobid: 126
+    reason: Missing output files: ../TargetSeq-quanquan/cutoff_3/mapping/HEK4-Guideseq-4_bwa.sam; Input files updated by another job: ../TargetSeq-quanquan/cutoff_3/mapping/HEK4-Guideseq-4_R1_cutadapt.fq.gz, ../TargetSeq-quanquan/cutoff_3/mapping/HEK4-Guideseq-4_R2_cutadapt.fq.gz
+    wildcards: lib=quanquan, cutoff=3, sample=HEK4-Guideseq-4
+
+
+        /home/zhaohuanan/miniconda3/envs/snakepipes_target-seq-from-table-to-plot/bin/bwa mem ../TargetSeq_BED_sample_lib/HEK4-Guideseq-4.ref.upper.fa ../TargetSeq-quanquan/cutoff_3/mapping/HEK4-Guideseq-4_R1_cutadapt.fq.gz ../TargetSeq-quanquan/cutoff_3/mapping/HEK4-Guideseq-4_R2_cutadapt.fq.gz -t 24 -M > ../TargetSeq-quanquan/cutoff_3/mapping/HEK4-Guideseq-4_bwa.sam 2>../TargetSeq-quanquan/cutoff_3/mapping/HEK4-Guideseq-4_bwa.log
+        
+[Fri Oct 16 15:33:26 2020]
+Finished job 9.
+18 of 121 steps (15%) done
+
+[Fri Oct 16 15:33:26 2020]
+rule bwa_mapping:
+    input: ../TargetSeq-quanquan/cutoff_3/mapping/HEK5-On-Target_R1_cutadapt.fq.gz, ../TargetSeq-quanquan/cutoff_3/mapping/HEK5-On-Target_R2_cutadapt.fq.gz
+    output: ../TargetSeq-quanquan/cutoff_3/mapping/HEK5-On-Target_bwa.sam
+    log: ../TargetSeq-quanquan/cutoff_3/mapping/HEK5-On-Target_bwa.log
+    jobid: 129
+    reason: Missing output files: ../TargetSeq-quanquan/cutoff_3/mapping/HEK5-On-Target_bwa.sam; Input files updated by another job: ../TargetSeq-quanquan/cutoff_3/mapping/HEK5-On-Target_R1_cutadapt.fq.gz, ../TargetSeq-quanquan/cutoff_3/mapping/HEK5-On-Target_R2_cutadapt.fq.gz
+    wildcards: lib=quanquan, cutoff=3, sample=HEK5-On-Target
+
+
+        /home/zhaohuanan/miniconda3/envs/snakepipes_target-seq-from-table-to-plot/bin/bwa mem ../TargetSeq_BED_sample_lib/HEK5-On-Target.ref.upper.fa ../TargetSeq-quanquan/cutoff_3/mapping/HEK5-On-Target_R1_cutadapt.fq.gz ../TargetSeq-quanquan/cutoff_3/mapping/HEK5-On-Target_R2_cutadapt.fq.gz -t 24 -M > ../TargetSeq-quanquan/cutoff_3/mapping/HEK5-On-Target_bwa.sam 2>../TargetSeq-quanquan/cutoff_3/mapping/HEK5-On-Target_bwa.log
+        
+[Fri Oct 16 15:33:26 2020]
+Finished job 3.
+19 of 121 steps (16%) done
+
+[Fri Oct 16 15:33:26 2020]
+rule bwa_mapping:
+    input: ../TargetSeq-quanquan/cutoff_3/mapping/HEK2-On-Target_R1_cutadapt.fq.gz, ../TargetSeq-quanquan/cutoff_3/mapping/HEK2-On-Target_R2_cutadapt.fq.gz
+    output: ../TargetSeq-quanquan/cutoff_3/mapping/HEK2-On-Target_bwa.sam
+    log: ../TargetSeq-quanquan/cutoff_3/mapping/HEK2-On-Target_bwa.log
+    jobid: 123
+    reason: Missing output files: ../TargetSeq-quanquan/cutoff_3/mapping/HEK2-On-Target_bwa.sam; Input files updated by another job: ../TargetSeq-quanquan/cutoff_3/mapping/HEK2-On-Target_R1_cutadapt.fq.gz, ../TargetSeq-quanquan/cutoff_3/mapping/HEK2-On-Target_R2_cutadapt.fq.gz
+    wildcards: lib=quanquan, cutoff=3, sample=HEK2-On-Target
+
+
+        /home/zhaohuanan/miniconda3/envs/snakepipes_target-seq-from-table-to-plot/bin/bwa mem ../TargetSeq_BED_sample_lib/HEK2-On-Target.ref.upper.fa ../TargetSeq-quanquan/cutoff_3/mapping/HEK2-On-Target_R1_cutadapt.fq.gz ../TargetSeq-quanquan/cutoff_3/mapping/HEK2-On-Target_R2_cutadapt.fq.gz -t 24 -M > ../TargetSeq-quanquan/cutoff_3/mapping/HEK2-On-Target_bwa.sam 2>../TargetSeq-quanquan/cutoff_3/mapping/HEK2-On-Target_bwa.log
+        
+[Fri Oct 16 15:33:26 2020]
+Finished job 8.
+20 of 121 steps (17%) done
+
+[Fri Oct 16 15:33:26 2020]
+rule bwa_mapping:
+    input: ../TargetSeq-quanquan/cutoff_3/mapping/HEK4-On-Target_R1_cutadapt.fq.gz, ../TargetSeq-quanquan/cutoff_3/mapping/HEK4-On-Target_R2_cutadapt.fq.gz
+    output: ../TargetSeq-quanquan/cutoff_3/mapping/HEK4-On-Target_bwa.sam
+    log: ../TargetSeq-quanquan/cutoff_3/mapping/HEK4-On-Target_bwa.log
+    jobid: 128
+    reason: Missing output files: ../TargetSeq-quanquan/cutoff_3/mapping/HEK4-On-Target_bwa.sam; Input files updated by another job: ../TargetSeq-quanquan/cutoff_3/mapping/HEK4-On-Target_R1_cutadapt.fq.gz, ../TargetSeq-quanquan/cutoff_3/mapping/HEK4-On-Target_R2_cutadapt.fq.gz
+    wildcards: lib=quanquan, cutoff=3, sample=HEK4-On-Target
+
+
+        /home/zhaohuanan/miniconda3/envs/snakepipes_target-seq-from-table-to-plot/bin/bwa mem ../TargetSeq_BED_sample_lib/HEK4-On-Target.ref.upper.fa ../TargetSeq-quanquan/cutoff_3/mapping/HEK4-On-Target_R1_cutadapt.fq.gz ../TargetSeq-quanquan/cutoff_3/mapping/HEK4-On-Target_R2_cutadapt.fq.gz -t 24 -M > ../TargetSeq-quanquan/cutoff_3/mapping/HEK4-On-Target_bwa.sam 2>../TargetSeq-quanquan/cutoff_3/mapping/HEK4-On-Target_bwa.log
+        
+[Fri Oct 16 15:33:26 2020]
+Finished job 18.
+21 of 121 steps (17%) done
+
+[Fri Oct 16 15:33:26 2020]
+rule bwa_mapping:
+    input: ../TargetSeq-sanjiao/cutoff_3/mapping/HEK4-Guideseq-4_R1_cutadapt.fq.gz, ../TargetSeq-sanjiao/cutoff_3/mapping/HEK4-Guideseq-4_R2_cutadapt.fq.gz
+    output: ../TargetSeq-sanjiao/cutoff_3/mapping/HEK4-Guideseq-4_bwa.sam
+    log: ../TargetSeq-sanjiao/cutoff_3/mapping/HEK4-Guideseq-4_bwa.log
+    jobid: 138
+    reason: Missing output files: ../TargetSeq-sanjiao/cutoff_3/mapping/HEK4-Guideseq-4_bwa.sam; Input files updated by another job: ../TargetSeq-sanjiao/cutoff_3/mapping/HEK4-Guideseq-4_R2_cutadapt.fq.gz, ../TargetSeq-sanjiao/cutoff_3/mapping/HEK4-Guideseq-4_R1_cutadapt.fq.gz
+    wildcards: lib=sanjiao, cutoff=3, sample=HEK4-Guideseq-4
+
+
+        /home/zhaohuanan/miniconda3/envs/snakepipes_target-seq-from-table-to-plot/bin/bwa mem ../TargetSeq_BED_sample_lib/HEK4-Guideseq-4.ref.upper.fa ../TargetSeq-sanjiao/cutoff_3/mapping/HEK4-Guideseq-4_R1_cutadapt.fq.gz ../TargetSeq-sanjiao/cutoff_3/mapping/HEK4-Guideseq-4_R2_cutadapt.fq.gz -t 24 -M > ../TargetSeq-sanjiao/cutoff_3/mapping/HEK4-Guideseq-4_bwa.sam 2>../TargetSeq-sanjiao/cutoff_3/mapping/HEK4-Guideseq-4_bwa.log
+        
+[Fri Oct 16 15:33:27 2020]
+Finished job 4.
+22 of 121 steps (18%) done
+
+[Fri Oct 16 15:33:27 2020]
+rule bwa_mapping:
+    input: ../TargetSeq-quanquan/cutoff_3/mapping/HEK4-Guideseq-2_R1_cutadapt.fq.gz, ../TargetSeq-quanquan/cutoff_3/mapping/HEK4-Guideseq-2_R2_cutadapt.fq.gz
+    output: ../TargetSeq-quanquan/cutoff_3/mapping/HEK4-Guideseq-2_bwa.sam
+    log: ../TargetSeq-quanquan/cutoff_3/mapping/HEK4-Guideseq-2_bwa.log
+    jobid: 124
+    reason: Missing output files: ../TargetSeq-quanquan/cutoff_3/mapping/HEK4-Guideseq-2_bwa.sam; Input files updated by another job: ../TargetSeq-quanquan/cutoff_3/mapping/HEK4-Guideseq-2_R1_cutadapt.fq.gz, ../TargetSeq-quanquan/cutoff_3/mapping/HEK4-Guideseq-2_R2_cutadapt.fq.gz
+    wildcards: lib=quanquan, cutoff=3, sample=HEK4-Guideseq-2
+
+
+        /home/zhaohuanan/miniconda3/envs/snakepipes_target-seq-from-table-to-plot/bin/bwa mem ../TargetSeq_BED_sample_lib/HEK4-Guideseq-2.ref.upper.fa ../TargetSeq-quanquan/cutoff_3/mapping/HEK4-Guideseq-2_R1_cutadapt.fq.gz ../TargetSeq-quanquan/cutoff_3/mapping/HEK4-Guideseq-2_R2_cutadapt.fq.gz -t 24 -M > ../TargetSeq-quanquan/cutoff_3/mapping/HEK4-Guideseq-2_bwa.sam 2>../TargetSeq-quanquan/cutoff_3/mapping/HEK4-Guideseq-2_bwa.log
+        
+[Fri Oct 16 15:33:28 2020]
+Finished job 16.
+23 of 121 steps (19%) done
+
+[Fri Oct 16 15:33:28 2020]
+rule bwa_mapping:
+    input: ../TargetSeq-sanjiao/cutoff_3/mapping/HEK4-Guideseq-2_R1_cutadapt.fq.gz, ../TargetSeq-sanjiao/cutoff_3/mapping/HEK4-Guideseq-2_R2_cutadapt.fq.gz
+    output: ../TargetSeq-sanjiao/cutoff_3/mapping/HEK4-Guideseq-2_bwa.sam
+    log: ../TargetSeq-sanjiao/cutoff_3/mapping/HEK4-Guideseq-2_bwa.log
+    jobid: 136
+    reason: Missing output files: ../TargetSeq-sanjiao/cutoff_3/mapping/HEK4-Guideseq-2_bwa.sam; Input files updated by another job: ../TargetSeq-sanjiao/cutoff_3/mapping/HEK4-Guideseq-2_R1_cutadapt.fq.gz, ../TargetSeq-sanjiao/cutoff_3/mapping/HEK4-Guideseq-2_R2_cutadapt.fq.gz
+    wildcards: lib=sanjiao, cutoff=3, sample=HEK4-Guideseq-2
+
+
+        /home/zhaohuanan/miniconda3/envs/snakepipes_target-seq-from-table-to-plot/bin/bwa mem ../TargetSeq_BED_sample_lib/HEK4-Guideseq-2.ref.upper.fa ../TargetSeq-sanjiao/cutoff_3/mapping/HEK4-Guideseq-2_R1_cutadapt.fq.gz ../TargetSeq-sanjiao/cutoff_3/mapping/HEK4-Guideseq-2_R2_cutadapt.fq.gz -t 24 -M > ../TargetSeq-sanjiao/cutoff_3/mapping/HEK4-Guideseq-2_bwa.sam 2>../TargetSeq-sanjiao/cutoff_3/mapping/HEK4-Guideseq-2_bwa.log
+        
+[Fri Oct 16 15:33:28 2020]
+Finished job 13.
+24 of 121 steps (20%) done
+
+[Fri Oct 16 15:33:28 2020]
+rule bwa_mapping:
+    input: ../TargetSeq-sanjiao/cutoff_3/mapping/ABE-Site-7-On_R1_cutadapt.fq.gz, ../TargetSeq-sanjiao/cutoff_3/mapping/ABE-Site-7-On_R2_cutadapt.fq.gz
+    output: ../TargetSeq-sanjiao/cutoff_3/mapping/ABE-Site-7-On_bwa.sam
+    log: ../TargetSeq-sanjiao/cutoff_3/mapping/ABE-Site-7-On_bwa.log
+    jobid: 133
+    reason: Missing output files: ../TargetSeq-sanjiao/cutoff_3/mapping/ABE-Site-7-On_bwa.sam; Input files updated by another job: ../TargetSeq-sanjiao/cutoff_3/mapping/ABE-Site-7-On_R2_cutadapt.fq.gz, ../TargetSeq-sanjiao/cutoff_3/mapping/ABE-Site-7-On_R1_cutadapt.fq.gz
+    wildcards: lib=sanjiao, cutoff=3, sample=ABE-Site-7-On
+
+
+        /home/zhaohuanan/miniconda3/envs/snakepipes_target-seq-from-table-to-plot/bin/bwa mem ../TargetSeq_BED_sample_lib/ABE-Site-7-On.ref.upper.fa ../TargetSeq-sanjiao/cutoff_3/mapping/ABE-Site-7-On_R1_cutadapt.fq.gz ../TargetSeq-sanjiao/cutoff_3/mapping/ABE-Site-7-On_R2_cutadapt.fq.gz -t 24 -M > ../TargetSeq-sanjiao/cutoff_3/mapping/ABE-Site-7-On_bwa.sam 2>../TargetSeq-sanjiao/cutoff_3/mapping/ABE-Site-7-On_bwa.log
+        
+[Fri Oct 16 15:33:28 2020]
+Finished job 7.
+25 of 121 steps (21%) done
+
+[Fri Oct 16 15:33:28 2020]
+rule bwa_mapping:
+    input: ../TargetSeq-quanquan/cutoff_3/mapping/HEK4-Guideseq-5_R1_cutadapt.fq.gz, ../TargetSeq-quanquan/cutoff_3/mapping/HEK4-Guideseq-5_R2_cutadapt.fq.gz
+    output: ../TargetSeq-quanquan/cutoff_3/mapping/HEK4-Guideseq-5_bwa.sam
+    log: ../TargetSeq-quanquan/cutoff_3/mapping/HEK4-Guideseq-5_bwa.log
+    jobid: 127
+    reason: Missing output files: ../TargetSeq-quanquan/cutoff_3/mapping/HEK4-Guideseq-5_bwa.sam; Input files updated by another job: ../TargetSeq-quanquan/cutoff_3/mapping/HEK4-Guideseq-5_R2_cutadapt.fq.gz, ../TargetSeq-quanquan/cutoff_3/mapping/HEK4-Guideseq-5_R1_cutadapt.fq.gz
+    wildcards: lib=quanquan, cutoff=3, sample=HEK4-Guideseq-5
+
+
+        /home/zhaohuanan/miniconda3/envs/snakepipes_target-seq-from-table-to-plot/bin/bwa mem ../TargetSeq_BED_sample_lib/HEK4-Guideseq-5.ref.upper.fa ../TargetSeq-quanquan/cutoff_3/mapping/HEK4-Guideseq-5_R1_cutadapt.fq.gz ../TargetSeq-quanquan/cutoff_3/mapping/HEK4-Guideseq-5_R2_cutadapt.fq.gz -t 24 -M > ../TargetSeq-quanquan/cutoff_3/mapping/HEK4-Guideseq-5_bwa.sam 2>../TargetSeq-quanquan/cutoff_3/mapping/HEK4-Guideseq-5_bwa.log
+        
+[Fri Oct 16 15:33:28 2020]
+Finished job 20.
+26 of 121 steps (21%) done
+
+[Fri Oct 16 15:33:28 2020]
+rule bwa_mapping:
+    input: ../TargetSeq-sanjiao/cutoff_3/mapping/HEK4-On-Target_R1_cutadapt.fq.gz, ../TargetSeq-sanjiao/cutoff_3/mapping/HEK4-On-Target_R2_cutadapt.fq.gz
+    output: ../TargetSeq-sanjiao/cutoff_3/mapping/HEK4-On-Target_bwa.sam
+    log: ../TargetSeq-sanjiao/cutoff_3/mapping/HEK4-On-Target_bwa.log
+    jobid: 140
+    reason: Missing output files: ../TargetSeq-sanjiao/cutoff_3/mapping/HEK4-On-Target_bwa.sam; Input files updated by another job: ../TargetSeq-sanjiao/cutoff_3/mapping/HEK4-On-Target_R2_cutadapt.fq.gz, ../TargetSeq-sanjiao/cutoff_3/mapping/HEK4-On-Target_R1_cutadapt.fq.gz
+    wildcards: lib=sanjiao, cutoff=3, sample=HEK4-On-Target
+
+
+        /home/zhaohuanan/miniconda3/envs/snakepipes_target-seq-from-table-to-plot/bin/bwa mem ../TargetSeq_BED_sample_lib/HEK4-On-Target.ref.upper.fa ../TargetSeq-sanjiao/cutoff_3/mapping/HEK4-On-Target_R1_cutadapt.fq.gz ../TargetSeq-sanjiao/cutoff_3/mapping/HEK4-On-Target_R2_cutadapt.fq.gz -t 24 -M > ../TargetSeq-sanjiao/cutoff_3/mapping/HEK4-On-Target_bwa.sam 2>../TargetSeq-sanjiao/cutoff_3/mapping/HEK4-On-Target_bwa.log
+        
+[Fri Oct 16 15:33:29 2020]
+Finished job 19.
+27 of 121 steps (22%) done
+
+[Fri Oct 16 15:33:29 2020]
+rule bwa_mapping:
+    input: ../TargetSeq-sanjiao/cutoff_3/mapping/HEK4-Guideseq-5_R1_cutadapt.fq.gz, ../TargetSeq-sanjiao/cutoff_3/mapping/HEK4-Guideseq-5_R2_cutadapt.fq.gz
+    output: ../TargetSeq-sanjiao/cutoff_3/mapping/HEK4-Guideseq-5_bwa.sam
+    log: ../TargetSeq-sanjiao/cutoff_3/mapping/HEK4-Guideseq-5_bwa.log
+    jobid: 139
+    reason: Missing output files: ../TargetSeq-sanjiao/cutoff_3/mapping/HEK4-Guideseq-5_bwa.sam; Input files updated by another job: ../TargetSeq-sanjiao/cutoff_3/mapping/HEK4-Guideseq-5_R2_cutadapt.fq.gz, ../TargetSeq-sanjiao/cutoff_3/mapping/HEK4-Guideseq-5_R1_cutadapt.fq.gz
+    wildcards: lib=sanjiao, cutoff=3, sample=HEK4-Guideseq-5
+
+
+        /home/zhaohuanan/miniconda3/envs/snakepipes_target-seq-from-table-to-plot/bin/bwa mem ../TargetSeq_BED_sample_lib/HEK4-Guideseq-5.ref.upper.fa ../TargetSeq-sanjiao/cutoff_3/mapping/HEK4-Guideseq-5_R1_cutadapt.fq.gz ../TargetSeq-sanjiao/cutoff_3/mapping/HEK4-Guideseq-5_R2_cutadapt.fq.gz -t 24 -M > ../TargetSeq-sanjiao/cutoff_3/mapping/HEK4-Guideseq-5_bwa.sam 2>../TargetSeq-sanjiao/cutoff_3/mapping/HEK4-Guideseq-5_bwa.log
+        
+[Fri Oct 16 15:33:29 2020]
+Finished job 130.
+28 of 121 steps (23%) done
+
+[Fri Oct 16 15:33:29 2020]
+rule sam_to_bam:
+    input: ../TargetSeq-quanquan/cutoff_3/mapping/PP2-On-Target_bwa.sam, ../TargetSeq_BED_sample_lib/PP2-On-Target.ref.upper.fa
+    output: ../TargetSeq-quanquan/cutoff_3/mapping/PP2-On-Target_bwa.bam
+    jobid: 106
+    reason: Missing output files: ../TargetSeq-quanquan/cutoff_3/mapping/PP2-On-Target_bwa.bam; Input files updated by another job: ../TargetSeq-quanquan/cutoff_3/mapping/PP2-On-Target_bwa.sam
+    wildcards: lib=quanquan, cutoff=3, sample=PP2-On-Target
+
+
+        /home/zhaohuanan/miniconda3/envs/snakepipes_cutadapt-STARmapping-FPKM-sortBAM/bin/samtools view -h -f 1 -F 268 ../TargetSeq-quanquan/cutoff_3/mapping/PP2-On-Target_bwa.sam         | /home/zhaohuanan/miniconda3/envs/snakepipes_target-seq-from-table-to-plot/bin/samclip --ref ../TargetSeq_BED_sample_lib/PP2-On-Target.ref.upper.fa --max 3 --progress 0         | awk 'function abs(v) {return v < 0 ? -v : v} $1~"@" || ($7 == "=" && abs($9) <= 600 ) {print $0}'         | /home/zhaohuanan/miniconda3/envs/snakepipes_cutadapt-STARmapping-FPKM-sortBAM/bin/samtools view -hb > ../TargetSeq-quanquan/cutoff_3/mapping/PP2-On-Target_bwa.bam
+        
+[Fri Oct 16 15:33:29 2020]
+Finished job 1.
+29 of 121 steps (24%) done
+
+[Fri Oct 16 15:33:29 2020]
+rule bwa_mapping:
+    input: ../TargetSeq-quanquan/cutoff_3/mapping/ABE-Site-7-On_R1_cutadapt.fq.gz, ../TargetSeq-quanquan/cutoff_3/mapping/ABE-Site-7-On_R2_cutadapt.fq.gz
+    output: ../TargetSeq-quanquan/cutoff_3/mapping/ABE-Site-7-On_bwa.sam
+    log: ../TargetSeq-quanquan/cutoff_3/mapping/ABE-Site-7-On_bwa.log
+    jobid: 121
+    reason: Missing output files: ../TargetSeq-quanquan/cutoff_3/mapping/ABE-Site-7-On_bwa.sam; Input files updated by another job: ../TargetSeq-quanquan/cutoff_3/mapping/ABE-Site-7-On_R1_cutadapt.fq.gz, ../TargetSeq-quanquan/cutoff_3/mapping/ABE-Site-7-On_R2_cutadapt.fq.gz
+    wildcards: lib=quanquan, cutoff=3, sample=ABE-Site-7-On
+
+
+        /home/zhaohuanan/miniconda3/envs/snakepipes_target-seq-from-table-to-plot/bin/bwa mem ../TargetSeq_BED_sample_lib/ABE-Site-7-On.ref.upper.fa ../TargetSeq-quanquan/cutoff_3/mapping/ABE-Site-7-On_R1_cutadapt.fq.gz ../TargetSeq-quanquan/cutoff_3/mapping/ABE-Site-7-On_R2_cutadapt.fq.gz -t 24 -M > ../TargetSeq-quanquan/cutoff_3/mapping/ABE-Site-7-On_bwa.sam 2>../TargetSeq-quanquan/cutoff_3/mapping/ABE-Site-7-On_bwa.log
+        
+[Fri Oct 16 15:33:29 2020]
+Finished job 141.
+30 of 121 steps (25%) done
+
+[Fri Oct 16 15:33:29 2020]
+rule sam_to_bam:
+    input: ../TargetSeq-sanjiao/cutoff_3/mapping/HEK5-On-Target_bwa.sam, ../TargetSeq_BED_sample_lib/HEK5-On-Target.ref.upper.fa
+    output: ../TargetSeq-sanjiao/cutoff_3/mapping/HEK5-On-Target_bwa.bam
+    jobid: 117
+    reason: Missing output files: ../TargetSeq-sanjiao/cutoff_3/mapping/HEK5-On-Target_bwa.bam; Input files updated by another job: ../TargetSeq-sanjiao/cutoff_3/mapping/HEK5-On-Target_bwa.sam
+    wildcards: lib=sanjiao, cutoff=3, sample=HEK5-On-Target
+
+
+        /home/zhaohuanan/miniconda3/envs/snakepipes_cutadapt-STARmapping-FPKM-sortBAM/bin/samtools view -h -f 1 -F 268 ../TargetSeq-sanjiao/cutoff_3/mapping/HEK5-On-Target_bwa.sam         | /home/zhaohuanan/miniconda3/envs/snakepipes_target-seq-from-table-to-plot/bin/samclip --ref ../TargetSeq_BED_sample_lib/HEK5-On-Target.ref.upper.fa --max 3 --progress 0         | awk 'function abs(v) {return v < 0 ? -v : v} $1~"@" || ($7 == "=" && abs($9) <= 600 ) {print $0}'         | /home/zhaohuanan/miniconda3/envs/snakepipes_cutadapt-STARmapping-FPKM-sortBAM/bin/samtools view -hb > ../TargetSeq-sanjiao/cutoff_3/mapping/HEK5-On-Target_bwa.bam
+        
+[Fri Oct 16 15:33:30 2020]
+Finished job 131.
+31 of 121 steps (26%) done
+
+[Fri Oct 16 15:33:30 2020]
+rule sam_to_bam:
+    input: ../TargetSeq-quanquan/cutoff_3/mapping/PP6-On-Target_bwa.sam, ../TargetSeq_BED_sample_lib/PP6-On-Target.ref.upper.fa
+    output: ../TargetSeq-quanquan/cutoff_3/mapping/PP6-On-Target_bwa.bam
+    jobid: 107
+    reason: Missing output files: ../TargetSeq-quanquan/cutoff_3/mapping/PP6-On-Target_bwa.bam; Input files updated by another job: ../TargetSeq-quanquan/cutoff_3/mapping/PP6-On-Target_bwa.sam
+    wildcards: lib=quanquan, cutoff=3, sample=PP6-On-Target
+
+
+        /home/zhaohuanan/miniconda3/envs/snakepipes_cutadapt-STARmapping-FPKM-sortBAM/bin/samtools view -h -f 1 -F 268 ../TargetSeq-quanquan/cutoff_3/mapping/PP6-On-Target_bwa.sam         | /home/zhaohuanan/miniconda3/envs/snakepipes_target-seq-from-table-to-plot/bin/samclip --ref ../TargetSeq_BED_sample_lib/PP6-On-Target.ref.upper.fa --max 3 --progress 0         | awk 'function abs(v) {return v < 0 ? -v : v} $1~"@" || ($7 == "=" && abs($9) <= 600 ) {print $0}'         | /home/zhaohuanan/miniconda3/envs/snakepipes_cutadapt-STARmapping-FPKM-sortBAM/bin/samtools view -hb > ../TargetSeq-quanquan/cutoff_3/mapping/PP6-On-Target_bwa.bam
+        
+[Fri Oct 16 15:33:31 2020]
+Finished job 129.
+32 of 121 steps (26%) done
+
+[Fri Oct 16 15:33:31 2020]
+rule sam_to_bam:
+    input: ../TargetSeq-quanquan/cutoff_3/mapping/HEK5-On-Target_bwa.sam, ../TargetSeq_BED_sample_lib/HEK5-On-Target.ref.upper.fa
+    output: ../TargetSeq-quanquan/cutoff_3/mapping/HEK5-On-Target_bwa.bam
+    jobid: 105
+    reason: Missing output files: ../TargetSeq-quanquan/cutoff_3/mapping/HEK5-On-Target_bwa.bam; Input files updated by another job: ../TargetSeq-quanquan/cutoff_3/mapping/HEK5-On-Target_bwa.sam
+    wildcards: lib=quanquan, cutoff=3, sample=HEK5-On-Target
+
+
+        /home/zhaohuanan/miniconda3/envs/snakepipes_cutadapt-STARmapping-FPKM-sortBAM/bin/samtools view -h -f 1 -F 268 ../TargetSeq-quanquan/cutoff_3/mapping/HEK5-On-Target_bwa.sam         | /home/zhaohuanan/miniconda3/envs/snakepipes_target-seq-from-table-to-plot/bin/samclip --ref ../TargetSeq_BED_sample_lib/HEK5-On-Target.ref.upper.fa --max 3 --progress 0         | awk 'function abs(v) {return v < 0 ? -v : v} $1~"@" || ($7 == "=" && abs($9) <= 600 ) {print $0}'         | /home/zhaohuanan/miniconda3/envs/snakepipes_cutadapt-STARmapping-FPKM-sortBAM/bin/samtools view -hb > ../TargetSeq-quanquan/cutoff_3/mapping/HEK5-On-Target_bwa.bam
+        
+[Fri Oct 16 15:33:31 2020]
+Finished job 142.
+33 of 121 steps (27%) done
+
+[Fri Oct 16 15:33:31 2020]
+rule sam_to_bam:
+    input: ../TargetSeq-sanjiao/cutoff_3/mapping/PP2-On-Target_bwa.sam, ../TargetSeq_BED_sample_lib/PP2-On-Target.ref.upper.fa
+    output: ../TargetSeq-sanjiao/cutoff_3/mapping/PP2-On-Target_bwa.bam
+    jobid: 118
+    reason: Missing output files: ../TargetSeq-sanjiao/cutoff_3/mapping/PP2-On-Target_bwa.bam; Input files updated by another job: ../TargetSeq-sanjiao/cutoff_3/mapping/PP2-On-Target_bwa.sam
+    wildcards: lib=sanjiao, cutoff=3, sample=PP2-On-Target
+
+
+        /home/zhaohuanan/miniconda3/envs/snakepipes_cutadapt-STARmapping-FPKM-sortBAM/bin/samtools view -h -f 1 -F 268 ../TargetSeq-sanjiao/cutoff_3/mapping/PP2-On-Target_bwa.sam         | /home/zhaohuanan/miniconda3/envs/snakepipes_target-seq-from-table-to-plot/bin/samclip --ref ../TargetSeq_BED_sample_lib/PP2-On-Target.ref.upper.fa --max 3 --progress 0         | awk 'function abs(v) {return v < 0 ? -v : v} $1~"@" || ($7 == "=" && abs($9) <= 600 ) {print $0}'         | /home/zhaohuanan/miniconda3/envs/snakepipes_cutadapt-STARmapping-FPKM-sortBAM/bin/samtools view -hb > ../TargetSeq-sanjiao/cutoff_3/mapping/PP2-On-Target_bwa.bam
+        
+[Fri Oct 16 15:33:31 2020]
+Finished job 14.
+34 of 121 steps (28%) done
+
+[Fri Oct 16 15:33:31 2020]
+rule bwa_mapping:
+    input: ../TargetSeq-sanjiao/cutoff_3/mapping/EMX1-2-On_R1_cutadapt.fq.gz, ../TargetSeq-sanjiao/cutoff_3/mapping/EMX1-2-On_R2_cutadapt.fq.gz
+    output: ../TargetSeq-sanjiao/cutoff_3/mapping/EMX1-2-On_bwa.sam
+    log: ../TargetSeq-sanjiao/cutoff_3/mapping/EMX1-2-On_bwa.log
+    jobid: 134
+    reason: Missing output files: ../TargetSeq-sanjiao/cutoff_3/mapping/EMX1-2-On_bwa.sam; Input files updated by another job: ../TargetSeq-sanjiao/cutoff_3/mapping/EMX1-2-On_R1_cutadapt.fq.gz, ../TargetSeq-sanjiao/cutoff_3/mapping/EMX1-2-On_R2_cutadapt.fq.gz
+    wildcards: lib=sanjiao, cutoff=3, sample=EMX1-2-On
+
+
+        /home/zhaohuanan/miniconda3/envs/snakepipes_target-seq-from-table-to-plot/bin/bwa mem ../TargetSeq_BED_sample_lib/EMX1-2-On.ref.upper.fa ../TargetSeq-sanjiao/cutoff_3/mapping/EMX1-2-On_R1_cutadapt.fq.gz ../TargetSeq-sanjiao/cutoff_3/mapping/EMX1-2-On_R2_cutadapt.fq.gz -t 24 -M > ../TargetSeq-sanjiao/cutoff_3/mapping/EMX1-2-On_bwa.sam 2>../TargetSeq-sanjiao/cutoff_3/mapping/EMX1-2-On_bwa.log
+        
+[Fri Oct 16 15:33:31 2020]
+Finished job 143.
+35 of 121 steps (29%) done
+
+[Fri Oct 16 15:33:31 2020]
+rule sam_to_bam:
+    input: ../TargetSeq-sanjiao/cutoff_3/mapping/PP6-On-Target_bwa.sam, ../TargetSeq_BED_sample_lib/PP6-On-Target.ref.upper.fa
+    output: ../TargetSeq-sanjiao/cutoff_3/mapping/PP6-On-Target_bwa.bam
+    jobid: 119
+    reason: Missing output files: ../TargetSeq-sanjiao/cutoff_3/mapping/PP6-On-Target_bwa.bam; Input files updated by another job: ../TargetSeq-sanjiao/cutoff_3/mapping/PP6-On-Target_bwa.sam
+    wildcards: lib=sanjiao, cutoff=3, sample=PP6-On-Target
+
+
+        /home/zhaohuanan/miniconda3/envs/snakepipes_cutadapt-STARmapping-FPKM-sortBAM/bin/samtools view -h -f 1 -F 268 ../TargetSeq-sanjiao/cutoff_3/mapping/PP6-On-Target_bwa.sam         | /home/zhaohuanan/miniconda3/envs/snakepipes_target-seq-from-table-to-plot/bin/samclip --ref ../TargetSeq_BED_sample_lib/PP6-On-Target.ref.upper.fa --max 3 --progress 0         | awk 'function abs(v) {return v < 0 ? -v : v} $1~"@" || ($7 == "=" && abs($9) <= 600 ) {print $0}'         | /home/zhaohuanan/miniconda3/envs/snakepipes_cutadapt-STARmapping-FPKM-sortBAM/bin/samtools view -hb > ../TargetSeq-sanjiao/cutoff_3/mapping/PP6-On-Target_bwa.bam
+        
+[Fri Oct 16 15:33:31 2020]
+Finished job 135.
+36 of 121 steps (30%) done
+
+[Fri Oct 16 15:33:31 2020]
+rule sam_to_bam:
+    input: ../TargetSeq-sanjiao/cutoff_3/mapping/HEK2-On-Target_bwa.sam, ../TargetSeq_BED_sample_lib/HEK2-On-Target.ref.upper.fa
+    output: ../TargetSeq-sanjiao/cutoff_3/mapping/HEK2-On-Target_bwa.bam
+    jobid: 111
+    reason: Missing output files: ../TargetSeq-sanjiao/cutoff_3/mapping/HEK2-On-Target_bwa.bam; Input files updated by another job: ../TargetSeq-sanjiao/cutoff_3/mapping/HEK2-On-Target_bwa.sam
+    wildcards: lib=sanjiao, cutoff=3, sample=HEK2-On-Target
+
+
+        /home/zhaohuanan/miniconda3/envs/snakepipes_cutadapt-STARmapping-FPKM-sortBAM/bin/samtools view -h -f 1 -F 268 ../TargetSeq-sanjiao/cutoff_3/mapping/HEK2-On-Target_bwa.sam         | /home/zhaohuanan/miniconda3/envs/snakepipes_target-seq-from-table-to-plot/bin/samclip --ref ../TargetSeq_BED_sample_lib/HEK2-On-Target.ref.upper.fa --max 3 --progress 0         | awk 'function abs(v) {return v < 0 ? -v : v} $1~"@" || ($7 == "=" && abs($9) <= 600 ) {print $0}'         | /home/zhaohuanan/miniconda3/envs/snakepipes_cutadapt-STARmapping-FPKM-sortBAM/bin/samtools view -hb > ../TargetSeq-sanjiao/cutoff_3/mapping/HEK2-On-Target_bwa.bam
+        
+[Fri Oct 16 15:33:32 2020]
+Finished job 126.
+37 of 121 steps (31%) done
+
+[Fri Oct 16 15:33:32 2020]
+rule sam_to_bam:
+    input: ../TargetSeq-quanquan/cutoff_3/mapping/HEK4-Guideseq-4_bwa.sam, ../TargetSeq_BED_sample_lib/HEK4-Guideseq-4.ref.upper.fa
+    output: ../TargetSeq-quanquan/cutoff_3/mapping/HEK4-Guideseq-4_bwa.bam
+    jobid: 102
+    reason: Missing output files: ../TargetSeq-quanquan/cutoff_3/mapping/HEK4-Guideseq-4_bwa.bam; Input files updated by another job: ../TargetSeq-quanquan/cutoff_3/mapping/HEK4-Guideseq-4_bwa.sam
+    wildcards: lib=quanquan, cutoff=3, sample=HEK4-Guideseq-4
+
+
+        /home/zhaohuanan/miniconda3/envs/snakepipes_cutadapt-STARmapping-FPKM-sortBAM/bin/samtools view -h -f 1 -F 268 ../TargetSeq-quanquan/cutoff_3/mapping/HEK4-Guideseq-4_bwa.sam         | /home/zhaohuanan/miniconda3/envs/snakepipes_target-seq-from-table-to-plot/bin/samclip --ref ../TargetSeq_BED_sample_lib/HEK4-Guideseq-4.ref.upper.fa --max 3 --progress 0         | awk 'function abs(v) {return v < 0 ? -v : v} $1~"@" || ($7 == "=" && abs($9) <= 600 ) {print $0}'         | /home/zhaohuanan/miniconda3/envs/snakepipes_cutadapt-STARmapping-FPKM-sortBAM/bin/samtools view -hb > ../TargetSeq-quanquan/cutoff_3/mapping/HEK4-Guideseq-4_bwa.bam
+        
+[Fri Oct 16 15:33:32 2020]
+Finished job 2.
+38 of 121 steps (31%) done
+
+[Fri Oct 16 15:33:32 2020]
+rule bwa_mapping:
+    input: ../TargetSeq-quanquan/cutoff_3/mapping/EMX1-2-On_R1_cutadapt.fq.gz, ../TargetSeq-quanquan/cutoff_3/mapping/EMX1-2-On_R2_cutadapt.fq.gz
+    output: ../TargetSeq-quanquan/cutoff_3/mapping/EMX1-2-On_bwa.sam
+    log: ../TargetSeq-quanquan/cutoff_3/mapping/EMX1-2-On_bwa.log
+    jobid: 122
+    reason: Missing output files: ../TargetSeq-quanquan/cutoff_3/mapping/EMX1-2-On_bwa.sam; Input files updated by another job: ../TargetSeq-quanquan/cutoff_3/mapping/EMX1-2-On_R2_cutadapt.fq.gz, ../TargetSeq-quanquan/cutoff_3/mapping/EMX1-2-On_R1_cutadapt.fq.gz
+    wildcards: lib=quanquan, cutoff=3, sample=EMX1-2-On
+
+
+        /home/zhaohuanan/miniconda3/envs/snakepipes_target-seq-from-table-to-plot/bin/bwa mem ../TargetSeq_BED_sample_lib/EMX1-2-On.ref.upper.fa ../TargetSeq-quanquan/cutoff_3/mapping/EMX1-2-On_R1_cutadapt.fq.gz ../TargetSeq-quanquan/cutoff_3/mapping/EMX1-2-On_R2_cutadapt.fq.gz -t 24 -M > ../TargetSeq-quanquan/cutoff_3/mapping/EMX1-2-On_bwa.sam 2>../TargetSeq-quanquan/cutoff_3/mapping/EMX1-2-On_bwa.log
+        
+[Fri Oct 16 15:33:32 2020]
+Finished job 106.
+39 of 121 steps (32%) done
+
+[Fri Oct 16 15:33:32 2020]
+rule samtools_sort_by_position:
+    input: ../TargetSeq-quanquan/cutoff_3/mapping/PP2-On-Target_bwa.bam
+    output: ../TargetSeq-quanquan/cutoff_3/mapping/PP2-On-Target_bwa_sort.bam
+    jobid: 34
+    reason: Missing output files: ../TargetSeq-quanquan/cutoff_3/mapping/PP2-On-Target_bwa_sort.bam; Input files updated by another job: ../TargetSeq-quanquan/cutoff_3/mapping/PP2-On-Target_bwa.bam
+    wildcards: lib=quanquan, cutoff=3, sample=PP2-On-Target
+
+/home/zhaohuanan/miniconda3/envs/snakepipes_cutadapt-STARmapping-FPKM-sortBAM/bin/samtools sort -O BAM -o ../TargetSeq-quanquan/cutoff_3/mapping/PP2-On-Target_bwa_sort.bam -T ../TargetSeq-quanquan/cutoff_3/mapping/PP2-On-Target_bwa_sort.bam.temp -@ 6 -m 2G ../TargetSeq-quanquan/cutoff_3/mapping/PP2-On-Target_bwa.bam
+[Fri Oct 16 15:33:32 2020]
+Finished job 138.
+40 of 121 steps (33%) done
+
+[Fri Oct 16 15:33:32 2020]
+rule sam_to_bam:
+    input: ../TargetSeq-sanjiao/cutoff_3/mapping/HEK4-Guideseq-4_bwa.sam, ../TargetSeq_BED_sample_lib/HEK4-Guideseq-4.ref.upper.fa
+    output: ../TargetSeq-sanjiao/cutoff_3/mapping/HEK4-Guideseq-4_bwa.bam
+    jobid: 114
+    reason: Missing output files: ../TargetSeq-sanjiao/cutoff_3/mapping/HEK4-Guideseq-4_bwa.bam; Input files updated by another job: ../TargetSeq-sanjiao/cutoff_3/mapping/HEK4-Guideseq-4_bwa.sam
+    wildcards: lib=sanjiao, cutoff=3, sample=HEK4-Guideseq-4
+
+
+        /home/zhaohuanan/miniconda3/envs/snakepipes_cutadapt-STARmapping-FPKM-sortBAM/bin/samtools view -h -f 1 -F 268 ../TargetSeq-sanjiao/cutoff_3/mapping/HEK4-Guideseq-4_bwa.sam         | /home/zhaohuanan/miniconda3/envs/snakepipes_target-seq-from-table-to-plot/bin/samclip --ref ../TargetSeq_BED_sample_lib/HEK4-Guideseq-4.ref.upper.fa --max 3 --progress 0         | awk 'function abs(v) {return v < 0 ? -v : v} $1~"@" || ($7 == "=" && abs($9) <= 600 ) {print $0}'         | /home/zhaohuanan/miniconda3/envs/snakepipes_cutadapt-STARmapping-FPKM-sortBAM/bin/samtools view -hb > ../TargetSeq-sanjiao/cutoff_3/mapping/HEK4-Guideseq-4_bwa.bam
+        
+[Fri Oct 16 15:33:33 2020]
+Finished job 34.
+41 of 121 steps (34%) done
+
+[Fri Oct 16 15:33:33 2020]
+rule samtools_index:
+    input: ../TargetSeq-quanquan/cutoff_3/mapping/PP2-On-Target_bwa_sort.bam
+    output: ../TargetSeq-quanquan/cutoff_3/mapping/PP2-On-Target_bwa_sort.bam.bai
+    jobid: 58
+    reason: Missing output files: ../TargetSeq-quanquan/cutoff_3/mapping/PP2-On-Target_bwa_sort.bam.bai; Input files updated by another job: ../TargetSeq-quanquan/cutoff_3/mapping/PP2-On-Target_bwa_sort.bam
+    wildcards: lib=quanquan, cutoff=3, sample=PP2-On-Target
+
+/home/zhaohuanan/miniconda3/envs/snakepipes_cutadapt-STARmapping-FPKM-sortBAM/bin/samtools index -@ 6 ../TargetSeq-quanquan/cutoff_3/mapping/PP2-On-Target_bwa_sort.bam ../TargetSeq-quanquan/cutoff_3/mapping/PP2-On-Target_bwa_sort.bam.bai
+[Fri Oct 16 15:33:33 2020]
+Finished job 58.
+42 of 121 steps (35%) done
+[Fri Oct 16 15:33:33 2020]
+Finished job 107.
+43 of 121 steps (36%) done
+
+[Fri Oct 16 15:33:33 2020]
+rule samtools_sort_by_position:
+    input: ../TargetSeq-quanquan/cutoff_3/mapping/PP6-On-Target_bwa.bam
+    output: ../TargetSeq-quanquan/cutoff_3/mapping/PP6-On-Target_bwa_sort.bam
+    jobid: 35
+    reason: Missing output files: ../TargetSeq-quanquan/cutoff_3/mapping/PP6-On-Target_bwa_sort.bam; Input files updated by another job: ../TargetSeq-quanquan/cutoff_3/mapping/PP6-On-Target_bwa.bam
+    wildcards: lib=quanquan, cutoff=3, sample=PP6-On-Target
+
+/home/zhaohuanan/miniconda3/envs/snakepipes_cutadapt-STARmapping-FPKM-sortBAM/bin/samtools sort -O BAM -o ../TargetSeq-quanquan/cutoff_3/mapping/PP6-On-Target_bwa_sort.bam -T ../TargetSeq-quanquan/cutoff_3/mapping/PP6-On-Target_bwa_sort.bam.temp -@ 6 -m 2G ../TargetSeq-quanquan/cutoff_3/mapping/PP6-On-Target_bwa.bam
+[Fri Oct 16 15:33:33 2020]
+Finished job 117.
+44 of 121 steps (36%) done
+
+[Fri Oct 16 15:33:33 2020]
+rule samtools_sort_by_position:
+    input: ../TargetSeq-sanjiao/cutoff_3/mapping/HEK5-On-Target_bwa.bam
+    output: ../TargetSeq-sanjiao/cutoff_3/mapping/HEK5-On-Target_bwa_sort.bam
+    jobid: 45
+    reason: Missing output files: ../TargetSeq-sanjiao/cutoff_3/mapping/HEK5-On-Target_bwa_sort.bam; Input files updated by another job: ../TargetSeq-sanjiao/cutoff_3/mapping/HEK5-On-Target_bwa.bam
+    wildcards: lib=sanjiao, cutoff=3, sample=HEK5-On-Target
+
+/home/zhaohuanan/miniconda3/envs/snakepipes_cutadapt-STARmapping-FPKM-sortBAM/bin/samtools sort -O BAM -o ../TargetSeq-sanjiao/cutoff_3/mapping/HEK5-On-Target_bwa_sort.bam -T ../TargetSeq-sanjiao/cutoff_3/mapping/HEK5-On-Target_bwa_sort.bam.temp -@ 6 -m 2G ../TargetSeq-sanjiao/cutoff_3/mapping/HEK5-On-Target_bwa.bam
+[Fri Oct 16 15:33:33 2020]
+Finished job 128.
+45 of 121 steps (37%) done
+
+[Fri Oct 16 15:33:33 2020]
+rule sam_to_bam:
+    input: ../TargetSeq-quanquan/cutoff_3/mapping/HEK4-On-Target_bwa.sam, ../TargetSeq_BED_sample_lib/HEK4-On-Target.ref.upper.fa
+    output: ../TargetSeq-quanquan/cutoff_3/mapping/HEK4-On-Target_bwa.bam
+    jobid: 104
+    reason: Missing output files: ../TargetSeq-quanquan/cutoff_3/mapping/HEK4-On-Target_bwa.bam; Input files updated by another job: ../TargetSeq-quanquan/cutoff_3/mapping/HEK4-On-Target_bwa.sam
+    wildcards: lib=quanquan, cutoff=3, sample=HEK4-On-Target
+
+
+        /home/zhaohuanan/miniconda3/envs/snakepipes_cutadapt-STARmapping-FPKM-sortBAM/bin/samtools view -h -f 1 -F 268 ../TargetSeq-quanquan/cutoff_3/mapping/HEK4-On-Target_bwa.sam         | /home/zhaohuanan/miniconda3/envs/snakepipes_target-seq-from-table-to-plot/bin/samclip --ref ../TargetSeq_BED_sample_lib/HEK4-On-Target.ref.upper.fa --max 3 --progress 0         | awk 'function abs(v) {return v < 0 ? -v : v} $1~"@" || ($7 == "=" && abs($9) <= 600 ) {print $0}'         | /home/zhaohuanan/miniconda3/envs/snakepipes_cutadapt-STARmapping-FPKM-sortBAM/bin/samtools view -hb > ../TargetSeq-quanquan/cutoff_3/mapping/HEK4-On-Target_bwa.bam
+        
+[Fri Oct 16 15:33:34 2020]
+Finished job 12.
+46 of 121 steps (38%) done
+
+[Fri Oct 16 15:33:34 2020]
+rule bwa_mapping:
+    input: ../TargetSeq-quanquan/cutoff_3/mapping/RNF2-ON-Target_R1_cutadapt.fq.gz, ../TargetSeq-quanquan/cutoff_3/mapping/RNF2-ON-Target_R2_cutadapt.fq.gz
+    output: ../TargetSeq-quanquan/cutoff_3/mapping/RNF2-ON-Target_bwa.sam
+    log: ../TargetSeq-quanquan/cutoff_3/mapping/RNF2-ON-Target_bwa.log
+    jobid: 132
+    reason: Missing output files: ../TargetSeq-quanquan/cutoff_3/mapping/RNF2-ON-Target_bwa.sam; Input files updated by another job: ../TargetSeq-quanquan/cutoff_3/mapping/RNF2-ON-Target_R1_cutadapt.fq.gz, ../TargetSeq-quanquan/cutoff_3/mapping/RNF2-ON-Target_R2_cutadapt.fq.gz
+    wildcards: lib=quanquan, cutoff=3, sample=RNF2-ON-Target
+
+
+        /home/zhaohuanan/miniconda3/envs/snakepipes_target-seq-from-table-to-plot/bin/bwa mem ../TargetSeq_BED_sample_lib/RNF2-ON-Target.ref.upper.fa ../TargetSeq-quanquan/cutoff_3/mapping/RNF2-ON-Target_R1_cutadapt.fq.gz ../TargetSeq-quanquan/cutoff_3/mapping/RNF2-ON-Target_R2_cutadapt.fq.gz -t 24 -M > ../TargetSeq-quanquan/cutoff_3/mapping/RNF2-ON-Target_bwa.sam 2>../TargetSeq-quanquan/cutoff_3/mapping/RNF2-ON-Target_bwa.log
+        
+[Fri Oct 16 15:33:34 2020]
+Finished job 35.
+47 of 121 steps (39%) done
+
+[Fri Oct 16 15:33:34 2020]
+rule samtools_index:
+    input: ../TargetSeq-quanquan/cutoff_3/mapping/PP6-On-Target_bwa_sort.bam
+    output: ../TargetSeq-quanquan/cutoff_3/mapping/PP6-On-Target_bwa_sort.bam.bai
+    jobid: 59
+    reason: Missing output files: ../TargetSeq-quanquan/cutoff_3/mapping/PP6-On-Target_bwa_sort.bam.bai; Input files updated by another job: ../TargetSeq-quanquan/cutoff_3/mapping/PP6-On-Target_bwa_sort.bam
+    wildcards: lib=quanquan, cutoff=3, sample=PP6-On-Target
+
+/home/zhaohuanan/miniconda3/envs/snakepipes_cutadapt-STARmapping-FPKM-sortBAM/bin/samtools index -@ 6 ../TargetSeq-quanquan/cutoff_3/mapping/PP6-On-Target_bwa_sort.bam ../TargetSeq-quanquan/cutoff_3/mapping/PP6-On-Target_bwa_sort.bam.bai
+[Fri Oct 16 15:33:34 2020]
+Finished job 24.
+48 of 121 steps (40%) done
+
+[Fri Oct 16 15:33:34 2020]
+rule bwa_mapping:
+    input: ../TargetSeq-sanjiao/cutoff_3/mapping/RNF2-ON-Target_R1_cutadapt.fq.gz, ../TargetSeq-sanjiao/cutoff_3/mapping/RNF2-ON-Target_R2_cutadapt.fq.gz
+    output: ../TargetSeq-sanjiao/cutoff_3/mapping/RNF2-ON-Target_bwa.sam
+    log: ../TargetSeq-sanjiao/cutoff_3/mapping/RNF2-ON-Target_bwa.log
+    jobid: 144
+    reason: Missing output files: ../TargetSeq-sanjiao/cutoff_3/mapping/RNF2-ON-Target_bwa.sam; Input files updated by another job: ../TargetSeq-sanjiao/cutoff_3/mapping/RNF2-ON-Target_R2_cutadapt.fq.gz, ../TargetSeq-sanjiao/cutoff_3/mapping/RNF2-ON-Target_R1_cutadapt.fq.gz
+    wildcards: lib=sanjiao, cutoff=3, sample=RNF2-ON-Target
+
+
+        /home/zhaohuanan/miniconda3/envs/snakepipes_target-seq-from-table-to-plot/bin/bwa mem ../TargetSeq_BED_sample_lib/RNF2-ON-Target.ref.upper.fa ../TargetSeq-sanjiao/cutoff_3/mapping/RNF2-ON-Target_R1_cutadapt.fq.gz ../TargetSeq-sanjiao/cutoff_3/mapping/RNF2-ON-Target_R2_cutadapt.fq.gz -t 24 -M > ../TargetSeq-sanjiao/cutoff_3/mapping/RNF2-ON-Target_bwa.sam 2>../TargetSeq-sanjiao/cutoff_3/mapping/RNF2-ON-Target_bwa.log
+        
+[Fri Oct 16 15:33:34 2020]
+Finished job 59.
+49 of 121 steps (40%) done
+[Fri Oct 16 15:33:34 2020]
+Finished job 45.
+50 of 121 steps (41%) done
+
+[Fri Oct 16 15:33:34 2020]
+rule samtools_index:
+    input: ../TargetSeq-sanjiao/cutoff_3/mapping/HEK5-On-Target_bwa_sort.bam
+    output: ../TargetSeq-sanjiao/cutoff_3/mapping/HEK5-On-Target_bwa_sort.bam.bai
+    jobid: 69
+    reason: Missing output files: ../TargetSeq-sanjiao/cutoff_3/mapping/HEK5-On-Target_bwa_sort.bam.bai; Input files updated by another job: ../TargetSeq-sanjiao/cutoff_3/mapping/HEK5-On-Target_bwa_sort.bam
+    wildcards: lib=sanjiao, cutoff=3, sample=HEK5-On-Target
+
+/home/zhaohuanan/miniconda3/envs/snakepipes_cutadapt-STARmapping-FPKM-sortBAM/bin/samtools index -@ 6 ../TargetSeq-sanjiao/cutoff_3/mapping/HEK5-On-Target_bwa_sort.bam ../TargetSeq-sanjiao/cutoff_3/mapping/HEK5-On-Target_bwa_sort.bam.bai
+[Fri Oct 16 15:33:34 2020]
+Finished job 105.
+51 of 121 steps (42%) done
+
+[Fri Oct 16 15:33:34 2020]
+rule samtools_sort_by_position:
+    input: ../TargetSeq-quanquan/cutoff_3/mapping/HEK5-On-Target_bwa.bam
+    output: ../TargetSeq-quanquan/cutoff_3/mapping/HEK5-On-Target_bwa_sort.bam
+    jobid: 33
+    reason: Missing output files: ../TargetSeq-quanquan/cutoff_3/mapping/HEK5-On-Target_bwa_sort.bam; Input files updated by another job: ../TargetSeq-quanquan/cutoff_3/mapping/HEK5-On-Target_bwa.bam
+    wildcards: lib=quanquan, cutoff=3, sample=HEK5-On-Target
+
+/home/zhaohuanan/miniconda3/envs/snakepipes_cutadapt-STARmapping-FPKM-sortBAM/bin/samtools sort -O BAM -o ../TargetSeq-quanquan/cutoff_3/mapping/HEK5-On-Target_bwa_sort.bam -T ../TargetSeq-quanquan/cutoff_3/mapping/HEK5-On-Target_bwa_sort.bam.temp -@ 6 -m 2G ../TargetSeq-quanquan/cutoff_3/mapping/HEK5-On-Target_bwa.bam
+[Fri Oct 16 15:33:34 2020]
+Finished job 69.
+52 of 121 steps (43%) done
+[Fri Oct 16 15:33:35 2020]
+Finished job 33.
+53 of 121 steps (44%) done
+
+[Fri Oct 16 15:33:35 2020]
+rule samtools_index:
+    input: ../TargetSeq-quanquan/cutoff_3/mapping/HEK5-On-Target_bwa_sort.bam
+    output: ../TargetSeq-quanquan/cutoff_3/mapping/HEK5-On-Target_bwa_sort.bam.bai
+    jobid: 57
+    reason: Missing output files: ../TargetSeq-quanquan/cutoff_3/mapping/HEK5-On-Target_bwa_sort.bam.bai; Input files updated by another job: ../TargetSeq-quanquan/cutoff_3/mapping/HEK5-On-Target_bwa_sort.bam
+    wildcards: lib=quanquan, cutoff=3, sample=HEK5-On-Target
+
+/home/zhaohuanan/miniconda3/envs/snakepipes_cutadapt-STARmapping-FPKM-sortBAM/bin/samtools index -@ 6 ../TargetSeq-quanquan/cutoff_3/mapping/HEK5-On-Target_bwa_sort.bam ../TargetSeq-quanquan/cutoff_3/mapping/HEK5-On-Target_bwa_sort.bam.bai
+[Fri Oct 16 15:33:35 2020]
+Finished job 57.
+54 of 121 steps (45%) done
+[Fri Oct 16 15:33:35 2020]
+Finished job 123.
+55 of 121 steps (45%) done
+
+[Fri Oct 16 15:33:35 2020]
+rule sam_to_bam:
+    input: ../TargetSeq-quanquan/cutoff_3/mapping/HEK2-On-Target_bwa.sam, ../TargetSeq_BED_sample_lib/HEK2-On-Target.ref.upper.fa
+    output: ../TargetSeq-quanquan/cutoff_3/mapping/HEK2-On-Target_bwa.bam
+    jobid: 99
+    reason: Missing output files: ../TargetSeq-quanquan/cutoff_3/mapping/HEK2-On-Target_bwa.bam; Input files updated by another job: ../TargetSeq-quanquan/cutoff_3/mapping/HEK2-On-Target_bwa.sam
+    wildcards: lib=quanquan, cutoff=3, sample=HEK2-On-Target
+
+
+        /home/zhaohuanan/miniconda3/envs/snakepipes_cutadapt-STARmapping-FPKM-sortBAM/bin/samtools view -h -f 1 -F 268 ../TargetSeq-quanquan/cutoff_3/mapping/HEK2-On-Target_bwa.sam         | /home/zhaohuanan/miniconda3/envs/snakepipes_target-seq-from-table-to-plot/bin/samclip --ref ../TargetSeq_BED_sample_lib/HEK2-On-Target.ref.upper.fa --max 3 --progress 0         | awk 'function abs(v) {return v < 0 ? -v : v} $1~"@" || ($7 == "=" && abs($9) <= 600 ) {print $0}'         | /home/zhaohuanan/miniconda3/envs/snakepipes_cutadapt-STARmapping-FPKM-sortBAM/bin/samtools view -hb > ../TargetSeq-quanquan/cutoff_3/mapping/HEK2-On-Target_bwa.bam
+        
+[Fri Oct 16 15:33:35 2020]
+Finished job 111.
+56 of 121 steps (46%) done
+
+[Fri Oct 16 15:33:35 2020]
+rule samtools_sort_by_position:
+    input: ../TargetSeq-sanjiao/cutoff_3/mapping/HEK2-On-Target_bwa.bam
+    output: ../TargetSeq-sanjiao/cutoff_3/mapping/HEK2-On-Target_bwa_sort.bam
+    jobid: 39
+    reason: Missing output files: ../TargetSeq-sanjiao/cutoff_3/mapping/HEK2-On-Target_bwa_sort.bam; Input files updated by another job: ../TargetSeq-sanjiao/cutoff_3/mapping/HEK2-On-Target_bwa.bam
+    wildcards: lib=sanjiao, cutoff=3, sample=HEK2-On-Target
+
+/home/zhaohuanan/miniconda3/envs/snakepipes_cutadapt-STARmapping-FPKM-sortBAM/bin/samtools sort -O BAM -o ../TargetSeq-sanjiao/cutoff_3/mapping/HEK2-On-Target_bwa_sort.bam -T ../TargetSeq-sanjiao/cutoff_3/mapping/HEK2-On-Target_bwa_sort.bam.temp -@ 6 -m 2G ../TargetSeq-sanjiao/cutoff_3/mapping/HEK2-On-Target_bwa.bam
+[Fri Oct 16 15:33:35 2020]
+Finished job 124.
+57 of 121 steps (47%) done
+
+[Fri Oct 16 15:33:35 2020]
+rule sam_to_bam:
+    input: ../TargetSeq-quanquan/cutoff_3/mapping/HEK4-Guideseq-2_bwa.sam, ../TargetSeq_BED_sample_lib/HEK4-Guideseq-2.ref.upper.fa
+    output: ../TargetSeq-quanquan/cutoff_3/mapping/HEK4-Guideseq-2_bwa.bam
+    jobid: 100
+    reason: Missing output files: ../TargetSeq-quanquan/cutoff_3/mapping/HEK4-Guideseq-2_bwa.bam; Input files updated by another job: ../TargetSeq-quanquan/cutoff_3/mapping/HEK4-Guideseq-2_bwa.sam
+    wildcards: lib=quanquan, cutoff=3, sample=HEK4-Guideseq-2
+
+
+        /home/zhaohuanan/miniconda3/envs/snakepipes_cutadapt-STARmapping-FPKM-sortBAM/bin/samtools view -h -f 1 -F 268 ../TargetSeq-quanquan/cutoff_3/mapping/HEK4-Guideseq-2_bwa.sam         | /home/zhaohuanan/miniconda3/envs/snakepipes_target-seq-from-table-to-plot/bin/samclip --ref ../TargetSeq_BED_sample_lib/HEK4-Guideseq-2.ref.upper.fa --max 3 --progress 0         | awk 'function abs(v) {return v < 0 ? -v : v} $1~"@" || ($7 == "=" && abs($9) <= 600 ) {print $0}'         | /home/zhaohuanan/miniconda3/envs/snakepipes_cutadapt-STARmapping-FPKM-sortBAM/bin/samtools view -hb > ../TargetSeq-quanquan/cutoff_3/mapping/HEK4-Guideseq-2_bwa.bam
+        
+[Fri Oct 16 15:33:36 2020]
+Finished job 140.
+58 of 121 steps (48%) done
+
+[Fri Oct 16 15:33:36 2020]
+rule sam_to_bam:
+    input: ../TargetSeq-sanjiao/cutoff_3/mapping/HEK4-On-Target_bwa.sam, ../TargetSeq_BED_sample_lib/HEK4-On-Target.ref.upper.fa
+    output: ../TargetSeq-sanjiao/cutoff_3/mapping/HEK4-On-Target_bwa.bam
+    jobid: 116
+    reason: Missing output files: ../TargetSeq-sanjiao/cutoff_3/mapping/HEK4-On-Target_bwa.bam; Input files updated by another job: ../TargetSeq-sanjiao/cutoff_3/mapping/HEK4-On-Target_bwa.sam
+    wildcards: lib=sanjiao, cutoff=3, sample=HEK4-On-Target
+
+
+        /home/zhaohuanan/miniconda3/envs/snakepipes_cutadapt-STARmapping-FPKM-sortBAM/bin/samtools view -h -f 1 -F 268 ../TargetSeq-sanjiao/cutoff_3/mapping/HEK4-On-Target_bwa.sam         | /home/zhaohuanan/miniconda3/envs/snakepipes_target-seq-from-table-to-plot/bin/samclip --ref ../TargetSeq_BED_sample_lib/HEK4-On-Target.ref.upper.fa --max 3 --progress 0         | awk 'function abs(v) {return v < 0 ? -v : v} $1~"@" || ($7 == "=" && abs($9) <= 600 ) {print $0}'         | /home/zhaohuanan/miniconda3/envs/snakepipes_cutadapt-STARmapping-FPKM-sortBAM/bin/samtools view -hb > ../TargetSeq-sanjiao/cutoff_3/mapping/HEK4-On-Target_bwa.bam
+        
+[Fri Oct 16 15:33:36 2020]
+Finished job 102.
+59 of 121 steps (49%) done
+
+[Fri Oct 16 15:33:36 2020]
+rule samtools_sort_by_position:
+    input: ../TargetSeq-quanquan/cutoff_3/mapping/HEK4-Guideseq-4_bwa.bam
+    output: ../TargetSeq-quanquan/cutoff_3/mapping/HEK4-Guideseq-4_bwa_sort.bam
+    jobid: 30
+    reason: Missing output files: ../TargetSeq-quanquan/cutoff_3/mapping/HEK4-Guideseq-4_bwa_sort.bam; Input files updated by another job: ../TargetSeq-quanquan/cutoff_3/mapping/HEK4-Guideseq-4_bwa.bam
+    wildcards: lib=quanquan, cutoff=3, sample=HEK4-Guideseq-4
+
+/home/zhaohuanan/miniconda3/envs/snakepipes_cutadapt-STARmapping-FPKM-sortBAM/bin/samtools sort -O BAM -o ../TargetSeq-quanquan/cutoff_3/mapping/HEK4-Guideseq-4_bwa_sort.bam -T ../TargetSeq-quanquan/cutoff_3/mapping/HEK4-Guideseq-4_bwa_sort.bam.temp -@ 6 -m 2G ../TargetSeq-quanquan/cutoff_3/mapping/HEK4-Guideseq-4_bwa.bam
+[Fri Oct 16 15:33:36 2020]
+Finished job 136.
+60 of 121 steps (50%) done
+
+[Fri Oct 16 15:33:36 2020]
+rule sam_to_bam:
+    input: ../TargetSeq-sanjiao/cutoff_3/mapping/HEK4-Guideseq-2_bwa.sam, ../TargetSeq_BED_sample_lib/HEK4-Guideseq-2.ref.upper.fa
+    output: ../TargetSeq-sanjiao/cutoff_3/mapping/HEK4-Guideseq-2_bwa.bam
+    jobid: 112
+    reason: Missing output files: ../TargetSeq-sanjiao/cutoff_3/mapping/HEK4-Guideseq-2_bwa.bam; Input files updated by another job: ../TargetSeq-sanjiao/cutoff_3/mapping/HEK4-Guideseq-2_bwa.sam
+    wildcards: lib=sanjiao, cutoff=3, sample=HEK4-Guideseq-2
+
+
+        /home/zhaohuanan/miniconda3/envs/snakepipes_cutadapt-STARmapping-FPKM-sortBAM/bin/samtools view -h -f 1 -F 268 ../TargetSeq-sanjiao/cutoff_3/mapping/HEK4-Guideseq-2_bwa.sam         | /home/zhaohuanan/miniconda3/envs/snakepipes_target-seq-from-table-to-plot/bin/samclip --ref ../TargetSeq_BED_sample_lib/HEK4-Guideseq-2.ref.upper.fa --max 3 --progress 0         | awk 'function abs(v) {return v < 0 ? -v : v} $1~"@" || ($7 == "=" && abs($9) <= 600 ) {print $0}'         | /home/zhaohuanan/miniconda3/envs/snakepipes_cutadapt-STARmapping-FPKM-sortBAM/bin/samtools view -hb > ../TargetSeq-sanjiao/cutoff_3/mapping/HEK4-Guideseq-2_bwa.bam
+        
+[Fri Oct 16 15:33:36 2020]
+Finished job 127.
+61 of 121 steps (50%) done
+
+[Fri Oct 16 15:33:36 2020]
+rule sam_to_bam:
+    input: ../TargetSeq-quanquan/cutoff_3/mapping/HEK4-Guideseq-5_bwa.sam, ../TargetSeq_BED_sample_lib/HEK4-Guideseq-5.ref.upper.fa
+    output: ../TargetSeq-quanquan/cutoff_3/mapping/HEK4-Guideseq-5_bwa.bam
+    jobid: 103
+    reason: Missing output files: ../TargetSeq-quanquan/cutoff_3/mapping/HEK4-Guideseq-5_bwa.bam; Input files updated by another job: ../TargetSeq-quanquan/cutoff_3/mapping/HEK4-Guideseq-5_bwa.sam
+    wildcards: lib=quanquan, cutoff=3, sample=HEK4-Guideseq-5
+
+
+        /home/zhaohuanan/miniconda3/envs/snakepipes_cutadapt-STARmapping-FPKM-sortBAM/bin/samtools view -h -f 1 -F 268 ../TargetSeq-quanquan/cutoff_3/mapping/HEK4-Guideseq-5_bwa.sam         | /home/zhaohuanan/miniconda3/envs/snakepipes_target-seq-from-table-to-plot/bin/samclip --ref ../TargetSeq_BED_sample_lib/HEK4-Guideseq-5.ref.upper.fa --max 3 --progress 0         | awk 'function abs(v) {return v < 0 ? -v : v} $1~"@" || ($7 == "=" && abs($9) <= 600 ) {print $0}'         | /home/zhaohuanan/miniconda3/envs/snakepipes_cutadapt-STARmapping-FPKM-sortBAM/bin/samtools view -hb > ../TargetSeq-quanquan/cutoff_3/mapping/HEK4-Guideseq-5_bwa.bam
+        
+[Fri Oct 16 15:33:36 2020]
+Finished job 118.
+62 of 121 steps (51%) done
+
+[Fri Oct 16 15:33:36 2020]
+rule samtools_sort_by_position:
+    input: ../TargetSeq-sanjiao/cutoff_3/mapping/PP2-On-Target_bwa.bam
+    output: ../TargetSeq-sanjiao/cutoff_3/mapping/PP2-On-Target_bwa_sort.bam
+    jobid: 46
+    reason: Missing output files: ../TargetSeq-sanjiao/cutoff_3/mapping/PP2-On-Target_bwa_sort.bam; Input files updated by another job: ../TargetSeq-sanjiao/cutoff_3/mapping/PP2-On-Target_bwa.bam
+    wildcards: lib=sanjiao, cutoff=3, sample=PP2-On-Target
+
+/home/zhaohuanan/miniconda3/envs/snakepipes_cutadapt-STARmapping-FPKM-sortBAM/bin/samtools sort -O BAM -o ../TargetSeq-sanjiao/cutoff_3/mapping/PP2-On-Target_bwa_sort.bam -T ../TargetSeq-sanjiao/cutoff_3/mapping/PP2-On-Target_bwa_sort.bam.temp -@ 6 -m 2G ../TargetSeq-sanjiao/cutoff_3/mapping/PP2-On-Target_bwa.bam
+[Fri Oct 16 15:33:36 2020]
+Finished job 39.
+63 of 121 steps (52%) done
+
+[Fri Oct 16 15:33:36 2020]
+rule samtools_index:
+    input: ../TargetSeq-sanjiao/cutoff_3/mapping/HEK2-On-Target_bwa_sort.bam
+    output: ../TargetSeq-sanjiao/cutoff_3/mapping/HEK2-On-Target_bwa_sort.bam.bai
+    jobid: 63
+    reason: Missing output files: ../TargetSeq-sanjiao/cutoff_3/mapping/HEK2-On-Target_bwa_sort.bam.bai; Input files updated by another job: ../TargetSeq-sanjiao/cutoff_3/mapping/HEK2-On-Target_bwa_sort.bam
+    wildcards: lib=sanjiao, cutoff=3, sample=HEK2-On-Target
+
+/home/zhaohuanan/miniconda3/envs/snakepipes_cutadapt-STARmapping-FPKM-sortBAM/bin/samtools index -@ 6 ../TargetSeq-sanjiao/cutoff_3/mapping/HEK2-On-Target_bwa_sort.bam ../TargetSeq-sanjiao/cutoff_3/mapping/HEK2-On-Target_bwa_sort.bam.bai
+[Fri Oct 16 15:33:36 2020]
+Finished job 119.
+64 of 121 steps (53%) done
+
+[Fri Oct 16 15:33:36 2020]
+rule samtools_sort_by_position:
+    input: ../TargetSeq-sanjiao/cutoff_3/mapping/PP6-On-Target_bwa.bam
+    output: ../TargetSeq-sanjiao/cutoff_3/mapping/PP6-On-Target_bwa_sort.bam
+    jobid: 47
+    reason: Missing output files: ../TargetSeq-sanjiao/cutoff_3/mapping/PP6-On-Target_bwa_sort.bam; Input files updated by another job: ../TargetSeq-sanjiao/cutoff_3/mapping/PP6-On-Target_bwa.bam
+    wildcards: lib=sanjiao, cutoff=3, sample=PP6-On-Target
+
+/home/zhaohuanan/miniconda3/envs/snakepipes_cutadapt-STARmapping-FPKM-sortBAM/bin/samtools sort -O BAM -o ../TargetSeq-sanjiao/cutoff_3/mapping/PP6-On-Target_bwa_sort.bam -T ../TargetSeq-sanjiao/cutoff_3/mapping/PP6-On-Target_bwa_sort.bam.temp -@ 6 -m 2G ../TargetSeq-sanjiao/cutoff_3/mapping/PP6-On-Target_bwa.bam
+[Fri Oct 16 15:33:37 2020]
+Finished job 63.
+65 of 121 steps (54%) done
+[Fri Oct 16 15:33:37 2020]
+Finished job 30.
+66 of 121 steps (55%) done
+
+[Fri Oct 16 15:33:37 2020]
+rule samtools_index:
+    input: ../TargetSeq-quanquan/cutoff_3/mapping/HEK4-Guideseq-4_bwa_sort.bam
+    output: ../TargetSeq-quanquan/cutoff_3/mapping/HEK4-Guideseq-4_bwa_sort.bam.bai
+    jobid: 54
+    reason: Missing output files: ../TargetSeq-quanquan/cutoff_3/mapping/HEK4-Guideseq-4_bwa_sort.bam.bai; Input files updated by another job: ../TargetSeq-quanquan/cutoff_3/mapping/HEK4-Guideseq-4_bwa_sort.bam
+    wildcards: lib=quanquan, cutoff=3, sample=HEK4-Guideseq-4
+
+/home/zhaohuanan/miniconda3/envs/snakepipes_cutadapt-STARmapping-FPKM-sortBAM/bin/samtools index -@ 6 ../TargetSeq-quanquan/cutoff_3/mapping/HEK4-Guideseq-4_bwa_sort.bam ../TargetSeq-quanquan/cutoff_3/mapping/HEK4-Guideseq-4_bwa_sort.bam.bai
+[Fri Oct 16 15:33:37 2020]
+Finished job 139.
+67 of 121 steps (55%) done
+
+[Fri Oct 16 15:33:37 2020]
+rule sam_to_bam:
+    input: ../TargetSeq-sanjiao/cutoff_3/mapping/HEK4-Guideseq-5_bwa.sam, ../TargetSeq_BED_sample_lib/HEK4-Guideseq-5.ref.upper.fa
+    output: ../TargetSeq-sanjiao/cutoff_3/mapping/HEK4-Guideseq-5_bwa.bam
+    jobid: 115
+    reason: Missing output files: ../TargetSeq-sanjiao/cutoff_3/mapping/HEK4-Guideseq-5_bwa.bam; Input files updated by another job: ../TargetSeq-sanjiao/cutoff_3/mapping/HEK4-Guideseq-5_bwa.sam
+    wildcards: lib=sanjiao, cutoff=3, sample=HEK4-Guideseq-5
+
+
+        /home/zhaohuanan/miniconda3/envs/snakepipes_cutadapt-STARmapping-FPKM-sortBAM/bin/samtools view -h -f 1 -F 268 ../TargetSeq-sanjiao/cutoff_3/mapping/HEK4-Guideseq-5_bwa.sam         | /home/zhaohuanan/miniconda3/envs/snakepipes_target-seq-from-table-to-plot/bin/samclip --ref ../TargetSeq_BED_sample_lib/HEK4-Guideseq-5.ref.upper.fa --max 3 --progress 0         | awk 'function abs(v) {return v < 0 ? -v : v} $1~"@" || ($7 == "=" && abs($9) <= 600 ) {print $0}'         | /home/zhaohuanan/miniconda3/envs/snakepipes_cutadapt-STARmapping-FPKM-sortBAM/bin/samtools view -hb > ../TargetSeq-sanjiao/cutoff_3/mapping/HEK4-Guideseq-5_bwa.bam
+        
+[Fri Oct 16 15:33:37 2020]
+Finished job 54.
+68 of 121 steps (56%) done
+[Fri Oct 16 15:33:37 2020]
+Finished job 46.
+69 of 121 steps (57%) done
+
+[Fri Oct 16 15:33:37 2020]
+rule samtools_index:
+    input: ../TargetSeq-sanjiao/cutoff_3/mapping/PP2-On-Target_bwa_sort.bam
+    output: ../TargetSeq-sanjiao/cutoff_3/mapping/PP2-On-Target_bwa_sort.bam.bai
+    jobid: 70
+    reason: Missing output files: ../TargetSeq-sanjiao/cutoff_3/mapping/PP2-On-Target_bwa_sort.bam.bai; Input files updated by another job: ../TargetSeq-sanjiao/cutoff_3/mapping/PP2-On-Target_bwa_sort.bam
+    wildcards: lib=sanjiao, cutoff=3, sample=PP2-On-Target
+
+/home/zhaohuanan/miniconda3/envs/snakepipes_cutadapt-STARmapping-FPKM-sortBAM/bin/samtools index -@ 6 ../TargetSeq-sanjiao/cutoff_3/mapping/PP2-On-Target_bwa_sort.bam ../TargetSeq-sanjiao/cutoff_3/mapping/PP2-On-Target_bwa_sort.bam.bai
+[Fri Oct 16 15:33:37 2020]
+Finished job 133.
+70 of 121 steps (58%) done
+
+[Fri Oct 16 15:33:37 2020]
+rule sam_to_bam:
+    input: ../TargetSeq-sanjiao/cutoff_3/mapping/ABE-Site-7-On_bwa.sam, ../TargetSeq_BED_sample_lib/ABE-Site-7-On.ref.upper.fa
+    output: ../TargetSeq-sanjiao/cutoff_3/mapping/ABE-Site-7-On_bwa.bam
+    jobid: 109
+    reason: Missing output files: ../TargetSeq-sanjiao/cutoff_3/mapping/ABE-Site-7-On_bwa.bam; Input files updated by another job: ../TargetSeq-sanjiao/cutoff_3/mapping/ABE-Site-7-On_bwa.sam
+    wildcards: lib=sanjiao, cutoff=3, sample=ABE-Site-7-On
+
+
+        /home/zhaohuanan/miniconda3/envs/snakepipes_cutadapt-STARmapping-FPKM-sortBAM/bin/samtools view -h -f 1 -F 268 ../TargetSeq-sanjiao/cutoff_3/mapping/ABE-Site-7-On_bwa.sam         | /home/zhaohuanan/miniconda3/envs/snakepipes_target-seq-from-table-to-plot/bin/samclip --ref ../TargetSeq_BED_sample_lib/ABE-Site-7-On.ref.upper.fa --max 3 --progress 0         | awk 'function abs(v) {return v < 0 ? -v : v} $1~"@" || ($7 == "=" && abs($9) <= 600 ) {print $0}'         | /home/zhaohuanan/miniconda3/envs/snakepipes_cutadapt-STARmapping-FPKM-sortBAM/bin/samtools view -hb > ../TargetSeq-sanjiao/cutoff_3/mapping/ABE-Site-7-On_bwa.bam
+        
+[Fri Oct 16 15:33:37 2020]
+Finished job 70.
+71 of 121 steps (59%) done
+[Fri Oct 16 15:33:37 2020]
+Finished job 47.
+72 of 121 steps (60%) done
+
+[Fri Oct 16 15:33:37 2020]
+rule samtools_index:
+    input: ../TargetSeq-sanjiao/cutoff_3/mapping/PP6-On-Target_bwa_sort.bam
+    output: ../TargetSeq-sanjiao/cutoff_3/mapping/PP6-On-Target_bwa_sort.bam.bai
+    jobid: 71
+    reason: Missing output files: ../TargetSeq-sanjiao/cutoff_3/mapping/PP6-On-Target_bwa_sort.bam.bai; Input files updated by another job: ../TargetSeq-sanjiao/cutoff_3/mapping/PP6-On-Target_bwa_sort.bam
+    wildcards: lib=sanjiao, cutoff=3, sample=PP6-On-Target
+
+/home/zhaohuanan/miniconda3/envs/snakepipes_cutadapt-STARmapping-FPKM-sortBAM/bin/samtools index -@ 6 ../TargetSeq-sanjiao/cutoff_3/mapping/PP6-On-Target_bwa_sort.bam ../TargetSeq-sanjiao/cutoff_3/mapping/PP6-On-Target_bwa_sort.bam.bai
+[Fri Oct 16 15:33:37 2020]
+Finished job 104.
+73 of 121 steps (60%) done
+
+[Fri Oct 16 15:33:37 2020]
+rule samtools_sort_by_position:
+    input: ../TargetSeq-quanquan/cutoff_3/mapping/HEK4-On-Target_bwa.bam
+    output: ../TargetSeq-quanquan/cutoff_3/mapping/HEK4-On-Target_bwa_sort.bam
+    jobid: 32
+    reason: Missing output files: ../TargetSeq-quanquan/cutoff_3/mapping/HEK4-On-Target_bwa_sort.bam; Input files updated by another job: ../TargetSeq-quanquan/cutoff_3/mapping/HEK4-On-Target_bwa.bam
+    wildcards: lib=quanquan, cutoff=3, sample=HEK4-On-Target
+
+/home/zhaohuanan/miniconda3/envs/snakepipes_cutadapt-STARmapping-FPKM-sortBAM/bin/samtools sort -O BAM -o ../TargetSeq-quanquan/cutoff_3/mapping/HEK4-On-Target_bwa_sort.bam -T ../TargetSeq-quanquan/cutoff_3/mapping/HEK4-On-Target_bwa_sort.bam.temp -@ 6 -m 2G ../TargetSeq-quanquan/cutoff_3/mapping/HEK4-On-Target_bwa.bam
+[Fri Oct 16 15:33:37 2020]
+Finished job 71.
+74 of 121 steps (61%) done
+[Fri Oct 16 15:33:38 2020]
+Finished job 114.
+75 of 121 steps (62%) done
+
+[Fri Oct 16 15:33:38 2020]
+rule samtools_sort_by_position:
+    input: ../TargetSeq-sanjiao/cutoff_3/mapping/HEK4-Guideseq-4_bwa.bam
+    output: ../TargetSeq-sanjiao/cutoff_3/mapping/HEK4-Guideseq-4_bwa_sort.bam
+    jobid: 42
+    reason: Missing output files: ../TargetSeq-sanjiao/cutoff_3/mapping/HEK4-Guideseq-4_bwa_sort.bam; Input files updated by another job: ../TargetSeq-sanjiao/cutoff_3/mapping/HEK4-Guideseq-4_bwa.bam
+    wildcards: lib=sanjiao, cutoff=3, sample=HEK4-Guideseq-4
+
+/home/zhaohuanan/miniconda3/envs/snakepipes_cutadapt-STARmapping-FPKM-sortBAM/bin/samtools sort -O BAM -o ../TargetSeq-sanjiao/cutoff_3/mapping/HEK4-Guideseq-4_bwa_sort.bam -T ../TargetSeq-sanjiao/cutoff_3/mapping/HEK4-Guideseq-4_bwa_sort.bam.temp -@ 6 -m 2G ../TargetSeq-sanjiao/cutoff_3/mapping/HEK4-Guideseq-4_bwa.bam
+[Fri Oct 16 15:33:38 2020]
+Finished job 121.
+76 of 121 steps (63%) done
+
+[Fri Oct 16 15:33:38 2020]
+rule sam_to_bam:
+    input: ../TargetSeq-quanquan/cutoff_3/mapping/ABE-Site-7-On_bwa.sam, ../TargetSeq_BED_sample_lib/ABE-Site-7-On.ref.upper.fa
+    output: ../TargetSeq-quanquan/cutoff_3/mapping/ABE-Site-7-On_bwa.bam
+    jobid: 97
+    reason: Missing output files: ../TargetSeq-quanquan/cutoff_3/mapping/ABE-Site-7-On_bwa.bam; Input files updated by another job: ../TargetSeq-quanquan/cutoff_3/mapping/ABE-Site-7-On_bwa.sam
+    wildcards: lib=quanquan, cutoff=3, sample=ABE-Site-7-On
+
+
+        /home/zhaohuanan/miniconda3/envs/snakepipes_cutadapt-STARmapping-FPKM-sortBAM/bin/samtools view -h -f 1 -F 268 ../TargetSeq-quanquan/cutoff_3/mapping/ABE-Site-7-On_bwa.sam         | /home/zhaohuanan/miniconda3/envs/snakepipes_target-seq-from-table-to-plot/bin/samclip --ref ../TargetSeq_BED_sample_lib/ABE-Site-7-On.ref.upper.fa --max 3 --progress 0         | awk 'function abs(v) {return v < 0 ? -v : v} $1~"@" || ($7 == "=" && abs($9) <= 600 ) {print $0}'         | /home/zhaohuanan/miniconda3/envs/snakepipes_cutadapt-STARmapping-FPKM-sortBAM/bin/samtools view -hb > ../TargetSeq-quanquan/cutoff_3/mapping/ABE-Site-7-On_bwa.bam
+        
+[Fri Oct 16 15:33:38 2020]
+Finished job 32.
+77 of 121 steps (64%) done
+
+[Fri Oct 16 15:33:38 2020]
+rule samtools_index:
+    input: ../TargetSeq-quanquan/cutoff_3/mapping/HEK4-On-Target_bwa_sort.bam
+    output: ../TargetSeq-quanquan/cutoff_3/mapping/HEK4-On-Target_bwa_sort.bam.bai
+    jobid: 56
+    reason: Missing output files: ../TargetSeq-quanquan/cutoff_3/mapping/HEK4-On-Target_bwa_sort.bam.bai; Input files updated by another job: ../TargetSeq-quanquan/cutoff_3/mapping/HEK4-On-Target_bwa_sort.bam
+    wildcards: lib=quanquan, cutoff=3, sample=HEK4-On-Target
+
+/home/zhaohuanan/miniconda3/envs/snakepipes_cutadapt-STARmapping-FPKM-sortBAM/bin/samtools index -@ 6 ../TargetSeq-quanquan/cutoff_3/mapping/HEK4-On-Target_bwa_sort.bam ../TargetSeq-quanquan/cutoff_3/mapping/HEK4-On-Target_bwa_sort.bam.bai
+[Fri Oct 16 15:33:39 2020]
+Finished job 56.
+78 of 121 steps (64%) done
+[Fri Oct 16 15:33:39 2020]
+Finished job 42.
+79 of 121 steps (65%) done
+
+[Fri Oct 16 15:33:39 2020]
+rule samtools_index:
+    input: ../TargetSeq-sanjiao/cutoff_3/mapping/HEK4-Guideseq-4_bwa_sort.bam
+    output: ../TargetSeq-sanjiao/cutoff_3/mapping/HEK4-Guideseq-4_bwa_sort.bam.bai
+    jobid: 66
+    reason: Missing output files: ../TargetSeq-sanjiao/cutoff_3/mapping/HEK4-Guideseq-4_bwa_sort.bam.bai; Input files updated by another job: ../TargetSeq-sanjiao/cutoff_3/mapping/HEK4-Guideseq-4_bwa_sort.bam
+    wildcards: lib=sanjiao, cutoff=3, sample=HEK4-Guideseq-4
+
+/home/zhaohuanan/miniconda3/envs/snakepipes_cutadapt-STARmapping-FPKM-sortBAM/bin/samtools index -@ 6 ../TargetSeq-sanjiao/cutoff_3/mapping/HEK4-Guideseq-4_bwa_sort.bam ../TargetSeq-sanjiao/cutoff_3/mapping/HEK4-Guideseq-4_bwa_sort.bam.bai
+[Fri Oct 16 15:33:39 2020]
+Finished job 66.
+80 of 121 steps (66%) done
+[Fri Oct 16 15:33:40 2020]
+Finished job 99.
+81 of 121 steps (67%) done
+
+[Fri Oct 16 15:33:40 2020]
+rule samtools_sort_by_position:
+    input: ../TargetSeq-quanquan/cutoff_3/mapping/HEK2-On-Target_bwa.bam
+    output: ../TargetSeq-quanquan/cutoff_3/mapping/HEK2-On-Target_bwa_sort.bam
+    jobid: 27
+    reason: Missing output files: ../TargetSeq-quanquan/cutoff_3/mapping/HEK2-On-Target_bwa_sort.bam; Input files updated by another job: ../TargetSeq-quanquan/cutoff_3/mapping/HEK2-On-Target_bwa.bam
+    wildcards: lib=quanquan, cutoff=3, sample=HEK2-On-Target
+
+/home/zhaohuanan/miniconda3/envs/snakepipes_cutadapt-STARmapping-FPKM-sortBAM/bin/samtools sort -O BAM -o ../TargetSeq-quanquan/cutoff_3/mapping/HEK2-On-Target_bwa_sort.bam -T ../TargetSeq-quanquan/cutoff_3/mapping/HEK2-On-Target_bwa_sort.bam.temp -@ 6 -m 2G ../TargetSeq-quanquan/cutoff_3/mapping/HEK2-On-Target_bwa.bam
+[Fri Oct 16 15:33:40 2020]
+Finished job 116.
+82 of 121 steps (68%) done
+
+[Fri Oct 16 15:33:40 2020]
+rule samtools_sort_by_position:
+    input: ../TargetSeq-sanjiao/cutoff_3/mapping/HEK4-On-Target_bwa.bam
+    output: ../TargetSeq-sanjiao/cutoff_3/mapping/HEK4-On-Target_bwa_sort.bam
+    jobid: 44
+    reason: Missing output files: ../TargetSeq-sanjiao/cutoff_3/mapping/HEK4-On-Target_bwa_sort.bam; Input files updated by another job: ../TargetSeq-sanjiao/cutoff_3/mapping/HEK4-On-Target_bwa.bam
+    wildcards: lib=sanjiao, cutoff=3, sample=HEK4-On-Target
+
+/home/zhaohuanan/miniconda3/envs/snakepipes_cutadapt-STARmapping-FPKM-sortBAM/bin/samtools sort -O BAM -o ../TargetSeq-sanjiao/cutoff_3/mapping/HEK4-On-Target_bwa_sort.bam -T ../TargetSeq-sanjiao/cutoff_3/mapping/HEK4-On-Target_bwa_sort.bam.temp -@ 6 -m 2G ../TargetSeq-sanjiao/cutoff_3/mapping/HEK4-On-Target_bwa.bam
+[Fri Oct 16 15:33:40 2020]
+Finished job 100.
+83 of 121 steps (69%) done
+
+[Fri Oct 16 15:33:40 2020]
+rule samtools_sort_by_position:
+    input: ../TargetSeq-quanquan/cutoff_3/mapping/HEK4-Guideseq-2_bwa.bam
+    output: ../TargetSeq-quanquan/cutoff_3/mapping/HEK4-Guideseq-2_bwa_sort.bam
+    jobid: 28
+    reason: Missing output files: ../TargetSeq-quanquan/cutoff_3/mapping/HEK4-Guideseq-2_bwa_sort.bam; Input files updated by another job: ../TargetSeq-quanquan/cutoff_3/mapping/HEK4-Guideseq-2_bwa.bam
+    wildcards: lib=quanquan, cutoff=3, sample=HEK4-Guideseq-2
+
+/home/zhaohuanan/miniconda3/envs/snakepipes_cutadapt-STARmapping-FPKM-sortBAM/bin/samtools sort -O BAM -o ../TargetSeq-quanquan/cutoff_3/mapping/HEK4-Guideseq-2_bwa_sort.bam -T ../TargetSeq-quanquan/cutoff_3/mapping/HEK4-Guideseq-2_bwa_sort.bam.temp -@ 6 -m 2G ../TargetSeq-quanquan/cutoff_3/mapping/HEK4-Guideseq-2_bwa.bam
+[Fri Oct 16 15:33:40 2020]
+Finished job 112.
+84 of 121 steps (69%) done
+
+[Fri Oct 16 15:33:40 2020]
+rule samtools_sort_by_position:
+    input: ../TargetSeq-sanjiao/cutoff_3/mapping/HEK4-Guideseq-2_bwa.bam
+    output: ../TargetSeq-sanjiao/cutoff_3/mapping/HEK4-Guideseq-2_bwa_sort.bam
+    jobid: 40
+    reason: Missing output files: ../TargetSeq-sanjiao/cutoff_3/mapping/HEK4-Guideseq-2_bwa_sort.bam; Input files updated by another job: ../TargetSeq-sanjiao/cutoff_3/mapping/HEK4-Guideseq-2_bwa.bam
+    wildcards: lib=sanjiao, cutoff=3, sample=HEK4-Guideseq-2
+
+/home/zhaohuanan/miniconda3/envs/snakepipes_cutadapt-STARmapping-FPKM-sortBAM/bin/samtools sort -O BAM -o ../TargetSeq-sanjiao/cutoff_3/mapping/HEK4-Guideseq-2_bwa_sort.bam -T ../TargetSeq-sanjiao/cutoff_3/mapping/HEK4-Guideseq-2_bwa_sort.bam.temp -@ 6 -m 2G ../TargetSeq-sanjiao/cutoff_3/mapping/HEK4-Guideseq-2_bwa.bam
+[Fri Oct 16 15:33:41 2020]
+Finished job 27.
+85 of 121 steps (70%) done
+
+[Fri Oct 16 15:33:41 2020]
+rule samtools_index:
+    input: ../TargetSeq-quanquan/cutoff_3/mapping/HEK2-On-Target_bwa_sort.bam
+    output: ../TargetSeq-quanquan/cutoff_3/mapping/HEK2-On-Target_bwa_sort.bam.bai
+    jobid: 51
+    reason: Missing output files: ../TargetSeq-quanquan/cutoff_3/mapping/HEK2-On-Target_bwa_sort.bam.bai; Input files updated by another job: ../TargetSeq-quanquan/cutoff_3/mapping/HEK2-On-Target_bwa_sort.bam
+    wildcards: lib=quanquan, cutoff=3, sample=HEK2-On-Target
+
+/home/zhaohuanan/miniconda3/envs/snakepipes_cutadapt-STARmapping-FPKM-sortBAM/bin/samtools index -@ 6 ../TargetSeq-quanquan/cutoff_3/mapping/HEK2-On-Target_bwa_sort.bam ../TargetSeq-quanquan/cutoff_3/mapping/HEK2-On-Target_bwa_sort.bam.bai
+[Fri Oct 16 15:33:41 2020]
+Finished job 51.
+86 of 121 steps (71%) done
+[Fri Oct 16 15:33:41 2020]
+Finished job 103.
+87 of 121 steps (72%) done
+
+[Fri Oct 16 15:33:41 2020]
+rule samtools_sort_by_position:
+    input: ../TargetSeq-quanquan/cutoff_3/mapping/HEK4-Guideseq-5_bwa.bam
+    output: ../TargetSeq-quanquan/cutoff_3/mapping/HEK4-Guideseq-5_bwa_sort.bam
+    jobid: 31
+    reason: Missing output files: ../TargetSeq-quanquan/cutoff_3/mapping/HEK4-Guideseq-5_bwa_sort.bam; Input files updated by another job: ../TargetSeq-quanquan/cutoff_3/mapping/HEK4-Guideseq-5_bwa.bam
+    wildcards: lib=quanquan, cutoff=3, sample=HEK4-Guideseq-5
+
+/home/zhaohuanan/miniconda3/envs/snakepipes_cutadapt-STARmapping-FPKM-sortBAM/bin/samtools sort -O BAM -o ../TargetSeq-quanquan/cutoff_3/mapping/HEK4-Guideseq-5_bwa_sort.bam -T ../TargetSeq-quanquan/cutoff_3/mapping/HEK4-Guideseq-5_bwa_sort.bam.temp -@ 6 -m 2G ../TargetSeq-quanquan/cutoff_3/mapping/HEK4-Guideseq-5_bwa.bam
+[Fri Oct 16 15:33:41 2020]
+Finished job 44.
+88 of 121 steps (73%) done
+
+[Fri Oct 16 15:33:41 2020]
+rule samtools_index:
+    input: ../TargetSeq-sanjiao/cutoff_3/mapping/HEK4-On-Target_bwa_sort.bam
+    output: ../TargetSeq-sanjiao/cutoff_3/mapping/HEK4-On-Target_bwa_sort.bam.bai
+    jobid: 68
+    reason: Missing output files: ../TargetSeq-sanjiao/cutoff_3/mapping/HEK4-On-Target_bwa_sort.bam.bai; Input files updated by another job: ../TargetSeq-sanjiao/cutoff_3/mapping/HEK4-On-Target_bwa_sort.bam
+    wildcards: lib=sanjiao, cutoff=3, sample=HEK4-On-Target
+
+/home/zhaohuanan/miniconda3/envs/snakepipes_cutadapt-STARmapping-FPKM-sortBAM/bin/samtools index -@ 6 ../TargetSeq-sanjiao/cutoff_3/mapping/HEK4-On-Target_bwa_sort.bam ../TargetSeq-sanjiao/cutoff_3/mapping/HEK4-On-Target_bwa_sort.bam.bai
+[Fri Oct 16 15:33:41 2020]
+Finished job 28.
+89 of 121 steps (74%) done
+
+[Fri Oct 16 15:33:41 2020]
+rule samtools_index:
+    input: ../TargetSeq-quanquan/cutoff_3/mapping/HEK4-Guideseq-2_bwa_sort.bam
+    output: ../TargetSeq-quanquan/cutoff_3/mapping/HEK4-Guideseq-2_bwa_sort.bam.bai
+    jobid: 52
+    reason: Missing output files: ../TargetSeq-quanquan/cutoff_3/mapping/HEK4-Guideseq-2_bwa_sort.bam.bai; Input files updated by another job: ../TargetSeq-quanquan/cutoff_3/mapping/HEK4-Guideseq-2_bwa_sort.bam
+    wildcards: lib=quanquan, cutoff=3, sample=HEK4-Guideseq-2
+
+/home/zhaohuanan/miniconda3/envs/snakepipes_cutadapt-STARmapping-FPKM-sortBAM/bin/samtools index -@ 6 ../TargetSeq-quanquan/cutoff_3/mapping/HEK4-Guideseq-2_bwa_sort.bam ../TargetSeq-quanquan/cutoff_3/mapping/HEK4-Guideseq-2_bwa_sort.bam.bai
+[Fri Oct 16 15:33:41 2020]
+Finished job 52.
+90 of 121 steps (74%) done
+[Fri Oct 16 15:33:42 2020]
+Finished job 68.
+91 of 121 steps (75%) done
+[Fri Oct 16 15:33:42 2020]
+Finished job 40.
+92 of 121 steps (76%) done
+
+[Fri Oct 16 15:33:42 2020]
+rule samtools_index:
+    input: ../TargetSeq-sanjiao/cutoff_3/mapping/HEK4-Guideseq-2_bwa_sort.bam
+    output: ../TargetSeq-sanjiao/cutoff_3/mapping/HEK4-Guideseq-2_bwa_sort.bam.bai
+    jobid: 64
+    reason: Missing output files: ../TargetSeq-sanjiao/cutoff_3/mapping/HEK4-Guideseq-2_bwa_sort.bam.bai; Input files updated by another job: ../TargetSeq-sanjiao/cutoff_3/mapping/HEK4-Guideseq-2_bwa_sort.bam
+    wildcards: lib=sanjiao, cutoff=3, sample=HEK4-Guideseq-2
+
+/home/zhaohuanan/miniconda3/envs/snakepipes_cutadapt-STARmapping-FPKM-sortBAM/bin/samtools index -@ 6 ../TargetSeq-sanjiao/cutoff_3/mapping/HEK4-Guideseq-2_bwa_sort.bam ../TargetSeq-sanjiao/cutoff_3/mapping/HEK4-Guideseq-2_bwa_sort.bam.bai
+[Fri Oct 16 15:33:42 2020]
+Finished job 64.
+93 of 121 steps (77%) done
+[Fri Oct 16 15:33:42 2020]
+Finished job 109.
+94 of 121 steps (78%) done
+
+[Fri Oct 16 15:33:42 2020]
+rule samtools_sort_by_position:
+    input: ../TargetSeq-sanjiao/cutoff_3/mapping/ABE-Site-7-On_bwa.bam
+    output: ../TargetSeq-sanjiao/cutoff_3/mapping/ABE-Site-7-On_bwa_sort.bam
+    jobid: 37
+    reason: Missing output files: ../TargetSeq-sanjiao/cutoff_3/mapping/ABE-Site-7-On_bwa_sort.bam; Input files updated by another job: ../TargetSeq-sanjiao/cutoff_3/mapping/ABE-Site-7-On_bwa.bam
+    wildcards: lib=sanjiao, cutoff=3, sample=ABE-Site-7-On
+
+/home/zhaohuanan/miniconda3/envs/snakepipes_cutadapt-STARmapping-FPKM-sortBAM/bin/samtools sort -O BAM -o ../TargetSeq-sanjiao/cutoff_3/mapping/ABE-Site-7-On_bwa_sort.bam -T ../TargetSeq-sanjiao/cutoff_3/mapping/ABE-Site-7-On_bwa_sort.bam.temp -@ 6 -m 2G ../TargetSeq-sanjiao/cutoff_3/mapping/ABE-Site-7-On_bwa.bam
+[Fri Oct 16 15:33:42 2020]
+Finished job 134.
+95 of 121 steps (79%) done
+[Fri Oct 16 15:33:42 2020]
+Finished job 115.
+96 of 121 steps (79%) done
+
+[Fri Oct 16 15:33:42 2020]
+rule samtools_sort_by_position:
+    input: ../TargetSeq-sanjiao/cutoff_3/mapping/HEK4-Guideseq-5_bwa.bam
+    output: ../TargetSeq-sanjiao/cutoff_3/mapping/HEK4-Guideseq-5_bwa_sort.bam
+    jobid: 43
+    reason: Missing output files: ../TargetSeq-sanjiao/cutoff_3/mapping/HEK4-Guideseq-5_bwa_sort.bam; Input files updated by another job: ../TargetSeq-sanjiao/cutoff_3/mapping/HEK4-Guideseq-5_bwa.bam
+    wildcards: lib=sanjiao, cutoff=3, sample=HEK4-Guideseq-5
+
+/home/zhaohuanan/miniconda3/envs/snakepipes_cutadapt-STARmapping-FPKM-sortBAM/bin/samtools sort -O BAM -o ../TargetSeq-sanjiao/cutoff_3/mapping/HEK4-Guideseq-5_bwa_sort.bam -T ../TargetSeq-sanjiao/cutoff_3/mapping/HEK4-Guideseq-5_bwa_sort.bam.temp -@ 6 -m 2G ../TargetSeq-sanjiao/cutoff_3/mapping/HEK4-Guideseq-5_bwa.bam
+
+[Fri Oct 16 15:33:42 2020]
+rule sam_to_bam:
+    input: ../TargetSeq-sanjiao/cutoff_3/mapping/EMX1-2-On_bwa.sam, ../TargetSeq_BED_sample_lib/EMX1-2-On.ref.upper.fa
+    output: ../TargetSeq-sanjiao/cutoff_3/mapping/EMX1-2-On_bwa.bam
+    jobid: 110
+    reason: Missing output files: ../TargetSeq-sanjiao/cutoff_3/mapping/EMX1-2-On_bwa.bam; Input files updated by another job: ../TargetSeq-sanjiao/cutoff_3/mapping/EMX1-2-On_bwa.sam
+    wildcards: lib=sanjiao, cutoff=3, sample=EMX1-2-On
+
+
+        /home/zhaohuanan/miniconda3/envs/snakepipes_cutadapt-STARmapping-FPKM-sortBAM/bin/samtools view -h -f 1 -F 268 ../TargetSeq-sanjiao/cutoff_3/mapping/EMX1-2-On_bwa.sam         | /home/zhaohuanan/miniconda3/envs/snakepipes_target-seq-from-table-to-plot/bin/samclip --ref ../TargetSeq_BED_sample_lib/EMX1-2-On.ref.upper.fa --max 3 --progress 0         | awk 'function abs(v) {return v < 0 ? -v : v} $1~"@" || ($7 == "=" && abs($9) <= 600 ) {print $0}'         | /home/zhaohuanan/miniconda3/envs/snakepipes_cutadapt-STARmapping-FPKM-sortBAM/bin/samtools view -hb > ../TargetSeq-sanjiao/cutoff_3/mapping/EMX1-2-On_bwa.bam
+        
+[Fri Oct 16 15:33:42 2020]
+Finished job 31.
+97 of 121 steps (80%) done
+
+[Fri Oct 16 15:33:42 2020]
+rule samtools_index:
+    input: ../TargetSeq-quanquan/cutoff_3/mapping/HEK4-Guideseq-5_bwa_sort.bam
+    output: ../TargetSeq-quanquan/cutoff_3/mapping/HEK4-Guideseq-5_bwa_sort.bam.bai
+    jobid: 55
+    reason: Missing output files: ../TargetSeq-quanquan/cutoff_3/mapping/HEK4-Guideseq-5_bwa_sort.bam.bai; Input files updated by another job: ../TargetSeq-quanquan/cutoff_3/mapping/HEK4-Guideseq-5_bwa_sort.bam
+    wildcards: lib=quanquan, cutoff=3, sample=HEK4-Guideseq-5
+
+/home/zhaohuanan/miniconda3/envs/snakepipes_cutadapt-STARmapping-FPKM-sortBAM/bin/samtools index -@ 6 ../TargetSeq-quanquan/cutoff_3/mapping/HEK4-Guideseq-5_bwa_sort.bam ../TargetSeq-quanquan/cutoff_3/mapping/HEK4-Guideseq-5_bwa_sort.bam.bai
+[Fri Oct 16 15:33:42 2020]
+Finished job 55.
+98 of 121 steps (81%) done
+[Fri Oct 16 15:33:43 2020]
+Finished job 37.
+99 of 121 steps (82%) done
+
+[Fri Oct 16 15:33:43 2020]
+rule samtools_index:
+    input: ../TargetSeq-sanjiao/cutoff_3/mapping/ABE-Site-7-On_bwa_sort.bam
+    output: ../TargetSeq-sanjiao/cutoff_3/mapping/ABE-Site-7-On_bwa_sort.bam.bai
+    jobid: 61
+    reason: Missing output files: ../TargetSeq-sanjiao/cutoff_3/mapping/ABE-Site-7-On_bwa_sort.bam.bai; Input files updated by another job: ../TargetSeq-sanjiao/cutoff_3/mapping/ABE-Site-7-On_bwa_sort.bam
+    wildcards: lib=sanjiao, cutoff=3, sample=ABE-Site-7-On
+
+/home/zhaohuanan/miniconda3/envs/snakepipes_cutadapt-STARmapping-FPKM-sortBAM/bin/samtools index -@ 6 ../TargetSeq-sanjiao/cutoff_3/mapping/ABE-Site-7-On_bwa_sort.bam ../TargetSeq-sanjiao/cutoff_3/mapping/ABE-Site-7-On_bwa_sort.bam.bai
+[Fri Oct 16 15:33:43 2020]
+Finished job 61.
+100 of 121 steps (83%) done
+[Fri Oct 16 15:33:43 2020]
+Finished job 43.
+101 of 121 steps (83%) done
+
+[Fri Oct 16 15:33:43 2020]
+rule samtools_index:
+    input: ../TargetSeq-sanjiao/cutoff_3/mapping/HEK4-Guideseq-5_bwa_sort.bam
+    output: ../TargetSeq-sanjiao/cutoff_3/mapping/HEK4-Guideseq-5_bwa_sort.bam.bai
+    jobid: 67
+    reason: Missing output files: ../TargetSeq-sanjiao/cutoff_3/mapping/HEK4-Guideseq-5_bwa_sort.bam.bai; Input files updated by another job: ../TargetSeq-sanjiao/cutoff_3/mapping/HEK4-Guideseq-5_bwa_sort.bam
+    wildcards: lib=sanjiao, cutoff=3, sample=HEK4-Guideseq-5
+
+/home/zhaohuanan/miniconda3/envs/snakepipes_cutadapt-STARmapping-FPKM-sortBAM/bin/samtools index -@ 6 ../TargetSeq-sanjiao/cutoff_3/mapping/HEK4-Guideseq-5_bwa_sort.bam ../TargetSeq-sanjiao/cutoff_3/mapping/HEK4-Guideseq-5_bwa_sort.bam.bai
+[Fri Oct 16 15:33:43 2020]
+Finished job 67.
+102 of 121 steps (84%) done
+[Fri Oct 16 15:33:43 2020]
+Finished job 97.
+103 of 121 steps (85%) done
+
+[Fri Oct 16 15:33:43 2020]
+rule samtools_sort_by_position:
+    input: ../TargetSeq-quanquan/cutoff_3/mapping/ABE-Site-7-On_bwa.bam
+    output: ../TargetSeq-quanquan/cutoff_3/mapping/ABE-Site-7-On_bwa_sort.bam
+    jobid: 25
+    reason: Missing output files: ../TargetSeq-quanquan/cutoff_3/mapping/ABE-Site-7-On_bwa_sort.bam; Input files updated by another job: ../TargetSeq-quanquan/cutoff_3/mapping/ABE-Site-7-On_bwa.bam
+    wildcards: lib=quanquan, cutoff=3, sample=ABE-Site-7-On
+
+/home/zhaohuanan/miniconda3/envs/snakepipes_cutadapt-STARmapping-FPKM-sortBAM/bin/samtools sort -O BAM -o ../TargetSeq-quanquan/cutoff_3/mapping/ABE-Site-7-On_bwa_sort.bam -T ../TargetSeq-quanquan/cutoff_3/mapping/ABE-Site-7-On_bwa_sort.bam.temp -@ 6 -m 2G ../TargetSeq-quanquan/cutoff_3/mapping/ABE-Site-7-On_bwa.bam
+[Fri Oct 16 15:33:44 2020]
+Finished job 122.
+104 of 121 steps (86%) done
+
+[Fri Oct 16 15:33:44 2020]
+rule sam_to_bam:
+    input: ../TargetSeq-quanquan/cutoff_3/mapping/EMX1-2-On_bwa.sam, ../TargetSeq_BED_sample_lib/EMX1-2-On.ref.upper.fa
+    output: ../TargetSeq-quanquan/cutoff_3/mapping/EMX1-2-On_bwa.bam
+    jobid: 98
+    reason: Missing output files: ../TargetSeq-quanquan/cutoff_3/mapping/EMX1-2-On_bwa.bam; Input files updated by another job: ../TargetSeq-quanquan/cutoff_3/mapping/EMX1-2-On_bwa.sam
+    wildcards: lib=quanquan, cutoff=3, sample=EMX1-2-On
+
+
+        /home/zhaohuanan/miniconda3/envs/snakepipes_cutadapt-STARmapping-FPKM-sortBAM/bin/samtools view -h -f 1 -F 268 ../TargetSeq-quanquan/cutoff_3/mapping/EMX1-2-On_bwa.sam         | /home/zhaohuanan/miniconda3/envs/snakepipes_target-seq-from-table-to-plot/bin/samclip --ref ../TargetSeq_BED_sample_lib/EMX1-2-On.ref.upper.fa --max 3 --progress 0         | awk 'function abs(v) {return v < 0 ? -v : v} $1~"@" || ($7 == "=" && abs($9) <= 600 ) {print $0}'         | /home/zhaohuanan/miniconda3/envs/snakepipes_cutadapt-STARmapping-FPKM-sortBAM/bin/samtools view -hb > ../TargetSeq-quanquan/cutoff_3/mapping/EMX1-2-On_bwa.bam
+        
+[Fri Oct 16 15:33:44 2020]
+Finished job 25.
+105 of 121 steps (87%) done
+
+[Fri Oct 16 15:33:44 2020]
+rule samtools_index:
+    input: ../TargetSeq-quanquan/cutoff_3/mapping/ABE-Site-7-On_bwa_sort.bam
+    output: ../TargetSeq-quanquan/cutoff_3/mapping/ABE-Site-7-On_bwa_sort.bam.bai
+    jobid: 49
+    reason: Missing output files: ../TargetSeq-quanquan/cutoff_3/mapping/ABE-Site-7-On_bwa_sort.bam.bai; Input files updated by another job: ../TargetSeq-quanquan/cutoff_3/mapping/ABE-Site-7-On_bwa_sort.bam
+    wildcards: lib=quanquan, cutoff=3, sample=ABE-Site-7-On
+
+/home/zhaohuanan/miniconda3/envs/snakepipes_cutadapt-STARmapping-FPKM-sortBAM/bin/samtools index -@ 6 ../TargetSeq-quanquan/cutoff_3/mapping/ABE-Site-7-On_bwa_sort.bam ../TargetSeq-quanquan/cutoff_3/mapping/ABE-Site-7-On_bwa_sort.bam.bai
+[Fri Oct 16 15:33:44 2020]
+Finished job 49.
+106 of 121 steps (88%) done
+[Fri Oct 16 15:33:45 2020]
+Finished job 132.
+107 of 121 steps (88%) done
+
+[Fri Oct 16 15:33:45 2020]
+rule sam_to_bam:
+    input: ../TargetSeq-quanquan/cutoff_3/mapping/RNF2-ON-Target_bwa.sam, ../TargetSeq_BED_sample_lib/RNF2-ON-Target.ref.upper.fa
+    output: ../TargetSeq-quanquan/cutoff_3/mapping/RNF2-ON-Target_bwa.bam
+    jobid: 108
+    reason: Missing output files: ../TargetSeq-quanquan/cutoff_3/mapping/RNF2-ON-Target_bwa.bam; Input files updated by another job: ../TargetSeq-quanquan/cutoff_3/mapping/RNF2-ON-Target_bwa.sam
+    wildcards: lib=quanquan, cutoff=3, sample=RNF2-ON-Target
+
+
+        /home/zhaohuanan/miniconda3/envs/snakepipes_cutadapt-STARmapping-FPKM-sortBAM/bin/samtools view -h -f 1 -F 268 ../TargetSeq-quanquan/cutoff_3/mapping/RNF2-ON-Target_bwa.sam         | /home/zhaohuanan/miniconda3/envs/snakepipes_target-seq-from-table-to-plot/bin/samclip --ref ../TargetSeq_BED_sample_lib/RNF2-ON-Target.ref.upper.fa --max 3 --progress 0         | awk 'function abs(v) {return v < 0 ? -v : v} $1~"@" || ($7 == "=" && abs($9) <= 600 ) {print $0}'         | /home/zhaohuanan/miniconda3/envs/snakepipes_cutadapt-STARmapping-FPKM-sortBAM/bin/samtools view -hb > ../TargetSeq-quanquan/cutoff_3/mapping/RNF2-ON-Target_bwa.bam
+        
+[Fri Oct 16 15:33:46 2020]
+Finished job 144.
+108 of 121 steps (89%) done
+
+[Fri Oct 16 15:33:46 2020]
+rule sam_to_bam:
+    input: ../TargetSeq-sanjiao/cutoff_3/mapping/RNF2-ON-Target_bwa.sam, ../TargetSeq_BED_sample_lib/RNF2-ON-Target.ref.upper.fa
+    output: ../TargetSeq-sanjiao/cutoff_3/mapping/RNF2-ON-Target_bwa.bam
+    jobid: 120
+    reason: Missing output files: ../TargetSeq-sanjiao/cutoff_3/mapping/RNF2-ON-Target_bwa.bam; Input files updated by another job: ../TargetSeq-sanjiao/cutoff_3/mapping/RNF2-ON-Target_bwa.sam
+    wildcards: lib=sanjiao, cutoff=3, sample=RNF2-ON-Target
+
+
+        /home/zhaohuanan/miniconda3/envs/snakepipes_cutadapt-STARmapping-FPKM-sortBAM/bin/samtools view -h -f 1 -F 268 ../TargetSeq-sanjiao/cutoff_3/mapping/RNF2-ON-Target_bwa.sam         | /home/zhaohuanan/miniconda3/envs/snakepipes_target-seq-from-table-to-plot/bin/samclip --ref ../TargetSeq_BED_sample_lib/RNF2-ON-Target.ref.upper.fa --max 3 --progress 0         | awk 'function abs(v) {return v < 0 ? -v : v} $1~"@" || ($7 == "=" && abs($9) <= 600 ) {print $0}'         | /home/zhaohuanan/miniconda3/envs/snakepipes_cutadapt-STARmapping-FPKM-sortBAM/bin/samtools view -hb > ../TargetSeq-sanjiao/cutoff_3/mapping/RNF2-ON-Target_bwa.bam
+        
+[Fri Oct 16 15:33:47 2020]
+Finished job 110.
+109 of 121 steps (90%) done
+
+[Fri Oct 16 15:33:47 2020]
+rule samtools_sort_by_position:
+    input: ../TargetSeq-sanjiao/cutoff_3/mapping/EMX1-2-On_bwa.bam
+    output: ../TargetSeq-sanjiao/cutoff_3/mapping/EMX1-2-On_bwa_sort.bam
+    jobid: 38
+    reason: Missing output files: ../TargetSeq-sanjiao/cutoff_3/mapping/EMX1-2-On_bwa_sort.bam; Input files updated by another job: ../TargetSeq-sanjiao/cutoff_3/mapping/EMX1-2-On_bwa.bam
+    wildcards: lib=sanjiao, cutoff=3, sample=EMX1-2-On
+
+/home/zhaohuanan/miniconda3/envs/snakepipes_cutadapt-STARmapping-FPKM-sortBAM/bin/samtools sort -O BAM -o ../TargetSeq-sanjiao/cutoff_3/mapping/EMX1-2-On_bwa_sort.bam -T ../TargetSeq-sanjiao/cutoff_3/mapping/EMX1-2-On_bwa_sort.bam.temp -@ 6 -m 2G ../TargetSeq-sanjiao/cutoff_3/mapping/EMX1-2-On_bwa.bam
+[Fri Oct 16 15:33:48 2020]
+Finished job 98.
+110 of 121 steps (91%) done
+
+[Fri Oct 16 15:33:48 2020]
+rule samtools_sort_by_position:
+    input: ../TargetSeq-quanquan/cutoff_3/mapping/EMX1-2-On_bwa.bam
+    output: ../TargetSeq-quanquan/cutoff_3/mapping/EMX1-2-On_bwa_sort.bam
+    jobid: 26
+    reason: Missing output files: ../TargetSeq-quanquan/cutoff_3/mapping/EMX1-2-On_bwa_sort.bam; Input files updated by another job: ../TargetSeq-quanquan/cutoff_3/mapping/EMX1-2-On_bwa.bam
+    wildcards: lib=quanquan, cutoff=3, sample=EMX1-2-On
+
+/home/zhaohuanan/miniconda3/envs/snakepipes_cutadapt-STARmapping-FPKM-sortBAM/bin/samtools sort -O BAM -o ../TargetSeq-quanquan/cutoff_3/mapping/EMX1-2-On_bwa_sort.bam -T ../TargetSeq-quanquan/cutoff_3/mapping/EMX1-2-On_bwa_sort.bam.temp -@ 6 -m 2G ../TargetSeq-quanquan/cutoff_3/mapping/EMX1-2-On_bwa.bam
+[Fri Oct 16 15:33:48 2020]
+Finished job 38.
+111 of 121 steps (92%) done
+
+[Fri Oct 16 15:33:48 2020]
+rule samtools_index:
+    input: ../TargetSeq-sanjiao/cutoff_3/mapping/EMX1-2-On_bwa_sort.bam
+    output: ../TargetSeq-sanjiao/cutoff_3/mapping/EMX1-2-On_bwa_sort.bam.bai
+    jobid: 62
+    reason: Missing output files: ../TargetSeq-sanjiao/cutoff_3/mapping/EMX1-2-On_bwa_sort.bam.bai; Input files updated by another job: ../TargetSeq-sanjiao/cutoff_3/mapping/EMX1-2-On_bwa_sort.bam
+    wildcards: lib=sanjiao, cutoff=3, sample=EMX1-2-On
+
+/home/zhaohuanan/miniconda3/envs/snakepipes_cutadapt-STARmapping-FPKM-sortBAM/bin/samtools index -@ 6 ../TargetSeq-sanjiao/cutoff_3/mapping/EMX1-2-On_bwa_sort.bam ../TargetSeq-sanjiao/cutoff_3/mapping/EMX1-2-On_bwa_sort.bam.bai
+[Fri Oct 16 15:33:49 2020]
+Finished job 62.
+112 of 121 steps (93%) done
+[Fri Oct 16 15:33:49 2020]
+Finished job 108.
+113 of 121 steps (93%) done
+
+[Fri Oct 16 15:33:49 2020]
+rule samtools_sort_by_position:
+    input: ../TargetSeq-quanquan/cutoff_3/mapping/RNF2-ON-Target_bwa.bam
+    output: ../TargetSeq-quanquan/cutoff_3/mapping/RNF2-ON-Target_bwa_sort.bam
+    jobid: 36
+    reason: Missing output files: ../TargetSeq-quanquan/cutoff_3/mapping/RNF2-ON-Target_bwa_sort.bam; Input files updated by another job: ../TargetSeq-quanquan/cutoff_3/mapping/RNF2-ON-Target_bwa.bam
+    wildcards: lib=quanquan, cutoff=3, sample=RNF2-ON-Target
+
+/home/zhaohuanan/miniconda3/envs/snakepipes_cutadapt-STARmapping-FPKM-sortBAM/bin/samtools sort -O BAM -o ../TargetSeq-quanquan/cutoff_3/mapping/RNF2-ON-Target_bwa_sort.bam -T ../TargetSeq-quanquan/cutoff_3/mapping/RNF2-ON-Target_bwa_sort.bam.temp -@ 6 -m 2G ../TargetSeq-quanquan/cutoff_3/mapping/RNF2-ON-Target_bwa.bam
+[Fri Oct 16 15:33:49 2020]
+Finished job 26.
+114 of 121 steps (94%) done
+
+[Fri Oct 16 15:33:49 2020]
+rule samtools_index:
+    input: ../TargetSeq-quanquan/cutoff_3/mapping/EMX1-2-On_bwa_sort.bam
+    output: ../TargetSeq-quanquan/cutoff_3/mapping/EMX1-2-On_bwa_sort.bam.bai
+    jobid: 50
+    reason: Missing output files: ../TargetSeq-quanquan/cutoff_3/mapping/EMX1-2-On_bwa_sort.bam.bai; Input files updated by another job: ../TargetSeq-quanquan/cutoff_3/mapping/EMX1-2-On_bwa_sort.bam
+    wildcards: lib=quanquan, cutoff=3, sample=EMX1-2-On
+
+/home/zhaohuanan/miniconda3/envs/snakepipes_cutadapt-STARmapping-FPKM-sortBAM/bin/samtools index -@ 6 ../TargetSeq-quanquan/cutoff_3/mapping/EMX1-2-On_bwa_sort.bam ../TargetSeq-quanquan/cutoff_3/mapping/EMX1-2-On_bwa_sort.bam.bai
+[Fri Oct 16 15:33:50 2020]
+Finished job 50.
+115 of 121 steps (95%) done
+[Fri Oct 16 15:33:50 2020]
+Finished job 36.
+116 of 121 steps (96%) done
+
+[Fri Oct 16 15:33:50 2020]
+rule samtools_index:
+    input: ../TargetSeq-quanquan/cutoff_3/mapping/RNF2-ON-Target_bwa_sort.bam
+    output: ../TargetSeq-quanquan/cutoff_3/mapping/RNF2-ON-Target_bwa_sort.bam.bai
+    jobid: 60
+    reason: Missing output files: ../TargetSeq-quanquan/cutoff_3/mapping/RNF2-ON-Target_bwa_sort.bam.bai; Input files updated by another job: ../TargetSeq-quanquan/cutoff_3/mapping/RNF2-ON-Target_bwa_sort.bam
+    wildcards: lib=quanquan, cutoff=3, sample=RNF2-ON-Target
+
+/home/zhaohuanan/miniconda3/envs/snakepipes_cutadapt-STARmapping-FPKM-sortBAM/bin/samtools index -@ 6 ../TargetSeq-quanquan/cutoff_3/mapping/RNF2-ON-Target_bwa_sort.bam ../TargetSeq-quanquan/cutoff_3/mapping/RNF2-ON-Target_bwa_sort.bam.bai
+[Fri Oct 16 15:33:50 2020]
+Finished job 60.
+117 of 121 steps (97%) done
+[Fri Oct 16 15:33:51 2020]
+Finished job 120.
+118 of 121 steps (98%) done
+
+[Fri Oct 16 15:33:51 2020]
+rule samtools_sort_by_position:
+    input: ../TargetSeq-sanjiao/cutoff_3/mapping/RNF2-ON-Target_bwa.bam
+    output: ../TargetSeq-sanjiao/cutoff_3/mapping/RNF2-ON-Target_bwa_sort.bam
+    jobid: 48
+    reason: Missing output files: ../TargetSeq-sanjiao/cutoff_3/mapping/RNF2-ON-Target_bwa_sort.bam; Input files updated by another job: ../TargetSeq-sanjiao/cutoff_3/mapping/RNF2-ON-Target_bwa.bam
+    wildcards: lib=sanjiao, cutoff=3, sample=RNF2-ON-Target
+
+/home/zhaohuanan/miniconda3/envs/snakepipes_cutadapt-STARmapping-FPKM-sortBAM/bin/samtools sort -O BAM -o ../TargetSeq-sanjiao/cutoff_3/mapping/RNF2-ON-Target_bwa_sort.bam -T ../TargetSeq-sanjiao/cutoff_3/mapping/RNF2-ON-Target_bwa_sort.bam.temp -@ 6 -m 2G ../TargetSeq-sanjiao/cutoff_3/mapping/RNF2-ON-Target_bwa.bam
+[Fri Oct 16 15:33:52 2020]
+Finished job 48.
+119 of 121 steps (98%) done
+
+[Fri Oct 16 15:33:52 2020]
+rule samtools_index:
+    input: ../TargetSeq-sanjiao/cutoff_3/mapping/RNF2-ON-Target_bwa_sort.bam
+    output: ../TargetSeq-sanjiao/cutoff_3/mapping/RNF2-ON-Target_bwa_sort.bam.bai
+    jobid: 72
+    reason: Missing output files: ../TargetSeq-sanjiao/cutoff_3/mapping/RNF2-ON-Target_bwa_sort.bam.bai; Input files updated by another job: ../TargetSeq-sanjiao/cutoff_3/mapping/RNF2-ON-Target_bwa_sort.bam
+    wildcards: lib=sanjiao, cutoff=3, sample=RNF2-ON-Target
+
+/home/zhaohuanan/miniconda3/envs/snakepipes_cutadapt-STARmapping-FPKM-sortBAM/bin/samtools index -@ 6 ../TargetSeq-sanjiao/cutoff_3/mapping/RNF2-ON-Target_bwa_sort.bam ../TargetSeq-sanjiao/cutoff_3/mapping/RNF2-ON-Target_bwa_sort.bam.bai
+[Fri Oct 16 15:33:53 2020]
+Finished job 72.
+120 of 121 steps (99%) done
+
+[Fri Oct 16 15:33:53 2020]
+localrule all:
+    input: ../TargetSeq-quanquan/cutoff_3/mapping/ABE-Site-7-On_R1_cutadapt.fq.gz, ../TargetSeq-quanquan/cutoff_3/mapping/ABE-Site-7-On_R2_cutadapt.fq.gz, ../TargetSeq-quanquan/cutoff_3/mapping/EMX1-2-On_R1_cutadapt.fq.gz, ../TargetSeq-quanquan/cutoff_3/mapping/EMX1-2-On_R2_cutadapt.fq.gz, ../TargetSeq-quanquan/cutoff_3/mapping/HEK2-On-Target_R1_cutadapt.fq.gz, ../TargetSeq-quanquan/cutoff_3/mapping/HEK2-On-Target_R2_cutadapt.fq.gz, ../TargetSeq-quanquan/cutoff_3/mapping/HEK4-Guideseq-2_R1_cutadapt.fq.gz, ../TargetSeq-quanquan/cutoff_3/mapping/HEK4-Guideseq-2_R2_cutadapt.fq.gz, ../TargetSeq-quanquan/cutoff_3/mapping/HEK4-Guideseq-3_R1_cutadapt.fq.gz, ../TargetSeq-quanquan/cutoff_3/mapping/HEK4-Guideseq-3_R2_cutadapt.fq.gz, ../TargetSeq-quanquan/cutoff_3/mapping/HEK4-Guideseq-4_R1_cutadapt.fq.gz, ../TargetSeq-quanquan/cutoff_3/mapping/HEK4-Guideseq-4_R2_cutadapt.fq.gz, ../TargetSeq-quanquan/cutoff_3/mapping/HEK4-Guideseq-5_R1_cutadapt.fq.gz, ../TargetSeq-quanquan/cutoff_3/mapping/HEK4-Guideseq-5_R2_cutadapt.fq.gz, ../TargetSeq-quanquan/cutoff_3/mapping/HEK4-On-Target_R1_cutadapt.fq.gz, ../TargetSeq-quanquan/cutoff_3/mapping/HEK4-On-Target_R2_cutadapt.fq.gz, ../TargetSeq-quanquan/cutoff_3/mapping/HEK5-On-Target_R1_cutadapt.fq.gz, ../TargetSeq-quanquan/cutoff_3/mapping/HEK5-On-Target_R2_cutadapt.fq.gz, ../TargetSeq-quanquan/cutoff_3/mapping/PP2-On-Target_R1_cutadapt.fq.gz, ../TargetSeq-quanquan/cutoff_3/mapping/PP2-On-Target_R2_cutadapt.fq.gz, ../TargetSeq-quanquan/cutoff_3/mapping/PP6-On-Target_R1_cutadapt.fq.gz, ../TargetSeq-quanquan/cutoff_3/mapping/PP6-On-Target_R2_cutadapt.fq.gz, ../TargetSeq-quanquan/cutoff_3/mapping/RNF2-ON-Target_R1_cutadapt.fq.gz, ../TargetSeq-quanquan/cutoff_3/mapping/RNF2-ON-Target_R2_cutadapt.fq.gz, ../TargetSeq-sanjiao/cutoff_3/mapping/ABE-Site-7-On_R1_cutadapt.fq.gz, ../TargetSeq-sanjiao/cutoff_3/mapping/ABE-Site-7-On_R2_cutadapt.fq.gz, ../TargetSeq-sanjiao/cutoff_3/mapping/EMX1-2-On_R1_cutadapt.fq.gz, ../TargetSeq-sanjiao/cutoff_3/mapping/EMX1-2-On_R2_cutadapt.fq.gz, ../TargetSeq-sanjiao/cutoff_3/mapping/HEK2-On-Target_R1_cutadapt.fq.gz, ../TargetSeq-sanjiao/cutoff_3/mapping/HEK2-On-Target_R2_cutadapt.fq.gz, ../TargetSeq-sanjiao/cutoff_3/mapping/HEK4-Guideseq-2_R1_cutadapt.fq.gz, ../TargetSeq-sanjiao/cutoff_3/mapping/HEK4-Guideseq-2_R2_cutadapt.fq.gz, ../TargetSeq-sanjiao/cutoff_3/mapping/HEK4-Guideseq-3_R1_cutadapt.fq.gz, ../TargetSeq-sanjiao/cutoff_3/mapping/HEK4-Guideseq-3_R2_cutadapt.fq.gz, ../TargetSeq-sanjiao/cutoff_3/mapping/HEK4-Guideseq-4_R1_cutadapt.fq.gz, ../TargetSeq-sanjiao/cutoff_3/mapping/HEK4-Guideseq-4_R2_cutadapt.fq.gz, ../TargetSeq-sanjiao/cutoff_3/mapping/HEK4-Guideseq-5_R1_cutadapt.fq.gz, ../TargetSeq-sanjiao/cutoff_3/mapping/HEK4-Guideseq-5_R2_cutadapt.fq.gz, ../TargetSeq-sanjiao/cutoff_3/mapping/HEK4-On-Target_R1_cutadapt.fq.gz, ../TargetSeq-sanjiao/cutoff_3/mapping/HEK4-On-Target_R2_cutadapt.fq.gz, ../TargetSeq-sanjiao/cutoff_3/mapping/HEK5-On-Target_R1_cutadapt.fq.gz, ../TargetSeq-sanjiao/cutoff_3/mapping/HEK5-On-Target_R2_cutadapt.fq.gz, ../TargetSeq-sanjiao/cutoff_3/mapping/PP2-On-Target_R1_cutadapt.fq.gz, ../TargetSeq-sanjiao/cutoff_3/mapping/PP2-On-Target_R2_cutadapt.fq.gz, ../TargetSeq-sanjiao/cutoff_3/mapping/PP6-On-Target_R1_cutadapt.fq.gz, ../TargetSeq-sanjiao/cutoff_3/mapping/PP6-On-Target_R2_cutadapt.fq.gz, ../TargetSeq-sanjiao/cutoff_3/mapping/RNF2-ON-Target_R1_cutadapt.fq.gz, ../TargetSeq-sanjiao/cutoff_3/mapping/RNF2-ON-Target_R2_cutadapt.fq.gz, ../TargetSeq-quanquan/cutoff_3/mapping/ABE-Site-7-On_bwa_sort.bam, ../TargetSeq-quanquan/cutoff_3/mapping/EMX1-2-On_bwa_sort.bam, ../TargetSeq-quanquan/cutoff_3/mapping/HEK2-On-Target_bwa_sort.bam, ../TargetSeq-quanquan/cutoff_3/mapping/HEK4-Guideseq-2_bwa_sort.bam, ../TargetSeq-quanquan/cutoff_3/mapping/HEK4-Guideseq-3_bwa_sort.bam, ../TargetSeq-quanquan/cutoff_3/mapping/HEK4-Guideseq-4_bwa_sort.bam, ../TargetSeq-quanquan/cutoff_3/mapping/HEK4-Guideseq-5_bwa_sort.bam, ../TargetSeq-quanquan/cutoff_3/mapping/HEK4-On-Target_bwa_sort.bam, ../TargetSeq-quanquan/cutoff_3/mapping/HEK5-On-Target_bwa_sort.bam, ../TargetSeq-quanquan/cutoff_3/mapping/PP2-On-Target_bwa_sort.bam, ../TargetSeq-quanquan/cutoff_3/mapping/PP6-On-Target_bwa_sort.bam, ../TargetSeq-quanquan/cutoff_3/mapping/RNF2-ON-Target_bwa_sort.bam, ../TargetSeq-sanjiao/cutoff_3/mapping/ABE-Site-7-On_bwa_sort.bam, ../TargetSeq-sanjiao/cutoff_3/mapping/EMX1-2-On_bwa_sort.bam, ../TargetSeq-sanjiao/cutoff_3/mapping/HEK2-On-Target_bwa_sort.bam, ../TargetSeq-sanjiao/cutoff_3/mapping/HEK4-Guideseq-2_bwa_sort.bam, ../TargetSeq-sanjiao/cutoff_3/mapping/HEK4-Guideseq-3_bwa_sort.bam, ../TargetSeq-sanjiao/cutoff_3/mapping/HEK4-Guideseq-4_bwa_sort.bam, ../TargetSeq-sanjiao/cutoff_3/mapping/HEK4-Guideseq-5_bwa_sort.bam, ../TargetSeq-sanjiao/cutoff_3/mapping/HEK4-On-Target_bwa_sort.bam, ../TargetSeq-sanjiao/cutoff_3/mapping/HEK5-On-Target_bwa_sort.bam, ../TargetSeq-sanjiao/cutoff_3/mapping/PP2-On-Target_bwa_sort.bam, ../TargetSeq-sanjiao/cutoff_3/mapping/PP6-On-Target_bwa_sort.bam, ../TargetSeq-sanjiao/cutoff_3/mapping/RNF2-ON-Target_bwa_sort.bam, ../TargetSeq-quanquan/cutoff_3/mapping/ABE-Site-7-On_bwa_sort.bam.bai, ../TargetSeq-quanquan/cutoff_3/mapping/EMX1-2-On_bwa_sort.bam.bai, ../TargetSeq-quanquan/cutoff_3/mapping/HEK2-On-Target_bwa_sort.bam.bai, ../TargetSeq-quanquan/cutoff_3/mapping/HEK4-Guideseq-2_bwa_sort.bam.bai, ../TargetSeq-quanquan/cutoff_3/mapping/HEK4-Guideseq-3_bwa_sort.bam.bai, ../TargetSeq-quanquan/cutoff_3/mapping/HEK4-Guideseq-4_bwa_sort.bam.bai, ../TargetSeq-quanquan/cutoff_3/mapping/HEK4-Guideseq-5_bwa_sort.bam.bai, ../TargetSeq-quanquan/cutoff_3/mapping/HEK4-On-Target_bwa_sort.bam.bai, ../TargetSeq-quanquan/cutoff_3/mapping/HEK5-On-Target_bwa_sort.bam.bai, ../TargetSeq-quanquan/cutoff_3/mapping/PP2-On-Target_bwa_sort.bam.bai, ../TargetSeq-quanquan/cutoff_3/mapping/PP6-On-Target_bwa_sort.bam.bai, ../TargetSeq-quanquan/cutoff_3/mapping/RNF2-ON-Target_bwa_sort.bam.bai, ../TargetSeq-sanjiao/cutoff_3/mapping/ABE-Site-7-On_bwa_sort.bam.bai, ../TargetSeq-sanjiao/cutoff_3/mapping/EMX1-2-On_bwa_sort.bam.bai, ../TargetSeq-sanjiao/cutoff_3/mapping/HEK2-On-Target_bwa_sort.bam.bai, ../TargetSeq-sanjiao/cutoff_3/mapping/HEK4-Guideseq-2_bwa_sort.bam.bai, ../TargetSeq-sanjiao/cutoff_3/mapping/HEK4-Guideseq-3_bwa_sort.bam.bai, ../TargetSeq-sanjiao/cutoff_3/mapping/HEK4-Guideseq-4_bwa_sort.bam.bai, ../TargetSeq-sanjiao/cutoff_3/mapping/HEK4-Guideseq-5_bwa_sort.bam.bai, ../TargetSeq-sanjiao/cutoff_3/mapping/HEK4-On-Target_bwa_sort.bam.bai, ../TargetSeq-sanjiao/cutoff_3/mapping/HEK5-On-Target_bwa_sort.bam.bai, ../TargetSeq-sanjiao/cutoff_3/mapping/PP2-On-Target_bwa_sort.bam.bai, ../TargetSeq-sanjiao/cutoff_3/mapping/PP6-On-Target_bwa_sort.bam.bai, ../TargetSeq-sanjiao/cutoff_3/mapping/RNF2-ON-Target_bwa_sort.bam.bai
+    jobid: 0
+    reason: Input files updated by another job: ../TargetSeq-sanjiao/cutoff_3/mapping/ABE-Site-7-On_bwa_sort.bam.bai, ../TargetSeq-quanquan/cutoff_3/mapping/HEK5-On-Target_bwa_sort.bam.bai, ../TargetSeq-quanquan/cutoff_3/mapping/PP6-On-Target_bwa_sort.bam, ../TargetSeq-quanquan/cutoff_3/mapping/HEK4-On-Target_bwa_sort.bam.bai, ../TargetSeq-quanquan/cutoff_3/mapping/RNF2-ON-Target_bwa_sort.bam.bai, ../TargetSeq-quanquan/cutoff_3/mapping/HEK4-Guideseq-5_R2_cutadapt.fq.gz, ../TargetSeq-sanjiao/cutoff_3/mapping/HEK4-Guideseq-4_R1_cutadapt.fq.gz, ../TargetSeq-quanquan/cutoff_3/mapping/ABE-Site-7-On_bwa_sort.bam, ../TargetSeq-quanquan/cutoff_3/mapping/HEK4-Guideseq-5_R1_cutadapt.fq.gz, ../TargetSeq-quanquan/cutoff_3/mapping/HEK4-Guideseq-3_R2_cutadapt.fq.gz, ../TargetSeq-sanjiao/cutoff_3/mapping/HEK5-On-Target_bwa_sort.bam.bai, ../TargetSeq-quanquan/cutoff_3/mapping/HEK4-Guideseq-4_R2_cutadapt.fq.gz, ../TargetSeq-quanquan/cutoff_3/mapping/HEK2-On-Target_bwa_sort.bam, ../TargetSeq-sanjiao/cutoff_3/mapping/HEK4-Guideseq-2_bwa_sort.bam, ../TargetSeq-quanquan/cutoff_3/mapping/RNF2-ON-Target_R2_cutadapt.fq.gz, ../TargetSeq-sanjiao/cutoff_3/mapping/HEK5-On-Target_bwa_sort.bam, ../TargetSeq-sanjiao/cutoff_3/mapping/HEK5-On-Target_R1_cutadapt.fq.gz, ../TargetSeq-sanjiao/cutoff_3/mapping/PP2-On-Target_R1_cutadapt.fq.gz, ../TargetSeq-quanquan/cutoff_3/mapping/HEK2-On-Target_bwa_sort.bam.bai, ../TargetSeq-sanjiao/cutoff_3/mapping/HEK4-Guideseq-2_R1_cutadapt.fq.gz, ../TargetSeq-quanquan/cutoff_3/mapping/HEK4-Guideseq-2_R2_cutadapt.fq.gz, ../TargetSeq-quanquan/cutoff_3/mapping/PP2-On-Target_bwa_sort.bam.bai, ../TargetSeq-sanjiao/cutoff_3/mapping/PP2-On-Target_bwa_sort.bam, ../TargetSeq-sanjiao/cutoff_3/mapping/HEK4-Guideseq-5_bwa_sort.bam.bai, ../TargetSeq-sanjiao/cutoff_3/mapping/ABE-Site-7-On_bwa_sort.bam, ../TargetSeq-sanjiao/cutoff_3/mapping/EMX1-2-On_R2_cutadapt.fq.gz, ../TargetSeq-quanquan/cutoff_3/mapping/PP6-On-Target_bwa_sort.bam.bai, ../TargetSeq-sanjiao/cutoff_3/mapping/EMX1-2-On_bwa_sort.bam, ../TargetSeq-quanquan/cutoff_3/mapping/HEK4-On-Target_R2_cutadapt.fq.gz, ../TargetSeq-sanjiao/cutoff_3/mapping/PP2-On-Target_bwa_sort.bam.bai, ../TargetSeq-quanquan/cutoff_3/mapping/PP2-On-Target_R2_cutadapt.fq.gz, ../TargetSeq-sanjiao/cutoff_3/mapping/HEK2-On-Target_bwa_sort.bam.bai, ../TargetSeq-sanjiao/cutoff_3/mapping/HEK4-On-Target_bwa_sort.bam.bai, ../TargetSeq-quanquan/cutoff_3/mapping/HEK4-Guideseq-2_R1_cutadapt.fq.gz, ../TargetSeq-sanjiao/cutoff_3/mapping/HEK4-On-Target_R2_cutadapt.fq.gz, ../TargetSeq-sanjiao/cutoff_3/mapping/HEK4-Guideseq-4_bwa_sort.bam, ../TargetSeq-sanjiao/cutoff_3/mapping/RNF2-ON-Target_bwa_sort.bam.bai, ../TargetSeq-sanjiao/cutoff_3/mapping/RNF2-ON-Target_R1_cutadapt.fq.gz, ../TargetSeq-quanquan/cutoff_3/mapping/HEK5-On-Target_bwa_sort.bam, ../TargetSeq-quanquan/cutoff_3/mapping/ABE-Site-7-On_R1_cutadapt.fq.gz, ../TargetSeq-quanquan/cutoff_3/mapping/RNF2-ON-Target_bwa_sort.bam, ../TargetSeq-sanjiao/cutoff_3/mapping/ABE-Site-7-On_R1_cutadapt.fq.gz, ../TargetSeq-quanquan/cutoff_3/mapping/HEK4-Guideseq-4_R1_cutadapt.fq.gz, ../TargetSeq-sanjiao/cutoff_3/mapping/HEK4-On-Target_R1_cutadapt.fq.gz, ../TargetSeq-sanjiao/cutoff_3/mapping/ABE-Site-7-On_R2_cutadapt.fq.gz, ../TargetSeq-quanquan/cutoff_3/mapping/ABE-Site-7-On_R2_cutadapt.fq.gz, ../TargetSeq-quanquan/cutoff_3/mapping/ABE-Site-7-On_bwa_sort.bam.bai, ../TargetSeq-sanjiao/cutoff_3/mapping/HEK4-Guideseq-5_R2_cutadapt.fq.gz, ../TargetSeq-quanquan/cutoff_3/mapping/HEK4-On-Target_bwa_sort.bam, ../TargetSeq-sanjiao/cutoff_3/mapping/HEK4-Guideseq-3_bwa_sort.bam.bai, ../TargetSeq-sanjiao/cutoff_3/mapping/HEK2-On-Target_R1_cutadapt.fq.gz, ../TargetSeq-sanjiao/cutoff_3/mapping/HEK4-Guideseq-5_bwa_sort.bam, ../TargetSeq-sanjiao/cutoff_3/mapping/HEK4-Guideseq-3_bwa_sort.bam, ../TargetSeq-sanjiao/cutoff_3/mapping/PP6-On-Target_bwa_sort.bam, ../TargetSeq-sanjiao/cutoff_3/mapping/HEK5-On-Target_R2_cutadapt.fq.gz, ../TargetSeq-quanquan/cutoff_3/mapping/HEK4-Guideseq-5_bwa_sort.bam.bai, ../TargetSeq-sanjiao/cutoff_3/mapping/PP6-On-Target_R1_cutadapt.fq.gz, ../TargetSeq-quanquan/cutoff_3/mapping/HEK4-Guideseq-5_bwa_sort.bam, ../TargetSeq-sanjiao/cutoff_3/mapping/EMX1-2-On_R1_cutadapt.fq.gz, ../TargetSeq-quanquan/cutoff_3/mapping/EMX1-2-On_bwa_sort.bam.bai, ../TargetSeq-sanjiao/cutoff_3/mapping/RNF2-ON-Target_R2_cutadapt.fq.gz, ../TargetSeq-quanquan/cutoff_3/mapping/HEK2-On-Target_R1_cutadapt.fq.gz, ../TargetSeq-sanjiao/cutoff_3/mapping/HEK4-Guideseq-5_R1_cutadapt.fq.gz, ../TargetSeq-sanjiao/cutoff_3/mapping/HEK2-On-Target_bwa_sort.bam, ../TargetSeq-quanquan/cutoff_3/mapping/PP2-On-Target_R1_cutadapt.fq.gz, ../TargetSeq-quanquan/cutoff_3/mapping/PP6-On-Target_R1_cutadapt.fq.gz, ../TargetSeq-quanquan/cutoff_3/mapping/PP6-On-Target_R2_cutadapt.fq.gz, ../TargetSeq-sanjiao/cutoff_3/mapping/PP6-On-Target_R2_cutadapt.fq.gz, ../TargetSeq-quanquan/cutoff_3/mapping/HEK5-On-Target_R2_cutadapt.fq.gz, ../TargetSeq-sanjiao/cutoff_3/mapping/HEK4-Guideseq-3_R1_cutadapt.fq.gz, ../TargetSeq-quanquan/cutoff_3/mapping/RNF2-ON-Target_R1_cutadapt.fq.gz, ../TargetSeq-quanquan/cutoff_3/mapping/EMX1-2-On_bwa_sort.bam, ../TargetSeq-quanquan/cutoff_3/mapping/EMX1-2-On_R1_cutadapt.fq.gz, ../TargetSeq-quanquan/cutoff_3/mapping/HEK2-On-Target_R2_cutadapt.fq.gz, ../TargetSeq-sanjiao/cutoff_3/mapping/PP2-On-Target_R2_cutadapt.fq.gz, ../TargetSeq-sanjiao/cutoff_3/mapping/HEK2-On-Target_R2_cutadapt.fq.gz, ../TargetSeq-sanjiao/cutoff_3/mapping/HEK4-Guideseq-2_R2_cutadapt.fq.gz, ../TargetSeq-sanjiao/cutoff_3/mapping/HEK4-Guideseq-3_R2_cutadapt.fq.gz, ../TargetSeq-quanquan/cutoff_3/mapping/HEK4-Guideseq-4_bwa_sort.bam.bai, ../TargetSeq-sanjiao/cutoff_3/mapping/HEK4-On-Target_bwa_sort.bam, ../TargetSeq-quanquan/cutoff_3/mapping/HEK4-Guideseq-2_bwa_sort.bam, ../TargetSeq-quanquan/cutoff_3/mapping/HEK4-Guideseq-3_bwa_sort.bam.bai, ../TargetSeq-sanjiao/cutoff_3/mapping/RNF2-ON-Target_bwa_sort.bam, ../TargetSeq-sanjiao/cutoff_3/mapping/EMX1-2-On_bwa_sort.bam.bai, ../TargetSeq-quanquan/cutoff_3/mapping/HEK4-On-Target_R1_cutadapt.fq.gz, ../TargetSeq-quanquan/cutoff_3/mapping/HEK4-Guideseq-2_bwa_sort.bam.bai, ../TargetSeq-sanjiao/cutoff_3/mapping/PP6-On-Target_bwa_sort.bam.bai, ../TargetSeq-quanquan/cutoff_3/mapping/PP2-On-Target_bwa_sort.bam, ../TargetSeq-quanquan/cutoff_3/mapping/HEK4-Guideseq-3_bwa_sort.bam, ../TargetSeq-sanjiao/cutoff_3/mapping/HEK4-Guideseq-2_bwa_sort.bam.bai, ../TargetSeq-quanquan/cutoff_3/mapping/HEK4-Guideseq-3_R1_cutadapt.fq.gz, ../TargetSeq-quanquan/cutoff_3/mapping/EMX1-2-On_R2_cutadapt.fq.gz, ../TargetSeq-quanquan/cutoff_3/mapping/HEK5-On-Target_R1_cutadapt.fq.gz, ../TargetSeq-quanquan/cutoff_3/mapping/HEK4-Guideseq-4_bwa_sort.bam, ../TargetSeq-sanjiao/cutoff_3/mapping/HEK4-Guideseq-4_bwa_sort.bam.bai, ../TargetSeq-sanjiao/cutoff_3/mapping/HEK4-Guideseq-4_R2_cutadapt.fq.gz
+
+[Fri Oct 16 15:33:53 2020]
+Finished job 0.
+121 of 121 steps (100%) done
+Complete log: /gpfs/user/zhaohuanan/3.project/14.2020-10_1010_TargetSeq-GBE-DdCBE_recheck/snakepipes_target-seq-from-table-to-plot/.snakemake/log/2020-10-16T153316.385541.snakemake.log

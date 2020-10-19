@@ -1,0 +1,1565 @@
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided cores: 24
+Rules claiming more threads will be scaled down.
+Job counts:
+	count	jobs
+	1	all
+	22	bwa_idex
+	22	faidx
+	22	getbed
+	22	getfasta
+	22	letter2LETTER
+	111
+
+[Fri Oct 16 14:53:51 2020]
+rule getbed:
+    output: ../TargetSeq_BED_sample_lib/PP2-On-Target.bed
+    jobid: 13
+    reason: Missing output files: ../TargetSeq_BED_sample_lib/PP2-On-Target.bed
+    wildcards: sample=PP2-On-Target
+
+[Fri Oct 16 14:53:51 2020]
+rule getbed:
+    output: ../TargetSeq_BED_sample_lib/HEK4-Guideseq-5.bed
+    jobid: 7
+    reason: Missing output files: ../TargetSeq_BED_sample_lib/HEK4-Guideseq-5.bed
+    wildcards: sample=HEK4-Guideseq-5
+
+[Fri Oct 16 14:53:51 2020]
+rule getbed:
+    output: ../TargetSeq_BED_sample_lib/VEGFA-OffNo-GDNo-12.bed
+    jobid: 21
+    reason: Missing output files: ../TargetSeq_BED_sample_lib/VEGFA-OffNo-GDNo-12.bed
+    wildcards: sample=VEGFA-OffNo-GDNo-12
+
+[Fri Oct 16 14:53:51 2020]
+rule getbed:
+    output: ../TargetSeq_BED_sample_lib/PP6-On-Target.bed
+    jobid: 14
+    reason: Missing output files: ../TargetSeq_BED_sample_lib/PP6-On-Target.bed
+    wildcards: sample=PP6-On-Target
+
+[Fri Oct 16 14:53:51 2020]
+rule getbed:
+    output: ../TargetSeq_BED_sample_lib/HEK4-On-Target.bed
+    jobid: 8
+    reason: Missing output files: ../TargetSeq_BED_sample_lib/HEK4-On-Target.bed
+    wildcards: sample=HEK4-On-Target
+
+[Fri Oct 16 14:53:51 2020]
+rule getbed:
+    output: ../TargetSeq_BED_sample_lib/VEGFA-On-Target.bed
+    jobid: 22
+    reason: Missing output files: ../TargetSeq_BED_sample_lib/VEGFA-On-Target.bed
+    wildcards: sample=VEGFA-On-Target
+
+[Fri Oct 16 14:53:51 2020]
+rule getbed:
+    output: ../TargetSeq_BED_sample_lib/ABE-Site-7-On.bed
+    jobid: 1
+    reason: Missing output files: ../TargetSeq_BED_sample_lib/ABE-Site-7-On.bed
+    wildcards: sample=ABE-Site-7-On
+
+[Fri Oct 16 14:53:51 2020]
+rule getbed:
+    output: ../TargetSeq_BED_sample_lib/RNF2-ON-Target.bed
+    jobid: 15
+    reason: Missing output files: ../TargetSeq_BED_sample_lib/RNF2-ON-Target.bed
+    wildcards: sample=RNF2-ON-Target
+
+[Fri Oct 16 14:53:51 2020]
+rule getbed:
+    output: ../TargetSeq_BED_sample_lib/HEK5-On-Target.bed
+    jobid: 9
+    reason: Missing output files: ../TargetSeq_BED_sample_lib/HEK5-On-Target.bed
+    wildcards: sample=HEK5-On-Target
+
+[Fri Oct 16 14:53:51 2020]
+rule getbed:
+    output: ../TargetSeq_BED_sample_lib/VEGFA-OffNo-GDNo-08.bed
+    jobid: 20
+    reason: Missing output files: ../TargetSeq_BED_sample_lib/VEGFA-OffNo-GDNo-08.bed
+    wildcards: sample=VEGFA-OffNo-GDNo-08
+
+[Fri Oct 16 14:53:51 2020]
+rule getbed:
+    output: ../TargetSeq_BED_sample_lib/EMX1-2-On.bed
+    jobid: 2
+    reason: Missing output files: ../TargetSeq_BED_sample_lib/EMX1-2-On.bed
+    wildcards: sample=EMX1-2-On
+
+[Fri Oct 16 14:53:51 2020]
+rule getbed:
+    output: ../TargetSeq_BED_sample_lib/VEGFA-Off-Target-2.bed
+    jobid: 16
+    reason: Missing output files: ../TargetSeq_BED_sample_lib/VEGFA-Off-Target-2.bed
+    wildcards: sample=VEGFA-Off-Target-2
+
+[Fri Oct 16 14:53:51 2020]
+rule getbed:
+    output: ../TargetSeq_BED_sample_lib/MTND4P12-N4.bed
+    jobid: 10
+    reason: Missing output files: ../TargetSeq_BED_sample_lib/MTND4P12-N4.bed
+    wildcards: sample=MTND4P12-N4
+
+[Fri Oct 16 14:53:51 2020]
+rule getbed:
+    output: ../TargetSeq_BED_sample_lib/HEK2-On-Target.bed
+    jobid: 3
+    reason: Missing output files: ../TargetSeq_BED_sample_lib/HEK2-On-Target.bed
+    wildcards: sample=HEK2-On-Target
+
+[Fri Oct 16 14:53:51 2020]
+rule getbed:
+    output: ../TargetSeq_BED_sample_lib/VEGFA-Off-Target-3.bed
+    jobid: 17
+    reason: Missing output files: ../TargetSeq_BED_sample_lib/VEGFA-Off-Target-3.bed
+    wildcards: sample=VEGFA-Off-Target-3
+
+[Fri Oct 16 14:53:51 2020]
+rule getbed:
+    output: ../TargetSeq_BED_sample_lib/MTND5P11-N5.1.bed
+    jobid: 11
+    reason: Missing output files: ../TargetSeq_BED_sample_lib/MTND5P11-N5.1.bed
+    wildcards: sample=MTND5P11-N5.1
+
+[Fri Oct 16 14:53:51 2020]
+rule getbed:
+    output: ../TargetSeq_BED_sample_lib/VEGFA-Off-Target-6.bed
+    jobid: 18
+    reason: Missing output files: ../TargetSeq_BED_sample_lib/VEGFA-Off-Target-6.bed
+    wildcards: sample=VEGFA-Off-Target-6
+
+[Fri Oct 16 14:53:51 2020]
+rule getbed:
+    output: ../TargetSeq_BED_sample_lib/HEK4-Guideseq-2.bed
+    jobid: 4
+    reason: Missing output files: ../TargetSeq_BED_sample_lib/HEK4-Guideseq-2.bed
+    wildcards: sample=HEK4-Guideseq-2
+
+[Fri Oct 16 14:53:51 2020]
+rule getbed:
+    output: ../TargetSeq_BED_sample_lib/MTND6P4-N6.bed
+    jobid: 12
+    reason: Missing output files: ../TargetSeq_BED_sample_lib/MTND6P4-N6.bed
+    wildcards: sample=MTND6P4-N6
+
+[Fri Oct 16 14:53:51 2020]
+rule getbed:
+    output: ../TargetSeq_BED_sample_lib/HEK4-Guideseq-3.bed
+    jobid: 5
+    reason: Missing output files: ../TargetSeq_BED_sample_lib/HEK4-Guideseq-3.bed
+    wildcards: sample=HEK4-Guideseq-3
+
+[Fri Oct 16 14:53:51 2020]
+rule getbed:
+    output: ../TargetSeq_BED_sample_lib/VEGFA-Off-Target-7.bed
+    jobid: 19
+    reason: Missing output files: ../TargetSeq_BED_sample_lib/VEGFA-Off-Target-7.bed
+    wildcards: sample=VEGFA-Off-Target-7
+
+[Fri Oct 16 14:53:51 2020]
+rule getbed:
+    output: ../TargetSeq_BED_sample_lib/HEK4-Guideseq-4.bed
+    jobid: 6
+    reason: Missing output files: ../TargetSeq_BED_sample_lib/HEK4-Guideseq-4.bed
+    wildcards: sample=HEK4-Guideseq-4
+
+[Fri Oct 16 14:53:51 2020]
+Finished job 13.
+1 of 111 steps (0.90%) done
+
+[Fri Oct 16 14:53:51 2020]
+rule getfasta:
+    input: ../TargetSeq_BED_sample_lib/PP2-On-Target.bed
+    output: ../TargetSeq_BED_sample_lib/PP2-On-Target.ref.fa
+    jobid: 35
+    reason: Missing output files: ../TargetSeq_BED_sample_lib/PP2-On-Target.ref.fa; Input files updated by another job: ../TargetSeq_BED_sample_lib/PP2-On-Target.bed
+    wildcards: sample=PP2-On-Target
+
+
+        /home/zhaohuanan/miniconda3/envs/snakepipes_target-seq-from-table-to-plot/bin/bedtools getfasta -nameOnly -s -bed ../TargetSeq_BED_sample_lib/PP2-On-Target.bed -fi /home/zhaohuanan/zhaohn_HD/2.database/bwa_hg38/hg38_only_chromosome.fa > ../TargetSeq_BED_sample_lib/PP2-On-Target.ref.fa
+        
+[Fri Oct 16 14:53:51 2020]
+Finished job 7.
+2 of 111 steps (2%) done
+
+[Fri Oct 16 14:53:51 2020]
+rule getfasta:
+    input: ../TargetSeq_BED_sample_lib/HEK4-Guideseq-5.bed
+    output: ../TargetSeq_BED_sample_lib/HEK4-Guideseq-5.ref.fa
+    jobid: 29
+    reason: Missing output files: ../TargetSeq_BED_sample_lib/HEK4-Guideseq-5.ref.fa; Input files updated by another job: ../TargetSeq_BED_sample_lib/HEK4-Guideseq-5.bed
+    wildcards: sample=HEK4-Guideseq-5
+
+
+        /home/zhaohuanan/miniconda3/envs/snakepipes_target-seq-from-table-to-plot/bin/bedtools getfasta -nameOnly -s -bed ../TargetSeq_BED_sample_lib/HEK4-Guideseq-5.bed -fi /home/zhaohuanan/zhaohn_HD/2.database/bwa_hg38/hg38_only_chromosome.fa > ../TargetSeq_BED_sample_lib/HEK4-Guideseq-5.ref.fa
+        
+[Fri Oct 16 14:53:51 2020]
+Finished job 8.
+3 of 111 steps (3%) done
+
+[Fri Oct 16 14:53:51 2020]
+rule getfasta:
+    input: ../TargetSeq_BED_sample_lib/HEK4-On-Target.bed
+    output: ../TargetSeq_BED_sample_lib/HEK4-On-Target.ref.fa
+    jobid: 30
+    reason: Missing output files: ../TargetSeq_BED_sample_lib/HEK4-On-Target.ref.fa; Input files updated by another job: ../TargetSeq_BED_sample_lib/HEK4-On-Target.bed
+    wildcards: sample=HEK4-On-Target
+
+
+        /home/zhaohuanan/miniconda3/envs/snakepipes_target-seq-from-table-to-plot/bin/bedtools getfasta -nameOnly -s -bed ../TargetSeq_BED_sample_lib/HEK4-On-Target.bed -fi /home/zhaohuanan/zhaohn_HD/2.database/bwa_hg38/hg38_only_chromosome.fa > ../TargetSeq_BED_sample_lib/HEK4-On-Target.ref.fa
+        
+[Fri Oct 16 14:53:51 2020]
+Finished job 14.
+4 of 111 steps (4%) done
+[Fri Oct 16 14:53:51 2020]
+Finished job 22.
+5 of 111 steps (5%) done
+
+[Fri Oct 16 14:53:51 2020]
+rule getfasta:
+    input: ../TargetSeq_BED_sample_lib/PP6-On-Target.bed
+    output: ../TargetSeq_BED_sample_lib/PP6-On-Target.ref.fa
+    jobid: 36
+    reason: Missing output files: ../TargetSeq_BED_sample_lib/PP6-On-Target.ref.fa; Input files updated by another job: ../TargetSeq_BED_sample_lib/PP6-On-Target.bed
+    wildcards: sample=PP6-On-Target
+
+
+        /home/zhaohuanan/miniconda3/envs/snakepipes_target-seq-from-table-to-plot/bin/bedtools getfasta -nameOnly -s -bed ../TargetSeq_BED_sample_lib/PP6-On-Target.bed -fi /home/zhaohuanan/zhaohn_HD/2.database/bwa_hg38/hg38_only_chromosome.fa > ../TargetSeq_BED_sample_lib/PP6-On-Target.ref.fa
+        
+
+[Fri Oct 16 14:53:51 2020]
+rule getfasta:
+    input: ../TargetSeq_BED_sample_lib/VEGFA-On-Target.bed
+    output: ../TargetSeq_BED_sample_lib/VEGFA-On-Target.ref.fa
+    jobid: 44
+    reason: Missing output files: ../TargetSeq_BED_sample_lib/VEGFA-On-Target.ref.fa; Input files updated by another job: ../TargetSeq_BED_sample_lib/VEGFA-On-Target.bed
+    wildcards: sample=VEGFA-On-Target
+
+
+        /home/zhaohuanan/miniconda3/envs/snakepipes_target-seq-from-table-to-plot/bin/bedtools getfasta -nameOnly -s -bed ../TargetSeq_BED_sample_lib/VEGFA-On-Target.bed -fi /home/zhaohuanan/zhaohn_HD/2.database/bwa_hg38/hg38_only_chromosome.fa > ../TargetSeq_BED_sample_lib/VEGFA-On-Target.ref.fa
+        
+[Fri Oct 16 14:53:51 2020]
+Finished job 1.
+6 of 111 steps (5%) done
+[Fri Oct 16 14:53:51 2020]
+Finished job 10.
+7 of 111 steps (6%) done
+[Fri Oct 16 14:53:51 2020]
+Finished job 2.
+8 of 111 steps (7%) done
+[Fri Oct 16 14:53:51 2020]
+Finished job 21.
+9 of 111 steps (8%) done
+
+[Fri Oct 16 14:53:51 2020]
+rule getfasta:
+    input: ../TargetSeq_BED_sample_lib/ABE-Site-7-On.bed
+    output: ../TargetSeq_BED_sample_lib/ABE-Site-7-On.ref.fa
+    jobid: 23
+    reason: Missing output files: ../TargetSeq_BED_sample_lib/ABE-Site-7-On.ref.fa; Input files updated by another job: ../TargetSeq_BED_sample_lib/ABE-Site-7-On.bed
+    wildcards: sample=ABE-Site-7-On
+
+
+        /home/zhaohuanan/miniconda3/envs/snakepipes_target-seq-from-table-to-plot/bin/bedtools getfasta -nameOnly -s -bed ../TargetSeq_BED_sample_lib/ABE-Site-7-On.bed -fi /home/zhaohuanan/zhaohn_HD/2.database/bwa_hg38/hg38_only_chromosome.fa > ../TargetSeq_BED_sample_lib/ABE-Site-7-On.ref.fa
+        
+[Fri Oct 16 14:53:51 2020]
+Finished job 9.
+10 of 111 steps (9%) done
+
+[Fri Oct 16 14:53:51 2020]
+rule getfasta:
+    input: ../TargetSeq_BED_sample_lib/MTND4P12-N4.bed
+    output: ../TargetSeq_BED_sample_lib/MTND4P12-N4.ref.fa
+    jobid: 32
+    reason: Missing output files: ../TargetSeq_BED_sample_lib/MTND4P12-N4.ref.fa; Input files updated by another job: ../TargetSeq_BED_sample_lib/MTND4P12-N4.bed
+    wildcards: sample=MTND4P12-N4
+
+
+        /home/zhaohuanan/miniconda3/envs/snakepipes_target-seq-from-table-to-plot/bin/bedtools getfasta -nameOnly -s -bed ../TargetSeq_BED_sample_lib/MTND4P12-N4.bed -fi /home/zhaohuanan/zhaohn_HD/2.database/bwa_hg38/hg38_only_chromosome.fa > ../TargetSeq_BED_sample_lib/MTND4P12-N4.ref.fa
+        
+[Fri Oct 16 14:53:51 2020]
+Finished job 35.
+11 of 111 steps (10%) done
+[Fri Oct 16 14:53:51 2020]
+Finished job 16.
+12 of 111 steps (11%) done
+
+[Fri Oct 16 14:53:51 2020]
+rule getfasta:
+    input: ../TargetSeq_BED_sample_lib/VEGFA-OffNo-GDNo-12.bed
+    output: ../TargetSeq_BED_sample_lib/VEGFA-OffNo-GDNo-12.ref.fa
+    jobid: 43
+    reason: Missing output files: ../TargetSeq_BED_sample_lib/VEGFA-OffNo-GDNo-12.ref.fa; Input files updated by another job: ../TargetSeq_BED_sample_lib/VEGFA-OffNo-GDNo-12.bed
+    wildcards: sample=VEGFA-OffNo-GDNo-12
+
+
+        /home/zhaohuanan/miniconda3/envs/snakepipes_target-seq-from-table-to-plot/bin/bedtools getfasta -nameOnly -s -bed ../TargetSeq_BED_sample_lib/VEGFA-OffNo-GDNo-12.bed -fi /home/zhaohuanan/zhaohn_HD/2.database/bwa_hg38/hg38_only_chromosome.fa > ../TargetSeq_BED_sample_lib/VEGFA-OffNo-GDNo-12.ref.fa
+        
+[Fri Oct 16 14:53:51 2020]
+Finished job 29.
+13 of 111 steps (12%) done
+[Fri Oct 16 14:53:51 2020]
+Finished job 36.
+14 of 111 steps (13%) done
+
+[Fri Oct 16 14:53:51 2020]
+rule letter2LETTER:
+    input: ../TargetSeq_BED_sample_lib/PP2-On-Target.ref.fa
+    output: ../TargetSeq_BED_sample_lib/PP2-On-Target.ref.upper.fa
+    jobid: 57
+    reason: Missing output files: ../TargetSeq_BED_sample_lib/PP2-On-Target.ref.upper.fa; Input files updated by another job: ../TargetSeq_BED_sample_lib/PP2-On-Target.ref.fa
+    wildcards: sample=PP2-On-Target
+
+
+        cat ../TargetSeq_BED_sample_lib/PP2-On-Target.ref.fa | awk '{print toupper($0)}' > ../TargetSeq_BED_sample_lib/PP2-On-Target.ref.upper.fa
+        
+
+[Fri Oct 16 14:53:51 2020]
+rule getfasta:
+    input: ../TargetSeq_BED_sample_lib/EMX1-2-On.bed
+    output: ../TargetSeq_BED_sample_lib/EMX1-2-On.ref.fa
+    jobid: 24
+    reason: Missing output files: ../TargetSeq_BED_sample_lib/EMX1-2-On.ref.fa; Input files updated by another job: ../TargetSeq_BED_sample_lib/EMX1-2-On.bed
+    wildcards: sample=EMX1-2-On
+
+
+        /home/zhaohuanan/miniconda3/envs/snakepipes_target-seq-from-table-to-plot/bin/bedtools getfasta -nameOnly -s -bed ../TargetSeq_BED_sample_lib/EMX1-2-On.bed -fi /home/zhaohuanan/zhaohn_HD/2.database/bwa_hg38/hg38_only_chromosome.fa > ../TargetSeq_BED_sample_lib/EMX1-2-On.ref.fa
+        
+[Fri Oct 16 14:53:51 2020]
+Finished job 20.
+15 of 111 steps (14%) done
+
+[Fri Oct 16 14:53:51 2020]
+rule getfasta:
+    input: ../TargetSeq_BED_sample_lib/VEGFA-Off-Target-2.bed
+    output: ../TargetSeq_BED_sample_lib/VEGFA-Off-Target-2.ref.fa
+    jobid: 38
+    reason: Missing output files: ../TargetSeq_BED_sample_lib/VEGFA-Off-Target-2.ref.fa; Input files updated by another job: ../TargetSeq_BED_sample_lib/VEGFA-Off-Target-2.bed
+    wildcards: sample=VEGFA-Off-Target-2
+
+
+        /home/zhaohuanan/miniconda3/envs/snakepipes_target-seq-from-table-to-plot/bin/bedtools getfasta -nameOnly -s -bed ../TargetSeq_BED_sample_lib/VEGFA-Off-Target-2.bed -fi /home/zhaohuanan/zhaohn_HD/2.database/bwa_hg38/hg38_only_chromosome.fa > ../TargetSeq_BED_sample_lib/VEGFA-Off-Target-2.ref.fa
+        
+[Fri Oct 16 14:53:51 2020]
+Finished job 3.
+16 of 111 steps (14%) done
+[Fri Oct 16 14:53:51 2020]
+Finished job 15.
+17 of 111 steps (15%) done
+[Fri Oct 16 14:53:51 2020]
+Finished job 30.
+18 of 111 steps (16%) done
+
+[Fri Oct 16 14:53:51 2020]
+rule getfasta:
+    input: ../TargetSeq_BED_sample_lib/HEK5-On-Target.bed
+    output: ../TargetSeq_BED_sample_lib/HEK5-On-Target.ref.fa
+    jobid: 31
+    reason: Missing output files: ../TargetSeq_BED_sample_lib/HEK5-On-Target.ref.fa; Input files updated by another job: ../TargetSeq_BED_sample_lib/HEK5-On-Target.bed
+    wildcards: sample=HEK5-On-Target
+
+
+        /home/zhaohuanan/miniconda3/envs/snakepipes_target-seq-from-table-to-plot/bin/bedtools getfasta -nameOnly -s -bed ../TargetSeq_BED_sample_lib/HEK5-On-Target.bed -fi /home/zhaohuanan/zhaohn_HD/2.database/bwa_hg38/hg38_only_chromosome.fa > ../TargetSeq_BED_sample_lib/HEK5-On-Target.ref.fa
+        
+[Fri Oct 16 14:53:51 2020]
+Finished job 44.
+19 of 111 steps (17%) done
+[Fri Oct 16 14:53:51 2020]
+Finished job 23.
+20 of 111 steps (18%) done
+[Fri Oct 16 14:53:51 2020]
+Finished job 32.
+21 of 111 steps (19%) done
+[Fri Oct 16 14:53:51 2020]
+Finished job 57.
+22 of 111 steps (20%) done
+[Fri Oct 16 14:53:51 2020]
+Finished job 11.
+23 of 111 steps (21%) done
+[Fri Oct 16 14:53:51 2020]
+Finished job 18.
+24 of 111 steps (22%) done
+[Fri Oct 16 14:53:51 2020]
+Finished job 4.
+25 of 111 steps (23%) done
+[Fri Oct 16 14:53:51 2020]
+Finished job 43.
+26 of 111 steps (23%) done
+
+[Fri Oct 16 14:53:51 2020]
+rule getfasta:
+    input: ../TargetSeq_BED_sample_lib/VEGFA-OffNo-GDNo-08.bed
+    output: ../TargetSeq_BED_sample_lib/VEGFA-OffNo-GDNo-08.ref.fa
+    jobid: 42
+    reason: Missing output files: ../TargetSeq_BED_sample_lib/VEGFA-OffNo-GDNo-08.ref.fa; Input files updated by another job: ../TargetSeq_BED_sample_lib/VEGFA-OffNo-GDNo-08.bed
+    wildcards: sample=VEGFA-OffNo-GDNo-08
+
+
+        /home/zhaohuanan/miniconda3/envs/snakepipes_target-seq-from-table-to-plot/bin/bedtools getfasta -nameOnly -s -bed ../TargetSeq_BED_sample_lib/VEGFA-OffNo-GDNo-08.bed -fi /home/zhaohuanan/zhaohn_HD/2.database/bwa_hg38/hg38_only_chromosome.fa > ../TargetSeq_BED_sample_lib/VEGFA-OffNo-GDNo-08.ref.fa
+        
+
+[Fri Oct 16 14:53:51 2020]
+rule letter2LETTER:
+    input: ../TargetSeq_BED_sample_lib/HEK4-Guideseq-5.ref.fa
+    output: ../TargetSeq_BED_sample_lib/HEK4-Guideseq-5.ref.upper.fa
+    jobid: 51
+    reason: Missing output files: ../TargetSeq_BED_sample_lib/HEK4-Guideseq-5.ref.upper.fa; Input files updated by another job: ../TargetSeq_BED_sample_lib/HEK4-Guideseq-5.ref.fa
+    wildcards: sample=HEK4-Guideseq-5
+
+
+        cat ../TargetSeq_BED_sample_lib/HEK4-Guideseq-5.ref.fa | awk '{print toupper($0)}' > ../TargetSeq_BED_sample_lib/HEK4-Guideseq-5.ref.upper.fa
+        
+
+[Fri Oct 16 14:53:51 2020]
+rule getfasta:
+    input: ../TargetSeq_BED_sample_lib/RNF2-ON-Target.bed
+    output: ../TargetSeq_BED_sample_lib/RNF2-ON-Target.ref.fa
+    jobid: 37
+    reason: Missing output files: ../TargetSeq_BED_sample_lib/RNF2-ON-Target.ref.fa; Input files updated by another job: ../TargetSeq_BED_sample_lib/RNF2-ON-Target.bed
+    wildcards: sample=RNF2-ON-Target
+
+
+        /home/zhaohuanan/miniconda3/envs/snakepipes_target-seq-from-table-to-plot/bin/bedtools getfasta -nameOnly -s -bed ../TargetSeq_BED_sample_lib/RNF2-ON-Target.bed -fi /home/zhaohuanan/zhaohn_HD/2.database/bwa_hg38/hg38_only_chromosome.fa > ../TargetSeq_BED_sample_lib/RNF2-ON-Target.ref.fa
+        
+
+[Fri Oct 16 14:53:51 2020]
+[Fri Oct 16 14:53:51 2020]
+rule letter2LETTER:
+    input: ../TargetSeq_BED_sample_lib/PP6-On-Target.ref.fa
+    output: ../TargetSeq_BED_sample_lib/PP6-On-Target.ref.upper.fa
+    jobid: 58
+    reason: Missing output files: ../TargetSeq_BED_sample_lib/PP6-On-Target.ref.upper.fa; Input files updated by another job: ../TargetSeq_BED_sample_lib/PP6-On-Target.ref.fa
+    wildcards: sample=PP6-On-Target
+Finished job 12.
+
+27 of 111 steps (24%) done
+
+        cat ../TargetSeq_BED_sample_lib/PP6-On-Target.ref.fa | awk '{print toupper($0)}' > ../TargetSeq_BED_sample_lib/PP6-On-Target.ref.upper.fa
+        
+[Fri Oct 16 14:53:51 2020]
+Finished job 38.
+28 of 111 steps (25%) done
+
+[Fri Oct 16 14:53:51 2020]
+rule letter2LETTER:
+    input: ../TargetSeq_BED_sample_lib/HEK4-On-Target.ref.fa
+    output: ../TargetSeq_BED_sample_lib/HEK4-On-Target.ref.upper.fa
+    jobid: 52
+    reason: Missing output files: ../TargetSeq_BED_sample_lib/HEK4-On-Target.ref.upper.fa; Input files updated by another job: ../TargetSeq_BED_sample_lib/HEK4-On-Target.ref.fa
+    wildcards: sample=HEK4-On-Target
+
+
+        cat ../TargetSeq_BED_sample_lib/HEK4-On-Target.ref.fa | awk '{print toupper($0)}' > ../TargetSeq_BED_sample_lib/HEK4-On-Target.ref.upper.fa
+        
+[Fri Oct 16 14:53:51 2020]
+Finished job 24.
+29 of 111 steps (26%) done
+[Fri Oct 16 14:53:51 2020]
+
+Finished job 5.
+[Fri Oct 16 14:53:51 2020]
+30 of 111 steps (27%) done
+rule letter2LETTER:
+    input: ../TargetSeq_BED_sample_lib/VEGFA-On-Target.ref.fa
+    output: ../TargetSeq_BED_sample_lib/VEGFA-On-Target.ref.upper.fa
+    jobid: 66
+    reason: Missing output files: ../TargetSeq_BED_sample_lib/VEGFA-On-Target.ref.upper.fa; Input files updated by another job: ../TargetSeq_BED_sample_lib/VEGFA-On-Target.ref.fa
+    wildcards: sample=VEGFA-On-Target
+
+
+        cat ../TargetSeq_BED_sample_lib/VEGFA-On-Target.ref.fa | awk '{print toupper($0)}' > ../TargetSeq_BED_sample_lib/VEGFA-On-Target.ref.upper.fa
+        
+[Fri Oct 16 14:53:51 2020]
+
+Finished job 51.
+[Fri Oct 16 14:53:51 2020]
+31 of 111 steps (28%) done
+rule letter2LETTER:
+    input: ../TargetSeq_BED_sample_lib/ABE-Site-7-On.ref.fa
+    output: ../TargetSeq_BED_sample_lib/ABE-Site-7-On.ref.upper.fa
+    jobid: 45
+    reason: Missing output files: ../TargetSeq_BED_sample_lib/ABE-Site-7-On.ref.upper.fa; Input files updated by another job: ../TargetSeq_BED_sample_lib/ABE-Site-7-On.ref.fa
+    wildcards: sample=ABE-Site-7-On
+
+
+        cat ../TargetSeq_BED_sample_lib/ABE-Site-7-On.ref.fa | awk '{print toupper($0)}' > ../TargetSeq_BED_sample_lib/ABE-Site-7-On.ref.upper.fa
+        
+[Fri Oct 16 14:53:51 2020]
+Finished job 31.
+32 of 111 steps (29%) done
+[Fri Oct 16 14:53:51 2020]
+
+Finished job 6.
+[Fri Oct 16 14:53:51 2020]
+33 of 111 steps (30%) done
+rule getfasta:
+    input: ../TargetSeq_BED_sample_lib/HEK2-On-Target.bed
+    output: ../TargetSeq_BED_sample_lib/HEK2-On-Target.ref.fa
+    jobid: 25
+    reason: Missing output files: ../TargetSeq_BED_sample_lib/HEK2-On-Target.ref.fa; Input files updated by another job: ../TargetSeq_BED_sample_lib/HEK2-On-Target.bed
+    wildcards: sample=HEK2-On-Target
+
+
+        /home/zhaohuanan/miniconda3/envs/snakepipes_target-seq-from-table-to-plot/bin/bedtools getfasta -nameOnly -s -bed ../TargetSeq_BED_sample_lib/HEK2-On-Target.bed -fi /home/zhaohuanan/zhaohn_HD/2.database/bwa_hg38/hg38_only_chromosome.fa > ../TargetSeq_BED_sample_lib/HEK2-On-Target.ref.fa
+        
+[Fri Oct 16 14:53:51 2020]
+Finished job 42.
+34 of 111 steps (31%) done
+
+[Fri Oct 16 14:53:51 2020]
+rule letter2LETTER:
+    input: ../TargetSeq_BED_sample_lib/MTND4P12-N4.ref.fa
+    output: ../TargetSeq_BED_sample_lib/MTND4P12-N4.ref.upper.fa
+    jobid: 54
+    reason: Missing output files: ../TargetSeq_BED_sample_lib/MTND4P12-N4.ref.upper.fa; Input files updated by another job: ../TargetSeq_BED_sample_lib/MTND4P12-N4.ref.fa
+    wildcards: sample=MTND4P12-N4
+
+
+        cat ../TargetSeq_BED_sample_lib/MTND4P12-N4.ref.fa | awk '{print toupper($0)}' > ../TargetSeq_BED_sample_lib/MTND4P12-N4.ref.upper.fa
+        
+[Fri Oct 16 14:53:51 2020]
+Finished job 17.
+35 of 111 steps (32%) done
+[Fri Oct 16 14:53:51 2020]
+Finished job 58.
+36 of 111 steps (32%) done
+[Fri Oct 16 14:53:51 2020]
+Finished job 37.
+37 of 111 steps (33%) done
+[Fri Oct 16 14:53:51 2020]
+Finished job 19.
+38 of 111 steps (34%) done
+[Fri Oct 16 14:53:51 2020]
+Finished job 52.
+39 of 111 steps (35%) done
+[Fri Oct 16 14:53:51 2020]
+Finished job 66.
+40 of 111 steps (36%) done
+
+[Fri Oct 16 14:53:51 2020]
+rule getfasta:
+    input: ../TargetSeq_BED_sample_lib/HEK4-Guideseq-3.bed
+    output: ../TargetSeq_BED_sample_lib/HEK4-Guideseq-3.ref.fa
+    jobid: 27
+    reason: Missing output files: ../TargetSeq_BED_sample_lib/HEK4-Guideseq-3.ref.fa; Input files updated by another job: ../TargetSeq_BED_sample_lib/HEK4-Guideseq-3.bed
+    wildcards: sample=HEK4-Guideseq-3
+
+
+        /home/zhaohuanan/miniconda3/envs/snakepipes_target-seq-from-table-to-plot/bin/bedtools getfasta -nameOnly -s -bed ../TargetSeq_BED_sample_lib/HEK4-Guideseq-3.bed -fi /home/zhaohuanan/zhaohn_HD/2.database/bwa_hg38/hg38_only_chromosome.fa > ../TargetSeq_BED_sample_lib/HEK4-Guideseq-3.ref.fa
+        
+
+[Fri Oct 16 14:53:51 2020]
+rule getfasta:
+    input: ../TargetSeq_BED_sample_lib/VEGFA-Off-Target-7.bed
+    output: ../TargetSeq_BED_sample_lib/VEGFA-Off-Target-7.ref.fa
+    jobid: 41
+    reason: Missing output files: ../TargetSeq_BED_sample_lib/VEGFA-Off-Target-7.ref.fa; Input files updated by another job: ../TargetSeq_BED_sample_lib/VEGFA-Off-Target-7.bed
+    wildcards: sample=VEGFA-Off-Target-7
+
+
+        /home/zhaohuanan/miniconda3/envs/snakepipes_target-seq-from-table-to-plot/bin/bedtools getfasta -nameOnly -s -bed ../TargetSeq_BED_sample_lib/VEGFA-Off-Target-7.bed -fi /home/zhaohuanan/zhaohn_HD/2.database/bwa_hg38/hg38_only_chromosome.fa > ../TargetSeq_BED_sample_lib/VEGFA-Off-Target-7.ref.fa
+        
+[Fri Oct 16 14:53:51 2020]
+Finished job 45.
+41 of 111 steps (37%) done
+
+[Fri Oct 16 14:53:51 2020]
+rule getfasta:
+    input: ../TargetSeq_BED_sample_lib/HEK4-Guideseq-4.bed
+    output: ../TargetSeq_BED_sample_lib/HEK4-Guideseq-4.ref.fa
+    jobid: 28
+    reason: Missing output files: ../TargetSeq_BED_sample_lib/HEK4-Guideseq-4.ref.fa; Input files updated by another job: ../TargetSeq_BED_sample_lib/HEK4-Guideseq-4.bed
+    wildcards: sample=HEK4-Guideseq-4
+
+
+        /home/zhaohuanan/miniconda3/envs/snakepipes_target-seq-from-table-to-plot/bin/bedtools getfasta -nameOnly -s -bed ../TargetSeq_BED_sample_lib/HEK4-Guideseq-4.bed -fi /home/zhaohuanan/zhaohn_HD/2.database/bwa_hg38/hg38_only_chromosome.fa > ../TargetSeq_BED_sample_lib/HEK4-Guideseq-4.ref.fa
+        
+
+[Fri Oct 16 14:53:51 2020]
+rule letter2LETTER:
+    input: ../TargetSeq_BED_sample_lib/VEGFA-OffNo-GDNo-08.ref.fa
+    output: ../TargetSeq_BED_sample_lib/VEGFA-OffNo-GDNo-08.ref.upper.fa
+    jobid: 64
+    reason: Missing output files: ../TargetSeq_BED_sample_lib/VEGFA-OffNo-GDNo-08.ref.upper.fa; Input files updated by another job: ../TargetSeq_BED_sample_lib/VEGFA-OffNo-GDNo-08.ref.fa
+    wildcards: sample=VEGFA-OffNo-GDNo-08
+
+
+        cat ../TargetSeq_BED_sample_lib/VEGFA-OffNo-GDNo-08.ref.fa | awk '{print toupper($0)}' > ../TargetSeq_BED_sample_lib/VEGFA-OffNo-GDNo-08.ref.upper.fa
+        
+[Fri Oct 16 14:53:51 2020]
+Finished job 54.
+42 of 111 steps (38%) done
+
+[Fri Oct 16 14:53:51 2020]
+[Fri Oct 16 14:53:51 2020]
+rule faidx:
+    input: ../TargetSeq_BED_sample_lib/PP2-On-Target.ref.upper.fa
+    output: ../TargetSeq_BED_sample_lib/PP2-On-Target.ref.upper.fa.fai
+    jobid: 79
+    reason: Missing output files: ../TargetSeq_BED_sample_lib/PP2-On-Target.ref.upper.fa.fai; Input files updated by another job: ../TargetSeq_BED_sample_lib/PP2-On-Target.ref.upper.fa
+    wildcards: sample=PP2-On-Target
+Finished job 25.
+
+43 of 111 steps (39%) done
+
+        /home/zhaohuanan/miniconda3/envs/snakepipes_cutadapt-STARmapping-FPKM-sortBAM/bin/samtools faidx ../TargetSeq_BED_sample_lib/PP2-On-Target.ref.upper.fa
+        
+
+[Fri Oct 16 14:53:51 2020]
+rule letter2LETTER:
+    input: ../TargetSeq_BED_sample_lib/VEGFA-OffNo-GDNo-12.ref.fa
+    output: ../TargetSeq_BED_sample_lib/VEGFA-OffNo-GDNo-12.ref.upper.fa
+    jobid: 65
+    reason: Missing output files: ../TargetSeq_BED_sample_lib/VEGFA-OffNo-GDNo-12.ref.upper.fa; Input files updated by another job: ../TargetSeq_BED_sample_lib/VEGFA-OffNo-GDNo-12.ref.fa
+    wildcards: sample=VEGFA-OffNo-GDNo-12
+
+
+        cat ../TargetSeq_BED_sample_lib/VEGFA-OffNo-GDNo-12.ref.fa | awk '{print toupper($0)}' > ../TargetSeq_BED_sample_lib/VEGFA-OffNo-GDNo-12.ref.upper.fa
+        
+
+[Fri Oct 16 14:53:51 2020]
+rule faidx:
+    input: ../TargetSeq_BED_sample_lib/PP6-On-Target.ref.upper.fa
+    output: ../TargetSeq_BED_sample_lib/PP6-On-Target.ref.upper.fa.fai
+    jobid: 80
+    reason: Missing output files: ../TargetSeq_BED_sample_lib/PP6-On-Target.ref.upper.fa.fai; Input files updated by another job: ../TargetSeq_BED_sample_lib/PP6-On-Target.ref.upper.fa
+    wildcards: sample=PP6-On-Target
+
+
+        /home/zhaohuanan/miniconda3/envs/snakepipes_cutadapt-STARmapping-FPKM-sortBAM/bin/samtools faidx ../TargetSeq_BED_sample_lib/PP6-On-Target.ref.upper.fa
+        
+[Fri Oct 16 14:53:51 2020]
+Finished job 27.
+
+44 of 111 steps (40%) done
+[Fri Oct 16 14:53:51 2020]
+rule letter2LETTER:
+    input: ../TargetSeq_BED_sample_lib/RNF2-ON-Target.ref.fa
+    output: ../TargetSeq_BED_sample_lib/RNF2-ON-Target.ref.upper.fa
+    jobid: 59
+    reason: Missing output files: ../TargetSeq_BED_sample_lib/RNF2-ON-Target.ref.upper.fa; Input files updated by another job: ../TargetSeq_BED_sample_lib/RNF2-ON-Target.ref.fa
+    wildcards: sample=RNF2-ON-Target
+
+
+        cat ../TargetSeq_BED_sample_lib/RNF2-ON-Target.ref.fa | awk '{print toupper($0)}' > ../TargetSeq_BED_sample_lib/RNF2-ON-Target.ref.upper.fa
+        
+
+[Fri Oct 16 14:53:51 2020]
+rule bwa_idex:
+    input: ../TargetSeq_BED_sample_lib/PP2-On-Target.ref.upper.fa
+    output: ../TargetSeq_BED_sample_lib/PP2-On-Target.ref.upper.fa.amb, ../TargetSeq_BED_sample_lib/PP2-On-Target.ref.upper.fa.ann, ../TargetSeq_BED_sample_lib/PP2-On-Target.ref.upper.fa.bwt, ../TargetSeq_BED_sample_lib/PP2-On-Target.ref.upper.fa.pac, ../TargetSeq_BED_sample_lib/PP2-On-Target.ref.upper.fa.sa
+    jobid: 101
+    reason: Missing output files: ../TargetSeq_BED_sample_lib/PP2-On-Target.ref.upper.fa.sa, ../TargetSeq_BED_sample_lib/PP2-On-Target.ref.upper.fa.bwt, ../TargetSeq_BED_sample_lib/PP2-On-Target.ref.upper.fa.pac, ../TargetSeq_BED_sample_lib/PP2-On-Target.ref.upper.fa.ann, ../TargetSeq_BED_sample_lib/PP2-On-Target.ref.upper.fa.amb; Input files updated by another job: ../TargetSeq_BED_sample_lib/PP2-On-Target.ref.upper.fa
+    wildcards: sample=PP2-On-Target
+
+
+        /home/zhaohuanan/miniconda3/envs/snakepipes_target-seq-from-table-to-plot/bin/bwa index ../TargetSeq_BED_sample_lib/PP2-On-Target.ref.upper.fa
+        
+[Fri Oct 16 14:53:51 2020]
+Finished job 64.
+45 of 111 steps (41%) done
+[Fri Oct 16 14:53:51 2020]
+Finished job 41.
+46 of 111 steps (41%) done
+
+[Fri Oct 16 14:53:51 2020]
+rule faidx:
+    input: ../TargetSeq_BED_sample_lib/HEK4-Guideseq-5.ref.upper.fa
+    output: ../TargetSeq_BED_sample_lib/HEK4-Guideseq-5.ref.upper.fa.fai
+    jobid: 73
+    reason: Missing output files: ../TargetSeq_BED_sample_lib/HEK4-Guideseq-5.ref.upper.fa.fai; Input files updated by another job: ../TargetSeq_BED_sample_lib/HEK4-Guideseq-5.ref.upper.fa
+    wildcards: sample=HEK4-Guideseq-5
+
+
+        /home/zhaohuanan/miniconda3/envs/snakepipes_cutadapt-STARmapping-FPKM-sortBAM/bin/samtools faidx ../TargetSeq_BED_sample_lib/HEK4-Guideseq-5.ref.upper.fa
+        
+
+[Fri Oct 16 14:53:51 2020]
+rule bwa_idex:
+    input: ../TargetSeq_BED_sample_lib/HEK4-Guideseq-5.ref.upper.fa
+    output: ../TargetSeq_BED_sample_lib/HEK4-Guideseq-5.ref.upper.fa.amb, ../TargetSeq_BED_sample_lib/HEK4-Guideseq-5.ref.upper.fa.ann, ../TargetSeq_BED_sample_lib/HEK4-Guideseq-5.ref.upper.fa.bwt, ../TargetSeq_BED_sample_lib/HEK4-Guideseq-5.ref.upper.fa.pac, ../TargetSeq_BED_sample_lib/HEK4-Guideseq-5.ref.upper.fa.sa
+    jobid: 95
+    reason: Missing output files: ../TargetSeq_BED_sample_lib/HEK4-Guideseq-5.ref.upper.fa.amb, ../TargetSeq_BED_sample_lib/HEK4-Guideseq-5.ref.upper.fa.sa, ../TargetSeq_BED_sample_lib/HEK4-Guideseq-5.ref.upper.fa.pac, ../TargetSeq_BED_sample_lib/HEK4-Guideseq-5.ref.upper.fa.bwt, ../TargetSeq_BED_sample_lib/HEK4-Guideseq-5.ref.upper.fa.ann; Input files updated by another job: ../TargetSeq_BED_sample_lib/HEK4-Guideseq-5.ref.upper.fa
+    wildcards: sample=HEK4-Guideseq-5
+
+
+        /home/zhaohuanan/miniconda3/envs/snakepipes_target-seq-from-table-to-plot/bin/bwa index ../TargetSeq_BED_sample_lib/HEK4-Guideseq-5.ref.upper.fa
+        
+[Fri Oct 16 14:53:51 2020]
+Finished job 65.
+47 of 111 steps (42%) done
+[Fri Oct 16 14:53:51 2020]
+Finished job 28.
+48 of 111 steps (43%) done
+
+[Fri Oct 16 14:53:51 2020]
+rule letter2LETTER:
+    input: ../TargetSeq_BED_sample_lib/HEK5-On-Target.ref.fa
+    output: ../TargetSeq_BED_sample_lib/HEK5-On-Target.ref.upper.fa
+    jobid: 53
+    reason: Missing output files: ../TargetSeq_BED_sample_lib/HEK5-On-Target.ref.upper.fa; Input files updated by another job: ../TargetSeq_BED_sample_lib/HEK5-On-Target.ref.fa
+    wildcards: sample=HEK5-On-Target
+
+
+        cat ../TargetSeq_BED_sample_lib/HEK5-On-Target.ref.fa | awk '{print toupper($0)}' > ../TargetSeq_BED_sample_lib/HEK5-On-Target.ref.upper.fa
+        
+
+[Fri Oct 16 14:53:51 2020]
+rule getfasta:
+    input: ../TargetSeq_BED_sample_lib/VEGFA-Off-Target-3.bed
+    output: ../TargetSeq_BED_sample_lib/VEGFA-Off-Target-3.ref.fa
+    jobid: 39
+    reason: Missing output files: ../TargetSeq_BED_sample_lib/VEGFA-Off-Target-3.ref.fa; Input files updated by another job: ../TargetSeq_BED_sample_lib/VEGFA-Off-Target-3.bed
+    wildcards: sample=VEGFA-Off-Target-3
+
+
+        /home/zhaohuanan/miniconda3/envs/snakepipes_target-seq-from-table-to-plot/bin/bedtools getfasta -nameOnly -s -bed ../TargetSeq_BED_sample_lib/VEGFA-Off-Target-3.bed -fi /home/zhaohuanan/zhaohn_HD/2.database/bwa_hg38/hg38_only_chromosome.fa > ../TargetSeq_BED_sample_lib/VEGFA-Off-Target-3.ref.fa
+        
+
+[Fri Oct 16 14:53:51 2020]
+rule bwa_idex:
+    input: ../TargetSeq_BED_sample_lib/PP6-On-Target.ref.upper.fa
+    output: ../TargetSeq_BED_sample_lib/PP6-On-Target.ref.upper.fa.amb, ../TargetSeq_BED_sample_lib/PP6-On-Target.ref.upper.fa.ann, ../TargetSeq_BED_sample_lib/PP6-On-Target.ref.upper.fa.bwt, ../TargetSeq_BED_sample_lib/PP6-On-Target.ref.upper.fa.pac, ../TargetSeq_BED_sample_lib/PP6-On-Target.ref.upper.fa.sa
+    jobid: 102
+    reason: Missing output files: ../TargetSeq_BED_sample_lib/PP6-On-Target.ref.upper.fa.amb, ../TargetSeq_BED_sample_lib/PP6-On-Target.ref.upper.fa.pac, ../TargetSeq_BED_sample_lib/PP6-On-Target.ref.upper.fa.ann, ../TargetSeq_BED_sample_lib/PP6-On-Target.ref.upper.fa.sa, ../TargetSeq_BED_sample_lib/PP6-On-Target.ref.upper.fa.bwt; Input files updated by another job: ../TargetSeq_BED_sample_lib/PP6-On-Target.ref.upper.fa
+    wildcards: sample=PP6-On-Target
+[Fri Oct 16 14:53:51 2020]
+
+Finished job 59.
+
+        /home/zhaohuanan/miniconda3/envs/snakepipes_target-seq-from-table-to-plot/bin/bwa index ../TargetSeq_BED_sample_lib/PP6-On-Target.ref.upper.fa
+        
+49 of 111 steps (44%) done
+
+[Fri Oct 16 14:53:51 2020]
+rule letter2LETTER:
+    input: ../TargetSeq_BED_sample_lib/EMX1-2-On.ref.fa
+    output: ../TargetSeq_BED_sample_lib/EMX1-2-On.ref.upper.fa
+    jobid: 46
+    reason: Missing output files: ../TargetSeq_BED_sample_lib/EMX1-2-On.ref.upper.fa; Input files updated by another job: ../TargetSeq_BED_sample_lib/EMX1-2-On.ref.fa
+    wildcards: sample=EMX1-2-On
+
+
+        cat ../TargetSeq_BED_sample_lib/EMX1-2-On.ref.fa | awk '{print toupper($0)}' > ../TargetSeq_BED_sample_lib/EMX1-2-On.ref.upper.fa
+        
+
+[Fri Oct 16 14:53:51 2020]
+rule letter2LETTER:
+    input: ../TargetSeq_BED_sample_lib/VEGFA-Off-Target-2.ref.fa
+    output: ../TargetSeq_BED_sample_lib/VEGFA-Off-Target-2.ref.upper.fa
+    jobid: 60
+    reason: Missing output files: ../TargetSeq_BED_sample_lib/VEGFA-Off-Target-2.ref.upper.fa; Input files updated by another job: ../TargetSeq_BED_sample_lib/VEGFA-Off-Target-2.ref.fa
+    wildcards: sample=VEGFA-Off-Target-2
+
+
+        cat ../TargetSeq_BED_sample_lib/VEGFA-Off-Target-2.ref.fa | awk '{print toupper($0)}' > ../TargetSeq_BED_sample_lib/VEGFA-Off-Target-2.ref.upper.fa
+        
+
+[Fri Oct 16 14:53:51 2020]
+rule faidx:
+    input: ../TargetSeq_BED_sample_lib/HEK4-On-Target.ref.upper.fa
+    output: ../TargetSeq_BED_sample_lib/HEK4-On-Target.ref.upper.fa.fai
+    jobid: 74
+    reason: Missing output files: ../TargetSeq_BED_sample_lib/HEK4-On-Target.ref.upper.fa.fai; Input files updated by another job: ../TargetSeq_BED_sample_lib/HEK4-On-Target.ref.upper.fa
+    wildcards: sample=HEK4-On-Target
+
+
+        /home/zhaohuanan/miniconda3/envs/snakepipes_cutadapt-STARmapping-FPKM-sortBAM/bin/samtools faidx ../TargetSeq_BED_sample_lib/HEK4-On-Target.ref.upper.fa
+        
+
+[Fri Oct 16 14:53:52 2020]
+rule bwa_idex:
+    input: ../TargetSeq_BED_sample_lib/HEK4-On-Target.ref.upper.fa
+    output: ../TargetSeq_BED_sample_lib/HEK4-On-Target.ref.upper.fa.amb, ../TargetSeq_BED_sample_lib/HEK4-On-Target.ref.upper.fa.ann, ../TargetSeq_BED_sample_lib/HEK4-On-Target.ref.upper.fa.bwt, ../TargetSeq_BED_sample_lib/HEK4-On-Target.ref.upper.fa.pac, ../TargetSeq_BED_sample_lib/HEK4-On-Target.ref.upper.fa.sa
+    jobid: 96
+    reason: Missing output files: ../TargetSeq_BED_sample_lib/HEK4-On-Target.ref.upper.fa.amb, ../TargetSeq_BED_sample_lib/HEK4-On-Target.ref.upper.fa.sa, ../TargetSeq_BED_sample_lib/HEK4-On-Target.ref.upper.fa.pac, ../TargetSeq_BED_sample_lib/HEK4-On-Target.ref.upper.fa.bwt, ../TargetSeq_BED_sample_lib/HEK4-On-Target.ref.upper.fa.ann; Input files updated by another job: ../TargetSeq_BED_sample_lib/HEK4-On-Target.ref.upper.fa
+    wildcards: sample=HEK4-On-Target
+
+
+        /home/zhaohuanan/miniconda3/envs/snakepipes_target-seq-from-table-to-plot/bin/bwa index ../TargetSeq_BED_sample_lib/HEK4-On-Target.ref.upper.fa
+        
+[Fri Oct 16 14:53:52 2020]
+Finished job 53.
+50 of 111 steps (45%) done
+
+[Fri Oct 16 14:53:52 2020]
+rule getfasta:
+    input: ../TargetSeq_BED_sample_lib/VEGFA-Off-Target-6.bed
+    output: ../TargetSeq_BED_sample_lib/VEGFA-Off-Target-6.ref.fa
+    jobid: 40
+    reason: Missing output files: ../TargetSeq_BED_sample_lib/VEGFA-Off-Target-6.ref.fa; Input files updated by another job: ../TargetSeq_BED_sample_lib/VEGFA-Off-Target-6.bed
+    wildcards: sample=VEGFA-Off-Target-6
+
+
+        /home/zhaohuanan/miniconda3/envs/snakepipes_target-seq-from-table-to-plot/bin/bedtools getfasta -nameOnly -s -bed ../TargetSeq_BED_sample_lib/VEGFA-Off-Target-6.bed -fi /home/zhaohuanan/zhaohn_HD/2.database/bwa_hg38/hg38_only_chromosome.fa > ../TargetSeq_BED_sample_lib/VEGFA-Off-Target-6.ref.fa
+        
+[Fri Oct 16 14:53:52 2020]
+Finished job 39.
+51 of 111 steps (46%) done
+[Fri Oct 16 14:53:52 2020]
+
+Finished job 46.
+[Fri Oct 16 14:53:52 2020]
+52 of 111 steps (47%) done
+rule getfasta:
+    input: ../TargetSeq_BED_sample_lib/HEK4-Guideseq-2.bed
+    output: ../TargetSeq_BED_sample_lib/HEK4-Guideseq-2.ref.fa
+    jobid: 26
+    reason: Missing output files: ../TargetSeq_BED_sample_lib/HEK4-Guideseq-2.ref.fa; Input files updated by another job: ../TargetSeq_BED_sample_lib/HEK4-Guideseq-2.bed
+    wildcards: sample=HEK4-Guideseq-2
+
+
+        /home/zhaohuanan/miniconda3/envs/snakepipes_target-seq-from-table-to-plot/bin/bedtools getfasta -nameOnly -s -bed ../TargetSeq_BED_sample_lib/HEK4-Guideseq-2.bed -fi /home/zhaohuanan/zhaohn_HD/2.database/bwa_hg38/hg38_only_chromosome.fa > ../TargetSeq_BED_sample_lib/HEK4-Guideseq-2.ref.fa
+        
+[Fri Oct 16 14:53:52 2020]
+
+Finished job 60.
+[Fri Oct 16 14:53:52 2020]
+53 of 111 steps (48%) done
+rule getfasta:
+    input: ../TargetSeq_BED_sample_lib/MTND5P11-N5.1.bed
+    output: ../TargetSeq_BED_sample_lib/MTND5P11-N5.1.ref.fa
+    jobid: 33
+    reason: Missing output files: ../TargetSeq_BED_sample_lib/MTND5P11-N5.1.ref.fa; Input files updated by another job: ../TargetSeq_BED_sample_lib/MTND5P11-N5.1.bed
+    wildcards: sample=MTND5P11-N5.1
+
+
+        /home/zhaohuanan/miniconda3/envs/snakepipes_target-seq-from-table-to-plot/bin/bedtools getfasta -nameOnly -s -bed ../TargetSeq_BED_sample_lib/MTND5P11-N5.1.bed -fi /home/zhaohuanan/zhaohn_HD/2.database/bwa_hg38/hg38_only_chromosome.fa > ../TargetSeq_BED_sample_lib/MTND5P11-N5.1.ref.fa
+        
+
+[Fri Oct 16 14:53:52 2020]
+rule bwa_idex:
+    input: ../TargetSeq_BED_sample_lib/HEK5-On-Target.ref.upper.fa
+    output: ../TargetSeq_BED_sample_lib/HEK5-On-Target.ref.upper.fa.amb, ../TargetSeq_BED_sample_lib/HEK5-On-Target.ref.upper.fa.ann, ../TargetSeq_BED_sample_lib/HEK5-On-Target.ref.upper.fa.bwt, ../TargetSeq_BED_sample_lib/HEK5-On-Target.ref.upper.fa.pac, ../TargetSeq_BED_sample_lib/HEK5-On-Target.ref.upper.fa.sa
+    jobid: 97
+    reason: Missing output files: ../TargetSeq_BED_sample_lib/HEK5-On-Target.ref.upper.fa.sa, ../TargetSeq_BED_sample_lib/HEK5-On-Target.ref.upper.fa.pac, ../TargetSeq_BED_sample_lib/HEK5-On-Target.ref.upper.fa.amb, ../TargetSeq_BED_sample_lib/HEK5-On-Target.ref.upper.fa.bwt, ../TargetSeq_BED_sample_lib/HEK5-On-Target.ref.upper.fa.ann; Input files updated by another job: ../TargetSeq_BED_sample_lib/HEK5-On-Target.ref.upper.fa
+    wildcards: sample=HEK5-On-Target
+
+
+        /home/zhaohuanan/miniconda3/envs/snakepipes_target-seq-from-table-to-plot/bin/bwa index ../TargetSeq_BED_sample_lib/HEK5-On-Target.ref.upper.fa
+        
+
+[Fri Oct 16 14:53:52 2020]
+rule letter2LETTER:
+    input: ../TargetSeq_BED_sample_lib/VEGFA-Off-Target-7.ref.fa
+    output: ../TargetSeq_BED_sample_lib/VEGFA-Off-Target-7.ref.upper.fa
+    jobid: 63
+    reason: Missing output files: ../TargetSeq_BED_sample_lib/VEGFA-Off-Target-7.ref.upper.fa; Input files updated by another job: ../TargetSeq_BED_sample_lib/VEGFA-Off-Target-7.ref.fa
+    wildcards: sample=VEGFA-Off-Target-7
+
+
+        cat ../TargetSeq_BED_sample_lib/VEGFA-Off-Target-7.ref.fa | awk '{print toupper($0)}' > ../TargetSeq_BED_sample_lib/VEGFA-Off-Target-7.ref.upper.fa
+        
+
+[Fri Oct 16 14:53:52 2020]
+rule bwa_idex:
+    input: ../TargetSeq_BED_sample_lib/MTND4P12-N4.ref.upper.fa
+    output: ../TargetSeq_BED_sample_lib/MTND4P12-N4.ref.upper.fa.amb, ../TargetSeq_BED_sample_lib/MTND4P12-N4.ref.upper.fa.ann, ../TargetSeq_BED_sample_lib/MTND4P12-N4.ref.upper.fa.bwt, ../TargetSeq_BED_sample_lib/MTND4P12-N4.ref.upper.fa.pac, ../TargetSeq_BED_sample_lib/MTND4P12-N4.ref.upper.fa.sa
+    jobid: 98
+    reason: Missing output files: ../TargetSeq_BED_sample_lib/MTND4P12-N4.ref.upper.fa.amb, ../TargetSeq_BED_sample_lib/MTND4P12-N4.ref.upper.fa.sa, ../TargetSeq_BED_sample_lib/MTND4P12-N4.ref.upper.fa.bwt, ../TargetSeq_BED_sample_lib/MTND4P12-N4.ref.upper.fa.ann, ../TargetSeq_BED_sample_lib/MTND4P12-N4.ref.upper.fa.pac; Input files updated by another job: ../TargetSeq_BED_sample_lib/MTND4P12-N4.ref.upper.fa
+    wildcards: sample=MTND4P12-N4
+
+
+        /home/zhaohuanan/miniconda3/envs/snakepipes_target-seq-from-table-to-plot/bin/bwa index ../TargetSeq_BED_sample_lib/MTND4P12-N4.ref.upper.fa
+        
+
+[Fri Oct 16 14:53:52 2020]
+rule bwa_idex:
+    input: ../TargetSeq_BED_sample_lib/EMX1-2-On.ref.upper.fa
+    output: ../TargetSeq_BED_sample_lib/EMX1-2-On.ref.upper.fa.amb, ../TargetSeq_BED_sample_lib/EMX1-2-On.ref.upper.fa.ann, ../TargetSeq_BED_sample_lib/EMX1-2-On.ref.upper.fa.bwt, ../TargetSeq_BED_sample_lib/EMX1-2-On.ref.upper.fa.pac, ../TargetSeq_BED_sample_lib/EMX1-2-On.ref.upper.fa.sa
+    jobid: 90
+    reason: Missing output files: ../TargetSeq_BED_sample_lib/EMX1-2-On.ref.upper.fa.ann, ../TargetSeq_BED_sample_lib/EMX1-2-On.ref.upper.fa.pac, ../TargetSeq_BED_sample_lib/EMX1-2-On.ref.upper.fa.bwt, ../TargetSeq_BED_sample_lib/EMX1-2-On.ref.upper.fa.amb, ../TargetSeq_BED_sample_lib/EMX1-2-On.ref.upper.fa.sa; Input files updated by another job: ../TargetSeq_BED_sample_lib/EMX1-2-On.ref.upper.fa
+    wildcards: sample=EMX1-2-On
+
+
+        /home/zhaohuanan/miniconda3/envs/snakepipes_target-seq-from-table-to-plot/bin/bwa index ../TargetSeq_BED_sample_lib/EMX1-2-On.ref.upper.fa
+        
+[Fri Oct 16 14:53:52 2020]
+Finished job 40.
+54 of 111 steps (49%) done
+[Fri Oct 16 14:53:52 2020]
+Finished job 26.
+55 of 111 steps (50%) done
+[Fri Oct 16 14:53:52 2020]
+Finished job 33.
+56 of 111 steps (50%) done
+
+[Fri Oct 16 14:53:52 2020]
+rule faidx:
+    input: ../TargetSeq_BED_sample_lib/VEGFA-OffNo-GDNo-12.ref.upper.fa
+    output: ../TargetSeq_BED_sample_lib/VEGFA-OffNo-GDNo-12.ref.upper.fa.fai
+    jobid: 87
+    reason: Missing output files: ../TargetSeq_BED_sample_lib/VEGFA-OffNo-GDNo-12.ref.upper.fa.fai; Input files updated by another job: ../TargetSeq_BED_sample_lib/VEGFA-OffNo-GDNo-12.ref.upper.fa
+    wildcards: sample=VEGFA-OffNo-GDNo-12
+
+
+        /home/zhaohuanan/miniconda3/envs/snakepipes_cutadapt-STARmapping-FPKM-sortBAM/bin/samtools faidx ../TargetSeq_BED_sample_lib/VEGFA-OffNo-GDNo-12.ref.upper.fa
+        
+[Fri Oct 16 14:53:52 2020]
+Finished job 63.
+57 of 111 steps (51%) done
+
+[Fri Oct 16 14:53:52 2020]
+rule bwa_idex:
+    input: ../TargetSeq_BED_sample_lib/VEGFA-OffNo-GDNo-12.ref.upper.fa
+    output: ../TargetSeq_BED_sample_lib/VEGFA-OffNo-GDNo-12.ref.upper.fa.amb, ../TargetSeq_BED_sample_lib/VEGFA-OffNo-GDNo-12.ref.upper.fa.ann, ../TargetSeq_BED_sample_lib/VEGFA-OffNo-GDNo-12.ref.upper.fa.bwt, ../TargetSeq_BED_sample_lib/VEGFA-OffNo-GDNo-12.ref.upper.fa.pac, ../TargetSeq_BED_sample_lib/VEGFA-OffNo-GDNo-12.ref.upper.fa.sa
+    jobid: 109
+    reason: Missing output files: ../TargetSeq_BED_sample_lib/VEGFA-OffNo-GDNo-12.ref.upper.fa.pac, ../TargetSeq_BED_sample_lib/VEGFA-OffNo-GDNo-12.ref.upper.fa.bwt, ../TargetSeq_BED_sample_lib/VEGFA-OffNo-GDNo-12.ref.upper.fa.amb, ../TargetSeq_BED_sample_lib/VEGFA-OffNo-GDNo-12.ref.upper.fa.ann, ../TargetSeq_BED_sample_lib/VEGFA-OffNo-GDNo-12.ref.upper.fa.sa; Input files updated by another job: ../TargetSeq_BED_sample_lib/VEGFA-OffNo-GDNo-12.ref.upper.fa
+    wildcards: sample=VEGFA-OffNo-GDNo-12
+
+
+        /home/zhaohuanan/miniconda3/envs/snakepipes_target-seq-from-table-to-plot/bin/bwa index ../TargetSeq_BED_sample_lib/VEGFA-OffNo-GDNo-12.ref.upper.fa
+        
+
+[Fri Oct 16 14:53:52 2020]
+rule faidx:
+    input: ../TargetSeq_BED_sample_lib/RNF2-ON-Target.ref.upper.fa
+    output: ../TargetSeq_BED_sample_lib/RNF2-ON-Target.ref.upper.fa.fai
+    jobid: 81
+    reason: Missing output files: ../TargetSeq_BED_sample_lib/RNF2-ON-Target.ref.upper.fa.fai; Input files updated by another job: ../TargetSeq_BED_sample_lib/RNF2-ON-Target.ref.upper.fa
+    wildcards: sample=RNF2-ON-Target
+
+
+        /home/zhaohuanan/miniconda3/envs/snakepipes_cutadapt-STARmapping-FPKM-sortBAM/bin/samtools faidx ../TargetSeq_BED_sample_lib/RNF2-ON-Target.ref.upper.fa
+        
+
+[Fri Oct 16 14:53:52 2020]
+rule faidx:
+    input: ../TargetSeq_BED_sample_lib/VEGFA-On-Target.ref.upper.fa
+    output: ../TargetSeq_BED_sample_lib/VEGFA-On-Target.ref.upper.fa.fai
+    jobid: 88
+    reason: Missing output files: ../TargetSeq_BED_sample_lib/VEGFA-On-Target.ref.upper.fa.fai; Input files updated by another job: ../TargetSeq_BED_sample_lib/VEGFA-On-Target.ref.upper.fa
+    wildcards: sample=VEGFA-On-Target
+
+
+        /home/zhaohuanan/miniconda3/envs/snakepipes_cutadapt-STARmapping-FPKM-sortBAM/bin/samtools faidx ../TargetSeq_BED_sample_lib/VEGFA-On-Target.ref.upper.fa
+        
+
+[Fri Oct 16 14:53:52 2020]
+rule faidx:
+    input: ../TargetSeq_BED_sample_lib/EMX1-2-On.ref.upper.fa
+    output: ../TargetSeq_BED_sample_lib/EMX1-2-On.ref.upper.fa.fai
+    jobid: 68
+    reason: Missing output files: ../TargetSeq_BED_sample_lib/EMX1-2-On.ref.upper.fa.fai; Input files updated by another job: ../TargetSeq_BED_sample_lib/EMX1-2-On.ref.upper.fa
+    wildcards: sample=EMX1-2-On
+
+
+        /home/zhaohuanan/miniconda3/envs/snakepipes_cutadapt-STARmapping-FPKM-sortBAM/bin/samtools faidx ../TargetSeq_BED_sample_lib/EMX1-2-On.ref.upper.fa
+        
+
+[Fri Oct 16 14:53:52 2020]
+rule bwa_idex:
+    input: ../TargetSeq_BED_sample_lib/VEGFA-On-Target.ref.upper.fa
+    output: ../TargetSeq_BED_sample_lib/VEGFA-On-Target.ref.upper.fa.amb, ../TargetSeq_BED_sample_lib/VEGFA-On-Target.ref.upper.fa.ann, ../TargetSeq_BED_sample_lib/VEGFA-On-Target.ref.upper.fa.bwt, ../TargetSeq_BED_sample_lib/VEGFA-On-Target.ref.upper.fa.pac, ../TargetSeq_BED_sample_lib/VEGFA-On-Target.ref.upper.fa.sa
+    jobid: 110
+    reason: Missing output files: ../TargetSeq_BED_sample_lib/VEGFA-On-Target.ref.upper.fa.sa, ../TargetSeq_BED_sample_lib/VEGFA-On-Target.ref.upper.fa.bwt, ../TargetSeq_BED_sample_lib/VEGFA-On-Target.ref.upper.fa.amb, ../TargetSeq_BED_sample_lib/VEGFA-On-Target.ref.upper.fa.pac, ../TargetSeq_BED_sample_lib/VEGFA-On-Target.ref.upper.fa.ann; Input files updated by another job: ../TargetSeq_BED_sample_lib/VEGFA-On-Target.ref.upper.fa
+    wildcards: sample=VEGFA-On-Target
+
+
+        /home/zhaohuanan/miniconda3/envs/snakepipes_target-seq-from-table-to-plot/bin/bwa index ../TargetSeq_BED_sample_lib/VEGFA-On-Target.ref.upper.fa
+        
+[Fri Oct 16 14:53:52 2020]
+Finished job 80.
+58 of 111 steps (52%) done
+[Fri Oct 16 14:53:52 2020]
+Finished job 74.
+59 of 111 steps (53%) done
+
+[Fri Oct 16 14:53:52 2020]
+rule bwa_idex:
+    input: ../TargetSeq_BED_sample_lib/RNF2-ON-Target.ref.upper.fa
+    output: ../TargetSeq_BED_sample_lib/RNF2-ON-Target.ref.upper.fa.amb, ../TargetSeq_BED_sample_lib/RNF2-ON-Target.ref.upper.fa.ann, ../TargetSeq_BED_sample_lib/RNF2-ON-Target.ref.upper.fa.bwt, ../TargetSeq_BED_sample_lib/RNF2-ON-Target.ref.upper.fa.pac, ../TargetSeq_BED_sample_lib/RNF2-ON-Target.ref.upper.fa.sa
+    jobid: 103
+    reason: Missing output files: ../TargetSeq_BED_sample_lib/RNF2-ON-Target.ref.upper.fa.ann, ../TargetSeq_BED_sample_lib/RNF2-ON-Target.ref.upper.fa.sa, ../TargetSeq_BED_sample_lib/RNF2-ON-Target.ref.upper.fa.amb, ../TargetSeq_BED_sample_lib/RNF2-ON-Target.ref.upper.fa.pac, ../TargetSeq_BED_sample_lib/RNF2-ON-Target.ref.upper.fa.bwt; Input files updated by another job: ../TargetSeq_BED_sample_lib/RNF2-ON-Target.ref.upper.fa
+    wildcards: sample=RNF2-ON-Target
+
+
+        /home/zhaohuanan/miniconda3/envs/snakepipes_target-seq-from-table-to-plot/bin/bwa index ../TargetSeq_BED_sample_lib/RNF2-ON-Target.ref.upper.fa
+        
+[Fri Oct 16 14:53:52 2020]
+Finished job 79.
+60 of 111 steps (54%) done
+[Fri Oct 16 14:53:52 2020]
+Finished job 73.
+61 of 111 steps (55%) done
+
+[Fri Oct 16 14:53:52 2020]
+rule faidx:
+    input: ../TargetSeq_BED_sample_lib/HEK5-On-Target.ref.upper.fa
+    output: ../TargetSeq_BED_sample_lib/HEK5-On-Target.ref.upper.fa.fai
+    jobid: 75
+    reason: Missing output files: ../TargetSeq_BED_sample_lib/HEK5-On-Target.ref.upper.fa.fai; Input files updated by another job: ../TargetSeq_BED_sample_lib/HEK5-On-Target.ref.upper.fa
+    wildcards: sample=HEK5-On-Target
+
+
+        /home/zhaohuanan/miniconda3/envs/snakepipes_cutadapt-STARmapping-FPKM-sortBAM/bin/samtools faidx ../TargetSeq_BED_sample_lib/HEK5-On-Target.ref.upper.fa
+        
+
+[Fri Oct 16 14:53:52 2020]
+rule faidx:
+    input: ../TargetSeq_BED_sample_lib/MTND4P12-N4.ref.upper.fa
+    output: ../TargetSeq_BED_sample_lib/MTND4P12-N4.ref.upper.fa.fai
+    jobid: 76
+    reason: Missing output files: ../TargetSeq_BED_sample_lib/MTND4P12-N4.ref.upper.fa.fai; Input files updated by another job: ../TargetSeq_BED_sample_lib/MTND4P12-N4.ref.upper.fa
+    wildcards: sample=MTND4P12-N4
+
+
+        /home/zhaohuanan/miniconda3/envs/snakepipes_cutadapt-STARmapping-FPKM-sortBAM/bin/samtools faidx ../TargetSeq_BED_sample_lib/MTND4P12-N4.ref.upper.fa
+        
+
+[Fri Oct 16 14:53:52 2020]
+rule letter2LETTER:
+    input: ../TargetSeq_BED_sample_lib/VEGFA-Off-Target-6.ref.fa
+    output: ../TargetSeq_BED_sample_lib/VEGFA-Off-Target-6.ref.upper.fa
+    jobid: 62
+    reason: Missing output files: ../TargetSeq_BED_sample_lib/VEGFA-Off-Target-6.ref.upper.fa; Input files updated by another job: ../TargetSeq_BED_sample_lib/VEGFA-Off-Target-6.ref.fa
+    wildcards: sample=VEGFA-Off-Target-6
+
+
+        cat ../TargetSeq_BED_sample_lib/VEGFA-Off-Target-6.ref.fa | awk '{print toupper($0)}' > ../TargetSeq_BED_sample_lib/VEGFA-Off-Target-6.ref.upper.fa
+        
+
+[Fri Oct 16 14:53:52 2020]
+rule faidx:
+    input: ../TargetSeq_BED_sample_lib/VEGFA-Off-Target-7.ref.upper.fa
+    output: ../TargetSeq_BED_sample_lib/VEGFA-Off-Target-7.ref.upper.fa.fai
+    jobid: 85
+    reason: Missing output files: ../TargetSeq_BED_sample_lib/VEGFA-Off-Target-7.ref.upper.fa.fai; Input files updated by another job: ../TargetSeq_BED_sample_lib/VEGFA-Off-Target-7.ref.upper.fa
+    wildcards: sample=VEGFA-Off-Target-7
+
+
+        /home/zhaohuanan/miniconda3/envs/snakepipes_cutadapt-STARmapping-FPKM-sortBAM/bin/samtools faidx ../TargetSeq_BED_sample_lib/VEGFA-Off-Target-7.ref.upper.fa
+        
+
+[Fri Oct 16 14:53:52 2020]
+rule bwa_idex:
+    input: ../TargetSeq_BED_sample_lib/VEGFA-Off-Target-7.ref.upper.fa
+    output: ../TargetSeq_BED_sample_lib/VEGFA-Off-Target-7.ref.upper.fa.amb, ../TargetSeq_BED_sample_lib/VEGFA-Off-Target-7.ref.upper.fa.ann, ../TargetSeq_BED_sample_lib/VEGFA-Off-Target-7.ref.upper.fa.bwt, ../TargetSeq_BED_sample_lib/VEGFA-Off-Target-7.ref.upper.fa.pac, ../TargetSeq_BED_sample_lib/VEGFA-Off-Target-7.ref.upper.fa.sa
+    jobid: 107
+    reason: Missing output files: ../TargetSeq_BED_sample_lib/VEGFA-Off-Target-7.ref.upper.fa.bwt, ../TargetSeq_BED_sample_lib/VEGFA-Off-Target-7.ref.upper.fa.sa, ../TargetSeq_BED_sample_lib/VEGFA-Off-Target-7.ref.upper.fa.amb, ../TargetSeq_BED_sample_lib/VEGFA-Off-Target-7.ref.upper.fa.ann, ../TargetSeq_BED_sample_lib/VEGFA-Off-Target-7.ref.upper.fa.pac; Input files updated by another job: ../TargetSeq_BED_sample_lib/VEGFA-Off-Target-7.ref.upper.fa
+    wildcards: sample=VEGFA-Off-Target-7
+
+
+        /home/zhaohuanan/miniconda3/envs/snakepipes_target-seq-from-table-to-plot/bin/bwa index ../TargetSeq_BED_sample_lib/VEGFA-Off-Target-7.ref.upper.fa
+        
+
+[Fri Oct 16 14:53:52 2020]
+rule faidx:
+    input: ../TargetSeq_BED_sample_lib/VEGFA-OffNo-GDNo-08.ref.upper.fa
+    output: ../TargetSeq_BED_sample_lib/VEGFA-OffNo-GDNo-08.ref.upper.fa.fai
+    jobid: 86
+    reason: Missing output files: ../TargetSeq_BED_sample_lib/VEGFA-OffNo-GDNo-08.ref.upper.fa.fai; Input files updated by another job: ../TargetSeq_BED_sample_lib/VEGFA-OffNo-GDNo-08.ref.upper.fa
+    wildcards: sample=VEGFA-OffNo-GDNo-08
+
+
+        /home/zhaohuanan/miniconda3/envs/snakepipes_cutadapt-STARmapping-FPKM-sortBAM/bin/samtools faidx ../TargetSeq_BED_sample_lib/VEGFA-OffNo-GDNo-08.ref.upper.fa
+        
+
+[Fri Oct 16 14:53:52 2020]
+[Fri Oct 16 14:53:52 2020]
+Finished job 81.
+rule bwa_idex:
+    input: ../TargetSeq_BED_sample_lib/VEGFA-OffNo-GDNo-08.ref.upper.fa
+    output: ../TargetSeq_BED_sample_lib/VEGFA-OffNo-GDNo-08.ref.upper.fa.amb, ../TargetSeq_BED_sample_lib/VEGFA-OffNo-GDNo-08.ref.upper.fa.ann, ../TargetSeq_BED_sample_lib/VEGFA-OffNo-GDNo-08.ref.upper.fa.bwt, ../TargetSeq_BED_sample_lib/VEGFA-OffNo-GDNo-08.ref.upper.fa.pac, ../TargetSeq_BED_sample_lib/VEGFA-OffNo-GDNo-08.ref.upper.fa.sa
+    jobid: 108
+    reason: Missing output files: ../TargetSeq_BED_sample_lib/VEGFA-OffNo-GDNo-08.ref.upper.fa.ann, ../TargetSeq_BED_sample_lib/VEGFA-OffNo-GDNo-08.ref.upper.fa.bwt, ../TargetSeq_BED_sample_lib/VEGFA-OffNo-GDNo-08.ref.upper.fa.sa, ../TargetSeq_BED_sample_lib/VEGFA-OffNo-GDNo-08.ref.upper.fa.amb, ../TargetSeq_BED_sample_lib/VEGFA-OffNo-GDNo-08.ref.upper.fa.pac; Input files updated by another job: ../TargetSeq_BED_sample_lib/VEGFA-OffNo-GDNo-08.ref.upper.fa
+    wildcards: sample=VEGFA-OffNo-GDNo-08
+62 of 111 steps (56%) done
+
+
+        /home/zhaohuanan/miniconda3/envs/snakepipes_target-seq-from-table-to-plot/bin/bwa index ../TargetSeq_BED_sample_lib/VEGFA-OffNo-GDNo-08.ref.upper.fa
+        
+[Fri Oct 16 14:53:52 2020]
+Finished job 88.
+63 of 111 steps (57%) done
+[Fri Oct 16 14:53:52 2020]
+Finished job 62.
+64 of 111 steps (58%) done
+[Fri Oct 16 14:53:52 2020]
+Finished job 87.
+65 of 111 steps (59%) done
+[Fri Oct 16 14:53:52 2020]
+Finished job 68.
+66 of 111 steps (59%) done
+
+[Fri Oct 16 14:53:52 2020]
+rule faidx:
+    input: ../TargetSeq_BED_sample_lib/ABE-Site-7-On.ref.upper.fa
+    output: ../TargetSeq_BED_sample_lib/ABE-Site-7-On.ref.upper.fa.fai
+    jobid: 67
+    reason: Missing output files: ../TargetSeq_BED_sample_lib/ABE-Site-7-On.ref.upper.fa.fai; Input files updated by another job: ../TargetSeq_BED_sample_lib/ABE-Site-7-On.ref.upper.fa
+    wildcards: sample=ABE-Site-7-On
+
+
+        /home/zhaohuanan/miniconda3/envs/snakepipes_cutadapt-STARmapping-FPKM-sortBAM/bin/samtools faidx ../TargetSeq_BED_sample_lib/ABE-Site-7-On.ref.upper.fa
+        
+[Fri Oct 16 14:53:52 2020]
+Finished job 76.
+67 of 111 steps (60%) done
+[Fri Oct 16 14:53:52 2020]
+Finished job 75.
+68 of 111 steps (61%) done
+
+[Fri Oct 16 14:53:52 2020]
+rule bwa_idex:
+    input: ../TargetSeq_BED_sample_lib/ABE-Site-7-On.ref.upper.fa
+    output: ../TargetSeq_BED_sample_lib/ABE-Site-7-On.ref.upper.fa.amb, ../TargetSeq_BED_sample_lib/ABE-Site-7-On.ref.upper.fa.ann, ../TargetSeq_BED_sample_lib/ABE-Site-7-On.ref.upper.fa.bwt, ../TargetSeq_BED_sample_lib/ABE-Site-7-On.ref.upper.fa.pac, ../TargetSeq_BED_sample_lib/ABE-Site-7-On.ref.upper.fa.sa
+    jobid: 89
+    reason: Missing output files: ../TargetSeq_BED_sample_lib/ABE-Site-7-On.ref.upper.fa.sa, ../TargetSeq_BED_sample_lib/ABE-Site-7-On.ref.upper.fa.pac, ../TargetSeq_BED_sample_lib/ABE-Site-7-On.ref.upper.fa.amb, ../TargetSeq_BED_sample_lib/ABE-Site-7-On.ref.upper.fa.ann, ../TargetSeq_BED_sample_lib/ABE-Site-7-On.ref.upper.fa.bwt; Input files updated by another job: ../TargetSeq_BED_sample_lib/ABE-Site-7-On.ref.upper.fa
+    wildcards: sample=ABE-Site-7-On
+
+
+        /home/zhaohuanan/miniconda3/envs/snakepipes_target-seq-from-table-to-plot/bin/bwa index ../TargetSeq_BED_sample_lib/ABE-Site-7-On.ref.upper.fa
+        
+
+[Fri Oct 16 14:53:52 2020]
+rule letter2LETTER:
+    input: ../TargetSeq_BED_sample_lib/VEGFA-Off-Target-3.ref.fa
+    output: ../TargetSeq_BED_sample_lib/VEGFA-Off-Target-3.ref.upper.fa
+    jobid: 61
+    reason: Missing output files: ../TargetSeq_BED_sample_lib/VEGFA-Off-Target-3.ref.upper.fa; Input files updated by another job: ../TargetSeq_BED_sample_lib/VEGFA-Off-Target-3.ref.fa
+    wildcards: sample=VEGFA-Off-Target-3
+
+
+        cat ../TargetSeq_BED_sample_lib/VEGFA-Off-Target-3.ref.fa | awk '{print toupper($0)}' > ../TargetSeq_BED_sample_lib/VEGFA-Off-Target-3.ref.upper.fa
+        
+
+[Fri Oct 16 14:53:52 2020]
+rule letter2LETTER:
+    input: ../TargetSeq_BED_sample_lib/HEK4-Guideseq-3.ref.fa
+    output: ../TargetSeq_BED_sample_lib/HEK4-Guideseq-3.ref.upper.fa
+    jobid: 49
+    reason: Missing output files: ../TargetSeq_BED_sample_lib/HEK4-Guideseq-3.ref.upper.fa; Input files updated by another job: ../TargetSeq_BED_sample_lib/HEK4-Guideseq-3.ref.fa
+    wildcards: sample=HEK4-Guideseq-3
+
+
+        cat ../TargetSeq_BED_sample_lib/HEK4-Guideseq-3.ref.fa | awk '{print toupper($0)}' > ../TargetSeq_BED_sample_lib/HEK4-Guideseq-3.ref.upper.fa
+        
+[Fri Oct 16 14:53:52 2020]
+Finished job 86.
+69 of 111 steps (62%) done
+
+[Fri Oct 16 14:53:52 2020]
+rule faidx:
+    input: ../TargetSeq_BED_sample_lib/VEGFA-Off-Target-6.ref.upper.fa
+    output: ../TargetSeq_BED_sample_lib/VEGFA-Off-Target-6.ref.upper.fa.fai
+    jobid: 84
+    reason: Missing output files: ../TargetSeq_BED_sample_lib/VEGFA-Off-Target-6.ref.upper.fa.fai; Input files updated by another job: ../TargetSeq_BED_sample_lib/VEGFA-Off-Target-6.ref.upper.fa
+    wildcards: sample=VEGFA-Off-Target-6
+
+
+        /home/zhaohuanan/miniconda3/envs/snakepipes_cutadapt-STARmapping-FPKM-sortBAM/bin/samtools faidx ../TargetSeq_BED_sample_lib/VEGFA-Off-Target-6.ref.upper.fa
+        
+[Fri Oct 16 14:53:52 2020]
+Finished job 85.
+70 of 111 steps (63%) done
+
+[Fri Oct 16 14:53:52 2020]
+rule letter2LETTER:
+    input: ../TargetSeq_BED_sample_lib/HEK4-Guideseq-2.ref.fa
+    output: ../TargetSeq_BED_sample_lib/HEK4-Guideseq-2.ref.upper.fa
+    jobid: 48
+    reason: Missing output files: ../TargetSeq_BED_sample_lib/HEK4-Guideseq-2.ref.upper.fa; Input files updated by another job: ../TargetSeq_BED_sample_lib/HEK4-Guideseq-2.ref.fa
+    wildcards: sample=HEK4-Guideseq-2
+
+
+        cat ../TargetSeq_BED_sample_lib/HEK4-Guideseq-2.ref.fa | awk '{print toupper($0)}' > ../TargetSeq_BED_sample_lib/HEK4-Guideseq-2.ref.upper.fa
+        
+
+[Fri Oct 16 14:53:52 2020]
+rule bwa_idex:
+    input: ../TargetSeq_BED_sample_lib/VEGFA-Off-Target-6.ref.upper.fa
+    output: ../TargetSeq_BED_sample_lib/VEGFA-Off-Target-6.ref.upper.fa.amb, ../TargetSeq_BED_sample_lib/VEGFA-Off-Target-6.ref.upper.fa.ann, ../TargetSeq_BED_sample_lib/VEGFA-Off-Target-6.ref.upper.fa.bwt, ../TargetSeq_BED_sample_lib/VEGFA-Off-Target-6.ref.upper.fa.pac, ../TargetSeq_BED_sample_lib/VEGFA-Off-Target-6.ref.upper.fa.sa
+    jobid: 106
+    reason: Missing output files: ../TargetSeq_BED_sample_lib/VEGFA-Off-Target-6.ref.upper.fa.ann, ../TargetSeq_BED_sample_lib/VEGFA-Off-Target-6.ref.upper.fa.bwt, ../TargetSeq_BED_sample_lib/VEGFA-Off-Target-6.ref.upper.fa.pac, ../TargetSeq_BED_sample_lib/VEGFA-Off-Target-6.ref.upper.fa.amb, ../TargetSeq_BED_sample_lib/VEGFA-Off-Target-6.ref.upper.fa.sa; Input files updated by another job: ../TargetSeq_BED_sample_lib/VEGFA-Off-Target-6.ref.upper.fa
+    wildcards: sample=VEGFA-Off-Target-6
+
+
+        /home/zhaohuanan/miniconda3/envs/snakepipes_target-seq-from-table-to-plot/bin/bwa index ../TargetSeq_BED_sample_lib/VEGFA-Off-Target-6.ref.upper.fa
+        
+[Fri Oct 16 14:53:52 2020]
+Finished job 101.
+71 of 111 steps (64%) done
+
+[Fri Oct 16 14:53:52 2020]
+rule letter2LETTER:
+    input: ../TargetSeq_BED_sample_lib/HEK4-Guideseq-4.ref.fa
+    output: ../TargetSeq_BED_sample_lib/HEK4-Guideseq-4.ref.upper.fa
+    jobid: 50
+    reason: Missing output files: ../TargetSeq_BED_sample_lib/HEK4-Guideseq-4.ref.upper.fa; Input files updated by another job: ../TargetSeq_BED_sample_lib/HEK4-Guideseq-4.ref.fa
+    wildcards: sample=HEK4-Guideseq-4
+[Fri Oct 16 14:53:52 2020]
+
+Finished job 61.
+
+        cat ../TargetSeq_BED_sample_lib/HEK4-Guideseq-4.ref.fa | awk '{print toupper($0)}' > ../TargetSeq_BED_sample_lib/HEK4-Guideseq-4.ref.upper.fa
+        
+72 of 111 steps (65%) done
+[Fri Oct 16 14:53:52 2020]
+
+Finished job 49.
+[Fri Oct 16 14:53:52 2020]
+73 of 111 steps (66%) done
+rule bwa_idex:
+    input: ../TargetSeq_BED_sample_lib/VEGFA-Off-Target-2.ref.upper.fa
+    output: ../TargetSeq_BED_sample_lib/VEGFA-Off-Target-2.ref.upper.fa.amb, ../TargetSeq_BED_sample_lib/VEGFA-Off-Target-2.ref.upper.fa.ann, ../TargetSeq_BED_sample_lib/VEGFA-Off-Target-2.ref.upper.fa.bwt, ../TargetSeq_BED_sample_lib/VEGFA-Off-Target-2.ref.upper.fa.pac, ../TargetSeq_BED_sample_lib/VEGFA-Off-Target-2.ref.upper.fa.sa
+    jobid: 104
+    reason: Missing output files: ../TargetSeq_BED_sample_lib/VEGFA-Off-Target-2.ref.upper.fa.sa, ../TargetSeq_BED_sample_lib/VEGFA-Off-Target-2.ref.upper.fa.bwt, ../TargetSeq_BED_sample_lib/VEGFA-Off-Target-2.ref.upper.fa.amb, ../TargetSeq_BED_sample_lib/VEGFA-Off-Target-2.ref.upper.fa.pac, ../TargetSeq_BED_sample_lib/VEGFA-Off-Target-2.ref.upper.fa.ann; Input files updated by another job: ../TargetSeq_BED_sample_lib/VEGFA-Off-Target-2.ref.upper.fa
+    wildcards: sample=VEGFA-Off-Target-2
+
+
+        /home/zhaohuanan/miniconda3/envs/snakepipes_target-seq-from-table-to-plot/bin/bwa index ../TargetSeq_BED_sample_lib/VEGFA-Off-Target-2.ref.upper.fa
+        
+[Fri Oct 16 14:53:52 2020]
+Finished job 48.
+74 of 111 steps (67%) done
+
+[Fri Oct 16 14:53:52 2020]
+rule faidx:
+    input: ../TargetSeq_BED_sample_lib/VEGFA-Off-Target-2.ref.upper.fa
+    output: ../TargetSeq_BED_sample_lib/VEGFA-Off-Target-2.ref.upper.fa.fai
+    jobid: 82
+    reason: Missing output files: ../TargetSeq_BED_sample_lib/VEGFA-Off-Target-2.ref.upper.fa.fai; Input files updated by another job: ../TargetSeq_BED_sample_lib/VEGFA-Off-Target-2.ref.upper.fa
+    wildcards: sample=VEGFA-Off-Target-2
+
+
+        /home/zhaohuanan/miniconda3/envs/snakepipes_cutadapt-STARmapping-FPKM-sortBAM/bin/samtools faidx ../TargetSeq_BED_sample_lib/VEGFA-Off-Target-2.ref.upper.fa
+        
+
+[Fri Oct 16 14:53:52 2020]
+rule faidx:
+    input: ../TargetSeq_BED_sample_lib/VEGFA-Off-Target-3.ref.upper.fa
+    output: ../TargetSeq_BED_sample_lib/VEGFA-Off-Target-3.ref.upper.fa.fai
+    jobid: 83
+    reason: Missing output files: ../TargetSeq_BED_sample_lib/VEGFA-Off-Target-3.ref.upper.fa.fai; Input files updated by another job: ../TargetSeq_BED_sample_lib/VEGFA-Off-Target-3.ref.upper.fa
+    wildcards: sample=VEGFA-Off-Target-3
+
+
+        /home/zhaohuanan/miniconda3/envs/snakepipes_cutadapt-STARmapping-FPKM-sortBAM/bin/samtools faidx ../TargetSeq_BED_sample_lib/VEGFA-Off-Target-3.ref.upper.fa
+        
+
+[Fri Oct 16 14:53:52 2020]
+rule bwa_idex:
+    input: ../TargetSeq_BED_sample_lib/VEGFA-Off-Target-3.ref.upper.fa
+    output: ../TargetSeq_BED_sample_lib/VEGFA-Off-Target-3.ref.upper.fa.amb, ../TargetSeq_BED_sample_lib/VEGFA-Off-Target-3.ref.upper.fa.ann, ../TargetSeq_BED_sample_lib/VEGFA-Off-Target-3.ref.upper.fa.bwt, ../TargetSeq_BED_sample_lib/VEGFA-Off-Target-3.ref.upper.fa.pac, ../TargetSeq_BED_sample_lib/VEGFA-Off-Target-3.ref.upper.fa.sa
+    jobid: 105
+    reason: Missing output files: ../TargetSeq_BED_sample_lib/VEGFA-Off-Target-3.ref.upper.fa.amb, ../TargetSeq_BED_sample_lib/VEGFA-Off-Target-3.ref.upper.fa.bwt, ../TargetSeq_BED_sample_lib/VEGFA-Off-Target-3.ref.upper.fa.pac, ../TargetSeq_BED_sample_lib/VEGFA-Off-Target-3.ref.upper.fa.ann, ../TargetSeq_BED_sample_lib/VEGFA-Off-Target-3.ref.upper.fa.sa; Input files updated by another job: ../TargetSeq_BED_sample_lib/VEGFA-Off-Target-3.ref.upper.fa
+    wildcards: sample=VEGFA-Off-Target-3
+
+
+        /home/zhaohuanan/miniconda3/envs/snakepipes_target-seq-from-table-to-plot/bin/bwa index ../TargetSeq_BED_sample_lib/VEGFA-Off-Target-3.ref.upper.fa
+        
+[Fri Oct 16 14:53:52 2020]
+Finished job 50.
+75 of 111 steps (68%) done
+
+[Fri Oct 16 14:53:52 2020]
+rule faidx:
+    input: ../TargetSeq_BED_sample_lib/HEK4-Guideseq-2.ref.upper.fa
+    output: ../TargetSeq_BED_sample_lib/HEK4-Guideseq-2.ref.upper.fa.fai
+    jobid: 70
+    reason: Missing output files: ../TargetSeq_BED_sample_lib/HEK4-Guideseq-2.ref.upper.fa.fai; Input files updated by another job: ../TargetSeq_BED_sample_lib/HEK4-Guideseq-2.ref.upper.fa
+    wildcards: sample=HEK4-Guideseq-2
+
+
+        /home/zhaohuanan/miniconda3/envs/snakepipes_cutadapt-STARmapping-FPKM-sortBAM/bin/samtools faidx ../TargetSeq_BED_sample_lib/HEK4-Guideseq-2.ref.upper.fa
+        
+[Fri Oct 16 14:53:52 2020]
+Finished job 95.
+76 of 111 steps (68%) done
+
+[Fri Oct 16 14:53:52 2020]
+rule bwa_idex:
+    input: ../TargetSeq_BED_sample_lib/HEK4-Guideseq-2.ref.upper.fa
+    output: ../TargetSeq_BED_sample_lib/HEK4-Guideseq-2.ref.upper.fa.amb, ../TargetSeq_BED_sample_lib/HEK4-Guideseq-2.ref.upper.fa.ann, ../TargetSeq_BED_sample_lib/HEK4-Guideseq-2.ref.upper.fa.bwt, ../TargetSeq_BED_sample_lib/HEK4-Guideseq-2.ref.upper.fa.pac, ../TargetSeq_BED_sample_lib/HEK4-Guideseq-2.ref.upper.fa.sa
+    jobid: 92
+    reason: Missing output files: ../TargetSeq_BED_sample_lib/HEK4-Guideseq-2.ref.upper.fa.pac, ../TargetSeq_BED_sample_lib/HEK4-Guideseq-2.ref.upper.fa.ann, ../TargetSeq_BED_sample_lib/HEK4-Guideseq-2.ref.upper.fa.bwt, ../TargetSeq_BED_sample_lib/HEK4-Guideseq-2.ref.upper.fa.amb, ../TargetSeq_BED_sample_lib/HEK4-Guideseq-2.ref.upper.fa.sa; Input files updated by another job: ../TargetSeq_BED_sample_lib/HEK4-Guideseq-2.ref.upper.fa
+    wildcards: sample=HEK4-Guideseq-2
+
+
+        /home/zhaohuanan/miniconda3/envs/snakepipes_target-seq-from-table-to-plot/bin/bwa index ../TargetSeq_BED_sample_lib/HEK4-Guideseq-2.ref.upper.fa
+        
+[Fri Oct 16 14:53:52 2020]
+Finished job 97.
+77 of 111 steps (69%) done
+
+[Fri Oct 16 14:53:52 2020]
+rule faidx:
+    input: ../TargetSeq_BED_sample_lib/HEK4-Guideseq-3.ref.upper.fa
+    output: ../TargetSeq_BED_sample_lib/HEK4-Guideseq-3.ref.upper.fa.fai
+    jobid: 71
+    reason: Missing output files: ../TargetSeq_BED_sample_lib/HEK4-Guideseq-3.ref.upper.fa.fai; Input files updated by another job: ../TargetSeq_BED_sample_lib/HEK4-Guideseq-3.ref.upper.fa
+    wildcards: sample=HEK4-Guideseq-3
+
+
+        /home/zhaohuanan/miniconda3/envs/snakepipes_cutadapt-STARmapping-FPKM-sortBAM/bin/samtools faidx ../TargetSeq_BED_sample_lib/HEK4-Guideseq-3.ref.upper.fa
+        
+[Fri Oct 16 14:53:52 2020]
+Finished job 96.
+78 of 111 steps (70%) done
+
+[Fri Oct 16 14:53:52 2020]
+rule bwa_idex:
+    input: ../TargetSeq_BED_sample_lib/HEK4-Guideseq-3.ref.upper.fa
+    output: ../TargetSeq_BED_sample_lib/HEK4-Guideseq-3.ref.upper.fa.amb, ../TargetSeq_BED_sample_lib/HEK4-Guideseq-3.ref.upper.fa.ann, ../TargetSeq_BED_sample_lib/HEK4-Guideseq-3.ref.upper.fa.bwt, ../TargetSeq_BED_sample_lib/HEK4-Guideseq-3.ref.upper.fa.pac, ../TargetSeq_BED_sample_lib/HEK4-Guideseq-3.ref.upper.fa.sa
+    jobid: 93
+    reason: Missing output files: ../TargetSeq_BED_sample_lib/HEK4-Guideseq-3.ref.upper.fa.pac, ../TargetSeq_BED_sample_lib/HEK4-Guideseq-3.ref.upper.fa.bwt, ../TargetSeq_BED_sample_lib/HEK4-Guideseq-3.ref.upper.fa.ann, ../TargetSeq_BED_sample_lib/HEK4-Guideseq-3.ref.upper.fa.amb, ../TargetSeq_BED_sample_lib/HEK4-Guideseq-3.ref.upper.fa.sa; Input files updated by another job: ../TargetSeq_BED_sample_lib/HEK4-Guideseq-3.ref.upper.fa
+    wildcards: sample=HEK4-Guideseq-3
+
+
+        /home/zhaohuanan/miniconda3/envs/snakepipes_target-seq-from-table-to-plot/bin/bwa index ../TargetSeq_BED_sample_lib/HEK4-Guideseq-3.ref.upper.fa
+        
+[Fri Oct 16 14:53:52 2020]
+Finished job 84.
+79 of 111 steps (71%) done
+[Fri Oct 16 14:53:52 2020]
+Finished job 67.
+80 of 111 steps (72%) done
+[Fri Oct 16 14:53:52 2020]
+Finished job 102.
+81 of 111 steps (73%) done
+
+[Fri Oct 16 14:53:52 2020]
+rule letter2LETTER:
+    input: ../TargetSeq_BED_sample_lib/MTND5P11-N5.1.ref.fa
+    output: ../TargetSeq_BED_sample_lib/MTND5P11-N5.1.ref.upper.fa
+    jobid: 55
+    reason: Missing output files: ../TargetSeq_BED_sample_lib/MTND5P11-N5.1.ref.upper.fa; Input files updated by another job: ../TargetSeq_BED_sample_lib/MTND5P11-N5.1.ref.fa
+    wildcards: sample=MTND5P11-N5.1
+
+
+        cat ../TargetSeq_BED_sample_lib/MTND5P11-N5.1.ref.fa | awk '{print toupper($0)}' > ../TargetSeq_BED_sample_lib/MTND5P11-N5.1.ref.upper.fa
+        
+
+[Fri Oct 16 14:53:52 2020]
+rule getfasta:
+    input: ../TargetSeq_BED_sample_lib/MTND6P4-N6.bed
+    output: ../TargetSeq_BED_sample_lib/MTND6P4-N6.ref.fa
+    jobid: 34
+    reason: Missing output files: ../TargetSeq_BED_sample_lib/MTND6P4-N6.ref.fa; Input files updated by another job: ../TargetSeq_BED_sample_lib/MTND6P4-N6.bed
+    wildcards: sample=MTND6P4-N6
+
+
+        /home/zhaohuanan/miniconda3/envs/snakepipes_target-seq-from-table-to-plot/bin/bedtools getfasta -nameOnly -s -bed ../TargetSeq_BED_sample_lib/MTND6P4-N6.bed -fi /home/zhaohuanan/zhaohn_HD/2.database/bwa_hg38/hg38_only_chromosome.fa > ../TargetSeq_BED_sample_lib/MTND6P4-N6.ref.fa
+        
+
+[Fri Oct 16 14:53:52 2020]
+rule faidx:
+    input: ../TargetSeq_BED_sample_lib/HEK4-Guideseq-4.ref.upper.fa
+    output: ../TargetSeq_BED_sample_lib/HEK4-Guideseq-4.ref.upper.fa.fai
+    jobid: 72
+    reason: Missing output files: ../TargetSeq_BED_sample_lib/HEK4-Guideseq-4.ref.upper.fa.fai; Input files updated by another job: ../TargetSeq_BED_sample_lib/HEK4-Guideseq-4.ref.upper.fa
+    wildcards: sample=HEK4-Guideseq-4
+
+
+        /home/zhaohuanan/miniconda3/envs/snakepipes_cutadapt-STARmapping-FPKM-sortBAM/bin/samtools faidx ../TargetSeq_BED_sample_lib/HEK4-Guideseq-4.ref.upper.fa
+        
+[Fri Oct 16 14:53:52 2020]
+Finished job 83.
+82 of 111 steps (74%) done
+[Fri Oct 16 14:53:52 2020]
+Finished job 82.
+83 of 111 steps (75%) done
+
+[Fri Oct 16 14:53:52 2020]
+rule bwa_idex:
+    input: ../TargetSeq_BED_sample_lib/HEK4-Guideseq-4.ref.upper.fa
+    output: ../TargetSeq_BED_sample_lib/HEK4-Guideseq-4.ref.upper.fa.amb, ../TargetSeq_BED_sample_lib/HEK4-Guideseq-4.ref.upper.fa.ann, ../TargetSeq_BED_sample_lib/HEK4-Guideseq-4.ref.upper.fa.bwt, ../TargetSeq_BED_sample_lib/HEK4-Guideseq-4.ref.upper.fa.pac, ../TargetSeq_BED_sample_lib/HEK4-Guideseq-4.ref.upper.fa.sa
+    jobid: 94
+    reason: Missing output files: ../TargetSeq_BED_sample_lib/HEK4-Guideseq-4.ref.upper.fa.pac, ../TargetSeq_BED_sample_lib/HEK4-Guideseq-4.ref.upper.fa.ann, ../TargetSeq_BED_sample_lib/HEK4-Guideseq-4.ref.upper.fa.bwt, ../TargetSeq_BED_sample_lib/HEK4-Guideseq-4.ref.upper.fa.sa, ../TargetSeq_BED_sample_lib/HEK4-Guideseq-4.ref.upper.fa.amb; Input files updated by another job: ../TargetSeq_BED_sample_lib/HEK4-Guideseq-4.ref.upper.fa
+    wildcards: sample=HEK4-Guideseq-4
+
+
+        /home/zhaohuanan/miniconda3/envs/snakepipes_target-seq-from-table-to-plot/bin/bwa index ../TargetSeq_BED_sample_lib/HEK4-Guideseq-4.ref.upper.fa
+        
+[Fri Oct 16 14:53:52 2020]
+
+Finished job 55.
+[Fri Oct 16 14:53:52 2020]
+84 of 111 steps (76%) done
+rule letter2LETTER:
+    input: ../TargetSeq_BED_sample_lib/HEK2-On-Target.ref.fa
+    output: ../TargetSeq_BED_sample_lib/HEK2-On-Target.ref.upper.fa
+    jobid: 47
+    reason: Missing output files: ../TargetSeq_BED_sample_lib/HEK2-On-Target.ref.upper.fa; Input files updated by another job: ../TargetSeq_BED_sample_lib/HEK2-On-Target.ref.fa
+    wildcards: sample=HEK2-On-Target
+
+
+        cat ../TargetSeq_BED_sample_lib/HEK2-On-Target.ref.fa | awk '{print toupper($0)}' > ../TargetSeq_BED_sample_lib/HEK2-On-Target.ref.upper.fa
+        
+
+[Fri Oct 16 14:53:52 2020]
+rule faidx:
+    input: ../TargetSeq_BED_sample_lib/MTND5P11-N5.1.ref.upper.fa
+    output: ../TargetSeq_BED_sample_lib/MTND5P11-N5.1.ref.upper.fa.fai
+    jobid: 77
+    reason: Missing output files: ../TargetSeq_BED_sample_lib/MTND5P11-N5.1.ref.upper.fa.fai; Input files updated by another job: ../TargetSeq_BED_sample_lib/MTND5P11-N5.1.ref.upper.fa
+    wildcards: sample=MTND5P11-N5.1
+
+
+        /home/zhaohuanan/miniconda3/envs/snakepipes_cutadapt-STARmapping-FPKM-sortBAM/bin/samtools faidx ../TargetSeq_BED_sample_lib/MTND5P11-N5.1.ref.upper.fa
+        
+
+[Fri Oct 16 14:53:52 2020]
+[Fri Oct 16 14:53:52 2020]
+Finished job 70.
+rule bwa_idex:
+    input: ../TargetSeq_BED_sample_lib/MTND5P11-N5.1.ref.upper.fa
+    output: ../TargetSeq_BED_sample_lib/MTND5P11-N5.1.ref.upper.fa.amb, ../TargetSeq_BED_sample_lib/MTND5P11-N5.1.ref.upper.fa.ann, ../TargetSeq_BED_sample_lib/MTND5P11-N5.1.ref.upper.fa.bwt, ../TargetSeq_BED_sample_lib/MTND5P11-N5.1.ref.upper.fa.pac, ../TargetSeq_BED_sample_lib/MTND5P11-N5.1.ref.upper.fa.sa
+    jobid: 99
+    reason: Missing output files: ../TargetSeq_BED_sample_lib/MTND5P11-N5.1.ref.upper.fa.pac, ../TargetSeq_BED_sample_lib/MTND5P11-N5.1.ref.upper.fa.amb, ../TargetSeq_BED_sample_lib/MTND5P11-N5.1.ref.upper.fa.sa, ../TargetSeq_BED_sample_lib/MTND5P11-N5.1.ref.upper.fa.ann, ../TargetSeq_BED_sample_lib/MTND5P11-N5.1.ref.upper.fa.bwt; Input files updated by another job: ../TargetSeq_BED_sample_lib/MTND5P11-N5.1.ref.upper.fa
+    wildcards: sample=MTND5P11-N5.1
+85 of 111 steps (77%) done
+
+
+        /home/zhaohuanan/miniconda3/envs/snakepipes_target-seq-from-table-to-plot/bin/bwa index ../TargetSeq_BED_sample_lib/MTND5P11-N5.1.ref.upper.fa
+        
+[Fri Oct 16 14:53:52 2020]
+Finished job 34.
+86 of 111 steps (77%) done
+
+[Fri Oct 16 14:53:52 2020]
+rule letter2LETTER:
+    input: ../TargetSeq_BED_sample_lib/MTND6P4-N6.ref.fa
+    output: ../TargetSeq_BED_sample_lib/MTND6P4-N6.ref.upper.fa
+    jobid: 56
+    reason: Missing output files: ../TargetSeq_BED_sample_lib/MTND6P4-N6.ref.upper.fa; Input files updated by another job: ../TargetSeq_BED_sample_lib/MTND6P4-N6.ref.fa
+    wildcards: sample=MTND6P4-N6
+
+
+        cat ../TargetSeq_BED_sample_lib/MTND6P4-N6.ref.fa | awk '{print toupper($0)}' > ../TargetSeq_BED_sample_lib/MTND6P4-N6.ref.upper.fa
+        
+[Fri Oct 16 14:53:52 2020]
+Finished job 109.
+87 of 111 steps (78%) done
+[Fri Oct 16 14:53:52 2020]
+Finished job 47.
+88 of 111 steps (79%) done
+
+[Fri Oct 16 14:53:52 2020]
+rule faidx:
+    input: ../TargetSeq_BED_sample_lib/HEK2-On-Target.ref.upper.fa
+    output: ../TargetSeq_BED_sample_lib/HEK2-On-Target.ref.upper.fa.fai
+    jobid: 69
+    reason: Missing output files: ../TargetSeq_BED_sample_lib/HEK2-On-Target.ref.upper.fa.fai; Input files updated by another job: ../TargetSeq_BED_sample_lib/HEK2-On-Target.ref.upper.fa
+    wildcards: sample=HEK2-On-Target
+
+
+        /home/zhaohuanan/miniconda3/envs/snakepipes_cutadapt-STARmapping-FPKM-sortBAM/bin/samtools faidx ../TargetSeq_BED_sample_lib/HEK2-On-Target.ref.upper.fa
+        
+
+[Fri Oct 16 14:53:52 2020]
+rule bwa_idex:
+    input: ../TargetSeq_BED_sample_lib/HEK2-On-Target.ref.upper.fa
+    output: ../TargetSeq_BED_sample_lib/HEK2-On-Target.ref.upper.fa.amb, ../TargetSeq_BED_sample_lib/HEK2-On-Target.ref.upper.fa.ann, ../TargetSeq_BED_sample_lib/HEK2-On-Target.ref.upper.fa.bwt, ../TargetSeq_BED_sample_lib/HEK2-On-Target.ref.upper.fa.pac, ../TargetSeq_BED_sample_lib/HEK2-On-Target.ref.upper.fa.sa
+    jobid: 91
+    reason: Missing output files: ../TargetSeq_BED_sample_lib/HEK2-On-Target.ref.upper.fa.ann, ../TargetSeq_BED_sample_lib/HEK2-On-Target.ref.upper.fa.pac, ../TargetSeq_BED_sample_lib/HEK2-On-Target.ref.upper.fa.bwt, ../TargetSeq_BED_sample_lib/HEK2-On-Target.ref.upper.fa.sa, ../TargetSeq_BED_sample_lib/HEK2-On-Target.ref.upper.fa.amb; Input files updated by another job: ../TargetSeq_BED_sample_lib/HEK2-On-Target.ref.upper.fa
+    wildcards: sample=HEK2-On-Target
+
+
+        /home/zhaohuanan/miniconda3/envs/snakepipes_target-seq-from-table-to-plot/bin/bwa index ../TargetSeq_BED_sample_lib/HEK2-On-Target.ref.upper.fa
+        
+[Fri Oct 16 14:53:52 2020]
+Finished job 71.
+89 of 111 steps (80%) done
+[Fri Oct 16 14:53:52 2020]
+Finished job 56.
+90 of 111 steps (81%) done
+
+[Fri Oct 16 14:53:52 2020]
+rule faidx:
+    input: ../TargetSeq_BED_sample_lib/MTND6P4-N6.ref.upper.fa
+    output: ../TargetSeq_BED_sample_lib/MTND6P4-N6.ref.upper.fa.fai
+    jobid: 78
+    reason: Missing output files: ../TargetSeq_BED_sample_lib/MTND6P4-N6.ref.upper.fa.fai; Input files updated by another job: ../TargetSeq_BED_sample_lib/MTND6P4-N6.ref.upper.fa
+    wildcards: sample=MTND6P4-N6
+
+
+        /home/zhaohuanan/miniconda3/envs/snakepipes_cutadapt-STARmapping-FPKM-sortBAM/bin/samtools faidx ../TargetSeq_BED_sample_lib/MTND6P4-N6.ref.upper.fa
+        
+
+[Fri Oct 16 14:53:52 2020]
+rule bwa_idex:
+    input: ../TargetSeq_BED_sample_lib/MTND6P4-N6.ref.upper.fa
+    output: ../TargetSeq_BED_sample_lib/MTND6P4-N6.ref.upper.fa.amb, ../TargetSeq_BED_sample_lib/MTND6P4-N6.ref.upper.fa.ann, ../TargetSeq_BED_sample_lib/MTND6P4-N6.ref.upper.fa.bwt, ../TargetSeq_BED_sample_lib/MTND6P4-N6.ref.upper.fa.pac, ../TargetSeq_BED_sample_lib/MTND6P4-N6.ref.upper.fa.sa
+    jobid: 100
+    reason: Missing output files: ../TargetSeq_BED_sample_lib/MTND6P4-N6.ref.upper.fa.bwt, ../TargetSeq_BED_sample_lib/MTND6P4-N6.ref.upper.fa.sa, ../TargetSeq_BED_sample_lib/MTND6P4-N6.ref.upper.fa.amb, ../TargetSeq_BED_sample_lib/MTND6P4-N6.ref.upper.fa.ann, ../TargetSeq_BED_sample_lib/MTND6P4-N6.ref.upper.fa.pac; Input files updated by another job: ../TargetSeq_BED_sample_lib/MTND6P4-N6.ref.upper.fa
+    wildcards: sample=MTND6P4-N6
+
+
+        /home/zhaohuanan/miniconda3/envs/snakepipes_target-seq-from-table-to-plot/bin/bwa index ../TargetSeq_BED_sample_lib/MTND6P4-N6.ref.upper.fa
+        
+[Fri Oct 16 14:53:52 2020]
+Finished job 90.
+91 of 111 steps (82%) done
+[Fri Oct 16 14:53:52 2020]
+Finished job 72.
+92 of 111 steps (83%) done
+[Fri Oct 16 14:53:52 2020]
+Finished job 77.
+93 of 111 steps (84%) done
+[Fri Oct 16 14:53:52 2020]
+Finished job 103.
+94 of 111 steps (85%) done
+[Fri Oct 16 14:53:52 2020]
+Finished job 69.
+95 of 111 steps (86%) done
+[Fri Oct 16 14:53:52 2020]
+Finished job 107.
+96 of 111 steps (86%) done
+[Fri Oct 16 14:53:52 2020]
+Finished job 78.
+97 of 111 steps (87%) done
+[Fri Oct 16 14:53:52 2020]
+Finished job 98.
+98 of 111 steps (88%) done
+[Fri Oct 16 14:53:52 2020]
+Finished job 110.
+99 of 111 steps (89%) done
+[Fri Oct 16 14:53:52 2020]
+Finished job 108.
+100 of 111 steps (90%) done
+[Fri Oct 16 14:53:52 2020]
+Finished job 106.
+101 of 111 steps (91%) done
+[Fri Oct 16 14:53:52 2020]
+Finished job 104.
+102 of 111 steps (92%) done
+[Fri Oct 16 14:53:52 2020]
+Finished job 92.
+103 of 111 steps (93%) done
+[Fri Oct 16 14:53:52 2020]
+Finished job 89.
+104 of 111 steps (94%) done
+[Fri Oct 16 14:53:52 2020]
+Finished job 105.
+105 of 111 steps (95%) done
+[Fri Oct 16 14:53:53 2020]
+Finished job 99.
+106 of 111 steps (95%) done
+[Fri Oct 16 14:53:53 2020]
+Finished job 93.
+107 of 111 steps (96%) done
+[Fri Oct 16 14:53:53 2020]
+Finished job 94.
+108 of 111 steps (97%) done
+[Fri Oct 16 14:53:53 2020]
+Finished job 91.
+109 of 111 steps (98%) done
+[Fri Oct 16 14:53:53 2020]
+Finished job 100.
+110 of 111 steps (99%) done
+
+[Fri Oct 16 14:53:53 2020]
+localrule all:
+    input: ../TargetSeq_BED_sample_lib/ABE-Site-7-On.bed, ../TargetSeq_BED_sample_lib/EMX1-2-On.bed, ../TargetSeq_BED_sample_lib/HEK2-On-Target.bed, ../TargetSeq_BED_sample_lib/HEK4-Guideseq-2.bed, ../TargetSeq_BED_sample_lib/HEK4-Guideseq-3.bed, ../TargetSeq_BED_sample_lib/HEK4-Guideseq-4.bed, ../TargetSeq_BED_sample_lib/HEK4-Guideseq-5.bed, ../TargetSeq_BED_sample_lib/HEK4-On-Target.bed, ../TargetSeq_BED_sample_lib/HEK5-On-Target.bed, ../TargetSeq_BED_sample_lib/MTND4P12-N4.bed, ../TargetSeq_BED_sample_lib/MTND5P11-N5.1.bed, ../TargetSeq_BED_sample_lib/MTND6P4-N6.bed, ../TargetSeq_BED_sample_lib/PP2-On-Target.bed, ../TargetSeq_BED_sample_lib/PP6-On-Target.bed, ../TargetSeq_BED_sample_lib/RNF2-ON-Target.bed, ../TargetSeq_BED_sample_lib/VEGFA-Off-Target-2.bed, ../TargetSeq_BED_sample_lib/VEGFA-Off-Target-3.bed, ../TargetSeq_BED_sample_lib/VEGFA-Off-Target-6.bed, ../TargetSeq_BED_sample_lib/VEGFA-Off-Target-7.bed, ../TargetSeq_BED_sample_lib/VEGFA-OffNo-GDNo-08.bed, ../TargetSeq_BED_sample_lib/VEGFA-OffNo-GDNo-12.bed, ../TargetSeq_BED_sample_lib/VEGFA-On-Target.bed, ../TargetSeq_BED_sample_lib/ABE-Site-7-On.ref.fa, ../TargetSeq_BED_sample_lib/EMX1-2-On.ref.fa, ../TargetSeq_BED_sample_lib/HEK2-On-Target.ref.fa, ../TargetSeq_BED_sample_lib/HEK4-Guideseq-2.ref.fa, ../TargetSeq_BED_sample_lib/HEK4-Guideseq-3.ref.fa, ../TargetSeq_BED_sample_lib/HEK4-Guideseq-4.ref.fa, ../TargetSeq_BED_sample_lib/HEK4-Guideseq-5.ref.fa, ../TargetSeq_BED_sample_lib/HEK4-On-Target.ref.fa, ../TargetSeq_BED_sample_lib/HEK5-On-Target.ref.fa, ../TargetSeq_BED_sample_lib/MTND4P12-N4.ref.fa, ../TargetSeq_BED_sample_lib/MTND5P11-N5.1.ref.fa, ../TargetSeq_BED_sample_lib/MTND6P4-N6.ref.fa, ../TargetSeq_BED_sample_lib/PP2-On-Target.ref.fa, ../TargetSeq_BED_sample_lib/PP6-On-Target.ref.fa, ../TargetSeq_BED_sample_lib/RNF2-ON-Target.ref.fa, ../TargetSeq_BED_sample_lib/VEGFA-Off-Target-2.ref.fa, ../TargetSeq_BED_sample_lib/VEGFA-Off-Target-3.ref.fa, ../TargetSeq_BED_sample_lib/VEGFA-Off-Target-6.ref.fa, ../TargetSeq_BED_sample_lib/VEGFA-Off-Target-7.ref.fa, ../TargetSeq_BED_sample_lib/VEGFA-OffNo-GDNo-08.ref.fa, ../TargetSeq_BED_sample_lib/VEGFA-OffNo-GDNo-12.ref.fa, ../TargetSeq_BED_sample_lib/VEGFA-On-Target.ref.fa, ../TargetSeq_BED_sample_lib/ABE-Site-7-On.ref.upper.fa, ../TargetSeq_BED_sample_lib/EMX1-2-On.ref.upper.fa, ../TargetSeq_BED_sample_lib/HEK2-On-Target.ref.upper.fa, ../TargetSeq_BED_sample_lib/HEK4-Guideseq-2.ref.upper.fa, ../TargetSeq_BED_sample_lib/HEK4-Guideseq-3.ref.upper.fa, ../TargetSeq_BED_sample_lib/HEK4-Guideseq-4.ref.upper.fa, ../TargetSeq_BED_sample_lib/HEK4-Guideseq-5.ref.upper.fa, ../TargetSeq_BED_sample_lib/HEK4-On-Target.ref.upper.fa, ../TargetSeq_BED_sample_lib/HEK5-On-Target.ref.upper.fa, ../TargetSeq_BED_sample_lib/MTND4P12-N4.ref.upper.fa, ../TargetSeq_BED_sample_lib/MTND5P11-N5.1.ref.upper.fa, ../TargetSeq_BED_sample_lib/MTND6P4-N6.ref.upper.fa, ../TargetSeq_BED_sample_lib/PP2-On-Target.ref.upper.fa, ../TargetSeq_BED_sample_lib/PP6-On-Target.ref.upper.fa, ../TargetSeq_BED_sample_lib/RNF2-ON-Target.ref.upper.fa, ../TargetSeq_BED_sample_lib/VEGFA-Off-Target-2.ref.upper.fa, ../TargetSeq_BED_sample_lib/VEGFA-Off-Target-3.ref.upper.fa, ../TargetSeq_BED_sample_lib/VEGFA-Off-Target-6.ref.upper.fa, ../TargetSeq_BED_sample_lib/VEGFA-Off-Target-7.ref.upper.fa, ../TargetSeq_BED_sample_lib/VEGFA-OffNo-GDNo-08.ref.upper.fa, ../TargetSeq_BED_sample_lib/VEGFA-OffNo-GDNo-12.ref.upper.fa, ../TargetSeq_BED_sample_lib/VEGFA-On-Target.ref.upper.fa, ../TargetSeq_BED_sample_lib/ABE-Site-7-On.ref.upper.fa.fai, ../TargetSeq_BED_sample_lib/EMX1-2-On.ref.upper.fa.fai, ../TargetSeq_BED_sample_lib/HEK2-On-Target.ref.upper.fa.fai, ../TargetSeq_BED_sample_lib/HEK4-Guideseq-2.ref.upper.fa.fai, ../TargetSeq_BED_sample_lib/HEK4-Guideseq-3.ref.upper.fa.fai, ../TargetSeq_BED_sample_lib/HEK4-Guideseq-4.ref.upper.fa.fai, ../TargetSeq_BED_sample_lib/HEK4-Guideseq-5.ref.upper.fa.fai, ../TargetSeq_BED_sample_lib/HEK4-On-Target.ref.upper.fa.fai, ../TargetSeq_BED_sample_lib/HEK5-On-Target.ref.upper.fa.fai, ../TargetSeq_BED_sample_lib/MTND4P12-N4.ref.upper.fa.fai, ../TargetSeq_BED_sample_lib/MTND5P11-N5.1.ref.upper.fa.fai, ../TargetSeq_BED_sample_lib/MTND6P4-N6.ref.upper.fa.fai, ../TargetSeq_BED_sample_lib/PP2-On-Target.ref.upper.fa.fai, ../TargetSeq_BED_sample_lib/PP6-On-Target.ref.upper.fa.fai, ../TargetSeq_BED_sample_lib/RNF2-ON-Target.ref.upper.fa.fai, ../TargetSeq_BED_sample_lib/VEGFA-Off-Target-2.ref.upper.fa.fai, ../TargetSeq_BED_sample_lib/VEGFA-Off-Target-3.ref.upper.fa.fai, ../TargetSeq_BED_sample_lib/VEGFA-Off-Target-6.ref.upper.fa.fai, ../TargetSeq_BED_sample_lib/VEGFA-Off-Target-7.ref.upper.fa.fai, ../TargetSeq_BED_sample_lib/VEGFA-OffNo-GDNo-08.ref.upper.fa.fai, ../TargetSeq_BED_sample_lib/VEGFA-OffNo-GDNo-12.ref.upper.fa.fai, ../TargetSeq_BED_sample_lib/VEGFA-On-Target.ref.upper.fa.fai, ../TargetSeq_BED_sample_lib/ABE-Site-7-On.ref.upper.fa.amb, ../TargetSeq_BED_sample_lib/EMX1-2-On.ref.upper.fa.amb, ../TargetSeq_BED_sample_lib/HEK2-On-Target.ref.upper.fa.amb, ../TargetSeq_BED_sample_lib/HEK4-Guideseq-2.ref.upper.fa.amb, ../TargetSeq_BED_sample_lib/HEK4-Guideseq-3.ref.upper.fa.amb, ../TargetSeq_BED_sample_lib/HEK4-Guideseq-4.ref.upper.fa.amb, ../TargetSeq_BED_sample_lib/HEK4-Guideseq-5.ref.upper.fa.amb, ../TargetSeq_BED_sample_lib/HEK4-On-Target.ref.upper.fa.amb, ../TargetSeq_BED_sample_lib/HEK5-On-Target.ref.upper.fa.amb, ../TargetSeq_BED_sample_lib/MTND4P12-N4.ref.upper.fa.amb, ../TargetSeq_BED_sample_lib/MTND5P11-N5.1.ref.upper.fa.amb, ../TargetSeq_BED_sample_lib/MTND6P4-N6.ref.upper.fa.amb, ../TargetSeq_BED_sample_lib/PP2-On-Target.ref.upper.fa.amb, ../TargetSeq_BED_sample_lib/PP6-On-Target.ref.upper.fa.amb, ../TargetSeq_BED_sample_lib/RNF2-ON-Target.ref.upper.fa.amb, ../TargetSeq_BED_sample_lib/VEGFA-Off-Target-2.ref.upper.fa.amb, ../TargetSeq_BED_sample_lib/VEGFA-Off-Target-3.ref.upper.fa.amb, ../TargetSeq_BED_sample_lib/VEGFA-Off-Target-6.ref.upper.fa.amb, ../TargetSeq_BED_sample_lib/VEGFA-Off-Target-7.ref.upper.fa.amb, ../TargetSeq_BED_sample_lib/VEGFA-OffNo-GDNo-08.ref.upper.fa.amb, ../TargetSeq_BED_sample_lib/VEGFA-OffNo-GDNo-12.ref.upper.fa.amb, ../TargetSeq_BED_sample_lib/VEGFA-On-Target.ref.upper.fa.amb, ../TargetSeq_BED_sample_lib/ABE-Site-7-On.ref.upper.fa.ann, ../TargetSeq_BED_sample_lib/EMX1-2-On.ref.upper.fa.ann, ../TargetSeq_BED_sample_lib/HEK2-On-Target.ref.upper.fa.ann, ../TargetSeq_BED_sample_lib/HEK4-Guideseq-2.ref.upper.fa.ann, ../TargetSeq_BED_sample_lib/HEK4-Guideseq-3.ref.upper.fa.ann, ../TargetSeq_BED_sample_lib/HEK4-Guideseq-4.ref.upper.fa.ann, ../TargetSeq_BED_sample_lib/HEK4-Guideseq-5.ref.upper.fa.ann, ../TargetSeq_BED_sample_lib/HEK4-On-Target.ref.upper.fa.ann, ../TargetSeq_BED_sample_lib/HEK5-On-Target.ref.upper.fa.ann, ../TargetSeq_BED_sample_lib/MTND4P12-N4.ref.upper.fa.ann, ../TargetSeq_BED_sample_lib/MTND5P11-N5.1.ref.upper.fa.ann, ../TargetSeq_BED_sample_lib/MTND6P4-N6.ref.upper.fa.ann, ../TargetSeq_BED_sample_lib/PP2-On-Target.ref.upper.fa.ann, ../TargetSeq_BED_sample_lib/PP6-On-Target.ref.upper.fa.ann, ../TargetSeq_BED_sample_lib/RNF2-ON-Target.ref.upper.fa.ann, ../TargetSeq_BED_sample_lib/VEGFA-Off-Target-2.ref.upper.fa.ann, ../TargetSeq_BED_sample_lib/VEGFA-Off-Target-3.ref.upper.fa.ann, ../TargetSeq_BED_sample_lib/VEGFA-Off-Target-6.ref.upper.fa.ann, ../TargetSeq_BED_sample_lib/VEGFA-Off-Target-7.ref.upper.fa.ann, ../TargetSeq_BED_sample_lib/VEGFA-OffNo-GDNo-08.ref.upper.fa.ann, ../TargetSeq_BED_sample_lib/VEGFA-OffNo-GDNo-12.ref.upper.fa.ann, ../TargetSeq_BED_sample_lib/VEGFA-On-Target.ref.upper.fa.ann, ../TargetSeq_BED_sample_lib/ABE-Site-7-On.ref.upper.fa.bwt, ../TargetSeq_BED_sample_lib/EMX1-2-On.ref.upper.fa.bwt, ../TargetSeq_BED_sample_lib/HEK2-On-Target.ref.upper.fa.bwt, ../TargetSeq_BED_sample_lib/HEK4-Guideseq-2.ref.upper.fa.bwt, ../TargetSeq_BED_sample_lib/HEK4-Guideseq-3.ref.upper.fa.bwt, ../TargetSeq_BED_sample_lib/HEK4-Guideseq-4.ref.upper.fa.bwt, ../TargetSeq_BED_sample_lib/HEK4-Guideseq-5.ref.upper.fa.bwt, ../TargetSeq_BED_sample_lib/HEK4-On-Target.ref.upper.fa.bwt, ../TargetSeq_BED_sample_lib/HEK5-On-Target.ref.upper.fa.bwt, ../TargetSeq_BED_sample_lib/MTND4P12-N4.ref.upper.fa.bwt, ../TargetSeq_BED_sample_lib/MTND5P11-N5.1.ref.upper.fa.bwt, ../TargetSeq_BED_sample_lib/MTND6P4-N6.ref.upper.fa.bwt, ../TargetSeq_BED_sample_lib/PP2-On-Target.ref.upper.fa.bwt, ../TargetSeq_BED_sample_lib/PP6-On-Target.ref.upper.fa.bwt, ../TargetSeq_BED_sample_lib/RNF2-ON-Target.ref.upper.fa.bwt, ../TargetSeq_BED_sample_lib/VEGFA-Off-Target-2.ref.upper.fa.bwt, ../TargetSeq_BED_sample_lib/VEGFA-Off-Target-3.ref.upper.fa.bwt, ../TargetSeq_BED_sample_lib/VEGFA-Off-Target-6.ref.upper.fa.bwt, ../TargetSeq_BED_sample_lib/VEGFA-Off-Target-7.ref.upper.fa.bwt, ../TargetSeq_BED_sample_lib/VEGFA-OffNo-GDNo-08.ref.upper.fa.bwt, ../TargetSeq_BED_sample_lib/VEGFA-OffNo-GDNo-12.ref.upper.fa.bwt, ../TargetSeq_BED_sample_lib/VEGFA-On-Target.ref.upper.fa.bwt, ../TargetSeq_BED_sample_lib/ABE-Site-7-On.ref.upper.fa.pac, ../TargetSeq_BED_sample_lib/EMX1-2-On.ref.upper.fa.pac, ../TargetSeq_BED_sample_lib/HEK2-On-Target.ref.upper.fa.pac, ../TargetSeq_BED_sample_lib/HEK4-Guideseq-2.ref.upper.fa.pac, ../TargetSeq_BED_sample_lib/HEK4-Guideseq-3.ref.upper.fa.pac, ../TargetSeq_BED_sample_lib/HEK4-Guideseq-4.ref.upper.fa.pac, ../TargetSeq_BED_sample_lib/HEK4-Guideseq-5.ref.upper.fa.pac, ../TargetSeq_BED_sample_lib/HEK4-On-Target.ref.upper.fa.pac, ../TargetSeq_BED_sample_lib/HEK5-On-Target.ref.upper.fa.pac, ../TargetSeq_BED_sample_lib/MTND4P12-N4.ref.upper.fa.pac, ../TargetSeq_BED_sample_lib/MTND5P11-N5.1.ref.upper.fa.pac, ../TargetSeq_BED_sample_lib/MTND6P4-N6.ref.upper.fa.pac, ../TargetSeq_BED_sample_lib/PP2-On-Target.ref.upper.fa.pac, ../TargetSeq_BED_sample_lib/PP6-On-Target.ref.upper.fa.pac, ../TargetSeq_BED_sample_lib/RNF2-ON-Target.ref.upper.fa.pac, ../TargetSeq_BED_sample_lib/VEGFA-Off-Target-2.ref.upper.fa.pac, ../TargetSeq_BED_sample_lib/VEGFA-Off-Target-3.ref.upper.fa.pac, ../TargetSeq_BED_sample_lib/VEGFA-Off-Target-6.ref.upper.fa.pac, ../TargetSeq_BED_sample_lib/VEGFA-Off-Target-7.ref.upper.fa.pac, ../TargetSeq_BED_sample_lib/VEGFA-OffNo-GDNo-08.ref.upper.fa.pac, ../TargetSeq_BED_sample_lib/VEGFA-OffNo-GDNo-12.ref.upper.fa.pac, ../TargetSeq_BED_sample_lib/VEGFA-On-Target.ref.upper.fa.pac, ../TargetSeq_BED_sample_lib/ABE-Site-7-On.ref.upper.fa.sa, ../TargetSeq_BED_sample_lib/EMX1-2-On.ref.upper.fa.sa, ../TargetSeq_BED_sample_lib/HEK2-On-Target.ref.upper.fa.sa, ../TargetSeq_BED_sample_lib/HEK4-Guideseq-2.ref.upper.fa.sa, ../TargetSeq_BED_sample_lib/HEK4-Guideseq-3.ref.upper.fa.sa, ../TargetSeq_BED_sample_lib/HEK4-Guideseq-4.ref.upper.fa.sa, ../TargetSeq_BED_sample_lib/HEK4-Guideseq-5.ref.upper.fa.sa, ../TargetSeq_BED_sample_lib/HEK4-On-Target.ref.upper.fa.sa, ../TargetSeq_BED_sample_lib/HEK5-On-Target.ref.upper.fa.sa, ../TargetSeq_BED_sample_lib/MTND4P12-N4.ref.upper.fa.sa, ../TargetSeq_BED_sample_lib/MTND5P11-N5.1.ref.upper.fa.sa, ../TargetSeq_BED_sample_lib/MTND6P4-N6.ref.upper.fa.sa, ../TargetSeq_BED_sample_lib/PP2-On-Target.ref.upper.fa.sa, ../TargetSeq_BED_sample_lib/PP6-On-Target.ref.upper.fa.sa, ../TargetSeq_BED_sample_lib/RNF2-ON-Target.ref.upper.fa.sa, ../TargetSeq_BED_sample_lib/VEGFA-Off-Target-2.ref.upper.fa.sa, ../TargetSeq_BED_sample_lib/VEGFA-Off-Target-3.ref.upper.fa.sa, ../TargetSeq_BED_sample_lib/VEGFA-Off-Target-6.ref.upper.fa.sa, ../TargetSeq_BED_sample_lib/VEGFA-Off-Target-7.ref.upper.fa.sa, ../TargetSeq_BED_sample_lib/VEGFA-OffNo-GDNo-08.ref.upper.fa.sa, ../TargetSeq_BED_sample_lib/VEGFA-OffNo-GDNo-12.ref.upper.fa.sa, ../TargetSeq_BED_sample_lib/VEGFA-On-Target.ref.upper.fa.sa
+    jobid: 0
+    reason: Input files updated by another job: ../TargetSeq_BED_sample_lib/VEGFA-Off-Target-7.ref.upper.fa.fai, ../TargetSeq_BED_sample_lib/MTND4P12-N4.ref.upper.fa.amb, ../TargetSeq_BED_sample_lib/HEK2-On-Target.ref.fa, ../TargetSeq_BED_sample_lib/VEGFA-OffNo-GDNo-08.ref.upper.fa.ann, ../TargetSeq_BED_sample_lib/HEK2-On-Target.ref.upper.fa.pac, ../TargetSeq_BED_sample_lib/PP2-On-Target.ref.upper.fa.sa, ../TargetSeq_BED_sample_lib/EMX1-2-On.bed, ../TargetSeq_BED_sample_lib/PP6-On-Target.bed, ../TargetSeq_BED_sample_lib/HEK4-Guideseq-4.ref.upper.fa.fai, ../TargetSeq_BED_sample_lib/RNF2-ON-Target.ref.upper.fa.pac, ../TargetSeq_BED_sample_lib/HEK4-Guideseq-4.ref.upper.fa.amb, ../TargetSeq_BED_sample_lib/MTND6P4-N6.ref.upper.fa.ann, ../TargetSeq_BED_sample_lib/MTND6P4-N6.ref.upper.fa, ../TargetSeq_BED_sample_lib/VEGFA-Off-Target-3.bed, ../TargetSeq_BED_sample_lib/HEK4-Guideseq-2.ref.upper.fa.fai, ../TargetSeq_BED_sample_lib/HEK4-Guideseq-2.ref.upper.fa.sa, ../TargetSeq_BED_sample_lib/HEK2-On-Target.ref.upper.fa, ../TargetSeq_BED_sample_lib/HEK4-On-Target.ref.fa, ../TargetSeq_BED_sample_lib/EMX1-2-On.ref.upper.fa, ../TargetSeq_BED_sample_lib/VEGFA-On-Target.ref.upper.fa.pac, ../TargetSeq_BED_sample_lib/VEGFA-OffNo-GDNo-08.bed, ../TargetSeq_BED_sample_lib/HEK4-Guideseq-5.ref.upper.fa, ../TargetSeq_BED_sample_lib/VEGFA-On-Target.ref.upper.fa.fai, ../TargetSeq_BED_sample_lib/ABE-Site-7-On.ref.upper.fa.amb, ../TargetSeq_BED_sample_lib/EMX1-2-On.ref.upper.fa.amb, ../TargetSeq_BED_sample_lib/VEGFA-Off-Target-2.ref.upper.fa.pac, ../TargetSeq_BED_sample_lib/HEK4-Guideseq-2.ref.upper.fa.bwt, ../TargetSeq_BED_sample_lib/VEGFA-Off-Target-2.ref.fa, ../TargetSeq_BED_sample_lib/MTND4P12-N4.ref.upper.fa.sa, ../TargetSeq_BED_sample_lib/HEK4-On-Target.bed, ../TargetSeq_BED_sample_lib/VEGFA-Off-Target-2.ref.upper.fa.fai, ../TargetSeq_BED_sample_lib/VEGFA-On-Target.bed, ../TargetSeq_BED_sample_lib/PP6-On-Target.ref.upper.fa.amb, ../TargetSeq_BED_sample_lib/VEGFA-Off-Target-7.bed, ../TargetSeq_BED_sample_lib/HEK5-On-Target.ref.upper.fa.pac, ../TargetSeq_BED_sample_lib/ABE-Site-7-On.ref.upper.fa.fai, ../TargetSeq_BED_sample_lib/RNF2-ON-Target.ref.upper.fa, ../TargetSeq_BED_sample_lib/VEGFA-OffNo-GDNo-12.bed, ../TargetSeq_BED_sample_lib/VEGFA-Off-Target-7.ref.upper.fa.bwt, ../TargetSeq_BED_sample_lib/MTND4P12-N4.ref.upper.fa.bwt, ../TargetSeq_BED_sample_lib/HEK4-Guideseq-2.ref.fa, ../TargetSeq_BED_sample_lib/PP2-On-Target.ref.upper.fa.amb, ../TargetSeq_BED_sample_lib/MTND5P11-N5.1.ref.upper.fa.ann, ../TargetSeq_BED_sample_lib/MTND4P12-N4.bed, ../TargetSeq_BED_sample_lib/VEGFA-Off-Target-3.ref.upper.fa.pac, ../TargetSeq_BED_sample_lib/HEK2-On-Target.bed, ../TargetSeq_BED_sample_lib/MTND5P11-N5.1.ref.upper.fa.bwt, ../TargetSeq_BED_sample_lib/HEK4-Guideseq-3.ref.upper.fa.pac, ../TargetSeq_BED_sample_lib/VEGFA-On-Target.ref.upper.fa.amb, ../TargetSeq_BED_sample_lib/ABE-Site-7-On.ref.upper.fa, ../TargetSeq_BED_sample_lib/HEK4-Guideseq-4.ref.upper.fa.ann, ../TargetSeq_BED_sample_lib/VEGFA-OffNo-GDNo-08.ref.upper.fa.fai, ../TargetSeq_BED_sample_lib/HEK5-On-Target.ref.fa, ../TargetSeq_BED_sample_lib/MTND5P11-N5.1.ref.upper.fa.pac, ../TargetSeq_BED_sample_lib/MTND4P12-N4.ref.upper.fa.fai, ../TargetSeq_BED_sample_lib/HEK5-On-Target.ref.upper.fa.amb, ../TargetSeq_BED_sample_lib/HEK4-Guideseq-3.ref.upper.fa.sa, ../TargetSeq_BED_sample_lib/HEK2-On-Target.ref.upper.fa.amb, ../TargetSeq_BED_sample_lib/HEK4-Guideseq-2.bed, ../TargetSeq_BED_sample_lib/VEGFA-Off-Target-2.ref.upper.fa.sa, ../TargetSeq_BED_sample_lib/HEK2-On-Target.ref.upper.fa.ann, ../TargetSeq_BED_sample_lib/HEK4-Guideseq-3.ref.upper.fa.bwt, ../TargetSeq_BED_sample_lib/VEGFA-OffNo-GDNo-12.ref.upper.fa.bwt, ../TargetSeq_BED_sample_lib/HEK4-Guideseq-3.ref.fa, ../TargetSeq_BED_sample_lib/HEK4-Guideseq-4.bed, ../TargetSeq_BED_sample_lib/VEGFA-On-Target.ref.upper.fa.bwt, ../TargetSeq_BED_sample_lib/MTND6P4-N6.bed, ../TargetSeq_BED_sample_lib/MTND4P12-N4.ref.fa, ../TargetSeq_BED_sample_lib/PP6-On-Target.ref.upper.fa.fai, ../TargetSeq_BED_sample_lib/RNF2-ON-Target.ref.upper.fa.amb, ../TargetSeq_BED_sample_lib/PP6-On-Target.ref.upper.fa.ann, ../TargetSeq_BED_sample_lib/HEK4-Guideseq-5.bed, ../TargetSeq_BED_sample_lib/PP2-On-Target.ref.upper.fa.fai, ../TargetSeq_BED_sample_lib/VEGFA-OffNo-GDNo-12.ref.upper.fa.ann, ../TargetSeq_BED_sample_lib/MTND5P11-N5.1.bed, ../TargetSeq_BED_sample_lib/PP2-On-Target.ref.upper.fa, ../TargetSeq_BED_sample_lib/MTND4P12-N4.ref.upper.fa, ../TargetSeq_BED_sample_lib/HEK4-Guideseq-2.ref.upper.fa.pac, ../TargetSeq_BED_sample_lib/VEGFA-Off-Target-3.ref.upper.fa.sa, ../TargetSeq_BED_sample_lib/HEK4-Guideseq-4.ref.upper.fa.pac, ../TargetSeq_BED_sample_lib/HEK4-On-Target.ref.upper.fa.pac, ../TargetSeq_BED_sample_lib/HEK4-On-Target.ref.upper.fa, ../TargetSeq_BED_sample_lib/PP2-On-Target.ref.fa, ../TargetSeq_BED_sample_lib/HEK4-Guideseq-3.ref.upper.fa.amb, ../TargetSeq_BED_sample_lib/HEK4-Guideseq-2.ref.upper.fa, ../TargetSeq_BED_sample_lib/VEGFA-Off-Target-7.ref.upper.fa.amb, ../TargetSeq_BED_sample_lib/VEGFA-Off-Target-3.ref.upper.fa, ../TargetSeq_BED_sample_lib/VEGFA-Off-Target-3.ref.upper.fa.bwt, ../TargetSeq_BED_sample_lib/VEGFA-OffNo-GDNo-08.ref.upper.fa.pac, ../TargetSeq_BED_sample_lib/VEGFA-Off-Target-3.ref.fa, ../TargetSeq_BED_sample_lib/VEGFA-Off-Target-6.ref.upper.fa.ann, ../TargetSeq_BED_sample_lib/ABE-Site-7-On.ref.upper.fa.pac, ../TargetSeq_BED_sample_lib/MTND6P4-N6.ref.upper.fa.fai, ../TargetSeq_BED_sample_lib/ABE-Site-7-On.ref.fa, ../TargetSeq_BED_sample_lib/PP6-On-Target.ref.upper.fa.sa, ../TargetSeq_BED_sample_lib/VEGFA-On-Target.ref.upper.fa, ../TargetSeq_BED_sample_lib/VEGFA-Off-Target-7.ref.upper.fa.ann, ../TargetSeq_BED_sample_lib/HEK2-On-Target.ref.upper.fa.fai, ../TargetSeq_BED_sample_lib/MTND5P11-N5.1.ref.upper.fa, ../TargetSeq_BED_sample_lib/EMX1-2-On.ref.fa, ../TargetSeq_BED_sample_lib/HEK4-Guideseq-5.ref.upper.fa.sa, ../TargetSeq_BED_sample_lib/HEK5-On-Target.ref.upper.fa.sa, ../TargetSeq_BED_sample_lib/HEK4-Guideseq-4.ref.fa, ../TargetSeq_BED_sample_lib/HEK2-On-Target.ref.upper.fa.bwt, ../TargetSeq_BED_sample_lib/MTND6P4-N6.ref.upper.fa.sa, ../TargetSeq_BED_sample_lib/HEK4-On-Target.ref.upper.fa.fai, ../TargetSeq_BED_sample_lib/VEGFA-OffNo-GDNo-12.ref.upper.fa.sa, ../TargetSeq_BED_sample_lib/VEGFA-Off-Target-6.ref.upper.fa.amb, ../TargetSeq_BED_sample_lib/HEK4-Guideseq-2.ref.upper.fa.amb, ../TargetSeq_BED_sample_lib/HEK5-On-Target.ref.upper.fa, ../TargetSeq_BED_sample_lib/VEGFA-Off-Target-6.bed, ../TargetSeq_BED_sample_lib/VEGFA-OffNo-GDNo-12.ref.upper.fa.pac, ../TargetSeq_BED_sample_lib/VEGFA-Off-Target-6.ref.upper.fa.fai, ../TargetSeq_BED_sample_lib/HEK4-Guideseq-5.ref.upper.fa.amb, ../TargetSeq_BED_sample_lib/VEGFA-Off-Target-2.ref.upper.fa.bwt, ../TargetSeq_BED_sample_lib/HEK4-Guideseq-3.ref.upper.fa.ann, ../TargetSeq_BED_sample_lib/VEGFA-On-Target.ref.upper.fa.ann, ../TargetSeq_BED_sample_lib/PP2-On-Target.ref.upper.fa.bwt, ../TargetSeq_BED_sample_lib/VEGFA-Off-Target-6.ref.upper.fa.bwt, ../TargetSeq_BED_sample_lib/HEK4-Guideseq-4.ref.upper.fa.sa, ../TargetSeq_BED_sample_lib/HEK5-On-Target.ref.upper.fa.bwt, ../TargetSeq_BED_sample_lib/MTND5P11-N5.1.ref.upper.fa.sa, ../TargetSeq_BED_sample_lib/VEGFA-Off-Target-3.ref.upper.fa.fai, ../TargetSeq_BED_sample_lib/EMX1-2-On.ref.upper.fa.pac, ../TargetSeq_BED_sample_lib/PP6-On-Target.ref.fa, ../TargetSeq_BED_sample_lib/RNF2-ON-Target.bed, ../TargetSeq_BED_sample_lib/VEGFA-Off-Target-2.ref.upper.fa, ../TargetSeq_BED_sample_lib/VEGFA-OffNo-GDNo-08.ref.upper.fa.sa, ../TargetSeq_BED_sample_lib/VEGFA-Off-Target-6.ref.fa, ../TargetSeq_BED_sample_lib/HEK4-Guideseq-3.bed, ../TargetSeq_BED_sample_lib/VEGFA-OffNo-GDNo-08.ref.upper.fa.amb, ../TargetSeq_BED_sample_lib/VEGFA-Off-Target-2.ref.upper.fa.ann, ../TargetSeq_BED_sample_lib/PP2-On-Target.ref.upper.fa.ann, ../TargetSeq_BED_sample_lib/PP2-On-Target.bed, ../TargetSeq_BED_sample_lib/ABE-Site-7-On.ref.upper.fa.bwt, ../TargetSeq_BED_sample_lib/EMX1-2-On.ref.upper.fa.ann, ../TargetSeq_BED_sample_lib/HEK4-Guideseq-5.ref.upper.fa.fai, ../TargetSeq_BED_sample_lib/MTND5P11-N5.1.ref.upper.fa.amb, ../TargetSeq_BED_sample_lib/ABE-Site-7-On.ref.upper.fa.ann, ../TargetSeq_BED_sample_lib/VEGFA-OffNo-GDNo-08.ref.fa, ../TargetSeq_BED_sample_lib/HEK4-On-Target.ref.upper.fa.ann, ../TargetSeq_BED_sample_lib/VEGFA-On-Target.ref.upper.fa.sa, ../TargetSeq_BED_sample_lib/MTND5P11-N5.1.ref.fa, ../TargetSeq_BED_sample_lib/HEK4-On-Target.ref.upper.fa.bwt, ../TargetSeq_BED_sample_lib/VEGFA-OffNo-GDNo-08.ref.upper.fa, ../TargetSeq_BED_sample_lib/RNF2-ON-Target.ref.upper.fa.sa, ../TargetSeq_BED_sample_lib/PP6-On-Target.ref.upper.fa.pac, ../TargetSeq_BED_sample_lib/VEGFA-OffNo-GDNo-08.ref.upper.fa.bwt, ../TargetSeq_BED_sample_lib/HEK4-Guideseq-4.ref.upper.fa.bwt, ../TargetSeq_BED_sample_lib/HEK4-Guideseq-3.ref.upper.fa, ../TargetSeq_BED_sample_lib/VEGFA-OffNo-GDNo-12.ref.upper.fa, ../TargetSeq_BED_sample_lib/MTND6P4-N6.ref.upper.fa.pac, ../TargetSeq_BED_sample_lib/PP6-On-Target.ref.upper.fa, ../TargetSeq_BED_sample_lib/EMX1-2-On.ref.upper.fa.bwt, ../TargetSeq_BED_sample_lib/HEK4-Guideseq-5.ref.fa, ../TargetSeq_BED_sample_lib/MTND6P4-N6.ref.fa, ../TargetSeq_BED_sample_lib/HEK4-Guideseq-3.ref.upper.fa.fai, ../TargetSeq_BED_sample_lib/HEK4-On-Target.ref.upper.fa.sa, ../TargetSeq_BED_sample_lib/HEK4-Guideseq-5.ref.upper.fa.pac, ../TargetSeq_BED_sample_lib/HEK5-On-Target.ref.upper.fa.fai, ../TargetSeq_BED_sample_lib/HEK4-Guideseq-4.ref.upper.fa, ../TargetSeq_BED_sample_lib/PP2-On-Target.ref.upper.fa.pac, ../TargetSeq_BED_sample_lib/EMX1-2-On.ref.upper.fa.sa, ../TargetSeq_BED_sample_lib/MTND5P11-N5.1.ref.upper.fa.fai, ../TargetSeq_BED_sample_lib/HEK5-On-Target.bed, ../TargetSeq_BED_sample_lib/RNF2-ON-Target.ref.fa, ../TargetSeq_BED_sample_lib/ABE-Site-7-On.ref.upper.fa.sa, ../TargetSeq_BED_sample_lib/VEGFA-Off-Target-2.ref.upper.fa.amb, ../TargetSeq_BED_sample_lib/HEK2-On-Target.ref.upper.fa.sa, ../TargetSeq_BED_sample_lib/RNF2-ON-Target.ref.upper.fa.bwt, ../TargetSeq_BED_sample_lib/MTND6P4-N6.ref.upper.fa.bwt, ../TargetSeq_BED_sample_lib/VEGFA-On-Target.ref.fa, ../TargetSeq_BED_sample_lib/VEGFA-OffNo-GDNo-12.ref.fa, ../TargetSeq_BED_sample_lib/VEGFA-OffNo-GDNo-12.ref.upper.fa.fai, ../TargetSeq_BED_sample_lib/VEGFA-Off-Target-7.ref.fa, ../TargetSeq_BED_sample_lib/VEGFA-Off-Target-7.ref.upper.fa, ../TargetSeq_BED_sample_lib/PP6-On-Target.ref.upper.fa.bwt, ../TargetSeq_BED_sample_lib/HEK4-Guideseq-5.ref.upper.fa.bwt, ../TargetSeq_BED_sample_lib/VEGFA-Off-Target-7.ref.upper.fa.pac, ../TargetSeq_BED_sample_lib/MTND4P12-N4.ref.upper.fa.ann, ../TargetSeq_BED_sample_lib/HEK5-On-Target.ref.upper.fa.ann, ../TargetSeq_BED_sample_lib/VEGFA-Off-Target-3.ref.upper.fa.ann, ../TargetSeq_BED_sample_lib/VEGFA-Off-Target-6.ref.upper.fa, ../TargetSeq_BED_sample_lib/HEK4-On-Target.ref.upper.fa.amb, ../TargetSeq_BED_sample_lib/RNF2-ON-Target.ref.upper.fa.ann, ../TargetSeq_BED_sample_lib/MTND4P12-N4.ref.upper.fa.pac, ../TargetSeq_BED_sample_lib/VEGFA-Off-Target-6.ref.upper.fa.sa, ../TargetSeq_BED_sample_lib/VEGFA-Off-Target-3.ref.upper.fa.amb, ../TargetSeq_BED_sample_lib/HEK4-Guideseq-2.ref.upper.fa.ann, ../TargetSeq_BED_sample_lib/VEGFA-Off-Target-2.bed, ../TargetSeq_BED_sample_lib/VEGFA-Off-Target-6.ref.upper.fa.pac, ../TargetSeq_BED_sample_lib/RNF2-ON-Target.ref.upper.fa.fai, ../TargetSeq_BED_sample_lib/MTND6P4-N6.ref.upper.fa.amb, ../TargetSeq_BED_sample_lib/VEGFA-OffNo-GDNo-12.ref.upper.fa.amb, ../TargetSeq_BED_sample_lib/EMX1-2-On.ref.upper.fa.fai, ../TargetSeq_BED_sample_lib/VEGFA-Off-Target-7.ref.upper.fa.sa, ../TargetSeq_BED_sample_lib/ABE-Site-7-On.bed, ../TargetSeq_BED_sample_lib/HEK4-Guideseq-5.ref.upper.fa.ann
+
+[Fri Oct 16 14:53:53 2020]
+Finished job 0.
+111 of 111 steps (100%) done
+Complete log: /gpfs/user/zhaohuanan/3.project/14.2020-10_1010_TargetSeq-GBE-DdCBE_recheck/snakepipes_target-seq-from-table-to-plot/.snakemake/log/2020-10-16T145350.862849.snakemake.log

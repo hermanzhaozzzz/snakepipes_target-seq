@@ -37,6 +37,7 @@ rule all:
     input:
         expand('../TargetSeq_BED_sample_lib/{sample}.bed',sample=SAMPLES),
         expand('../TargetSeq_BED_sample_lib/{sample}.ref.fa',sample=SAMPLES),
+        expand('../TargetSeq_BED_sample_lib/{sample}.ref.tmp.fa',sample=SAMPLES),
         expand('../TargetSeq_BED_sample_lib/{sample}.ref.upper.fa',sample=SAMPLES),
         expand('../TargetSeq_BED_sample_lib/{sample}.ref.upper.fa.fai',sample=SAMPLES),
         expand('../TargetSeq_BED_sample_lib/{sample}.ref.upper.fa.amb',sample=SAMPLES),
@@ -93,10 +94,21 @@ rule getfasta:
     input:
         '../TargetSeq_BED_sample_lib/{sample}.bed'
     output:
-        '../TargetSeq_BED_sample_lib/{sample}.ref.fa'
+        '../TargetSeq_BED_sample_lib/{sample}.ref.tmp.fa'
     shell:
         """
-        {BEDTOOLS} getfasta -s -bed {input} -fi {GENOME_HG38} > {output}
+        {BEDTOOLS} getfasta -nameOnly -s -bed {input} -fi {GENOME_HG38} > {output}
+        """
+rule rm_charater_fa:
+    input:
+        '../TargetSeq_BED_sample_lib/{sample}.ref.tmp.fa'
+    output:
+        '../TargetSeq_BED_sample_lib/{sample}.ref.fa'
+    params:
+        awk = """'FNR==1{print substr($1, 1, length($1)-3);} FNR==2{print;}'"""
+    shell:
+        """
+        awk {params.awk} {input} > {output}
         """
 rule letter2LETTER:
     input:
