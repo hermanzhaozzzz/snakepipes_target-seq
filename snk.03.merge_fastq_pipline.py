@@ -7,17 +7,21 @@
 ########################################################################
 # run on abyss
 PYTHON = "/home/zhaohuanan/miniconda3/envs/py27/bin/python"
-PRIMER_INFO = "./primer_table/primer_info.txt"
 
 
 
-CUTOFF = ["3"]
+
+PRIMER_INFO = "./primer_table/all.txt"
+
+
+
+CUTOFF = ["10"]
 
 LIBS = [
-    "293T-HEK4-BE4-rep1",
-    "293T-HEK4-BE4-rep2",
-    "MCF7-HEK4-BE4-rep1",
-    "MCF7-HEK4-BE4-rep2"
+    'GBE-33A',
+    'GBE-M2',
+    'GBEmini-33A',
+    'GBEmini-M2'
 ]
 
 
@@ -36,8 +40,9 @@ rule MergeFastq:
         out_dir = "../TargetSeq-{lib}/cutoff_{cutoff}",
         cutoff = "{cutoff}"
     shell:
+#         """
+#         srun -T 24 \
         """
-         srun -T 24 \
         {PYTHON} ./program/target_seq_merge_fq_V03.py \
         -i {input[0]} \
         -p {PRIMER_INFO} \
@@ -45,3 +50,4 @@ rule MergeFastq:
         -r {output} \
         --MinMergeReadNumCutoff {params.cutoff}  > {log} 2>&1
         """
+

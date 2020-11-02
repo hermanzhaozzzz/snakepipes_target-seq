@@ -10,46 +10,45 @@
 CUTADAPT = "/home/zhaohuanan/miniconda3/envs/cutadapt/bin/cutadapt"
 BWA = "/home/zhaohuanan/miniconda3/envs/snakepipes_target-seq-from-table-to-plot/bin/bwa"
 SAMTOOLS = "/home/zhaohuanan/miniconda3/envs/snakepipes_cutadapt-STARmapping-FPKM-sortBAM/bin/samtools"
-BEDTOOLS = "/home/zhaohuanan/miniconda3/envs/snakepipes_target-seq-from-table-to-plot/bin/bedtools"
-SAMCLIP = "/home/zhaohuanan/miniconda3/envs/snakepipes_target-seq-from-table-to-plot/bin/samclip"
-PYTHON = "/home/zhaohuanan/miniconda3/envs/snakepipes_target-seq-from-table-to-plot/bin/python"
+BEDTOOLS = "/home/zhaohuanan/miniconda3/envs/snakepipes_target-seq-from-table-to-plot/bin/bedtools" # ok
+SAMCLIP = "/home/zhaohuanan/miniconda3/envs/snakepipes_target-seq-from-table-to-plot/bin/samclip" # ok
+PYTHON = "/home/zhaohuanan/miniconda3/envs/snakepipes_target-seq-from-table-to-plot/bin/python" # ok
 
 
 
 
+CUTOFF = ["10"]
 
-CUTOFF = ["3"]
-
-LIBS = [
-    "293T-HEK4-BE4-rep1",
-    "293T-HEK4-BE4-rep2",
-    "MCF7-HEK4-BE4-rep1",
-    "MCF7-HEK4-BE4-rep2"
-]
+LIBS = ['GBE-33A', 'GBE-M2', 'GBEmini-33A', 'GBEmini-M2']
 
 SAMPLES = [
-    "HK4-mcf-1",
-    "HK4-mcf-2",
-    "HK4-mcf-3",
-    "HK4-mcf-4",
-    "HK4-mcf-5",
-    "HK4-mcf-6",
-    "HK4-mcf-7",
-    "HK4-mcf-8",
-    "HK4-mcf-9",
-    "HK4-mcf-10",
-    "HK4-mcf-11",
-    "HK4-mcf-12",
-    "HK4-mcf-13",
-    "HK4-mcf-14",
-    "HK4-mcf-15"
-]
+    'EMX1-On-Target',
+ 'EMX1-Guideseq-1',
+ 'EMX1-Guideseq-2',
+ 'EMX1-Guideseq-3',
+ 'EMX1-Guideseq-4',
+ 'EMX1-Guideseq-5',
+ 'HEK2-On-Target',
+ 'HEK2-Guideseq-1',
+ 'HEK2-Guideseq-2',
+ 'HEK4-On-Target',
+ 'HEK4-Guideseq-1',
+ 'HEK4-Guideseq-2',
+ 'HEK4-Guideseq-3',
+ 'HEK4-Guideseq-4',
+ 'HEK4-Guideseq-5',
+ 'FANCF-On-Target',
+ 'FANCF-Guideseq-1',
+ 'FANCF-Guideseq-2',
+ 'FANCF-Guideseq-3',
+ 'FANCF-Guideseq-6',
+          ]
 
 READ_IDX = ["1","2"]
 
-
 defult_sgRNA_dict_for_plot = {
     "ABESite7":"GAATACTAAGCATAGACTCC", # 这里指的ABE-Site-7-On-Target
+    "EMX1": "GAGTCCGAGCAGAAGAAGAAGGG",
     'EMX1Site2': "GTATTCACCTGAAAGTGTGC", 
     'HEK2':'GAACACAAAGCATAGACTGC',
     'HEK3': "GGCCCAGACTGAGCACGTGATGG", 
@@ -61,7 +60,8 @@ defult_sgRNA_dict_for_plot = {
     "PP2":"GGCACTCGGGGGCGAGAGGA",
     "PP6":"GGGGCTCAACATCGGAAGAG",
     "RNF2":"GTCATCTTAGTCATTACCTGAGG",
-    'VEGFA': "GACCCCCTCCACCCCGCCTCCGG", 
+    'VEGFA': "GACCCCCTCCACCCCGCCTCCGG",
+    "FANCF": "GGAATCCCTTCTGCAGCACC",
 }
 
 rule all:
