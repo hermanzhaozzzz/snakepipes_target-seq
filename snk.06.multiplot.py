@@ -1,1 +1,0 @@
-nohup ${PYTHON} ./program/multiplot-targetseq-bmat-heatmap-V1.py -i ${ls_bmat} -l ${la_label} --to_base T,A,Ins,Del,G,C --count_ratio all -o '../plot/info_nd5.1_nd6_overlap_3.pdf' --mut_direction "CT,GA" --plot_heatmap '../plot/heatmap_nd5.1_nd6_overlap_3.pdf' --region_extend_length 5 --sgRNA $sgRNA5 2>&1 &
