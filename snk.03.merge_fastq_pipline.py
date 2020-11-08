@@ -11,18 +11,20 @@ PYTHON = "/home/zhaohuanan/miniconda3/envs/py27/bin/python"
 
 
 
-PRIMER_INFO = "./primer_table/all.txt"
+PRIMER_INFO = "./primer_table/sub1.txt"
 
 
 
-CUTOFF = ["10"]
+CUTOFF = ["3","5","10"]
 
-LIBS = [
-    'GBE-33A',
-    'GBE-M2',
-    'GBEmini-33A',
-    'GBEmini-M2'
-]
+LIBS = ['1341P',
+ 'DddA-nes',
+ 'DddIA-1-1-0.5',
+ 'DddIA-1-1-1',
+ 'DddIA-1-1-1.5',
+ 'ND6-WT',
+ 'TALE-nes',
+ 'UGI-nes']
 
 
 rule all:

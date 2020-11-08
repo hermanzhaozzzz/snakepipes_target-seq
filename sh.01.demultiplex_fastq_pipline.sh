@@ -16,9 +16,9 @@ PYTHON2=/home/zhaohuanan/miniconda3/envs/py27/bin/python
 
 # ########################################################################
 
-for case_name in GBE-33A GBE-M2 GBEmini-33A GBEmini-M2
+for case_name in 1341P DddA-nes DddIA-1-1-0.5 DddIA-1-1-1 DddIA-1-1-1.5 ND6-WT TALE-nes UGI-nes
 do
-    PRIMER_INFO=./primer_table/all.txt
+    PRIMER_INFO=./primer_table/sub1.txt
     
     
     fq1=../fastq/TargetSeq-${case_name}_R1.fastq.gz

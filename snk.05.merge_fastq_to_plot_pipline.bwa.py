@@ -17,52 +17,48 @@ PYTHON = "/home/zhaohuanan/miniconda3/envs/snakepipes_target-seq-from-table-to-p
 
 
 
-CUTOFF = ["10"]
+CUTOFF = ["3","5","10"]
 
-LIBS = ['GBE-33A', 'GBE-M2', 'GBEmini-33A', 'GBEmini-M2']
+LIBS = ['1341P',
+ 'DddA-nes',
+ 'DddIA-1-1-0.5',
+ 'DddIA-1-1-1',
+ 'DddIA-1-1-1.5',
+ 'ND6-WT',
+ 'TALE-nes',
+ 'UGI-nes']
 
-SAMPLES = [
-    'EMX1-On-Target',
- 'EMX1-Guideseq-1',
- 'EMX1-Guideseq-2',
- 'EMX1-Guideseq-3',
- 'EMX1-Guideseq-4',
- 'EMX1-Guideseq-5',
- 'HEK2-On-Target',
- 'HEK2-Guideseq-1',
- 'HEK2-Guideseq-2',
- 'HEK4-On-Target',
- 'HEK4-Guideseq-1',
- 'HEK4-Guideseq-2',
- 'HEK4-Guideseq-3',
- 'HEK4-Guideseq-4',
- 'HEK4-Guideseq-5',
- 'FANCF-On-Target',
- 'FANCF-Guideseq-1',
- 'FANCF-Guideseq-2',
- 'FANCF-Guideseq-3',
- 'FANCF-Guideseq-6',
-          ]
+SAMPLES = ['ND516-share-4',
+ 'ND516-share-5',
+ 'ND516-share-9',
+ 'ND6-only-2',
+ 'ND6-only-6',
+ 'ND6-only-11']
 
 READ_IDX = ["1","2"]
 
-defult_sgRNA_dict_for_plot = {
-    "ABESite7":"GAATACTAAGCATAGACTCC", # 这里指的ABE-Site-7-On-Target
-    "EMX1": "GAGTCCGAGCAGAAGAAGAAGGG",
-    'EMX1Site2': "GTATTCACCTGAAAGTGTGC", 
-    'HEK2':'GAACACAAAGCATAGACTGC',
-    'HEK3': "GGCCCAGACTGAGCACGTGATGG", 
-    "HEK4":"GGCACTGCGGCTGGAGGTGGGGG", 
-    "HEK5":'CTGGCCTGGGTCAATCCTTG',
-    "MTND4P12":"TGCTAGTAACCACATTCTCCTGATCAAATATCACTCTCCTACTTACAGGA",
-    "MTND5P11":"TAGCATTGGCAGGAATACCCTTCCTCACAGGTTTCTACTCCAAAGA",
-    "MTND6P4":"TGACCCCCATGCCTCAGGATACTCCTCAATAGCCACCG",
-    "PP2":"GGCACTCGGGGGCGAGAGGA",
-    "PP6":"GGGGCTCAACATCGGAAGAG",
-    "RNF2":"GTCATCTTAGTCATTACCTGAGG",
-    'VEGFA': "GACCCCCTCCACCCCGCCTCCGG",
-    "FANCF": "GGAATCCCTTCTGCAGCACC",
-}
+# defult_sgRNA_dict_for_plot = {
+#     "ABESite7":"GAATACTAAGCATAGACTCC", # 这里指的ABE-Site-7-On-Target
+#     "EMX1": "GAGTCCGAGCAGAAGAAGAAGGG",
+#     'EMX1Site2': "GTATTCACCTGAAAGTGTGC", 
+#     'HEK2':'GAACACAAAGCATAGACTGC',
+#     'HEK3': "GGCCCAGACTGAGCACGTGATGG", 
+#     "HEK4":"GGCACTGCGGCTGGAGGTGGGGG", 
+#     "HEK5":'CTGGCCTGGGTCAATCCTTG',
+#     "MTND4P12":"TGCTAGTAACCACATTCTCCTGATCAAATATCACTCTCCTACTTACAGGA",
+#     "MTND5P11":"TAGCATTGGCAGGAATACCCTTCCTCACAGGTTTCTACTCCAAAGA",
+#     "MTND6P4":"TGACCCCCATGCCTCAGGATACTCCTCAATAGCCACCG",
+#     "PP2":"GGCACTCGGGGGCGAGAGGA",
+#     "PP6":"GGGGCTCAACATCGGAAGAG",
+#     "RNF2":"GTCATCTTAGTCATTACCTGAGG",
+#     'VEGFA': "GACCCCCTCCACCCCGCCTCCGG",
+#     "FANCF": "GGAATCCCTTCTGCAGCACC",
+#     "ND6":"TGACCCCCATGCCTCAGGATACTCCTCAATAGCCATCG",
+#     "ND5.1":"TAGCATTAGCAGGAATACCTTTC7CTCACAGGTTTCTACTCCAAAGA",
+#     "ND4":"TGCTAGTAACCACGTTCTCCTGATCAAATATCACTCTCCTACTTACAGGA",
+# #     "ND516":"TAGCATTAGCAGGAATACCTTTC7CTCACAGGTTTCTACTCCAAAGA", # run ND5.1 genome use ND5.1 on-target sequence
+#     "ND516":"TGACCCCCATGCCTCAGGATACTCCTCAATAGCCATCG", # run ND6 genome use ND6 on-target sequence
+# }
 
 rule all:
     input:
@@ -71,7 +67,8 @@ rule all:
         expand("../TargetSeq-{lib}/cutoff_{cutoff}/mapping/{sample}_bwa_sort.bam.bai",lib=LIBS,sample=SAMPLES,cutoff=CUTOFF),
         expand("../TargetSeq-{lib}/cutoff_{cutoff}/mapping/{sample}_bwa_sort.mpileup",lib=LIBS,sample=SAMPLES,cutoff=CUTOFF),
         expand("../TargetSeq-{lib}/cutoff_{cutoff}/mapping/{sample}_bwa_sort.bmat",lib=LIBS,sample=SAMPLES,cutoff=CUTOFF),
-        expand("../all_plot/cutoff_{cutoff}.ext50/TargetSeq-{lib}_{sample}_cutoff_{cutoff}_indel.ext50.pdf",lib=LIBS,sample=SAMPLES,cutoff=CUTOFF)
+        expand("../all_plot/cutoff_{cutoff}.ext50/TargetSeq-{lib}_{sample}_cutoff_{cutoff}_indel.ext50.pdf",lib=LIBS,sample=SAMPLES,cutoff=CUTOFF),
+        expand('../TargetSeq_BED_sample_lib/{sample}.sgRNA.upper.fa.seq',sample=SAMPLES)
         
 
 # wildcard_constraints:
@@ -181,93 +178,23 @@ rule parse_mpileup:
 
 rule bmat_plot:
     input: 
-        "../TargetSeq-{lib}/cutoff_{cutoff}/mapping/{sample}_bwa_sort.bmat"
+        "../TargetSeq-{lib}/cutoff_{cutoff}/mapping/{sample}_bwa_sort.bmat",
+        '../TargetSeq_BED_sample_lib/{sample}.sgRNA.upper.fa.seq'
     output:
         "../all_plot/cutoff_{cutoff}.ext50/TargetSeq-{lib}_{sample}_cutoff_{cutoff}_indel.ext50.pdf"
-    params:
-        sgRNA_seq = lambda wildcards, input: defult_sgRNA_dict_for_plot[input[0].split("/")[4].split("-")[0]]
     shell:
-        "{PYTHON} ./program/plot-targetseq-bmat-V02.py -i {input} -o {output} --region_extend_length 50 --sgRNA {params.sgRNA_seq}"
-######################################################################## 
-# separate plot
-######################################################################## 
-# import os
-
-# defult_sgRNA_dict = {
-#     'VEGFA': "GACCCCCTCCACCCCGCCTCCGG", 
-#     'EMX1': "GAGTCCGAGCAGAAGAAGAAGGG", 
-#     'HEK3': "GGCCCAGACTGAGCACGTGATGG", 
-#     "HEK4":"GGCACTGCGGCTGGAGGTGGGGG", 
-#     "RNF2":"GTCATCTTAGTCATTACCTGAGG"
-# }   
-
-# for lib in LIBS:
-#     cmd_fmt = 'plot-targetseq-bmat-V02.py  -i {input} -o {output} --region_extend_length 80 --sgRNA {sgRNA_seq} &'
-
-#     for sample in SAMPLES:
-#         bmat_file = "293T-TargetSeq-{lib_name}/cutoff_3/mapping/{sample_name}_bwa_sort.bmat".format(lib_name=lib, sample_name=sample)
-#         sgRNA_seq = defult_sgRNA_dict.get(sample.split("-")[0])
-
-#         # make output
-#         out_filename = "all_plot/cutoff_3/293T-TargetSeq-{lib_name}_{sample_name}_cutoff_3_indel.ext80.E_sgRNA.pdf".format(lib_name=lib, sample_name=sample)
-    
-#         # make cmd
-#         cmd = cmd_fmt.format(
-#             input = bmat_file,
-#             output = out_filename,
-#             sgRNA_seq = sgRNA_seq)
-
-#         print(cmd)
-#         os.system(cmd)
-
-
-######################################################################## 
-# merge plot 
-######################################################################## 
-# import os
-
-# defult_sgRNA_dict = {
-#     'VEGFA': "GACCCCCTCCACCCCGCCTCCGG", 
-#     'EMX1': "GAGTCCGAGCAGAAGAAGAAGGG", 
-#     'HEK3': "GGCCCAGACTGAGCACGTGATGG", 
-#     "HEK4":"GGCACTGCGGCTGGAGGTGGGGG", 
-#     "RNF2":"GTCATCTTAGTCATTACCTGAGG"
-# }   
-
-# # mkdir 
-# os.system("mkdir -p all_plot/all_comparison/")
-
-# # tools
-# plot_code = "~/menghw_HD/BE_project/20.target_seq_all/tools/target_seq_plot_rep_v5.py"
-
-# # run
-# for sample in SAMPLES:
-#     cmd_fmt = 'python2 {plot_code} -i {input_bmat_file} -n {lib_name} -o {out_plot} -s {sgRNA_seq} --indel False --region 25 --format pdf &'
-#     bmat_file_list = [] 
-
-#     for lib in LIBS:
-#         bmat_file = "293T-TargetSeq-{lib_name}/cutoff_3/mapping/{sample_name}_bwa_sort.bmat".format(lib_name=lib, sample_name=sample)
-#         bmat_file_list.append(bmat_file)
-
-#     # make cmd 
-#     input_bmat_file = ",".join(bmat_file_list)
-#     lib_name = ",".join(LIBS)
-#     out_filename = "all_plot/all_comparison/{sample_name}_mutant_cutoff3.pdf".format(sample_name=sample)
-
-#     sgRNA_seq = defult_sgRNA_dict.get(sample.split("-")[0])
-
-#     if sgRNA_seq == None:
-#         sgRNA_seq = "GGCACTGCGGCTGGAGGTGGGGG"
-
-#     cmd = cmd_fmt.format(
-#         plot_code = plot_code,
-#         input_bmat_file = input_bmat_file,
-#         lib_name = lib_name,
-#         out_plot = out_filename,
-#         sgRNA_seq = sgRNA_seq)
-
-#     print(cmd)
-    # os.system(cmd)
-
-
-
+        """
+        if [[ `cat {input} |wc -l` -eq 1 ]]; then 
+        echo "bmat is empty" 
+        echo "will touch a empty file" 
+        touch {output}
+        touch {output}.empty.log
+        echo "decrease the cutoff and try again" > {output}.empty.log
+        else
+        echo "bmat is ok!"
+        echo "start to plot"
+        echo `cat {input[1]}`
+        sgRNA=`cat {input[1]}`
+        {PYTHON} ./program/plot-targetseq-bmat-V04.py -i {input[0]} -o {output} --region_extend_length 50 --sgRNA $sgRNA
+        fi
+        """
