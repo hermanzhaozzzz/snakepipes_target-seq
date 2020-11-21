@@ -1,0 +1,20 @@
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided cores: 24
+Rules claiming more threads will be scaled down.
+Job counts:
+	count	jobs
+	1	MergeFastq
+	1
+
+[Sat Nov 21 19:48:27 2020]
+rule MergeFastq:
+    input: ../TargetSeq-CBE-EMX1-rep1
+    output: ../TargetSeq-CBE-EMX1-rep1/cutoff_10/CBE-EMX1-rep1_cutoff_10.report
+    log: ../TargetSeq-CBE-EMX1-rep1/cutoff_10/CBE-EMX1-rep1_cutoff_10.log
+    jobid: 0
+    wildcards: lib=CBE-EMX1-rep1, cutoff=10
+
+
+        /home/zhaohuanan/zhaohn_HD/miniconda3/envs/snakepipes_target-seq/bin/python ./program/target_seq_merge_fq_V03.py         -i ../TargetSeq-CBE-EMX1-rep1         -p ./primer_table/sub6.txt         -o ../TargetSeq-CBE-EMX1-rep1/cutoff_10         -r ../TargetSeq-CBE-EMX1-rep1/cutoff_10/CBE-EMX1-rep1_cutoff_10.report         --MinMergeReadNumCutoff 10  > ../TargetSeq-CBE-EMX1-rep1/cutoff_10/CBE-EMX1-rep1_cutoff_10.log 2>&1
+        

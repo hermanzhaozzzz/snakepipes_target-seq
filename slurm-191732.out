@@ -1,0 +1,35 @@
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided cores: 24
+Rules claiming more threads will be scaled down.
+Job counts:
+	count	jobs
+	1	MergeFastq
+	1
+
+[Sat Nov 21 19:44:25 2020]
+rule MergeFastq:
+    input: ../TargetSeq-CBE-EMX1-rep1
+    output: ../TargetSeq-CBE-EMX1-rep1/cutoff_10/CBE-EMX1-rep1_cutoff_10.report
+    log: ../TargetSeq-CBE-EMX1-rep1/cutoff_10/CBE-EMX1-rep1_cutoff_10.log
+    jobid: 0
+    wildcards: lib=CBE-EMX1-rep1, cutoff=10
+
+
+        /home/zhaohuanan/zhaohn_HD/miniconda3/envs/snakepipes_target-seq/bin/python ./program/target_seq_merge_fq_V03.py         -i ../TargetSeq-CBE-EMX1-rep1         -p ./primer_table/sub6.txt         -o ../TargetSeq-CBE-EMX1-rep1/cutoff_10         -r ../TargetSeq-CBE-EMX1-rep1/cutoff_10/CBE-EMX1-rep1_cutoff_10.report         --MinMergeReadNumCutoff 10  > ../TargetSeq-CBE-EMX1-rep1/cutoff_10/CBE-EMX1-rep1_cutoff_10.log 2>&1
+        
+slurmstepd: error: *** JOB 191732 ON cn09 CANCELLED AT 2020-11-21T19:44:46 ***
+Will exit after finishing currently running jobs.
+[Sat Nov 21 19:44:46 2020]
+Error in rule MergeFastq:
+    jobid: 0
+    output: ../TargetSeq-CBE-EMX1-rep1/cutoff_10/CBE-EMX1-rep1_cutoff_10.report
+    log: ../TargetSeq-CBE-EMX1-rep1/cutoff_10/CBE-EMX1-rep1_cutoff_10.log (check log file(s) for error message)
+    shell:
+        
+        /home/zhaohuanan/zhaohn_HD/miniconda3/envs/snakepipes_target-seq/bin/python ./program/target_seq_merge_fq_V03.py         -i ../TargetSeq-CBE-EMX1-rep1         -p ./primer_table/sub6.txt         -o ../TargetSeq-CBE-EMX1-rep1/cutoff_10         -r ../TargetSeq-CBE-EMX1-rep1/cutoff_10/CBE-EMX1-rep1_cutoff_10.report         --MinMergeReadNumCutoff 10  > ../TargetSeq-CBE-EMX1-rep1/cutoff_10/CBE-EMX1-rep1_cutoff_10.log 2>&1
+        
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+Removing output files of failed job MergeFastq since they might be corrupted:
+../TargetSeq-CBE-EMX1-rep1/cutoff_10/CBE-EMX1-rep1_cutoff_10.report
