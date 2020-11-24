@@ -11,13 +11,13 @@ PYTHON = "/home/zhaohuanan/zhaohn_HD/miniconda3/envs/snakepipes_target-seq/bin/p
 
 
 
-PRIMER_INFO = "./primer_table/sub6.txt"
+PRIMER_INFO = "./primer_table/EMX1-DigenomeOnly.txt"
 
 
 
 CUTOFF = ["3","5","10"]
 
-LIBS = ['CBE-EMX1-rep1', 'CBE-EMX2-rep2']
+LIBS = ['E-digenome-only-5-1', 'E-digenome-only-5-2']
 
 
 rule all:

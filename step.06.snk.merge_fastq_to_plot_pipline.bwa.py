@@ -7,37 +7,34 @@
 ########################################################################
 # run on abyss
 # /home/menghaowei/menghw_HD/BE_project/20.target_seq_all/16.APOmut_screen.20200707
-CUTADAPT = "/home/zhaohuanan/miniconda3/bin/cutadapt"
-BWA = "/home/zhaohuanan/miniconda3/bin/bwa"
-SAMTOOLS = "/home/zhaohuanan/miniconda3/bin/samtools"
-BEDTOOLS = "/home/zhaohuanan/miniconda3/bin/bedtools" # ok
-SAMCLIP = "/home/zhaohuanan/miniconda3/bin/samclip" # ok
-PYTHON = "/home/zhaohuanan/miniconda3/envs/snakepipes_target-seq/bin/python" # ok
+CUTADAPT = "/home/zhaohuanan/zhaohn_HD/miniconda3/bin/cutadapt"
+BWA = "/home/zhaohuanan/zhaohn_HD/miniconda3/bin/bwa"
+SAMTOOLS = "/home/zhaohuanan/zhaohn_HD/miniconda3/bin/samtools"
+BEDTOOLS = "/home/zhaohuanan/zhaohn_HD/miniconda3/bin/bedtools" # ok
+SAMCLIP = "/home/zhaohuanan/zhaohn_HD/miniconda3/bin/samclip" # ok
+PYTHON = "/home/zhaohuanan/zhaohn_HD/miniconda3/envs/snakepipes_target-seq/bin/python" # ok
 
 
 
 
 CUTOFF = ["3","5","10"]
 
-LIBS = ['CBE-EMX1-rep1', 'CBE-EMX2-rep2']
+LIBS = ['E-digenome-only-5-1', 'E-digenome-only-5-2']
 
-SAMPLES = ['EMX1-Guideseq-1',
- 'EMX1-Guideseq-10',
- 'EMX1-Guideseq-11',
- 'EMX1-Guideseq-12',
- 'EMX1-Guideseq-13',
- 'EMX1-Guideseq-14',
- 'EMX1-Guideseq-15',
- 'EMX1-Guideseq-2',
- 'EMX1-Guideseq-3',
- 'EMX1-Guideseq-4',
- 'EMX1-Guideseq-5',
- 'EMX1-Guideseq-6',
- 'EMX1-Guideseq-7',
- 'EMX1-Guideseq-8',
- 'EMX1-Guideseq-9']
+SAMPLES = ['Digenome-only-EMX1-off-target-11',
+ 'Digenome-only-EMX1-off-target-12',
+ 'Digenome-only-EMX1-off-target-13',
+ 'Digenome-only-EMX1-off-target-15',
+ 'Digenome-only-EMX1-off-target-16',
+ 'Digenome-only-EMX1-off-target-17',
+ 'Digenome-only-EMX1-off-target-22',
+ 'Digenome-only-EMX1-off-target-23']
 
 READ_IDX = ["1","2"]
+
+defult_sgRNA_dict_for_plot = {
+        "EMX1": "GAGTCCGAGCAGAAGAAGAAGGG"
+}
 
 # defult_sgRNA_dict_for_plot = {
 #     "ABESite7":"GAATACTAAGCATAGACTCC", # 这里指的ABE-Site-7-On-Target
@@ -180,10 +177,12 @@ rule parse_mpileup:
 
 rule bmat_plot:
     input: 
-        "../TargetSeq-{lib}/cutoff_{cutoff}/mapping/{sample}_bwa_sort.bmat",
-        '../reference.fasta/{sample}.sgRNA.upper.fa.seq'
+        "../TargetSeq-{lib}/cutoff_{cutoff}/mapping/{sample}_bwa_sort.bmat"
     output:
         "../all_plot/cutoff_{cutoff}.ext50/TargetSeq-{lib}_{sample}_cutoff_{cutoff}_indel.ext50.pdf"
+    params:
+        sgRNA_seq = lambda wildcards, input: defult_sgRNA_dict_for_plot[input[0].split("/")[4].replace("Digenome-only-","").split("-")[0]],
+#         sgRNA_seq = '../reference.fasta/{sample}.sgRNA.upper.fa.seq'
     shell:
         """
         if [[ `cat {input} |wc -l` -eq 1 ]]; then 
@@ -195,8 +194,23 @@ rule bmat_plot:
         else
         echo "bmat is ok!"
         echo "start to plot"
-        echo `cat {input[1]}`
-        sgRNA=`cat {input[1]}`
+        echo `cat {params.sgRNA_seq}`
+        sgRNA={params.sgRNA_seq}
         {PYTHON} ./program/plot-targetseq-bmat-V04.py -i {input[0]} -o {output} --region_extend_length 50 --sgRNA $sgRNA
         fi
         """
+#         """
+#         if [[ `cat {input} |wc -l` -eq 1 ]]; then 
+#         echo "bmat is empty" 
+#         echo "will touch a empty file" 
+#         touch {output}
+#         touch {output}.empty.log
+#         echo "decrease the cutoff and try again" > {output}.empty.log
+#         else
+#         echo "bmat is ok!"
+#         echo "start to plot"
+#         echo `cat {input[1]}`
+#         sgRNA=`cat {input[1]}`
+#         {PYTHON} ./program/plot-targetseq-bmat-V04.py -i {input[0]} -o {output} --region_extend_length 50 --sgRNA $sgRNA
+#         fi
+#         """

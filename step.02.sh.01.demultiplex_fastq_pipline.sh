@@ -16,9 +16,9 @@ PYTHON2=/home/zhaohuanan/zhaohn_HD/miniconda3/envs/snakepipes_target-seq/bin/pyt
 
 # ########################################################################
 
-for case_name in CBE-EMX1-rep1 CBE-EMX2-rep2
+for case_name in E-digenome-only-5-1 E-digenome-only-5-2
 do
-    PRIMER_INFO=./primer_table/sub6.txt
+    PRIMER_INFO=./primer_table/EMX1-DigenomeOnly.txt
     
     
     fq1=../fastq/TargetSeq-${case_name}_R1.fastq.gz

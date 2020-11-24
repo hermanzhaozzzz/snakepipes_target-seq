@@ -8,21 +8,14 @@ BEDTOOLS = "/home/zhaohuanan/zhaohn_HD/miniconda3/bin/bedtools"
 
 # 1.txt 2.txt 3.txt.......7.txt
 
-SAMPLES = ['EMX1-Guideseq-1',
- 'EMX1-Guideseq-10',
- 'EMX1-Guideseq-11',
- 'EMX1-Guideseq-12',
- 'EMX1-Guideseq-13',
- 'EMX1-Guideseq-14',
- 'EMX1-Guideseq-15',
- 'EMX1-Guideseq-2',
- 'EMX1-Guideseq-3',
- 'EMX1-Guideseq-4',
- 'EMX1-Guideseq-5',
- 'EMX1-Guideseq-6',
- 'EMX1-Guideseq-7',
- 'EMX1-Guideseq-8',
- 'EMX1-Guideseq-9']
+SAMPLES = ['Digenome-only-EMX1-off-target-11',
+ 'Digenome-only-EMX1-off-target-12',
+ 'Digenome-only-EMX1-off-target-13',
+ 'Digenome-only-EMX1-off-target-15',
+ 'Digenome-only-EMX1-off-target-16',
+ 'Digenome-only-EMX1-off-target-17',
+ 'Digenome-only-EMX1-off-target-22',
+ 'Digenome-only-EMX1-off-target-23']
 
 rule all:
     input:
@@ -48,7 +41,7 @@ rule getbed:
         temp('../reference.fasta/{sample}.sgRNA.bed')
     run:
         import os
-        for tab in ['sub6']:
+        for tab in ['EMX1-DigenomeOnly']:
             path = './primer_table/{index}.txt'.format(index=tab)
             f = open(path,'r')
             ls = [x.split("\t") for x in f.readlines()][1:]
