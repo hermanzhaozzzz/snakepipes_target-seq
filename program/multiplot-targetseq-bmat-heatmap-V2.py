@@ -16,6 +16,9 @@ VERSION_INFO = \
             4. add new param: --to_base, what base to plot (A/G/C/T/Ins/Del or A,G, --to_base T --to_base A,T)
             5. add new param: --count_ratio, plot count info, ratio info or count and ratio info (--count_ratio all) 
             6. add new param: --output_matrix
+    Version-02:
+      2020-11-26
+            1. fix align bugs
     E-Mail: hermanzhaozzzz@gmail.com     
     """
 # Version information END ----------------------------------------------------
@@ -78,16 +81,16 @@ np.set_printoptions(suppress=True)
 def hex_to_rgb(hex_color):
     """
     INPUT
-        <hex_color>
+        <hex_color> 
             Color format  like #FFFFAA
-
+    
     RETURN
-        <rgb_color>
+        <rgb_color>    
             RGB tuple like (255, 255, 170)
     """
     value = hex_color.lstrip('#')
     value_len = len(value)
-    return (tuple(int(value[index: index + 2], 16) for index in range(0, value_len, 2)))
+    return( tuple(int(value[index: index + 2], 16) for index in range(0, value_len, 2)) )
 
 
 def rgb_to_hex(rgb_color):
@@ -95,39 +98,39 @@ def rgb_to_hex(rgb_color):
     INPUT
         <rgb_color>
             Color format like (255, 255, 170)
-
+    
     RETURN
         <hex_color>
             Color format  like #FFFFAA
     """
     rgb_color = ('#%02x%02x%02x' % rgb_color).upper()
-    return (rgb_color)
+    return(rgb_color)
 
 
-def make_color_list(low_color_RGB, high_color_RGB, length_out=20, back_format="Hex"):
+def make_color_list(low_color_RGB, high_color_RGB, length_out = 20, back_format="Hex"):
     """
     INPUT
         <low_color_RGB> <high_color_RGB>
             Format like (210, 179, 150), tuple, list, or np.array
-
+        
         <back_format>
             Hex OR RGB
-
+        
     RETURN
         <color_list>
     """
     low_color = np.array(low_color_RGB)
     high_color = np.array(high_color_RGB)
-
+    
     color_list = []
     for index in range(0, length_out + 1):
-        rgb_color = low_color + (high_color - low_color) // length_out * index
+        rgb_color = [abs(i) for i in low_color + (high_color - low_color) // length_out * index]
         if back_format == "Hex":
             color_list.append(rgb_to_hex(tuple(rgb_color)))
         else:
             color_list.append(tuple(rgb_color))
-
-    return (color_list)
+            
+    return(color_list)
 
 
 def map_color(value_vec, breaks, color_list):
@@ -135,20 +138,20 @@ def map_color(value_vec, breaks, color_list):
     INPUT:
         <value_vec>
             np.array or a list of values
-
+            
         <breaks>
-            A sorted value list, which can split all num into len(color_list) intervals.
-            e.g. [0.01, 0.1, 0.5, 1] make all real num into 5 intervals, (-Inf,0.01], (0.01,0.1], (0.1, 0.5],  (0.5, 1], (1, +Inf]
-
+            A sorted value list, which can split all num into len(color_list) intervals. 
+            e.g. [0.01, 0.1, 0.5, 1] make all real num into 5 intervals, (-Inf,0.01], (0.01,0.1], (0.1, 0.5],  (0.5, 1], (1, +Inf] 
+        
         <color_list>
             A hex-format color list, which have to match with breaks
-
+    
     RETURN
         <value_color_vec>
-            A list map the value_vec with breaks
+            A list map the value_vec with breaks 
     """
     value_idx_list = []
-
+    
     for value in value_vec:
         match_state = False
         for index, break_value in enumerate(breaks):
@@ -156,61 +159,61 @@ def map_color(value_vec, breaks, color_list):
                 value_idx_list.append(index)
                 match_state = True
                 break
-
+        
         if not match_state:
-            value_idx_list.append(index + 1)
-
-    return (tuple(color_list[col_idx] for col_idx in value_idx_list))
+            value_idx_list.append(index+1)
+    
+    return( tuple(color_list[col_idx] for col_idx in value_idx_list))
 
 
 def find_seq_PAM_index(query_seq):
     """
     <INPUT>
         query_seq
-
+    
     <HELP>
         e.g. query_seq = "AAAGAGAG"
         return index list = [1,3,5], which means search NAG, NGG at the same time
     """
     pam_index_list = []
-
+    
     for index, base in enumerate(query_seq[:-2]):
-        if query_seq[index + 1:index + 3] == "AG":
+        if query_seq[index+1:index+3] == "AG":
             pam_index_list.append((index, "NAG"))
-
-        elif query_seq[index + 1:index + 3] == "GG":
+            
+        elif query_seq[index+1:index+3] == "GG":
             pam_index_list.append((index, "NGG"))
+            
+    return(pam_index_list)
 
-    return (pam_index_list)
 
-
-def analysis_align_obj(alignment, reverse_state=False):
+def analysis_align_obj(alignment, reverse_state = False):
     """
     INPUT:
         <alignment obj>
-
+        
     OUTPUT:
-        <info>
-            1. match count
-            2. mismatch count
-            3. gap count
+        <info> 
+            1. match count 
+            2. mismatch count 
+            3. gap count 
             4. alignment.score
-
+            
     HELP:
         2019-11-15 fix-1
             The gap count should be the num of gap contain in sgRNA alignment region.
-
+            
             e.g.
-
+            
             AGTGGTAAGAAGAAGACGAGACATAATGAG
             ------||||||||||||||X|----||||
             ------AAGAAGAAGACGAGCC----TGAG
-
+            
             gap count should be 4, rather than 10.
-
+        
         2019-11-15 fix-2
-            add return info, start_index, end_index, now the retrun list will be
-
+            add return info, start_index, end_index, now the retrun list will be 
+            
             return_list = [
                 match_count,
                 mismatch_count,
@@ -219,19 +222,19 @@ def analysis_align_obj(alignment, reverse_state=False):
                 start_index,
                 end_index
             ]
-
+            
             The <start_index> and <end_index> are index related to sgRNA alignment string
-
+        
     """
-
-    # define params
+    
+    # define params 
     match_count = 0
     mismatch_count = 0
     gap_count = 0
 
-    alignment_list = str(alignment).split("\n")
-    query_length = len(alignment.query)
-
+    alignment_list =  str(alignment).split("\n")
+    query_length = len(alignment.query)    
+    
     if reverse_state:
         target_list = alignment_list[0][::-1]
         info_list = alignment_list[1][::-1]
@@ -240,24 +243,24 @@ def analysis_align_obj(alignment, reverse_state=False):
     else:
         target_list = alignment_list[0]
         info_list = alignment_list[1]
-        query_list = alignment_list[2]
-
+        query_list = alignment_list[2]        
+        
     count_state = False
     count_query_base = 0
-
+    
     ref_align_start_index = 0
     ref_align_end_index = len(alignment.target) - 1
-
-    # counting
+    
+    # counting 
     for index, info_base in enumerate(info_list):
         if not count_state:
             if query_list[index] != "-":
                 count_state = True
                 ref_align_start_index = index
-
+                
         if not count_state:
             continue
-
+        
         else:
             if info_base == "|":
                 match_count += 1
@@ -270,12 +273,12 @@ def analysis_align_obj(alignment, reverse_state=False):
             elif info_base == "-":
                 gap_count += 1
                 if query_list[index] != "-":
-                    count_query_base += 1
-
+                    count_query_base += 1 
+            
         if count_query_base >= query_length:
             ref_align_end_index = index
             break
-
+                
     return_list = [
         match_count,
         mismatch_count,
@@ -284,8 +287,8 @@ def analysis_align_obj(alignment, reverse_state=False):
         ref_align_start_index,
         ref_align_end_index
     ]
-
-    return (return_list)
+    
+    return(return_list)
 
 
 def sign_value(x):
@@ -294,36 +297,34 @@ def sign_value(x):
         sign function
     """
     if x < 0:
-        return (-1)
+        return(-1)
     elif x == 0:
-        return (0)
+        return(0)
     else:
-        return (1)
+        return(1)    
 
 
 def cmp_align_list(align_a, align_b):
     """
     INPUT
         like [17, 3, 0, 73.0, 1, 22 'AAGAAGAAGACGAGTCTGCA', '||||||||||||||X|||XX', 'AAGAAGAAGACGAGCCTGAG']
-
+    
     HELP
-        compare function for align_list
+        compare function for align_list 
     """
-    #     align_alphabet = {"-":0, "X":1, "|":2,".":1.5}
-    align_alphabet = {"-": 0, "X": 1, "|": 2}
-
+    align_alphabet = {"-":0, "X":1, "|":2}
     sort_index_list = [3, 2, 1, 0]
-    sort_rev_state_list = [True, False, False, True]
-
+    sort_rev_state_list = [True, False, False, True]    
+    
     for order_index, align_index in enumerate(sort_index_list):
-        if (align_a[align_index] - align_b[align_index]) == 0:
-            continue
+        if (align_a[align_index]  - align_b[align_index]) == 0:
+                continue
         else:
             if sort_rev_state_list[order_index]:
-                return (-1 * sign_value(align_a[align_index] - align_b[align_index]))
+                return( -1 * sign_value(align_a[align_index]  - align_b[align_index]))
             else:
-                return (sign_value(align_a[align_index] - align_b[align_index]))
-
+                return( sign_value(align_a[align_index]  - align_b[align_index]))
+    
     for index, char_a in enumerate(align_a[7]):
         if index <= (len(align_b[7]) - 1):
             value_a = align_alphabet[char_a]
@@ -332,7 +333,7 @@ def cmp_align_list(align_a, align_b):
             if value_a > value_b:
                 return 1
             elif value_a < value_b:
-                return -1
+                return -1 
 
     return 0
 
@@ -341,46 +342,46 @@ def run_sgRNA_alignment(align_ref_seq, align_sgRNA, sgRNA_aligner, extend_len=3)
     """
     INPUT
         <align_ref_seq>
-
-        <align_sgRNA>
+            
+        <align_sgRNA> 
             sgRNA seq without PAM
-
+            
         <possible_sgRNA_region>
-
+    
     RETURN
         <final_align_res_list>
     """
     align_sgRNA_rev = align_sgRNA[::-1]
-
+    
     # find all PAM
     PAM_info_list = find_seq_PAM_index(align_ref_seq)
     if len(PAM_info_list) == 0:
-        return ([])
-
-    # forward alignment
+        return([])
+    
+    # forward alignment 
     final_align_res_list = []
 
     for PAM_start_idx, PAM_type in PAM_info_list:
 
-        # filter 5' end PAM
+        # filter 5' end PAM 
         if (PAM_start_idx - extend_len) < len(align_sgRNA):
             continue
 
-        # select PAM and sgRNA in the possible region
-        region_seq_start = PAM_start_idx - len(align_sgRNA) - extend_len
-        region_seq_end = PAM_start_idx + 3
+        # select PAM and sgRNA in the possible region 
+        region_seq_start = PAM_start_idx-len(align_sgRNA) - extend_len
+        region_seq_end = PAM_start_idx + 3 
 
-        # alignment part
-        region_seq = align_ref_seq[region_seq_start: PAM_start_idx]
+        # alignment part 
+        region_seq = align_ref_seq[region_seq_start : PAM_start_idx]
         align_res = sgRNA_aligner.align(region_seq[::-1], align_sgRNA_rev)
 
         # parse alignment
         ## if contain multiple alignment result with the same score, keep the best one;
-        ## sort reason score -> gap -> mismatch -> match
+        ## sort reason score -> gap -> mismatch -> match 
         align_res_list = []
         for align in align_res:
             align_analysis_res = analysis_align_obj(align, reverse_state=True)
-            align_info_list = [x[::-1] for x in str(align).strip().split("\n")]
+            align_info_list = [ x[::-1] for x in str(align).strip().split("\n")]
             align_analysis_res += align_info_list
             align_analysis_res += [PAM_start_idx, PAM_type]
             align_res_list.append(align_analysis_res)
@@ -392,33 +393,33 @@ def run_sgRNA_alignment(align_ref_seq, align_sgRNA, sgRNA_aligner, extend_len=3)
             align_res_list.sort(cmp=cmp_align_list)
             final_align_res_list.append(align_res_list[0])
 
-    # sort final alignment
+    # sort final alignment 
     final_align_res_list.sort(cmp=cmp_align_list)
-
-    return (final_align_res_list)
+    
+    return(final_align_res_list)
 
 
 def run_no_PAM_sgRNA_alignment_no_chop(align_ref_seq, align_sgRNA_full, no_PAM_sgRNA_aligner):
     """
     INPUT
         <align_ref_seq>
-
-        <align_sgRNA>
+            
+        <align_sgRNA> 
             sgRNA seq without PAM
-
+            
         <no_PAM_sgRNA_aligner>
             An obj from BioPython pairwise alignment
-
+    
     RETURN
         <final_align_res_list>
     """
 
-    # alignment part
+    # alignment part 
     align_res = no_PAM_sgRNA_aligner.align(align_ref_seq, align_sgRNA_full)
 
     # parse alignment
     ## if contain multiple alignment result with the same score, keep the best one;
-    ## sort reason score -> gap -> mismatch -> match
+    ## sort reason score -> gap -> mismatch -> match 
     align_res_list = []
     for align in align_res:
         align_analysis_res_temp = analysis_align_obj(align, reverse_state=False)
@@ -426,7 +427,7 @@ def run_no_PAM_sgRNA_alignment_no_chop(align_ref_seq, align_sgRNA_full, no_PAM_s
         align_analysis_res += str(align).strip().split("\n")
 
         PAM_start_index = align_analysis_res[5] - 2
-        PAM_type = ref_seq[PAM_start_index: PAM_start_index + 3]
+        PAM_type = ref_seq[PAM_start_index : PAM_start_index+3]
 
         align_analysis_res += [PAM_start_index, PAM_type]
         align_res_list.append(align_analysis_res)
@@ -437,10 +438,7 @@ def run_no_PAM_sgRNA_alignment_no_chop(align_ref_seq, align_sgRNA_full, no_PAM_s
     else:
         align_res_list.sort(cmp=cmp_align_list)
         return (align_res_list)
-
-    ###############################################################################
-
-
+###############################################################################
 # default sgRNA
 ###############################################################################
 
@@ -477,6 +475,7 @@ if __name__ == '__main__':
                         help="plot count, ratio or all", default='all')
     parser.add_argument("-o", "--out_figure",
                         help="Output figure filename", required=True)
+    
     parser.add_argument("--output_matrix",
                         help="Output count and ratio matrix", default=False)
     parser.add_argument("--plot_heatmap",
@@ -590,32 +589,45 @@ if __name__ == '__main__':
     # set alignment
     # ---------------------------------------------------------------->>>>>
     align_match, align_mismatch, align_gap_open, align_gap_extension = map(int, str(ARGS.align_settings).split(","))
-
-    sgRNA_aligner = Align.PairwiseAligner()
-    sgRNA_aligner.match = align_match
-    sgRNA_aligner.mismatch = align_mismatch
-    sgRNA_aligner.open_gap_score = align_gap_open
-    sgRNA_aligner.extend_gap_score = align_gap_extension
-    sgRNA_aligner.query_left_gap_score = align_gap_open
-    sgRNA_aligner.query_right_gap_score = 0
-    sgRNA_aligner.mode = "global"
-
-    print("-" * 80)
-    print(str(sgRNA_aligner))
-    print("-" * 80)
-
-    no_PAM_sgRNA_aligner = Align.PairwiseAligner()
-    no_PAM_sgRNA_aligner.match = align_match
-    no_PAM_sgRNA_aligner.mismatch = align_mismatch
-    no_PAM_sgRNA_aligner.open_gap_score = align_gap_open
-    no_PAM_sgRNA_aligner.extend_gap_score = align_gap_extension
-    no_PAM_sgRNA_aligner.query_left_gap_score = 0
-    no_PAM_sgRNA_aligner.query_right_gap_score = 0
-    no_PAM_sgRNA_aligner.mode = "global"
+    
+    seq_aligner = Align.PairwiseAligner()
+    seq_aligner.match = align_match
+    seq_aligner.mismatch = align_mismatch
+    seq_aligner.open_gap_score = align_gap_open
+    seq_aligner.extend_gap_score = align_gap_extension
+    seq_aligner.query_left_gap_score = 0
+    seq_aligner.query_right_gap_score = 0
+    seq_aligner.mode = "global"
 
     print("-" * 80)
-    print(str(no_PAM_sgRNA_aligner))
+    print(str(seq_aligner))
     print("-" * 80)
+
+#     sgRNA_aligner = Align.PairwiseAligner()
+#     sgRNA_aligner.match = align_match
+#     sgRNA_aligner.mismatch = align_mismatch
+#     sgRNA_aligner.open_gap_score = align_gap_open
+#     sgRNA_aligner.extend_gap_score = align_gap_extension
+#     sgRNA_aligner.query_left_gap_score = align_gap_open
+#     sgRNA_aligner.query_right_gap_score = 0
+#     sgRNA_aligner.mode = "global"
+
+#     print("-" * 80)
+#     print(str(sgRNA_aligner))
+#     print("-" * 80)
+
+#     no_PAM_sgRNA_aligner = Align.PairwiseAligner()
+#     no_PAM_sgRNA_aligner.match = align_match
+#     no_PAM_sgRNA_aligner.mismatch = align_mismatch
+#     no_PAM_sgRNA_aligner.open_gap_score = align_gap_open
+#     no_PAM_sgRNA_aligner.extend_gap_score = align_gap_extension
+#     no_PAM_sgRNA_aligner.query_left_gap_score = 0
+#     no_PAM_sgRNA_aligner.query_right_gap_score = 0
+#     no_PAM_sgRNA_aligner.mode = "global"
+
+#     print("-" * 80)
+#     print(str(no_PAM_sgRNA_aligner))
+#     print("-" * 80)
 
     # ---------------------------------------------------------------->>>>>
     # alignment
@@ -627,10 +639,13 @@ if __name__ == '__main__':
     ref_seq_rc = str(ref_seq_BioPy.reverse_complement())
 
     # PAM fwd alignment
-    final_align_fwd = run_sgRNA_alignment(ref_seq, sgRNA_seq, sgRNA_aligner, sgRNA_align_extend_len)
+#     final_align_fwd = run_sgRNA_alignment(ref_seq, sgRNA_seq, sgRNA_aligner, sgRNA_align_extend_len)
+    final_align_fwd = run_no_PAM_sgRNA_alignment_no_chop(ref_seq, sgRNA_full_length, seq_aligner)
+
 
     # PAM rev alignment
-    final_align_rev = run_sgRNA_alignment(ref_seq_rc, sgRNA_seq, sgRNA_aligner, sgRNA_align_extend_len)
+#     final_align_rev = run_sgRNA_alignment(ref_seq_rc, sgRNA_seq, sgRNA_aligner, sgRNA_align_extend_len)
+    final_align_rev = run_no_PAM_sgRNA_alignment_no_chop(ref_seq_rc, sgRNA_full_length, seq_aligner)
 
     # fwd alignment
     print("Forward best alignment:")
@@ -667,8 +682,11 @@ if __name__ == '__main__':
             final_align = final_align_rev[0]
 
     if final_align_direction == None:
-        final_align_direction = "No PAM Alignment"
-        final_align = run_no_PAM_sgRNA_alignment_no_chop(ref_seq, sgRNA_full_length, no_PAM_sgRNA_aligner)[0]
+#         final_align_direction = "No PAM Alignment"
+#         final_align = run_no_PAM_sgRNA_alignment_no_chop(ref_seq, sgRNA_full_length, no_PAM_sgRNA_aligner)[0]
+        raise IOError("Alignment Error!")
+
+        
     # make sgRNA alignment info
     final_align_info = final_align[7][final_align[4]: final_align[5] + 1]
     final_align_ref = final_align[6][final_align[4]: final_align[5] + 1]
@@ -693,46 +711,56 @@ if __name__ == '__main__':
                 sgRNA_align_insert[sgRNA_start + align_index] = final_align_sgRNA[align_index]
 
         # add PAM info
-        PAM_ref_start_index = sgRNA_start + align_index + 1 - ref_align_gap_count
-        sgRNA_align[PAM_ref_start_index: PAM_ref_start_index + 3] = sgRNA_full_length[-3:]
-
-        if final_align_direction == "Reverse PAM Alignment":
+        if final_align_direction == "Reverse Alignment":
             sgRNA_align = sgRNA_align[::-1]
             sgRNA_align_insert = sgRNA_align_insert[::-1]
+#         PAM_ref_start_index = sgRNA_start + align_index + 1 - ref_align_gap_count
+#         sgRNA_align[PAM_ref_start_index: PAM_ref_start_index + 3] = sgRNA_full_length[-3:]
 
-    elif final_align_direction == "No PAM Alignment":
-        sgRNA_start = final_align[4]
+#         if final_align_direction == "Reverse PAM Alignment":
+#             sgRNA_align = sgRNA_align[::-1]
+#             sgRNA_align_insert = sgRNA_align_insert[::-1]
 
-        for align_index, align_ref in enumerate(final_align_ref):
-            if align_ref != "-":
-                sgRNA_align[sgRNA_start + align_index - ref_align_gap_count] = final_align_sgRNA[align_index]
-            else:
-                ref_align_gap_count += 1
-                sgRNA_align_insert[sgRNA_start + align_index] = final_align_sgRNA[align_index]
+#     elif final_align_direction == "No PAM Alignment":
+#         sgRNA_start = final_align[4]
+
+#         for align_index, align_ref in enumerate(final_align_ref):
+#             if align_ref != "-":
+#                 sgRNA_align[sgRNA_start + align_index - ref_align_gap_count] = final_align_sgRNA[align_index]
+#             else:
+#                 ref_align_gap_count += 1
+#                 sgRNA_align_insert[sgRNA_start + align_index] = final_align_sgRNA[align_index]
 
     # set possible_sgRNA_region
-    if final_align_direction == None:
-        possible_sgRNA_region = [len(ref_seq) // 2 - region_extend_length, len(ref_seq) // 2 + region_extend_length]
+    sgRNA_align_start = final_align[4]    
+    sgRNA_align_end = final_align[5]
+    
+    
+    possible_sgRNA_region_start = max(sgRNA_align_start - region_extend_length, 0)
+    possible_sgRNA_region_end = min(sgRNA_align_end + region_extend_length, len(ref_seq) - 1)
+    possible_sgRNA_region = [possible_sgRNA_region_start, possible_sgRNA_region_end]
+#     if final_align_direction == None:
+#         possible_sgRNA_region = [len(ref_seq) // 2 - region_extend_length, len(ref_seq) // 2 + region_extend_length]
 
-    else:
-        if final_align_direction == "No PAM Alignment":
-            sgRNA_align_start = final_align[4]
-            sgRNA_align_end = final_align[5]
+#     else:
+#         if final_align_direction == "No PAM Alignment":
+#             sgRNA_align_start = final_align[4]
+#             sgRNA_align_end = final_align[5]
 
-        else:
-            if final_align_direction == "Forward PAM Alignment":
-                print 1
-                sgRNA_align_end = final_align[9] + 3
-                sgRNA_align_start = sgRNA_align_end - len(sgRNA_full_length)
+#         else:
+#             if final_align_direction == "Forward PAM Alignment":
+#                 print 1
+#                 sgRNA_align_end = final_align[9] + 3
+#                 sgRNA_align_start = sgRNA_align_end - len(sgRNA_full_length)
 
-            elif final_align_direction == "Reverse PAM Alignment":
-                print 2
-                sgRNA_align_start = len(ref_seq) - (final_align[9] + 3)
-                sgRNA_align_end = sgRNA_align_start + len(sgRNA_full_length)
+#             elif final_align_direction == "Reverse PAM Alignment":
+#                 print 2
+#                 sgRNA_align_start = len(ref_seq) - (final_align[9] + 3)
+#                 sgRNA_align_end = sgRNA_align_start + len(sgRNA_full_length)
 
-        possible_sgRNA_region_start = max(sgRNA_align_start - region_extend_length, 0)
-        possible_sgRNA_region_end = min(sgRNA_align_end + region_extend_length, len(ref_seq) - 1)
-        possible_sgRNA_region = [possible_sgRNA_region_start, possible_sgRNA_region_end]
+#         possible_sgRNA_region_start = max(sgRNA_align_start - region_extend_length, 0)
+#         possible_sgRNA_region_end = min(sgRNA_align_end + region_extend_length, len(ref_seq) - 1)
+#         possible_sgRNA_region = [possible_sgRNA_region_start, possible_sgRNA_region_end]
     # select bmat_table
     bmat_table_select = df_bmat_all[possible_sgRNA_region[0]: possible_sgRNA_region[1]]
     # ---------------------------------------------------------------->>>>>
@@ -838,7 +866,8 @@ if __name__ == '__main__':
         panel_space_coef = [1, 1, 1] + ([0.3] * (len(ls_bmat_table) - 1) + [4]) * len(ls_to_base_raw) * 2
     else:
         panel_space_coef = [1, 1, 1] + ([0.3] * (len(ls_bmat_table) - 1) + [4]) * len(ls_to_base_raw)
-
+    # 更正heatmap align错误
+#     plot_heatmap_index = bmat_table_select.chr_index
     plot_data_list = [
         ["Index", bmat_table_select.chr_index],
         ["On-target", sgRNA_align[possible_sgRNA_region[0]: possible_sgRNA_region[1]]],
@@ -1076,88 +1105,6 @@ if __name__ == '__main__':
 
 
 
-        # # todo: for jupyter-lab test
-        # df_plot.to_csv('./df_plot.csv')
-        # df_onTarget_Ref_color.to_csv('./df_onTarget_Ref_color.csv')
-        # df_onTarget_Ref.to_csv('./df_onTarget_Ref.csv')
-        # #
-        # # plot editing ratio
-        # sns.set()
-        # fig_width = df_plot.shape[1]
-        # # plot
-        # fig_heatmap = plt.figure(figsize=(1.1 * df_plot.shape[1], 1.1 * (df_plot.shape[0])))
-        #
-        # cmap = sns.cubehelix_palette(100, start=3, rot=0.1, dark=0.7, light=0.99, gamma=4.5, reverse=False)
-        # ax = sns.heatmap(
-        #     data=df_plot.applymap(float) * 100,
-        #     vmin=0,
-        #     vmax=100,
-        #     xticklabels=df_plot.columns,  # 步长
-        #     yticklabels=1,  # 步长
-        #     #     cmap="gist_stern", # 颜色主题风格
-        #     # cmap="Purples",  # 颜色主题风格
-        #     cmap=cmap,
-        #     linewidths=.1,
-        #     square=True,
-        #     linecolor='#AAAAAA',
-        #     linewidth=3
-        # )
-        # ax.set_ylabel('')
-        # # on target
-        # for site_x in range(df_plot.shape[1]):
-        #     ax.add_patch(matplotlib.patches.Rectangle(
-        #         (site_x, 0),
-        #         width=1,
-        #         height=1,
-        #         linestyle='-',
-        #         fill=True,
-        #         facecolor=df_onTarget_Ref_color.loc['On-target', :].tolist()[site_x],
-        #         edgecolor='#FFFFFF' if df_onTarget_Ref_color.loc['On-target', :].tolist()[
-        #                                    site_x] == '#FFFFFF' else '#AAAAAA',
-        #         linewidth=3
-        #
-        #     ))
-        #     ax.text(
-        #         x=site_x + 0.47,
-        #         y=0.55,
-        #         s=df_onTarget_Ref.loc['On-target', :].tolist()[site_x],
-        #         horizontalalignment='center',
-        #         verticalalignment='center',
-        #         fontsize=34,
-        #         fontname="DejaVu Sans",
-        #         alpha=1,
-        #     )
-        # # ref
-        # for site_x in range(df_plot.shape[1]):
-        #     ax.add_patch(matplotlib.patches.Rectangle(
-        #         (site_x, 1),
-        #         width=1,
-        #         height=1,
-        #         linestyle='-',
-        #         fill=True,
-        #         facecolor=df_onTarget_Ref_color.loc['Ref', :].tolist()[site_x],
-        #         edgecolor='#AAAAAA',
-        #         linewidth=3
-        #     ))
-        #     ax.text(
-        #         x=site_x + 0.47,
-        #         y=1.55,
-        #         s=df_onTarget_Ref.loc['Ref', :].tolist()[site_x],
-        #         horizontalalignment='center',
-        #         verticalalignment='center',
-        #         fontsize=34,
-        #         fontname="DejaVu Sans",
-        #         alpha=1,
-        #     )
-        # # tick_params 中 direction='in'表示刻度线位于内侧，另外还有参数 out,inout
-        # ax.tick_params(labelsize=15, direction='in')  # colorbar 刻度线设置
-        # # colorbar 中 top='off', bottom='off', left='off', right='off'表示上下左右侧的刻度线全部不显示
-        # cax = plt.gcf().axes[-1]
-        # cax.tick_params(labelsize=44, direction='in', top=False, bottom=False, left=False, right=False)
-
-        # fig_heatmap.savefig(heatmap_path, bbox_inches='tight')  # 减少边缘空白
-
-
     def map_hex_for_matrix(x):
         # 判断value范围并返回颜色的Hex值
         for value in ls_break:
@@ -1181,27 +1128,42 @@ if __name__ == '__main__':
             return '#FFFFFF'
 
 
-    ls_break = [0, 0.05, 0.1, 1, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60, 70, 80, 100]
-    ls_color = [
-        '#EFEFEF',
-        '#DDEAF6',
-        '#A9CEE4',
-        '#87BDDB',
-        '#6AABD3',
-        '#57A0CD',
-        '#4691C6',  
-        '#3A88C0',
-        '#2D7EBA',
-        '#2272B4',
-        '#1C67AD',
-        '#1A60A7',
-        '#1757A0',
-        '#164F99',
-        '#12458B',
-        '#0F3F82',
-        '#0D3776',
-        '#0A306A'
-    ]
+#     ls_break = [0, 0.05, 0.1, 1, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60, 70, 80, 100]
+#     ls_break = [0, 0.005, 0.01, 0.02, 0.03, 0.04, 0.05, 0.06, 0.07, 0.08, 0.1, 0.2, 0.3, 0.5, 0.7, 1.0, 1.5, 2.0, 3.0]
+#     ls_break = [0, 0.003, 0.006, 0.009, 0.012, 0.015, 0.018, 0.022, 0.026, 0.030, 0.035, 0.040, 0.05, 0.06, 0.07, 0.08, 1.00, 2.00, 3.00]
+# todo!!!!!
+    df_plot_rec = df_plot.applymap(float) * 100
+    ls_max = []
+    for i in df_plot_rec.values.tolist():
+        ls_max.extend(i)
+    ls_break = list(np.arange(0,max(ls_max),max(ls_max)/100))
+    ls_color_middle = make_color_list(hex_to_rgb('#87BDDB'), hex_to_rgb('#0A306A'),length_out=80, back_format="Hex")
+    ls_color_top = ['#0A306A'] * 20
+    ls_color_bottom = ['#EFEFEF'] * 5 + ['#DDEAF6'] * 5 + ['#A9CEE4'] * 5 + ['#87BDDB'] * 5
+    ls_color = ls_color_bottom + ls_color_middle + ls_color_top
+#     print(df_plot_rec.values.tolist())
+    print(ls_color)
+    print(ls_break)
+#     ls_color = [
+#         '#EFEFEF',
+#         '#DDEAF6',
+#         '#A9CEE4',
+#         '#87BDDB',
+#         '#6AABD3',
+#         '#57A0CD',
+#         '#4691C6',  
+#         '#3A88C0',
+#         '#2D7EBA',
+#         '#2272B4',
+#         '#1C67AD',
+#         '#1A60A7',
+#         '#1757A0',
+#         '#164F99',
+#         '#12458B',
+#         '#0F3F82',
+#         '#0D3776',
+#         '#0A306A'
+#     ]
 
     # data for test
     # df_plot = pd.read_csv('./df_plot.csv', index_col=0)
@@ -1214,6 +1176,7 @@ if __name__ == '__main__':
     # num_extend = 10
     # input_mut_direction = 'GA,CT'
     df_plot_rec = df_plot.applymap(float) * 100
+    # heatmap颜色，去map_hex_for_matrix函数中调整
     df_plot_rec_cmap = df_plot_rec.applymap(map_hex_for_matrix)
     df_plot_rec.loc['On-Target', :] = df_onTarget_Ref.loc['On-target', :]
     df_plot_rec.loc['Reference', :] = df_onTarget_Ref.loc['Ref', :]
@@ -1300,8 +1263,8 @@ if __name__ == '__main__':
     # add cbar
     # start from this site
     site_x = df_plot.shape[1] + 1
-    site_y = -figure_height_heatmap * 0.9 - 1
-    step_scale = 0.7
+    site_y = -figure_height_heatmap * 0.1 - 1
+    step_scale = 0.1
     print '[cbar_scale]: %s' % step_scale
 
 
@@ -1309,32 +1272,35 @@ if __name__ == '__main__':
         site_y += step_scale
         ax.add_patch(matplotlib.patches.Rectangle(
             (site_x, site_y),
-            width=step_scale,
+#             width=step_scale,
+            width=1,
             height=step_scale,
-            linestyle='-',
+#             linestyle='-',
             fill=True,
             facecolor=color,
-            edgecolor='#AAAAAA',
-            linewidth=3 * step_scale
+#             edgecolor='#AAAAAA',
+#             linewidth=3 * step_scale
 
         ))
 
     # add cbar text
     # start from this site
     site_x = df_plot.shape[1] + 1
-    site_y = -figure_height_heatmap * 0.9
-    for label in ls_break:
+    site_y = -figure_height_heatmap * 0.1
+    for idx,label in enumerate(ls_break):
         site_y += step_scale
-        ax.text(
-            x=site_x + 1.1,
-            y=site_y - 1,
-            s=label,
-            horizontalalignment='left',
-            verticalalignment='center',
-            fontsize=34 / 1.5 * step_scale,
-            fontname="DejaVu Sans",
-            alpha=1
-        )
+        if idx%10==0:
+            ax.text(
+                x=site_x + 1.1,
+                y=site_y - 1,
+                s=round(label,4),
+                horizontalalignment='left',
+                verticalalignment='center',
+                fontsize=34 / 1.5,
+    #             fontsize=34 / 1.5 * step_scale,
+                fontname="DejaVu Sans",
+                alpha=1
+            )
     # cax = plt.gcf().axes[-1]
     # cax.tick_params(labelsize=44, direction='in', top=False, bottom=False, left=False, right=False)
 
@@ -1535,7 +1501,18 @@ if __name__ == '__main__':
 
     # add text
     for text_x, text_y, text_info, text_fontsize in text_list:
-        plt.text(
+        if " to " in str(text_info):
+            plt.text(
+                x=text_x+0.3,
+                y=text_y,
+                s=text_info,
+                horizontalalignment='right',
+                verticalalignment='center',
+                fontsize=text_fontsize,
+                fontname="DejaVu Sans"
+            )
+        else:
+            plt.text(
             x=text_x,
             y=text_y,
             s=text_info,
