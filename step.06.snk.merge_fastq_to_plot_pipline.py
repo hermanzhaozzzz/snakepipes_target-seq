@@ -7,12 +7,12 @@
 ########################################################################
 # run on abyss
 # /home/menghaowei/menghw_HD/BE_project/20.target_seq_all/16.APOmut_screen.20200707
-CUTADAPT = "/home/zhaohuanan/zhaohn_HD/miniconda3/bin/cutadapt"
-BWA = "/home/zhaohuanan/zhaohn_HD/miniconda3/bin/bwa"
-SAMTOOLS = "/home/zhaohuanan/zhaohn_HD/miniconda3/bin/samtools"
-BEDTOOLS = "/home/zhaohuanan/zhaohn_HD/miniconda3/bin/bedtools" # ok
-SAMCLIP = "/home/zhaohuanan/zhaohn_HD/miniconda3/bin/samclip" # ok
-PYTHON = "/home/zhaohuanan/zhaohn_HD/miniconda3/envs/snakepipes_target-seq/bin/python" # ok
+# CUTADAPT = "/home/zhaohuanan/zhaohn_HD/miniconda3/bin/cutadapt"
+# BWA = "/home/zhaohuanan/zhaohn_HD/miniconda3/bin/bwa"
+# SAMTOOLS = "/home/zhaohuanan/zhaohn_HD/miniconda3/bin/samtools"
+# BEDTOOLS = "/home/zhaohuanan/zhaohn_HD/miniconda3/bin/bedtools" # ok
+# SAMCLIP = "/home/zhaohuanan/zhaohn_HD/miniconda3/bin/samclip" # ok
+# PYTHON = "/home/zhaohuanan/zhaohn_HD/miniconda3/envs/snakepipes_target-seq/bin/python" # ok
 
 
 
@@ -59,25 +59,55 @@ defult_sgRNA_dict_for_plot = {
 #     "ND516":"TGACCCCCATGCCTCAGGATACTCCTCAATAGCCATCG", # run ND6 genome use ND6 on-target sequence
 # }
 
+
+# --------------------------------------------------------------->>>>>>>
+# software
+# --------------------------------------------------------------->>>>>>>
+# make sure the fastqqc and the multiqc are in you PATH
+# get the application path
+PYTHON = "/home/zhaohuanan/zhaohn_HD/miniconda3/envs/snakepipes_target-seq/bin/python" # ok
+print('PATH python:', PYTHON)
+with os.popen("which cutadapt") as path:
+    CUTADAPT = path.read().strip()
+    print('PATH cutadapt:', CUTADAPT)
+with os.popen("which bwa") as path:
+    BWA = path.read().strip()
+    print('PATH bwa:', BWA)
+with os.popen("which bowtie") as path:
+    BOWTIE = path.read().strip()
+    BOWTIE_BUILD = BOWTIE + '-build'
+    print('PATH bowtie:', BOWTIE)
+    print('PATH bowtie-build:', BOWTIE_BUILD)
+with os.popen("which samtools") as path:
+    SAMTOOLS = path.read().strip()
+    print('PATH samtools:', SAMTOOLS)    
+with os.popen("which bedtools") as path:
+    BEDTOOLS = path.read().strip()
+    print('PATH bedtools:', BEDTOOLS)    
+with os.popen("which samclip") as path:
+    SAMCLIP = path.read().strip()
+    print('PATH samclip:', SAMCLIP)
+with os.popen("which samclip") as path:
+    SAMCLIP = path.read().strip()
+    print('PATH samclip:', SAMCLIP)
+with os.popen("which samclip") as path:
+    SAMCLIP = path.read().strip()
+    print('PATH samclip:', SAMCLIP)
+
 rule all:
     input:
         expand("../TargetSeq-{lib}/cutoff_{cutoff}/mapping/{sample}_R{read_idx}_cutadapt.fq.gz",lib=LIBS,sample=SAMPLES,read_idx=READ_IDX,cutoff=CUTOFF),
-        expand("../TargetSeq-{lib}/cutoff_{cutoff}/mapping/{sample}_bwa_sort.bam",lib=LIBS,sample=SAMPLES,cutoff=CUTOFF),
-        expand("../TargetSeq-{lib}/cutoff_{cutoff}/mapping/{sample}_bwa_sort.bam.bai",lib=LIBS,sample=SAMPLES,cutoff=CUTOFF),
-        expand("../TargetSeq-{lib}/cutoff_{cutoff}/mapping/{sample}_bwa_sort.mpileup",lib=LIBS,sample=SAMPLES,cutoff=CUTOFF),
-        expand("../TargetSeq-{lib}/cutoff_{cutoff}/mapping/{sample}_bwa_sort.bmat",lib=LIBS,sample=SAMPLES,cutoff=CUTOFF),
+        expand('../reference.fasta/{sample}.ref.upper.fa',sample=SAMPLES),
+        expand("../TargetSeq-{lib}/cutoff_{cutoff}/mapping/{sample}_bt1_sort.bam",lib=LIBS,sample=SAMPLES,cutoff=CUTOFF),
+        expand("../TargetSeq-{lib}/cutoff_{cutoff}/mapping/{sample}_bt1_sort.bam.bai",lib=LIBS,sample=SAMPLES,cutoff=CUTOFF),
+        expand("../TargetSeq-{lib}/cutoff_{cutoff}/mapping/{sample}_bt1_sort.mpileup",lib=LIBS,sample=SAMPLES,cutoff=CUTOFF),
+        expand("../TargetSeq-{lib}/cutoff_{cutoff}/mapping/{sample}_bt1_sort.bmat",lib=LIBS,sample=SAMPLES,cutoff=CUTOFF),
         expand("../all_plot/cutoff_{cutoff}.ext50/TargetSeq-{lib}_{sample}_cutoff_{cutoff}_indel.ext50.pdf",lib=LIBS,sample=SAMPLES,cutoff=CUTOFF),
         expand('../reference.fasta/{sample}.sgRNA.upper.fa.seq',sample=SAMPLES)
-        
-
-# wildcard_constraints:
-#     pass
-
-
 rule check_file:
     output:
-        "../TargetSeq-{lib}/cutoff_{cutoff}/merge.fastq/{sample}_merge_barcode_R1.fastq",
-        "../TargetSeq-{lib}/cutoff_{cutoff}/merge.fastq/{sample}_merge_barcode_R2.fastq"
+        "../TargetSeq-{lib}/cutoff_{cutoff}/merge.fastq/{sample}_merge_barcode_R1.fastq.gz",
+        "../TargetSeq-{lib}/cutoff_{cutoff}/merge.fastq/{sample}_merge_barcode_R2.fastq.gz"
     run:
         try:
             open(output[0],'r')
@@ -90,43 +120,68 @@ rule check_file:
             
 rule cutadapt:
     input:
-        "../TargetSeq-{lib}/cutoff_{cutoff}/merge.fastq/{sample}_merge_barcode_R1.fastq",
-        "../TargetSeq-{lib}/cutoff_{cutoff}/merge.fastq/{sample}_merge_barcode_R2.fastq"
+        "../TargetSeq-{lib}/cutoff_{cutoff}/merge.fastq/{sample}_merge_barcode_R1.fastq.gz",
+        "../TargetSeq-{lib}/cutoff_{cutoff}/merge.fastq/{sample}_merge_barcode_R2.fastq.gz"
     output:
         "../TargetSeq-{lib}/cutoff_{cutoff}/mapping/{sample}_R1_cutadapt.fq.gz",
         "../TargetSeq-{lib}/cutoff_{cutoff}/mapping/{sample}_R2_cutadapt.fq.gz"
     log:
         "../TargetSeq-{lib}/cutoff_{cutoff}/mapping/{sample}_cutadapt.log"
     shell:
-        #"""
-        #srun -T 24 \
         """
         {CUTADAPT} -j 24 --times 1  -e 0.1  -O 3  --quality-cutoff 25 \
         -m 100 -a AGATCGGAAGAGCACACGTCTGAACTCCAGTCAC \
         -A AGATCGGAAGAGCGTCGTGTAGGGAAAGAGTGTAGATCTCGGTGGTCGCCGTATCATT \
         -o {output[0]} -p {output[1]} {input[0]} {input[1]} > {log} 2>&1
-        """  
-
-rule bwa_mapping:
+        """
+# rule bwa_mapping:
+#     input:
+#         "../TargetSeq-{lib}/cutoff_{cutoff}/mapping/{sample}_R1_cutadapt.fq.gz",
+#         "../TargetSeq-{lib}/cutoff_{cutoff}/mapping/{sample}_R2_cutadapt.fq.gz",
+#     output:
+#         "../TargetSeq-{lib}/cutoff_{cutoff}/mapping/{sample}_bt1.sam"
+#     params:
+#         ref = '../reference.fasta/{sample}.ref.upper.fa'
+#     log:
+#         "../TargetSeq-{lib}/cutoff_{cutoff}/mapping/{sample}_bt1.log"
+#     shell:
+#         """
+#         {BWA} mem {params.ref} {input[0]} {input[1]} -t 24 -M > {output} 2>{log}
+#         """
+rule bowtie_build_index:
+    input:
+        '../reference.fasta/{sample}.ref.upper.fa'
+    output:
+        '../reference.fasta/{sample}.ref.upper.fa.bowtie_index'# 形式输出1个即可
+    log:
+        '../reference.fasta/{sample}.ref.upper.fa.bowtie-build.log'
+    shell:
+        """
+        touch {output}
+        echo "a formal output test" > {output}
+        {BOWTIE_BUILD} {input} {output} 2>{log}
+        """
+rule bowtie1_mapping:
     input:
         "../TargetSeq-{lib}/cutoff_{cutoff}/mapping/{sample}_R1_cutadapt.fq.gz",
         "../TargetSeq-{lib}/cutoff_{cutoff}/mapping/{sample}_R2_cutadapt.fq.gz",
+        '../reference.fasta/{sample}.ref.upper.fa.bowtie_index'
     output:
-        "../TargetSeq-{lib}/cutoff_{cutoff}/mapping/{sample}_bwa.sam"
-    params:
-        ref = '../reference.fasta/{sample}.ref.upper.fa'
+        "../TargetSeq-{lib}/cutoff_{cutoff}/mapping/{sample}_bt1.sam"
     log:
-        "../TargetSeq-{lib}/cutoff_{cutoff}/mapping/{sample}_bwa.log"
+        "../TargetSeq-{lib}/cutoff_{cutoff}/mapping/{sample}_bt1.log"
     shell:
         """
-        {BWA} mem {params.ref} {input[0]} {input[1]} -t 24 -M > {output} 2>{log}
+        {BOWTIE} -x {input[2]} -1 {input[0]} -2 {input[1]} -p 24 -S {output} 2>{log}
         """
+
+##
 rule sam_to_bam:
     input:
-        sam = "../TargetSeq-{lib}/cutoff_{cutoff}/mapping/{sample}_bwa.sam",
+        sam = "../TargetSeq-{lib}/cutoff_{cutoff}/mapping/{sample}_bt1.sam",
         ref = '../reference.fasta/{sample}.ref.upper.fa'
     output:
-        "../TargetSeq-{lib}/cutoff_{cutoff}/mapping/{sample}_bwa.bam"
+        "../TargetSeq-{lib}/cutoff_{cutoff}/mapping/{sample}_bt1.bam"
     shell:
         """
         {SAMTOOLS} view -h -f 1 -F 268 {input.sam} \
@@ -138,28 +193,28 @@ rule sam_to_bam:
 
 rule samtools_sort_by_position:
     input:
-        "../TargetSeq-{lib}/cutoff_{cutoff}/mapping/{sample}_bwa.bam"
+        "../TargetSeq-{lib}/cutoff_{cutoff}/mapping/{sample}_bt1.bam"
     output:
-        "../TargetSeq-{lib}/cutoff_{cutoff}/mapping/{sample}_bwa_sort.bam"
+        "../TargetSeq-{lib}/cutoff_{cutoff}/mapping/{sample}_bt1_sort.bam"
     shell:
         "{SAMTOOLS} sort -O BAM -o {output} -T {output}.temp -@ 6 -m 2G {input}"
 
 
 rule samtools_index:
     input:
-        "../TargetSeq-{lib}/cutoff_{cutoff}/mapping/{sample}_bwa_sort.bam"
+        "../TargetSeq-{lib}/cutoff_{cutoff}/mapping/{sample}_bt1_sort.bam"
     output:
-        "../TargetSeq-{lib}/cutoff_{cutoff}/mapping/{sample}_bwa_sort.bam.bai"
+        "../TargetSeq-{lib}/cutoff_{cutoff}/mapping/{sample}_bt1_sort.bam.bai"
     shell:
         "{SAMTOOLS} index -@ 6 {input} {output}"
 
 
 rule spike_in_mpileup:
     input:
-        "../TargetSeq-{lib}/cutoff_{cutoff}/mapping/{sample}_bwa_sort.bam",
-        "../TargetSeq-{lib}/cutoff_{cutoff}/mapping/{sample}_bwa_sort.bam.bai"
+        "../TargetSeq-{lib}/cutoff_{cutoff}/mapping/{sample}_bt1_sort.bam",
+        "../TargetSeq-{lib}/cutoff_{cutoff}/mapping/{sample}_bt1_sort.bam.bai"
     output:
-        "../TargetSeq-{lib}/cutoff_{cutoff}/mapping/{sample}_bwa_sort.mpileup"
+        "../TargetSeq-{lib}/cutoff_{cutoff}/mapping/{sample}_bt1_sort.mpileup"
     params:
         ref = '../reference.fasta/{sample}.ref.upper.fa'
     shell:
@@ -168,16 +223,16 @@ rule spike_in_mpileup:
 
 rule parse_mpileup:
     input: 
-        "../TargetSeq-{lib}/cutoff_{cutoff}/mapping/{sample}_bwa_sort.mpileup"
+        "../TargetSeq-{lib}/cutoff_{cutoff}/mapping/{sample}_bt1_sort.mpileup"
     output:
-        "../TargetSeq-{lib}/cutoff_{cutoff}/mapping/{sample}_bwa_sort.bmat"
+        "../TargetSeq-{lib}/cutoff_{cutoff}/mapping/{sample}_bt1_sort.bmat"
     shell:
         "{PYTHON} ./program/parse-mpileup-V04.py -i {input} -o {output} -n 0"
 
 
 rule bmat_plot:
     input: 
-        "../TargetSeq-{lib}/cutoff_{cutoff}/mapping/{sample}_bwa_sort.bmat"
+        "../TargetSeq-{lib}/cutoff_{cutoff}/mapping/{sample}_bt1_sort.bmat"
     output:
         "../all_plot/cutoff_{cutoff}.ext50/TargetSeq-{lib}_{sample}_cutoff_{cutoff}_indel.ext50.pdf"
     params:
