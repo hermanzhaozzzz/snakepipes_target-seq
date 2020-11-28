@@ -1,8 +1,2 @@
-# del ref fasta
-rm -rf ../TargetSeq_BED_sample_lib
-# del snk.05.mapping files
-rm -rf ../TargetSeq-*/cutoff_10/mapping
-# del snk.03.merge fastq files
-#rm -rf ../TargetSeq-*/cutoff_3/merge.fastq
-
+rm -rf ../all_plot* && rm -rf ../reference.fasta && rm -rf ../TargetSeq-*/cutoff_*/mapping
 echo "Done"
