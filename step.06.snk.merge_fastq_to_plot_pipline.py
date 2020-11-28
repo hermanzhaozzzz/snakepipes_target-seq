@@ -76,12 +76,6 @@ with os.popen("which bedtools") as path:
 with os.popen("which samclip") as path:
     SAMCLIP = path.read().strip()
     print('PATH samclip:', SAMCLIP)
-with os.popen("which samclip") as path:
-    SAMCLIP = path.read().strip()
-    print('PATH samclip:', SAMCLIP)
-with os.popen("which samclip") as path:
-    SAMCLIP = path.read().strip()
-    print('PATH samclip:', SAMCLIP)
 
 rule all:
     input:
