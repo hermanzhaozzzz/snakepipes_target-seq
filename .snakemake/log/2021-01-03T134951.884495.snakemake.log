@@ -1,5 +1,0 @@
-Building DAG of jobs...
-MissingInputException in line 71 of /gpfs/user/zhaohuanan/3.project/25.2020-12_02_CBE_DetectSeq_paper_revise/TargetSeq_20201227/sub1_cpf1_cas9/snakepipes_target-seq/step.03.snk.quantify_for_every_region.py:
-Missing input files for rule cp:
-../TargetSeq-cas9-RUX-25/demultiplex.fastq/RX-on\ target_demultiplex_R1.fastq
-../TargetSeq-cas9-RUX-25/demultiplex.fastq/RX-on\ target_demultiplex_R2.fastq
