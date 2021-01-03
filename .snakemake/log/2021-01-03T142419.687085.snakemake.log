@@ -1,0 +1,1040 @@
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided cores: 48
+Rules claiming more threads will be scaled down.
+Job counts:
+	count	jobs
+	1	all
+	156	bmat_plot
+	156	bowtie1_mapping
+	10	bowtie_build_index
+	78	check_file
+	156	cutadapt
+	156	parse_mpileup
+	156	sam_to_bam
+	156	samtools_index
+	156	samtools_sort_by_position
+	156	spike_in_mpileup
+	1337
+
+[Sun Jan  3 14:24:22 2021]
+rule cutadapt:
+    input: ../TargetSeq-cas9-RUX-25/cutoff_5/merge.fastq/RX-Dig5_merge_barcode_R1.fastq.gz, ../TargetSeq-cas9-RUX-25/cutoff_5/merge.fastq/RX-Dig5_merge_barcode_R2.fastq.gz
+    output: ../TargetSeq-cas9-RUX-25/cutoff_5/mapping/RX-Dig5_R1_cutadapt.fq.gz, ../TargetSeq-cas9-RUX-25/cutoff_5/mapping/RX-Dig5_R2_cutadapt.fq.gz
+    log: ../TargetSeq-cas9-RUX-25/cutoff_5/mapping/RX-Dig5_cutadapt.log
+    jobid: 75
+    reason: Missing output files: ../TargetSeq-cas9-RUX-25/cutoff_5/mapping/RX-Dig5_R2_cutadapt.fq.gz, ../TargetSeq-cas9-RUX-25/cutoff_5/mapping/RX-Dig5_R1_cutadapt.fq.gz
+    wildcards: lib=cas9-RUX-25, cutoff=5, sample=RX-Dig5
+
+
+        /home/zhaohuanan/zhaohn_HD/miniconda3/bin/cutadapt -j 24 --times 1  -e 0.1  -O 3  --quality-cutoff 25         -m 100 -a AGATCGGAAGAGCACACGTCTGAACTCCAGTCAC         -A AGATCGGAAGAGCGTCGTGTAGGGAAAGAGTGTAGATCTCGGTGGTCGCCGTATCATT         -o ../TargetSeq-cas9-RUX-25/cutoff_5/mapping/RX-Dig5_R1_cutadapt.fq.gz -p ../TargetSeq-cas9-RUX-25/cutoff_5/mapping/RX-Dig5_R2_cutadapt.fq.gz ../TargetSeq-cas9-RUX-25/cutoff_5/merge.fastq/RX-Dig5_merge_barcode_R1.fastq.gz ../TargetSeq-cas9-RUX-25/cutoff_5/merge.fastq/RX-Dig5_merge_barcode_R2.fastq.gz > ../TargetSeq-cas9-RUX-25/cutoff_5/mapping/RX-Dig5_cutadapt.log 2>&1
+        
+
+[Sun Jan  3 14:24:22 2021]
+rule cutadapt:
+    input: ../TargetSeq-cpf1-RUX-21/cutoff_3/merge.fastq/RX-Dig4_merge_barcode_R1.fastq.gz, ../TargetSeq-cpf1-RUX-21/cutoff_3/merge.fastq/RX-Dig4_merge_barcode_R2.fastq.gz
+    output: ../TargetSeq-cpf1-RUX-21/cutoff_3/mapping/RX-Dig4_R1_cutadapt.fq.gz, ../TargetSeq-cpf1-RUX-21/cutoff_3/mapping/RX-Dig4_R2_cutadapt.fq.gz
+    log: ../TargetSeq-cpf1-RUX-21/cutoff_3/mapping/RX-Dig4_cutadapt.log
+    jobid: 223
+    reason: Missing output files: ../TargetSeq-cpf1-RUX-21/cutoff_3/mapping/RX-Dig4_R2_cutadapt.fq.gz, ../TargetSeq-cpf1-RUX-21/cutoff_3/mapping/RX-Dig4_R1_cutadapt.fq.gz
+    wildcards: lib=cpf1-RUX-21, cutoff=3, sample=RX-Dig4
+
+
+        /home/zhaohuanan/zhaohn_HD/miniconda3/bin/cutadapt -j 24 --times 1  -e 0.1  -O 3  --quality-cutoff 25         -m 100 -a AGATCGGAAGAGCACACGTCTGAACTCCAGTCAC         -A AGATCGGAAGAGCGTCGTGTAGGGAAAGAGTGTAGATCTCGGTGGTCGCCGTATCATT         -o ../TargetSeq-cpf1-RUX-21/cutoff_3/mapping/RX-Dig4_R1_cutadapt.fq.gz -p ../TargetSeq-cpf1-RUX-21/cutoff_3/mapping/RX-Dig4_R2_cutadapt.fq.gz ../TargetSeq-cpf1-RUX-21/cutoff_3/merge.fastq/RX-Dig4_merge_barcode_R1.fastq.gz ../TargetSeq-cpf1-RUX-21/cutoff_3/merge.fastq/RX-Dig4_merge_barcode_R2.fastq.gz > ../TargetSeq-cpf1-RUX-21/cutoff_3/mapping/RX-Dig4_cutadapt.log 2>&1
+        
+
+[Sun Jan  3 14:24:22 2021]
+rule cutadapt:
+    input: ../TargetSeq-cas9-RUX-25/cutoff_5/merge.fastq/RX-cpf-9_merge_barcode_R1.fastq.gz, ../TargetSeq-cas9-RUX-25/cutoff_5/merge.fastq/RX-cpf-9_merge_barcode_R2.fastq.gz
+    output: ../TargetSeq-cas9-RUX-25/cutoff_5/mapping/RX-cpf-9_R1_cutadapt.fq.gz, ../TargetSeq-cas9-RUX-25/cutoff_5/mapping/RX-cpf-9_R2_cutadapt.fq.gz
+    log: ../TargetSeq-cas9-RUX-25/cutoff_5/mapping/RX-cpf-9_cutadapt.log
+    jobid: 135
+    reason: Missing output files: ../TargetSeq-cas9-RUX-25/cutoff_5/mapping/RX-cpf-9_R1_cutadapt.fq.gz, ../TargetSeq-cas9-RUX-25/cutoff_5/mapping/RX-cpf-9_R2_cutadapt.fq.gz
+    wildcards: lib=cas9-RUX-25, cutoff=5, sample=RX-cpf-9
+
+
+        /home/zhaohuanan/zhaohn_HD/miniconda3/bin/cutadapt -j 24 --times 1  -e 0.1  -O 3  --quality-cutoff 25         -m 100 -a AGATCGGAAGAGCACACGTCTGAACTCCAGTCAC         -A AGATCGGAAGAGCGTCGTGTAGGGAAAGAGTGTAGATCTCGGTGGTCGCCGTATCATT         -o ../TargetSeq-cas9-RUX-25/cutoff_5/mapping/RX-cpf-9_R1_cutadapt.fq.gz -p ../TargetSeq-cas9-RUX-25/cutoff_5/mapping/RX-cpf-9_R2_cutadapt.fq.gz ../TargetSeq-cas9-RUX-25/cutoff_5/merge.fastq/RX-cpf-9_merge_barcode_R1.fastq.gz ../TargetSeq-cas9-RUX-25/cutoff_5/merge.fastq/RX-cpf-9_merge_barcode_R2.fastq.gz > ../TargetSeq-cas9-RUX-25/cutoff_5/mapping/RX-cpf-9_cutadapt.log 2>&1
+        
+
+[Sun Jan  3 14:24:22 2021]
+rule bowtie_build_index:
+    input: ../reference.fasta/RX-cas-5.ref.upper.fa
+    output: ../reference.fasta/RX-cas-5.ref.upper.fa.bowtie_index
+    log: ../reference.fasta/RX-cas-5.ref.upper.fa.bowtie-build.log
+    jobid: 356
+    reason: Missing output files: ../reference.fasta/RX-cas-5.ref.upper.fa.bowtie_index
+    wildcards: sample=RX-cas-5
+
+
+        touch ../reference.fasta/RX-cas-5.ref.upper.fa.bowtie_index
+        echo "a formal output test" > ../reference.fasta/RX-cas-5.ref.upper.fa.bowtie_index
+        /home/zhaohuanan/zhaohn_HD/miniconda3/bin/bowtie-build ../reference.fasta/RX-cas-5.ref.upper.fa ../reference.fasta/RX-cas-5.ref.upper.fa.bowtie_index 2>../reference.fasta/RX-cas-5.ref.upper.fa.bowtie-build.log
+        
+
+[Sun Jan  3 14:24:22 2021]
+rule check_file:
+    output: ../TargetSeq-cas9-RUX-25/cutoff_3/merge.fastq/RX-cpf-8_merge_barcode_R1.fastq.gz, ../TargetSeq-cas9-RUX-25/cutoff_3/merge.fastq/RX-cpf-8_merge_barcode_R2.fastq.gz
+    jobid: 128
+    reason: Missing output files: ../TargetSeq-cas9-RUX-25/cutoff_3/merge.fastq/RX-cpf-8_merge_barcode_R1.fastq.gz, ../TargetSeq-cas9-RUX-25/cutoff_3/merge.fastq/RX-cpf-8_merge_barcode_R2.fastq.gz
+    wildcards: lib=cas9-RUX-25, cutoff=3, sample=RX-cpf-8
+
+[Sun Jan  3 14:24:22 2021]
+rule bowtie_build_index:
+    input: ../reference.fasta/RX-cas-2.ref.upper.fa
+    output: ../reference.fasta/RX-cas-2.ref.upper.fa.bowtie_index
+    log: ../reference.fasta/RX-cas-2.ref.upper.fa.bowtie-build.log
+    jobid: 326
+    reason: Missing output files: ../reference.fasta/RX-cas-2.ref.upper.fa.bowtie_index
+    wildcards: sample=RX-cas-2
+
+
+        touch ../reference.fasta/RX-cas-2.ref.upper.fa.bowtie_index
+        echo "a formal output test" > ../reference.fasta/RX-cas-2.ref.upper.fa.bowtie_index
+        /home/zhaohuanan/zhaohn_HD/miniconda3/bin/bowtie-build ../reference.fasta/RX-cas-2.ref.upper.fa ../reference.fasta/RX-cas-2.ref.upper.fa.bowtie_index 2>../reference.fasta/RX-cas-2.ref.upper.fa.bowtie-build.log
+        
+
+[Sun Jan  3 14:24:22 2021]
+rule cutadapt:
+    input: ../TargetSeq-cas9-RUX-25/cutoff_5/merge.fastq/RX-cas-2_merge_barcode_R1.fastq.gz, ../TargetSeq-cas9-RUX-25/cutoff_5/merge.fastq/RX-cas-2_merge_barcode_R2.fastq.gz
+    output: ../TargetSeq-cas9-RUX-25/cutoff_5/mapping/RX-cas-2_R1_cutadapt.fq.gz, ../TargetSeq-cas9-RUX-25/cutoff_5/mapping/RX-cas-2_R2_cutadapt.fq.gz
+    log: ../TargetSeq-cas9-RUX-25/cutoff_5/mapping/RX-cas-2_cutadapt.log
+    jobid: 9
+    reason: Missing output files: ../TargetSeq-cas9-RUX-25/cutoff_5/mapping/RX-cas-2_R2_cutadapt.fq.gz, ../TargetSeq-cas9-RUX-25/cutoff_5/mapping/RX-cas-2_R1_cutadapt.fq.gz
+    wildcards: lib=cas9-RUX-25, cutoff=5, sample=RX-cas-2
+
+
+        /home/zhaohuanan/zhaohn_HD/miniconda3/bin/cutadapt -j 24 --times 1  -e 0.1  -O 3  --quality-cutoff 25         -m 100 -a AGATCGGAAGAGCACACGTCTGAACTCCAGTCAC         -A AGATCGGAAGAGCGTCGTGTAGGGAAAGAGTGTAGATCTCGGTGGTCGCCGTATCATT         -o ../TargetSeq-cas9-RUX-25/cutoff_5/mapping/RX-cas-2_R1_cutadapt.fq.gz -p ../TargetSeq-cas9-RUX-25/cutoff_5/mapping/RX-cas-2_R2_cutadapt.fq.gz ../TargetSeq-cas9-RUX-25/cutoff_5/merge.fastq/RX-cas-2_merge_barcode_R1.fastq.gz ../TargetSeq-cas9-RUX-25/cutoff_5/merge.fastq/RX-cas-2_merge_barcode_R2.fastq.gz > ../TargetSeq-cas9-RUX-25/cutoff_5/mapping/RX-cas-2_cutadapt.log 2>&1
+        
+
+[Sun Jan  3 14:24:22 2021]
+rule check_file:
+    output: ../TargetSeq-cpf1-RUX-21/cutoff_3/merge.fastq/RX-cpf-9_merge_barcode_R1.fastq.gz, ../TargetSeq-cpf1-RUX-21/cutoff_3/merge.fastq/RX-cpf-9_merge_barcode_R2.fastq.gz
+    jobid: 290
+    reason: Missing output files: ../TargetSeq-cpf1-RUX-21/cutoff_3/merge.fastq/RX-cpf-9_merge_barcode_R2.fastq.gz, ../TargetSeq-cpf1-RUX-21/cutoff_3/merge.fastq/RX-cpf-9_merge_barcode_R1.fastq.gz
+    wildcards: lib=cpf1-RUX-21, cutoff=3, sample=RX-cpf-9
+
+[Sun Jan  3 14:24:22 2021]
+rule check_file:
+    output: ../TargetSeq-cas9-RUX-25/cutoff_10/merge.fastq/RX-cpf-10_merge_barcode_R1.fastq.gz, ../TargetSeq-cas9-RUX-25/cutoff_10/merge.fastq/RX-cpf-10_merge_barcode_R2.fastq.gz
+    jobid: 144
+    reason: Missing output files: ../TargetSeq-cas9-RUX-25/cutoff_10/merge.fastq/RX-cpf-10_merge_barcode_R2.fastq.gz, ../TargetSeq-cas9-RUX-25/cutoff_10/merge.fastq/RX-cpf-10_merge_barcode_R1.fastq.gz
+    wildcards: lib=cas9-RUX-25, cutoff=10, sample=RX-cpf-10
+
+[Sun Jan  3 14:24:22 2021]
+rule cutadapt:
+    input: ../TargetSeq-cpf1-RUX-21/cutoff_3/merge.fastq/RX-cpf-2_merge_barcode_R1.fastq.gz, ../TargetSeq-cpf1-RUX-21/cutoff_3/merge.fastq/RX-cpf-2_merge_barcode_R2.fastq.gz
+    output: ../TargetSeq-cpf1-RUX-21/cutoff_3/mapping/RX-cpf-2_R1_cutadapt.fq.gz, ../TargetSeq-cpf1-RUX-21/cutoff_3/mapping/RX-cpf-2_R2_cutadapt.fq.gz
+    log: ../TargetSeq-cpf1-RUX-21/cutoff_3/mapping/RX-cpf-2_cutadapt.log
+    jobid: 247
+    reason: Missing output files: ../TargetSeq-cpf1-RUX-21/cutoff_3/mapping/RX-cpf-2_R2_cutadapt.fq.gz, ../TargetSeq-cpf1-RUX-21/cutoff_3/mapping/RX-cpf-2_R1_cutadapt.fq.gz
+    wildcards: lib=cpf1-RUX-21, cutoff=3, sample=RX-cpf-2
+
+
+        /home/zhaohuanan/zhaohn_HD/miniconda3/bin/cutadapt -j 24 --times 1  -e 0.1  -O 3  --quality-cutoff 25         -m 100 -a AGATCGGAAGAGCACACGTCTGAACTCCAGTCAC         -A AGATCGGAAGAGCGTCGTGTAGGGAAAGAGTGTAGATCTCGGTGGTCGCCGTATCATT         -o ../TargetSeq-cpf1-RUX-21/cutoff_3/mapping/RX-cpf-2_R1_cutadapt.fq.gz -p ../TargetSeq-cpf1-RUX-21/cutoff_3/mapping/RX-cpf-2_R2_cutadapt.fq.gz ../TargetSeq-cpf1-RUX-21/cutoff_3/merge.fastq/RX-cpf-2_merge_barcode_R1.fastq.gz ../TargetSeq-cpf1-RUX-21/cutoff_3/merge.fastq/RX-cpf-2_merge_barcode_R2.fastq.gz > ../TargetSeq-cpf1-RUX-21/cutoff_3/mapping/RX-cpf-2_cutadapt.log 2>&1
+        
+
+[Sun Jan  3 14:24:22 2021]
+rule check_file:
+    output: ../TargetSeq-cpf1-RUX-21/cutoff_5/merge.fastq/RX-cas-8_merge_barcode_R1.fastq.gz, ../TargetSeq-cpf1-RUX-21/cutoff_5/merge.fastq/RX-cas-8_merge_barcode_R2.fastq.gz
+    jobid: 202
+    reason: Missing output files: ../TargetSeq-cpf1-RUX-21/cutoff_5/merge.fastq/RX-cas-8_merge_barcode_R1.fastq.gz, ../TargetSeq-cpf1-RUX-21/cutoff_5/merge.fastq/RX-cas-8_merge_barcode_R2.fastq.gz
+    wildcards: lib=cpf1-RUX-21, cutoff=5, sample=RX-cas-8
+
+[Sun Jan  3 14:24:22 2021]
+rule check_file:
+    output: ../TargetSeq-cas9-RUX-25/cutoff_10/merge.fastq/RX-Dig1_merge_barcode_R1.fastq.gz, ../TargetSeq-cas9-RUX-25/cutoff_10/merge.fastq/RX-Dig1_merge_barcode_R2.fastq.gz
+    jobid: 54
+    reason: Missing output files: ../TargetSeq-cas9-RUX-25/cutoff_10/merge.fastq/RX-Dig1_merge_barcode_R1.fastq.gz, ../TargetSeq-cas9-RUX-25/cutoff_10/merge.fastq/RX-Dig1_merge_barcode_R2.fastq.gz
+    wildcards: lib=cas9-RUX-25, cutoff=10, sample=RX-Dig1
+
+[Sun Jan  3 14:24:22 2021]
+rule cutadapt:
+    input: ../TargetSeq-cpf1-RUX-21/cutoff_5/merge.fastq/RX-cas-1_merge_barcode_R1.fastq.gz, ../TargetSeq-cpf1-RUX-21/cutoff_5/merge.fastq/RX-cas-1_merge_barcode_R2.fastq.gz
+    output: ../TargetSeq-cpf1-RUX-21/cutoff_5/mapping/RX-cas-1_R1_cutadapt.fq.gz, ../TargetSeq-cpf1-RUX-21/cutoff_5/mapping/RX-cas-1_R2_cutadapt.fq.gz
+    log: ../TargetSeq-cpf1-RUX-21/cutoff_5/mapping/RX-cas-1_cutadapt.log
+    jobid: 159
+    reason: Missing output files: ../TargetSeq-cpf1-RUX-21/cutoff_5/mapping/RX-cas-1_R1_cutadapt.fq.gz, ../TargetSeq-cpf1-RUX-21/cutoff_5/mapping/RX-cas-1_R2_cutadapt.fq.gz
+    wildcards: lib=cpf1-RUX-21, cutoff=5, sample=RX-cas-1
+
+
+        /home/zhaohuanan/zhaohn_HD/miniconda3/bin/cutadapt -j 24 --times 1  -e 0.1  -O 3  --quality-cutoff 25         -m 100 -a AGATCGGAAGAGCACACGTCTGAACTCCAGTCAC         -A AGATCGGAAGAGCGTCGTGTAGGGAAAGAGTGTAGATCTCGGTGGTCGCCGTATCATT         -o ../TargetSeq-cpf1-RUX-21/cutoff_5/mapping/RX-cas-1_R1_cutadapt.fq.gz -p ../TargetSeq-cpf1-RUX-21/cutoff_5/mapping/RX-cas-1_R2_cutadapt.fq.gz ../TargetSeq-cpf1-RUX-21/cutoff_5/merge.fastq/RX-cas-1_merge_barcode_R1.fastq.gz ../TargetSeq-cpf1-RUX-21/cutoff_5/merge.fastq/RX-cas-1_merge_barcode_R2.fastq.gz > ../TargetSeq-cpf1-RUX-21/cutoff_5/mapping/RX-cas-1_cutadapt.log 2>&1
+        
+
+[Sun Jan  3 14:24:22 2021]
+rule check_file:
+    output: ../TargetSeq-cas9-RUX-25/cutoff_10/merge.fastq/RX-Dig6_merge_barcode_R1.fastq.gz, ../TargetSeq-cas9-RUX-25/cutoff_10/merge.fastq/RX-Dig6_merge_barcode_R2.fastq.gz
+    jobid: 84
+    reason: Missing output files: ../TargetSeq-cas9-RUX-25/cutoff_10/merge.fastq/RX-Dig6_merge_barcode_R1.fastq.gz, ../TargetSeq-cas9-RUX-25/cutoff_10/merge.fastq/RX-Dig6_merge_barcode_R2.fastq.gz
+    wildcards: lib=cas9-RUX-25, cutoff=10, sample=RX-Dig6
+
+[Sun Jan  3 14:24:22 2021]
+rule check_file:
+    output: ../TargetSeq-cpf1-RUX-21/cutoff_5/merge.fastq/RX-Dig5_merge_barcode_R1.fastq.gz, ../TargetSeq-cpf1-RUX-21/cutoff_5/merge.fastq/RX-Dig5_merge_barcode_R2.fastq.gz
+    jobid: 232
+    reason: Missing output files: ../TargetSeq-cpf1-RUX-21/cutoff_5/merge.fastq/RX-Dig5_merge_barcode_R1.fastq.gz, ../TargetSeq-cpf1-RUX-21/cutoff_5/merge.fastq/RX-Dig5_merge_barcode_R2.fastq.gz
+    wildcards: lib=cpf1-RUX-21, cutoff=5, sample=RX-Dig5
+
+[Sun Jan  3 14:24:22 2021]
+rule check_file:
+    output: ../TargetSeq-cpf1-RUX-21/cutoff_3/merge.fastq/RX-cpf-3_merge_barcode_R1.fastq.gz, ../TargetSeq-cpf1-RUX-21/cutoff_3/merge.fastq/RX-cpf-3_merge_barcode_R2.fastq.gz
+    jobid: 254
+    reason: Missing output files: ../TargetSeq-cpf1-RUX-21/cutoff_3/merge.fastq/RX-cpf-3_merge_barcode_R1.fastq.gz, ../TargetSeq-cpf1-RUX-21/cutoff_3/merge.fastq/RX-cpf-3_merge_barcode_R2.fastq.gz
+    wildcards: lib=cpf1-RUX-21, cutoff=3, sample=RX-cpf-3
+
+[Sun Jan  3 14:24:22 2021]
+rule cutadapt:
+    input: ../TargetSeq-cpf1-RUX-21/cutoff_10/merge.fastq/RX-cas-3_merge_barcode_R1.fastq.gz, ../TargetSeq-cpf1-RUX-21/cutoff_10/merge.fastq/RX-cas-3_merge_barcode_R2.fastq.gz
+    output: ../TargetSeq-cpf1-RUX-21/cutoff_10/mapping/RX-cas-3_R1_cutadapt.fq.gz, ../TargetSeq-cpf1-RUX-21/cutoff_10/mapping/RX-cas-3_R2_cutadapt.fq.gz
+    log: ../TargetSeq-cpf1-RUX-21/cutoff_10/mapping/RX-cas-3_cutadapt.log
+    jobid: 173
+    reason: Missing output files: ../TargetSeq-cpf1-RUX-21/cutoff_10/mapping/RX-cas-3_R2_cutadapt.fq.gz, ../TargetSeq-cpf1-RUX-21/cutoff_10/mapping/RX-cas-3_R1_cutadapt.fq.gz
+    wildcards: lib=cpf1-RUX-21, cutoff=10, sample=RX-cas-3
+
+
+        /home/zhaohuanan/zhaohn_HD/miniconda3/bin/cutadapt -j 24 --times 1  -e 0.1  -O 3  --quality-cutoff 25         -m 100 -a AGATCGGAAGAGCACACGTCTGAACTCCAGTCAC         -A AGATCGGAAGAGCGTCGTGTAGGGAAAGAGTGTAGATCTCGGTGGTCGCCGTATCATT         -o ../TargetSeq-cpf1-RUX-21/cutoff_10/mapping/RX-cas-3_R1_cutadapt.fq.gz -p ../TargetSeq-cpf1-RUX-21/cutoff_10/mapping/RX-cas-3_R2_cutadapt.fq.gz ../TargetSeq-cpf1-RUX-21/cutoff_10/merge.fastq/RX-cas-3_merge_barcode_R1.fastq.gz ../TargetSeq-cpf1-RUX-21/cutoff_10/merge.fastq/RX-cas-3_merge_barcode_R2.fastq.gz > ../TargetSeq-cpf1-RUX-21/cutoff_10/mapping/RX-cas-3_cutadapt.log 2>&1
+        
+
+[Sun Jan  3 14:24:22 2021]
+rule check_file:
+    output: ../TargetSeq-cas9-RUX-25/cutoff_5/merge.fastq/RX-cpf-8_merge_barcode_R1.fastq.gz, ../TargetSeq-cas9-RUX-25/cutoff_5/merge.fastq/RX-cpf-8_merge_barcode_R2.fastq.gz
+    jobid: 130
+    reason: Missing output files: ../TargetSeq-cas9-RUX-25/cutoff_5/merge.fastq/RX-cpf-8_merge_barcode_R1.fastq.gz, ../TargetSeq-cas9-RUX-25/cutoff_5/merge.fastq/RX-cpf-8_merge_barcode_R2.fastq.gz
+    wildcards: lib=cas9-RUX-25, cutoff=5, sample=RX-cpf-8
+
+[Sun Jan  3 14:24:22 2021]
+rule cutadapt:
+    input: ../TargetSeq-cas9-RUX-25/cutoff_3/merge.fastq/RX-Dig2_merge_barcode_R1.fastq.gz, ../TargetSeq-cas9-RUX-25/cutoff_3/merge.fastq/RX-Dig2_merge_barcode_R2.fastq.gz
+    output: ../TargetSeq-cas9-RUX-25/cutoff_3/mapping/RX-Dig2_R1_cutadapt.fq.gz, ../TargetSeq-cas9-RUX-25/cutoff_3/mapping/RX-Dig2_R2_cutadapt.fq.gz
+    log: ../TargetSeq-cas9-RUX-25/cutoff_3/mapping/RX-Dig2_cutadapt.log
+    jobid: 55
+    reason: Missing output files: ../TargetSeq-cas9-RUX-25/cutoff_3/mapping/RX-Dig2_R1_cutadapt.fq.gz, ../TargetSeq-cas9-RUX-25/cutoff_3/mapping/RX-Dig2_R2_cutadapt.fq.gz
+    wildcards: lib=cas9-RUX-25, cutoff=3, sample=RX-Dig2
+
+
+        /home/zhaohuanan/zhaohn_HD/miniconda3/bin/cutadapt -j 24 --times 1  -e 0.1  -O 3  --quality-cutoff 25         -m 100 -a AGATCGGAAGAGCACACGTCTGAACTCCAGTCAC         -A AGATCGGAAGAGCGTCGTGTAGGGAAAGAGTGTAGATCTCGGTGGTCGCCGTATCATT         -o ../TargetSeq-cas9-RUX-25/cutoff_3/mapping/RX-Dig2_R1_cutadapt.fq.gz -p ../TargetSeq-cas9-RUX-25/cutoff_3/mapping/RX-Dig2_R2_cutadapt.fq.gz ../TargetSeq-cas9-RUX-25/cutoff_3/merge.fastq/RX-Dig2_merge_barcode_R1.fastq.gz ../TargetSeq-cas9-RUX-25/cutoff_3/merge.fastq/RX-Dig2_merge_barcode_R2.fastq.gz > ../TargetSeq-cas9-RUX-25/cutoff_3/mapping/RX-Dig2_cutadapt.log 2>&1
+        
+
+[Sun Jan  3 14:24:22 2021]
+rule cutadapt:
+    input: ../TargetSeq-cas9-RUX-25/cutoff_3/merge.fastq/RX-Dig8_merge_barcode_R1.fastq.gz, ../TargetSeq-cas9-RUX-25/cutoff_3/merge.fastq/RX-Dig8_merge_barcode_R2.fastq.gz
+    output: ../TargetSeq-cas9-RUX-25/cutoff_3/mapping/RX-Dig8_R1_cutadapt.fq.gz, ../TargetSeq-cas9-RUX-25/cutoff_3/mapping/RX-Dig8_R2_cutadapt.fq.gz
+    log: ../TargetSeq-cas9-RUX-25/cutoff_3/mapping/RX-Dig8_cutadapt.log
+    jobid: 85
+    reason: Missing output files: ../TargetSeq-cas9-RUX-25/cutoff_3/mapping/RX-Dig8_R1_cutadapt.fq.gz, ../TargetSeq-cas9-RUX-25/cutoff_3/mapping/RX-Dig8_R2_cutadapt.fq.gz
+    wildcards: lib=cas9-RUX-25, cutoff=3, sample=RX-Dig8
+
+
+        /home/zhaohuanan/zhaohn_HD/miniconda3/bin/cutadapt -j 24 --times 1  -e 0.1  -O 3  --quality-cutoff 25         -m 100 -a AGATCGGAAGAGCACACGTCTGAACTCCAGTCAC         -A AGATCGGAAGAGCGTCGTGTAGGGAAAGAGTGTAGATCTCGGTGGTCGCCGTATCATT         -o ../TargetSeq-cas9-RUX-25/cutoff_3/mapping/RX-Dig8_R1_cutadapt.fq.gz -p ../TargetSeq-cas9-RUX-25/cutoff_3/mapping/RX-Dig8_R2_cutadapt.fq.gz ../TargetSeq-cas9-RUX-25/cutoff_3/merge.fastq/RX-Dig8_merge_barcode_R1.fastq.gz ../TargetSeq-cas9-RUX-25/cutoff_3/merge.fastq/RX-Dig8_merge_barcode_R2.fastq.gz > ../TargetSeq-cas9-RUX-25/cutoff_3/mapping/RX-Dig8_cutadapt.log 2>&1
+        
+
+[Sun Jan  3 14:24:22 2021]
+rule cutadapt:
+    input: ../TargetSeq-cpf1-RUX-21/cutoff_10/merge.fastq/RX-Dig5_merge_barcode_R1.fastq.gz, ../TargetSeq-cpf1-RUX-21/cutoff_10/merge.fastq/RX-Dig5_merge_barcode_R2.fastq.gz
+    output: ../TargetSeq-cpf1-RUX-21/cutoff_10/mapping/RX-Dig5_R1_cutadapt.fq.gz, ../TargetSeq-cpf1-RUX-21/cutoff_10/mapping/RX-Dig5_R2_cutadapt.fq.gz
+    log: ../TargetSeq-cpf1-RUX-21/cutoff_10/mapping/RX-Dig5_cutadapt.log
+    jobid: 233
+    reason: Missing output files: ../TargetSeq-cpf1-RUX-21/cutoff_10/mapping/RX-Dig5_R1_cutadapt.fq.gz, ../TargetSeq-cpf1-RUX-21/cutoff_10/mapping/RX-Dig5_R2_cutadapt.fq.gz
+    wildcards: lib=cpf1-RUX-21, cutoff=10, sample=RX-Dig5
+
+
+        /home/zhaohuanan/zhaohn_HD/miniconda3/bin/cutadapt -j 24 --times 1  -e 0.1  -O 3  --quality-cutoff 25         -m 100 -a AGATCGGAAGAGCACACGTCTGAACTCCAGTCAC         -A AGATCGGAAGAGCGTCGTGTAGGGAAAGAGTGTAGATCTCGGTGGTCGCCGTATCATT         -o ../TargetSeq-cpf1-RUX-21/cutoff_10/mapping/RX-Dig5_R1_cutadapt.fq.gz -p ../TargetSeq-cpf1-RUX-21/cutoff_10/mapping/RX-Dig5_R2_cutadapt.fq.gz ../TargetSeq-cpf1-RUX-21/cutoff_10/merge.fastq/RX-Dig5_merge_barcode_R1.fastq.gz ../TargetSeq-cpf1-RUX-21/cutoff_10/merge.fastq/RX-Dig5_merge_barcode_R2.fastq.gz > ../TargetSeq-cpf1-RUX-21/cutoff_10/mapping/RX-Dig5_cutadapt.log 2>&1
+        
+
+[Sun Jan  3 14:24:22 2021]
+rule cutadapt:
+    input: ../TargetSeq-cpf1-RUX-21/cutoff_5/merge.fastq/RX-cpf-9_merge_barcode_R1.fastq.gz, ../TargetSeq-cpf1-RUX-21/cutoff_5/merge.fastq/RX-cpf-9_merge_barcode_R2.fastq.gz
+    output: ../TargetSeq-cpf1-RUX-21/cutoff_5/mapping/RX-cpf-9_R1_cutadapt.fq.gz, ../TargetSeq-cpf1-RUX-21/cutoff_5/mapping/RX-cpf-9_R2_cutadapt.fq.gz
+    log: ../TargetSeq-cpf1-RUX-21/cutoff_5/mapping/RX-cpf-9_cutadapt.log
+    jobid: 291
+    reason: Missing output files: ../TargetSeq-cpf1-RUX-21/cutoff_5/mapping/RX-cpf-9_R2_cutadapt.fq.gz, ../TargetSeq-cpf1-RUX-21/cutoff_5/mapping/RX-cpf-9_R1_cutadapt.fq.gz
+    wildcards: lib=cpf1-RUX-21, cutoff=5, sample=RX-cpf-9
+
+
+        /home/zhaohuanan/zhaohn_HD/miniconda3/bin/cutadapt -j 24 --times 1  -e 0.1  -O 3  --quality-cutoff 25         -m 100 -a AGATCGGAAGAGCACACGTCTGAACTCCAGTCAC         -A AGATCGGAAGAGCGTCGTGTAGGGAAAGAGTGTAGATCTCGGTGGTCGCCGTATCATT         -o ../TargetSeq-cpf1-RUX-21/cutoff_5/mapping/RX-cpf-9_R1_cutadapt.fq.gz -p ../TargetSeq-cpf1-RUX-21/cutoff_5/mapping/RX-cpf-9_R2_cutadapt.fq.gz ../TargetSeq-cpf1-RUX-21/cutoff_5/merge.fastq/RX-cpf-9_merge_barcode_R1.fastq.gz ../TargetSeq-cpf1-RUX-21/cutoff_5/merge.fastq/RX-cpf-9_merge_barcode_R2.fastq.gz > ../TargetSeq-cpf1-RUX-21/cutoff_5/mapping/RX-cpf-9_cutadapt.log 2>&1
+        
+
+[Sun Jan  3 14:24:22 2021]
+rule cutadapt:
+    input: ../TargetSeq-cas9-RUX-25/cutoff_3/merge.fastq/RX-cpf-11_merge_barcode_R1.fastq.gz, ../TargetSeq-cas9-RUX-25/cutoff_3/merge.fastq/RX-cpf-11_merge_barcode_R2.fastq.gz
+    output: ../TargetSeq-cas9-RUX-25/cutoff_3/mapping/RX-cpf-11_R1_cutadapt.fq.gz, ../TargetSeq-cas9-RUX-25/cutoff_3/mapping/RX-cpf-11_R2_cutadapt.fq.gz
+    log: ../TargetSeq-cas9-RUX-25/cutoff_3/mapping/RX-cpf-11_cutadapt.log
+    jobid: 145
+    reason: Missing output files: ../TargetSeq-cas9-RUX-25/cutoff_3/mapping/RX-cpf-11_R1_cutadapt.fq.gz, ../TargetSeq-cas9-RUX-25/cutoff_3/mapping/RX-cpf-11_R2_cutadapt.fq.gz
+    wildcards: lib=cas9-RUX-25, cutoff=3, sample=RX-cpf-11
+
+
+        /home/zhaohuanan/zhaohn_HD/miniconda3/bin/cutadapt -j 24 --times 1  -e 0.1  -O 3  --quality-cutoff 25         -m 100 -a AGATCGGAAGAGCACACGTCTGAACTCCAGTCAC         -A AGATCGGAAGAGCGTCGTGTAGGGAAAGAGTGTAGATCTCGGTGGTCGCCGTATCATT         -o ../TargetSeq-cas9-RUX-25/cutoff_3/mapping/RX-cpf-11_R1_cutadapt.fq.gz -p ../TargetSeq-cas9-RUX-25/cutoff_3/mapping/RX-cpf-11_R2_cutadapt.fq.gz ../TargetSeq-cas9-RUX-25/cutoff_3/merge.fastq/RX-cpf-11_merge_barcode_R1.fastq.gz ../TargetSeq-cas9-RUX-25/cutoff_3/merge.fastq/RX-cpf-11_merge_barcode_R2.fastq.gz > ../TargetSeq-cas9-RUX-25/cutoff_3/mapping/RX-cpf-11_cutadapt.log 2>&1
+        
+
+[Sun Jan  3 14:24:22 2021]
+rule cutadapt:
+    input: ../TargetSeq-cas9-RUX-25/cutoff_3/merge.fastq/RX-Dig1_merge_barcode_R1.fastq.gz, ../TargetSeq-cas9-RUX-25/cutoff_3/merge.fastq/RX-Dig1_merge_barcode_R2.fastq.gz
+    output: ../TargetSeq-cas9-RUX-25/cutoff_3/mapping/RX-Dig1_R1_cutadapt.fq.gz, ../TargetSeq-cas9-RUX-25/cutoff_3/mapping/RX-Dig1_R2_cutadapt.fq.gz
+    log: ../TargetSeq-cas9-RUX-25/cutoff_3/mapping/RX-Dig1_cutadapt.log
+    jobid: 49
+    reason: Missing output files: ../TargetSeq-cas9-RUX-25/cutoff_3/mapping/RX-Dig1_R2_cutadapt.fq.gz, ../TargetSeq-cas9-RUX-25/cutoff_3/mapping/RX-Dig1_R1_cutadapt.fq.gz
+    wildcards: lib=cas9-RUX-25, cutoff=3, sample=RX-Dig1
+
+
+        /home/zhaohuanan/zhaohn_HD/miniconda3/bin/cutadapt -j 24 --times 1  -e 0.1  -O 3  --quality-cutoff 25         -m 100 -a AGATCGGAAGAGCACACGTCTGAACTCCAGTCAC         -A AGATCGGAAGAGCGTCGTGTAGGGAAAGAGTGTAGATCTCGGTGGTCGCCGTATCATT         -o ../TargetSeq-cas9-RUX-25/cutoff_3/mapping/RX-Dig1_R1_cutadapt.fq.gz -p ../TargetSeq-cas9-RUX-25/cutoff_3/mapping/RX-Dig1_R2_cutadapt.fq.gz ../TargetSeq-cas9-RUX-25/cutoff_3/merge.fastq/RX-Dig1_merge_barcode_R1.fastq.gz ../TargetSeq-cas9-RUX-25/cutoff_3/merge.fastq/RX-Dig1_merge_barcode_R2.fastq.gz > ../TargetSeq-cas9-RUX-25/cutoff_3/mapping/RX-Dig1_cutadapt.log 2>&1
+        
+
+[Sun Jan  3 14:24:22 2021]
+rule cutadapt:
+    input: ../TargetSeq-cpf1-RUX-21/cutoff_3/merge.fastq/RX-cas-3_merge_barcode_R1.fastq.gz, ../TargetSeq-cpf1-RUX-21/cutoff_3/merge.fastq/RX-cas-3_merge_barcode_R2.fastq.gz
+    output: ../TargetSeq-cpf1-RUX-21/cutoff_3/mapping/RX-cas-3_R1_cutadapt.fq.gz, ../TargetSeq-cpf1-RUX-21/cutoff_3/mapping/RX-cas-3_R2_cutadapt.fq.gz
+    log: ../TargetSeq-cpf1-RUX-21/cutoff_3/mapping/RX-cas-3_cutadapt.log
+    jobid: 169
+    reason: Missing output files: ../TargetSeq-cpf1-RUX-21/cutoff_3/mapping/RX-cas-3_R2_cutadapt.fq.gz, ../TargetSeq-cpf1-RUX-21/cutoff_3/mapping/RX-cas-3_R1_cutadapt.fq.gz
+    wildcards: lib=cpf1-RUX-21, cutoff=3, sample=RX-cas-3
+
+
+        /home/zhaohuanan/zhaohn_HD/miniconda3/bin/cutadapt -j 24 --times 1  -e 0.1  -O 3  --quality-cutoff 25         -m 100 -a AGATCGGAAGAGCACACGTCTGAACTCCAGTCAC         -A AGATCGGAAGAGCGTCGTGTAGGGAAAGAGTGTAGATCTCGGTGGTCGCCGTATCATT         -o ../TargetSeq-cpf1-RUX-21/cutoff_3/mapping/RX-cas-3_R1_cutadapt.fq.gz -p ../TargetSeq-cpf1-RUX-21/cutoff_3/mapping/RX-cas-3_R2_cutadapt.fq.gz ../TargetSeq-cpf1-RUX-21/cutoff_3/merge.fastq/RX-cas-3_merge_barcode_R1.fastq.gz ../TargetSeq-cpf1-RUX-21/cutoff_3/merge.fastq/RX-cas-3_merge_barcode_R2.fastq.gz > ../TargetSeq-cpf1-RUX-21/cutoff_3/mapping/RX-cas-3_cutadapt.log 2>&1
+        
+
+[Sun Jan  3 14:24:22 2021]
+rule check_file:
+    output: ../TargetSeq-cas9-RUX-25/cutoff_5/merge.fastq/RX-cpf-7_merge_barcode_R1.fastq.gz, ../TargetSeq-cas9-RUX-25/cutoff_5/merge.fastq/RX-cpf-7_merge_barcode_R2.fastq.gz
+    jobid: 124
+    reason: Missing output files: ../TargetSeq-cas9-RUX-25/cutoff_5/merge.fastq/RX-cpf-7_merge_barcode_R2.fastq.gz, ../TargetSeq-cas9-RUX-25/cutoff_5/merge.fastq/RX-cpf-7_merge_barcode_R1.fastq.gz
+    wildcards: lib=cas9-RUX-25, cutoff=5, sample=RX-cpf-7
+
+[Sun Jan  3 14:24:22 2021]
+Error in rule cutadapt:
+    jobid: 223
+    output: ../TargetSeq-cpf1-RUX-21/cutoff_3/mapping/RX-Dig4_R1_cutadapt.fq.gz, ../TargetSeq-cpf1-RUX-21/cutoff_3/mapping/RX-Dig4_R2_cutadapt.fq.gz
+    log: ../TargetSeq-cpf1-RUX-21/cutoff_3/mapping/RX-Dig4_cutadapt.log (check log file(s) for error message)
+    shell:
+        
+        /home/zhaohuanan/zhaohn_HD/miniconda3/bin/cutadapt -j 24 --times 1  -e 0.1  -O 3  --quality-cutoff 25         -m 100 -a AGATCGGAAGAGCACACGTCTGAACTCCAGTCAC         -A AGATCGGAAGAGCGTCGTGTAGGGAAAGAGTGTAGATCTCGGTGGTCGCCGTATCATT         -o ../TargetSeq-cpf1-RUX-21/cutoff_3/mapping/RX-Dig4_R1_cutadapt.fq.gz -p ../TargetSeq-cpf1-RUX-21/cutoff_3/mapping/RX-Dig4_R2_cutadapt.fq.gz ../TargetSeq-cpf1-RUX-21/cutoff_3/merge.fastq/RX-Dig4_merge_barcode_R1.fastq.gz ../TargetSeq-cpf1-RUX-21/cutoff_3/merge.fastq/RX-Dig4_merge_barcode_R2.fastq.gz > ../TargetSeq-cpf1-RUX-21/cutoff_3/mapping/RX-Dig4_cutadapt.log 2>&1
+        
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+Removing output files of failed job cutadapt since they might be corrupted:
+../TargetSeq-cpf1-RUX-21/cutoff_3/mapping/RX-Dig4_R1_cutadapt.fq.gz, ../TargetSeq-cpf1-RUX-21/cutoff_3/mapping/RX-Dig4_R2_cutadapt.fq.gz
+
+[Sun Jan  3 14:24:22 2021]
+rule cutadapt:
+    input: ../TargetSeq-cas9-RUX-25/cutoff_3/merge.fastq/RX-Dig6_merge_barcode_R1.fastq.gz, ../TargetSeq-cas9-RUX-25/cutoff_3/merge.fastq/RX-Dig6_merge_barcode_R2.fastq.gz
+    output: ../TargetSeq-cas9-RUX-25/cutoff_3/mapping/RX-Dig6_R1_cutadapt.fq.gz, ../TargetSeq-cas9-RUX-25/cutoff_3/mapping/RX-Dig6_R2_cutadapt.fq.gz
+    log: ../TargetSeq-cas9-RUX-25/cutoff_3/mapping/RX-Dig6_cutadapt.log
+    jobid: 79
+    reason: Missing output files: ../TargetSeq-cas9-RUX-25/cutoff_3/mapping/RX-Dig6_R2_cutadapt.fq.gz, ../TargetSeq-cas9-RUX-25/cutoff_3/mapping/RX-Dig6_R1_cutadapt.fq.gz
+    wildcards: lib=cas9-RUX-25, cutoff=3, sample=RX-Dig6
+
+
+        /home/zhaohuanan/zhaohn_HD/miniconda3/bin/cutadapt -j 24 --times 1  -e 0.1  -O 3  --quality-cutoff 25         -m 100 -a AGATCGGAAGAGCACACGTCTGAACTCCAGTCAC         -A AGATCGGAAGAGCGTCGTGTAGGGAAAGAGTGTAGATCTCGGTGGTCGCCGTATCATT         -o ../TargetSeq-cas9-RUX-25/cutoff_3/mapping/RX-Dig6_R1_cutadapt.fq.gz -p ../TargetSeq-cas9-RUX-25/cutoff_3/mapping/RX-Dig6_R2_cutadapt.fq.gz ../TargetSeq-cas9-RUX-25/cutoff_3/merge.fastq/RX-Dig6_merge_barcode_R1.fastq.gz ../TargetSeq-cas9-RUX-25/cutoff_3/merge.fastq/RX-Dig6_merge_barcode_R2.fastq.gz > ../TargetSeq-cas9-RUX-25/cutoff_3/mapping/RX-Dig6_cutadapt.log 2>&1
+        
+
+[Sun Jan  3 14:24:22 2021]
+rule cutadapt:
+    input: ../TargetSeq-cpf1-RUX-21/cutoff_10/merge.fastq/RX-Dig4_merge_barcode_R1.fastq.gz, ../TargetSeq-cpf1-RUX-21/cutoff_10/merge.fastq/RX-Dig4_merge_barcode_R2.fastq.gz
+    output: ../TargetSeq-cpf1-RUX-21/cutoff_10/mapping/RX-Dig4_R1_cutadapt.fq.gz, ../TargetSeq-cpf1-RUX-21/cutoff_10/mapping/RX-Dig4_R2_cutadapt.fq.gz
+    log: ../TargetSeq-cpf1-RUX-21/cutoff_10/mapping/RX-Dig4_cutadapt.log
+    jobid: 227
+    reason: Missing output files: ../TargetSeq-cpf1-RUX-21/cutoff_10/mapping/RX-Dig4_R2_cutadapt.fq.gz, ../TargetSeq-cpf1-RUX-21/cutoff_10/mapping/RX-Dig4_R1_cutadapt.fq.gz
+    wildcards: lib=cpf1-RUX-21, cutoff=10, sample=RX-Dig4
+
+
+        /home/zhaohuanan/zhaohn_HD/miniconda3/bin/cutadapt -j 24 --times 1  -e 0.1  -O 3  --quality-cutoff 25         -m 100 -a AGATCGGAAGAGCACACGTCTGAACTCCAGTCAC         -A AGATCGGAAGAGCGTCGTGTAGGGAAAGAGTGTAGATCTCGGTGGTCGCCGTATCATT         -o ../TargetSeq-cpf1-RUX-21/cutoff_10/mapping/RX-Dig4_R1_cutadapt.fq.gz -p ../TargetSeq-cpf1-RUX-21/cutoff_10/mapping/RX-Dig4_R2_cutadapt.fq.gz ../TargetSeq-cpf1-RUX-21/cutoff_10/merge.fastq/RX-Dig4_merge_barcode_R1.fastq.gz ../TargetSeq-cpf1-RUX-21/cutoff_10/merge.fastq/RX-Dig4_merge_barcode_R2.fastq.gz > ../TargetSeq-cpf1-RUX-21/cutoff_10/mapping/RX-Dig4_cutadapt.log 2>&1
+        
+[Sun Jan  3 14:24:22 2021]
+Error in rule cutadapt:
+    jobid: 135
+    output: ../TargetSeq-cas9-RUX-25/cutoff_5/mapping/RX-cpf-9_R1_cutadapt.fq.gz, ../TargetSeq-cas9-RUX-25/cutoff_5/mapping/RX-cpf-9_R2_cutadapt.fq.gz
+    log: ../TargetSeq-cas9-RUX-25/cutoff_5/mapping/RX-cpf-9_cutadapt.log (check log file(s) for error message)
+    shell:
+        
+        /home/zhaohuanan/zhaohn_HD/miniconda3/bin/cutadapt -j 24 --times 1  -e 0.1  -O 3  --quality-cutoff 25         -m 100 -a AGATCGGAAGAGCACACGTCTGAACTCCAGTCAC         -A AGATCGGAAGAGCGTCGTGTAGGGAAAGAGTGTAGATCTCGGTGGTCGCCGTATCATT         -o ../TargetSeq-cas9-RUX-25/cutoff_5/mapping/RX-cpf-9_R1_cutadapt.fq.gz -p ../TargetSeq-cas9-RUX-25/cutoff_5/mapping/RX-cpf-9_R2_cutadapt.fq.gz ../TargetSeq-cas9-RUX-25/cutoff_5/merge.fastq/RX-cpf-9_merge_barcode_R1.fastq.gz ../TargetSeq-cas9-RUX-25/cutoff_5/merge.fastq/RX-cpf-9_merge_barcode_R2.fastq.gz > ../TargetSeq-cas9-RUX-25/cutoff_5/mapping/RX-cpf-9_cutadapt.log 2>&1
+        
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+Removing output files of failed job cutadapt since they might be corrupted:
+../TargetSeq-cas9-RUX-25/cutoff_5/mapping/RX-cpf-9_R1_cutadapt.fq.gz, ../TargetSeq-cas9-RUX-25/cutoff_5/mapping/RX-cpf-9_R2_cutadapt.fq.gz
+
+[Sun Jan  3 14:24:22 2021]
+rule cutadapt:
+    input: ../TargetSeq-cas9-RUX-25/cutoff_10/merge.fastq/RX-ontarget_merge_barcode_R1.fastq.gz, ../TargetSeq-cas9-RUX-25/cutoff_10/merge.fastq/RX-ontarget_merge_barcode_R2.fastq.gz
+    output: ../TargetSeq-cas9-RUX-25/cutoff_10/mapping/RX-ontarget_R1_cutadapt.fq.gz, ../TargetSeq-cas9-RUX-25/cutoff_10/mapping/RX-ontarget_R2_cutadapt.fq.gz
+    log: ../TargetSeq-cas9-RUX-25/cutoff_10/mapping/RX-ontarget_cutadapt.log
+    jobid: 155
+    reason: Missing output files: ../TargetSeq-cas9-RUX-25/cutoff_10/mapping/RX-ontarget_R2_cutadapt.fq.gz, ../TargetSeq-cas9-RUX-25/cutoff_10/mapping/RX-ontarget_R1_cutadapt.fq.gz
+    wildcards: lib=cas9-RUX-25, cutoff=10, sample=RX-ontarget
+
+
+        /home/zhaohuanan/zhaohn_HD/miniconda3/bin/cutadapt -j 24 --times 1  -e 0.1  -O 3  --quality-cutoff 25         -m 100 -a AGATCGGAAGAGCACACGTCTGAACTCCAGTCAC         -A AGATCGGAAGAGCGTCGTGTAGGGAAAGAGTGTAGATCTCGGTGGTCGCCGTATCATT         -o ../TargetSeq-cas9-RUX-25/cutoff_10/mapping/RX-ontarget_R1_cutadapt.fq.gz -p ../TargetSeq-cas9-RUX-25/cutoff_10/mapping/RX-ontarget_R2_cutadapt.fq.gz ../TargetSeq-cas9-RUX-25/cutoff_10/merge.fastq/RX-ontarget_merge_barcode_R1.fastq.gz ../TargetSeq-cas9-RUX-25/cutoff_10/merge.fastq/RX-ontarget_merge_barcode_R2.fastq.gz > ../TargetSeq-cas9-RUX-25/cutoff_10/mapping/RX-ontarget_cutadapt.log 2>&1
+        
+
+[Sun Jan  3 14:24:22 2021]
+rule cutadapt:
+    input: ../TargetSeq-cas9-RUX-25/cutoff_10/merge.fastq/RX-cas-1_merge_barcode_R1.fastq.gz, ../TargetSeq-cas9-RUX-25/cutoff_10/merge.fastq/RX-cas-1_merge_barcode_R2.fastq.gz
+    output: ../TargetSeq-cas9-RUX-25/cutoff_10/mapping/RX-cas-1_R1_cutadapt.fq.gz, ../TargetSeq-cas9-RUX-25/cutoff_10/mapping/RX-cas-1_R2_cutadapt.fq.gz
+    log: ../TargetSeq-cas9-RUX-25/cutoff_10/mapping/RX-cas-1_cutadapt.log
+    jobid: 5
+    reason: Missing output files: ../TargetSeq-cas9-RUX-25/cutoff_10/mapping/RX-cas-1_R1_cutadapt.fq.gz, ../TargetSeq-cas9-RUX-25/cutoff_10/mapping/RX-cas-1_R2_cutadapt.fq.gz
+    wildcards: lib=cas9-RUX-25, cutoff=10, sample=RX-cas-1
+
+
+        /home/zhaohuanan/zhaohn_HD/miniconda3/bin/cutadapt -j 24 --times 1  -e 0.1  -O 3  --quality-cutoff 25         -m 100 -a AGATCGGAAGAGCACACGTCTGAACTCCAGTCAC         -A AGATCGGAAGAGCGTCGTGTAGGGAAAGAGTGTAGATCTCGGTGGTCGCCGTATCATT         -o ../TargetSeq-cas9-RUX-25/cutoff_10/mapping/RX-cas-1_R1_cutadapt.fq.gz -p ../TargetSeq-cas9-RUX-25/cutoff_10/mapping/RX-cas-1_R2_cutadapt.fq.gz ../TargetSeq-cas9-RUX-25/cutoff_10/merge.fastq/RX-cas-1_merge_barcode_R1.fastq.gz ../TargetSeq-cas9-RUX-25/cutoff_10/merge.fastq/RX-cas-1_merge_barcode_R2.fastq.gz > ../TargetSeq-cas9-RUX-25/cutoff_10/mapping/RX-cas-1_cutadapt.log 2>&1
+        
+
+[Sun Jan  3 14:24:22 2021]
+[Sun Jan  3 14:24:22 2021]
+Error in rule cutadapt:
+    jobid: 9
+    output: ../TargetSeq-cas9-RUX-25/cutoff_5/mapping/RX-cas-2_R1_cutadapt.fq.gz, ../TargetSeq-cas9-RUX-25/cutoff_5/mapping/RX-cas-2_R2_cutadapt.fq.gz
+    log: ../TargetSeq-cas9-RUX-25/cutoff_5/mapping/RX-cas-2_cutadapt.log (check log file(s) for error message)
+    shell:
+        
+        /home/zhaohuanan/zhaohn_HD/miniconda3/bin/cutadapt -j 24 --times 1  -e 0.1  -O 3  --quality-cutoff 25         -m 100 -a AGATCGGAAGAGCACACGTCTGAACTCCAGTCAC         -A AGATCGGAAGAGCGTCGTGTAGGGAAAGAGTGTAGATCTCGGTGGTCGCCGTATCATT         -o ../TargetSeq-cas9-RUX-25/cutoff_5/mapping/RX-cas-2_R1_cutadapt.fq.gz -p ../TargetSeq-cas9-RUX-25/cutoff_5/mapping/RX-cas-2_R2_cutadapt.fq.gz ../TargetSeq-cas9-RUX-25/cutoff_5/merge.fastq/RX-cas-2_merge_barcode_R1.fastq.gz ../TargetSeq-cas9-RUX-25/cutoff_5/merge.fastq/RX-cas-2_merge_barcode_R2.fastq.gz > ../TargetSeq-cas9-RUX-25/cutoff_5/mapping/RX-cas-2_cutadapt.log 2>&1
+        
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+[Sun Jan  3 14:24:22 2021]
+Error in rule cutadapt:
+    jobid: 75
+    output: ../TargetSeq-cas9-RUX-25/cutoff_5/mapping/RX-Dig5_R1_cutadapt.fq.gz, ../TargetSeq-cas9-RUX-25/cutoff_5/mapping/RX-Dig5_R2_cutadapt.fq.gz
+    log: ../TargetSeq-cas9-RUX-25/cutoff_5/mapping/RX-Dig5_cutadapt.log (check log file(s) for error message)
+    shell:
+        
+        /home/zhaohuanan/zhaohn_HD/miniconda3/bin/cutadapt -j 24 --times 1  -e 0.1  -O 3  --quality-cutoff 25         -m 100 -a AGATCGGAAGAGCACACGTCTGAACTCCAGTCAC         -A AGATCGGAAGAGCGTCGTGTAGGGAAAGAGTGTAGATCTCGGTGGTCGCCGTATCATT         -o ../TargetSeq-cas9-RUX-25/cutoff_5/mapping/RX-Dig5_R1_cutadapt.fq.gz -p ../TargetSeq-cas9-RUX-25/cutoff_5/mapping/RX-Dig5_R2_cutadapt.fq.gz ../TargetSeq-cas9-RUX-25/cutoff_5/merge.fastq/RX-Dig5_merge_barcode_R1.fastq.gz ../TargetSeq-cas9-RUX-25/cutoff_5/merge.fastq/RX-Dig5_merge_barcode_R2.fastq.gz > ../TargetSeq-cas9-RUX-25/cutoff_5/mapping/RX-Dig5_cutadapt.log 2>&1
+        
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+rule bowtie_build_index:
+    input: ../reference.fasta/RX-cpf-11.ref.upper.fa
+    output: ../reference.fasta/RX-cpf-11.ref.upper.fa.bowtie_index
+    log: ../reference.fasta/RX-cpf-11.ref.upper.fa.bowtie-build.log
+    jobid: 556
+    reason: Missing output files: ../reference.fasta/RX-cpf-11.ref.upper.fa.bowtie_index
+    wildcards: sample=RX-cpf-11
+
+
+        touch ../reference.fasta/RX-cpf-11.ref.upper.fa.bowtie_index
+        echo "a formal output test" > ../reference.fasta/RX-cpf-11.ref.upper.fa.bowtie_index
+        /home/zhaohuanan/zhaohn_HD/miniconda3/bin/bowtie-build ../reference.fasta/RX-cpf-11.ref.upper.fa ../reference.fasta/RX-cpf-11.ref.upper.fa.bowtie_index 2>../reference.fasta/RX-cpf-11.ref.upper.fa.bowtie-build.log
+        
+[Sun Jan  3 14:24:22 2021]
+Finished job 356.
+1 of 1337 steps (0.07%) done
+Removing output files of failed job cutadapt since they might be corrupted:
+../TargetSeq-cas9-RUX-25/cutoff_5/mapping/RX-cas-2_R1_cutadapt.fq.gz, ../TargetSeq-cas9-RUX-25/cutoff_5/mapping/RX-cas-2_R2_cutadapt.fq.gz
+
+[Sun Jan  3 14:24:22 2021]
+rule cutadapt:
+    input: ../TargetSeq-cpf1-RUX-21/cutoff_5/merge.fastq/RX-Dig8_merge_barcode_R1.fastq.gz, ../TargetSeq-cpf1-RUX-21/cutoff_5/merge.fastq/RX-Dig8_merge_barcode_R2.fastq.gz
+    output: ../TargetSeq-cpf1-RUX-21/cutoff_5/mapping/RX-Dig8_R1_cutadapt.fq.gz, ../TargetSeq-cpf1-RUX-21/cutoff_5/mapping/RX-Dig8_R2_cutadapt.fq.gz
+    log: ../TargetSeq-cpf1-RUX-21/cutoff_5/mapping/RX-Dig8_cutadapt.log
+    jobid: 243
+    reason: Missing output files: ../TargetSeq-cpf1-RUX-21/cutoff_5/mapping/RX-Dig8_R2_cutadapt.fq.gz, ../TargetSeq-cpf1-RUX-21/cutoff_5/mapping/RX-Dig8_R1_cutadapt.fq.gz
+    wildcards: lib=cpf1-RUX-21, cutoff=5, sample=RX-Dig8
+
+
+        /home/zhaohuanan/zhaohn_HD/miniconda3/bin/cutadapt -j 24 --times 1  -e 0.1  -O 3  --quality-cutoff 25         -m 100 -a AGATCGGAAGAGCACACGTCTGAACTCCAGTCAC         -A AGATCGGAAGAGCGTCGTGTAGGGAAAGAGTGTAGATCTCGGTGGTCGCCGTATCATT         -o ../TargetSeq-cpf1-RUX-21/cutoff_5/mapping/RX-Dig8_R1_cutadapt.fq.gz -p ../TargetSeq-cpf1-RUX-21/cutoff_5/mapping/RX-Dig8_R2_cutadapt.fq.gz ../TargetSeq-cpf1-RUX-21/cutoff_5/merge.fastq/RX-Dig8_merge_barcode_R1.fastq.gz ../TargetSeq-cpf1-RUX-21/cutoff_5/merge.fastq/RX-Dig8_merge_barcode_R2.fastq.gz > ../TargetSeq-cpf1-RUX-21/cutoff_5/mapping/RX-Dig8_cutadapt.log 2>&1
+        
+
+[Sun Jan  3 14:24:22 2021]
+rule check_file:
+    output: ../TargetSeq-cpf1-RUX-21/cutoff_10/merge.fastq/RX-cas-7_merge_barcode_R1.fastq.gz, ../TargetSeq-cpf1-RUX-21/cutoff_10/merge.fastq/RX-cas-7_merge_barcode_R2.fastq.gz
+    jobid: 198
+    reason: Missing output files: ../TargetSeq-cpf1-RUX-21/cutoff_10/merge.fastq/RX-cas-7_merge_barcode_R2.fastq.gz, ../TargetSeq-cpf1-RUX-21/cutoff_10/merge.fastq/RX-cas-7_merge_barcode_R1.fastq.gz
+    wildcards: lib=cpf1-RUX-21, cutoff=10, sample=RX-cas-7
+
+Removing output files of failed job cutadapt since they might be corrupted:
+../TargetSeq-cas9-RUX-25/cutoff_5/mapping/RX-Dig5_R1_cutadapt.fq.gz, ../TargetSeq-cas9-RUX-25/cutoff_5/mapping/RX-Dig5_R2_cutadapt.fq.gz
+
+[Sun Jan  3 14:24:22 2021]
+rule cutadapt:
+    input: ../TargetSeq-cas9-RUX-25/cutoff_5/merge.fastq/RX-cpf-10_merge_barcode_R1.fastq.gz, ../TargetSeq-cas9-RUX-25/cutoff_5/merge.fastq/RX-cpf-10_merge_barcode_R2.fastq.gz
+    output: ../TargetSeq-cas9-RUX-25/cutoff_5/mapping/RX-cpf-10_R1_cutadapt.fq.gz, ../TargetSeq-cas9-RUX-25/cutoff_5/mapping/RX-cpf-10_R2_cutadapt.fq.gz
+    log: ../TargetSeq-cas9-RUX-25/cutoff_5/mapping/RX-cpf-10_cutadapt.log
+    jobid: 141
+    reason: Missing output files: ../TargetSeq-cas9-RUX-25/cutoff_5/mapping/RX-cpf-10_R1_cutadapt.fq.gz, ../TargetSeq-cas9-RUX-25/cutoff_5/mapping/RX-cpf-10_R2_cutadapt.fq.gz
+    wildcards: lib=cas9-RUX-25, cutoff=5, sample=RX-cpf-10
+
+
+        /home/zhaohuanan/zhaohn_HD/miniconda3/bin/cutadapt -j 24 --times 1  -e 0.1  -O 3  --quality-cutoff 25         -m 100 -a AGATCGGAAGAGCACACGTCTGAACTCCAGTCAC         -A AGATCGGAAGAGCGTCGTGTAGGGAAAGAGTGTAGATCTCGGTGGTCGCCGTATCATT         -o ../TargetSeq-cas9-RUX-25/cutoff_5/mapping/RX-cpf-10_R1_cutadapt.fq.gz -p ../TargetSeq-cas9-RUX-25/cutoff_5/mapping/RX-cpf-10_R2_cutadapt.fq.gz ../TargetSeq-cas9-RUX-25/cutoff_5/merge.fastq/RX-cpf-10_merge_barcode_R1.fastq.gz ../TargetSeq-cas9-RUX-25/cutoff_5/merge.fastq/RX-cpf-10_merge_barcode_R2.fastq.gz > ../TargetSeq-cas9-RUX-25/cutoff_5/mapping/RX-cpf-10_cutadapt.log 2>&1
+        
+[Sun Jan  3 14:24:22 2021]
+
+Finished job 326.
+[Sun Jan  3 14:24:22 2021]
+[Sun Jan  3 14:24:22 2021]
+Error in rule cutadapt:
+rule cutadapt:
+    input: ../TargetSeq-cpf1-RUX-21/cutoff_10/merge.fastq/RX-cpf-8_merge_barcode_R1.fastq.gz, ../TargetSeq-cpf1-RUX-21/cutoff_10/merge.fastq/RX-cpf-8_merge_barcode_R2.fastq.gz
+    output: ../TargetSeq-cpf1-RUX-21/cutoff_10/mapping/RX-cpf-8_R1_cutadapt.fq.gz, ../TargetSeq-cpf1-RUX-21/cutoff_10/mapping/RX-cpf-8_R2_cutadapt.fq.gz
+    log: ../TargetSeq-cpf1-RUX-21/cutoff_10/mapping/RX-cpf-8_cutadapt.log
+    jobid: 287
+    reason: Missing output files: ../TargetSeq-cpf1-RUX-21/cutoff_10/mapping/RX-cpf-8_R1_cutadapt.fq.gz, ../TargetSeq-cpf1-RUX-21/cutoff_10/mapping/RX-cpf-8_R2_cutadapt.fq.gz
+    wildcards: lib=cpf1-RUX-21, cutoff=10, sample=RX-cpf-8
+2 of 1337 steps (0.15%) done
+    jobid: 247
+
+    output: ../TargetSeq-cpf1-RUX-21/cutoff_3/mapping/RX-cpf-2_R1_cutadapt.fq.gz, ../TargetSeq-cpf1-RUX-21/cutoff_3/mapping/RX-cpf-2_R2_cutadapt.fq.gz
+
+        /home/zhaohuanan/zhaohn_HD/miniconda3/bin/cutadapt -j 24 --times 1  -e 0.1  -O 3  --quality-cutoff 25         -m 100 -a AGATCGGAAGAGCACACGTCTGAACTCCAGTCAC         -A AGATCGGAAGAGCGTCGTGTAGGGAAAGAGTGTAGATCTCGGTGGTCGCCGTATCATT         -o ../TargetSeq-cpf1-RUX-21/cutoff_10/mapping/RX-cpf-8_R1_cutadapt.fq.gz -p ../TargetSeq-cpf1-RUX-21/cutoff_10/mapping/RX-cpf-8_R2_cutadapt.fq.gz ../TargetSeq-cpf1-RUX-21/cutoff_10/merge.fastq/RX-cpf-8_merge_barcode_R1.fastq.gz ../TargetSeq-cpf1-RUX-21/cutoff_10/merge.fastq/RX-cpf-8_merge_barcode_R2.fastq.gz > ../TargetSeq-cpf1-RUX-21/cutoff_10/mapping/RX-cpf-8_cutadapt.log 2>&1
+        
+    log: ../TargetSeq-cpf1-RUX-21/cutoff_3/mapping/RX-cpf-2_cutadapt.log (check log file(s) for error message)
+    shell:
+        
+        /home/zhaohuanan/zhaohn_HD/miniconda3/bin/cutadapt -j 24 --times 1  -e 0.1  -O 3  --quality-cutoff 25         -m 100 -a AGATCGGAAGAGCACACGTCTGAACTCCAGTCAC         -A AGATCGGAAGAGCGTCGTGTAGGGAAAGAGTGTAGATCTCGGTGGTCGCCGTATCATT         -o ../TargetSeq-cpf1-RUX-21/cutoff_3/mapping/RX-cpf-2_R1_cutadapt.fq.gz -p ../TargetSeq-cpf1-RUX-21/cutoff_3/mapping/RX-cpf-2_R2_cutadapt.fq.gz ../TargetSeq-cpf1-RUX-21/cutoff_3/merge.fastq/RX-cpf-2_merge_barcode_R1.fastq.gz ../TargetSeq-cpf1-RUX-21/cutoff_3/merge.fastq/RX-cpf-2_merge_barcode_R2.fastq.gz > ../TargetSeq-cpf1-RUX-21/cutoff_3/mapping/RX-cpf-2_cutadapt.log 2>&1
+        
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+Removing output files of failed job cutadapt since they might be corrupted:
+../TargetSeq-cpf1-RUX-21/cutoff_3/mapping/RX-cpf-2_R1_cutadapt.fq.gz, ../TargetSeq-cpf1-RUX-21/cutoff_3/mapping/RX-cpf-2_R2_cutadapt.fq.gz
+
+[Sun Jan  3 14:24:22 2021]
+rule cutadapt:
+    input: ../TargetSeq-cpf1-RUX-21/cutoff_3/merge.fastq/RX-cas-8_merge_barcode_R1.fastq.gz, ../TargetSeq-cpf1-RUX-21/cutoff_3/merge.fastq/RX-cas-8_merge_barcode_R2.fastq.gz
+    output: ../TargetSeq-cpf1-RUX-21/cutoff_3/mapping/RX-cas-8_R1_cutadapt.fq.gz, ../TargetSeq-cpf1-RUX-21/cutoff_3/mapping/RX-cas-8_R2_cutadapt.fq.gz
+    log: ../TargetSeq-cpf1-RUX-21/cutoff_3/mapping/RX-cas-8_cutadapt.log
+    jobid: 199
+    reason: Missing output files: ../TargetSeq-cpf1-RUX-21/cutoff_3/mapping/RX-cas-8_R2_cutadapt.fq.gz, ../TargetSeq-cpf1-RUX-21/cutoff_3/mapping/RX-cas-8_R1_cutadapt.fq.gz
+    wildcards: lib=cpf1-RUX-21, cutoff=3, sample=RX-cas-8
+
+
+        /home/zhaohuanan/zhaohn_HD/miniconda3/bin/cutadapt -j 24 --times 1  -e 0.1  -O 3  --quality-cutoff 25         -m 100 -a AGATCGGAAGAGCACACGTCTGAACTCCAGTCAC         -A AGATCGGAAGAGCGTCGTGTAGGGAAAGAGTGTAGATCTCGGTGGTCGCCGTATCATT         -o ../TargetSeq-cpf1-RUX-21/cutoff_3/mapping/RX-cas-8_R1_cutadapt.fq.gz -p ../TargetSeq-cpf1-RUX-21/cutoff_3/mapping/RX-cas-8_R2_cutadapt.fq.gz ../TargetSeq-cpf1-RUX-21/cutoff_3/merge.fastq/RX-cas-8_merge_barcode_R1.fastq.gz ../TargetSeq-cpf1-RUX-21/cutoff_3/merge.fastq/RX-cas-8_merge_barcode_R2.fastq.gz > ../TargetSeq-cpf1-RUX-21/cutoff_3/mapping/RX-cas-8_cutadapt.log 2>&1
+        
+
+[Sun Jan  3 14:24:22 2021]
+rule cutadapt:
+    input: ../TargetSeq-cas9-RUX-25/cutoff_5/merge.fastq/RX-Dig1_merge_barcode_R1.fastq.gz, ../TargetSeq-cas9-RUX-25/cutoff_5/merge.fastq/RX-Dig1_merge_barcode_R2.fastq.gz
+    output: ../TargetSeq-cas9-RUX-25/cutoff_5/mapping/RX-Dig1_R1_cutadapt.fq.gz, ../TargetSeq-cas9-RUX-25/cutoff_5/mapping/RX-Dig1_R2_cutadapt.fq.gz
+    log: ../TargetSeq-cas9-RUX-25/cutoff_5/mapping/RX-Dig1_cutadapt.log
+    jobid: 51
+    reason: Missing output files: ../TargetSeq-cas9-RUX-25/cutoff_5/mapping/RX-Dig1_R2_cutadapt.fq.gz, ../TargetSeq-cas9-RUX-25/cutoff_5/mapping/RX-Dig1_R1_cutadapt.fq.gz
+    wildcards: lib=cas9-RUX-25, cutoff=5, sample=RX-Dig1
+
+
+        /home/zhaohuanan/zhaohn_HD/miniconda3/bin/cutadapt -j 24 --times 1  -e 0.1  -O 3  --quality-cutoff 25         -m 100 -a AGATCGGAAGAGCACACGTCTGAACTCCAGTCAC         -A AGATCGGAAGAGCGTCGTGTAGGGAAAGAGTGTAGATCTCGGTGGTCGCCGTATCATT         -o ../TargetSeq-cas9-RUX-25/cutoff_5/mapping/RX-Dig1_R1_cutadapt.fq.gz -p ../TargetSeq-cas9-RUX-25/cutoff_5/mapping/RX-Dig1_R2_cutadapt.fq.gz ../TargetSeq-cas9-RUX-25/cutoff_5/merge.fastq/RX-Dig1_merge_barcode_R1.fastq.gz ../TargetSeq-cas9-RUX-25/cutoff_5/merge.fastq/RX-Dig1_merge_barcode_R2.fastq.gz > ../TargetSeq-cas9-RUX-25/cutoff_5/mapping/RX-Dig1_cutadapt.log 2>&1
+        
+
+[Sun Jan  3 14:24:22 2021]
+rule check_file:
+    output: ../TargetSeq-cas9-RUX-25/cutoff_10/merge.fastq/RX-cpf-7_merge_barcode_R1.fastq.gz, ../TargetSeq-cas9-RUX-25/cutoff_10/merge.fastq/RX-cpf-7_merge_barcode_R2.fastq.gz
+    jobid: 126
+    reason: Missing output files: ../TargetSeq-cas9-RUX-25/cutoff_10/merge.fastq/RX-cpf-7_merge_barcode_R1.fastq.gz, ../TargetSeq-cas9-RUX-25/cutoff_10/merge.fastq/RX-cpf-7_merge_barcode_R2.fastq.gz
+    wildcards: lib=cas9-RUX-25, cutoff=10, sample=RX-cpf-7
+
+[Sun Jan  3 14:24:22 2021]
+rule cutadapt:
+    input: ../TargetSeq-cas9-RUX-25/cutoff_5/merge.fastq/RX-Dig6_merge_barcode_R1.fastq.gz, ../TargetSeq-cas9-RUX-25/cutoff_5/merge.fastq/RX-Dig6_merge_barcode_R2.fastq.gz
+    output: ../TargetSeq-cas9-RUX-25/cutoff_5/mapping/RX-Dig6_R1_cutadapt.fq.gz, ../TargetSeq-cas9-RUX-25/cutoff_5/mapping/RX-Dig6_R2_cutadapt.fq.gz
+    log: ../TargetSeq-cas9-RUX-25/cutoff_5/mapping/RX-Dig6_cutadapt.log
+    jobid: 81
+    reason: Missing output files: ../TargetSeq-cas9-RUX-25/cutoff_5/mapping/RX-Dig6_R1_cutadapt.fq.gz, ../TargetSeq-cas9-RUX-25/cutoff_5/mapping/RX-Dig6_R2_cutadapt.fq.gz
+    wildcards: lib=cas9-RUX-25, cutoff=5, sample=RX-Dig6
+
+
+        /home/zhaohuanan/zhaohn_HD/miniconda3/bin/cutadapt -j 24 --times 1  -e 0.1  -O 3  --quality-cutoff 25         -m 100 -a AGATCGGAAGAGCACACGTCTGAACTCCAGTCAC         -A AGATCGGAAGAGCGTCGTGTAGGGAAAGAGTGTAGATCTCGGTGGTCGCCGTATCATT         -o ../TargetSeq-cas9-RUX-25/cutoff_5/mapping/RX-Dig6_R1_cutadapt.fq.gz -p ../TargetSeq-cas9-RUX-25/cutoff_5/mapping/RX-Dig6_R2_cutadapt.fq.gz ../TargetSeq-cas9-RUX-25/cutoff_5/merge.fastq/RX-Dig6_merge_barcode_R1.fastq.gz ../TargetSeq-cas9-RUX-25/cutoff_5/merge.fastq/RX-Dig6_merge_barcode_R2.fastq.gz > ../TargetSeq-cas9-RUX-25/cutoff_5/mapping/RX-Dig6_cutadapt.log 2>&1
+        
+
+[Sun Jan  3 14:24:23 2021]
+rule cutadapt:
+    input: ../TargetSeq-cpf1-RUX-21/cutoff_3/merge.fastq/RX-Dig5_merge_barcode_R1.fastq.gz, ../TargetSeq-cpf1-RUX-21/cutoff_3/merge.fastq/RX-Dig5_merge_barcode_R2.fastq.gz
+    output: ../TargetSeq-cpf1-RUX-21/cutoff_3/mapping/RX-Dig5_R1_cutadapt.fq.gz, ../TargetSeq-cpf1-RUX-21/cutoff_3/mapping/RX-Dig5_R2_cutadapt.fq.gz
+    log: ../TargetSeq-cpf1-RUX-21/cutoff_3/mapping/RX-Dig5_cutadapt.log
+    jobid: 229
+    reason: Missing output files: ../TargetSeq-cpf1-RUX-21/cutoff_3/mapping/RX-Dig5_R1_cutadapt.fq.gz, ../TargetSeq-cpf1-RUX-21/cutoff_3/mapping/RX-Dig5_R2_cutadapt.fq.gz
+    wildcards: lib=cpf1-RUX-21, cutoff=3, sample=RX-Dig5
+
+
+        /home/zhaohuanan/zhaohn_HD/miniconda3/bin/cutadapt -j 24 --times 1  -e 0.1  -O 3  --quality-cutoff 25         -m 100 -a AGATCGGAAGAGCACACGTCTGAACTCCAGTCAC         -A AGATCGGAAGAGCGTCGTGTAGGGAAAGAGTGTAGATCTCGGTGGTCGCCGTATCATT         -o ../TargetSeq-cpf1-RUX-21/cutoff_3/mapping/RX-Dig5_R1_cutadapt.fq.gz -p ../TargetSeq-cpf1-RUX-21/cutoff_3/mapping/RX-Dig5_R2_cutadapt.fq.gz ../TargetSeq-cpf1-RUX-21/cutoff_3/merge.fastq/RX-Dig5_merge_barcode_R1.fastq.gz ../TargetSeq-cpf1-RUX-21/cutoff_3/merge.fastq/RX-Dig5_merge_barcode_R2.fastq.gz > ../TargetSeq-cpf1-RUX-21/cutoff_3/mapping/RX-Dig5_cutadapt.log 2>&1
+        
+[Sun Jan  3 14:24:23 2021]
+Error in rule cutadapt:
+    jobid: 159
+    output: ../TargetSeq-cpf1-RUX-21/cutoff_5/mapping/RX-cas-1_R1_cutadapt.fq.gz, ../TargetSeq-cpf1-RUX-21/cutoff_5/mapping/RX-cas-1_R2_cutadapt.fq.gz
+    log: ../TargetSeq-cpf1-RUX-21/cutoff_5/mapping/RX-cas-1_cutadapt.log (check log file(s) for error message)
+    shell:
+        
+        /home/zhaohuanan/zhaohn_HD/miniconda3/bin/cutadapt -j 24 --times 1  -e 0.1  -O 3  --quality-cutoff 25         -m 100 -a AGATCGGAAGAGCACACGTCTGAACTCCAGTCAC         -A AGATCGGAAGAGCGTCGTGTAGGGAAAGAGTGTAGATCTCGGTGGTCGCCGTATCATT         -o ../TargetSeq-cpf1-RUX-21/cutoff_5/mapping/RX-cas-1_R1_cutadapt.fq.gz -p ../TargetSeq-cpf1-RUX-21/cutoff_5/mapping/RX-cas-1_R2_cutadapt.fq.gz ../TargetSeq-cpf1-RUX-21/cutoff_5/merge.fastq/RX-cas-1_merge_barcode_R1.fastq.gz ../TargetSeq-cpf1-RUX-21/cutoff_5/merge.fastq/RX-cas-1_merge_barcode_R2.fastq.gz > ../TargetSeq-cpf1-RUX-21/cutoff_5/mapping/RX-cas-1_cutadapt.log 2>&1
+        
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+Removing output files of failed job cutadapt since they might be corrupted:
+../TargetSeq-cpf1-RUX-21/cutoff_5/mapping/RX-cas-1_R1_cutadapt.fq.gz, ../TargetSeq-cpf1-RUX-21/cutoff_5/mapping/RX-cas-1_R2_cutadapt.fq.gz
+[Sun Jan  3 14:24:23 2021]
+Error in rule cutadapt:
+    jobid: 85
+    output: ../TargetSeq-cas9-RUX-25/cutoff_3/mapping/RX-Dig8_R1_cutadapt.fq.gz, ../TargetSeq-cas9-RUX-25/cutoff_3/mapping/RX-Dig8_R2_cutadapt.fq.gz
+    log: ../TargetSeq-cas9-RUX-25/cutoff_3/mapping/RX-Dig8_cutadapt.log (check log file(s) for error message)
+    shell:
+        
+        /home/zhaohuanan/zhaohn_HD/miniconda3/bin/cutadapt -j 24 --times 1  -e 0.1  -O 3  --quality-cutoff 25         -m 100 -a AGATCGGAAGAGCACACGTCTGAACTCCAGTCAC         -A AGATCGGAAGAGCGTCGTGTAGGGAAAGAGTGTAGATCTCGGTGGTCGCCGTATCATT         -o ../TargetSeq-cas9-RUX-25/cutoff_3/mapping/RX-Dig8_R1_cutadapt.fq.gz -p ../TargetSeq-cas9-RUX-25/cutoff_3/mapping/RX-Dig8_R2_cutadapt.fq.gz ../TargetSeq-cas9-RUX-25/cutoff_3/merge.fastq/RX-Dig8_merge_barcode_R1.fastq.gz ../TargetSeq-cas9-RUX-25/cutoff_3/merge.fastq/RX-Dig8_merge_barcode_R2.fastq.gz > ../TargetSeq-cas9-RUX-25/cutoff_3/mapping/RX-Dig8_cutadapt.log 2>&1
+        
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+Removing output files of failed job cutadapt since they might be corrupted:
+../TargetSeq-cas9-RUX-25/cutoff_3/mapping/RX-Dig8_R1_cutadapt.fq.gz, ../TargetSeq-cas9-RUX-25/cutoff_3/mapping/RX-Dig8_R2_cutadapt.fq.gz
+[Sun Jan  3 14:24:23 2021]
+Error in rule cutadapt:
+    jobid: 173
+    output: ../TargetSeq-cpf1-RUX-21/cutoff_10/mapping/RX-cas-3_R1_cutadapt.fq.gz, ../TargetSeq-cpf1-RUX-21/cutoff_10/mapping/RX-cas-3_R2_cutadapt.fq.gz
+    log: ../TargetSeq-cpf1-RUX-21/cutoff_10/mapping/RX-cas-3_cutadapt.log (check log file(s) for error message)
+    shell:
+        
+        /home/zhaohuanan/zhaohn_HD/miniconda3/bin/cutadapt -j 24 --times 1  -e 0.1  -O 3  --quality-cutoff 25         -m 100 -a AGATCGGAAGAGCACACGTCTGAACTCCAGTCAC         -A AGATCGGAAGAGCGTCGTGTAGGGAAAGAGTGTAGATCTCGGTGGTCGCCGTATCATT         -o ../TargetSeq-cpf1-RUX-21/cutoff_10/mapping/RX-cas-3_R1_cutadapt.fq.gz -p ../TargetSeq-cpf1-RUX-21/cutoff_10/mapping/RX-cas-3_R2_cutadapt.fq.gz ../TargetSeq-cpf1-RUX-21/cutoff_10/merge.fastq/RX-cas-3_merge_barcode_R1.fastq.gz ../TargetSeq-cpf1-RUX-21/cutoff_10/merge.fastq/RX-cas-3_merge_barcode_R2.fastq.gz > ../TargetSeq-cpf1-RUX-21/cutoff_10/mapping/RX-cas-3_cutadapt.log 2>&1
+        
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+
+[Sun Jan  3 14:24:23 2021]
+rule cutadapt:
+    input: ../TargetSeq-cas9-RUX-25/cutoff_10/merge.fastq/RX-Dig2_merge_barcode_R1.fastq.gz, ../TargetSeq-cas9-RUX-25/cutoff_10/merge.fastq/RX-Dig2_merge_barcode_R2.fastq.gz
+    output: ../TargetSeq-cas9-RUX-25/cutoff_10/mapping/RX-Dig2_R1_cutadapt.fq.gz, ../TargetSeq-cas9-RUX-25/cutoff_10/mapping/RX-Dig2_R2_cutadapt.fq.gz
+    log: ../TargetSeq-cas9-RUX-25/cutoff_10/mapping/RX-Dig2_cutadapt.log
+    jobid: 59
+    reason: Missing output files: ../TargetSeq-cas9-RUX-25/cutoff_10/mapping/RX-Dig2_R2_cutadapt.fq.gz, ../TargetSeq-cas9-RUX-25/cutoff_10/mapping/RX-Dig2_R1_cutadapt.fq.gz
+    wildcards: lib=cas9-RUX-25, cutoff=10, sample=RX-Dig2
+
+
+        /home/zhaohuanan/zhaohn_HD/miniconda3/bin/cutadapt -j 24 --times 1  -e 0.1  -O 3  --quality-cutoff 25         -m 100 -a AGATCGGAAGAGCACACGTCTGAACTCCAGTCAC         -A AGATCGGAAGAGCGTCGTGTAGGGAAAGAGTGTAGATCTCGGTGGTCGCCGTATCATT         -o ../TargetSeq-cas9-RUX-25/cutoff_10/mapping/RX-Dig2_R1_cutadapt.fq.gz -p ../TargetSeq-cas9-RUX-25/cutoff_10/mapping/RX-Dig2_R2_cutadapt.fq.gz ../TargetSeq-cas9-RUX-25/cutoff_10/merge.fastq/RX-Dig2_merge_barcode_R1.fastq.gz ../TargetSeq-cas9-RUX-25/cutoff_10/merge.fastq/RX-Dig2_merge_barcode_R2.fastq.gz > ../TargetSeq-cas9-RUX-25/cutoff_10/mapping/RX-Dig2_cutadapt.log 2>&1
+        
+
+[Sun Jan  3 14:24:23 2021]
+rule cutadapt:
+    input: ../TargetSeq-cpf1-RUX-21/cutoff_5/merge.fastq/RX-cas-4_merge_barcode_R1.fastq.gz, ../TargetSeq-cpf1-RUX-21/cutoff_5/merge.fastq/RX-cas-4_merge_barcode_R2.fastq.gz
+    output: ../TargetSeq-cpf1-RUX-21/cutoff_5/mapping/RX-cas-4_R1_cutadapt.fq.gz, ../TargetSeq-cpf1-RUX-21/cutoff_5/mapping/RX-cas-4_R2_cutadapt.fq.gz
+    log: ../TargetSeq-cpf1-RUX-21/cutoff_5/mapping/RX-cas-4_cutadapt.log
+    jobid: 177
+    reason: Missing output files: ../TargetSeq-cpf1-RUX-21/cutoff_5/mapping/RX-cas-4_R1_cutadapt.fq.gz, ../TargetSeq-cpf1-RUX-21/cutoff_5/mapping/RX-cas-4_R2_cutadapt.fq.gz
+    wildcards: lib=cpf1-RUX-21, cutoff=5, sample=RX-cas-4
+
+
+        /home/zhaohuanan/zhaohn_HD/miniconda3/bin/cutadapt -j 24 --times 1  -e 0.1  -O 3  --quality-cutoff 25         -m 100 -a AGATCGGAAGAGCACACGTCTGAACTCCAGTCAC         -A AGATCGGAAGAGCGTCGTGTAGGGAAAGAGTGTAGATCTCGGTGGTCGCCGTATCATT         -o ../TargetSeq-cpf1-RUX-21/cutoff_5/mapping/RX-cas-4_R1_cutadapt.fq.gz -p ../TargetSeq-cpf1-RUX-21/cutoff_5/mapping/RX-cas-4_R2_cutadapt.fq.gz ../TargetSeq-cpf1-RUX-21/cutoff_5/merge.fastq/RX-cas-4_merge_barcode_R1.fastq.gz ../TargetSeq-cpf1-RUX-21/cutoff_5/merge.fastq/RX-cas-4_merge_barcode_R2.fastq.gz > ../TargetSeq-cpf1-RUX-21/cutoff_5/mapping/RX-cas-4_cutadapt.log 2>&1
+        
+
+[Sun Jan  3 14:24:23 2021]
+rule check_file:
+    output: ../TargetSeq-cas9-RUX-25/cutoff_3/merge.fastq/RX-cpf-9_merge_barcode_R1.fastq.gz, ../TargetSeq-cas9-RUX-25/cutoff_3/merge.fastq/RX-cpf-9_merge_barcode_R2.fastq.gz
+    jobid: 134
+    reason: Missing output files: ../TargetSeq-cas9-RUX-25/cutoff_3/merge.fastq/RX-cpf-9_merge_barcode_R1.fastq.gz, ../TargetSeq-cas9-RUX-25/cutoff_3/merge.fastq/RX-cpf-9_merge_barcode_R2.fastq.gz
+    wildcards: lib=cas9-RUX-25, cutoff=3, sample=RX-cpf-9
+
+Removing output files of failed job cutadapt since they might be corrupted:
+../TargetSeq-cpf1-RUX-21/cutoff_10/mapping/RX-cas-3_R1_cutadapt.fq.gz, ../TargetSeq-cpf1-RUX-21/cutoff_10/mapping/RX-cas-3_R2_cutadapt.fq.gz
+
+[Sun Jan  3 14:24:23 2021]
+rule cutadapt:
+    input: ../TargetSeq-cpf1-RUX-21/cutoff_5/merge.fastq/RX-Dig6_merge_barcode_R1.fastq.gz, ../TargetSeq-cpf1-RUX-21/cutoff_5/merge.fastq/RX-Dig6_merge_barcode_R2.fastq.gz
+    output: ../TargetSeq-cpf1-RUX-21/cutoff_5/mapping/RX-Dig6_R1_cutadapt.fq.gz, ../TargetSeq-cpf1-RUX-21/cutoff_5/mapping/RX-Dig6_R2_cutadapt.fq.gz
+    log: ../TargetSeq-cpf1-RUX-21/cutoff_5/mapping/RX-Dig6_cutadapt.log
+    jobid: 237
+    reason: Missing output files: ../TargetSeq-cpf1-RUX-21/cutoff_5/mapping/RX-Dig6_R2_cutadapt.fq.gz, ../TargetSeq-cpf1-RUX-21/cutoff_5/mapping/RX-Dig6_R1_cutadapt.fq.gz
+    wildcards: lib=cpf1-RUX-21, cutoff=5, sample=RX-Dig6
+
+
+        /home/zhaohuanan/zhaohn_HD/miniconda3/bin/cutadapt -j 24 --times 1  -e 0.1  -O 3  --quality-cutoff 25         -m 100 -a AGATCGGAAGAGCACACGTCTGAACTCCAGTCAC         -A AGATCGGAAGAGCGTCGTGTAGGGAAAGAGTGTAGATCTCGGTGGTCGCCGTATCATT         -o ../TargetSeq-cpf1-RUX-21/cutoff_5/mapping/RX-Dig6_R1_cutadapt.fq.gz -p ../TargetSeq-cpf1-RUX-21/cutoff_5/mapping/RX-Dig6_R2_cutadapt.fq.gz ../TargetSeq-cpf1-RUX-21/cutoff_5/merge.fastq/RX-Dig6_merge_barcode_R1.fastq.gz ../TargetSeq-cpf1-RUX-21/cutoff_5/merge.fastq/RX-Dig6_merge_barcode_R2.fastq.gz > ../TargetSeq-cpf1-RUX-21/cutoff_5/mapping/RX-Dig6_cutadapt.log 2>&1
+        
+
+[Sun Jan  3 14:24:23 2021]
+rule cutadapt:
+    input: ../TargetSeq-cas9-RUX-25/cutoff_3/merge.fastq/RX-cas-2_merge_barcode_R1.fastq.gz, ../TargetSeq-cas9-RUX-25/cutoff_3/merge.fastq/RX-cas-2_merge_barcode_R2.fastq.gz
+    output: ../TargetSeq-cas9-RUX-25/cutoff_3/mapping/RX-cas-2_R1_cutadapt.fq.gz, ../TargetSeq-cas9-RUX-25/cutoff_3/mapping/RX-cas-2_R2_cutadapt.fq.gz
+    log: ../TargetSeq-cas9-RUX-25/cutoff_3/mapping/RX-cas-2_cutadapt.log
+    jobid: 7
+    reason: Missing output files: ../TargetSeq-cas9-RUX-25/cutoff_3/mapping/RX-cas-2_R1_cutadapt.fq.gz, ../TargetSeq-cas9-RUX-25/cutoff_3/mapping/RX-cas-2_R2_cutadapt.fq.gz
+    wildcards: lib=cas9-RUX-25, cutoff=3, sample=RX-cas-2
+
+
+        /home/zhaohuanan/zhaohn_HD/miniconda3/bin/cutadapt -j 24 --times 1  -e 0.1  -O 3  --quality-cutoff 25         -m 100 -a AGATCGGAAGAGCACACGTCTGAACTCCAGTCAC         -A AGATCGGAAGAGCGTCGTGTAGGGAAAGAGTGTAGATCTCGGTGGTCGCCGTATCATT         -o ../TargetSeq-cas9-RUX-25/cutoff_3/mapping/RX-cas-2_R1_cutadapt.fq.gz -p ../TargetSeq-cas9-RUX-25/cutoff_3/mapping/RX-cas-2_R2_cutadapt.fq.gz ../TargetSeq-cas9-RUX-25/cutoff_3/merge.fastq/RX-cas-2_merge_barcode_R1.fastq.gz ../TargetSeq-cas9-RUX-25/cutoff_3/merge.fastq/RX-cas-2_merge_barcode_R2.fastq.gz > ../TargetSeq-cas9-RUX-25/cutoff_3/mapping/RX-cas-2_cutadapt.log 2>&1
+        
+
+[Sun Jan  3 14:24:23 2021]
+rule cutadapt:
+    input: ../TargetSeq-cpf1-RUX-21/cutoff_10/merge.fastq/RX-Dig8_merge_barcode_R1.fastq.gz, ../TargetSeq-cpf1-RUX-21/cutoff_10/merge.fastq/RX-Dig8_merge_barcode_R2.fastq.gz
+    output: ../TargetSeq-cpf1-RUX-21/cutoff_10/mapping/RX-Dig8_R1_cutadapt.fq.gz, ../TargetSeq-cpf1-RUX-21/cutoff_10/mapping/RX-Dig8_R2_cutadapt.fq.gz
+    log: ../TargetSeq-cpf1-RUX-21/cutoff_10/mapping/RX-Dig8_cutadapt.log
+    jobid: 245
+    reason: Missing output files: ../TargetSeq-cpf1-RUX-21/cutoff_10/mapping/RX-Dig8_R2_cutadapt.fq.gz, ../TargetSeq-cpf1-RUX-21/cutoff_10/mapping/RX-Dig8_R1_cutadapt.fq.gz
+    wildcards: lib=cpf1-RUX-21, cutoff=10, sample=RX-Dig8
+
+
+        /home/zhaohuanan/zhaohn_HD/miniconda3/bin/cutadapt -j 24 --times 1  -e 0.1  -O 3  --quality-cutoff 25         -m 100 -a AGATCGGAAGAGCACACGTCTGAACTCCAGTCAC         -A AGATCGGAAGAGCGTCGTGTAGGGAAAGAGTGTAGATCTCGGTGGTCGCCGTATCATT         -o ../TargetSeq-cpf1-RUX-21/cutoff_10/mapping/RX-Dig8_R1_cutadapt.fq.gz -p ../TargetSeq-cpf1-RUX-21/cutoff_10/mapping/RX-Dig8_R2_cutadapt.fq.gz ../TargetSeq-cpf1-RUX-21/cutoff_10/merge.fastq/RX-Dig8_merge_barcode_R1.fastq.gz ../TargetSeq-cpf1-RUX-21/cutoff_10/merge.fastq/RX-Dig8_merge_barcode_R2.fastq.gz > ../TargetSeq-cpf1-RUX-21/cutoff_10/mapping/RX-Dig8_cutadapt.log 2>&1
+        
+
+[Sun Jan  3 14:24:23 2021]
+rule cutadapt:
+    input: ../TargetSeq-cpf1-RUX-21/cutoff_3/merge.fastq/RX-cas-1_merge_barcode_R1.fastq.gz, ../TargetSeq-cpf1-RUX-21/cutoff_3/merge.fastq/RX-cas-1_merge_barcode_R2.fastq.gz
+    output: ../TargetSeq-cpf1-RUX-21/cutoff_3/mapping/RX-cas-1_R1_cutadapt.fq.gz, ../TargetSeq-cpf1-RUX-21/cutoff_3/mapping/RX-cas-1_R2_cutadapt.fq.gz
+    log: ../TargetSeq-cpf1-RUX-21/cutoff_3/mapping/RX-cas-1_cutadapt.log
+    jobid: 157
+    reason: Missing output files: ../TargetSeq-cpf1-RUX-21/cutoff_3/mapping/RX-cas-1_R2_cutadapt.fq.gz, ../TargetSeq-cpf1-RUX-21/cutoff_3/mapping/RX-cas-1_R1_cutadapt.fq.gz
+    wildcards: lib=cpf1-RUX-21, cutoff=3, sample=RX-cas-1
+
+
+        /home/zhaohuanan/zhaohn_HD/miniconda3/bin/cutadapt -j 24 --times 1  -e 0.1  -O 3  --quality-cutoff 25         -m 100 -a AGATCGGAAGAGCACACGTCTGAACTCCAGTCAC         -A AGATCGGAAGAGCGTCGTGTAGGGAAAGAGTGTAGATCTCGGTGGTCGCCGTATCATT         -o ../TargetSeq-cpf1-RUX-21/cutoff_3/mapping/RX-cas-1_R1_cutadapt.fq.gz -p ../TargetSeq-cpf1-RUX-21/cutoff_3/mapping/RX-cas-1_R2_cutadapt.fq.gz ../TargetSeq-cpf1-RUX-21/cutoff_3/merge.fastq/RX-cas-1_merge_barcode_R1.fastq.gz ../TargetSeq-cpf1-RUX-21/cutoff_3/merge.fastq/RX-cas-1_merge_barcode_R2.fastq.gz > ../TargetSeq-cpf1-RUX-21/cutoff_3/mapping/RX-cas-1_cutadapt.log 2>&1
+        
+[Sun Jan  3 14:24:23 2021]
+
+Error in rule cutadapt:
+[Sun Jan  3 14:24:23 2021]
+    jobid: 55
+rule cutadapt:
+    input: ../TargetSeq-cpf1-RUX-21/cutoff_5/merge.fastq/RX-cas-3_merge_barcode_R1.fastq.gz, ../TargetSeq-cpf1-RUX-21/cutoff_5/merge.fastq/RX-cas-3_merge_barcode_R2.fastq.gz
+    output: ../TargetSeq-cpf1-RUX-21/cutoff_5/mapping/RX-cas-3_R1_cutadapt.fq.gz, ../TargetSeq-cpf1-RUX-21/cutoff_5/mapping/RX-cas-3_R2_cutadapt.fq.gz
+    log: ../TargetSeq-cpf1-RUX-21/cutoff_5/mapping/RX-cas-3_cutadapt.log
+    jobid: 171
+    reason: Missing output files: ../TargetSeq-cpf1-RUX-21/cutoff_5/mapping/RX-cas-3_R1_cutadapt.fq.gz, ../TargetSeq-cpf1-RUX-21/cutoff_5/mapping/RX-cas-3_R2_cutadapt.fq.gz
+    wildcards: lib=cpf1-RUX-21, cutoff=5, sample=RX-cas-3
+    output: ../TargetSeq-cas9-RUX-25/cutoff_3/mapping/RX-Dig2_R1_cutadapt.fq.gz, ../TargetSeq-cas9-RUX-25/cutoff_3/mapping/RX-Dig2_R2_cutadapt.fq.gz
+
+    log: ../TargetSeq-cas9-RUX-25/cutoff_3/mapping/RX-Dig2_cutadapt.log (check log file(s) for error message)
+[Sun Jan  3 14:24:23 2021]
+
+        /home/zhaohuanan/zhaohn_HD/miniconda3/bin/cutadapt -j 24 --times 1  -e 0.1  -O 3  --quality-cutoff 25         -m 100 -a AGATCGGAAGAGCACACGTCTGAACTCCAGTCAC         -A AGATCGGAAGAGCGTCGTGTAGGGAAAGAGTGTAGATCTCGGTGGTCGCCGTATCATT         -o ../TargetSeq-cpf1-RUX-21/cutoff_5/mapping/RX-cas-3_R1_cutadapt.fq.gz -p ../TargetSeq-cpf1-RUX-21/cutoff_5/mapping/RX-cas-3_R2_cutadapt.fq.gz ../TargetSeq-cpf1-RUX-21/cutoff_5/merge.fastq/RX-cas-3_merge_barcode_R1.fastq.gz ../TargetSeq-cpf1-RUX-21/cutoff_5/merge.fastq/RX-cas-3_merge_barcode_R2.fastq.gz > ../TargetSeq-cpf1-RUX-21/cutoff_5/mapping/RX-cas-3_cutadapt.log 2>&1
+        
+    shell:
+        
+        /home/zhaohuanan/zhaohn_HD/miniconda3/bin/cutadapt -j 24 --times 1  -e 0.1  -O 3  --quality-cutoff 25         -m 100 -a AGATCGGAAGAGCACACGTCTGAACTCCAGTCAC         -A AGATCGGAAGAGCGTCGTGTAGGGAAAGAGTGTAGATCTCGGTGGTCGCCGTATCATT         -o ../TargetSeq-cas9-RUX-25/cutoff_3/mapping/RX-Dig2_R1_cutadapt.fq.gz -p ../TargetSeq-cas9-RUX-25/cutoff_3/mapping/RX-Dig2_R2_cutadapt.fq.gz ../TargetSeq-cas9-RUX-25/cutoff_3/merge.fastq/RX-Dig2_merge_barcode_R1.fastq.gz ../TargetSeq-cas9-RUX-25/cutoff_3/merge.fastq/RX-Dig2_merge_barcode_R2.fastq.gz > ../TargetSeq-cas9-RUX-25/cutoff_3/mapping/RX-Dig2_cutadapt.log 2>&1
+        
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+Error in rule cutadapt:
+Removing output files of failed job cutadapt since they might be corrupted:
+../TargetSeq-cas9-RUX-25/cutoff_3/mapping/RX-Dig2_R1_cutadapt.fq.gz, ../TargetSeq-cas9-RUX-25/cutoff_3/mapping/RX-Dig2_R2_cutadapt.fq.gz
+    jobid: 233
+    output: ../TargetSeq-cpf1-RUX-21/cutoff_10/mapping/RX-Dig5_R1_cutadapt.fq.gz, ../TargetSeq-cpf1-RUX-21/cutoff_10/mapping/RX-Dig5_R2_cutadapt.fq.gz
+    log: ../TargetSeq-cpf1-RUX-21/cutoff_10/mapping/RX-Dig5_cutadapt.log (check log file(s) for error message)
+    shell:
+        
+        /home/zhaohuanan/zhaohn_HD/miniconda3/bin/cutadapt -j 24 --times 1  -e 0.1  -O 3  --quality-cutoff 25         -m 100 -a AGATCGGAAGAGCACACGTCTGAACTCCAGTCAC         -A AGATCGGAAGAGCGTCGTGTAGGGAAAGAGTGTAGATCTCGGTGGTCGCCGTATCATT         -o ../TargetSeq-cpf1-RUX-21/cutoff_10/mapping/RX-Dig5_R1_cutadapt.fq.gz -p ../TargetSeq-cpf1-RUX-21/cutoff_10/mapping/RX-Dig5_R2_cutadapt.fq.gz ../TargetSeq-cpf1-RUX-21/cutoff_10/merge.fastq/RX-Dig5_merge_barcode_R1.fastq.gz ../TargetSeq-cpf1-RUX-21/cutoff_10/merge.fastq/RX-Dig5_merge_barcode_R2.fastq.gz > ../TargetSeq-cpf1-RUX-21/cutoff_10/mapping/RX-Dig5_cutadapt.log 2>&1
+        
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+Removing output files of failed job cutadapt since they might be corrupted:
+../TargetSeq-cpf1-RUX-21/cutoff_10/mapping/RX-Dig5_R1_cutadapt.fq.gz, ../TargetSeq-cpf1-RUX-21/cutoff_10/mapping/RX-Dig5_R2_cutadapt.fq.gz
+[Sun Jan  3 14:24:23 2021]
+Error in rule cutadapt:
+    jobid: 145
+    output: ../TargetSeq-cas9-RUX-25/cutoff_3/mapping/RX-cpf-11_R1_cutadapt.fq.gz, ../TargetSeq-cas9-RUX-25/cutoff_3/mapping/RX-cpf-11_R2_cutadapt.fq.gz
+    log: ../TargetSeq-cas9-RUX-25/cutoff_3/mapping/RX-cpf-11_cutadapt.log (check log file(s) for error message)
+    shell:
+        
+        /home/zhaohuanan/zhaohn_HD/miniconda3/bin/cutadapt -j 24 --times 1  -e 0.1  -O 3  --quality-cutoff 25         -m 100 -a AGATCGGAAGAGCACACGTCTGAACTCCAGTCAC         -A AGATCGGAAGAGCGTCGTGTAGGGAAAGAGTGTAGATCTCGGTGGTCGCCGTATCATT         -o ../TargetSeq-cas9-RUX-25/cutoff_3/mapping/RX-cpf-11_R1_cutadapt.fq.gz -p ../TargetSeq-cas9-RUX-25/cutoff_3/mapping/RX-cpf-11_R2_cutadapt.fq.gz ../TargetSeq-cas9-RUX-25/cutoff_3/merge.fastq/RX-cpf-11_merge_barcode_R1.fastq.gz ../TargetSeq-cas9-RUX-25/cutoff_3/merge.fastq/RX-cpf-11_merge_barcode_R2.fastq.gz > ../TargetSeq-cas9-RUX-25/cutoff_3/mapping/RX-cpf-11_cutadapt.log 2>&1
+        
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+Removing output files of failed job cutadapt since they might be corrupted:
+../TargetSeq-cas9-RUX-25/cutoff_3/mapping/RX-cpf-11_R1_cutadapt.fq.gz, ../TargetSeq-cas9-RUX-25/cutoff_3/mapping/RX-cpf-11_R2_cutadapt.fq.gz
+[Sun Jan  3 14:24:23 2021]
+Finished job 556.
+3 of 1337 steps (0.22%) done
+[Sun Jan  3 14:24:23 2021]
+Error in rule cutadapt:
+    jobid: 291
+    output: ../TargetSeq-cpf1-RUX-21/cutoff_5/mapping/RX-cpf-9_R1_cutadapt.fq.gz, ../TargetSeq-cpf1-RUX-21/cutoff_5/mapping/RX-cpf-9_R2_cutadapt.fq.gz
+    log: ../TargetSeq-cpf1-RUX-21/cutoff_5/mapping/RX-cpf-9_cutadapt.log (check log file(s) for error message)
+    shell:
+        
+        /home/zhaohuanan/zhaohn_HD/miniconda3/bin/cutadapt -j 24 --times 1  -e 0.1  -O 3  --quality-cutoff 25         -m 100 -a AGATCGGAAGAGCACACGTCTGAACTCCAGTCAC         -A AGATCGGAAGAGCGTCGTGTAGGGAAAGAGTGTAGATCTCGGTGGTCGCCGTATCATT         -o ../TargetSeq-cpf1-RUX-21/cutoff_5/mapping/RX-cpf-9_R1_cutadapt.fq.gz -p ../TargetSeq-cpf1-RUX-21/cutoff_5/mapping/RX-cpf-9_R2_cutadapt.fq.gz ../TargetSeq-cpf1-RUX-21/cutoff_5/merge.fastq/RX-cpf-9_merge_barcode_R1.fastq.gz ../TargetSeq-cpf1-RUX-21/cutoff_5/merge.fastq/RX-cpf-9_merge_barcode_R2.fastq.gz > ../TargetSeq-cpf1-RUX-21/cutoff_5/mapping/RX-cpf-9_cutadapt.log 2>&1
+        
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+Removing output files of failed job cutadapt since they might be corrupted:
+../TargetSeq-cpf1-RUX-21/cutoff_5/mapping/RX-cpf-9_R1_cutadapt.fq.gz, ../TargetSeq-cpf1-RUX-21/cutoff_5/mapping/RX-cpf-9_R2_cutadapt.fq.gz
+[Sun Jan  3 14:24:23 2021]
+Finished job 128.
+4 of 1337 steps (0.30%) done
+[Sun Jan  3 14:24:24 2021]
+Error in rule cutadapt:
+    jobid: 169
+    output: ../TargetSeq-cpf1-RUX-21/cutoff_3/mapping/RX-cas-3_R1_cutadapt.fq.gz, ../TargetSeq-cpf1-RUX-21/cutoff_3/mapping/RX-cas-3_R2_cutadapt.fq.gz
+    log: ../TargetSeq-cpf1-RUX-21/cutoff_3/mapping/RX-cas-3_cutadapt.log (check log file(s) for error message)
+    shell:
+        
+        /home/zhaohuanan/zhaohn_HD/miniconda3/bin/cutadapt -j 24 --times 1  -e 0.1  -O 3  --quality-cutoff 25         -m 100 -a AGATCGGAAGAGCACACGTCTGAACTCCAGTCAC         -A AGATCGGAAGAGCGTCGTGTAGGGAAAGAGTGTAGATCTCGGTGGTCGCCGTATCATT         -o ../TargetSeq-cpf1-RUX-21/cutoff_3/mapping/RX-cas-3_R1_cutadapt.fq.gz -p ../TargetSeq-cpf1-RUX-21/cutoff_3/mapping/RX-cas-3_R2_cutadapt.fq.gz ../TargetSeq-cpf1-RUX-21/cutoff_3/merge.fastq/RX-cas-3_merge_barcode_R1.fastq.gz ../TargetSeq-cpf1-RUX-21/cutoff_3/merge.fastq/RX-cas-3_merge_barcode_R2.fastq.gz > ../TargetSeq-cpf1-RUX-21/cutoff_3/mapping/RX-cas-3_cutadapt.log 2>&1
+        
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+Removing output files of failed job cutadapt since they might be corrupted:
+../TargetSeq-cpf1-RUX-21/cutoff_3/mapping/RX-cas-3_R1_cutadapt.fq.gz, ../TargetSeq-cpf1-RUX-21/cutoff_3/mapping/RX-cas-3_R2_cutadapt.fq.gz
+[Sun Jan  3 14:24:24 2021]
+Error in rule cutadapt:
+    jobid: 49
+    output: ../TargetSeq-cas9-RUX-25/cutoff_3/mapping/RX-Dig1_R1_cutadapt.fq.gz, ../TargetSeq-cas9-RUX-25/cutoff_3/mapping/RX-Dig1_R2_cutadapt.fq.gz
+    log: ../TargetSeq-cas9-RUX-25/cutoff_3/mapping/RX-Dig1_cutadapt.log (check log file(s) for error message)
+    shell:
+        
+        /home/zhaohuanan/zhaohn_HD/miniconda3/bin/cutadapt -j 24 --times 1  -e 0.1  -O 3  --quality-cutoff 25         -m 100 -a AGATCGGAAGAGCACACGTCTGAACTCCAGTCAC         -A AGATCGGAAGAGCGTCGTGTAGGGAAAGAGTGTAGATCTCGGTGGTCGCCGTATCATT         -o ../TargetSeq-cas9-RUX-25/cutoff_3/mapping/RX-Dig1_R1_cutadapt.fq.gz -p ../TargetSeq-cas9-RUX-25/cutoff_3/mapping/RX-Dig1_R2_cutadapt.fq.gz ../TargetSeq-cas9-RUX-25/cutoff_3/merge.fastq/RX-Dig1_merge_barcode_R1.fastq.gz ../TargetSeq-cas9-RUX-25/cutoff_3/merge.fastq/RX-Dig1_merge_barcode_R2.fastq.gz > ../TargetSeq-cas9-RUX-25/cutoff_3/mapping/RX-Dig1_cutadapt.log 2>&1
+        
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+[Sun Jan  3 14:24:24 2021]
+Finished job 84.
+5 of 1337 steps (0.37%) done
+Removing output files of failed job cutadapt since they might be corrupted:
+../TargetSeq-cas9-RUX-25/cutoff_3/mapping/RX-Dig1_R1_cutadapt.fq.gz, ../TargetSeq-cas9-RUX-25/cutoff_3/mapping/RX-Dig1_R2_cutadapt.fq.gz
+[Sun Jan  3 14:24:24 2021]
+Finished job 290.
+6 of 1337 steps (0.45%) done
+[Sun Jan  3 14:24:24 2021]
+Error in rule cutadapt:
+    jobid: 5
+    output: ../TargetSeq-cas9-RUX-25/cutoff_10/mapping/RX-cas-1_R1_cutadapt.fq.gz, ../TargetSeq-cas9-RUX-25/cutoff_10/mapping/RX-cas-1_R2_cutadapt.fq.gz
+    log: ../TargetSeq-cas9-RUX-25/cutoff_10/mapping/RX-cas-1_cutadapt.log (check log file(s) for error message)
+    shell:
+        
+        /home/zhaohuanan/zhaohn_HD/miniconda3/bin/cutadapt -j 24 --times 1  -e 0.1  -O 3  --quality-cutoff 25         -m 100 -a AGATCGGAAGAGCACACGTCTGAACTCCAGTCAC         -A AGATCGGAAGAGCGTCGTGTAGGGAAAGAGTGTAGATCTCGGTGGTCGCCGTATCATT         -o ../TargetSeq-cas9-RUX-25/cutoff_10/mapping/RX-cas-1_R1_cutadapt.fq.gz -p ../TargetSeq-cas9-RUX-25/cutoff_10/mapping/RX-cas-1_R2_cutadapt.fq.gz ../TargetSeq-cas9-RUX-25/cutoff_10/merge.fastq/RX-cas-1_merge_barcode_R1.fastq.gz ../TargetSeq-cas9-RUX-25/cutoff_10/merge.fastq/RX-cas-1_merge_barcode_R2.fastq.gz > ../TargetSeq-cas9-RUX-25/cutoff_10/mapping/RX-cas-1_cutadapt.log 2>&1
+        
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+Removing output files of failed job cutadapt since they might be corrupted:
+../TargetSeq-cas9-RUX-25/cutoff_10/mapping/RX-cas-1_R1_cutadapt.fq.gz, ../TargetSeq-cas9-RUX-25/cutoff_10/mapping/RX-cas-1_R2_cutadapt.fq.gz
+[Sun Jan  3 14:24:24 2021]
+Error in rule cutadapt:
+    jobid: 227
+    output: ../TargetSeq-cpf1-RUX-21/cutoff_10/mapping/RX-Dig4_R1_cutadapt.fq.gz, ../TargetSeq-cpf1-RUX-21/cutoff_10/mapping/RX-Dig4_R2_cutadapt.fq.gz
+    log: ../TargetSeq-cpf1-RUX-21/cutoff_10/mapping/RX-Dig4_cutadapt.log (check log file(s) for error message)
+    shell:
+        
+        /home/zhaohuanan/zhaohn_HD/miniconda3/bin/cutadapt -j 24 --times 1  -e 0.1  -O 3  --quality-cutoff 25         -m 100 -a AGATCGGAAGAGCACACGTCTGAACTCCAGTCAC         -A AGATCGGAAGAGCGTCGTGTAGGGAAAGAGTGTAGATCTCGGTGGTCGCCGTATCATT         -o ../TargetSeq-cpf1-RUX-21/cutoff_10/mapping/RX-Dig4_R1_cutadapt.fq.gz -p ../TargetSeq-cpf1-RUX-21/cutoff_10/mapping/RX-Dig4_R2_cutadapt.fq.gz ../TargetSeq-cpf1-RUX-21/cutoff_10/merge.fastq/RX-Dig4_merge_barcode_R1.fastq.gz ../TargetSeq-cpf1-RUX-21/cutoff_10/merge.fastq/RX-Dig4_merge_barcode_R2.fastq.gz > ../TargetSeq-cpf1-RUX-21/cutoff_10/mapping/RX-Dig4_cutadapt.log 2>&1
+        
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+Removing output files of failed job cutadapt since they might be corrupted:
+../TargetSeq-cpf1-RUX-21/cutoff_10/mapping/RX-Dig4_R1_cutadapt.fq.gz, ../TargetSeq-cpf1-RUX-21/cutoff_10/mapping/RX-Dig4_R2_cutadapt.fq.gz
+[Sun Jan  3 14:24:24 2021]
+Error in rule cutadapt:
+    jobid: 243
+    output: ../TargetSeq-cpf1-RUX-21/cutoff_5/mapping/RX-Dig8_R1_cutadapt.fq.gz, ../TargetSeq-cpf1-RUX-21/cutoff_5/mapping/RX-Dig8_R2_cutadapt.fq.gz
+    log: ../TargetSeq-cpf1-RUX-21/cutoff_5/mapping/RX-Dig8_cutadapt.log (check log file(s) for error message)
+    shell:
+        
+        /home/zhaohuanan/zhaohn_HD/miniconda3/bin/cutadapt -j 24 --times 1  -e 0.1  -O 3  --quality-cutoff 25         -m 100 -a AGATCGGAAGAGCACACGTCTGAACTCCAGTCAC         -A AGATCGGAAGAGCGTCGTGTAGGGAAAGAGTGTAGATCTCGGTGGTCGCCGTATCATT         -o ../TargetSeq-cpf1-RUX-21/cutoff_5/mapping/RX-Dig8_R1_cutadapt.fq.gz -p ../TargetSeq-cpf1-RUX-21/cutoff_5/mapping/RX-Dig8_R2_cutadapt.fq.gz ../TargetSeq-cpf1-RUX-21/cutoff_5/merge.fastq/RX-Dig8_merge_barcode_R1.fastq.gz ../TargetSeq-cpf1-RUX-21/cutoff_5/merge.fastq/RX-Dig8_merge_barcode_R2.fastq.gz > ../TargetSeq-cpf1-RUX-21/cutoff_5/mapping/RX-Dig8_cutadapt.log 2>&1
+        
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+Removing output files of failed job cutadapt since they might be corrupted:
+../TargetSeq-cpf1-RUX-21/cutoff_5/mapping/RX-Dig8_R1_cutadapt.fq.gz, ../TargetSeq-cpf1-RUX-21/cutoff_5/mapping/RX-Dig8_R2_cutadapt.fq.gz
+[Sun Jan  3 14:24:24 2021]
+Error in rule cutadapt:
+    jobid: 155
+    output: ../TargetSeq-cas9-RUX-25/cutoff_10/mapping/RX-ontarget_R1_cutadapt.fq.gz, ../TargetSeq-cas9-RUX-25/cutoff_10/mapping/RX-ontarget_R2_cutadapt.fq.gz
+    log: ../TargetSeq-cas9-RUX-25/cutoff_10/mapping/RX-ontarget_cutadapt.log (check log file(s) for error message)
+    shell:
+        
+        /home/zhaohuanan/zhaohn_HD/miniconda3/bin/cutadapt -j 24 --times 1  -e 0.1  -O 3  --quality-cutoff 25         -m 100 -a AGATCGGAAGAGCACACGTCTGAACTCCAGTCAC         -A AGATCGGAAGAGCGTCGTGTAGGGAAAGAGTGTAGATCTCGGTGGTCGCCGTATCATT         -o ../TargetSeq-cas9-RUX-25/cutoff_10/mapping/RX-ontarget_R1_cutadapt.fq.gz -p ../TargetSeq-cas9-RUX-25/cutoff_10/mapping/RX-ontarget_R2_cutadapt.fq.gz ../TargetSeq-cas9-RUX-25/cutoff_10/merge.fastq/RX-ontarget_merge_barcode_R1.fastq.gz ../TargetSeq-cas9-RUX-25/cutoff_10/merge.fastq/RX-ontarget_merge_barcode_R2.fastq.gz > ../TargetSeq-cas9-RUX-25/cutoff_10/mapping/RX-ontarget_cutadapt.log 2>&1
+        
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+Removing output files of failed job cutadapt since they might be corrupted:
+../TargetSeq-cas9-RUX-25/cutoff_10/mapping/RX-ontarget_R1_cutadapt.fq.gz, ../TargetSeq-cas9-RUX-25/cutoff_10/mapping/RX-ontarget_R2_cutadapt.fq.gz
+[Sun Jan  3 14:24:24 2021]
+Finished job 54.
+7 of 1337 steps (0.52%) done
+[Sun Jan  3 14:24:24 2021]
+Finished job 130.
+8 of 1337 steps (0.60%) done
+[Sun Jan  3 14:24:24 2021]
+Finished job 144.
+9 of 1337 steps (0.67%) done
+[Sun Jan  3 14:24:24 2021]
+Finished job 232.
+10 of 1337 steps (0.75%) done
+[Sun Jan  3 14:24:24 2021]
+Error in rule cutadapt:
+    jobid: 79
+    output: ../TargetSeq-cas9-RUX-25/cutoff_3/mapping/RX-Dig6_R1_cutadapt.fq.gz, ../TargetSeq-cas9-RUX-25/cutoff_3/mapping/RX-Dig6_R2_cutadapt.fq.gz
+    log: ../TargetSeq-cas9-RUX-25/cutoff_3/mapping/RX-Dig6_cutadapt.log (check log file(s) for error message)
+    shell:
+        
+        /home/zhaohuanan/zhaohn_HD/miniconda3/bin/cutadapt -j 24 --times 1  -e 0.1  -O 3  --quality-cutoff 25         -m 100 -a AGATCGGAAGAGCACACGTCTGAACTCCAGTCAC         -A AGATCGGAAGAGCGTCGTGTAGGGAAAGAGTGTAGATCTCGGTGGTCGCCGTATCATT         -o ../TargetSeq-cas9-RUX-25/cutoff_3/mapping/RX-Dig6_R1_cutadapt.fq.gz -p ../TargetSeq-cas9-RUX-25/cutoff_3/mapping/RX-Dig6_R2_cutadapt.fq.gz ../TargetSeq-cas9-RUX-25/cutoff_3/merge.fastq/RX-Dig6_merge_barcode_R1.fastq.gz ../TargetSeq-cas9-RUX-25/cutoff_3/merge.fastq/RX-Dig6_merge_barcode_R2.fastq.gz > ../TargetSeq-cas9-RUX-25/cutoff_3/mapping/RX-Dig6_cutadapt.log 2>&1
+        
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+Removing output files of failed job cutadapt since they might be corrupted:
+../TargetSeq-cas9-RUX-25/cutoff_3/mapping/RX-Dig6_R1_cutadapt.fq.gz, ../TargetSeq-cas9-RUX-25/cutoff_3/mapping/RX-Dig6_R2_cutadapt.fq.gz
+[Sun Jan  3 14:24:24 2021]
+Error in rule cutadapt:
+    jobid: 81
+    output: ../TargetSeq-cas9-RUX-25/cutoff_5/mapping/RX-Dig6_R1_cutadapt.fq.gz, ../TargetSeq-cas9-RUX-25/cutoff_5/mapping/RX-Dig6_R2_cutadapt.fq.gz
+    log: ../TargetSeq-cas9-RUX-25/cutoff_5/mapping/RX-Dig6_cutadapt.log (check log file(s) for error message)
+    shell:
+        
+        /home/zhaohuanan/zhaohn_HD/miniconda3/bin/cutadapt -j 24 --times 1  -e 0.1  -O 3  --quality-cutoff 25         -m 100 -a AGATCGGAAGAGCACACGTCTGAACTCCAGTCAC         -A AGATCGGAAGAGCGTCGTGTAGGGAAAGAGTGTAGATCTCGGTGGTCGCCGTATCATT         -o ../TargetSeq-cas9-RUX-25/cutoff_5/mapping/RX-Dig6_R1_cutadapt.fq.gz -p ../TargetSeq-cas9-RUX-25/cutoff_5/mapping/RX-Dig6_R2_cutadapt.fq.gz ../TargetSeq-cas9-RUX-25/cutoff_5/merge.fastq/RX-Dig6_merge_barcode_R1.fastq.gz ../TargetSeq-cas9-RUX-25/cutoff_5/merge.fastq/RX-Dig6_merge_barcode_R2.fastq.gz > ../TargetSeq-cas9-RUX-25/cutoff_5/mapping/RX-Dig6_cutadapt.log 2>&1
+        
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+[Sun Jan  3 14:24:24 2021]
+Error in rule cutadapt:
+    jobid: 59
+    output: ../TargetSeq-cas9-RUX-25/cutoff_10/mapping/RX-Dig2_R1_cutadapt.fq.gz, ../TargetSeq-cas9-RUX-25/cutoff_10/mapping/RX-Dig2_R2_cutadapt.fq.gz
+    log: ../TargetSeq-cas9-RUX-25/cutoff_10/mapping/RX-Dig2_cutadapt.log (check log file(s) for error message)
+    shell:
+        
+        /home/zhaohuanan/zhaohn_HD/miniconda3/bin/cutadapt -j 24 --times 1  -e 0.1  -O 3  --quality-cutoff 25         -m 100 -a AGATCGGAAGAGCACACGTCTGAACTCCAGTCAC         -A AGATCGGAAGAGCGTCGTGTAGGGAAAGAGTGTAGATCTCGGTGGTCGCCGTATCATT         -o ../TargetSeq-cas9-RUX-25/cutoff_10/mapping/RX-Dig2_R1_cutadapt.fq.gz -p ../TargetSeq-cas9-RUX-25/cutoff_10/mapping/RX-Dig2_R2_cutadapt.fq.gz ../TargetSeq-cas9-RUX-25/cutoff_10/merge.fastq/RX-Dig2_merge_barcode_R1.fastq.gz ../TargetSeq-cas9-RUX-25/cutoff_10/merge.fastq/RX-Dig2_merge_barcode_R2.fastq.gz > ../TargetSeq-cas9-RUX-25/cutoff_10/mapping/RX-Dig2_cutadapt.log 2>&1
+        
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+[Sun Jan  3 14:24:24 2021]
+Error in rule cutadapt:
+    jobid: 177
+    output: ../TargetSeq-cpf1-RUX-21/cutoff_5/mapping/RX-cas-4_R1_cutadapt.fq.gz, ../TargetSeq-cpf1-RUX-21/cutoff_5/mapping/RX-cas-4_R2_cutadapt.fq.gz
+    log: ../TargetSeq-cpf1-RUX-21/cutoff_5/mapping/RX-cas-4_cutadapt.log (check log file(s) for error message)
+    shell:
+        
+        /home/zhaohuanan/zhaohn_HD/miniconda3/bin/cutadapt -j 24 --times 1  -e 0.1  -O 3  --quality-cutoff 25         -m 100 -a AGATCGGAAGAGCACACGTCTGAACTCCAGTCAC         -A AGATCGGAAGAGCGTCGTGTAGGGAAAGAGTGTAGATCTCGGTGGTCGCCGTATCATT         -o ../TargetSeq-cpf1-RUX-21/cutoff_5/mapping/RX-cas-4_R1_cutadapt.fq.gz -p ../TargetSeq-cpf1-RUX-21/cutoff_5/mapping/RX-cas-4_R2_cutadapt.fq.gz ../TargetSeq-cpf1-RUX-21/cutoff_5/merge.fastq/RX-cas-4_merge_barcode_R1.fastq.gz ../TargetSeq-cpf1-RUX-21/cutoff_5/merge.fastq/RX-cas-4_merge_barcode_R2.fastq.gz > ../TargetSeq-cpf1-RUX-21/cutoff_5/mapping/RX-cas-4_cutadapt.log 2>&1
+        
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+[Sun Jan  3 14:24:24 2021]
+Error in rule cutadapt:
+    jobid: 245
+    output: ../TargetSeq-cpf1-RUX-21/cutoff_10/mapping/RX-Dig8_R1_cutadapt.fq.gz, ../TargetSeq-cpf1-RUX-21/cutoff_10/mapping/RX-Dig8_R2_cutadapt.fq.gz
+    log: ../TargetSeq-cpf1-RUX-21/cutoff_10/mapping/RX-Dig8_cutadapt.log (check log file(s) for error message)
+    shell:
+        
+        /home/zhaohuanan/zhaohn_HD/miniconda3/bin/cutadapt -j 24 --times 1  -e 0.1  -O 3  --quality-cutoff 25         -m 100 -a AGATCGGAAGAGCACACGTCTGAACTCCAGTCAC         -A AGATCGGAAGAGCGTCGTGTAGGGAAAGAGTGTAGATCTCGGTGGTCGCCGTATCATT         -o ../TargetSeq-cpf1-RUX-21/cutoff_10/mapping/RX-Dig8_R1_cutadapt.fq.gz -p ../TargetSeq-cpf1-RUX-21/cutoff_10/mapping/RX-Dig8_R2_cutadapt.fq.gz ../TargetSeq-cpf1-RUX-21/cutoff_10/merge.fastq/RX-Dig8_merge_barcode_R1.fastq.gz ../TargetSeq-cpf1-RUX-21/cutoff_10/merge.fastq/RX-Dig8_merge_barcode_R2.fastq.gz > ../TargetSeq-cpf1-RUX-21/cutoff_10/mapping/RX-Dig8_cutadapt.log 2>&1
+        
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+[Sun Jan  3 14:24:24 2021]
+Error in rule cutadapt:
+    jobid: 141
+    output: ../TargetSeq-cas9-RUX-25/cutoff_5/mapping/RX-cpf-10_R1_cutadapt.fq.gz, ../TargetSeq-cas9-RUX-25/cutoff_5/mapping/RX-cpf-10_R2_cutadapt.fq.gz
+    log: ../TargetSeq-cas9-RUX-25/cutoff_5/mapping/RX-cpf-10_cutadapt.log (check log file(s) for error message)
+    shell:
+        
+        /home/zhaohuanan/zhaohn_HD/miniconda3/bin/cutadapt -j 24 --times 1  -e 0.1  -O 3  --quality-cutoff 25         -m 100 -a AGATCGGAAGAGCACACGTCTGAACTCCAGTCAC         -A AGATCGGAAGAGCGTCGTGTAGGGAAAGAGTGTAGATCTCGGTGGTCGCCGTATCATT         -o ../TargetSeq-cas9-RUX-25/cutoff_5/mapping/RX-cpf-10_R1_cutadapt.fq.gz -p ../TargetSeq-cas9-RUX-25/cutoff_5/mapping/RX-cpf-10_R2_cutadapt.fq.gz ../TargetSeq-cas9-RUX-25/cutoff_5/merge.fastq/RX-cpf-10_merge_barcode_R1.fastq.gz ../TargetSeq-cas9-RUX-25/cutoff_5/merge.fastq/RX-cpf-10_merge_barcode_R2.fastq.gz > ../TargetSeq-cas9-RUX-25/cutoff_5/mapping/RX-cpf-10_cutadapt.log 2>&1
+        
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+[Sun Jan  3 14:24:24 2021]
+[Sun Jan  3 14:24:24 2021]
+Error in rule cutadapt:
+Error in rule cutadapt:
+    jobid: 7
+    jobid: 237
+    output: ../TargetSeq-cas9-RUX-25/cutoff_3/mapping/RX-cas-2_R1_cutadapt.fq.gz, ../TargetSeq-cas9-RUX-25/cutoff_3/mapping/RX-cas-2_R2_cutadapt.fq.gz
+    output: ../TargetSeq-cpf1-RUX-21/cutoff_5/mapping/RX-Dig6_R1_cutadapt.fq.gz, ../TargetSeq-cpf1-RUX-21/cutoff_5/mapping/RX-Dig6_R2_cutadapt.fq.gz
+    log: ../TargetSeq-cas9-RUX-25/cutoff_3/mapping/RX-cas-2_cutadapt.log (check log file(s) for error message)
+    log: ../TargetSeq-cpf1-RUX-21/cutoff_5/mapping/RX-Dig6_cutadapt.log (check log file(s) for error message)
+    shell:
+        
+        /home/zhaohuanan/zhaohn_HD/miniconda3/bin/cutadapt -j 24 --times 1  -e 0.1  -O 3  --quality-cutoff 25         -m 100 -a AGATCGGAAGAGCACACGTCTGAACTCCAGTCAC         -A AGATCGGAAGAGCGTCGTGTAGGGAAAGAGTGTAGATCTCGGTGGTCGCCGTATCATT         -o ../TargetSeq-cas9-RUX-25/cutoff_3/mapping/RX-cas-2_R1_cutadapt.fq.gz -p ../TargetSeq-cas9-RUX-25/cutoff_3/mapping/RX-cas-2_R2_cutadapt.fq.gz ../TargetSeq-cas9-RUX-25/cutoff_3/merge.fastq/RX-cas-2_merge_barcode_R1.fastq.gz ../TargetSeq-cas9-RUX-25/cutoff_3/merge.fastq/RX-cas-2_merge_barcode_R2.fastq.gz > ../TargetSeq-cas9-RUX-25/cutoff_3/mapping/RX-cas-2_cutadapt.log 2>&1
+        
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+    shell:
+        
+        /home/zhaohuanan/zhaohn_HD/miniconda3/bin/cutadapt -j 24 --times 1  -e 0.1  -O 3  --quality-cutoff 25         -m 100 -a AGATCGGAAGAGCACACGTCTGAACTCCAGTCAC         -A AGATCGGAAGAGCGTCGTGTAGGGAAAGAGTGTAGATCTCGGTGGTCGCCGTATCATT         -o ../TargetSeq-cpf1-RUX-21/cutoff_5/mapping/RX-Dig6_R1_cutadapt.fq.gz -p ../TargetSeq-cpf1-RUX-21/cutoff_5/mapping/RX-Dig6_R2_cutadapt.fq.gz ../TargetSeq-cpf1-RUX-21/cutoff_5/merge.fastq/RX-Dig6_merge_barcode_R1.fastq.gz ../TargetSeq-cpf1-RUX-21/cutoff_5/merge.fastq/RX-Dig6_merge_barcode_R2.fastq.gz > ../TargetSeq-cpf1-RUX-21/cutoff_5/mapping/RX-Dig6_cutadapt.log 2>&1
+        
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+
+Removing output files of failed job cutadapt since they might be corrupted:
+../TargetSeq-cas9-RUX-25/cutoff_5/mapping/RX-Dig6_R1_cutadapt.fq.gz, ../TargetSeq-cas9-RUX-25/cutoff_5/mapping/RX-Dig6_R2_cutadapt.fq.gz
+[Sun Jan  3 14:24:24 2021]
+Finished job 124.
+11 of 1337 steps (0.82%) done
+Removing output files of failed job cutadapt since they might be corrupted:
+../TargetSeq-cas9-RUX-25/cutoff_10/mapping/RX-Dig2_R1_cutadapt.fq.gz, ../TargetSeq-cas9-RUX-25/cutoff_10/mapping/RX-Dig2_R2_cutadapt.fq.gz
+Removing output files of failed job cutadapt since they might be corrupted:
+../TargetSeq-cpf1-RUX-21/cutoff_5/mapping/RX-cas-4_R1_cutadapt.fq.gz, ../TargetSeq-cpf1-RUX-21/cutoff_5/mapping/RX-cas-4_R2_cutadapt.fq.gz
+[Sun Jan  3 14:24:24 2021]
+Error in rule cutadapt:
+    jobid: 229
+    output: ../TargetSeq-cpf1-RUX-21/cutoff_3/mapping/RX-Dig5_R1_cutadapt.fq.gz, ../TargetSeq-cpf1-RUX-21/cutoff_3/mapping/RX-Dig5_R2_cutadapt.fq.gz
+    log: ../TargetSeq-cpf1-RUX-21/cutoff_3/mapping/RX-Dig5_cutadapt.log (check log file(s) for error message)
+    shell:
+        
+        /home/zhaohuanan/zhaohn_HD/miniconda3/bin/cutadapt -j 24 --times 1  -e 0.1  -O 3  --quality-cutoff 25         -m 100 -a AGATCGGAAGAGCACACGTCTGAACTCCAGTCAC         -A AGATCGGAAGAGCGTCGTGTAGGGAAAGAGTGTAGATCTCGGTGGTCGCCGTATCATT         -o ../TargetSeq-cpf1-RUX-21/cutoff_3/mapping/RX-Dig5_R1_cutadapt.fq.gz -p ../TargetSeq-cpf1-RUX-21/cutoff_3/mapping/RX-Dig5_R2_cutadapt.fq.gz ../TargetSeq-cpf1-RUX-21/cutoff_3/merge.fastq/RX-Dig5_merge_barcode_R1.fastq.gz ../TargetSeq-cpf1-RUX-21/cutoff_3/merge.fastq/RX-Dig5_merge_barcode_R2.fastq.gz > ../TargetSeq-cpf1-RUX-21/cutoff_3/mapping/RX-Dig5_cutadapt.log 2>&1
+        
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+[Sun Jan  3 14:24:24 2021]
+Finished job 202.
+12 of 1337 steps (0.90%) done
+Removing output files of failed job cutadapt since they might be corrupted:
+../TargetSeq-cpf1-RUX-21/cutoff_10/mapping/RX-Dig8_R1_cutadapt.fq.gz, ../TargetSeq-cpf1-RUX-21/cutoff_10/mapping/RX-Dig8_R2_cutadapt.fq.gz
+[Sun Jan  3 14:24:24 2021]
+Finished job 254.
+13 of 1337 steps (0.97%) done
+Removing output files of failed job cutadapt since they might be corrupted:
+../TargetSeq-cas9-RUX-25/cutoff_5/mapping/RX-cpf-10_R1_cutadapt.fq.gz, ../TargetSeq-cas9-RUX-25/cutoff_5/mapping/RX-cpf-10_R2_cutadapt.fq.gz
+Removing output files of failed job cutadapt since they might be corrupted:
+../TargetSeq-cas9-RUX-25/cutoff_3/mapping/RX-cas-2_R1_cutadapt.fq.gz, ../TargetSeq-cas9-RUX-25/cutoff_3/mapping/RX-cas-2_R2_cutadapt.fq.gz
+Removing output files of failed job cutadapt since they might be corrupted:
+../TargetSeq-cpf1-RUX-21/cutoff_5/mapping/RX-Dig6_R1_cutadapt.fq.gz, ../TargetSeq-cpf1-RUX-21/cutoff_5/mapping/RX-Dig6_R2_cutadapt.fq.gz
+[Sun Jan  3 14:24:24 2021]
+Error in rule cutadapt:
+    jobid: 171
+    output: ../TargetSeq-cpf1-RUX-21/cutoff_5/mapping/RX-cas-3_R1_cutadapt.fq.gz, ../TargetSeq-cpf1-RUX-21/cutoff_5/mapping/RX-cas-3_R2_cutadapt.fq.gz
+    log: ../TargetSeq-cpf1-RUX-21/cutoff_5/mapping/RX-cas-3_cutadapt.log (check log file(s) for error message)
+    shell:
+        
+        /home/zhaohuanan/zhaohn_HD/miniconda3/bin/cutadapt -j 24 --times 1  -e 0.1  -O 3  --quality-cutoff 25         -m 100 -a AGATCGGAAGAGCACACGTCTGAACTCCAGTCAC         -A AGATCGGAAGAGCGTCGTGTAGGGAAAGAGTGTAGATCTCGGTGGTCGCCGTATCATT         -o ../TargetSeq-cpf1-RUX-21/cutoff_5/mapping/RX-cas-3_R1_cutadapt.fq.gz -p ../TargetSeq-cpf1-RUX-21/cutoff_5/mapping/RX-cas-3_R2_cutadapt.fq.gz ../TargetSeq-cpf1-RUX-21/cutoff_5/merge.fastq/RX-cas-3_merge_barcode_R1.fastq.gz ../TargetSeq-cpf1-RUX-21/cutoff_5/merge.fastq/RX-cas-3_merge_barcode_R2.fastq.gz > ../TargetSeq-cpf1-RUX-21/cutoff_5/mapping/RX-cas-3_cutadapt.log 2>&1
+        
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+[Sun Jan  3 14:24:24 2021]
+Error in rule cutadapt:
+    jobid: 157
+    output: ../TargetSeq-cpf1-RUX-21/cutoff_3/mapping/RX-cas-1_R1_cutadapt.fq.gz, ../TargetSeq-cpf1-RUX-21/cutoff_3/mapping/RX-cas-1_R2_cutadapt.fq.gz
+    log: ../TargetSeq-cpf1-RUX-21/cutoff_3/mapping/RX-cas-1_cutadapt.log (check log file(s) for error message)
+    shell:
+        
+        /home/zhaohuanan/zhaohn_HD/miniconda3/bin/cutadapt -j 24 --times 1  -e 0.1  -O 3  --quality-cutoff 25         -m 100 -a AGATCGGAAGAGCACACGTCTGAACTCCAGTCAC         -A AGATCGGAAGAGCGTCGTGTAGGGAAAGAGTGTAGATCTCGGTGGTCGCCGTATCATT         -o ../TargetSeq-cpf1-RUX-21/cutoff_3/mapping/RX-cas-1_R1_cutadapt.fq.gz -p ../TargetSeq-cpf1-RUX-21/cutoff_3/mapping/RX-cas-1_R2_cutadapt.fq.gz ../TargetSeq-cpf1-RUX-21/cutoff_3/merge.fastq/RX-cas-1_merge_barcode_R1.fastq.gz ../TargetSeq-cpf1-RUX-21/cutoff_3/merge.fastq/RX-cas-1_merge_barcode_R2.fastq.gz > ../TargetSeq-cpf1-RUX-21/cutoff_3/mapping/RX-cas-1_cutadapt.log 2>&1
+        
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+[Sun Jan  3 14:24:24 2021]
+Error in rule cutadapt:
+    jobid: 287
+    output: ../TargetSeq-cpf1-RUX-21/cutoff_10/mapping/RX-cpf-8_R1_cutadapt.fq.gz, ../TargetSeq-cpf1-RUX-21/cutoff_10/mapping/RX-cpf-8_R2_cutadapt.fq.gz
+    log: ../TargetSeq-cpf1-RUX-21/cutoff_10/mapping/RX-cpf-8_cutadapt.log (check log file(s) for error message)
+    shell:
+        
+        /home/zhaohuanan/zhaohn_HD/miniconda3/bin/cutadapt -j 24 --times 1  -e 0.1  -O 3  --quality-cutoff 25         -m 100 -a AGATCGGAAGAGCACACGTCTGAACTCCAGTCAC         -A AGATCGGAAGAGCGTCGTGTAGGGAAAGAGTGTAGATCTCGGTGGTCGCCGTATCATT         -o ../TargetSeq-cpf1-RUX-21/cutoff_10/mapping/RX-cpf-8_R1_cutadapt.fq.gz -p ../TargetSeq-cpf1-RUX-21/cutoff_10/mapping/RX-cpf-8_R2_cutadapt.fq.gz ../TargetSeq-cpf1-RUX-21/cutoff_10/merge.fastq/RX-cpf-8_merge_barcode_R1.fastq.gz ../TargetSeq-cpf1-RUX-21/cutoff_10/merge.fastq/RX-cpf-8_merge_barcode_R2.fastq.gz > ../TargetSeq-cpf1-RUX-21/cutoff_10/mapping/RX-cpf-8_cutadapt.log 2>&1
+        
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+[Sun Jan  3 14:24:24 2021]
+Error in rule cutadapt:
+    jobid: 51
+    output: ../TargetSeq-cas9-RUX-25/cutoff_5/mapping/RX-Dig1_R1_cutadapt.fq.gz, ../TargetSeq-cas9-RUX-25/cutoff_5/mapping/RX-Dig1_R2_cutadapt.fq.gz
+    log: ../TargetSeq-cas9-RUX-25/cutoff_5/mapping/RX-Dig1_cutadapt.log (check log file(s) for error message)
+    shell:
+        
+        /home/zhaohuanan/zhaohn_HD/miniconda3/bin/cutadapt -j 24 --times 1  -e 0.1  -O 3  --quality-cutoff 25         -m 100 -a AGATCGGAAGAGCACACGTCTGAACTCCAGTCAC         -A AGATCGGAAGAGCGTCGTGTAGGGAAAGAGTGTAGATCTCGGTGGTCGCCGTATCATT         -o ../TargetSeq-cas9-RUX-25/cutoff_5/mapping/RX-Dig1_R1_cutadapt.fq.gz -p ../TargetSeq-cas9-RUX-25/cutoff_5/mapping/RX-Dig1_R2_cutadapt.fq.gz ../TargetSeq-cas9-RUX-25/cutoff_5/merge.fastq/RX-Dig1_merge_barcode_R1.fastq.gz ../TargetSeq-cas9-RUX-25/cutoff_5/merge.fastq/RX-Dig1_merge_barcode_R2.fastq.gz > ../TargetSeq-cas9-RUX-25/cutoff_5/mapping/RX-Dig1_cutadapt.log 2>&1
+        
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+[Sun Jan  3 14:24:24 2021]
+Error in rule cutadapt:
+    jobid: 199
+    output: ../TargetSeq-cpf1-RUX-21/cutoff_3/mapping/RX-cas-8_R1_cutadapt.fq.gz, ../TargetSeq-cpf1-RUX-21/cutoff_3/mapping/RX-cas-8_R2_cutadapt.fq.gz
+    log: ../TargetSeq-cpf1-RUX-21/cutoff_3/mapping/RX-cas-8_cutadapt.log (check log file(s) for error message)
+    shell:
+        
+        /home/zhaohuanan/zhaohn_HD/miniconda3/bin/cutadapt -j 24 --times 1  -e 0.1  -O 3  --quality-cutoff 25         -m 100 -a AGATCGGAAGAGCACACGTCTGAACTCCAGTCAC         -A AGATCGGAAGAGCGTCGTGTAGGGAAAGAGTGTAGATCTCGGTGGTCGCCGTATCATT         -o ../TargetSeq-cpf1-RUX-21/cutoff_3/mapping/RX-cas-8_R1_cutadapt.fq.gz -p ../TargetSeq-cpf1-RUX-21/cutoff_3/mapping/RX-cas-8_R2_cutadapt.fq.gz ../TargetSeq-cpf1-RUX-21/cutoff_3/merge.fastq/RX-cas-8_merge_barcode_R1.fastq.gz ../TargetSeq-cpf1-RUX-21/cutoff_3/merge.fastq/RX-cas-8_merge_barcode_R2.fastq.gz > ../TargetSeq-cpf1-RUX-21/cutoff_3/mapping/RX-cas-8_cutadapt.log 2>&1
+        
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+[Sun Jan  3 14:24:24 2021]
+Finished job 126.
+14 of 1337 steps (1%) done
+Removing output files of failed job cutadapt since they might be corrupted:
+../TargetSeq-cpf1-RUX-21/cutoff_10/mapping/RX-cpf-8_R1_cutadapt.fq.gz, ../TargetSeq-cpf1-RUX-21/cutoff_10/mapping/RX-cpf-8_R2_cutadapt.fq.gz
+Removing output files of failed job cutadapt since they might be corrupted:
+../TargetSeq-cas9-RUX-25/cutoff_5/mapping/RX-Dig1_R1_cutadapt.fq.gz, ../TargetSeq-cas9-RUX-25/cutoff_5/mapping/RX-Dig1_R2_cutadapt.fq.gz
+Removing output files of failed job cutadapt since they might be corrupted:
+../TargetSeq-cpf1-RUX-21/cutoff_3/mapping/RX-cas-8_R1_cutadapt.fq.gz, ../TargetSeq-cpf1-RUX-21/cutoff_3/mapping/RX-cas-8_R2_cutadapt.fq.gz
+[Sun Jan  3 14:24:24 2021]
+Finished job 198.
+15 of 1337 steps (1%) done
+Removing output files of failed job cutadapt since they might be corrupted:
+../TargetSeq-cpf1-RUX-21/cutoff_3/mapping/RX-Dig5_R1_cutadapt.fq.gz, ../TargetSeq-cpf1-RUX-21/cutoff_3/mapping/RX-Dig5_R2_cutadapt.fq.gz
+Removing output files of failed job cutadapt since they might be corrupted:
+../TargetSeq-cpf1-RUX-21/cutoff_5/mapping/RX-cas-3_R1_cutadapt.fq.gz, ../TargetSeq-cpf1-RUX-21/cutoff_5/mapping/RX-cas-3_R2_cutadapt.fq.gz
+Removing output files of failed job cutadapt since they might be corrupted:
+../TargetSeq-cpf1-RUX-21/cutoff_3/mapping/RX-cas-1_R1_cutadapt.fq.gz, ../TargetSeq-cpf1-RUX-21/cutoff_3/mapping/RX-cas-1_R2_cutadapt.fq.gz
+[Sun Jan  3 14:24:24 2021]
+Finished job 134.
+16 of 1337 steps (1%) done
+Shutting down, this might take some time.
+Exiting because a job execution failed. Look above for error message
+Complete log: /gpfs/user/zhaohuanan/3.project/25.2020-12_02_CBE_DetectSeq_paper_revise/TargetSeq_20201227/sub1_cpf1_cas9/snakepipes_target-seq/.snakemake/log/2021-01-03T142419.687085.snakemake.log

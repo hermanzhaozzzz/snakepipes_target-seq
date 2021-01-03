@@ -25,15 +25,33 @@ MULTIQC = "/home/zhaohuanan/zhaohn_HD/miniconda3/bin/multiqc"
 # --------------------------------------------------------------->>>>>>>
 # vars
 # --------------------------------------------------------------->>>>>>>
-LIB = ['E-digenome-only-5-1', 'E-digenome-only-5-2']
-REGION = ['Digenome-only-EMX1-off-target-11',
- 'Digenome-only-EMX1-off-target-12',
- 'Digenome-only-EMX1-off-target-13',
- 'Digenome-only-EMX1-off-target-15',
- 'Digenome-only-EMX1-off-target-16',
- 'Digenome-only-EMX1-off-target-17',
- 'Digenome-only-EMX1-off-target-22',
- 'Digenome-only-EMX1-off-target-23']
+LIB = ['cas9-RUX-25', 'cpf1-RUX-21']
+REGION = ['RX-Dig1',
+ 'RX-Dig2',
+ 'RX-Dig3',
+ 'RX-Dig4',
+ 'RX-Dig5',
+ 'RX-Dig6',
+ 'RX-Dig8',
+ 'RX-cas-1',
+ 'RX-cas-2',
+ 'RX-cas-3',
+ 'RX-cas-4',
+ 'RX-cas-5',
+ 'RX-cas-6',
+ 'RX-cas-7',
+ 'RX-cas-8',
+ 'RX-cpf-10',
+ 'RX-cpf-11',
+ 'RX-cpf-2',
+ 'RX-cpf-3',
+ 'RX-cpf-4',
+ 'RX-cpf-5',
+ 'RX-cpf-6',
+ 'RX-cpf-7',
+ 'RX-cpf-8',
+ 'RX-cpf-9',
+ 'RX-ontarget']
 
 
 

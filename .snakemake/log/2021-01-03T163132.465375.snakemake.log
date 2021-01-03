@@ -1,0 +1,1343 @@
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided cores: 48
+Rules claiming more threads will be scaled down.
+Job counts:
+	count	jobs
+	1	all
+	78	bmat_plot
+	3	bowtie1_mapping
+	77	parse_mpileup
+	12	sam_to_bam
+	50	samtools_index
+	38	samtools_sort_by_position
+	61	spike_in_mpileup
+	320
+
+[Sun Jan  3 16:31:33 2021]
+rule sam_to_bam:
+    input: ../TargetSeq-cas9-RUX-25/cutoff_10/mapping/RX-Dig6_bt1.sam, ../reference.fasta/RX-Dig6.ref.upper.fa
+    output: ../TargetSeq-cas9-RUX-25/cutoff_10/mapping/RX-Dig6_bt1.bam
+    jobid: 217
+    reason: Missing output files: ../TargetSeq-cas9-RUX-25/cutoff_10/mapping/RX-Dig6_bt1.bam
+    wildcards: lib=cas9-RUX-25, cutoff=10, sample=RX-Dig6
+
+
+        /home/zhaohuanan/zhaohn_HD/miniconda3/bin/samtools view -h -f 1 -F 268 ../TargetSeq-cas9-RUX-25/cutoff_10/mapping/RX-Dig6_bt1.sam         | /home/zhaohuanan/zhaohn_HD/miniconda3/bin/samclip --ref ../reference.fasta/RX-Dig6.ref.upper.fa --max 3 --progress 0         | awk 'function abs(v) {return v < 0 ? -v : v} $1~"@" || ($7 == "=" && abs($9) <= 600 ) {print $0}'         | /home/zhaohuanan/zhaohn_HD/miniconda3/bin/samtools view -hb > ../TargetSeq-cas9-RUX-25/cutoff_10/mapping/RX-Dig6_bt1.bam
+        
+
+[Sun Jan  3 16:31:33 2021]
+rule spike_in_mpileup:
+    input: ../TargetSeq-cas9-RUX-25/cutoff_10/mapping/RX-Dig5_bt1_sort.bam, ../TargetSeq-cas9-RUX-25/cutoff_10/mapping/RX-Dig5_bt1_sort.bam.bai
+    output: ../TargetSeq-cas9-RUX-25/cutoff_10/mapping/RX-Dig5_bt1_sort.mpileup
+    jobid: 455
+    reason: Missing output files: ../TargetSeq-cas9-RUX-25/cutoff_10/mapping/RX-Dig5_bt1_sort.mpileup
+    wildcards: lib=cas9-RUX-25, cutoff=10, sample=RX-Dig5
+
+/home/zhaohuanan/zhaohn_HD/miniconda3/bin/samtools mpileup ../TargetSeq-cas9-RUX-25/cutoff_10/mapping/RX-Dig5_bt1_sort.bam --reference ../reference.fasta/RX-Dig5.ref.upper.fa --max-depth 10000000 -q 20 -Q 20 > ../TargetSeq-cas9-RUX-25/cutoff_10/mapping/RX-Dig5_bt1_sort.mpileup 
+
+[Sun Jan  3 16:31:33 2021]
+rule spike_in_mpileup:
+    input: ../TargetSeq-cas9-RUX-25/cutoff_10/mapping/RX-cas-8_bt1_sort.bam, ../TargetSeq-cas9-RUX-25/cutoff_10/mapping/RX-cas-8_bt1_sort.bam.bai
+    output: ../TargetSeq-cas9-RUX-25/cutoff_10/mapping/RX-cas-8_bt1_sort.mpileup
+    jobid: 440
+    reason: Missing output files: ../TargetSeq-cas9-RUX-25/cutoff_10/mapping/RX-cas-8_bt1_sort.mpileup
+    wildcards: lib=cas9-RUX-25, cutoff=10, sample=RX-cas-8
+
+/home/zhaohuanan/zhaohn_HD/miniconda3/bin/samtools mpileup ../TargetSeq-cas9-RUX-25/cutoff_10/mapping/RX-cas-8_bt1_sort.bam --reference ../reference.fasta/RX-cas-8.ref.upper.fa --max-depth 10000000 -q 20 -Q 20 > ../TargetSeq-cas9-RUX-25/cutoff_10/mapping/RX-cas-8_bt1_sort.mpileup 
+
+[Sun Jan  3 16:31:33 2021]
+rule sam_to_bam:
+    input: ../TargetSeq-cas9-RUX-25/cutoff_10/mapping/RX-cpf-9_bt1.sam, ../reference.fasta/RX-cpf-9.ref.upper.fa
+    output: ../TargetSeq-cas9-RUX-25/cutoff_10/mapping/RX-cpf-9_bt1.bam
+    jobid: 307
+    reason: Missing output files: ../TargetSeq-cas9-RUX-25/cutoff_10/mapping/RX-cpf-9_bt1.bam
+    wildcards: lib=cas9-RUX-25, cutoff=10, sample=RX-cpf-9
+
+
+        /home/zhaohuanan/zhaohn_HD/miniconda3/bin/samtools view -h -f 1 -F 268 ../TargetSeq-cas9-RUX-25/cutoff_10/mapping/RX-cpf-9_bt1.sam         | /home/zhaohuanan/zhaohn_HD/miniconda3/bin/samclip --ref ../reference.fasta/RX-cpf-9.ref.upper.fa --max 3 --progress 0         | awk 'function abs(v) {return v < 0 ? -v : v} $1~"@" || ($7 == "=" && abs($9) <= 600 ) {print $0}'         | /home/zhaohuanan/zhaohn_HD/miniconda3/bin/samtools view -hb > ../TargetSeq-cas9-RUX-25/cutoff_10/mapping/RX-cpf-9_bt1.bam
+        
+
+[Sun Jan  3 16:31:33 2021]
+rule spike_in_mpileup:
+    input: ../TargetSeq-cas9-RUX-25/cutoff_5/mapping/RX-cpf-10_bt1_sort.bam, ../TargetSeq-cas9-RUX-25/cutoff_5/mapping/RX-cpf-10_bt1_sort.bam.bai
+    output: ../TargetSeq-cas9-RUX-25/cutoff_5/mapping/RX-cpf-10_bt1_sort.mpileup
+    jobid: 487
+    reason: Missing output files: ../TargetSeq-cas9-RUX-25/cutoff_5/mapping/RX-cpf-10_bt1_sort.mpileup
+    wildcards: lib=cas9-RUX-25, cutoff=5, sample=RX-cpf-10
+
+/home/zhaohuanan/zhaohn_HD/miniconda3/bin/samtools mpileup ../TargetSeq-cas9-RUX-25/cutoff_5/mapping/RX-cpf-10_bt1_sort.bam --reference ../reference.fasta/RX-cpf-10.ref.upper.fa --max-depth 10000000 -q 20 -Q 20 > ../TargetSeq-cas9-RUX-25/cutoff_5/mapping/RX-cpf-10_bt1_sort.mpileup 
+
+[Sun Jan  3 16:31:33 2021]
+rule spike_in_mpileup:
+    input: ../TargetSeq-cas9-RUX-25/cutoff_5/mapping/RX-cas-1_bt1_sort.bam, ../TargetSeq-cas9-RUX-25/cutoff_5/mapping/RX-cas-1_bt1_sort.bam.bai
+    output: ../TargetSeq-cas9-RUX-25/cutoff_5/mapping/RX-cas-1_bt1_sort.mpileup
+    jobid: 418
+    reason: Missing output files: ../TargetSeq-cas9-RUX-25/cutoff_5/mapping/RX-cas-1_bt1_sort.mpileup
+    wildcards: lib=cas9-RUX-25, cutoff=5, sample=RX-cas-1
+
+/home/zhaohuanan/zhaohn_HD/miniconda3/bin/samtools mpileup ../TargetSeq-cas9-RUX-25/cutoff_5/mapping/RX-cas-1_bt1_sort.bam --reference ../reference.fasta/RX-cas-1.ref.upper.fa --max-depth 10000000 -q 20 -Q 20 > ../TargetSeq-cas9-RUX-25/cutoff_5/mapping/RX-cas-1_bt1_sort.mpileup 
+[Sun Jan  3 16:31:33 2021]
+Finished job 455.
+1 of 320 steps (0.31%) done
+
+[Sun Jan  3 16:31:33 2021]
+rule samtools_index:
+    input: ../TargetSeq-cas9-RUX-25/cutoff_5/mapping/RX-cas-5_bt1_sort.bam
+    output: ../TargetSeq-cas9-RUX-25/cutoff_5/mapping/RX-cas-5_bt1_sort.bam.bai
+    jobid: 352
+    reason: Missing output files: ../TargetSeq-cas9-RUX-25/cutoff_5/mapping/RX-cas-5_bt1_sort.bam.bai
+    wildcards: lib=cas9-RUX-25, cutoff=5, sample=RX-cas-5
+
+/home/zhaohuanan/zhaohn_HD/miniconda3/bin/samtools index -@ 6 ../TargetSeq-cas9-RUX-25/cutoff_5/mapping/RX-cas-5_bt1_sort.bam ../TargetSeq-cas9-RUX-25/cutoff_5/mapping/RX-cas-5_bt1_sort.bam.bai
+
+[Sun Jan  3 16:31:33 2021]
+rule samtools_sort_by_position:
+    input: ../TargetSeq-cas9-RUX-25/cutoff_3/mapping/RX-cas-6_bt1.bam
+    output: ../TargetSeq-cas9-RUX-25/cutoff_3/mapping/RX-cas-6_bt1_sort.bam
+    jobid: 129
+    reason: Missing output files: ../TargetSeq-cas9-RUX-25/cutoff_3/mapping/RX-cas-6_bt1_sort.bam
+    wildcards: lib=cas9-RUX-25, cutoff=3, sample=RX-cas-6
+
+/home/zhaohuanan/zhaohn_HD/miniconda3/bin/samtools sort -O BAM -o ../TargetSeq-cas9-RUX-25/cutoff_3/mapping/RX-cas-6_bt1_sort.bam -T ../TargetSeq-cas9-RUX-25/cutoff_3/mapping/RX-cas-6_bt1_sort.bam.temp -@ 6 -m 2G ../TargetSeq-cas9-RUX-25/cutoff_3/mapping/RX-cas-6_bt1.bam
+
+[Sun Jan  3 16:31:33 2021]
+rule samtools_sort_by_position:
+    input: ../TargetSeq-cas9-RUX-25/cutoff_5/mapping/RX-cpf-8_bt1.bam
+    output: ../TargetSeq-cas9-RUX-25/cutoff_5/mapping/RX-cpf-8_bt1_sort.bam
+    jobid: 293
+    reason: Missing output files: ../TargetSeq-cas9-RUX-25/cutoff_5/mapping/RX-cpf-8_bt1_sort.bam
+    wildcards: lib=cas9-RUX-25, cutoff=5, sample=RX-cpf-8
+
+/home/zhaohuanan/zhaohn_HD/miniconda3/bin/samtools sort -O BAM -o ../TargetSeq-cas9-RUX-25/cutoff_5/mapping/RX-cpf-8_bt1_sort.bam -T ../TargetSeq-cas9-RUX-25/cutoff_5/mapping/RX-cpf-8_bt1_sort.bam.temp -@ 6 -m 2G ../TargetSeq-cas9-RUX-25/cutoff_5/mapping/RX-cpf-8_bt1.bam
+
+[Sun Jan  3 16:31:33 2021]
+rule parse_mpileup:
+    input: ../TargetSeq-cas9-RUX-25/cutoff_5/mapping/RX-Dig2_bt1_sort.mpileup
+    output: ../TargetSeq-cas9-RUX-25/cutoff_5/mapping/RX-Dig2_bt1_sort.bmat
+    jobid: 523
+    reason: Missing output files: ../TargetSeq-cas9-RUX-25/cutoff_5/mapping/RX-Dig2_bt1_sort.bmat
+    wildcards: lib=cas9-RUX-25, cutoff=5, sample=RX-Dig2
+
+/home/zhaohuanan/zhaohn_HD/miniconda3/envs/snakepipes_target-seq/bin/python ./program/parse-mpileup-V04.py -i ../TargetSeq-cas9-RUX-25/cutoff_5/mapping/RX-Dig2_bt1_sort.mpileup -o ../TargetSeq-cas9-RUX-25/cutoff_5/mapping/RX-Dig2_bt1_sort.bmat -n 0
+
+[Sun Jan  3 16:31:33 2021]
+rule sam_to_bam:
+    input: ../TargetSeq-cas9-RUX-25/cutoff_3/mapping/RX-cpf-3_bt1.sam, ../reference.fasta/RX-cpf-3.ref.upper.fa
+    output: ../TargetSeq-cas9-RUX-25/cutoff_3/mapping/RX-cpf-3_bt1.bam
+    jobid: 240
+    reason: Missing output files: ../TargetSeq-cas9-RUX-25/cutoff_3/mapping/RX-cpf-3_bt1.bam
+    wildcards: lib=cas9-RUX-25, cutoff=3, sample=RX-cpf-3
+
+
+        /home/zhaohuanan/zhaohn_HD/miniconda3/bin/samtools view -h -f 1 -F 268 ../TargetSeq-cas9-RUX-25/cutoff_3/mapping/RX-cpf-3_bt1.sam         | /home/zhaohuanan/zhaohn_HD/miniconda3/bin/samclip --ref ../reference.fasta/RX-cpf-3.ref.upper.fa --max 3 --progress 0         | awk 'function abs(v) {return v < 0 ? -v : v} $1~"@" || ($7 == "=" && abs($9) <= 600 ) {print $0}'         | /home/zhaohuanan/zhaohn_HD/miniconda3/bin/samtools view -hb > ../TargetSeq-cas9-RUX-25/cutoff_3/mapping/RX-cpf-3_bt1.bam
+        
+
+[Sun Jan  3 16:31:33 2021]
+rule sam_to_bam:
+    input: ../TargetSeq-cas9-RUX-25/cutoff_5/mapping/RX-cas-7_bt1.sam, ../reference.fasta/RX-cas-7.ref.upper.fa
+    output: ../TargetSeq-cas9-RUX-25/cutoff_5/mapping/RX-cas-7_bt1.bam
+    jobid: 144
+    reason: Missing output files: ../TargetSeq-cas9-RUX-25/cutoff_5/mapping/RX-cas-7_bt1.bam
+    wildcards: lib=cas9-RUX-25, cutoff=5, sample=RX-cas-7
+
+
+        /home/zhaohuanan/zhaohn_HD/miniconda3/bin/samtools view -h -f 1 -F 268 ../TargetSeq-cas9-RUX-25/cutoff_5/mapping/RX-cas-7_bt1.sam         | /home/zhaohuanan/zhaohn_HD/miniconda3/bin/samclip --ref ../reference.fasta/RX-cas-7.ref.upper.fa --max 3 --progress 0         | awk 'function abs(v) {return v < 0 ? -v : v} $1~"@" || ($7 == "=" && abs($9) <= 600 ) {print $0}'         | /home/zhaohuanan/zhaohn_HD/miniconda3/bin/samtools view -hb > ../TargetSeq-cas9-RUX-25/cutoff_5/mapping/RX-cas-7_bt1.bam
+        
+
+[Sun Jan  3 16:31:33 2021]
+rule samtools_sort_by_position:
+    input: ../TargetSeq-cas9-RUX-25/cutoff_3/mapping/RX-Dig4_bt1.bam
+    output: ../TargetSeq-cas9-RUX-25/cutoff_3/mapping/RX-Dig4_bt1_sort.bam
+    jobid: 189
+    reason: Missing output files: ../TargetSeq-cas9-RUX-25/cutoff_3/mapping/RX-Dig4_bt1_sort.bam
+    wildcards: lib=cas9-RUX-25, cutoff=3, sample=RX-Dig4
+
+/home/zhaohuanan/zhaohn_HD/miniconda3/bin/samtools sort -O BAM -o ../TargetSeq-cas9-RUX-25/cutoff_3/mapping/RX-Dig4_bt1_sort.bam -T ../TargetSeq-cas9-RUX-25/cutoff_3/mapping/RX-Dig4_bt1_sort.bam.temp -@ 6 -m 2G ../TargetSeq-cas9-RUX-25/cutoff_3/mapping/RX-Dig4_bt1.bam
+
+[Sun Jan  3 16:31:33 2021]
+rule samtools_index:
+    input: ../TargetSeq-cas9-RUX-25/cutoff_10/mapping/RX-cpf-8_bt1_sort.bam
+    output: ../TargetSeq-cas9-RUX-25/cutoff_10/mapping/RX-cpf-8_bt1_sort.bam.bai
+    jobid: 404
+    reason: Missing output files: ../TargetSeq-cas9-RUX-25/cutoff_10/mapping/RX-cpf-8_bt1_sort.bam.bai
+    wildcards: lib=cas9-RUX-25, cutoff=10, sample=RX-cpf-8
+
+/home/zhaohuanan/zhaohn_HD/miniconda3/bin/samtools index -@ 6 ../TargetSeq-cas9-RUX-25/cutoff_10/mapping/RX-cpf-8_bt1_sort.bam ../TargetSeq-cas9-RUX-25/cutoff_10/mapping/RX-cpf-8_bt1_sort.bam.bai
+
+[Sun Jan  3 16:31:33 2021]
+rule samtools_sort_by_position:
+    input: ../TargetSeq-cas9-RUX-25/cutoff_10/mapping/RX-cpf-7_bt1.bam
+    output: ../TargetSeq-cas9-RUX-25/cutoff_10/mapping/RX-cpf-7_bt1_sort.bam
+    jobid: 286
+    reason: Missing output files: ../TargetSeq-cas9-RUX-25/cutoff_10/mapping/RX-cpf-7_bt1_sort.bam
+    wildcards: lib=cas9-RUX-25, cutoff=10, sample=RX-cpf-7
+
+/home/zhaohuanan/zhaohn_HD/miniconda3/bin/samtools sort -O BAM -o ../TargetSeq-cas9-RUX-25/cutoff_10/mapping/RX-cpf-7_bt1_sort.bam -T ../TargetSeq-cas9-RUX-25/cutoff_10/mapping/RX-cpf-7_bt1_sort.bam.temp -@ 6 -m 2G ../TargetSeq-cas9-RUX-25/cutoff_10/mapping/RX-cpf-7_bt1.bam
+
+[Sun Jan  3 16:31:33 2021]
+rule samtools_sort_by_position:
+    input: ../TargetSeq-cas9-RUX-25/cutoff_10/mapping/RX-cpf-10_bt1.bam
+    output: ../TargetSeq-cas9-RUX-25/cutoff_10/mapping/RX-cpf-10_bt1_sort.bam
+    jobid: 316
+    reason: Missing output files: ../TargetSeq-cas9-RUX-25/cutoff_10/mapping/RX-cpf-10_bt1_sort.bam
+    wildcards: lib=cas9-RUX-25, cutoff=10, sample=RX-cpf-10
+
+/home/zhaohuanan/zhaohn_HD/miniconda3/bin/samtools sort -O BAM -o ../TargetSeq-cas9-RUX-25/cutoff_10/mapping/RX-cpf-10_bt1_sort.bam -T ../TargetSeq-cas9-RUX-25/cutoff_10/mapping/RX-cpf-10_bt1_sort.bam.temp -@ 6 -m 2G ../TargetSeq-cas9-RUX-25/cutoff_10/mapping/RX-cpf-10_bt1.bam
+
+[Sun Jan  3 16:31:34 2021]
+rule spike_in_mpileup:
+    input: ../TargetSeq-cas9-RUX-25/cutoff_10/mapping/RX-Dig3_bt1_sort.bam, ../TargetSeq-cas9-RUX-25/cutoff_10/mapping/RX-Dig3_bt1_sort.bam.bai
+    output: ../TargetSeq-cas9-RUX-25/cutoff_10/mapping/RX-Dig3_bt1_sort.mpileup
+    jobid: 449
+    reason: Missing output files: ../TargetSeq-cas9-RUX-25/cutoff_10/mapping/RX-Dig3_bt1_sort.mpileup
+    wildcards: lib=cas9-RUX-25, cutoff=10, sample=RX-Dig3
+
+/home/zhaohuanan/zhaohn_HD/miniconda3/bin/samtools mpileup ../TargetSeq-cas9-RUX-25/cutoff_10/mapping/RX-Dig3_bt1_sort.bam --reference ../reference.fasta/RX-Dig3.ref.upper.fa --max-depth 10000000 -q 20 -Q 20 > ../TargetSeq-cas9-RUX-25/cutoff_10/mapping/RX-Dig3_bt1_sort.mpileup 
+[Sun Jan  3 16:31:34 2021]
+Finished job 487.
+2 of 320 steps (0.62%) done
+
+[Sun Jan  3 16:31:34 2021]
+rule samtools_index:
+    input: ../TargetSeq-cas9-RUX-25/cutoff_10/mapping/RX-cas-5_bt1_sort.bam
+    output: ../TargetSeq-cas9-RUX-25/cutoff_10/mapping/RX-cas-5_bt1_sort.bam.bai
+    jobid: 353
+    reason: Missing output files: ../TargetSeq-cas9-RUX-25/cutoff_10/mapping/RX-cas-5_bt1_sort.bam.bai
+    wildcards: lib=cas9-RUX-25, cutoff=10, sample=RX-cas-5
+
+/home/zhaohuanan/zhaohn_HD/miniconda3/bin/samtools index -@ 6 ../TargetSeq-cas9-RUX-25/cutoff_10/mapping/RX-cas-5_bt1_sort.bam ../TargetSeq-cas9-RUX-25/cutoff_10/mapping/RX-cas-5_bt1_sort.bam.bai
+
+[Sun Jan  3 16:31:34 2021]
+rule samtools_sort_by_position:
+    input: ../TargetSeq-cas9-RUX-25/cutoff_10/mapping/RX-cpf-4_bt1.bam
+    output: ../TargetSeq-cas9-RUX-25/cutoff_10/mapping/RX-cpf-4_bt1_sort.bam
+    jobid: 256
+    reason: Missing output files: ../TargetSeq-cas9-RUX-25/cutoff_10/mapping/RX-cpf-4_bt1_sort.bam
+    wildcards: lib=cas9-RUX-25, cutoff=10, sample=RX-cpf-4
+
+/home/zhaohuanan/zhaohn_HD/miniconda3/bin/samtools sort -O BAM -o ../TargetSeq-cas9-RUX-25/cutoff_10/mapping/RX-cpf-4_bt1_sort.bam -T ../TargetSeq-cas9-RUX-25/cutoff_10/mapping/RX-cpf-4_bt1_sort.bam.temp -@ 6 -m 2G ../TargetSeq-cas9-RUX-25/cutoff_10/mapping/RX-cpf-4_bt1.bam
+
+[Sun Jan  3 16:31:34 2021]
+rule samtools_index:
+    input: ../TargetSeq-cas9-RUX-25/cutoff_10/mapping/RX-cpf-3_bt1_sort.bam
+    output: ../TargetSeq-cas9-RUX-25/cutoff_10/mapping/RX-cpf-3_bt1_sort.bam.bai
+    jobid: 389
+    reason: Missing output files: ../TargetSeq-cas9-RUX-25/cutoff_10/mapping/RX-cpf-3_bt1_sort.bam.bai
+    wildcards: lib=cas9-RUX-25, cutoff=10, sample=RX-cpf-3
+
+/home/zhaohuanan/zhaohn_HD/miniconda3/bin/samtools index -@ 6 ../TargetSeq-cas9-RUX-25/cutoff_10/mapping/RX-cpf-3_bt1_sort.bam ../TargetSeq-cas9-RUX-25/cutoff_10/mapping/RX-cpf-3_bt1_sort.bam.bai
+
+[Sun Jan  3 16:31:34 2021]
+rule spike_in_mpileup:
+    input: ../TargetSeq-cas9-RUX-25/cutoff_10/mapping/RX-cpf-2_bt1_sort.bam, ../TargetSeq-cas9-RUX-25/cutoff_10/mapping/RX-cpf-2_bt1_sort.bam.bai
+    output: ../TargetSeq-cas9-RUX-25/cutoff_10/mapping/RX-cpf-2_bt1_sort.mpileup
+    jobid: 464
+    reason: Missing output files: ../TargetSeq-cas9-RUX-25/cutoff_10/mapping/RX-cpf-2_bt1_sort.mpileup
+    wildcards: lib=cas9-RUX-25, cutoff=10, sample=RX-cpf-2
+
+/home/zhaohuanan/zhaohn_HD/miniconda3/bin/samtools mpileup ../TargetSeq-cas9-RUX-25/cutoff_10/mapping/RX-cpf-2_bt1_sort.bam --reference ../reference.fasta/RX-cpf-2.ref.upper.fa --max-depth 10000000 -q 20 -Q 20 > ../TargetSeq-cas9-RUX-25/cutoff_10/mapping/RX-cpf-2_bt1_sort.mpileup 
+
+[Sun Jan  3 16:31:34 2021]
+rule samtools_sort_by_position:
+    input: ../TargetSeq-cas9-RUX-25/cutoff_10/mapping/RX-Dig4_bt1.bam
+    output: ../TargetSeq-cas9-RUX-25/cutoff_10/mapping/RX-Dig4_bt1_sort.bam
+    jobid: 196
+    reason: Missing output files: ../TargetSeq-cas9-RUX-25/cutoff_10/mapping/RX-Dig4_bt1_sort.bam
+    wildcards: lib=cas9-RUX-25, cutoff=10, sample=RX-Dig4
+
+/home/zhaohuanan/zhaohn_HD/miniconda3/bin/samtools sort -O BAM -o ../TargetSeq-cas9-RUX-25/cutoff_10/mapping/RX-Dig4_bt1_sort.bam -T ../TargetSeq-cas9-RUX-25/cutoff_10/mapping/RX-Dig4_bt1_sort.bam.temp -@ 6 -m 2G ../TargetSeq-cas9-RUX-25/cutoff_10/mapping/RX-Dig4_bt1.bam
+
+[Sun Jan  3 16:31:34 2021]
+rule parse_mpileup:
+    input: ../TargetSeq-cas9-RUX-25/cutoff_10/mapping/RX-Dig2_bt1_sort.mpileup
+    output: ../TargetSeq-cas9-RUX-25/cutoff_10/mapping/RX-Dig2_bt1_sort.bmat
+    jobid: 524
+    reason: Missing output files: ../TargetSeq-cas9-RUX-25/cutoff_10/mapping/RX-Dig2_bt1_sort.bmat
+    wildcards: lib=cas9-RUX-25, cutoff=10, sample=RX-Dig2
+
+/home/zhaohuanan/zhaohn_HD/miniconda3/envs/snakepipes_target-seq/bin/python ./program/parse-mpileup-V04.py -i ../TargetSeq-cas9-RUX-25/cutoff_10/mapping/RX-Dig2_bt1_sort.mpileup -o ../TargetSeq-cas9-RUX-25/cutoff_10/mapping/RX-Dig2_bt1_sort.bmat -n 0
+
+[Sun Jan  3 16:31:34 2021]
+rule sam_to_bam:
+    input: ../TargetSeq-cas9-RUX-25/cutoff_5/mapping/RX-cpf-5_bt1.sam, ../reference.fasta/RX-cpf-5.ref.upper.fa
+    output: ../TargetSeq-cas9-RUX-25/cutoff_5/mapping/RX-cpf-5_bt1.bam
+    jobid: 264
+    reason: Missing output files: ../TargetSeq-cas9-RUX-25/cutoff_5/mapping/RX-cpf-5_bt1.bam
+    wildcards: lib=cas9-RUX-25, cutoff=5, sample=RX-cpf-5
+
+
+        /home/zhaohuanan/zhaohn_HD/miniconda3/bin/samtools view -h -f 1 -F 268 ../TargetSeq-cas9-RUX-25/cutoff_5/mapping/RX-cpf-5_bt1.sam         | /home/zhaohuanan/zhaohn_HD/miniconda3/bin/samclip --ref ../reference.fasta/RX-cpf-5.ref.upper.fa --max 3 --progress 0         | awk 'function abs(v) {return v < 0 ? -v : v} $1~"@" || ($7 == "=" && abs($9) <= 600 ) {print $0}'         | /home/zhaohuanan/zhaohn_HD/miniconda3/bin/samtools view -hb > ../TargetSeq-cas9-RUX-25/cutoff_5/mapping/RX-cpf-5_bt1.bam
+        
+[Sun Jan  3 16:31:34 2021]
+Finished job 352.
+3 of 320 steps (0.94%) done
+
+[Sun Jan  3 16:31:34 2021]
+rule parse_mpileup:
+    input: ../TargetSeq-cas9-RUX-25/cutoff_3/mapping/RX-ontarget_bt1_sort.mpileup
+    output: ../TargetSeq-cas9-RUX-25/cutoff_3/mapping/RX-ontarget_bt1_sort.bmat
+    jobid: 570
+    reason: Missing output files: ../TargetSeq-cas9-RUX-25/cutoff_3/mapping/RX-ontarget_bt1_sort.bmat
+    wildcards: lib=cas9-RUX-25, cutoff=3, sample=RX-ontarget
+
+/home/zhaohuanan/zhaohn_HD/miniconda3/envs/snakepipes_target-seq/bin/python ./program/parse-mpileup-V04.py -i ../TargetSeq-cas9-RUX-25/cutoff_3/mapping/RX-ontarget_bt1_sort.mpileup -o ../TargetSeq-cas9-RUX-25/cutoff_3/mapping/RX-ontarget_bt1_sort.bmat -n 0
+
+[Sun Jan  3 16:31:34 2021]
+rule spike_in_mpileup:
+    input: ../TargetSeq-cas9-RUX-25/cutoff_10/mapping/RX-Dig1_bt1_sort.bam, ../TargetSeq-cas9-RUX-25/cutoff_10/mapping/RX-Dig1_bt1_sort.bam.bai
+    output: ../TargetSeq-cas9-RUX-25/cutoff_10/mapping/RX-Dig1_bt1_sort.mpileup
+    jobid: 443
+    reason: Missing output files: ../TargetSeq-cas9-RUX-25/cutoff_10/mapping/RX-Dig1_bt1_sort.mpileup
+    wildcards: lib=cas9-RUX-25, cutoff=10, sample=RX-Dig1
+
+/home/zhaohuanan/zhaohn_HD/miniconda3/bin/samtools mpileup ../TargetSeq-cas9-RUX-25/cutoff_10/mapping/RX-Dig1_bt1_sort.bam --reference ../reference.fasta/RX-Dig1.ref.upper.fa --max-depth 10000000 -q 20 -Q 20 > ../TargetSeq-cas9-RUX-25/cutoff_10/mapping/RX-Dig1_bt1_sort.mpileup 
+[Sun Jan  3 16:31:34 2021]
+Finished job 316.
+4 of 320 steps (1%) done
+
+[Sun Jan  3 16:31:34 2021]
+rule spike_in_mpileup:
+    input: ../TargetSeq-cas9-RUX-25/cutoff_10/mapping/RX-cpf-5_bt1_sort.bam, ../TargetSeq-cas9-RUX-25/cutoff_10/mapping/RX-cpf-5_bt1_sort.bam.bai
+    output: ../TargetSeq-cas9-RUX-25/cutoff_10/mapping/RX-cpf-5_bt1_sort.mpileup
+    jobid: 473
+    reason: Missing output files: ../TargetSeq-cas9-RUX-25/cutoff_10/mapping/RX-cpf-5_bt1_sort.mpileup
+    wildcards: lib=cas9-RUX-25, cutoff=10, sample=RX-cpf-5
+
+/home/zhaohuanan/zhaohn_HD/miniconda3/bin/samtools mpileup ../TargetSeq-cas9-RUX-25/cutoff_10/mapping/RX-cpf-5_bt1_sort.bam --reference ../reference.fasta/RX-cpf-5.ref.upper.fa --max-depth 10000000 -q 20 -Q 20 > ../TargetSeq-cas9-RUX-25/cutoff_10/mapping/RX-cpf-5_bt1_sort.mpileup 
+
+[Sun Jan  3 16:31:34 2021]
+rule samtools_index:
+    input: ../TargetSeq-cas9-RUX-25/cutoff_10/mapping/RX-Dig8_bt1_sort.bam
+    output: ../TargetSeq-cas9-RUX-25/cutoff_10/mapping/RX-Dig8_bt1_sort.bam.bai
+    jobid: 383
+    reason: Missing output files: ../TargetSeq-cas9-RUX-25/cutoff_10/mapping/RX-Dig8_bt1_sort.bam.bai
+    wildcards: lib=cas9-RUX-25, cutoff=10, sample=RX-Dig8
+
+/home/zhaohuanan/zhaohn_HD/miniconda3/bin/samtools index -@ 6 ../TargetSeq-cas9-RUX-25/cutoff_10/mapping/RX-Dig8_bt1_sort.bam ../TargetSeq-cas9-RUX-25/cutoff_10/mapping/RX-Dig8_bt1_sort.bam.bai
+
+[Sun Jan  3 16:31:34 2021]
+rule samtools_sort_by_position:
+    input: ../TargetSeq-cas9-RUX-25/cutoff_10/mapping/RX-cas-7_bt1.bam
+    output: ../TargetSeq-cas9-RUX-25/cutoff_10/mapping/RX-cas-7_bt1_sort.bam
+    jobid: 146
+    reason: Missing output files: ../TargetSeq-cas9-RUX-25/cutoff_10/mapping/RX-cas-7_bt1_sort.bam
+    wildcards: lib=cas9-RUX-25, cutoff=10, sample=RX-cas-7
+
+/home/zhaohuanan/zhaohn_HD/miniconda3/bin/samtools sort -O BAM -o ../TargetSeq-cas9-RUX-25/cutoff_10/mapping/RX-cas-7_bt1_sort.bam -T ../TargetSeq-cas9-RUX-25/cutoff_10/mapping/RX-cas-7_bt1_sort.bam.temp -@ 6 -m 2G ../TargetSeq-cas9-RUX-25/cutoff_10/mapping/RX-cas-7_bt1.bam
+[Sun Jan  3 16:31:34 2021]
+Finished job 353.
+5 of 320 steps (2%) done
+
+[Sun Jan  3 16:31:34 2021]
+rule samtools_sort_by_position:
+    input: ../TargetSeq-cas9-RUX-25/cutoff_5/mapping/RX-cpf-9_bt1.bam
+    output: ../TargetSeq-cas9-RUX-25/cutoff_5/mapping/RX-cpf-9_bt1_sort.bam
+    jobid: 303
+    reason: Missing output files: ../TargetSeq-cas9-RUX-25/cutoff_5/mapping/RX-cpf-9_bt1_sort.bam
+    wildcards: lib=cas9-RUX-25, cutoff=5, sample=RX-cpf-9
+
+/home/zhaohuanan/zhaohn_HD/miniconda3/bin/samtools sort -O BAM -o ../TargetSeq-cas9-RUX-25/cutoff_5/mapping/RX-cpf-9_bt1_sort.bam -T ../TargetSeq-cas9-RUX-25/cutoff_5/mapping/RX-cpf-9_bt1_sort.bam.temp -@ 6 -m 2G ../TargetSeq-cas9-RUX-25/cutoff_5/mapping/RX-cpf-9_bt1.bam
+[Sun Jan  3 16:31:34 2021]
+Finished job 389.
+6 of 320 steps (2%) done
+
+[Sun Jan  3 16:31:34 2021]
+rule samtools_sort_by_position:
+    input: ../TargetSeq-cas9-RUX-25/cutoff_5/mapping/RX-Dig3_bt1.bam
+    output: ../TargetSeq-cas9-RUX-25/cutoff_5/mapping/RX-Dig3_bt1_sort.bam
+    jobid: 183
+    reason: Missing output files: ../TargetSeq-cas9-RUX-25/cutoff_5/mapping/RX-Dig3_bt1_sort.bam
+    wildcards: lib=cas9-RUX-25, cutoff=5, sample=RX-Dig3
+
+/home/zhaohuanan/zhaohn_HD/miniconda3/bin/samtools sort -O BAM -o ../TargetSeq-cas9-RUX-25/cutoff_5/mapping/RX-Dig3_bt1_sort.bam -T ../TargetSeq-cas9-RUX-25/cutoff_5/mapping/RX-Dig3_bt1_sort.bam.temp -@ 6 -m 2G ../TargetSeq-cas9-RUX-25/cutoff_5/mapping/RX-Dig3_bt1.bam
+
+[Sun Jan  3 16:31:34 2021]
+rule samtools_sort_by_position:
+    input: ../TargetSeq-cas9-RUX-25/cutoff_5/mapping/RX-cpf-6_bt1.bam
+    output: ../TargetSeq-cas9-RUX-25/cutoff_5/mapping/RX-cpf-6_bt1_sort.bam
+    jobid: 273
+    reason: Missing output files: ../TargetSeq-cas9-RUX-25/cutoff_5/mapping/RX-cpf-6_bt1_sort.bam
+    wildcards: lib=cas9-RUX-25, cutoff=5, sample=RX-cpf-6
+
+/home/zhaohuanan/zhaohn_HD/miniconda3/bin/samtools sort -O BAM -o ../TargetSeq-cas9-RUX-25/cutoff_5/mapping/RX-cpf-6_bt1_sort.bam -T ../TargetSeq-cas9-RUX-25/cutoff_5/mapping/RX-cpf-6_bt1_sort.bam.temp -@ 6 -m 2G ../TargetSeq-cas9-RUX-25/cutoff_5/mapping/RX-cpf-6_bt1.bam
+[Sun Jan  3 16:31:34 2021]
+Finished job 473.
+7 of 320 steps (2%) done
+
+[Sun Jan  3 16:31:34 2021]
+rule bowtie1_mapping:
+    input: ../TargetSeq-cas9-RUX-25/cutoff_3/mapping/RX-cpf-7_R1_cutadapt.fq.gz, ../TargetSeq-cas9-RUX-25/cutoff_3/mapping/RX-cpf-7_R2_cutadapt.fq.gz, ../reference.fasta/RX-cpf-7.ref.upper.fa.bowtie_index
+    output: ../TargetSeq-cas9-RUX-25/cutoff_3/mapping/RX-cpf-7_bt1.sam
+    log: ../TargetSeq-cas9-RUX-25/cutoff_3/mapping/RX-cpf-7_bt1.log
+    jobid: 281
+    reason: Missing output files: ../TargetSeq-cas9-RUX-25/cutoff_3/mapping/RX-cpf-7_bt1.sam
+    wildcards: lib=cas9-RUX-25, cutoff=3, sample=RX-cpf-7
+
+
+        /home/zhaohuanan/zhaohn_HD/miniconda3/bin/bowtie -x ../reference.fasta/RX-cpf-7.ref.upper.fa.bowtie_index -1 ../TargetSeq-cas9-RUX-25/cutoff_3/mapping/RX-cpf-7_R1_cutadapt.fq.gz -2 ../TargetSeq-cas9-RUX-25/cutoff_3/mapping/RX-cpf-7_R2_cutadapt.fq.gz -p 24 -S ../TargetSeq-cas9-RUX-25/cutoff_3/mapping/RX-cpf-7_bt1.sam 2>../TargetSeq-cas9-RUX-25/cutoff_3/mapping/RX-cpf-7_bt1.log
+        
+
+[Sun Jan  3 16:31:34 2021]
+rule parse_mpileup:
+    input: ../TargetSeq-cas9-RUX-25/cutoff_10/mapping/RX-cas-1_bt1_sort.mpileup
+    output: ../TargetSeq-cas9-RUX-25/cutoff_10/mapping/RX-cas-1_bt1_sort.bmat
+    jobid: 497
+    reason: Missing output files: ../TargetSeq-cas9-RUX-25/cutoff_10/mapping/RX-cas-1_bt1_sort.bmat
+    wildcards: lib=cas9-RUX-25, cutoff=10, sample=RX-cas-1
+
+/home/zhaohuanan/zhaohn_HD/miniconda3/envs/snakepipes_target-seq/bin/python ./program/parse-mpileup-V04.py -i ../TargetSeq-cas9-RUX-25/cutoff_10/mapping/RX-cas-1_bt1_sort.mpileup -o ../TargetSeq-cas9-RUX-25/cutoff_10/mapping/RX-cas-1_bt1_sort.bmat -n 0
+
+[Sun Jan  3 16:31:34 2021]
+rule samtools_sort_by_position:
+    input: ../TargetSeq-cas9-RUX-25/cutoff_3/mapping/RX-cpf-2_bt1.bam
+    output: ../TargetSeq-cas9-RUX-25/cutoff_3/mapping/RX-cpf-2_bt1_sort.bam
+    jobid: 229
+    reason: Missing output files: ../TargetSeq-cas9-RUX-25/cutoff_3/mapping/RX-cpf-2_bt1_sort.bam
+    wildcards: lib=cas9-RUX-25, cutoff=3, sample=RX-cpf-2
+
+/home/zhaohuanan/zhaohn_HD/miniconda3/bin/samtools sort -O BAM -o ../TargetSeq-cas9-RUX-25/cutoff_3/mapping/RX-cpf-2_bt1_sort.bam -T ../TargetSeq-cas9-RUX-25/cutoff_3/mapping/RX-cpf-2_bt1_sort.bam.temp -@ 6 -m 2G ../TargetSeq-cas9-RUX-25/cutoff_3/mapping/RX-cpf-2_bt1.bam
+
+[Sun Jan  3 16:31:34 2021]
+rule samtools_sort_by_position:
+    input: ../TargetSeq-cas9-RUX-25/cutoff_3/mapping/RX-Dig5_bt1.bam
+    output: ../TargetSeq-cas9-RUX-25/cutoff_3/mapping/RX-Dig5_bt1_sort.bam
+    jobid: 199
+    reason: Missing output files: ../TargetSeq-cas9-RUX-25/cutoff_3/mapping/RX-Dig5_bt1_sort.bam
+    wildcards: lib=cas9-RUX-25, cutoff=3, sample=RX-Dig5
+
+/home/zhaohuanan/zhaohn_HD/miniconda3/bin/samtools sort -O BAM -o ../TargetSeq-cas9-RUX-25/cutoff_3/mapping/RX-Dig5_bt1_sort.bam -T ../TargetSeq-cas9-RUX-25/cutoff_3/mapping/RX-Dig5_bt1_sort.bam.temp -@ 6 -m 2G ../TargetSeq-cas9-RUX-25/cutoff_3/mapping/RX-Dig5_bt1.bam
+
+[Sun Jan  3 16:31:34 2021]
+rule samtools_index:
+    input: ../TargetSeq-cas9-RUX-25/cutoff_5/mapping/RX-cpf-2_bt1_sort.bam
+    output: ../TargetSeq-cas9-RUX-25/cutoff_5/mapping/RX-cpf-2_bt1_sort.bam.bai
+    jobid: 385
+    reason: Missing output files: ../TargetSeq-cas9-RUX-25/cutoff_5/mapping/RX-cpf-2_bt1_sort.bam.bai
+    wildcards: lib=cas9-RUX-25, cutoff=5, sample=RX-cpf-2
+
+/home/zhaohuanan/zhaohn_HD/miniconda3/bin/samtools index -@ 6 ../TargetSeq-cas9-RUX-25/cutoff_5/mapping/RX-cpf-2_bt1_sort.bam ../TargetSeq-cas9-RUX-25/cutoff_5/mapping/RX-cpf-2_bt1_sort.bam.bai
+
+[Sun Jan  3 16:31:34 2021]
+rule samtools_index:
+    input: ../TargetSeq-cas9-RUX-25/cutoff_5/mapping/RX-cpf-7_bt1_sort.bam
+    output: ../TargetSeq-cas9-RUX-25/cutoff_5/mapping/RX-cpf-7_bt1_sort.bam.bai
+    jobid: 400
+    reason: Missing output files: ../TargetSeq-cas9-RUX-25/cutoff_5/mapping/RX-cpf-7_bt1_sort.bam.bai
+    wildcards: lib=cas9-RUX-25, cutoff=5, sample=RX-cpf-7
+
+/home/zhaohuanan/zhaohn_HD/miniconda3/bin/samtools index -@ 6 ../TargetSeq-cas9-RUX-25/cutoff_5/mapping/RX-cpf-7_bt1_sort.bam ../TargetSeq-cas9-RUX-25/cutoff_5/mapping/RX-cpf-7_bt1_sort.bam.bai
+[Sun Jan  3 16:31:34 2021]
+Finished job 404.
+8 of 320 steps (2%) done
+
+[Sun Jan  3 16:31:34 2021]
+rule samtools_sort_by_position:
+    input: ../TargetSeq-cas9-RUX-25/cutoff_3/mapping/RX-cpf-4_bt1.bam
+    output: ../TargetSeq-cas9-RUX-25/cutoff_3/mapping/RX-cpf-4_bt1_sort.bam
+    jobid: 249
+    reason: Missing output files: ../TargetSeq-cas9-RUX-25/cutoff_3/mapping/RX-cpf-4_bt1_sort.bam
+    wildcards: lib=cas9-RUX-25, cutoff=3, sample=RX-cpf-4
+
+/home/zhaohuanan/zhaohn_HD/miniconda3/bin/samtools sort -O BAM -o ../TargetSeq-cas9-RUX-25/cutoff_3/mapping/RX-cpf-4_bt1_sort.bam -T ../TargetSeq-cas9-RUX-25/cutoff_3/mapping/RX-cpf-4_bt1_sort.bam.temp -@ 6 -m 2G ../TargetSeq-cas9-RUX-25/cutoff_3/mapping/RX-cpf-4_bt1.bam
+
+[Sun Jan  3 16:31:34 2021]
+rule sam_to_bam:
+    input: ../TargetSeq-cas9-RUX-25/cutoff_5/mapping/RX-Dig5_bt1.sam, ../reference.fasta/RX-Dig5.ref.upper.fa
+    output: ../TargetSeq-cas9-RUX-25/cutoff_5/mapping/RX-Dig5_bt1.bam
+    jobid: 204
+    reason: Missing output files: ../TargetSeq-cas9-RUX-25/cutoff_5/mapping/RX-Dig5_bt1.bam
+    wildcards: lib=cas9-RUX-25, cutoff=5, sample=RX-Dig5
+
+
+        /home/zhaohuanan/zhaohn_HD/miniconda3/bin/samtools view -h -f 1 -F 268 ../TargetSeq-cas9-RUX-25/cutoff_5/mapping/RX-Dig5_bt1.sam         | /home/zhaohuanan/zhaohn_HD/miniconda3/bin/samclip --ref ../reference.fasta/RX-Dig5.ref.upper.fa --max 3 --progress 0         | awk 'function abs(v) {return v < 0 ? -v : v} $1~"@" || ($7 == "=" && abs($9) <= 600 ) {print $0}'         | /home/zhaohuanan/zhaohn_HD/miniconda3/bin/samtools view -hb > ../TargetSeq-cas9-RUX-25/cutoff_5/mapping/RX-Dig5_bt1.bam
+        
+
+[Sun Jan  3 16:31:34 2021]
+rule samtools_sort_by_position:
+    input: ../TargetSeq-cas9-RUX-25/cutoff_10/mapping/RX-cas-2_bt1.bam
+    output: ../TargetSeq-cas9-RUX-25/cutoff_10/mapping/RX-cas-2_bt1_sort.bam
+    jobid: 96
+    reason: Missing output files: ../TargetSeq-cas9-RUX-25/cutoff_10/mapping/RX-cas-2_bt1_sort.bam
+    wildcards: lib=cas9-RUX-25, cutoff=10, sample=RX-cas-2
+
+/home/zhaohuanan/zhaohn_HD/miniconda3/bin/samtools sort -O BAM -o ../TargetSeq-cas9-RUX-25/cutoff_10/mapping/RX-cas-2_bt1_sort.bam -T ../TargetSeq-cas9-RUX-25/cutoff_10/mapping/RX-cas-2_bt1_sort.bam.temp -@ 6 -m 2G ../TargetSeq-cas9-RUX-25/cutoff_10/mapping/RX-cas-2_bt1.bam
+[Sun Jan  3 16:31:34 2021]
+Finished job 383.
+9 of 320 steps (3%) done
+
+[Sun Jan  3 16:31:34 2021]
+rule bowtie1_mapping:
+    input: ../TargetSeq-cas9-RUX-25/cutoff_3/mapping/RX-cas-7_R1_cutadapt.fq.gz, ../TargetSeq-cas9-RUX-25/cutoff_3/mapping/RX-cas-7_R2_cutadapt.fq.gz, ../reference.fasta/RX-cas-7.ref.upper.fa.bowtie_index
+    output: ../TargetSeq-cas9-RUX-25/cutoff_3/mapping/RX-cas-7_bt1.sam
+    log: ../TargetSeq-cas9-RUX-25/cutoff_3/mapping/RX-cas-7_bt1.log
+    jobid: 141
+    reason: Missing output files: ../TargetSeq-cas9-RUX-25/cutoff_3/mapping/RX-cas-7_bt1.sam
+    wildcards: lib=cas9-RUX-25, cutoff=3, sample=RX-cas-7
+
+[Sun Jan  3 16:31:34 2021]
+Finished job 199.
+
+        /home/zhaohuanan/zhaohn_HD/miniconda3/bin/bowtie -x ../reference.fasta/RX-cas-7.ref.upper.fa.bowtie_index -1 ../TargetSeq-cas9-RUX-25/cutoff_3/mapping/RX-cas-7_R1_cutadapt.fq.gz -2 ../TargetSeq-cas9-RUX-25/cutoff_3/mapping/RX-cas-7_R2_cutadapt.fq.gz -p 24 -S ../TargetSeq-cas9-RUX-25/cutoff_3/mapping/RX-cas-7_bt1.sam 2>../TargetSeq-cas9-RUX-25/cutoff_3/mapping/RX-cas-7_bt1.log
+        
+10 of 320 steps (3%) done
+
+[Sun Jan  3 16:31:34 2021]
+rule samtools_sort_by_position:
+    input: ../TargetSeq-cas9-RUX-25/cutoff_3/mapping/RX-cas-8_bt1.bam
+    output: ../TargetSeq-cas9-RUX-25/cutoff_3/mapping/RX-cas-8_bt1_sort.bam
+    jobid: 149
+    reason: Missing output files: ../TargetSeq-cas9-RUX-25/cutoff_3/mapping/RX-cas-8_bt1_sort.bam
+    wildcards: lib=cas9-RUX-25, cutoff=3, sample=RX-cas-8
+
+/home/zhaohuanan/zhaohn_HD/miniconda3/bin/samtools sort -O BAM -o ../TargetSeq-cas9-RUX-25/cutoff_3/mapping/RX-cas-8_bt1_sort.bam -T ../TargetSeq-cas9-RUX-25/cutoff_3/mapping/RX-cas-8_bt1_sort.bam.temp -@ 6 -m 2G ../TargetSeq-cas9-RUX-25/cutoff_3/mapping/RX-cas-8_bt1.bam
+
+[Sun Jan  3 16:31:34 2021]
+rule samtools_sort_by_position:
+    input: ../TargetSeq-cas9-RUX-25/cutoff_5/mapping/RX-cpf-4_bt1.bam
+    output: ../TargetSeq-cas9-RUX-25/cutoff_5/mapping/RX-cpf-4_bt1_sort.bam
+    jobid: 253
+    reason: Missing output files: ../TargetSeq-cas9-RUX-25/cutoff_5/mapping/RX-cpf-4_bt1_sort.bam
+    wildcards: lib=cas9-RUX-25, cutoff=5, sample=RX-cpf-4
+
+/home/zhaohuanan/zhaohn_HD/miniconda3/bin/samtools sort -O BAM -o ../TargetSeq-cas9-RUX-25/cutoff_5/mapping/RX-cpf-4_bt1_sort.bam -T ../TargetSeq-cas9-RUX-25/cutoff_5/mapping/RX-cpf-4_bt1_sort.bam.temp -@ 6 -m 2G ../TargetSeq-cas9-RUX-25/cutoff_5/mapping/RX-cpf-4_bt1.bam
+
+[Sun Jan  3 16:31:34 2021]
+rule samtools_sort_by_position:
+    input: ../TargetSeq-cas9-RUX-25/cutoff_3/mapping/RX-cas-2_bt1.bam
+    output: ../TargetSeq-cas9-RUX-25/cutoff_3/mapping/RX-cas-2_bt1_sort.bam
+    jobid: 89
+    reason: Missing output files: ../TargetSeq-cas9-RUX-25/cutoff_3/mapping/RX-cas-2_bt1_sort.bam
+    wildcards: lib=cas9-RUX-25, cutoff=3, sample=RX-cas-2
+
+/home/zhaohuanan/zhaohn_HD/miniconda3/bin/samtools sort -O BAM -o ../TargetSeq-cas9-RUX-25/cutoff_3/mapping/RX-cas-2_bt1_sort.bam -T ../TargetSeq-cas9-RUX-25/cutoff_3/mapping/RX-cas-2_bt1_sort.bam.temp -@ 6 -m 2G ../TargetSeq-cas9-RUX-25/cutoff_3/mapping/RX-cas-2_bt1.bam
+
+[Sun Jan  3 16:31:34 2021]
+rule spike_in_mpileup:
+    input: ../TargetSeq-cas9-RUX-25/cutoff_5/mapping/RX-cas-8_bt1_sort.bam, ../TargetSeq-cas9-RUX-25/cutoff_5/mapping/RX-cas-8_bt1_sort.bam.bai
+    output: ../TargetSeq-cas9-RUX-25/cutoff_5/mapping/RX-cas-8_bt1_sort.mpileup
+    jobid: 439
+    reason: Missing output files: ../TargetSeq-cas9-RUX-25/cutoff_5/mapping/RX-cas-8_bt1_sort.mpileup
+    wildcards: lib=cas9-RUX-25, cutoff=5, sample=RX-cas-8
+
+/home/zhaohuanan/zhaohn_HD/miniconda3/bin/samtools mpileup ../TargetSeq-cas9-RUX-25/cutoff_5/mapping/RX-cas-8_bt1_sort.bam --reference ../reference.fasta/RX-cas-8.ref.upper.fa --max-depth 10000000 -q 20 -Q 20 > ../TargetSeq-cas9-RUX-25/cutoff_5/mapping/RX-cas-8_bt1_sort.mpileup 
+
+[Sun Jan  3 16:31:34 2021]
+rule samtools_sort_by_position:
+    input: ../TargetSeq-cas9-RUX-25/cutoff_10/mapping/RX-cpf-6_bt1.bam
+    output: ../TargetSeq-cas9-RUX-25/cutoff_10/mapping/RX-cpf-6_bt1_sort.bam
+    jobid: 276
+    reason: Missing output files: ../TargetSeq-cas9-RUX-25/cutoff_10/mapping/RX-cpf-6_bt1_sort.bam
+    wildcards: lib=cas9-RUX-25, cutoff=10, sample=RX-cpf-6
+
+/home/zhaohuanan/zhaohn_HD/miniconda3/bin/samtools sort -O BAM -o ../TargetSeq-cas9-RUX-25/cutoff_10/mapping/RX-cpf-6_bt1_sort.bam -T ../TargetSeq-cas9-RUX-25/cutoff_10/mapping/RX-cpf-6_bt1_sort.bam.temp -@ 6 -m 2G ../TargetSeq-cas9-RUX-25/cutoff_10/mapping/RX-cpf-6_bt1.bam
+
+[Sun Jan  3 16:31:34 2021]
+rule bowtie1_mapping:
+    input: ../TargetSeq-cas9-RUX-25/cutoff_3/mapping/RX-cpf-5_R1_cutadapt.fq.gz, ../TargetSeq-cas9-RUX-25/cutoff_3/mapping/RX-cpf-5_R2_cutadapt.fq.gz, ../reference.fasta/RX-cpf-5.ref.upper.fa.bowtie_index
+    output: ../TargetSeq-cas9-RUX-25/cutoff_3/mapping/RX-cpf-5_bt1.sam
+    log: ../TargetSeq-cas9-RUX-25/cutoff_3/mapping/RX-cpf-5_bt1.log
+    jobid: 261
+    reason: Missing output files: ../TargetSeq-cas9-RUX-25/cutoff_3/mapping/RX-cpf-5_bt1.sam
+    wildcards: lib=cas9-RUX-25, cutoff=3, sample=RX-cpf-5
+
+
+        /home/zhaohuanan/zhaohn_HD/miniconda3/bin/bowtie -x ../reference.fasta/RX-cpf-5.ref.upper.fa.bowtie_index -1 ../TargetSeq-cas9-RUX-25/cutoff_3/mapping/RX-cpf-5_R1_cutadapt.fq.gz -2 ../TargetSeq-cas9-RUX-25/cutoff_3/mapping/RX-cpf-5_R2_cutadapt.fq.gz -p 24 -S ../TargetSeq-cas9-RUX-25/cutoff_3/mapping/RX-cpf-5_bt1.sam 2>../TargetSeq-cas9-RUX-25/cutoff_3/mapping/RX-cpf-5_bt1.log
+        
+[Sun Jan  3 16:31:34 2021]
+Finished job 217.
+11 of 320 steps (3%) done
+[Sun Jan  3 16:31:34 2021]
+Finished job 385.
+12 of 320 steps (4%) done
+[Sun Jan  3 16:31:34 2021]
+Finished job 400.
+13 of 320 steps (4%) done
+
+[Sun Jan  3 16:31:34 2021]
+rule samtools_sort_by_position:
+    input: ../TargetSeq-cas9-RUX-25/cutoff_3/mapping/RX-cpf-6_bt1.bam
+    output: ../TargetSeq-cas9-RUX-25/cutoff_3/mapping/RX-cpf-6_bt1_sort.bam
+    jobid: 269
+    reason: Missing output files: ../TargetSeq-cas9-RUX-25/cutoff_3/mapping/RX-cpf-6_bt1_sort.bam
+    wildcards: lib=cas9-RUX-25, cutoff=3, sample=RX-cpf-6
+
+/home/zhaohuanan/zhaohn_HD/miniconda3/bin/samtools sort -O BAM -o ../TargetSeq-cas9-RUX-25/cutoff_3/mapping/RX-cpf-6_bt1_sort.bam -T ../TargetSeq-cas9-RUX-25/cutoff_3/mapping/RX-cpf-6_bt1_sort.bam.temp -@ 6 -m 2G ../TargetSeq-cas9-RUX-25/cutoff_3/mapping/RX-cpf-6_bt1.bam
+
+[Sun Jan  3 16:31:34 2021]
+rule sam_to_bam:
+    input: ../TargetSeq-cas9-RUX-25/cutoff_3/mapping/RX-cpf-11_bt1.sam, ../reference.fasta/RX-cpf-11.ref.upper.fa
+    output: ../TargetSeq-cas9-RUX-25/cutoff_3/mapping/RX-cpf-11_bt1.bam
+    jobid: 320
+    reason: Missing output files: ../TargetSeq-cas9-RUX-25/cutoff_3/mapping/RX-cpf-11_bt1.bam
+    wildcards: lib=cas9-RUX-25, cutoff=3, sample=RX-cpf-11
+
+
+        /home/zhaohuanan/zhaohn_HD/miniconda3/bin/samtools view -h -f 1 -F 268 ../TargetSeq-cas9-RUX-25/cutoff_3/mapping/RX-cpf-11_bt1.sam         | /home/zhaohuanan/zhaohn_HD/miniconda3/bin/samclip --ref ../reference.fasta/RX-cpf-11.ref.upper.fa --max 3 --progress 0         | awk 'function abs(v) {return v < 0 ? -v : v} $1~"@" || ($7 == "=" && abs($9) <= 600 ) {print $0}'         | /home/zhaohuanan/zhaohn_HD/miniconda3/bin/samtools view -hb > ../TargetSeq-cas9-RUX-25/cutoff_3/mapping/RX-cpf-11_bt1.bam
+        
+
+[Sun Jan  3 16:31:34 2021]
+rule parse_mpileup:
+    input: ../TargetSeq-cas9-RUX-25/cutoff_10/mapping/RX-cas-4_bt1_sort.mpileup
+    output: ../TargetSeq-cas9-RUX-25/cutoff_10/mapping/RX-cas-4_bt1_sort.bmat
+    jobid: 506
+    reason: Missing output files: ../TargetSeq-cas9-RUX-25/cutoff_10/mapping/RX-cas-4_bt1_sort.bmat
+    wildcards: lib=cas9-RUX-25, cutoff=10, sample=RX-cas-4
+
+/home/zhaohuanan/zhaohn_HD/miniconda3/envs/snakepipes_target-seq/bin/python ./program/parse-mpileup-V04.py -i ../TargetSeq-cas9-RUX-25/cutoff_10/mapping/RX-cas-4_bt1_sort.mpileup -o ../TargetSeq-cas9-RUX-25/cutoff_10/mapping/RX-cas-4_bt1_sort.bmat -n 0
+
+[Sun Jan  3 16:31:34 2021]
+[Sun Jan  3 16:31:34 2021]
+Finished job 286.
+rule samtools_sort_by_position:
+    input: ../TargetSeq-cas9-RUX-25/cutoff_3/mapping/RX-Dig3_bt1.bam
+    output: ../TargetSeq-cas9-RUX-25/cutoff_3/mapping/RX-Dig3_bt1_sort.bam
+    jobid: 179
+    reason: Missing output files: ../TargetSeq-cas9-RUX-25/cutoff_3/mapping/RX-Dig3_bt1_sort.bam
+    wildcards: lib=cas9-RUX-25, cutoff=3, sample=RX-Dig3
+14 of 320 steps (4%) done
+
+/home/zhaohuanan/zhaohn_HD/miniconda3/bin/samtools sort -O BAM -o ../TargetSeq-cas9-RUX-25/cutoff_3/mapping/RX-Dig3_bt1_sort.bam -T ../TargetSeq-cas9-RUX-25/cutoff_3/mapping/RX-Dig3_bt1_sort.bam.temp -@ 6 -m 2G ../TargetSeq-cas9-RUX-25/cutoff_3/mapping/RX-Dig3_bt1.bam
+
+[Sun Jan  3 16:31:34 2021]
+rule samtools_sort_by_position:
+    input: ../TargetSeq-cas9-RUX-25/cutoff_5/mapping/RX-Dig8_bt1.bam
+    output: ../TargetSeq-cas9-RUX-25/cutoff_5/mapping/RX-Dig8_bt1_sort.bam
+    jobid: 223
+    reason: Missing output files: ../TargetSeq-cas9-RUX-25/cutoff_5/mapping/RX-Dig8_bt1_sort.bam
+    wildcards: lib=cas9-RUX-25, cutoff=5, sample=RX-Dig8
+
+/home/zhaohuanan/zhaohn_HD/miniconda3/bin/samtools sort -O BAM -o ../TargetSeq-cas9-RUX-25/cutoff_5/mapping/RX-Dig8_bt1_sort.bam -T ../TargetSeq-cas9-RUX-25/cutoff_5/mapping/RX-Dig8_bt1_sort.bam.temp -@ 6 -m 2G ../TargetSeq-cas9-RUX-25/cutoff_5/mapping/RX-Dig8_bt1.bam
+
+[Sun Jan  3 16:31:34 2021]
+rule spike_in_mpileup:
+    input: ../TargetSeq-cas9-RUX-25/cutoff_10/mapping/RX-cas-5_bt1_sort.bam, ../TargetSeq-cas9-RUX-25/cutoff_10/mapping/RX-cas-5_bt1_sort.bam.bai
+    output: ../TargetSeq-cas9-RUX-25/cutoff_10/mapping/RX-cas-5_bt1_sort.mpileup
+    jobid: 431
+    reason: Missing output files: ../TargetSeq-cas9-RUX-25/cutoff_10/mapping/RX-cas-5_bt1_sort.mpileup; Input files updated by another job: ../TargetSeq-cas9-RUX-25/cutoff_10/mapping/RX-cas-5_bt1_sort.bam.bai
+    wildcards: lib=cas9-RUX-25, cutoff=10, sample=RX-cas-5
+
+/home/zhaohuanan/zhaohn_HD/miniconda3/bin/samtools mpileup ../TargetSeq-cas9-RUX-25/cutoff_10/mapping/RX-cas-5_bt1_sort.bam --reference ../reference.fasta/RX-cas-5.ref.upper.fa --max-depth 10000000 -q 20 -Q 20 > ../TargetSeq-cas9-RUX-25/cutoff_10/mapping/RX-cas-5_bt1_sort.mpileup 
+
+[Sun Jan  3 16:31:34 2021]
+rule spike_in_mpileup:
+    input: ../TargetSeq-cas9-RUX-25/cutoff_5/mapping/RX-cas-5_bt1_sort.bam, ../TargetSeq-cas9-RUX-25/cutoff_5/mapping/RX-cas-5_bt1_sort.bam.bai
+    output: ../TargetSeq-cas9-RUX-25/cutoff_5/mapping/RX-cas-5_bt1_sort.mpileup
+    jobid: 430
+    reason: Missing output files: ../TargetSeq-cas9-RUX-25/cutoff_5/mapping/RX-cas-5_bt1_sort.mpileup; Input files updated by another job: ../TargetSeq-cas9-RUX-25/cutoff_5/mapping/RX-cas-5_bt1_sort.bam.bai
+    wildcards: lib=cas9-RUX-25, cutoff=5, sample=RX-cas-5
+
+/home/zhaohuanan/zhaohn_HD/miniconda3/bin/samtools mpileup ../TargetSeq-cas9-RUX-25/cutoff_5/mapping/RX-cas-5_bt1_sort.bam --reference ../reference.fasta/RX-cas-5.ref.upper.fa --max-depth 10000000 -q 20 -Q 20 > ../TargetSeq-cas9-RUX-25/cutoff_5/mapping/RX-cas-5_bt1_sort.mpileup 
+
+[Sun Jan  3 16:31:35 2021]
+[Sun Jan  3 16:31:35 2021]
+Finished job 264.
+rule parse_mpileup:
+    input: ../TargetSeq-cas9-RUX-25/cutoff_5/mapping/RX-Dig1_bt1_sort.mpileup
+    output: ../TargetSeq-cas9-RUX-25/cutoff_5/mapping/RX-Dig1_bt1_sort.bmat
+    jobid: 520
+    reason: Missing output files: ../TargetSeq-cas9-RUX-25/cutoff_5/mapping/RX-Dig1_bt1_sort.bmat
+    wildcards: lib=cas9-RUX-25, cutoff=5, sample=RX-Dig1
+15 of 320 steps (5%) done
+
+/home/zhaohuanan/zhaohn_HD/miniconda3/envs/snakepipes_target-seq/bin/python ./program/parse-mpileup-V04.py -i ../TargetSeq-cas9-RUX-25/cutoff_5/mapping/RX-Dig1_bt1_sort.mpileup -o ../TargetSeq-cas9-RUX-25/cutoff_5/mapping/RX-Dig1_bt1_sort.bmat -n 0
+[Sun Jan  3 16:31:35 2021]
+Finished job 196.
+16 of 320 steps (5%) done
+
+[Sun Jan  3 16:31:35 2021]
+rule parse_mpileup:
+    input: ../TargetSeq-cas9-RUX-25/cutoff_5/mapping/RX-cpf-10_bt1_sort.mpileup
+    output: ../TargetSeq-cas9-RUX-25/cutoff_5/mapping/RX-cpf-10_bt1_sort.bmat
+    jobid: 565
+    reason: Missing output files: ../TargetSeq-cas9-RUX-25/cutoff_5/mapping/RX-cpf-10_bt1_sort.bmat; Input files updated by another job: ../TargetSeq-cas9-RUX-25/cutoff_5/mapping/RX-cpf-10_bt1_sort.mpileup
+    wildcards: lib=cas9-RUX-25, cutoff=5, sample=RX-cpf-10
+
+/home/zhaohuanan/zhaohn_HD/miniconda3/envs/snakepipes_target-seq/bin/python ./program/parse-mpileup-V04.py -i ../TargetSeq-cas9-RUX-25/cutoff_5/mapping/RX-cpf-10_bt1_sort.mpileup -o ../TargetSeq-cas9-RUX-25/cutoff_5/mapping/RX-cpf-10_bt1_sort.bmat -n 0
+
+[Sun Jan  3 16:31:35 2021]
+rule parse_mpileup:
+    input: ../TargetSeq-cas9-RUX-25/cutoff_10/mapping/RX-cas-6_bt1_sort.mpileup
+    output: ../TargetSeq-cas9-RUX-25/cutoff_10/mapping/RX-cas-6_bt1_sort.bmat
+    jobid: 512
+    reason: Missing output files: ../TargetSeq-cas9-RUX-25/cutoff_10/mapping/RX-cas-6_bt1_sort.bmat
+    wildcards: lib=cas9-RUX-25, cutoff=10, sample=RX-cas-6
+
+/home/zhaohuanan/zhaohn_HD/miniconda3/envs/snakepipes_target-seq/bin/python ./program/parse-mpileup-V04.py -i ../TargetSeq-cas9-RUX-25/cutoff_10/mapping/RX-cas-6_bt1_sort.mpileup -o ../TargetSeq-cas9-RUX-25/cutoff_10/mapping/RX-cas-6_bt1_sort.bmat -n 0
+
+[Sun Jan  3 16:31:35 2021]
+rule spike_in_mpileup:
+    input: ../TargetSeq-cas9-RUX-25/cutoff_10/mapping/RX-cpf-8_bt1_sort.bam, ../TargetSeq-cas9-RUX-25/cutoff_10/mapping/RX-cpf-8_bt1_sort.bam.bai
+    output: ../TargetSeq-cas9-RUX-25/cutoff_10/mapping/RX-cpf-8_bt1_sort.mpileup
+    jobid: 482
+    reason: Missing output files: ../TargetSeq-cas9-RUX-25/cutoff_10/mapping/RX-cpf-8_bt1_sort.mpileup; Input files updated by another job: ../TargetSeq-cas9-RUX-25/cutoff_10/mapping/RX-cpf-8_bt1_sort.bam.bai
+    wildcards: lib=cas9-RUX-25, cutoff=10, sample=RX-cpf-8
+
+/home/zhaohuanan/zhaohn_HD/miniconda3/bin/samtools mpileup ../TargetSeq-cas9-RUX-25/cutoff_10/mapping/RX-cpf-8_bt1_sort.bam --reference ../reference.fasta/RX-cpf-8.ref.upper.fa --max-depth 10000000 -q 20 -Q 20 > ../TargetSeq-cas9-RUX-25/cutoff_10/mapping/RX-cpf-8_bt1_sort.mpileup 
+
+[Sun Jan  3 16:31:35 2021]
+rule spike_in_mpileup:
+    input: ../TargetSeq-cas9-RUX-25/cutoff_10/mapping/RX-cpf-3_bt1_sort.bam, ../TargetSeq-cas9-RUX-25/cutoff_10/mapping/RX-cpf-3_bt1_sort.bam.bai
+    output: ../TargetSeq-cas9-RUX-25/cutoff_10/mapping/RX-cpf-3_bt1_sort.mpileup
+    jobid: 467
+    reason: Missing output files: ../TargetSeq-cas9-RUX-25/cutoff_10/mapping/RX-cpf-3_bt1_sort.mpileup; Input files updated by another job: ../TargetSeq-cas9-RUX-25/cutoff_10/mapping/RX-cpf-3_bt1_sort.bam.bai
+    wildcards: lib=cas9-RUX-25, cutoff=10, sample=RX-cpf-3
+
+/home/zhaohuanan/zhaohn_HD/miniconda3/bin/samtools mpileup ../TargetSeq-cas9-RUX-25/cutoff_10/mapping/RX-cpf-3_bt1_sort.bam --reference ../reference.fasta/RX-cpf-3.ref.upper.fa --max-depth 10000000 -q 20 -Q 20 > ../TargetSeq-cas9-RUX-25/cutoff_10/mapping/RX-cpf-3_bt1_sort.mpileup 
+
+[Sun Jan  3 16:31:35 2021]
+rule parse_mpileup:
+    input: ../TargetSeq-cas9-RUX-25/cutoff_10/mapping/RX-cpf-5_bt1_sort.mpileup
+    output: ../TargetSeq-cas9-RUX-25/cutoff_10/mapping/RX-cpf-5_bt1_sort.bmat
+    jobid: 551
+    reason: Missing output files: ../TargetSeq-cas9-RUX-25/cutoff_10/mapping/RX-cpf-5_bt1_sort.bmat; Input files updated by another job: ../TargetSeq-cas9-RUX-25/cutoff_10/mapping/RX-cpf-5_bt1_sort.mpileup
+    wildcards: lib=cas9-RUX-25, cutoff=10, sample=RX-cpf-5
+
+/home/zhaohuanan/zhaohn_HD/miniconda3/envs/snakepipes_target-seq/bin/python ./program/parse-mpileup-V04.py -i ../TargetSeq-cas9-RUX-25/cutoff_10/mapping/RX-cpf-5_bt1_sort.mpileup -o ../TargetSeq-cas9-RUX-25/cutoff_10/mapping/RX-cpf-5_bt1_sort.bmat -n 0
+
+[Sun Jan  3 16:31:35 2021]
+rule parse_mpileup:
+    input: ../TargetSeq-cas9-RUX-25/cutoff_10/mapping/RX-ontarget_bt1_sort.mpileup
+    output: ../TargetSeq-cas9-RUX-25/cutoff_10/mapping/RX-ontarget_bt1_sort.bmat
+    jobid: 572
+    reason: Missing output files: ../TargetSeq-cas9-RUX-25/cutoff_10/mapping/RX-ontarget_bt1_sort.bmat
+    wildcards: lib=cas9-RUX-25, cutoff=10, sample=RX-ontarget
+
+/home/zhaohuanan/zhaohn_HD/miniconda3/envs/snakepipes_target-seq/bin/python ./program/parse-mpileup-V04.py -i ../TargetSeq-cas9-RUX-25/cutoff_10/mapping/RX-ontarget_bt1_sort.mpileup -o ../TargetSeq-cas9-RUX-25/cutoff_10/mapping/RX-ontarget_bt1_sort.bmat -n 0
+
+[Sun Jan  3 16:31:35 2021]
+rule parse_mpileup:
+    input: ../TargetSeq-cas9-RUX-25/cutoff_3/mapping/RX-Dig1_bt1_sort.mpileup
+    output: ../TargetSeq-cas9-RUX-25/cutoff_3/mapping/RX-Dig1_bt1_sort.bmat
+    jobid: 519
+    reason: Missing output files: ../TargetSeq-cas9-RUX-25/cutoff_3/mapping/RX-Dig1_bt1_sort.bmat
+    wildcards: lib=cas9-RUX-25, cutoff=3, sample=RX-Dig1
+
+/home/zhaohuanan/zhaohn_HD/miniconda3/envs/snakepipes_target-seq/bin/python ./program/parse-mpileup-V04.py -i ../TargetSeq-cas9-RUX-25/cutoff_3/mapping/RX-Dig1_bt1_sort.mpileup -o ../TargetSeq-cas9-RUX-25/cutoff_3/mapping/RX-Dig1_bt1_sort.bmat -n 0
+
+[Sun Jan  3 16:31:35 2021]
+rule samtools_index:
+    input: ../TargetSeq-cas9-RUX-25/cutoff_3/mapping/RX-cas-4_bt1_sort.bam
+    output: ../TargetSeq-cas9-RUX-25/cutoff_3/mapping/RX-cas-4_bt1_sort.bam.bai
+    jobid: 348
+    reason: Missing output files: ../TargetSeq-cas9-RUX-25/cutoff_3/mapping/RX-cas-4_bt1_sort.bam.bai
+    wildcards: lib=cas9-RUX-25, cutoff=3, sample=RX-cas-4
+
+/home/zhaohuanan/zhaohn_HD/miniconda3/bin/samtools index -@ 6 ../TargetSeq-cas9-RUX-25/cutoff_3/mapping/RX-cas-4_bt1_sort.bam ../TargetSeq-cas9-RUX-25/cutoff_3/mapping/RX-cas-4_bt1_sort.bam.bai
+[Sun Jan  3 16:31:35 2021]
+Finished job 189.
+17 of 320 steps (5%) done
+[Sun Jan  3 16:31:35 2021]
+Finished job 565.
+18 of 320 steps (6%) done
+[Sun Jan  3 16:31:35 2021]
+Finished job 204.
+19 of 320 steps (6%) done
+[Sun Jan  3 16:31:35 2021]
+Finished job 256.
+20 of 320 steps (6%) done
+
+[Sun Jan  3 16:31:35 2021]
+rule parse_mpileup:
+    input: ../TargetSeq-cas9-RUX-25/cutoff_10/mapping/RX-cas-3_bt1_sort.mpileup
+    output: ../TargetSeq-cas9-RUX-25/cutoff_10/mapping/RX-cas-3_bt1_sort.bmat
+    jobid: 503
+    reason: Missing output files: ../TargetSeq-cas9-RUX-25/cutoff_10/mapping/RX-cas-3_bt1_sort.bmat
+    wildcards: lib=cas9-RUX-25, cutoff=10, sample=RX-cas-3
+
+/home/zhaohuanan/zhaohn_HD/miniconda3/envs/snakepipes_target-seq/bin/python ./program/parse-mpileup-V04.py -i ../TargetSeq-cas9-RUX-25/cutoff_10/mapping/RX-cas-3_bt1_sort.mpileup -o ../TargetSeq-cas9-RUX-25/cutoff_10/mapping/RX-cas-3_bt1_sort.bmat -n 0
+
+[Sun Jan  3 16:31:35 2021]
+rule samtools_index:
+    input: ../TargetSeq-cas9-RUX-25/cutoff_5/mapping/RX-Dig4_bt1_sort.bam
+    output: ../TargetSeq-cas9-RUX-25/cutoff_5/mapping/RX-Dig4_bt1_sort.bam.bai
+    jobid: 373
+    reason: Missing output files: ../TargetSeq-cas9-RUX-25/cutoff_5/mapping/RX-Dig4_bt1_sort.bam.bai
+    wildcards: lib=cas9-RUX-25, cutoff=5, sample=RX-Dig4
+
+/home/zhaohuanan/zhaohn_HD/miniconda3/bin/samtools index -@ 6 ../TargetSeq-cas9-RUX-25/cutoff_5/mapping/RX-Dig4_bt1_sort.bam ../TargetSeq-cas9-RUX-25/cutoff_5/mapping/RX-Dig4_bt1_sort.bam.bai
+[Sun Jan  3 16:31:35 2021]
+Finished job 146.
+21 of 320 steps (7%) done
+[Sun Jan  3 16:31:36 2021]
+Finished job 551.
+22 of 320 steps (7%) done
+[Sun Jan  3 16:31:36 2021]
+Finished job 129.
+23 of 320 steps (7%) done
+[Sun Jan  3 16:31:36 2021]
+Finished job 96.
+24 of 320 steps (8%) done
+[Sun Jan  3 16:31:36 2021]
+Finished job 348.
+25 of 320 steps (8%) done
+
+[Sun Jan  3 16:31:36 2021]
+rule spike_in_mpileup:
+    input: ../TargetSeq-cas9-RUX-25/cutoff_5/mapping/RX-cpf-7_bt1_sort.bam, ../TargetSeq-cas9-RUX-25/cutoff_5/mapping/RX-cpf-7_bt1_sort.bam.bai
+    output: ../TargetSeq-cas9-RUX-25/cutoff_5/mapping/RX-cpf-7_bt1_sort.mpileup
+    jobid: 478
+    reason: Missing output files: ../TargetSeq-cas9-RUX-25/cutoff_5/mapping/RX-cpf-7_bt1_sort.mpileup; Input files updated by another job: ../TargetSeq-cas9-RUX-25/cutoff_5/mapping/RX-cpf-7_bt1_sort.bam.bai
+    wildcards: lib=cas9-RUX-25, cutoff=5, sample=RX-cpf-7
+
+/home/zhaohuanan/zhaohn_HD/miniconda3/bin/samtools mpileup ../TargetSeq-cas9-RUX-25/cutoff_5/mapping/RX-cpf-7_bt1_sort.bam --reference ../reference.fasta/RX-cpf-7.ref.upper.fa --max-depth 10000000 -q 20 -Q 20 > ../TargetSeq-cas9-RUX-25/cutoff_5/mapping/RX-cpf-7_bt1_sort.mpileup 
+
+[Sun Jan  3 16:31:36 2021]
+rule samtools_index:
+    input: ../TargetSeq-cas9-RUX-25/cutoff_3/mapping/RX-Dig5_bt1_sort.bam
+    output: ../TargetSeq-cas9-RUX-25/cutoff_3/mapping/RX-Dig5_bt1_sort.bam.bai
+    jobid: 375
+    reason: Missing output files: ../TargetSeq-cas9-RUX-25/cutoff_3/mapping/RX-Dig5_bt1_sort.bam.bai; Input files updated by another job: ../TargetSeq-cas9-RUX-25/cutoff_3/mapping/RX-Dig5_bt1_sort.bam
+    wildcards: lib=cas9-RUX-25, cutoff=3, sample=RX-Dig5
+
+/home/zhaohuanan/zhaohn_HD/miniconda3/bin/samtools index -@ 6 ../TargetSeq-cas9-RUX-25/cutoff_3/mapping/RX-Dig5_bt1_sort.bam ../TargetSeq-cas9-RUX-25/cutoff_3/mapping/RX-Dig5_bt1_sort.bam.bai
+[Sun Jan  3 16:31:36 2021]
+Finished job 373.
+26 of 320 steps (8%) done
+
+[Sun Jan  3 16:31:36 2021]
+rule spike_in_mpileup:
+    input: ../TargetSeq-cas9-RUX-25/cutoff_10/mapping/RX-Dig8_bt1_sort.bam, ../TargetSeq-cas9-RUX-25/cutoff_10/mapping/RX-Dig8_bt1_sort.bam.bai
+    output: ../TargetSeq-cas9-RUX-25/cutoff_10/mapping/RX-Dig8_bt1_sort.mpileup
+    jobid: 461
+    reason: Missing output files: ../TargetSeq-cas9-RUX-25/cutoff_10/mapping/RX-Dig8_bt1_sort.mpileup; Input files updated by another job: ../TargetSeq-cas9-RUX-25/cutoff_10/mapping/RX-Dig8_bt1_sort.bam.bai
+    wildcards: lib=cas9-RUX-25, cutoff=10, sample=RX-Dig8
+
+/home/zhaohuanan/zhaohn_HD/miniconda3/bin/samtools mpileup ../TargetSeq-cas9-RUX-25/cutoff_10/mapping/RX-Dig8_bt1_sort.bam --reference ../reference.fasta/RX-Dig8.ref.upper.fa --max-depth 10000000 -q 20 -Q 20 > ../TargetSeq-cas9-RUX-25/cutoff_10/mapping/RX-Dig8_bt1_sort.mpileup 
+
+[Sun Jan  3 16:31:36 2021]
+rule parse_mpileup:
+    input: ../TargetSeq-cas9-RUX-25/cutoff_5/mapping/RX-ontarget_bt1_sort.mpileup
+    output: ../TargetSeq-cas9-RUX-25/cutoff_5/mapping/RX-ontarget_bt1_sort.bmat
+    jobid: 571
+    reason: Missing output files: ../TargetSeq-cas9-RUX-25/cutoff_5/mapping/RX-ontarget_bt1_sort.bmat
+    wildcards: lib=cas9-RUX-25, cutoff=5, sample=RX-ontarget
+
+/home/zhaohuanan/zhaohn_HD/miniconda3/envs/snakepipes_target-seq/bin/python ./program/parse-mpileup-V04.py -i ../TargetSeq-cas9-RUX-25/cutoff_5/mapping/RX-ontarget_bt1_sort.mpileup -o ../TargetSeq-cas9-RUX-25/cutoff_5/mapping/RX-ontarget_bt1_sort.bmat -n 0
+
+[Sun Jan  3 16:31:36 2021]
+rule parse_mpileup:
+    input: ../TargetSeq-cas9-RUX-25/cutoff_10/mapping/RX-Dig5_bt1_sort.mpileup
+    output: ../TargetSeq-cas9-RUX-25/cutoff_10/mapping/RX-Dig5_bt1_sort.bmat
+    jobid: 533
+    reason: Missing output files: ../TargetSeq-cas9-RUX-25/cutoff_10/mapping/RX-Dig5_bt1_sort.bmat; Input files updated by another job: ../TargetSeq-cas9-RUX-25/cutoff_10/mapping/RX-Dig5_bt1_sort.mpileup
+    wildcards: lib=cas9-RUX-25, cutoff=10, sample=RX-Dig5
+
+/home/zhaohuanan/zhaohn_HD/miniconda3/envs/snakepipes_target-seq/bin/python ./program/parse-mpileup-V04.py -i ../TargetSeq-cas9-RUX-25/cutoff_10/mapping/RX-Dig5_bt1_sort.mpileup -o ../TargetSeq-cas9-RUX-25/cutoff_10/mapping/RX-Dig5_bt1_sort.bmat -n 0
+
+[Sun Jan  3 16:31:36 2021]
+rule samtools_index:
+    input: ../TargetSeq-cas9-RUX-25/cutoff_3/mapping/RX-cas-6_bt1_sort.bam
+    output: ../TargetSeq-cas9-RUX-25/cutoff_3/mapping/RX-cas-6_bt1_sort.bam.bai
+    jobid: 354
+    reason: Missing output files: ../TargetSeq-cas9-RUX-25/cutoff_3/mapping/RX-cas-6_bt1_sort.bam.bai; Input files updated by another job: ../TargetSeq-cas9-RUX-25/cutoff_3/mapping/RX-cas-6_bt1_sort.bam
+    wildcards: lib=cas9-RUX-25, cutoff=3, sample=RX-cas-6
+
+/home/zhaohuanan/zhaohn_HD/miniconda3/bin/samtools index -@ 6 ../TargetSeq-cas9-RUX-25/cutoff_3/mapping/RX-cas-6_bt1_sort.bam ../TargetSeq-cas9-RUX-25/cutoff_3/mapping/RX-cas-6_bt1_sort.bam.bai
+
+[Sun Jan  3 16:31:36 2021]
+rule parse_mpileup:
+    input: ../TargetSeq-cas9-RUX-25/cutoff_3/mapping/RX-cas-1_bt1_sort.mpileup
+    output: ../TargetSeq-cas9-RUX-25/cutoff_3/mapping/RX-cas-1_bt1_sort.bmat
+    jobid: 495
+    reason: Missing output files: ../TargetSeq-cas9-RUX-25/cutoff_3/mapping/RX-cas-1_bt1_sort.bmat
+    wildcards: lib=cas9-RUX-25, cutoff=3, sample=RX-cas-1
+
+/home/zhaohuanan/zhaohn_HD/miniconda3/envs/snakepipes_target-seq/bin/python ./program/parse-mpileup-V04.py -i ../TargetSeq-cas9-RUX-25/cutoff_3/mapping/RX-cas-1_bt1_sort.mpileup -o ../TargetSeq-cas9-RUX-25/cutoff_3/mapping/RX-cas-1_bt1_sort.bmat -n 0
+[Sun Jan  3 16:31:36 2021]
+Finished job 375.
+27 of 320 steps (8%) done
+[Sun Jan  3 16:31:36 2021]
+Finished job 229.
+28 of 320 steps (9%) done
+
+[Sun Jan  3 16:31:36 2021]
+rule samtools_index:
+    input: ../TargetSeq-cas9-RUX-25/cutoff_10/mapping/RX-cpf-10_bt1_sort.bam
+    output: ../TargetSeq-cas9-RUX-25/cutoff_10/mapping/RX-cpf-10_bt1_sort.bam.bai
+    jobid: 410
+    reason: Missing output files: ../TargetSeq-cas9-RUX-25/cutoff_10/mapping/RX-cpf-10_bt1_sort.bam.bai; Input files updated by another job: ../TargetSeq-cas9-RUX-25/cutoff_10/mapping/RX-cpf-10_bt1_sort.bam
+    wildcards: lib=cas9-RUX-25, cutoff=10, sample=RX-cpf-10
+
+/home/zhaohuanan/zhaohn_HD/miniconda3/bin/samtools index -@ 6 ../TargetSeq-cas9-RUX-25/cutoff_10/mapping/RX-cpf-10_bt1_sort.bam ../TargetSeq-cas9-RUX-25/cutoff_10/mapping/RX-cpf-10_bt1_sort.bam.bai
+[Sun Jan  3 16:31:36 2021]
+Finished job 281.
+29 of 320 steps (9%) done
+[Sun Jan  3 16:31:37 2021]
+Finished job 410.
+30 of 320 steps (9%) done
+[Sun Jan  3 16:31:37 2021]
+Finished job 533.
+31 of 320 steps (10%) done
+
+[Sun Jan  3 16:31:37 2021]
+rule spike_in_mpileup:
+    input: ../TargetSeq-cas9-RUX-25/cutoff_5/mapping/RX-cas-6_bt1_sort.bam, ../TargetSeq-cas9-RUX-25/cutoff_5/mapping/RX-cas-6_bt1_sort.bam.bai
+    output: ../TargetSeq-cas9-RUX-25/cutoff_5/mapping/RX-cas-6_bt1_sort.mpileup
+    jobid: 433
+    reason: Missing output files: ../TargetSeq-cas9-RUX-25/cutoff_5/mapping/RX-cas-6_bt1_sort.mpileup
+    wildcards: lib=cas9-RUX-25, cutoff=5, sample=RX-cas-6
+
+/home/zhaohuanan/zhaohn_HD/miniconda3/bin/samtools mpileup ../TargetSeq-cas9-RUX-25/cutoff_5/mapping/RX-cas-6_bt1_sort.bam --reference ../reference.fasta/RX-cas-6.ref.upper.fa --max-depth 10000000 -q 20 -Q 20 > ../TargetSeq-cas9-RUX-25/cutoff_5/mapping/RX-cas-6_bt1_sort.mpileup 
+
+[Sun Jan  3 16:31:37 2021]
+rule samtools_sort_by_position:
+    input: ../TargetSeq-cas9-RUX-25/cutoff_5/mapping/RX-cas-2_bt1.bam
+    output: ../TargetSeq-cas9-RUX-25/cutoff_5/mapping/RX-cas-2_bt1_sort.bam
+    jobid: 93
+    reason: Missing output files: ../TargetSeq-cas9-RUX-25/cutoff_5/mapping/RX-cas-2_bt1_sort.bam
+    wildcards: lib=cas9-RUX-25, cutoff=5, sample=RX-cas-2
+
+/home/zhaohuanan/zhaohn_HD/miniconda3/bin/samtools sort -O BAM -o ../TargetSeq-cas9-RUX-25/cutoff_5/mapping/RX-cas-2_bt1_sort.bam -T ../TargetSeq-cas9-RUX-25/cutoff_5/mapping/RX-cas-2_bt1_sort.bam.temp -@ 6 -m 2G ../TargetSeq-cas9-RUX-25/cutoff_5/mapping/RX-cas-2_bt1.bam
+[Sun Jan  3 16:31:37 2021]
+Finished job 354.
+32 of 320 steps (10%) done
+[Sun Jan  3 16:31:37 2021]
+Finished job 276.
+33 of 320 steps (10%) done
+[Sun Jan  3 16:31:37 2021]
+Finished job 293.
+34 of 320 steps (11%) done
+
+[Sun Jan  3 16:31:37 2021]
+rule samtools_index:
+    input: ../TargetSeq-cas9-RUX-25/cutoff_3/mapping/RX-cpf-2_bt1_sort.bam
+    output: ../TargetSeq-cas9-RUX-25/cutoff_3/mapping/RX-cpf-2_bt1_sort.bam.bai
+    jobid: 384
+    reason: Missing output files: ../TargetSeq-cas9-RUX-25/cutoff_3/mapping/RX-cpf-2_bt1_sort.bam.bai; Input files updated by another job: ../TargetSeq-cas9-RUX-25/cutoff_3/mapping/RX-cpf-2_bt1_sort.bam
+    wildcards: lib=cas9-RUX-25, cutoff=3, sample=RX-cpf-2
+
+/home/zhaohuanan/zhaohn_HD/miniconda3/bin/samtools index -@ 6 ../TargetSeq-cas9-RUX-25/cutoff_3/mapping/RX-cpf-2_bt1_sort.bam ../TargetSeq-cas9-RUX-25/cutoff_3/mapping/RX-cpf-2_bt1_sort.bam.bai
+
+[Sun Jan  3 16:31:37 2021]
+rule spike_in_mpileup:
+    input: ../TargetSeq-cas9-RUX-25/cutoff_5/mapping/RX-Dig4_bt1_sort.bam, ../TargetSeq-cas9-RUX-25/cutoff_5/mapping/RX-Dig4_bt1_sort.bam.bai
+    output: ../TargetSeq-cas9-RUX-25/cutoff_5/mapping/RX-Dig4_bt1_sort.mpileup
+    jobid: 451
+    reason: Missing output files: ../TargetSeq-cas9-RUX-25/cutoff_5/mapping/RX-Dig4_bt1_sort.mpileup; Input files updated by another job: ../TargetSeq-cas9-RUX-25/cutoff_5/mapping/RX-Dig4_bt1_sort.bam.bai
+    wildcards: lib=cas9-RUX-25, cutoff=5, sample=RX-Dig4
+
+/home/zhaohuanan/zhaohn_HD/miniconda3/bin/samtools mpileup ../TargetSeq-cas9-RUX-25/cutoff_5/mapping/RX-Dig4_bt1_sort.bam --reference ../reference.fasta/RX-Dig4.ref.upper.fa --max-depth 10000000 -q 20 -Q 20 > ../TargetSeq-cas9-RUX-25/cutoff_5/mapping/RX-Dig4_bt1_sort.mpileup 
+
+[Sun Jan  3 16:31:37 2021]
+rule bmat_plot:
+    input: ../TargetSeq-cas9-RUX-25/cutoff_10/mapping/RX-Dig5_bt1_sort.bmat
+    output: ../all_plot/cutoff_10.ext50/TargetSeq-cas9-RUX-25_RX-Dig5_cutoff_10_indel.ext50.pdf
+    jobid: 611
+    reason: Missing output files: ../all_plot/cutoff_10.ext50/TargetSeq-cas9-RUX-25_RX-Dig5_cutoff_10_indel.ext50.pdf; Input files updated by another job: ../TargetSeq-cas9-RUX-25/cutoff_10/mapping/RX-Dig5_bt1_sort.bmat
+    wildcards: cutoff=10, lib=cas9-RUX-25, sample=RX-Dig5
+
+
+        if [[ `cat ../TargetSeq-cas9-RUX-25/cutoff_10/mapping/RX-Dig5_bt1_sort.bmat |wc -l` -eq 1 ]]; then 
+        echo "bmat is empty" 
+        echo "will touch a empty file" 
+        touch ../all_plot/cutoff_10.ext50/TargetSeq-cas9-RUX-25_RX-Dig5_cutoff_10_indel.ext50.pdf
+        touch ../all_plot/cutoff_10.ext50/TargetSeq-cas9-RUX-25_RX-Dig5_cutoff_10_indel.ext50.pdf.empty.log
+        echo "decrease the cutoff and try again" > ../all_plot/cutoff_10.ext50/TargetSeq-cas9-RUX-25_RX-Dig5_cutoff_10_indel.ext50.pdf.empty.log
+        else
+        echo "bmat is ok!"
+        echo "start to plot"
+        echo `cat TCCCCTCTGCTGGATACCTCTGG`
+        sgRNA=`cat TCCCCTCTGCTGGATACCTCTGG`
+        # sgRNA=TCCCCTCTGCTGGATACCTCTGG
+        /home/zhaohuanan/zhaohn_HD/miniconda3/envs/snakepipes_target-seq/bin/python ./program/plot-targetseq-bmat-V04.py -i ../TargetSeq-cas9-RUX-25/cutoff_10/mapping/RX-Dig5_bt1_sort.bmat -o ../all_plot/cutoff_10.ext50/TargetSeq-cas9-RUX-25_RX-Dig5_cutoff_10_indel.ext50.pdf --region_extend_length 50 --sgRNA $sgRNA
+        fi
+        
+[Sun Jan  3 16:31:37 2021]
+Finished job 273.
+35 of 320 steps (11%) done
+[Sun Jan  3 16:31:37 2021]
+Finished job 183.
+36 of 320 steps (11%) done
+[Sun Jan  3 16:31:37 2021]
+Finished job 253.
+37 of 320 steps (12%) done
+[Sun Jan  3 16:31:37 2021]
+Finished job 611.
+38 of 320 steps (12%) done
+[Sun Jan  3 16:31:37 2021]
+Finished job 223.
+39 of 320 steps (12%) done
+
+[Sun Jan  3 16:31:37 2021]
+rule spike_in_mpileup:
+    input: ../TargetSeq-cas9-RUX-25/cutoff_3/mapping/RX-Dig5_bt1_sort.bam, ../TargetSeq-cas9-RUX-25/cutoff_3/mapping/RX-Dig5_bt1_sort.bam.bai
+    output: ../TargetSeq-cas9-RUX-25/cutoff_3/mapping/RX-Dig5_bt1_sort.mpileup
+    jobid: 453
+    reason: Missing output files: ../TargetSeq-cas9-RUX-25/cutoff_3/mapping/RX-Dig5_bt1_sort.mpileup; Input files updated by another job: ../TargetSeq-cas9-RUX-25/cutoff_3/mapping/RX-Dig5_bt1_sort.bam.bai, ../TargetSeq-cas9-RUX-25/cutoff_3/mapping/RX-Dig5_bt1_sort.bam
+    wildcards: lib=cas9-RUX-25, cutoff=3, sample=RX-Dig5
+
+/home/zhaohuanan/zhaohn_HD/miniconda3/bin/samtools mpileup ../TargetSeq-cas9-RUX-25/cutoff_3/mapping/RX-Dig5_bt1_sort.bam --reference ../reference.fasta/RX-Dig5.ref.upper.fa --max-depth 10000000 -q 20 -Q 20 > ../TargetSeq-cas9-RUX-25/cutoff_3/mapping/RX-Dig5_bt1_sort.mpileup 
+
+[Sun Jan  3 16:31:37 2021]
+rule spike_in_mpileup:
+    input: ../TargetSeq-cas9-RUX-25/cutoff_10/mapping/RX-cpf-10_bt1_sort.bam, ../TargetSeq-cas9-RUX-25/cutoff_10/mapping/RX-cpf-10_bt1_sort.bam.bai
+    output: ../TargetSeq-cas9-RUX-25/cutoff_10/mapping/RX-cpf-10_bt1_sort.mpileup
+    jobid: 488
+    reason: Missing output files: ../TargetSeq-cas9-RUX-25/cutoff_10/mapping/RX-cpf-10_bt1_sort.mpileup; Input files updated by another job: ../TargetSeq-cas9-RUX-25/cutoff_10/mapping/RX-cpf-10_bt1_sort.bam.bai, ../TargetSeq-cas9-RUX-25/cutoff_10/mapping/RX-cpf-10_bt1_sort.bam
+    wildcards: lib=cas9-RUX-25, cutoff=10, sample=RX-cpf-10
+
+/home/zhaohuanan/zhaohn_HD/miniconda3/bin/samtools mpileup ../TargetSeq-cas9-RUX-25/cutoff_10/mapping/RX-cpf-10_bt1_sort.bam --reference ../reference.fasta/RX-cpf-10.ref.upper.fa --max-depth 10000000 -q 20 -Q 20 > ../TargetSeq-cas9-RUX-25/cutoff_10/mapping/RX-cpf-10_bt1_sort.mpileup 
+
+[Sun Jan  3 16:31:37 2021]
+rule samtools_index:
+    input: ../TargetSeq-cas9-RUX-25/cutoff_10/mapping/RX-cpf-6_bt1_sort.bam
+    output: ../TargetSeq-cas9-RUX-25/cutoff_10/mapping/RX-cpf-6_bt1_sort.bam.bai
+    jobid: 398
+    reason: Missing output files: ../TargetSeq-cas9-RUX-25/cutoff_10/mapping/RX-cpf-6_bt1_sort.bam.bai; Input files updated by another job: ../TargetSeq-cas9-RUX-25/cutoff_10/mapping/RX-cpf-6_bt1_sort.bam
+    wildcards: lib=cas9-RUX-25, cutoff=10, sample=RX-cpf-6
+
+/home/zhaohuanan/zhaohn_HD/miniconda3/bin/samtools index -@ 6 ../TargetSeq-cas9-RUX-25/cutoff_10/mapping/RX-cpf-6_bt1_sort.bam ../TargetSeq-cas9-RUX-25/cutoff_10/mapping/RX-cpf-6_bt1_sort.bam.bai
+
+[Sun Jan  3 16:31:37 2021]
+rule sam_to_bam:
+    input: ../TargetSeq-cas9-RUX-25/cutoff_3/mapping/RX-cpf-7_bt1.sam, ../reference.fasta/RX-cpf-7.ref.upper.fa
+    output: ../TargetSeq-cas9-RUX-25/cutoff_3/mapping/RX-cpf-7_bt1.bam
+    jobid: 280
+    reason: Missing output files: ../TargetSeq-cas9-RUX-25/cutoff_3/mapping/RX-cpf-7_bt1.bam; Input files updated by another job: ../TargetSeq-cas9-RUX-25/cutoff_3/mapping/RX-cpf-7_bt1.sam
+    wildcards: lib=cas9-RUX-25, cutoff=3, sample=RX-cpf-7
+
+
+        /home/zhaohuanan/zhaohn_HD/miniconda3/bin/samtools view -h -f 1 -F 268 ../TargetSeq-cas9-RUX-25/cutoff_3/mapping/RX-cpf-7_bt1.sam         | /home/zhaohuanan/zhaohn_HD/miniconda3/bin/samclip --ref ../reference.fasta/RX-cpf-7.ref.upper.fa --max 3 --progress 0         | awk 'function abs(v) {return v < 0 ? -v : v} $1~"@" || ($7 == "=" && abs($9) <= 600 ) {print $0}'         | /home/zhaohuanan/zhaohn_HD/miniconda3/bin/samtools view -hb > ../TargetSeq-cas9-RUX-25/cutoff_3/mapping/RX-cpf-7_bt1.bam
+        
+
+[Sun Jan  3 16:31:37 2021]
+rule sam_to_bam:
+    input: ../TargetSeq-cas9-RUX-25/cutoff_5/mapping/RX-Dig6_bt1.sam, ../reference.fasta/RX-Dig6.ref.upper.fa
+    output: ../TargetSeq-cas9-RUX-25/cutoff_5/mapping/RX-Dig6_bt1.bam
+    jobid: 214
+    reason: Missing output files: ../TargetSeq-cas9-RUX-25/cutoff_5/mapping/RX-Dig6_bt1.bam
+    wildcards: lib=cas9-RUX-25, cutoff=5, sample=RX-Dig6
+[Sun Jan  3 16:31:37 2021]
+Finished job 249.
+40 of 320 steps (12%) done
+
+
+        /home/zhaohuanan/zhaohn_HD/miniconda3/bin/samtools view -h -f 1 -F 268 ../TargetSeq-cas9-RUX-25/cutoff_5/mapping/RX-Dig6_bt1.sam         | /home/zhaohuanan/zhaohn_HD/miniconda3/bin/samclip --ref ../reference.fasta/RX-Dig6.ref.upper.fa --max 3 --progress 0         | awk 'function abs(v) {return v < 0 ? -v : v} $1~"@" || ($7 == "=" && abs($9) <= 600 ) {print $0}'         | /home/zhaohuanan/zhaohn_HD/miniconda3/bin/samtools view -hb > ../TargetSeq-cas9-RUX-25/cutoff_5/mapping/RX-Dig6_bt1.bam
+        
+[Sun Jan  3 16:31:37 2021]
+Finished job 384.
+41 of 320 steps (13%) done
+[Sun Jan  3 16:31:37 2021]
+Finished job 453.
+42 of 320 steps (13%) done
+[Sun Jan  3 16:31:37 2021]
+Finished job 488.
+43 of 320 steps (13%) done
+
+[Sun Jan  3 16:31:37 2021]
+rule samtools_index:
+    input: ../TargetSeq-cas9-RUX-25/cutoff_10/mapping/RX-cpf-7_bt1_sort.bam
+    output: ../TargetSeq-cas9-RUX-25/cutoff_10/mapping/RX-cpf-7_bt1_sort.bam.bai
+    jobid: 401
+    reason: Missing output files: ../TargetSeq-cas9-RUX-25/cutoff_10/mapping/RX-cpf-7_bt1_sort.bam.bai; Input files updated by another job: ../TargetSeq-cas9-RUX-25/cutoff_10/mapping/RX-cpf-7_bt1_sort.bam
+    wildcards: lib=cas9-RUX-25, cutoff=10, sample=RX-cpf-7
+
+/home/zhaohuanan/zhaohn_HD/miniconda3/bin/samtools index -@ 6 ../TargetSeq-cas9-RUX-25/cutoff_10/mapping/RX-cpf-7_bt1_sort.bam ../TargetSeq-cas9-RUX-25/cutoff_10/mapping/RX-cpf-7_bt1_sort.bam.bai
+
+[Sun Jan  3 16:31:37 2021]
+rule samtools_index:
+    input: ../TargetSeq-cas9-RUX-25/cutoff_5/mapping/RX-cpf-6_bt1_sort.bam
+    output: ../TargetSeq-cas9-RUX-25/cutoff_5/mapping/RX-cpf-6_bt1_sort.bam.bai
+    jobid: 397
+    reason: Missing output files: ../TargetSeq-cas9-RUX-25/cutoff_5/mapping/RX-cpf-6_bt1_sort.bam.bai; Input files updated by another job: ../TargetSeq-cas9-RUX-25/cutoff_5/mapping/RX-cpf-6_bt1_sort.bam
+    wildcards: lib=cas9-RUX-25, cutoff=5, sample=RX-cpf-6
+
+/home/zhaohuanan/zhaohn_HD/miniconda3/bin/samtools index -@ 6 ../TargetSeq-cas9-RUX-25/cutoff_5/mapping/RX-cpf-6_bt1_sort.bam ../TargetSeq-cas9-RUX-25/cutoff_5/mapping/RX-cpf-6_bt1_sort.bam.bai
+
+[Sun Jan  3 16:31:37 2021]
+rule samtools_index:
+    input: ../TargetSeq-cas9-RUX-25/cutoff_5/mapping/RX-Dig8_bt1_sort.bam
+    output: ../TargetSeq-cas9-RUX-25/cutoff_5/mapping/RX-Dig8_bt1_sort.bam.bai
+    jobid: 382
+    reason: Missing output files: ../TargetSeq-cas9-RUX-25/cutoff_5/mapping/RX-Dig8_bt1_sort.bam.bai; Input files updated by another job: ../TargetSeq-cas9-RUX-25/cutoff_5/mapping/RX-Dig8_bt1_sort.bam
+    wildcards: lib=cas9-RUX-25, cutoff=5, sample=RX-Dig8
+
+/home/zhaohuanan/zhaohn_HD/miniconda3/bin/samtools index -@ 6 ../TargetSeq-cas9-RUX-25/cutoff_5/mapping/RX-Dig8_bt1_sort.bam ../TargetSeq-cas9-RUX-25/cutoff_5/mapping/RX-Dig8_bt1_sort.bam.bai
+
+[Sun Jan  3 16:31:37 2021]
+rule samtools_index:
+    input: ../TargetSeq-cas9-RUX-25/cutoff_3/mapping/RX-cpf-4_bt1_sort.bam
+    output: ../TargetSeq-cas9-RUX-25/cutoff_3/mapping/RX-cpf-4_bt1_sort.bam.bai
+    jobid: 390
+    reason: Missing output files: ../TargetSeq-cas9-RUX-25/cutoff_3/mapping/RX-cpf-4_bt1_sort.bam.bai; Input files updated by another job: ../TargetSeq-cas9-RUX-25/cutoff_3/mapping/RX-cpf-4_bt1_sort.bam
+    wildcards: lib=cas9-RUX-25, cutoff=3, sample=RX-cpf-4
+
+/home/zhaohuanan/zhaohn_HD/miniconda3/bin/samtools index -@ 6 ../TargetSeq-cas9-RUX-25/cutoff_3/mapping/RX-cpf-4_bt1_sort.bam ../TargetSeq-cas9-RUX-25/cutoff_3/mapping/RX-cpf-4_bt1_sort.bam.bai
+[Sun Jan  3 16:31:38 2021]
+Finished job 398.
+44 of 320 steps (14%) done
+[Sun Jan  3 16:31:38 2021]
+Finished job 401.
+45 of 320 steps (14%) done
+
+[Sun Jan  3 16:31:38 2021]
+rule parse_mpileup:
+    input: ../TargetSeq-cas9-RUX-25/cutoff_5/mapping/RX-cas-3_bt1_sort.mpileup
+    output: ../TargetSeq-cas9-RUX-25/cutoff_5/mapping/RX-cas-3_bt1_sort.bmat
+    jobid: 502
+    reason: Missing output files: ../TargetSeq-cas9-RUX-25/cutoff_5/mapping/RX-cas-3_bt1_sort.bmat
+    wildcards: lib=cas9-RUX-25, cutoff=5, sample=RX-cas-3
+
+/home/zhaohuanan/zhaohn_HD/miniconda3/envs/snakepipes_target-seq/bin/python ./program/parse-mpileup-V04.py -i ../TargetSeq-cas9-RUX-25/cutoff_5/mapping/RX-cas-3_bt1_sort.mpileup -o ../TargetSeq-cas9-RUX-25/cutoff_5/mapping/RX-cas-3_bt1_sort.bmat -n 0
+
+[Sun Jan  3 16:31:38 2021]
+rule samtools_index:
+    input: ../TargetSeq-cas9-RUX-25/cutoff_10/mapping/RX-cas-2_bt1_sort.bam
+    output: ../TargetSeq-cas9-RUX-25/cutoff_10/mapping/RX-cas-2_bt1_sort.bam.bai
+    jobid: 344
+    reason: Missing output files: ../TargetSeq-cas9-RUX-25/cutoff_10/mapping/RX-cas-2_bt1_sort.bam.bai; Input files updated by another job: ../TargetSeq-cas9-RUX-25/cutoff_10/mapping/RX-cas-2_bt1_sort.bam
+    wildcards: lib=cas9-RUX-25, cutoff=10, sample=RX-cas-2
+
+/home/zhaohuanan/zhaohn_HD/miniconda3/bin/samtools index -@ 6 ../TargetSeq-cas9-RUX-25/cutoff_10/mapping/RX-cas-2_bt1_sort.bam ../TargetSeq-cas9-RUX-25/cutoff_10/mapping/RX-cas-2_bt1_sort.bam.bai
+
+[Sun Jan  3 16:31:38 2021]
+rule samtools_index:
+    input: ../TargetSeq-cas9-RUX-25/cutoff_5/mapping/RX-cpf-8_bt1_sort.bam
+    output: ../TargetSeq-cas9-RUX-25/cutoff_5/mapping/RX-cpf-8_bt1_sort.bam.bai
+    jobid: 403
+    reason: Missing output files: ../TargetSeq-cas9-RUX-25/cutoff_5/mapping/RX-cpf-8_bt1_sort.bam.bai; Input files updated by another job: ../TargetSeq-cas9-RUX-25/cutoff_5/mapping/RX-cpf-8_bt1_sort.bam
+    wildcards: lib=cas9-RUX-25, cutoff=5, sample=RX-cpf-8
+
+/home/zhaohuanan/zhaohn_HD/miniconda3/bin/samtools index -@ 6 ../TargetSeq-cas9-RUX-25/cutoff_5/mapping/RX-cpf-8_bt1_sort.bam ../TargetSeq-cas9-RUX-25/cutoff_5/mapping/RX-cpf-8_bt1_sort.bam.bai
+[Sun Jan  3 16:31:38 2021]
+Finished job 89.
+46 of 320 steps (14%) done
+[Sun Jan  3 16:31:38 2021]
+Finished job 303.
+47 of 320 steps (15%) done
+[Sun Jan  3 16:31:38 2021]
+Finished job 390.
+48 of 320 steps (15%) done
+
+[Sun Jan  3 16:31:38 2021]
+rule samtools_index:
+    input: ../TargetSeq-cas9-RUX-25/cutoff_5/mapping/RX-cpf-3_bt1_sort.bam
+    output: ../TargetSeq-cas9-RUX-25/cutoff_5/mapping/RX-cpf-3_bt1_sort.bam.bai
+    jobid: 388
+    reason: Missing output files: ../TargetSeq-cas9-RUX-25/cutoff_5/mapping/RX-cpf-3_bt1_sort.bam.bai
+    wildcards: lib=cas9-RUX-25, cutoff=5, sample=RX-cpf-3
+
+/home/zhaohuanan/zhaohn_HD/miniconda3/bin/samtools index -@ 6 ../TargetSeq-cas9-RUX-25/cutoff_5/mapping/RX-cpf-3_bt1_sort.bam ../TargetSeq-cas9-RUX-25/cutoff_5/mapping/RX-cpf-3_bt1_sort.bam.bai
+
+[Sun Jan  3 16:31:38 2021]
+rule bmat_plot:
+    input: ../TargetSeq-cas9-RUX-25/cutoff_10/mapping/RX-cpf-5_bt1_sort.bmat
+    output: ../all_plot/cutoff_10.ext50/TargetSeq-cas9-RUX-25_RX-cpf-5_cutoff_10_indel.ext50.pdf
+    jobid: 629
+    reason: Missing output files: ../all_plot/cutoff_10.ext50/TargetSeq-cas9-RUX-25_RX-cpf-5_cutoff_10_indel.ext50.pdf; Input files updated by another job: ../TargetSeq-cas9-RUX-25/cutoff_10/mapping/RX-cpf-5_bt1_sort.bmat
+    wildcards: cutoff=10, lib=cas9-RUX-25, sample=RX-cpf-5
+
+
+        if [[ `cat ../TargetSeq-cas9-RUX-25/cutoff_10/mapping/RX-cpf-5_bt1_sort.bmat |wc -l` -eq 1 ]]; then 
+        echo "bmat is empty" 
+        echo "will touch a empty file" 
+        touch ../all_plot/cutoff_10.ext50/TargetSeq-cas9-RUX-25_RX-cpf-5_cutoff_10_indel.ext50.pdf
+        touch ../all_plot/cutoff_10.ext50/TargetSeq-cas9-RUX-25_RX-cpf-5_cutoff_10_indel.ext50.pdf.empty.log
+        echo "decrease the cutoff and try again" > ../all_plot/cutoff_10.ext50/TargetSeq-cas9-RUX-25_RX-cpf-5_cutoff_10_indel.ext50.pdf.empty.log
+        else
+        echo "bmat is ok!"
+        echo "start to plot"
+        echo `cat TCCCCTCTGCTGGATACCTCTGG`
+        sgRNA=`cat TCCCCTCTGCTGGATACCTCTGG`
+        # sgRNA=TCCCCTCTGCTGGATACCTCTGG
+        /home/zhaohuanan/zhaohn_HD/miniconda3/envs/snakepipes_target-seq/bin/python ./program/plot-targetseq-bmat-V04.py -i ../TargetSeq-cas9-RUX-25/cutoff_10/mapping/RX-cpf-5_bt1_sort.bmat -o ../all_plot/cutoff_10.ext50/TargetSeq-cas9-RUX-25_RX-cpf-5_cutoff_10_indel.ext50.pdf --region_extend_length 50 --sgRNA $sgRNA
+        fi
+        
+[Sun Jan  3 16:31:38 2021]
+Finished job 382.
+49 of 320 steps (15%) done
+[Sun Jan  3 16:31:38 2021]
+Finished job 269.
+50 of 320 steps (16%) done
+[Sun Jan  3 16:31:38 2021]
+Finished job 344.
+51 of 320 steps (16%) done
+[Sun Jan  3 16:31:38 2021]
+Finished job 179.
+52 of 320 steps (16%) done
+[Sun Jan  3 16:31:38 2021]
+Finished job 397.
+53 of 320 steps (17%) done
+[Sun Jan  3 16:31:38 2021]
+Error in rule bmat_plot:
+    jobid: 629
+    output: ../all_plot/cutoff_10.ext50/TargetSeq-cas9-RUX-25_RX-cpf-5_cutoff_10_indel.ext50.pdf
+    shell:
+        
+        if [[ `cat ../TargetSeq-cas9-RUX-25/cutoff_10/mapping/RX-cpf-5_bt1_sort.bmat |wc -l` -eq 1 ]]; then 
+        echo "bmat is empty" 
+        echo "will touch a empty file" 
+        touch ../all_plot/cutoff_10.ext50/TargetSeq-cas9-RUX-25_RX-cpf-5_cutoff_10_indel.ext50.pdf
+        touch ../all_plot/cutoff_10.ext50/TargetSeq-cas9-RUX-25_RX-cpf-5_cutoff_10_indel.ext50.pdf.empty.log
+        echo "decrease the cutoff and try again" > ../all_plot/cutoff_10.ext50/TargetSeq-cas9-RUX-25_RX-cpf-5_cutoff_10_indel.ext50.pdf.empty.log
+        else
+        echo "bmat is ok!"
+        echo "start to plot"
+        echo `cat TCCCCTCTGCTGGATACCTCTGG`
+        sgRNA=`cat TCCCCTCTGCTGGATACCTCTGG`
+        # sgRNA=TCCCCTCTGCTGGATACCTCTGG
+        /home/zhaohuanan/zhaohn_HD/miniconda3/envs/snakepipes_target-seq/bin/python ./program/plot-targetseq-bmat-V04.py -i ../TargetSeq-cas9-RUX-25/cutoff_10/mapping/RX-cpf-5_bt1_sort.bmat -o ../all_plot/cutoff_10.ext50/TargetSeq-cas9-RUX-25_RX-cpf-5_cutoff_10_indel.ext50.pdf --region_extend_length 50 --sgRNA $sgRNA
+        fi
+        
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+
+[Sun Jan  3 16:31:38 2021]
+rule spike_in_mpileup:
+    input: ../TargetSeq-cas9-RUX-25/cutoff_3/mapping/RX-cas-4_bt1_sort.bam, ../TargetSeq-cas9-RUX-25/cutoff_3/mapping/RX-cas-4_bt1_sort.bam.bai
+    output: ../TargetSeq-cas9-RUX-25/cutoff_3/mapping/RX-cas-4_bt1_sort.mpileup
+    jobid: 426
+    reason: Missing output files: ../TargetSeq-cas9-RUX-25/cutoff_3/mapping/RX-cas-4_bt1_sort.mpileup; Input files updated by another job: ../TargetSeq-cas9-RUX-25/cutoff_3/mapping/RX-cas-4_bt1_sort.bam.bai
+    wildcards: lib=cas9-RUX-25, cutoff=3, sample=RX-cas-4
+
+/home/zhaohuanan/zhaohn_HD/miniconda3/bin/samtools mpileup ../TargetSeq-cas9-RUX-25/cutoff_3/mapping/RX-cas-4_bt1_sort.bam --reference ../reference.fasta/RX-cas-4.ref.upper.fa --max-depth 10000000 -q 20 -Q 20 > ../TargetSeq-cas9-RUX-25/cutoff_3/mapping/RX-cas-4_bt1_sort.mpileup 
+
+[Sun Jan  3 16:31:38 2021]
+rule spike_in_mpileup:
+    input: ../TargetSeq-cas9-RUX-25/cutoff_5/mapping/RX-cpf-2_bt1_sort.bam, ../TargetSeq-cas9-RUX-25/cutoff_5/mapping/RX-cpf-2_bt1_sort.bam.bai
+    output: ../TargetSeq-cas9-RUX-25/cutoff_5/mapping/RX-cpf-2_bt1_sort.mpileup
+    jobid: 463
+    reason: Missing output files: ../TargetSeq-cas9-RUX-25/cutoff_5/mapping/RX-cpf-2_bt1_sort.mpileup; Input files updated by another job: ../TargetSeq-cas9-RUX-25/cutoff_5/mapping/RX-cpf-2_bt1_sort.bam.bai
+    wildcards: lib=cas9-RUX-25, cutoff=5, sample=RX-cpf-2
+
+/home/zhaohuanan/zhaohn_HD/miniconda3/bin/samtools mpileup ../TargetSeq-cas9-RUX-25/cutoff_5/mapping/RX-cpf-2_bt1_sort.bam --reference ../reference.fasta/RX-cpf-2.ref.upper.fa --max-depth 10000000 -q 20 -Q 20 > ../TargetSeq-cas9-RUX-25/cutoff_5/mapping/RX-cpf-2_bt1_sort.mpileup 
+
+[Sun Jan  3 16:31:38 2021]
+rule samtools_index:
+    input: ../TargetSeq-cas9-RUX-25/cutoff_5/mapping/RX-cpf-4_bt1_sort.bam
+    output: ../TargetSeq-cas9-RUX-25/cutoff_5/mapping/RX-cpf-4_bt1_sort.bam.bai
+    jobid: 391
+    reason: Missing output files: ../TargetSeq-cas9-RUX-25/cutoff_5/mapping/RX-cpf-4_bt1_sort.bam.bai; Input files updated by another job: ../TargetSeq-cas9-RUX-25/cutoff_5/mapping/RX-cpf-4_bt1_sort.bam
+    wildcards: lib=cas9-RUX-25, cutoff=5, sample=RX-cpf-4
+
+/home/zhaohuanan/zhaohn_HD/miniconda3/bin/samtools index -@ 6 ../TargetSeq-cas9-RUX-25/cutoff_5/mapping/RX-cpf-4_bt1_sort.bam ../TargetSeq-cas9-RUX-25/cutoff_5/mapping/RX-cpf-4_bt1_sort.bam.bai
+[Sun Jan  3 16:31:38 2021]
+Finished job 403.
+54 of 320 steps (17%) done
+[Sun Jan  3 16:31:38 2021]
+Finished job 141.
+55 of 320 steps (17%) done
+[Sun Jan  3 16:31:38 2021]
+Finished job 149.
+56 of 320 steps (18%) done
+[Sun Jan  3 16:31:38 2021]
+Finished job 388.
+57 of 320 steps (18%) done
+[Sun Jan  3 16:31:38 2021]
+Finished job 391.
+58 of 320 steps (18%) done
+[Sun Jan  3 16:31:39 2021]
+Finished job 93.
+59 of 320 steps (18%) done
+[Sun Jan  3 16:31:39 2021]
+Finished job 214.
+60 of 320 steps (19%) done
+[Sun Jan  3 16:31:39 2021]
+Finished job 497.
+61 of 320 steps (19%) done
+[Sun Jan  3 16:31:40 2021]
+Finished job 524.
+62 of 320 steps (19%) done
+[Sun Jan  3 16:31:40 2021]
+Finished job 261.
+63 of 320 steps (20%) done
+[Sun Jan  3 16:31:41 2021]
+Finished job 307.
+64 of 320 steps (20%) done
+[Sun Jan  3 16:31:41 2021]
+Finished job 320.
+65 of 320 steps (20%) done
+[Sun Jan  3 16:31:41 2021]
+Finished job 572.
+66 of 320 steps (21%) done
+[Sun Jan  3 16:31:41 2021]
+Finished job 570.
+67 of 320 steps (21%) done
+[Sun Jan  3 16:31:41 2021]
+Finished job 523.
+68 of 320 steps (21%) done
+[Sun Jan  3 16:31:41 2021]
+Finished job 144.
+69 of 320 steps (22%) done
+[Sun Jan  3 16:31:42 2021]
+Finished job 240.
+70 of 320 steps (22%) done
+[Sun Jan  3 16:31:42 2021]
+Finished job 571.
+71 of 320 steps (22%) done
+[Sun Jan  3 16:31:43 2021]
+Finished job 280.
+72 of 320 steps (22%) done
+[Sun Jan  3 16:31:44 2021]
+Finished job 495.
+73 of 320 steps (23%) done
+[Sun Jan  3 16:31:48 2021]
+Finished job 503.
+74 of 320 steps (23%) done
+[Sun Jan  3 16:31:48 2021]
+Finished job 506.
+75 of 320 steps (23%) done
+[Sun Jan  3 16:31:53 2021]
+Finished job 418.
+76 of 320 steps (24%) done
+[Sun Jan  3 16:31:54 2021]
+Finished job 502.
+77 of 320 steps (24%) done
+[Sun Jan  3 16:31:55 2021]
+Finished job 512.
+78 of 320 steps (24%) done
+[Sun Jan  3 16:31:55 2021]
+Finished job 520.
+79 of 320 steps (25%) done
+[Sun Jan  3 16:31:58 2021]
+Finished job 519.
+80 of 320 steps (25%) done
+[Sun Jan  3 16:32:08 2021]
+Finished job 431.
+81 of 320 steps (25%) done
+[Sun Jan  3 16:32:08 2021]
+Finished job 464.
+82 of 320 steps (26%) done
+[Sun Jan  3 16:32:09 2021]
+Finished job 443.
+83 of 320 steps (26%) done
+[Sun Jan  3 16:32:19 2021]
+Finished job 461.
+84 of 320 steps (26%) done
+[Sun Jan  3 16:32:20 2021]
+Finished job 430.
+85 of 320 steps (27%) done
+[Sun Jan  3 16:32:24 2021]
+Finished job 467.
+86 of 320 steps (27%) done
+[Sun Jan  3 16:32:29 2021]
+Finished job 451.
+87 of 320 steps (27%) done
+[Sun Jan  3 16:32:30 2021]
+Finished job 463.
+88 of 320 steps (28%) done
+[Sun Jan  3 16:32:34 2021]
+Finished job 478.
+89 of 320 steps (28%) done
+[Sun Jan  3 16:32:38 2021]
+Finished job 440.
+90 of 320 steps (28%) done
+[Sun Jan  3 16:32:43 2021]
+Finished job 449.
+91 of 320 steps (28%) done
+[Sun Jan  3 16:32:48 2021]
+Finished job 426.
+92 of 320 steps (29%) done
+[Sun Jan  3 16:32:48 2021]
+Finished job 433.
+93 of 320 steps (29%) done
+[Sun Jan  3 16:33:03 2021]
+Finished job 439.
+94 of 320 steps (29%) done
+[Sun Jan  3 16:33:06 2021]
+Finished job 482.
+95 of 320 steps (30%) done
+Shutting down, this might take some time.
+Exiting because a job execution failed. Look above for error message
+Complete log: /gpfs/user/zhaohuanan/3.project/25.2020-12_02_CBE_DetectSeq_paper_revise/TargetSeq_20201227/sub1_cpf1_cas9/snakepipes_target-seq/.snakemake/log/2021-01-03T163132.465375.snakemake.log

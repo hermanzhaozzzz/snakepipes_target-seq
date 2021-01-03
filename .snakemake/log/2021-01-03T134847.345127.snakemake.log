@@ -1,0 +1,1227 @@
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided cores: 48
+Rules claiming more threads will be scaled down.
+Job counts:
+	count	jobs
+	1	all
+	52	cp
+	52	fastqc
+	1	multiqc
+	106
+
+[Sun Jan  3 13:48:47 2021]
+rule cp:
+    input: ../TargetSeq-cas9-RUX-25/demultiplex.fastq/RX-cpf-4_demultiplex_R1.fastq, ../TargetSeq-cas9-RUX-25/demultiplex.fastq/RX-cpf-4_demultiplex_R2.fastq
+    output: ../qc_quantify-all/fastq/TargetSeq-cas9-RUX-25_RX-cpf-4_demultiplex_R1.fastq, ../qc_quantify-all/fastq/TargetSeq-cas9-RUX-25_RX-cpf-4_demultiplex_R2.fastq
+    jobid: 40
+    reason: Missing output files: ../qc_quantify-all/fastq/TargetSeq-cas9-RUX-25_RX-cpf-4_demultiplex_R2.fastq, ../qc_quantify-all/fastq/TargetSeq-cas9-RUX-25_RX-cpf-4_demultiplex_R1.fastq
+    wildcards: lib=cas9-RUX-25, region=RX-cpf-4
+
+
+        cp ../TargetSeq-cas9-RUX-25/demultiplex.fastq/RX-cpf-4_demultiplex_R1.fastq ../qc_quantify-all/fastq/TargetSeq-cas9-RUX-25_RX-cpf-4_demultiplex_R1.fastq
+        cp ../TargetSeq-cas9-RUX-25/demultiplex.fastq/RX-cpf-4_demultiplex_R2.fastq ../qc_quantify-all/fastq/TargetSeq-cas9-RUX-25_RX-cpf-4_demultiplex_R2.fastq
+        
+
+[Sun Jan  3 13:48:47 2021]
+rule cp:
+    input: ../TargetSeq-cpf1-RUX-21/demultiplex.fastq/RX-cpf-4_demultiplex_R1.fastq, ../TargetSeq-cpf1-RUX-21/demultiplex.fastq/RX-cpf-4_demultiplex_R2.fastq
+    output: ../qc_quantify-all/fastq/TargetSeq-cpf1-RUX-21_RX-cpf-4_demultiplex_R1.fastq, ../qc_quantify-all/fastq/TargetSeq-cpf1-RUX-21_RX-cpf-4_demultiplex_R2.fastq
+    jobid: 92
+    reason: Missing output files: ../qc_quantify-all/fastq/TargetSeq-cpf1-RUX-21_RX-cpf-4_demultiplex_R2.fastq, ../qc_quantify-all/fastq/TargetSeq-cpf1-RUX-21_RX-cpf-4_demultiplex_R1.fastq
+    wildcards: lib=cpf1-RUX-21, region=RX-cpf-4
+
+
+        cp ../TargetSeq-cpf1-RUX-21/demultiplex.fastq/RX-cpf-4_demultiplex_R1.fastq ../qc_quantify-all/fastq/TargetSeq-cpf1-RUX-21_RX-cpf-4_demultiplex_R1.fastq
+        cp ../TargetSeq-cpf1-RUX-21/demultiplex.fastq/RX-cpf-4_demultiplex_R2.fastq ../qc_quantify-all/fastq/TargetSeq-cpf1-RUX-21_RX-cpf-4_demultiplex_R2.fastq
+        
+
+[Sun Jan  3 13:48:47 2021]
+rule cp:
+    input: ../TargetSeq-cas9-RUX-25/demultiplex.fastq/RX-Dig5_demultiplex_R1.fastq, ../TargetSeq-cas9-RUX-25/demultiplex.fastq/RX-Dig5_demultiplex_R2.fastq
+    output: ../qc_quantify-all/fastq/TargetSeq-cas9-RUX-25_RX-Dig5_demultiplex_R1.fastq, ../qc_quantify-all/fastq/TargetSeq-cas9-RUX-25_RX-Dig5_demultiplex_R2.fastq
+    jobid: 10
+    reason: Missing output files: ../qc_quantify-all/fastq/TargetSeq-cas9-RUX-25_RX-Dig5_demultiplex_R1.fastq, ../qc_quantify-all/fastq/TargetSeq-cas9-RUX-25_RX-Dig5_demultiplex_R2.fastq
+    wildcards: lib=cas9-RUX-25, region=RX-Dig5
+
+
+        cp ../TargetSeq-cas9-RUX-25/demultiplex.fastq/RX-Dig5_demultiplex_R1.fastq ../qc_quantify-all/fastq/TargetSeq-cas9-RUX-25_RX-Dig5_demultiplex_R1.fastq
+        cp ../TargetSeq-cas9-RUX-25/demultiplex.fastq/RX-Dig5_demultiplex_R2.fastq ../qc_quantify-all/fastq/TargetSeq-cas9-RUX-25_RX-Dig5_demultiplex_R2.fastq
+        
+
+[Sun Jan  3 13:48:47 2021]
+rule cp:
+    input: ../TargetSeq-cas9-RUX-25/demultiplex.fastq/RX-cpf-10_demultiplex_R1.fastq, ../TargetSeq-cas9-RUX-25/demultiplex.fastq/RX-cpf-10_demultiplex_R2.fastq
+    output: ../qc_quantify-all/fastq/TargetSeq-cas9-RUX-25_RX-cpf-10_demultiplex_R1.fastq, ../qc_quantify-all/fastq/TargetSeq-cas9-RUX-25_RX-cpf-10_demultiplex_R2.fastq
+    jobid: 32
+    reason: Missing output files: ../qc_quantify-all/fastq/TargetSeq-cas9-RUX-25_RX-cpf-10_demultiplex_R2.fastq, ../qc_quantify-all/fastq/TargetSeq-cas9-RUX-25_RX-cpf-10_demultiplex_R1.fastq
+    wildcards: lib=cas9-RUX-25, region=RX-cpf-10
+
+
+        cp ../TargetSeq-cas9-RUX-25/demultiplex.fastq/RX-cpf-10_demultiplex_R1.fastq ../qc_quantify-all/fastq/TargetSeq-cas9-RUX-25_RX-cpf-10_demultiplex_R1.fastq
+        cp ../TargetSeq-cas9-RUX-25/demultiplex.fastq/RX-cpf-10_demultiplex_R2.fastq ../qc_quantify-all/fastq/TargetSeq-cas9-RUX-25_RX-cpf-10_demultiplex_R2.fastq
+        
+
+[Sun Jan  3 13:48:48 2021]
+rule cp:
+    input: ../TargetSeq-cpf1-RUX-21/demultiplex.fastq/RX-cpf-8_demultiplex_R1.fastq, ../TargetSeq-cpf1-RUX-21/demultiplex.fastq/RX-cpf-8_demultiplex_R2.fastq
+    output: ../qc_quantify-all/fastq/TargetSeq-cpf1-RUX-21_RX-cpf-8_demultiplex_R1.fastq, ../qc_quantify-all/fastq/TargetSeq-cpf1-RUX-21_RX-cpf-8_demultiplex_R2.fastq
+    jobid: 100
+    reason: Missing output files: ../qc_quantify-all/fastq/TargetSeq-cpf1-RUX-21_RX-cpf-8_demultiplex_R1.fastq, ../qc_quantify-all/fastq/TargetSeq-cpf1-RUX-21_RX-cpf-8_demultiplex_R2.fastq
+    wildcards: lib=cpf1-RUX-21, region=RX-cpf-8
+
+
+        cp ../TargetSeq-cpf1-RUX-21/demultiplex.fastq/RX-cpf-8_demultiplex_R1.fastq ../qc_quantify-all/fastq/TargetSeq-cpf1-RUX-21_RX-cpf-8_demultiplex_R1.fastq
+        cp ../TargetSeq-cpf1-RUX-21/demultiplex.fastq/RX-cpf-8_demultiplex_R2.fastq ../qc_quantify-all/fastq/TargetSeq-cpf1-RUX-21_RX-cpf-8_demultiplex_R2.fastq
+        
+
+[Sun Jan  3 13:48:48 2021]
+rule cp:
+    input: ../TargetSeq-cpf1-RUX-21/demultiplex.fastq/RX-Dig5_demultiplex_R1.fastq, ../TargetSeq-cpf1-RUX-21/demultiplex.fastq/RX-Dig5_demultiplex_R2.fastq
+    output: ../qc_quantify-all/fastq/TargetSeq-cpf1-RUX-21_RX-Dig5_demultiplex_R1.fastq, ../qc_quantify-all/fastq/TargetSeq-cpf1-RUX-21_RX-Dig5_demultiplex_R2.fastq
+    jobid: 62
+    reason: Missing output files: ../qc_quantify-all/fastq/TargetSeq-cpf1-RUX-21_RX-Dig5_demultiplex_R1.fastq, ../qc_quantify-all/fastq/TargetSeq-cpf1-RUX-21_RX-Dig5_demultiplex_R2.fastq
+    wildcards: lib=cpf1-RUX-21, region=RX-Dig5
+
+
+        cp ../TargetSeq-cpf1-RUX-21/demultiplex.fastq/RX-Dig5_demultiplex_R1.fastq ../qc_quantify-all/fastq/TargetSeq-cpf1-RUX-21_RX-Dig5_demultiplex_R1.fastq
+        cp ../TargetSeq-cpf1-RUX-21/demultiplex.fastq/RX-Dig5_demultiplex_R2.fastq ../qc_quantify-all/fastq/TargetSeq-cpf1-RUX-21_RX-Dig5_demultiplex_R2.fastq
+        
+
+[Sun Jan  3 13:48:48 2021]
+rule cp:
+    input: ../TargetSeq-cpf1-RUX-21/demultiplex.fastq/RX-cas-2_demultiplex_R1.fastq, ../TargetSeq-cpf1-RUX-21/demultiplex.fastq/RX-cas-2_demultiplex_R2.fastq
+    output: ../qc_quantify-all/fastq/TargetSeq-cpf1-RUX-21_RX-cas-2_demultiplex_R1.fastq, ../qc_quantify-all/fastq/TargetSeq-cpf1-RUX-21_RX-cas-2_demultiplex_R2.fastq
+    jobid: 70
+    reason: Missing output files: ../qc_quantify-all/fastq/TargetSeq-cpf1-RUX-21_RX-cas-2_demultiplex_R2.fastq, ../qc_quantify-all/fastq/TargetSeq-cpf1-RUX-21_RX-cas-2_demultiplex_R1.fastq
+    wildcards: lib=cpf1-RUX-21, region=RX-cas-2
+
+
+        cp ../TargetSeq-cpf1-RUX-21/demultiplex.fastq/RX-cas-2_demultiplex_R1.fastq ../qc_quantify-all/fastq/TargetSeq-cpf1-RUX-21_RX-cas-2_demultiplex_R1.fastq
+        cp ../TargetSeq-cpf1-RUX-21/demultiplex.fastq/RX-cas-2_demultiplex_R2.fastq ../qc_quantify-all/fastq/TargetSeq-cpf1-RUX-21_RX-cas-2_demultiplex_R2.fastq
+        
+
+[Sun Jan  3 13:48:48 2021]
+rule cp:
+    input: ../TargetSeq-cpf1-RUX-21/demultiplex.fastq/RX-cas-6_demultiplex_R1.fastq, ../TargetSeq-cpf1-RUX-21/demultiplex.fastq/RX-cas-6_demultiplex_R2.fastq
+    output: ../qc_quantify-all/fastq/TargetSeq-cpf1-RUX-21_RX-cas-6_demultiplex_R1.fastq, ../qc_quantify-all/fastq/TargetSeq-cpf1-RUX-21_RX-cas-6_demultiplex_R2.fastq
+    jobid: 78
+    reason: Missing output files: ../qc_quantify-all/fastq/TargetSeq-cpf1-RUX-21_RX-cas-6_demultiplex_R1.fastq, ../qc_quantify-all/fastq/TargetSeq-cpf1-RUX-21_RX-cas-6_demultiplex_R2.fastq
+    wildcards: lib=cpf1-RUX-21, region=RX-cas-6
+
+
+        cp ../TargetSeq-cpf1-RUX-21/demultiplex.fastq/RX-cas-6_demultiplex_R1.fastq ../qc_quantify-all/fastq/TargetSeq-cpf1-RUX-21_RX-cas-6_demultiplex_R1.fastq
+        cp ../TargetSeq-cpf1-RUX-21/demultiplex.fastq/RX-cas-6_demultiplex_R2.fastq ../qc_quantify-all/fastq/TargetSeq-cpf1-RUX-21_RX-cas-6_demultiplex_R2.fastq
+        
+
+[Sun Jan  3 13:48:48 2021]
+rule cp:
+    input: ../TargetSeq-cpf1-RUX-21/demultiplex.fastq/RX-cpf-11_demultiplex_R1.fastq, ../TargetSeq-cpf1-RUX-21/demultiplex.fastq/RX-cpf-11_demultiplex_R2.fastq
+    output: ../qc_quantify-all/fastq/TargetSeq-cpf1-RUX-21_RX-cpf-11_demultiplex_R1.fastq, ../qc_quantify-all/fastq/TargetSeq-cpf1-RUX-21_RX-cpf-11_demultiplex_R2.fastq
+    jobid: 86
+    reason: Missing output files: ../qc_quantify-all/fastq/TargetSeq-cpf1-RUX-21_RX-cpf-11_demultiplex_R1.fastq, ../qc_quantify-all/fastq/TargetSeq-cpf1-RUX-21_RX-cpf-11_demultiplex_R2.fastq
+    wildcards: lib=cpf1-RUX-21, region=RX-cpf-11
+
+
+        cp ../TargetSeq-cpf1-RUX-21/demultiplex.fastq/RX-cpf-11_demultiplex_R1.fastq ../qc_quantify-all/fastq/TargetSeq-cpf1-RUX-21_RX-cpf-11_demultiplex_R1.fastq
+        cp ../TargetSeq-cpf1-RUX-21/demultiplex.fastq/RX-cpf-11_demultiplex_R2.fastq ../qc_quantify-all/fastq/TargetSeq-cpf1-RUX-21_RX-cpf-11_demultiplex_R2.fastq
+        
+
+[Sun Jan  3 13:48:48 2021]
+rule cp:
+    input: ../TargetSeq-cas9-RUX-25/demultiplex.fastq/RX-cas-2_demultiplex_R1.fastq, ../TargetSeq-cas9-RUX-25/demultiplex.fastq/RX-cas-2_demultiplex_R2.fastq
+    output: ../qc_quantify-all/fastq/TargetSeq-cas9-RUX-25_RX-cas-2_demultiplex_R1.fastq, ../qc_quantify-all/fastq/TargetSeq-cas9-RUX-25_RX-cas-2_demultiplex_R2.fastq
+    jobid: 18
+    reason: Missing output files: ../qc_quantify-all/fastq/TargetSeq-cas9-RUX-25_RX-cas-2_demultiplex_R1.fastq, ../qc_quantify-all/fastq/TargetSeq-cas9-RUX-25_RX-cas-2_demultiplex_R2.fastq
+    wildcards: lib=cas9-RUX-25, region=RX-cas-2
+
+
+        cp ../TargetSeq-cas9-RUX-25/demultiplex.fastq/RX-cas-2_demultiplex_R1.fastq ../qc_quantify-all/fastq/TargetSeq-cas9-RUX-25_RX-cas-2_demultiplex_R1.fastq
+        cp ../TargetSeq-cas9-RUX-25/demultiplex.fastq/RX-cas-2_demultiplex_R2.fastq ../qc_quantify-all/fastq/TargetSeq-cas9-RUX-25_RX-cas-2_demultiplex_R2.fastq
+        
+
+[Sun Jan  3 13:48:48 2021]
+rule cp:
+    input: ../TargetSeq-cas9-RUX-25/demultiplex.fastq/RX-cpf-8_demultiplex_R1.fastq, ../TargetSeq-cas9-RUX-25/demultiplex.fastq/RX-cpf-8_demultiplex_R2.fastq
+    output: ../qc_quantify-all/fastq/TargetSeq-cas9-RUX-25_RX-cpf-8_demultiplex_R1.fastq, ../qc_quantify-all/fastq/TargetSeq-cas9-RUX-25_RX-cpf-8_demultiplex_R2.fastq
+    jobid: 48
+    reason: Missing output files: ../qc_quantify-all/fastq/TargetSeq-cas9-RUX-25_RX-cpf-8_demultiplex_R1.fastq, ../qc_quantify-all/fastq/TargetSeq-cas9-RUX-25_RX-cpf-8_demultiplex_R2.fastq
+    wildcards: lib=cas9-RUX-25, region=RX-cpf-8
+
+
+        cp ../TargetSeq-cas9-RUX-25/demultiplex.fastq/RX-cpf-8_demultiplex_R1.fastq ../qc_quantify-all/fastq/TargetSeq-cas9-RUX-25_RX-cpf-8_demultiplex_R1.fastq
+        cp ../TargetSeq-cas9-RUX-25/demultiplex.fastq/RX-cpf-8_demultiplex_R2.fastq ../qc_quantify-all/fastq/TargetSeq-cas9-RUX-25_RX-cpf-8_demultiplex_R2.fastq
+        
+
+[Sun Jan  3 13:48:48 2021]
+rule cp:
+    input: ../TargetSeq-cas9-RUX-25/demultiplex.fastq/RX-cas-6_demultiplex_R1.fastq, ../TargetSeq-cas9-RUX-25/demultiplex.fastq/RX-cas-6_demultiplex_R2.fastq
+    output: ../qc_quantify-all/fastq/TargetSeq-cas9-RUX-25_RX-cas-6_demultiplex_R1.fastq, ../qc_quantify-all/fastq/TargetSeq-cas9-RUX-25_RX-cas-6_demultiplex_R2.fastq
+    jobid: 26
+    reason: Missing output files: ../qc_quantify-all/fastq/TargetSeq-cas9-RUX-25_RX-cas-6_demultiplex_R2.fastq, ../qc_quantify-all/fastq/TargetSeq-cas9-RUX-25_RX-cas-6_demultiplex_R1.fastq
+    wildcards: lib=cas9-RUX-25, region=RX-cas-6
+
+
+        cp ../TargetSeq-cas9-RUX-25/demultiplex.fastq/RX-cas-6_demultiplex_R1.fastq ../qc_quantify-all/fastq/TargetSeq-cas9-RUX-25_RX-cas-6_demultiplex_R1.fastq
+        cp ../TargetSeq-cas9-RUX-25/demultiplex.fastq/RX-cas-6_demultiplex_R2.fastq ../qc_quantify-all/fastq/TargetSeq-cas9-RUX-25_RX-cas-6_demultiplex_R2.fastq
+        
+
+[Sun Jan  3 13:48:48 2021]
+rule cp:
+    input: ../TargetSeq-cpf1-RUX-21/demultiplex.fastq/RX-Dig2_demultiplex_R1.fastq, ../TargetSeq-cpf1-RUX-21/demultiplex.fastq/RX-Dig2_demultiplex_R2.fastq
+    output: ../qc_quantify-all/fastq/TargetSeq-cpf1-RUX-21_RX-Dig2_demultiplex_R1.fastq, ../qc_quantify-all/fastq/TargetSeq-cpf1-RUX-21_RX-Dig2_demultiplex_R2.fastq
+    jobid: 56
+    reason: Missing output files: ../qc_quantify-all/fastq/TargetSeq-cpf1-RUX-21_RX-Dig2_demultiplex_R2.fastq, ../qc_quantify-all/fastq/TargetSeq-cpf1-RUX-21_RX-Dig2_demultiplex_R1.fastq
+    wildcards: lib=cpf1-RUX-21, region=RX-Dig2
+
+
+        cp ../TargetSeq-cpf1-RUX-21/demultiplex.fastq/RX-Dig2_demultiplex_R1.fastq ../qc_quantify-all/fastq/TargetSeq-cpf1-RUX-21_RX-Dig2_demultiplex_R1.fastq
+        cp ../TargetSeq-cpf1-RUX-21/demultiplex.fastq/RX-Dig2_demultiplex_R2.fastq ../qc_quantify-all/fastq/TargetSeq-cpf1-RUX-21_RX-Dig2_demultiplex_R2.fastq
+        
+
+[Sun Jan  3 13:48:48 2021]
+rule cp:
+    input: ../TargetSeq-cpf1-RUX-21/demultiplex.fastq/RX-cpf-9_demultiplex_R1.fastq, ../TargetSeq-cpf1-RUX-21/demultiplex.fastq/RX-cpf-9_demultiplex_R2.fastq
+    output: ../qc_quantify-all/fastq/TargetSeq-cpf1-RUX-21_RX-cpf-9_demultiplex_R1.fastq, ../qc_quantify-all/fastq/TargetSeq-cpf1-RUX-21_RX-cpf-9_demultiplex_R2.fastq
+    jobid: 102
+    reason: Missing output files: ../qc_quantify-all/fastq/TargetSeq-cpf1-RUX-21_RX-cpf-9_demultiplex_R1.fastq, ../qc_quantify-all/fastq/TargetSeq-cpf1-RUX-21_RX-cpf-9_demultiplex_R2.fastq
+    wildcards: lib=cpf1-RUX-21, region=RX-cpf-9
+
+
+        cp ../TargetSeq-cpf1-RUX-21/demultiplex.fastq/RX-cpf-9_demultiplex_R1.fastq ../qc_quantify-all/fastq/TargetSeq-cpf1-RUX-21_RX-cpf-9_demultiplex_R1.fastq
+        cp ../TargetSeq-cpf1-RUX-21/demultiplex.fastq/RX-cpf-9_demultiplex_R2.fastq ../qc_quantify-all/fastq/TargetSeq-cpf1-RUX-21_RX-cpf-9_demultiplex_R2.fastq
+        
+
+[Sun Jan  3 13:48:48 2021]
+rule cp:
+    input: ../TargetSeq-cas9-RUX-25/demultiplex.fastq/RX-Dig2_demultiplex_R1.fastq, ../TargetSeq-cas9-RUX-25/demultiplex.fastq/RX-Dig2_demultiplex_R2.fastq
+    output: ../qc_quantify-all/fastq/TargetSeq-cas9-RUX-25_RX-Dig2_demultiplex_R1.fastq, ../qc_quantify-all/fastq/TargetSeq-cas9-RUX-25_RX-Dig2_demultiplex_R2.fastq
+    jobid: 4
+    reason: Missing output files: ../qc_quantify-all/fastq/TargetSeq-cas9-RUX-25_RX-Dig2_demultiplex_R1.fastq, ../qc_quantify-all/fastq/TargetSeq-cas9-RUX-25_RX-Dig2_demultiplex_R2.fastq
+    wildcards: lib=cas9-RUX-25, region=RX-Dig2
+
+
+        cp ../TargetSeq-cas9-RUX-25/demultiplex.fastq/RX-Dig2_demultiplex_R1.fastq ../qc_quantify-all/fastq/TargetSeq-cas9-RUX-25_RX-Dig2_demultiplex_R1.fastq
+        cp ../TargetSeq-cas9-RUX-25/demultiplex.fastq/RX-Dig2_demultiplex_R2.fastq ../qc_quantify-all/fastq/TargetSeq-cas9-RUX-25_RX-Dig2_demultiplex_R2.fastq
+        
+
+[Sun Jan  3 13:48:48 2021]
+rule cp:
+    input: ../TargetSeq-cas9-RUX-25/demultiplex.fastq/RX-cpf-11_demultiplex_R1.fastq, ../TargetSeq-cas9-RUX-25/demultiplex.fastq/RX-cpf-11_demultiplex_R2.fastq
+    output: ../qc_quantify-all/fastq/TargetSeq-cas9-RUX-25_RX-cpf-11_demultiplex_R1.fastq, ../qc_quantify-all/fastq/TargetSeq-cas9-RUX-25_RX-cpf-11_demultiplex_R2.fastq
+    jobid: 34
+    reason: Missing output files: ../qc_quantify-all/fastq/TargetSeq-cas9-RUX-25_RX-cpf-11_demultiplex_R2.fastq, ../qc_quantify-all/fastq/TargetSeq-cas9-RUX-25_RX-cpf-11_demultiplex_R1.fastq
+    wildcards: lib=cas9-RUX-25, region=RX-cpf-11
+
+
+        cp ../TargetSeq-cas9-RUX-25/demultiplex.fastq/RX-cpf-11_demultiplex_R1.fastq ../qc_quantify-all/fastq/TargetSeq-cas9-RUX-25_RX-cpf-11_demultiplex_R1.fastq
+        cp ../TargetSeq-cas9-RUX-25/demultiplex.fastq/RX-cpf-11_demultiplex_R2.fastq ../qc_quantify-all/fastq/TargetSeq-cas9-RUX-25_RX-cpf-11_demultiplex_R2.fastq
+        
+
+[Sun Jan  3 13:48:48 2021]
+rule cp:
+    input: ../TargetSeq-cas9-RUX-25/demultiplex.fastq/RX-Dig6_demultiplex_R1.fastq, ../TargetSeq-cas9-RUX-25/demultiplex.fastq/RX-Dig6_demultiplex_R2.fastq
+    output: ../qc_quantify-all/fastq/TargetSeq-cas9-RUX-25_RX-Dig6_demultiplex_R1.fastq, ../qc_quantify-all/fastq/TargetSeq-cas9-RUX-25_RX-Dig6_demultiplex_R2.fastq
+    jobid: 12
+    reason: Missing output files: ../qc_quantify-all/fastq/TargetSeq-cas9-RUX-25_RX-Dig6_demultiplex_R2.fastq, ../qc_quantify-all/fastq/TargetSeq-cas9-RUX-25_RX-Dig6_demultiplex_R1.fastq
+    wildcards: lib=cas9-RUX-25, region=RX-Dig6
+
+
+        cp ../TargetSeq-cas9-RUX-25/demultiplex.fastq/RX-Dig6_demultiplex_R1.fastq ../qc_quantify-all/fastq/TargetSeq-cas9-RUX-25_RX-Dig6_demultiplex_R1.fastq
+        cp ../TargetSeq-cas9-RUX-25/demultiplex.fastq/RX-Dig6_demultiplex_R2.fastq ../qc_quantify-all/fastq/TargetSeq-cas9-RUX-25_RX-Dig6_demultiplex_R2.fastq
+        
+
+[Sun Jan  3 13:48:48 2021]
+rule cp:
+    input: ../TargetSeq-cpf1-RUX-21/demultiplex.fastq/RX-cpf-5_demultiplex_R1.fastq, ../TargetSeq-cpf1-RUX-21/demultiplex.fastq/RX-cpf-5_demultiplex_R2.fastq
+    output: ../qc_quantify-all/fastq/TargetSeq-cpf1-RUX-21_RX-cpf-5_demultiplex_R1.fastq, ../qc_quantify-all/fastq/TargetSeq-cpf1-RUX-21_RX-cpf-5_demultiplex_R2.fastq
+    jobid: 94
+    reason: Missing output files: ../qc_quantify-all/fastq/TargetSeq-cpf1-RUX-21_RX-cpf-5_demultiplex_R2.fastq, ../qc_quantify-all/fastq/TargetSeq-cpf1-RUX-21_RX-cpf-5_demultiplex_R1.fastq
+    wildcards: lib=cpf1-RUX-21, region=RX-cpf-5
+
+
+        cp ../TargetSeq-cpf1-RUX-21/demultiplex.fastq/RX-cpf-5_demultiplex_R1.fastq ../qc_quantify-all/fastq/TargetSeq-cpf1-RUX-21_RX-cpf-5_demultiplex_R1.fastq
+        cp ../TargetSeq-cpf1-RUX-21/demultiplex.fastq/RX-cpf-5_demultiplex_R2.fastq ../qc_quantify-all/fastq/TargetSeq-cpf1-RUX-21_RX-cpf-5_demultiplex_R2.fastq
+        
+
+[Sun Jan  3 13:48:48 2021]
+rule cp:
+    input: ../TargetSeq-cas9-RUX-25/demultiplex.fastq/RX-cpf-5_demultiplex_R1.fastq, ../TargetSeq-cas9-RUX-25/demultiplex.fastq/RX-cpf-5_demultiplex_R2.fastq
+    output: ../qc_quantify-all/fastq/TargetSeq-cas9-RUX-25_RX-cpf-5_demultiplex_R1.fastq, ../qc_quantify-all/fastq/TargetSeq-cas9-RUX-25_RX-cpf-5_demultiplex_R2.fastq
+    jobid: 42
+    reason: Missing output files: ../qc_quantify-all/fastq/TargetSeq-cas9-RUX-25_RX-cpf-5_demultiplex_R2.fastq, ../qc_quantify-all/fastq/TargetSeq-cas9-RUX-25_RX-cpf-5_demultiplex_R1.fastq
+    wildcards: lib=cas9-RUX-25, region=RX-cpf-5
+
+
+        cp ../TargetSeq-cas9-RUX-25/demultiplex.fastq/RX-cpf-5_demultiplex_R1.fastq ../qc_quantify-all/fastq/TargetSeq-cas9-RUX-25_RX-cpf-5_demultiplex_R1.fastq
+        cp ../TargetSeq-cas9-RUX-25/demultiplex.fastq/RX-cpf-5_demultiplex_R2.fastq ../qc_quantify-all/fastq/TargetSeq-cas9-RUX-25_RX-cpf-5_demultiplex_R2.fastq
+        
+
+[Sun Jan  3 13:48:48 2021]
+rule cp:
+    input: ../TargetSeq-cpf1-RUX-21/demultiplex.fastq/RX-Dig6_demultiplex_R1.fastq, ../TargetSeq-cpf1-RUX-21/demultiplex.fastq/RX-Dig6_demultiplex_R2.fastq
+    output: ../qc_quantify-all/fastq/TargetSeq-cpf1-RUX-21_RX-Dig6_demultiplex_R1.fastq, ../qc_quantify-all/fastq/TargetSeq-cpf1-RUX-21_RX-Dig6_demultiplex_R2.fastq
+    jobid: 64
+    reason: Missing output files: ../qc_quantify-all/fastq/TargetSeq-cpf1-RUX-21_RX-Dig6_demultiplex_R1.fastq, ../qc_quantify-all/fastq/TargetSeq-cpf1-RUX-21_RX-Dig6_demultiplex_R2.fastq
+    wildcards: lib=cpf1-RUX-21, region=RX-Dig6
+
+
+        cp ../TargetSeq-cpf1-RUX-21/demultiplex.fastq/RX-Dig6_demultiplex_R1.fastq ../qc_quantify-all/fastq/TargetSeq-cpf1-RUX-21_RX-Dig6_demultiplex_R1.fastq
+        cp ../TargetSeq-cpf1-RUX-21/demultiplex.fastq/RX-Dig6_demultiplex_R2.fastq ../qc_quantify-all/fastq/TargetSeq-cpf1-RUX-21_RX-Dig6_demultiplex_R2.fastq
+        
+
+[Sun Jan  3 13:48:48 2021]
+rule cp:
+    input: ../TargetSeq-cpf1-RUX-21/demultiplex.fastq/RX-cas-3_demultiplex_R1.fastq, ../TargetSeq-cpf1-RUX-21/demultiplex.fastq/RX-cas-3_demultiplex_R2.fastq
+    output: ../qc_quantify-all/fastq/TargetSeq-cpf1-RUX-21_RX-cas-3_demultiplex_R1.fastq, ../qc_quantify-all/fastq/TargetSeq-cpf1-RUX-21_RX-cas-3_demultiplex_R2.fastq
+    jobid: 72
+    reason: Missing output files: ../qc_quantify-all/fastq/TargetSeq-cpf1-RUX-21_RX-cas-3_demultiplex_R2.fastq, ../qc_quantify-all/fastq/TargetSeq-cpf1-RUX-21_RX-cas-3_demultiplex_R1.fastq
+    wildcards: lib=cpf1-RUX-21, region=RX-cas-3
+
+
+        cp ../TargetSeq-cpf1-RUX-21/demultiplex.fastq/RX-cas-3_demultiplex_R1.fastq ../qc_quantify-all/fastq/TargetSeq-cpf1-RUX-21_RX-cas-3_demultiplex_R1.fastq
+        cp ../TargetSeq-cpf1-RUX-21/demultiplex.fastq/RX-cas-3_demultiplex_R2.fastq ../qc_quantify-all/fastq/TargetSeq-cpf1-RUX-21_RX-cas-3_demultiplex_R2.fastq
+        
+
+[Sun Jan  3 13:48:48 2021]
+rule cp:
+    input: ../TargetSeq-cpf1-RUX-21/demultiplex.fastq/RX-cas-7_demultiplex_R1.fastq, ../TargetSeq-cpf1-RUX-21/demultiplex.fastq/RX-cas-7_demultiplex_R2.fastq
+    output: ../qc_quantify-all/fastq/TargetSeq-cpf1-RUX-21_RX-cas-7_demultiplex_R1.fastq, ../qc_quantify-all/fastq/TargetSeq-cpf1-RUX-21_RX-cas-7_demultiplex_R2.fastq
+    jobid: 80
+    reason: Missing output files: ../qc_quantify-all/fastq/TargetSeq-cpf1-RUX-21_RX-cas-7_demultiplex_R2.fastq, ../qc_quantify-all/fastq/TargetSeq-cpf1-RUX-21_RX-cas-7_demultiplex_R1.fastq
+    wildcards: lib=cpf1-RUX-21, region=RX-cas-7
+
+
+        cp ../TargetSeq-cpf1-RUX-21/demultiplex.fastq/RX-cas-7_demultiplex_R1.fastq ../qc_quantify-all/fastq/TargetSeq-cpf1-RUX-21_RX-cas-7_demultiplex_R1.fastq
+        cp ../TargetSeq-cpf1-RUX-21/demultiplex.fastq/RX-cas-7_demultiplex_R2.fastq ../qc_quantify-all/fastq/TargetSeq-cpf1-RUX-21_RX-cas-7_demultiplex_R2.fastq
+        
+
+[Sun Jan  3 13:48:48 2021]
+rule cp:
+    input: ../TargetSeq-cpf1-RUX-21/demultiplex.fastq/RX-cpf-2_demultiplex_R1.fastq, ../TargetSeq-cpf1-RUX-21/demultiplex.fastq/RX-cpf-2_demultiplex_R2.fastq
+    output: ../qc_quantify-all/fastq/TargetSeq-cpf1-RUX-21_RX-cpf-2_demultiplex_R1.fastq, ../qc_quantify-all/fastq/TargetSeq-cpf1-RUX-21_RX-cpf-2_demultiplex_R2.fastq
+    jobid: 88
+    reason: Missing output files: ../qc_quantify-all/fastq/TargetSeq-cpf1-RUX-21_RX-cpf-2_demultiplex_R1.fastq, ../qc_quantify-all/fastq/TargetSeq-cpf1-RUX-21_RX-cpf-2_demultiplex_R2.fastq
+    wildcards: lib=cpf1-RUX-21, region=RX-cpf-2
+
+
+        cp ../TargetSeq-cpf1-RUX-21/demultiplex.fastq/RX-cpf-2_demultiplex_R1.fastq ../qc_quantify-all/fastq/TargetSeq-cpf1-RUX-21_RX-cpf-2_demultiplex_R1.fastq
+        cp ../TargetSeq-cpf1-RUX-21/demultiplex.fastq/RX-cpf-2_demultiplex_R2.fastq ../qc_quantify-all/fastq/TargetSeq-cpf1-RUX-21_RX-cpf-2_demultiplex_R2.fastq
+        
+
+[Sun Jan  3 13:48:48 2021]
+rule cp:
+    input: ../TargetSeq-cas9-RUX-25/demultiplex.fastq/RX-cas-3_demultiplex_R1.fastq, ../TargetSeq-cas9-RUX-25/demultiplex.fastq/RX-cas-3_demultiplex_R2.fastq
+    output: ../qc_quantify-all/fastq/TargetSeq-cas9-RUX-25_RX-cas-3_demultiplex_R1.fastq, ../qc_quantify-all/fastq/TargetSeq-cas9-RUX-25_RX-cas-3_demultiplex_R2.fastq
+    jobid: 20
+    reason: Missing output files: ../qc_quantify-all/fastq/TargetSeq-cas9-RUX-25_RX-cas-3_demultiplex_R2.fastq, ../qc_quantify-all/fastq/TargetSeq-cas9-RUX-25_RX-cas-3_demultiplex_R1.fastq
+    wildcards: lib=cas9-RUX-25, region=RX-cas-3
+
+
+        cp ../TargetSeq-cas9-RUX-25/demultiplex.fastq/RX-cas-3_demultiplex_R1.fastq ../qc_quantify-all/fastq/TargetSeq-cas9-RUX-25_RX-cas-3_demultiplex_R1.fastq
+        cp ../TargetSeq-cas9-RUX-25/demultiplex.fastq/RX-cas-3_demultiplex_R2.fastq ../qc_quantify-all/fastq/TargetSeq-cas9-RUX-25_RX-cas-3_demultiplex_R2.fastq
+        
+
+[Sun Jan  3 13:48:48 2021]
+rule cp:
+    input: ../TargetSeq-cas9-RUX-25/demultiplex.fastq/RX-cpf-9_demultiplex_R1.fastq, ../TargetSeq-cas9-RUX-25/demultiplex.fastq/RX-cpf-9_demultiplex_R2.fastq
+    output: ../qc_quantify-all/fastq/TargetSeq-cas9-RUX-25_RX-cpf-9_demultiplex_R1.fastq, ../qc_quantify-all/fastq/TargetSeq-cas9-RUX-25_RX-cpf-9_demultiplex_R2.fastq
+    jobid: 50
+    reason: Missing output files: ../qc_quantify-all/fastq/TargetSeq-cas9-RUX-25_RX-cpf-9_demultiplex_R1.fastq, ../qc_quantify-all/fastq/TargetSeq-cas9-RUX-25_RX-cpf-9_demultiplex_R2.fastq
+    wildcards: lib=cas9-RUX-25, region=RX-cpf-9
+
+
+        cp ../TargetSeq-cas9-RUX-25/demultiplex.fastq/RX-cpf-9_demultiplex_R1.fastq ../qc_quantify-all/fastq/TargetSeq-cas9-RUX-25_RX-cpf-9_demultiplex_R1.fastq
+        cp ../TargetSeq-cas9-RUX-25/demultiplex.fastq/RX-cpf-9_demultiplex_R2.fastq ../qc_quantify-all/fastq/TargetSeq-cas9-RUX-25_RX-cpf-9_demultiplex_R2.fastq
+        
+
+[Sun Jan  3 13:48:48 2021]
+rule cp:
+    input: ../TargetSeq-cas9-RUX-25/demultiplex.fastq/RX-cas-7_demultiplex_R1.fastq, ../TargetSeq-cas9-RUX-25/demultiplex.fastq/RX-cas-7_demultiplex_R2.fastq
+    output: ../qc_quantify-all/fastq/TargetSeq-cas9-RUX-25_RX-cas-7_demultiplex_R1.fastq, ../qc_quantify-all/fastq/TargetSeq-cas9-RUX-25_RX-cas-7_demultiplex_R2.fastq
+    jobid: 28
+    reason: Missing output files: ../qc_quantify-all/fastq/TargetSeq-cas9-RUX-25_RX-cas-7_demultiplex_R1.fastq, ../qc_quantify-all/fastq/TargetSeq-cas9-RUX-25_RX-cas-7_demultiplex_R2.fastq
+    wildcards: lib=cas9-RUX-25, region=RX-cas-7
+
+
+        cp ../TargetSeq-cas9-RUX-25/demultiplex.fastq/RX-cas-7_demultiplex_R1.fastq ../qc_quantify-all/fastq/TargetSeq-cas9-RUX-25_RX-cas-7_demultiplex_R1.fastq
+        cp ../TargetSeq-cas9-RUX-25/demultiplex.fastq/RX-cas-7_demultiplex_R2.fastq ../qc_quantify-all/fastq/TargetSeq-cas9-RUX-25_RX-cas-7_demultiplex_R2.fastq
+        
+
+[Sun Jan  3 13:48:48 2021]
+rule cp:
+    input: ../TargetSeq-cpf1-RUX-21/demultiplex.fastq/RX-Dig3_demultiplex_R1.fastq, ../TargetSeq-cpf1-RUX-21/demultiplex.fastq/RX-Dig3_demultiplex_R2.fastq
+    output: ../qc_quantify-all/fastq/TargetSeq-cpf1-RUX-21_RX-Dig3_demultiplex_R1.fastq, ../qc_quantify-all/fastq/TargetSeq-cpf1-RUX-21_RX-Dig3_demultiplex_R2.fastq
+    jobid: 58
+    reason: Missing output files: ../qc_quantify-all/fastq/TargetSeq-cpf1-RUX-21_RX-Dig3_demultiplex_R2.fastq, ../qc_quantify-all/fastq/TargetSeq-cpf1-RUX-21_RX-Dig3_demultiplex_R1.fastq
+    wildcards: lib=cpf1-RUX-21, region=RX-Dig3
+
+
+        cp ../TargetSeq-cpf1-RUX-21/demultiplex.fastq/RX-Dig3_demultiplex_R1.fastq ../qc_quantify-all/fastq/TargetSeq-cpf1-RUX-21_RX-Dig3_demultiplex_R1.fastq
+        cp ../TargetSeq-cpf1-RUX-21/demultiplex.fastq/RX-Dig3_demultiplex_R2.fastq ../qc_quantify-all/fastq/TargetSeq-cpf1-RUX-21_RX-Dig3_demultiplex_R2.fastq
+        
+
+[Sun Jan  3 13:48:48 2021]
+rule cp:
+    input: ../TargetSeq-cas9-RUX-25/demultiplex.fastq/RX-Dig3_demultiplex_R1.fastq, ../TargetSeq-cas9-RUX-25/demultiplex.fastq/RX-Dig3_demultiplex_R2.fastq
+    output: ../qc_quantify-all/fastq/TargetSeq-cas9-RUX-25_RX-Dig3_demultiplex_R1.fastq, ../qc_quantify-all/fastq/TargetSeq-cas9-RUX-25_RX-Dig3_demultiplex_R2.fastq
+    jobid: 6
+    reason: Missing output files: ../qc_quantify-all/fastq/TargetSeq-cas9-RUX-25_RX-Dig3_demultiplex_R2.fastq, ../qc_quantify-all/fastq/TargetSeq-cas9-RUX-25_RX-Dig3_demultiplex_R1.fastq
+    wildcards: lib=cas9-RUX-25, region=RX-Dig3
+
+
+        cp ../TargetSeq-cas9-RUX-25/demultiplex.fastq/RX-Dig3_demultiplex_R1.fastq ../qc_quantify-all/fastq/TargetSeq-cas9-RUX-25_RX-Dig3_demultiplex_R1.fastq
+        cp ../TargetSeq-cas9-RUX-25/demultiplex.fastq/RX-Dig3_demultiplex_R2.fastq ../qc_quantify-all/fastq/TargetSeq-cas9-RUX-25_RX-Dig3_demultiplex_R2.fastq
+        
+
+[Sun Jan  3 13:48:48 2021]
+rule cp:
+    input: ../TargetSeq-cas9-RUX-25/demultiplex.fastq/RX-cpf-6_demultiplex_R1.fastq, ../TargetSeq-cas9-RUX-25/demultiplex.fastq/RX-cpf-6_demultiplex_R2.fastq
+    output: ../qc_quantify-all/fastq/TargetSeq-cas9-RUX-25_RX-cpf-6_demultiplex_R1.fastq, ../qc_quantify-all/fastq/TargetSeq-cas9-RUX-25_RX-cpf-6_demultiplex_R2.fastq
+    jobid: 44
+    reason: Missing output files: ../qc_quantify-all/fastq/TargetSeq-cas9-RUX-25_RX-cpf-6_demultiplex_R2.fastq, ../qc_quantify-all/fastq/TargetSeq-cas9-RUX-25_RX-cpf-6_demultiplex_R1.fastq
+    wildcards: lib=cas9-RUX-25, region=RX-cpf-6
+
+
+        cp ../TargetSeq-cas9-RUX-25/demultiplex.fastq/RX-cpf-6_demultiplex_R1.fastq ../qc_quantify-all/fastq/TargetSeq-cas9-RUX-25_RX-cpf-6_demultiplex_R1.fastq
+        cp ../TargetSeq-cas9-RUX-25/demultiplex.fastq/RX-cpf-6_demultiplex_R2.fastq ../qc_quantify-all/fastq/TargetSeq-cas9-RUX-25_RX-cpf-6_demultiplex_R2.fastq
+        
+
+[Sun Jan  3 13:48:48 2021]
+rule cp:
+    input: ../TargetSeq-cpf1-RUX-21/demultiplex.fastq/RX-on target_demultiplex_R1.fastq, ../TargetSeq-cpf1-RUX-21/demultiplex.fastq/RX-on target_demultiplex_R2.fastq
+    output: ../qc_quantify-all/fastq/TargetSeq-cpf1-RUX-21_RX-on target_demultiplex_R1.fastq, ../qc_quantify-all/fastq/TargetSeq-cpf1-RUX-21_RX-on target_demultiplex_R2.fastq
+    jobid: 104
+    reason: Missing output files: ../qc_quantify-all/fastq/TargetSeq-cpf1-RUX-21_RX-on target_demultiplex_R1.fastq, ../qc_quantify-all/fastq/TargetSeq-cpf1-RUX-21_RX-on target_demultiplex_R2.fastq
+    wildcards: lib=cpf1-RUX-21, region=RX-on target
+
+
+        cp ../TargetSeq-cpf1-RUX-21/demultiplex.fastq/RX-on target_demultiplex_R1.fastq ../qc_quantify-all/fastq/TargetSeq-cpf1-RUX-21_RX-on target_demultiplex_R1.fastq
+        cp ../TargetSeq-cpf1-RUX-21/demultiplex.fastq/RX-on target_demultiplex_R2.fastq ../qc_quantify-all/fastq/TargetSeq-cpf1-RUX-21_RX-on target_demultiplex_R2.fastq
+        
+
+[Sun Jan  3 13:48:48 2021]
+rule cp:
+    input: ../TargetSeq-cpf1-RUX-21/demultiplex.fastq/RX-Dig8_demultiplex_R1.fastq, ../TargetSeq-cpf1-RUX-21/demultiplex.fastq/RX-Dig8_demultiplex_R2.fastq
+    output: ../qc_quantify-all/fastq/TargetSeq-cpf1-RUX-21_RX-Dig8_demultiplex_R1.fastq, ../qc_quantify-all/fastq/TargetSeq-cpf1-RUX-21_RX-Dig8_demultiplex_R2.fastq
+    jobid: 66
+    reason: Missing output files: ../qc_quantify-all/fastq/TargetSeq-cpf1-RUX-21_RX-Dig8_demultiplex_R1.fastq, ../qc_quantify-all/fastq/TargetSeq-cpf1-RUX-21_RX-Dig8_demultiplex_R2.fastq
+    wildcards: lib=cpf1-RUX-21, region=RX-Dig8
+
+
+        cp ../TargetSeq-cpf1-RUX-21/demultiplex.fastq/RX-Dig8_demultiplex_R1.fastq ../qc_quantify-all/fastq/TargetSeq-cpf1-RUX-21_RX-Dig8_demultiplex_R1.fastq
+        cp ../TargetSeq-cpf1-RUX-21/demultiplex.fastq/RX-Dig8_demultiplex_R2.fastq ../qc_quantify-all/fastq/TargetSeq-cpf1-RUX-21_RX-Dig8_demultiplex_R2.fastq
+        
+
+[Sun Jan  3 13:48:48 2021]
+rule cp:
+    input: ../TargetSeq-cpf1-RUX-21/demultiplex.fastq/RX-cas-4_demultiplex_R1.fastq, ../TargetSeq-cpf1-RUX-21/demultiplex.fastq/RX-cas-4_demultiplex_R2.fastq
+    output: ../qc_quantify-all/fastq/TargetSeq-cpf1-RUX-21_RX-cas-4_demultiplex_R1.fastq, ../qc_quantify-all/fastq/TargetSeq-cpf1-RUX-21_RX-cas-4_demultiplex_R2.fastq
+    jobid: 74
+    reason: Missing output files: ../qc_quantify-all/fastq/TargetSeq-cpf1-RUX-21_RX-cas-4_demultiplex_R1.fastq, ../qc_quantify-all/fastq/TargetSeq-cpf1-RUX-21_RX-cas-4_demultiplex_R2.fastq
+    wildcards: lib=cpf1-RUX-21, region=RX-cas-4
+
+
+        cp ../TargetSeq-cpf1-RUX-21/demultiplex.fastq/RX-cas-4_demultiplex_R1.fastq ../qc_quantify-all/fastq/TargetSeq-cpf1-RUX-21_RX-cas-4_demultiplex_R1.fastq
+        cp ../TargetSeq-cpf1-RUX-21/demultiplex.fastq/RX-cas-4_demultiplex_R2.fastq ../qc_quantify-all/fastq/TargetSeq-cpf1-RUX-21_RX-cas-4_demultiplex_R2.fastq
+        
+
+[Sun Jan  3 13:48:48 2021]
+rule cp:
+    input: ../TargetSeq-cpf1-RUX-21/demultiplex.fastq/RX-cas-8_demultiplex_R1.fastq, ../TargetSeq-cpf1-RUX-21/demultiplex.fastq/RX-cas-8_demultiplex_R2.fastq
+    output: ../qc_quantify-all/fastq/TargetSeq-cpf1-RUX-21_RX-cas-8_demultiplex_R1.fastq, ../qc_quantify-all/fastq/TargetSeq-cpf1-RUX-21_RX-cas-8_demultiplex_R2.fastq
+    jobid: 82
+    reason: Missing output files: ../qc_quantify-all/fastq/TargetSeq-cpf1-RUX-21_RX-cas-8_demultiplex_R2.fastq, ../qc_quantify-all/fastq/TargetSeq-cpf1-RUX-21_RX-cas-8_demultiplex_R1.fastq
+    wildcards: lib=cpf1-RUX-21, region=RX-cas-8
+
+
+        cp ../TargetSeq-cpf1-RUX-21/demultiplex.fastq/RX-cas-8_demultiplex_R1.fastq ../qc_quantify-all/fastq/TargetSeq-cpf1-RUX-21_RX-cas-8_demultiplex_R1.fastq
+        cp ../TargetSeq-cpf1-RUX-21/demultiplex.fastq/RX-cas-8_demultiplex_R2.fastq ../qc_quantify-all/fastq/TargetSeq-cpf1-RUX-21_RX-cas-8_demultiplex_R2.fastq
+        
+
+[Sun Jan  3 13:48:48 2021]
+rule cp:
+    input: ../TargetSeq-cpf1-RUX-21/demultiplex.fastq/RX-cpf-3_demultiplex_R1.fastq, ../TargetSeq-cpf1-RUX-21/demultiplex.fastq/RX-cpf-3_demultiplex_R2.fastq
+    output: ../qc_quantify-all/fastq/TargetSeq-cpf1-RUX-21_RX-cpf-3_demultiplex_R1.fastq, ../qc_quantify-all/fastq/TargetSeq-cpf1-RUX-21_RX-cpf-3_demultiplex_R2.fastq
+    jobid: 90
+    reason: Missing output files: ../qc_quantify-all/fastq/TargetSeq-cpf1-RUX-21_RX-cpf-3_demultiplex_R1.fastq, ../qc_quantify-all/fastq/TargetSeq-cpf1-RUX-21_RX-cpf-3_demultiplex_R2.fastq
+    wildcards: lib=cpf1-RUX-21, region=RX-cpf-3
+
+
+        cp ../TargetSeq-cpf1-RUX-21/demultiplex.fastq/RX-cpf-3_demultiplex_R1.fastq ../qc_quantify-all/fastq/TargetSeq-cpf1-RUX-21_RX-cpf-3_demultiplex_R1.fastq
+        cp ../TargetSeq-cpf1-RUX-21/demultiplex.fastq/RX-cpf-3_demultiplex_R2.fastq ../qc_quantify-all/fastq/TargetSeq-cpf1-RUX-21_RX-cpf-3_demultiplex_R2.fastq
+        
+
+[Sun Jan  3 13:48:48 2021]
+rule cp:
+    input: ../TargetSeq-cas9-RUX-25/demultiplex.fastq/RX-cas-4_demultiplex_R1.fastq, ../TargetSeq-cas9-RUX-25/demultiplex.fastq/RX-cas-4_demultiplex_R2.fastq
+    output: ../qc_quantify-all/fastq/TargetSeq-cas9-RUX-25_RX-cas-4_demultiplex_R1.fastq, ../qc_quantify-all/fastq/TargetSeq-cas9-RUX-25_RX-cas-4_demultiplex_R2.fastq
+    jobid: 22
+    reason: Missing output files: ../qc_quantify-all/fastq/TargetSeq-cas9-RUX-25_RX-cas-4_demultiplex_R1.fastq, ../qc_quantify-all/fastq/TargetSeq-cas9-RUX-25_RX-cas-4_demultiplex_R2.fastq
+    wildcards: lib=cas9-RUX-25, region=RX-cas-4
+[Sun Jan  3 13:48:48 2021]
+
+Error in rule cp:
+
+        cp ../TargetSeq-cas9-RUX-25/demultiplex.fastq/RX-cas-4_demultiplex_R1.fastq ../qc_quantify-all/fastq/TargetSeq-cas9-RUX-25_RX-cas-4_demultiplex_R1.fastq
+        cp ../TargetSeq-cas9-RUX-25/demultiplex.fastq/RX-cas-4_demultiplex_R2.fastq ../qc_quantify-all/fastq/TargetSeq-cas9-RUX-25_RX-cas-4_demultiplex_R2.fastq
+        
+    jobid: 104
+    output: ../qc_quantify-all/fastq/TargetSeq-cpf1-RUX-21_RX-on target_demultiplex_R1.fastq, ../qc_quantify-all/fastq/TargetSeq-cpf1-RUX-21_RX-on target_demultiplex_R2.fastq
+    shell:
+        
+        cp ../TargetSeq-cpf1-RUX-21/demultiplex.fastq/RX-on target_demultiplex_R1.fastq ../qc_quantify-all/fastq/TargetSeq-cpf1-RUX-21_RX-on target_demultiplex_R1.fastq
+        cp ../TargetSeq-cpf1-RUX-21/demultiplex.fastq/RX-on target_demultiplex_R2.fastq ../qc_quantify-all/fastq/TargetSeq-cpf1-RUX-21_RX-on target_demultiplex_R2.fastq
+        
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+
+[Sun Jan  3 13:48:48 2021]
+rule cp:
+    input: ../TargetSeq-cas9-RUX-25/demultiplex.fastq/RX-on target_demultiplex_R1.fastq, ../TargetSeq-cas9-RUX-25/demultiplex.fastq/RX-on target_demultiplex_R2.fastq
+    output: ../qc_quantify-all/fastq/TargetSeq-cas9-RUX-25_RX-on target_demultiplex_R1.fastq, ../qc_quantify-all/fastq/TargetSeq-cas9-RUX-25_RX-on target_demultiplex_R2.fastq
+    jobid: 52
+    reason: Missing output files: ../qc_quantify-all/fastq/TargetSeq-cas9-RUX-25_RX-on target_demultiplex_R2.fastq, ../qc_quantify-all/fastq/TargetSeq-cas9-RUX-25_RX-on target_demultiplex_R1.fastq
+    wildcards: lib=cas9-RUX-25, region=RX-on target
+
+
+        cp ../TargetSeq-cas9-RUX-25/demultiplex.fastq/RX-on target_demultiplex_R1.fastq ../qc_quantify-all/fastq/TargetSeq-cas9-RUX-25_RX-on target_demultiplex_R1.fastq
+        cp ../TargetSeq-cas9-RUX-25/demultiplex.fastq/RX-on target_demultiplex_R2.fastq ../qc_quantify-all/fastq/TargetSeq-cas9-RUX-25_RX-on target_demultiplex_R2.fastq
+        
+
+[Sun Jan  3 13:48:48 2021]
+rule cp:
+    input: ../TargetSeq-cas9-RUX-25/demultiplex.fastq/RX-cas-8_demultiplex_R1.fastq, ../TargetSeq-cas9-RUX-25/demultiplex.fastq/RX-cas-8_demultiplex_R2.fastq
+    output: ../qc_quantify-all/fastq/TargetSeq-cas9-RUX-25_RX-cas-8_demultiplex_R1.fastq, ../qc_quantify-all/fastq/TargetSeq-cas9-RUX-25_RX-cas-8_demultiplex_R2.fastq
+    jobid: 30
+    reason: Missing output files: ../qc_quantify-all/fastq/TargetSeq-cas9-RUX-25_RX-cas-8_demultiplex_R1.fastq, ../qc_quantify-all/fastq/TargetSeq-cas9-RUX-25_RX-cas-8_demultiplex_R2.fastq
+    wildcards: lib=cas9-RUX-25, region=RX-cas-8
+
+
+        cp ../TargetSeq-cas9-RUX-25/demultiplex.fastq/RX-cas-8_demultiplex_R1.fastq ../qc_quantify-all/fastq/TargetSeq-cas9-RUX-25_RX-cas-8_demultiplex_R1.fastq
+        cp ../TargetSeq-cas9-RUX-25/demultiplex.fastq/RX-cas-8_demultiplex_R2.fastq ../qc_quantify-all/fastq/TargetSeq-cas9-RUX-25_RX-cas-8_demultiplex_R2.fastq
+        
+
+[Sun Jan  3 13:48:48 2021]
+rule cp:
+    input: ../TargetSeq-cpf1-RUX-21/demultiplex.fastq/RX-Dig4_demultiplex_R1.fastq, ../TargetSeq-cpf1-RUX-21/demultiplex.fastq/RX-Dig4_demultiplex_R2.fastq
+    output: ../qc_quantify-all/fastq/TargetSeq-cpf1-RUX-21_RX-Dig4_demultiplex_R1.fastq, ../qc_quantify-all/fastq/TargetSeq-cpf1-RUX-21_RX-Dig4_demultiplex_R2.fastq
+    jobid: 60
+    reason: Missing output files: ../qc_quantify-all/fastq/TargetSeq-cpf1-RUX-21_RX-Dig4_demultiplex_R2.fastq, ../qc_quantify-all/fastq/TargetSeq-cpf1-RUX-21_RX-Dig4_demultiplex_R1.fastq
+    wildcards: lib=cpf1-RUX-21, region=RX-Dig4
+
+
+        cp ../TargetSeq-cpf1-RUX-21/demultiplex.fastq/RX-Dig4_demultiplex_R1.fastq ../qc_quantify-all/fastq/TargetSeq-cpf1-RUX-21_RX-Dig4_demultiplex_R1.fastq
+        cp ../TargetSeq-cpf1-RUX-21/demultiplex.fastq/RX-Dig4_demultiplex_R2.fastq ../qc_quantify-all/fastq/TargetSeq-cpf1-RUX-21_RX-Dig4_demultiplex_R2.fastq
+        
+
+[Sun Jan  3 13:48:48 2021]
+rule cp:
+    input: ../TargetSeq-cas9-RUX-25/demultiplex.fastq/RX-Dig4_demultiplex_R1.fastq, ../TargetSeq-cas9-RUX-25/demultiplex.fastq/RX-Dig4_demultiplex_R2.fastq
+    output: ../qc_quantify-all/fastq/TargetSeq-cas9-RUX-25_RX-Dig4_demultiplex_R1.fastq, ../qc_quantify-all/fastq/TargetSeq-cas9-RUX-25_RX-Dig4_demultiplex_R2.fastq
+    jobid: 8
+    reason: Missing output files: ../qc_quantify-all/fastq/TargetSeq-cas9-RUX-25_RX-Dig4_demultiplex_R2.fastq, ../qc_quantify-all/fastq/TargetSeq-cas9-RUX-25_RX-Dig4_demultiplex_R1.fastq
+    wildcards: lib=cas9-RUX-25, region=RX-Dig4
+
+
+        cp ../TargetSeq-cas9-RUX-25/demultiplex.fastq/RX-Dig4_demultiplex_R1.fastq ../qc_quantify-all/fastq/TargetSeq-cas9-RUX-25_RX-Dig4_demultiplex_R1.fastq
+        cp ../TargetSeq-cas9-RUX-25/demultiplex.fastq/RX-Dig4_demultiplex_R2.fastq ../qc_quantify-all/fastq/TargetSeq-cas9-RUX-25_RX-Dig4_demultiplex_R2.fastq
+        
+
+[Sun Jan  3 13:48:48 2021]
+rule cp:
+    input: ../TargetSeq-cas9-RUX-25/demultiplex.fastq/RX-cpf-3_demultiplex_R1.fastq, ../TargetSeq-cas9-RUX-25/demultiplex.fastq/RX-cpf-3_demultiplex_R2.fastq
+    output: ../qc_quantify-all/fastq/TargetSeq-cas9-RUX-25_RX-cpf-3_demultiplex_R1.fastq, ../qc_quantify-all/fastq/TargetSeq-cas9-RUX-25_RX-cpf-3_demultiplex_R2.fastq
+    jobid: 38
+    reason: Missing output files: ../qc_quantify-all/fastq/TargetSeq-cas9-RUX-25_RX-cpf-3_demultiplex_R1.fastq, ../qc_quantify-all/fastq/TargetSeq-cas9-RUX-25_RX-cpf-3_demultiplex_R2.fastq
+    wildcards: lib=cas9-RUX-25, region=RX-cpf-3
+
+
+        cp ../TargetSeq-cas9-RUX-25/demultiplex.fastq/RX-cpf-3_demultiplex_R1.fastq ../qc_quantify-all/fastq/TargetSeq-cas9-RUX-25_RX-cpf-3_demultiplex_R1.fastq
+        cp ../TargetSeq-cas9-RUX-25/demultiplex.fastq/RX-cpf-3_demultiplex_R2.fastq ../qc_quantify-all/fastq/TargetSeq-cas9-RUX-25_RX-cpf-3_demultiplex_R2.fastq
+        
+[Sun Jan  3 13:48:48 2021]
+Error in rule cp:
+    jobid: 52
+    output: ../qc_quantify-all/fastq/TargetSeq-cas9-RUX-25_RX-on target_demultiplex_R1.fastq, ../qc_quantify-all/fastq/TargetSeq-cas9-RUX-25_RX-on target_demultiplex_R2.fastq
+    shell:
+        
+        cp ../TargetSeq-cas9-RUX-25/demultiplex.fastq/RX-on target_demultiplex_R1.fastq ../qc_quantify-all/fastq/TargetSeq-cas9-RUX-25_RX-on target_demultiplex_R1.fastq
+        cp ../TargetSeq-cas9-RUX-25/demultiplex.fastq/RX-on target_demultiplex_R2.fastq ../qc_quantify-all/fastq/TargetSeq-cas9-RUX-25_RX-on target_demultiplex_R2.fastq
+        
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+
+[Sun Jan  3 13:48:48 2021]
+rule cp:
+    input: ../TargetSeq-cpf1-RUX-21/demultiplex.fastq/RX-cpf-7_demultiplex_R1.fastq, ../TargetSeq-cpf1-RUX-21/demultiplex.fastq/RX-cpf-7_demultiplex_R2.fastq
+    output: ../qc_quantify-all/fastq/TargetSeq-cpf1-RUX-21_RX-cpf-7_demultiplex_R1.fastq, ../qc_quantify-all/fastq/TargetSeq-cpf1-RUX-21_RX-cpf-7_demultiplex_R2.fastq
+    jobid: 98
+    reason: Missing output files: ../qc_quantify-all/fastq/TargetSeq-cpf1-RUX-21_RX-cpf-7_demultiplex_R2.fastq, ../qc_quantify-all/fastq/TargetSeq-cpf1-RUX-21_RX-cpf-7_demultiplex_R1.fastq
+    wildcards: lib=cpf1-RUX-21, region=RX-cpf-7
+
+
+        cp ../TargetSeq-cpf1-RUX-21/demultiplex.fastq/RX-cpf-7_demultiplex_R1.fastq ../qc_quantify-all/fastq/TargetSeq-cpf1-RUX-21_RX-cpf-7_demultiplex_R1.fastq
+        cp ../TargetSeq-cpf1-RUX-21/demultiplex.fastq/RX-cpf-7_demultiplex_R2.fastq ../qc_quantify-all/fastq/TargetSeq-cpf1-RUX-21_RX-cpf-7_demultiplex_R2.fastq
+        
+
+[Sun Jan  3 13:48:48 2021]
+rule cp:
+    input: ../TargetSeq-cas9-RUX-25/demultiplex.fastq/RX-cas-1_demultiplex_R1.fastq, ../TargetSeq-cas9-RUX-25/demultiplex.fastq/RX-cas-1_demultiplex_R2.fastq
+    output: ../qc_quantify-all/fastq/TargetSeq-cas9-RUX-25_RX-cas-1_demultiplex_R1.fastq, ../qc_quantify-all/fastq/TargetSeq-cas9-RUX-25_RX-cas-1_demultiplex_R2.fastq
+    jobid: 16
+    reason: Missing output files: ../qc_quantify-all/fastq/TargetSeq-cas9-RUX-25_RX-cas-1_demultiplex_R2.fastq, ../qc_quantify-all/fastq/TargetSeq-cas9-RUX-25_RX-cas-1_demultiplex_R1.fastq
+    wildcards: lib=cas9-RUX-25, region=RX-cas-1
+
+
+        cp ../TargetSeq-cas9-RUX-25/demultiplex.fastq/RX-cas-1_demultiplex_R1.fastq ../qc_quantify-all/fastq/TargetSeq-cas9-RUX-25_RX-cas-1_demultiplex_R1.fastq
+        cp ../TargetSeq-cas9-RUX-25/demultiplex.fastq/RX-cas-1_demultiplex_R2.fastq ../qc_quantify-all/fastq/TargetSeq-cas9-RUX-25_RX-cas-1_demultiplex_R2.fastq
+        
+
+[Sun Jan  3 13:48:48 2021]
+rule cp:
+    input: ../TargetSeq-cas9-RUX-25/demultiplex.fastq/RX-cpf-7_demultiplex_R1.fastq, ../TargetSeq-cas9-RUX-25/demultiplex.fastq/RX-cpf-7_demultiplex_R2.fastq
+    output: ../qc_quantify-all/fastq/TargetSeq-cas9-RUX-25_RX-cpf-7_demultiplex_R1.fastq, ../qc_quantify-all/fastq/TargetSeq-cas9-RUX-25_RX-cpf-7_demultiplex_R2.fastq
+    jobid: 46
+    reason: Missing output files: ../qc_quantify-all/fastq/TargetSeq-cas9-RUX-25_RX-cpf-7_demultiplex_R1.fastq, ../qc_quantify-all/fastq/TargetSeq-cas9-RUX-25_RX-cpf-7_demultiplex_R2.fastq
+    wildcards: lib=cas9-RUX-25, region=RX-cpf-7
+
+
+        cp ../TargetSeq-cas9-RUX-25/demultiplex.fastq/RX-cpf-7_demultiplex_R1.fastq ../qc_quantify-all/fastq/TargetSeq-cas9-RUX-25_RX-cpf-7_demultiplex_R1.fastq
+        cp ../TargetSeq-cas9-RUX-25/demultiplex.fastq/RX-cpf-7_demultiplex_R2.fastq ../qc_quantify-all/fastq/TargetSeq-cas9-RUX-25_RX-cpf-7_demultiplex_R2.fastq
+        
+
+[Sun Jan  3 13:48:48 2021]
+rule cp:
+    input: ../TargetSeq-cpf1-RUX-21/demultiplex.fastq/RX-cas-1_demultiplex_R1.fastq, ../TargetSeq-cpf1-RUX-21/demultiplex.fastq/RX-cas-1_demultiplex_R2.fastq
+    output: ../qc_quantify-all/fastq/TargetSeq-cpf1-RUX-21_RX-cas-1_demultiplex_R1.fastq, ../qc_quantify-all/fastq/TargetSeq-cpf1-RUX-21_RX-cas-1_demultiplex_R2.fastq
+    jobid: 68
+    reason: Missing output files: ../qc_quantify-all/fastq/TargetSeq-cpf1-RUX-21_RX-cas-1_demultiplex_R1.fastq, ../qc_quantify-all/fastq/TargetSeq-cpf1-RUX-21_RX-cas-1_demultiplex_R2.fastq
+    wildcards: lib=cpf1-RUX-21, region=RX-cas-1
+
+
+        cp ../TargetSeq-cpf1-RUX-21/demultiplex.fastq/RX-cas-1_demultiplex_R1.fastq ../qc_quantify-all/fastq/TargetSeq-cpf1-RUX-21_RX-cas-1_demultiplex_R1.fastq
+        cp ../TargetSeq-cpf1-RUX-21/demultiplex.fastq/RX-cas-1_demultiplex_R2.fastq ../qc_quantify-all/fastq/TargetSeq-cpf1-RUX-21_RX-cas-1_demultiplex_R2.fastq
+        
+
+[Sun Jan  3 13:48:48 2021]
+rule cp:
+    input: ../TargetSeq-cpf1-RUX-21/demultiplex.fastq/RX-cas-5_demultiplex_R1.fastq, ../TargetSeq-cpf1-RUX-21/demultiplex.fastq/RX-cas-5_demultiplex_R2.fastq
+    output: ../qc_quantify-all/fastq/TargetSeq-cpf1-RUX-21_RX-cas-5_demultiplex_R1.fastq, ../qc_quantify-all/fastq/TargetSeq-cpf1-RUX-21_RX-cas-5_demultiplex_R2.fastq
+    jobid: 76
+    reason: Missing output files: ../qc_quantify-all/fastq/TargetSeq-cpf1-RUX-21_RX-cas-5_demultiplex_R2.fastq, ../qc_quantify-all/fastq/TargetSeq-cpf1-RUX-21_RX-cas-5_demultiplex_R1.fastq
+    wildcards: lib=cpf1-RUX-21, region=RX-cas-5
+
+
+        cp ../TargetSeq-cpf1-RUX-21/demultiplex.fastq/RX-cas-5_demultiplex_R1.fastq ../qc_quantify-all/fastq/TargetSeq-cpf1-RUX-21_RX-cas-5_demultiplex_R1.fastq
+        cp ../TargetSeq-cpf1-RUX-21/demultiplex.fastq/RX-cas-5_demultiplex_R2.fastq ../qc_quantify-all/fastq/TargetSeq-cpf1-RUX-21_RX-cas-5_demultiplex_R2.fastq
+        
+
+[Sun Jan  3 13:48:48 2021]
+rule cp:
+    input: ../TargetSeq-cpf1-RUX-21/demultiplex.fastq/RX-cpf-10_demultiplex_R1.fastq, ../TargetSeq-cpf1-RUX-21/demultiplex.fastq/RX-cpf-10_demultiplex_R2.fastq
+    output: ../qc_quantify-all/fastq/TargetSeq-cpf1-RUX-21_RX-cpf-10_demultiplex_R1.fastq, ../qc_quantify-all/fastq/TargetSeq-cpf1-RUX-21_RX-cpf-10_demultiplex_R2.fastq
+    jobid: 84
+    reason: Missing output files: ../qc_quantify-all/fastq/TargetSeq-cpf1-RUX-21_RX-cpf-10_demultiplex_R1.fastq, ../qc_quantify-all/fastq/TargetSeq-cpf1-RUX-21_RX-cpf-10_demultiplex_R2.fastq
+    wildcards: lib=cpf1-RUX-21, region=RX-cpf-10
+
+
+        cp ../TargetSeq-cpf1-RUX-21/demultiplex.fastq/RX-cpf-10_demultiplex_R1.fastq ../qc_quantify-all/fastq/TargetSeq-cpf1-RUX-21_RX-cpf-10_demultiplex_R1.fastq
+        cp ../TargetSeq-cpf1-RUX-21/demultiplex.fastq/RX-cpf-10_demultiplex_R2.fastq ../qc_quantify-all/fastq/TargetSeq-cpf1-RUX-21_RX-cpf-10_demultiplex_R2.fastq
+        
+
+[Sun Jan  3 13:48:48 2021]
+rule cp:
+    input: ../TargetSeq-cas9-RUX-25/demultiplex.fastq/RX-cas-5_demultiplex_R1.fastq, ../TargetSeq-cas9-RUX-25/demultiplex.fastq/RX-cas-5_demultiplex_R2.fastq
+    output: ../qc_quantify-all/fastq/TargetSeq-cas9-RUX-25_RX-cas-5_demultiplex_R1.fastq, ../qc_quantify-all/fastq/TargetSeq-cas9-RUX-25_RX-cas-5_demultiplex_R2.fastq
+    jobid: 24
+    reason: Missing output files: ../qc_quantify-all/fastq/TargetSeq-cas9-RUX-25_RX-cas-5_demultiplex_R2.fastq, ../qc_quantify-all/fastq/TargetSeq-cas9-RUX-25_RX-cas-5_demultiplex_R1.fastq
+    wildcards: lib=cas9-RUX-25, region=RX-cas-5
+
+
+        cp ../TargetSeq-cas9-RUX-25/demultiplex.fastq/RX-cas-5_demultiplex_R1.fastq ../qc_quantify-all/fastq/TargetSeq-cas9-RUX-25_RX-cas-5_demultiplex_R1.fastq
+        cp ../TargetSeq-cas9-RUX-25/demultiplex.fastq/RX-cas-5_demultiplex_R2.fastq ../qc_quantify-all/fastq/TargetSeq-cas9-RUX-25_RX-cas-5_demultiplex_R2.fastq
+        
+
+[Sun Jan  3 13:48:49 2021]
+rule cp:
+    input: ../TargetSeq-cpf1-RUX-21/demultiplex.fastq/RX-Dig1_demultiplex_R1.fastq, ../TargetSeq-cpf1-RUX-21/demultiplex.fastq/RX-Dig1_demultiplex_R2.fastq
+    output: ../qc_quantify-all/fastq/TargetSeq-cpf1-RUX-21_RX-Dig1_demultiplex_R1.fastq, ../qc_quantify-all/fastq/TargetSeq-cpf1-RUX-21_RX-Dig1_demultiplex_R2.fastq
+    jobid: 54
+    reason: Missing output files: ../qc_quantify-all/fastq/TargetSeq-cpf1-RUX-21_RX-Dig1_demultiplex_R1.fastq, ../qc_quantify-all/fastq/TargetSeq-cpf1-RUX-21_RX-Dig1_demultiplex_R2.fastq
+    wildcards: lib=cpf1-RUX-21, region=RX-Dig1
+
+
+        cp ../TargetSeq-cpf1-RUX-21/demultiplex.fastq/RX-Dig1_demultiplex_R1.fastq ../qc_quantify-all/fastq/TargetSeq-cpf1-RUX-21_RX-Dig1_demultiplex_R1.fastq
+        cp ../TargetSeq-cpf1-RUX-21/demultiplex.fastq/RX-Dig1_demultiplex_R2.fastq ../qc_quantify-all/fastq/TargetSeq-cpf1-RUX-21_RX-Dig1_demultiplex_R2.fastq
+        
+[Sun Jan  3 13:48:55 2021]
+Finished job 68.
+1 of 106 steps (0.94%) done
+[Sun Jan  3 13:49:02 2021]
+Finished job 72.
+2 of 106 steps (2%) done
+[Sun Jan  3 13:49:04 2021]
+Finished job 16.
+3 of 106 steps (3%) done
+Terminating processes on user request, this might take some time.
+[Sun Jan  3 13:49:05 2021]
+Error in rule cp:
+    jobid: 20
+    output: ../qc_quantify-all/fastq/TargetSeq-cas9-RUX-25_RX-cas-3_demultiplex_R1.fastq, ../qc_quantify-all/fastq/TargetSeq-cas9-RUX-25_RX-cas-3_demultiplex_R2.fastq
+    shell:
+        
+        cp ../TargetSeq-cas9-RUX-25/demultiplex.fastq/RX-cas-3_demultiplex_R1.fastq ../qc_quantify-all/fastq/TargetSeq-cas9-RUX-25_RX-cas-3_demultiplex_R1.fastq
+        cp ../TargetSeq-cas9-RUX-25/demultiplex.fastq/RX-cas-3_demultiplex_R2.fastq ../qc_quantify-all/fastq/TargetSeq-cas9-RUX-25_RX-cas-3_demultiplex_R2.fastq
+        
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+Removing output files of failed job cp since they might be corrupted:
+../qc_quantify-all/fastq/TargetSeq-cas9-RUX-25_RX-cas-3_demultiplex_R1.fastq
+[Sun Jan  3 13:49:05 2021]
+Error in rule cp:
+    jobid: 6
+    output: ../qc_quantify-all/fastq/TargetSeq-cas9-RUX-25_RX-Dig3_demultiplex_R1.fastq, ../qc_quantify-all/fastq/TargetSeq-cas9-RUX-25_RX-Dig3_demultiplex_R2.fastq
+    shell:
+        
+        cp ../TargetSeq-cas9-RUX-25/demultiplex.fastq/RX-Dig3_demultiplex_R1.fastq ../qc_quantify-all/fastq/TargetSeq-cas9-RUX-25_RX-Dig3_demultiplex_R1.fastq
+        cp ../TargetSeq-cas9-RUX-25/demultiplex.fastq/RX-Dig3_demultiplex_R2.fastq ../qc_quantify-all/fastq/TargetSeq-cas9-RUX-25_RX-Dig3_demultiplex_R2.fastq
+        
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+[Sun Jan  3 13:49:05 2021]
+Error in rule cp:
+    jobid: 92
+    output: ../qc_quantify-all/fastq/TargetSeq-cpf1-RUX-21_RX-cpf-4_demultiplex_R1.fastq, ../qc_quantify-all/fastq/TargetSeq-cpf1-RUX-21_RX-cpf-4_demultiplex_R2.fastq
+    shell:
+        
+        cp ../TargetSeq-cpf1-RUX-21/demultiplex.fastq/RX-cpf-4_demultiplex_R1.fastq ../qc_quantify-all/fastq/TargetSeq-cpf1-RUX-21_RX-cpf-4_demultiplex_R1.fastq
+        cp ../TargetSeq-cpf1-RUX-21/demultiplex.fastq/RX-cpf-4_demultiplex_R2.fastq ../qc_quantify-all/fastq/TargetSeq-cpf1-RUX-21_RX-cpf-4_demultiplex_R2.fastq
+        
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+[Sun Jan  3 13:49:05 2021]
+Error in rule cp:
+    jobid: 40
+    output: ../qc_quantify-all/fastq/TargetSeq-cas9-RUX-25_RX-cpf-4_demultiplex_R1.fastq, ../qc_quantify-all/fastq/TargetSeq-cas9-RUX-25_RX-cpf-4_demultiplex_R2.fastq
+    shell:
+        
+        cp ../TargetSeq-cas9-RUX-25/demultiplex.fastq/RX-cpf-4_demultiplex_R1.fastq ../qc_quantify-all/fastq/TargetSeq-cas9-RUX-25_RX-cpf-4_demultiplex_R1.fastq
+        cp ../TargetSeq-cas9-RUX-25/demultiplex.fastq/RX-cpf-4_demultiplex_R2.fastq ../qc_quantify-all/fastq/TargetSeq-cas9-RUX-25_RX-cpf-4_demultiplex_R2.fastq
+        
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+[Sun Jan  3 13:49:05 2021]
+Error in rule cp:
+    jobid: 62
+    output: ../qc_quantify-all/fastq/TargetSeq-cpf1-RUX-21_RX-Dig5_demultiplex_R1.fastq, ../qc_quantify-all/fastq/TargetSeq-cpf1-RUX-21_RX-Dig5_demultiplex_R2.fastq
+    shell:
+        
+        cp ../TargetSeq-cpf1-RUX-21/demultiplex.fastq/RX-Dig5_demultiplex_R1.fastq ../qc_quantify-all/fastq/TargetSeq-cpf1-RUX-21_RX-Dig5_demultiplex_R1.fastq
+        cp ../TargetSeq-cpf1-RUX-21/demultiplex.fastq/RX-Dig5_demultiplex_R2.fastq ../qc_quantify-all/fastq/TargetSeq-cpf1-RUX-21_RX-Dig5_demultiplex_R2.fastq
+        
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+[Sun Jan  3 13:49:05 2021]
+Error in rule cp:
+    jobid: 102
+    output: ../qc_quantify-all/fastq/TargetSeq-cpf1-RUX-21_RX-cpf-9_demultiplex_R1.fastq, ../qc_quantify-all/fastq/TargetSeq-cpf1-RUX-21_RX-cpf-9_demultiplex_R2.fastq
+    shell:
+        
+        cp ../TargetSeq-cpf1-RUX-21/demultiplex.fastq/RX-cpf-9_demultiplex_R1.fastq ../qc_quantify-all/fastq/TargetSeq-cpf1-RUX-21_RX-cpf-9_demultiplex_R1.fastq
+        cp ../TargetSeq-cpf1-RUX-21/demultiplex.fastq/RX-cpf-9_demultiplex_R2.fastq ../qc_quantify-all/fastq/TargetSeq-cpf1-RUX-21_RX-cpf-9_demultiplex_R2.fastq
+        
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+[Sun Jan  3 13:49:05 2021]
+Error in rule cp:
+    jobid: 32
+    output: ../qc_quantify-all/fastq/TargetSeq-cas9-RUX-25_RX-cpf-10_demultiplex_R1.fastq, ../qc_quantify-all/fastq/TargetSeq-cas9-RUX-25_RX-cpf-10_demultiplex_R2.fastq
+    shell:
+        
+        cp ../TargetSeq-cas9-RUX-25/demultiplex.fastq/RX-cpf-10_demultiplex_R1.fastq ../qc_quantify-all/fastq/TargetSeq-cas9-RUX-25_RX-cpf-10_demultiplex_R1.fastq
+        cp ../TargetSeq-cas9-RUX-25/demultiplex.fastq/RX-cpf-10_demultiplex_R2.fastq ../qc_quantify-all/fastq/TargetSeq-cas9-RUX-25_RX-cpf-10_demultiplex_R2.fastq
+        
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+[Sun Jan  3 13:49:05 2021]
+Error in rule cp:
+    jobid: 24
+    output: ../qc_quantify-all/fastq/TargetSeq-cas9-RUX-25_RX-cas-5_demultiplex_R1.fastq, ../qc_quantify-all/fastq/TargetSeq-cas9-RUX-25_RX-cas-5_demultiplex_R2.fastq
+    shell:
+        
+        cp ../TargetSeq-cas9-RUX-25/demultiplex.fastq/RX-cas-5_demultiplex_R1.fastq ../qc_quantify-all/fastq/TargetSeq-cas9-RUX-25_RX-cas-5_demultiplex_R1.fastq
+        cp ../TargetSeq-cas9-RUX-25/demultiplex.fastq/RX-cas-5_demultiplex_R2.fastq ../qc_quantify-all/fastq/TargetSeq-cas9-RUX-25_RX-cas-5_demultiplex_R2.fastq
+        
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+[Sun Jan  3 13:49:05 2021]
+Error in rule cp:
+    jobid: 28
+    output: ../qc_quantify-all/fastq/TargetSeq-cas9-RUX-25_RX-cas-7_demultiplex_R1.fastq, ../qc_quantify-all/fastq/TargetSeq-cas9-RUX-25_RX-cas-7_demultiplex_R2.fastq
+    shell:
+        
+        cp ../TargetSeq-cas9-RUX-25/demultiplex.fastq/RX-cas-7_demultiplex_R1.fastq ../qc_quantify-all/fastq/TargetSeq-cas9-RUX-25_RX-cas-7_demultiplex_R1.fastq
+        cp ../TargetSeq-cas9-RUX-25/demultiplex.fastq/RX-cas-7_demultiplex_R2.fastq ../qc_quantify-all/fastq/TargetSeq-cas9-RUX-25_RX-cas-7_demultiplex_R2.fastq
+        
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+Removing output files of failed job cp since they might be corrupted:
+../qc_quantify-all/fastq/TargetSeq-cas9-RUX-25_RX-Dig3_demultiplex_R1.fastq
+[Sun Jan  3 13:49:05 2021]
+Error in rule cp:
+    jobid: 48
+    output: ../qc_quantify-all/fastq/TargetSeq-cas9-RUX-25_RX-cpf-8_demultiplex_R1.fastq, ../qc_quantify-all/fastq/TargetSeq-cas9-RUX-25_RX-cpf-8_demultiplex_R2.fastq
+    shell:
+        
+        cp ../TargetSeq-cas9-RUX-25/demultiplex.fastq/RX-cpf-8_demultiplex_R1.fastq ../qc_quantify-all/fastq/TargetSeq-cas9-RUX-25_RX-cpf-8_demultiplex_R1.fastq
+        cp ../TargetSeq-cas9-RUX-25/demultiplex.fastq/RX-cpf-8_demultiplex_R2.fastq ../qc_quantify-all/fastq/TargetSeq-cas9-RUX-25_RX-cpf-8_demultiplex_R2.fastq
+        
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+[Sun Jan  3 13:49:05 2021]
+Error in rule cp:
+    jobid: 22
+    output: ../qc_quantify-all/fastq/TargetSeq-cas9-RUX-25_RX-cas-4_demultiplex_R1.fastq, ../qc_quantify-all/fastq/TargetSeq-cas9-RUX-25_RX-cas-4_demultiplex_R2.fastq
+    shell:
+        
+        cp ../TargetSeq-cas9-RUX-25/demultiplex.fastq/RX-cas-4_demultiplex_R1.fastq ../qc_quantify-all/fastq/TargetSeq-cas9-RUX-25_RX-cas-4_demultiplex_R1.fastq
+        cp ../TargetSeq-cas9-RUX-25/demultiplex.fastq/RX-cas-4_demultiplex_R2.fastq ../qc_quantify-all/fastq/TargetSeq-cas9-RUX-25_RX-cas-4_demultiplex_R2.fastq
+        
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+[Sun Jan  3 13:49:05 2021]
+Error in rule cp:
+    jobid: 100
+    output: ../qc_quantify-all/fastq/TargetSeq-cpf1-RUX-21_RX-cpf-8_demultiplex_R1.fastq, ../qc_quantify-all/fastq/TargetSeq-cpf1-RUX-21_RX-cpf-8_demultiplex_R2.fastq
+    shell:
+        
+        cp ../TargetSeq-cpf1-RUX-21/demultiplex.fastq/RX-cpf-8_demultiplex_R1.fastq ../qc_quantify-all/fastq/TargetSeq-cpf1-RUX-21_RX-cpf-8_demultiplex_R1.fastq
+        cp ../TargetSeq-cpf1-RUX-21/demultiplex.fastq/RX-cpf-8_demultiplex_R2.fastq ../qc_quantify-all/fastq/TargetSeq-cpf1-RUX-21_RX-cpf-8_demultiplex_R2.fastq
+        
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+[Sun Jan  3 13:49:05 2021]
+Error in rule cp:
+    jobid: 30
+    output: ../qc_quantify-all/fastq/TargetSeq-cas9-RUX-25_RX-cas-8_demultiplex_R1.fastq, ../qc_quantify-all/fastq/TargetSeq-cas9-RUX-25_RX-cas-8_demultiplex_R2.fastq
+    shell:
+        
+        cp ../TargetSeq-cas9-RUX-25/demultiplex.fastq/RX-cas-8_demultiplex_R1.fastq ../qc_quantify-all/fastq/TargetSeq-cas9-RUX-25_RX-cas-8_demultiplex_R1.fastq
+        cp ../TargetSeq-cas9-RUX-25/demultiplex.fastq/RX-cas-8_demultiplex_R2.fastq ../qc_quantify-all/fastq/TargetSeq-cas9-RUX-25_RX-cas-8_demultiplex_R2.fastq
+        
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+[Sun Jan  3 13:49:05 2021]
+Error in rule cp:
+    jobid: 84
+    output: ../qc_quantify-all/fastq/TargetSeq-cpf1-RUX-21_RX-cpf-10_demultiplex_R1.fastq, ../qc_quantify-all/fastq/TargetSeq-cpf1-RUX-21_RX-cpf-10_demultiplex_R2.fastq
+    shell:
+        
+        cp ../TargetSeq-cpf1-RUX-21/demultiplex.fastq/RX-cpf-10_demultiplex_R1.fastq ../qc_quantify-all/fastq/TargetSeq-cpf1-RUX-21_RX-cpf-10_demultiplex_R1.fastq
+        cp ../TargetSeq-cpf1-RUX-21/demultiplex.fastq/RX-cpf-10_demultiplex_R2.fastq ../qc_quantify-all/fastq/TargetSeq-cpf1-RUX-21_RX-cpf-10_demultiplex_R2.fastq
+        
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+[Sun Jan  3 13:49:05 2021]
+Error in rule cp:
+    jobid: 94
+    output: ../qc_quantify-all/fastq/TargetSeq-cpf1-RUX-21_RX-cpf-5_demultiplex_R1.fastq, ../qc_quantify-all/fastq/TargetSeq-cpf1-RUX-21_RX-cpf-5_demultiplex_R2.fastq
+    shell:
+        
+        cp ../TargetSeq-cpf1-RUX-21/demultiplex.fastq/RX-cpf-5_demultiplex_R1.fastq ../qc_quantify-all/fastq/TargetSeq-cpf1-RUX-21_RX-cpf-5_demultiplex_R1.fastq
+        cp ../TargetSeq-cpf1-RUX-21/demultiplex.fastq/RX-cpf-5_demultiplex_R2.fastq ../qc_quantify-all/fastq/TargetSeq-cpf1-RUX-21_RX-cpf-5_demultiplex_R2.fastq
+        
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+[Sun Jan  3 13:49:05 2021]
+Error in rule cp:
+    jobid: 82
+    output: ../qc_quantify-all/fastq/TargetSeq-cpf1-RUX-21_RX-cas-8_demultiplex_R1.fastq, ../qc_quantify-all/fastq/TargetSeq-cpf1-RUX-21_RX-cas-8_demultiplex_R2.fastq
+    shell:
+        
+        cp ../TargetSeq-cpf1-RUX-21/demultiplex.fastq/RX-cas-8_demultiplex_R1.fastq ../qc_quantify-all/fastq/TargetSeq-cpf1-RUX-21_RX-cas-8_demultiplex_R1.fastq
+        cp ../TargetSeq-cpf1-RUX-21/demultiplex.fastq/RX-cas-8_demultiplex_R2.fastq ../qc_quantify-all/fastq/TargetSeq-cpf1-RUX-21_RX-cas-8_demultiplex_R2.fastq
+        
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+[Sun Jan  3 13:49:05 2021]
+Error in rule cp:
+    jobid: 98
+    output: ../qc_quantify-all/fastq/TargetSeq-cpf1-RUX-21_RX-cpf-7_demultiplex_R1.fastq, ../qc_quantify-all/fastq/TargetSeq-cpf1-RUX-21_RX-cpf-7_demultiplex_R2.fastq
+    shell:
+        
+        cp ../TargetSeq-cpf1-RUX-21/demultiplex.fastq/RX-cpf-7_demultiplex_R1.fastq ../qc_quantify-all/fastq/TargetSeq-cpf1-RUX-21_RX-cpf-7_demultiplex_R1.fastq
+        cp ../TargetSeq-cpf1-RUX-21/demultiplex.fastq/RX-cpf-7_demultiplex_R2.fastq ../qc_quantify-all/fastq/TargetSeq-cpf1-RUX-21_RX-cpf-7_demultiplex_R2.fastq
+        
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+[Sun Jan  3 13:49:05 2021]
+Error in rule cp:
+    jobid: 76
+    output: ../qc_quantify-all/fastq/TargetSeq-cpf1-RUX-21_RX-cas-5_demultiplex_R1.fastq, ../qc_quantify-all/fastq/TargetSeq-cpf1-RUX-21_RX-cas-5_demultiplex_R2.fastq
+    shell:
+        
+        cp ../TargetSeq-cpf1-RUX-21/demultiplex.fastq/RX-cas-5_demultiplex_R1.fastq ../qc_quantify-all/fastq/TargetSeq-cpf1-RUX-21_RX-cas-5_demultiplex_R1.fastq
+        cp ../TargetSeq-cpf1-RUX-21/demultiplex.fastq/RX-cas-5_demultiplex_R2.fastq ../qc_quantify-all/fastq/TargetSeq-cpf1-RUX-21_RX-cas-5_demultiplex_R2.fastq
+        
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+[Sun Jan  3 13:49:05 2021]
+Error in rule cp:
+    jobid: 8
+    output: ../qc_quantify-all/fastq/TargetSeq-cas9-RUX-25_RX-Dig4_demultiplex_R1.fastq, ../qc_quantify-all/fastq/TargetSeq-cas9-RUX-25_RX-Dig4_demultiplex_R2.fastq
+    shell:
+        
+        cp ../TargetSeq-cas9-RUX-25/demultiplex.fastq/RX-Dig4_demultiplex_R1.fastq ../qc_quantify-all/fastq/TargetSeq-cas9-RUX-25_RX-Dig4_demultiplex_R1.fastq
+        cp ../TargetSeq-cas9-RUX-25/demultiplex.fastq/RX-Dig4_demultiplex_R2.fastq ../qc_quantify-all/fastq/TargetSeq-cas9-RUX-25_RX-Dig4_demultiplex_R2.fastq
+        
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+[Sun Jan  3 13:49:05 2021]
+Error in rule cp:
+    jobid: 64
+    output: ../qc_quantify-all/fastq/TargetSeq-cpf1-RUX-21_RX-Dig6_demultiplex_R1.fastq, ../qc_quantify-all/fastq/TargetSeq-cpf1-RUX-21_RX-Dig6_demultiplex_R2.fastq
+    shell:
+        
+        cp ../TargetSeq-cpf1-RUX-21/demultiplex.fastq/RX-Dig6_demultiplex_R1.fastq ../qc_quantify-all/fastq/TargetSeq-cpf1-RUX-21_RX-Dig6_demultiplex_R1.fastq
+        cp ../TargetSeq-cpf1-RUX-21/demultiplex.fastq/RX-Dig6_demultiplex_R2.fastq ../qc_quantify-all/fastq/TargetSeq-cpf1-RUX-21_RX-Dig6_demultiplex_R2.fastq
+        
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+[Sun Jan  3 13:49:05 2021]
+Error in rule cp:
+    jobid: 54
+    output: ../qc_quantify-all/fastq/TargetSeq-cpf1-RUX-21_RX-Dig1_demultiplex_R1.fastq, ../qc_quantify-all/fastq/TargetSeq-cpf1-RUX-21_RX-Dig1_demultiplex_R2.fastq
+    shell:
+        
+        cp ../TargetSeq-cpf1-RUX-21/demultiplex.fastq/RX-Dig1_demultiplex_R1.fastq ../qc_quantify-all/fastq/TargetSeq-cpf1-RUX-21_RX-Dig1_demultiplex_R1.fastq
+        cp ../TargetSeq-cpf1-RUX-21/demultiplex.fastq/RX-Dig1_demultiplex_R2.fastq ../qc_quantify-all/fastq/TargetSeq-cpf1-RUX-21_RX-Dig1_demultiplex_R2.fastq
+        
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+[Sun Jan  3 13:49:05 2021]
+[Sun Jan  3 13:49:05 2021]
+Error in rule cp:
+Error in rule cp:
+    jobid: 58
+    jobid: 4
+    output: ../qc_quantify-all/fastq/TargetSeq-cpf1-RUX-21_RX-Dig3_demultiplex_R1.fastq, ../qc_quantify-all/fastq/TargetSeq-cpf1-RUX-21_RX-Dig3_demultiplex_R2.fastq
+    output: ../qc_quantify-all/fastq/TargetSeq-cas9-RUX-25_RX-Dig2_demultiplex_R1.fastq, ../qc_quantify-all/fastq/TargetSeq-cas9-RUX-25_RX-Dig2_demultiplex_R2.fastq
+    shell:
+        
+        cp ../TargetSeq-cpf1-RUX-21/demultiplex.fastq/RX-Dig3_demultiplex_R1.fastq ../qc_quantify-all/fastq/TargetSeq-cpf1-RUX-21_RX-Dig3_demultiplex_R1.fastq
+        cp ../TargetSeq-cpf1-RUX-21/demultiplex.fastq/RX-Dig3_demultiplex_R2.fastq ../qc_quantify-all/fastq/TargetSeq-cpf1-RUX-21_RX-Dig3_demultiplex_R2.fastq
+        
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+    shell:
+        
+        cp ../TargetSeq-cas9-RUX-25/demultiplex.fastq/RX-Dig2_demultiplex_R1.fastq ../qc_quantify-all/fastq/TargetSeq-cas9-RUX-25_RX-Dig2_demultiplex_R1.fastq
+        cp ../TargetSeq-cas9-RUX-25/demultiplex.fastq/RX-Dig2_demultiplex_R2.fastq ../qc_quantify-all/fastq/TargetSeq-cas9-RUX-25_RX-Dig2_demultiplex_R2.fastq
+        
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+
+[Sun Jan  3 13:49:05 2021]
+Error in rule cp:
+    jobid: 56
+    output: ../qc_quantify-all/fastq/TargetSeq-cpf1-RUX-21_RX-Dig2_demultiplex_R1.fastq, ../qc_quantify-all/fastq/TargetSeq-cpf1-RUX-21_RX-Dig2_demultiplex_R2.fastq
+    shell:
+        
+        cp ../TargetSeq-cpf1-RUX-21/demultiplex.fastq/RX-Dig2_demultiplex_R1.fastq ../qc_quantify-all/fastq/TargetSeq-cpf1-RUX-21_RX-Dig2_demultiplex_R1.fastq
+        cp ../TargetSeq-cpf1-RUX-21/demultiplex.fastq/RX-Dig2_demultiplex_R2.fastq ../qc_quantify-all/fastq/TargetSeq-cpf1-RUX-21_RX-Dig2_demultiplex_R2.fastq
+        
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+[Sun Jan  3 13:49:05 2021]
+Error in rule cp:
+    jobid: 42
+    output: ../qc_quantify-all/fastq/TargetSeq-cas9-RUX-25_RX-cpf-5_demultiplex_R1.fastq, ../qc_quantify-all/fastq/TargetSeq-cas9-RUX-25_RX-cpf-5_demultiplex_R2.fastq
+    shell:
+        
+        cp ../TargetSeq-cas9-RUX-25/demultiplex.fastq/RX-cpf-5_demultiplex_R1.fastq ../qc_quantify-all/fastq/TargetSeq-cas9-RUX-25_RX-cpf-5_demultiplex_R1.fastq
+        cp ../TargetSeq-cas9-RUX-25/demultiplex.fastq/RX-cpf-5_demultiplex_R2.fastq ../qc_quantify-all/fastq/TargetSeq-cas9-RUX-25_RX-cpf-5_demultiplex_R2.fastq
+        
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+[Sun Jan  3 13:49:05 2021]
+Error in rule cp:
+    jobid: 88
+    output: ../qc_quantify-all/fastq/TargetSeq-cpf1-RUX-21_RX-cpf-2_demultiplex_R1.fastq, ../qc_quantify-all/fastq/TargetSeq-cpf1-RUX-21_RX-cpf-2_demultiplex_R2.fastq
+    shell:
+        
+        cp ../TargetSeq-cpf1-RUX-21/demultiplex.fastq/RX-cpf-2_demultiplex_R1.fastq ../qc_quantify-all/fastq/TargetSeq-cpf1-RUX-21_RX-cpf-2_demultiplex_R1.fastq
+        cp ../TargetSeq-cpf1-RUX-21/demultiplex.fastq/RX-cpf-2_demultiplex_R2.fastq ../qc_quantify-all/fastq/TargetSeq-cpf1-RUX-21_RX-cpf-2_demultiplex_R2.fastq
+        
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+[Sun Jan  3 13:49:05 2021]
+Error in rule cp:
+    jobid: 70
+    output: ../qc_quantify-all/fastq/TargetSeq-cpf1-RUX-21_RX-cas-2_demultiplex_R1.fastq, ../qc_quantify-all/fastq/TargetSeq-cpf1-RUX-21_RX-cas-2_demultiplex_R2.fastq
+    shell:
+        
+        cp ../TargetSeq-cpf1-RUX-21/demultiplex.fastq/RX-cas-2_demultiplex_R1.fastq ../qc_quantify-all/fastq/TargetSeq-cpf1-RUX-21_RX-cas-2_demultiplex_R1.fastq
+        cp ../TargetSeq-cpf1-RUX-21/demultiplex.fastq/RX-cas-2_demultiplex_R2.fastq ../qc_quantify-all/fastq/TargetSeq-cpf1-RUX-21_RX-cas-2_demultiplex_R2.fastq
+        
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+[Sun Jan  3 13:49:05 2021]
+Error in rule cp:
+    jobid: 12
+    output: ../qc_quantify-all/fastq/TargetSeq-cas9-RUX-25_RX-Dig6_demultiplex_R1.fastq, ../qc_quantify-all/fastq/TargetSeq-cas9-RUX-25_RX-Dig6_demultiplex_R2.fastq
+    shell:
+        
+        cp ../TargetSeq-cas9-RUX-25/demultiplex.fastq/RX-Dig6_demultiplex_R1.fastq ../qc_quantify-all/fastq/TargetSeq-cas9-RUX-25_RX-Dig6_demultiplex_R1.fastq
+        cp ../TargetSeq-cas9-RUX-25/demultiplex.fastq/RX-Dig6_demultiplex_R2.fastq ../qc_quantify-all/fastq/TargetSeq-cas9-RUX-25_RX-Dig6_demultiplex_R2.fastq
+        
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+[Sun Jan  3 13:49:05 2021]
+Error in rule cp:
+    jobid: 60
+    output: ../qc_quantify-all/fastq/TargetSeq-cpf1-RUX-21_RX-Dig4_demultiplex_R1.fastq, ../qc_quantify-all/fastq/TargetSeq-cpf1-RUX-21_RX-Dig4_demultiplex_R2.fastq
+    shell:
+        
+        cp ../TargetSeq-cpf1-RUX-21/demultiplex.fastq/RX-Dig4_demultiplex_R1.fastq ../qc_quantify-all/fastq/TargetSeq-cpf1-RUX-21_RX-Dig4_demultiplex_R1.fastq
+        cp ../TargetSeq-cpf1-RUX-21/demultiplex.fastq/RX-Dig4_demultiplex_R2.fastq ../qc_quantify-all/fastq/TargetSeq-cpf1-RUX-21_RX-Dig4_demultiplex_R2.fastq
+        
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+Removing output files of failed job cp since they might be corrupted:
+../qc_quantify-all/fastq/TargetSeq-cpf1-RUX-21_RX-cpf-4_demultiplex_R1.fastq
+Removing output files of failed job cp since they might be corrupted:
+../qc_quantify-all/fastq/TargetSeq-cas9-RUX-25_RX-cpf-4_demultiplex_R1.fastq
+Removing output files of failed job cp since they might be corrupted:
+../qc_quantify-all/fastq/TargetSeq-cpf1-RUX-21_RX-Dig5_demultiplex_R1.fastq
+[Sun Jan  3 13:49:05 2021]
+[Sun Jan  3 13:49:05 2021]
+Error in rule cp:
+Error in rule cp:
+    jobid: 26
+    jobid: 74
+    output: ../qc_quantify-all/fastq/TargetSeq-cas9-RUX-25_RX-cas-6_demultiplex_R1.fastq, ../qc_quantify-all/fastq/TargetSeq-cas9-RUX-25_RX-cas-6_demultiplex_R2.fastq
+    output: ../qc_quantify-all/fastq/TargetSeq-cpf1-RUX-21_RX-cas-4_demultiplex_R1.fastq, ../qc_quantify-all/fastq/TargetSeq-cpf1-RUX-21_RX-cas-4_demultiplex_R2.fastq
+    shell:
+        
+        cp ../TargetSeq-cas9-RUX-25/demultiplex.fastq/RX-cas-6_demultiplex_R1.fastq ../qc_quantify-all/fastq/TargetSeq-cas9-RUX-25_RX-cas-6_demultiplex_R1.fastq
+        cp ../TargetSeq-cas9-RUX-25/demultiplex.fastq/RX-cas-6_demultiplex_R2.fastq ../qc_quantify-all/fastq/TargetSeq-cas9-RUX-25_RX-cas-6_demultiplex_R2.fastq
+        
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+    shell:
+        
+        cp ../TargetSeq-cpf1-RUX-21/demultiplex.fastq/RX-cas-4_demultiplex_R1.fastq ../qc_quantify-all/fastq/TargetSeq-cpf1-RUX-21_RX-cas-4_demultiplex_R1.fastq
+        cp ../TargetSeq-cpf1-RUX-21/demultiplex.fastq/RX-cas-4_demultiplex_R2.fastq ../qc_quantify-all/fastq/TargetSeq-cpf1-RUX-21_RX-cas-4_demultiplex_R2.fastq
+        
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+Removing output files of failed job cp since they might be corrupted:
+../qc_quantify-all/fastq/TargetSeq-cpf1-RUX-21_RX-cpf-9_demultiplex_R1.fastq
+
+
+Removing output files of failed job cp since they might be corrupted:
+../qc_quantify-all/fastq/TargetSeq-cas9-RUX-25_RX-cpf-10_demultiplex_R1.fastq
+Removing output files of failed job cp since they might be corrupted:
+../qc_quantify-all/fastq/TargetSeq-cas9-RUX-25_RX-cas-5_demultiplex_R1.fastq
+[Sun Jan  3 13:49:05 2021]
+Error in rule cp:
+    jobid: 90
+    output: ../qc_quantify-all/fastq/TargetSeq-cpf1-RUX-21_RX-cpf-3_demultiplex_R1.fastq, ../qc_quantify-all/fastq/TargetSeq-cpf1-RUX-21_RX-cpf-3_demultiplex_R2.fastq
+    shell:
+        
+        cp ../TargetSeq-cpf1-RUX-21/demultiplex.fastq/RX-cpf-3_demultiplex_R1.fastq ../qc_quantify-all/fastq/TargetSeq-cpf1-RUX-21_RX-cpf-3_demultiplex_R1.fastq
+        cp ../TargetSeq-cpf1-RUX-21/demultiplex.fastq/RX-cpf-3_demultiplex_R2.fastq ../qc_quantify-all/fastq/TargetSeq-cpf1-RUX-21_RX-cpf-3_demultiplex_R2.fastq
+        
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+Removing output files of failed job cp since they might be corrupted:
+../qc_quantify-all/fastq/TargetSeq-cpf1-RUX-21_RX-cpf-3_demultiplex_R1.fastq, ../qc_quantify-all/fastq/TargetSeq-cpf1-RUX-21_RX-cpf-3_demultiplex_R2.fastq
+Removing output files of failed job cp since they might be corrupted:
+../qc_quantify-all/fastq/TargetSeq-cas9-RUX-25_RX-cpf-8_demultiplex_R1.fastq
+[Sun Jan  3 13:49:05 2021]
+Error in rule cp:
+    jobid: 46
+    output: ../qc_quantify-all/fastq/TargetSeq-cas9-RUX-25_RX-cpf-7_demultiplex_R1.fastq, ../qc_quantify-all/fastq/TargetSeq-cas9-RUX-25_RX-cpf-7_demultiplex_R2.fastq
+    shell:
+        
+        cp ../TargetSeq-cas9-RUX-25/demultiplex.fastq/RX-cpf-7_demultiplex_R1.fastq ../qc_quantify-all/fastq/TargetSeq-cas9-RUX-25_RX-cpf-7_demultiplex_R1.fastq
+        cp ../TargetSeq-cas9-RUX-25/demultiplex.fastq/RX-cpf-7_demultiplex_R2.fastq ../qc_quantify-all/fastq/TargetSeq-cas9-RUX-25_RX-cpf-7_demultiplex_R2.fastq
+        
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+Removing output files of failed job cp since they might be corrupted:
+../qc_quantify-all/fastq/TargetSeq-cas9-RUX-25_RX-cas-4_demultiplex_R1.fastq
+Removing output files of failed job cp since they might be corrupted:
+../qc_quantify-all/fastq/TargetSeq-cpf1-RUX-21_RX-cpf-8_demultiplex_R1.fastq
+Removing output files of failed job cp since they might be corrupted:
+../qc_quantify-all/fastq/TargetSeq-cas9-RUX-25_RX-cas-8_demultiplex_R1.fastq
+Removing output files of failed job cp since they might be corrupted:
+../qc_quantify-all/fastq/TargetSeq-cpf1-RUX-21_RX-cpf-10_demultiplex_R1.fastq, ../qc_quantify-all/fastq/TargetSeq-cpf1-RUX-21_RX-cpf-10_demultiplex_R2.fastq
+[Sun Jan  3 13:49:05 2021]
+Error in rule cp:
+    jobid: 18
+    output: ../qc_quantify-all/fastq/TargetSeq-cas9-RUX-25_RX-cas-2_demultiplex_R1.fastq, ../qc_quantify-all/fastq/TargetSeq-cas9-RUX-25_RX-cas-2_demultiplex_R2.fastq
+    shell:
+        
+        cp ../TargetSeq-cas9-RUX-25/demultiplex.fastq/RX-cas-2_demultiplex_R1.fastq ../qc_quantify-all/fastq/TargetSeq-cas9-RUX-25_RX-cas-2_demultiplex_R1.fastq
+        cp ../TargetSeq-cas9-RUX-25/demultiplex.fastq/RX-cas-2_demultiplex_R2.fastq ../qc_quantify-all/fastq/TargetSeq-cas9-RUX-25_RX-cas-2_demultiplex_R2.fastq
+        
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+[Sun Jan  3 13:49:05 2021]
+Error in rule cp:
+    jobid: 66
+    output: ../qc_quantify-all/fastq/TargetSeq-cpf1-RUX-21_RX-Dig8_demultiplex_R1.fastq, ../qc_quantify-all/fastq/TargetSeq-cpf1-RUX-21_RX-Dig8_demultiplex_R2.fastq
+    shell:
+        
+        cp ../TargetSeq-cpf1-RUX-21/demultiplex.fastq/RX-Dig8_demultiplex_R1.fastq ../qc_quantify-all/fastq/TargetSeq-cpf1-RUX-21_RX-Dig8_demultiplex_R1.fastq
+        cp ../TargetSeq-cpf1-RUX-21/demultiplex.fastq/RX-Dig8_demultiplex_R2.fastq ../qc_quantify-all/fastq/TargetSeq-cpf1-RUX-21_RX-Dig8_demultiplex_R2.fastq
+        
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+[Sun Jan  3 13:49:05 2021]
+Error in rule cp:
+    jobid: 86
+    output: ../qc_quantify-all/fastq/TargetSeq-cpf1-RUX-21_RX-cpf-11_demultiplex_R1.fastq, ../qc_quantify-all/fastq/TargetSeq-cpf1-RUX-21_RX-cpf-11_demultiplex_R2.fastq
+    shell:
+        
+        cp ../TargetSeq-cpf1-RUX-21/demultiplex.fastq/RX-cpf-11_demultiplex_R1.fastq ../qc_quantify-all/fastq/TargetSeq-cpf1-RUX-21_RX-cpf-11_demultiplex_R1.fastq
+        cp ../TargetSeq-cpf1-RUX-21/demultiplex.fastq/RX-cpf-11_demultiplex_R2.fastq ../qc_quantify-all/fastq/TargetSeq-cpf1-RUX-21_RX-cpf-11_demultiplex_R2.fastq
+        
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+[Sun Jan  3 13:49:05 2021]
+Error in rule cp:
+    jobid: 38
+    output: ../qc_quantify-all/fastq/TargetSeq-cas9-RUX-25_RX-cpf-3_demultiplex_R1.fastq, ../qc_quantify-all/fastq/TargetSeq-cas9-RUX-25_RX-cpf-3_demultiplex_R2.fastq
+    shell:
+        
+        cp ../TargetSeq-cas9-RUX-25/demultiplex.fastq/RX-cpf-3_demultiplex_R1.fastq ../qc_quantify-all/fastq/TargetSeq-cas9-RUX-25_RX-cpf-3_demultiplex_R1.fastq
+        cp ../TargetSeq-cas9-RUX-25/demultiplex.fastq/RX-cpf-3_demultiplex_R2.fastq ../qc_quantify-all/fastq/TargetSeq-cas9-RUX-25_RX-cpf-3_demultiplex_R2.fastq
+        
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+[Sun Jan  3 13:49:05 2021]
+Error in rule cp:
+    jobid: 34
+    output: ../qc_quantify-all/fastq/TargetSeq-cas9-RUX-25_RX-cpf-11_demultiplex_R1.fastq, ../qc_quantify-all/fastq/TargetSeq-cas9-RUX-25_RX-cpf-11_demultiplex_R2.fastq
+    shell:
+        
+        cp ../TargetSeq-cas9-RUX-25/demultiplex.fastq/RX-cpf-11_demultiplex_R1.fastq ../qc_quantify-all/fastq/TargetSeq-cas9-RUX-25_RX-cpf-11_demultiplex_R1.fastq
+        cp ../TargetSeq-cas9-RUX-25/demultiplex.fastq/RX-cpf-11_demultiplex_R2.fastq ../qc_quantify-all/fastq/TargetSeq-cas9-RUX-25_RX-cpf-11_demultiplex_R2.fastq
+        
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+[Sun Jan  3 13:49:05 2021]
+Error in rule cp:
+    jobid: 10
+    output: ../qc_quantify-all/fastq/TargetSeq-cas9-RUX-25_RX-Dig5_demultiplex_R1.fastq, ../qc_quantify-all/fastq/TargetSeq-cas9-RUX-25_RX-Dig5_demultiplex_R2.fastq
+    shell:
+        
+        cp ../TargetSeq-cas9-RUX-25/demultiplex.fastq/RX-Dig5_demultiplex_R1.fastq ../qc_quantify-all/fastq/TargetSeq-cas9-RUX-25_RX-Dig5_demultiplex_R1.fastq
+        cp ../TargetSeq-cas9-RUX-25/demultiplex.fastq/RX-Dig5_demultiplex_R2.fastq ../qc_quantify-all/fastq/TargetSeq-cas9-RUX-25_RX-Dig5_demultiplex_R2.fastq
+        
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+[Sun Jan  3 13:49:05 2021]
+Error in rule cp:
+    jobid: 78
+    output: ../qc_quantify-all/fastq/TargetSeq-cpf1-RUX-21_RX-cas-6_demultiplex_R1.fastq, ../qc_quantify-all/fastq/TargetSeq-cpf1-RUX-21_RX-cas-6_demultiplex_R2.fastq
+    shell:
+        
+        cp ../TargetSeq-cpf1-RUX-21/demultiplex.fastq/RX-cas-6_demultiplex_R1.fastq ../qc_quantify-all/fastq/TargetSeq-cpf1-RUX-21_RX-cas-6_demultiplex_R1.fastq
+        cp ../TargetSeq-cpf1-RUX-21/demultiplex.fastq/RX-cas-6_demultiplex_R2.fastq ../qc_quantify-all/fastq/TargetSeq-cpf1-RUX-21_RX-cas-6_demultiplex_R2.fastq
+        
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+[Sun Jan  3 13:49:05 2021]
+Error in rule cp:
+    jobid: 44
+    output: ../qc_quantify-all/fastq/TargetSeq-cas9-RUX-25_RX-cpf-6_demultiplex_R1.fastq, ../qc_quantify-all/fastq/TargetSeq-cas9-RUX-25_RX-cpf-6_demultiplex_R2.fastq
+    shell:
+        
+        cp ../TargetSeq-cas9-RUX-25/demultiplex.fastq/RX-cpf-6_demultiplex_R1.fastq ../qc_quantify-all/fastq/TargetSeq-cas9-RUX-25_RX-cpf-6_demultiplex_R1.fastq
+        cp ../TargetSeq-cas9-RUX-25/demultiplex.fastq/RX-cpf-6_demultiplex_R2.fastq ../qc_quantify-all/fastq/TargetSeq-cas9-RUX-25_RX-cpf-6_demultiplex_R2.fastq
+        
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+[Sun Jan  3 13:49:05 2021]
+Error in rule cp:
+    jobid: 80
+    output: ../qc_quantify-all/fastq/TargetSeq-cpf1-RUX-21_RX-cas-7_demultiplex_R1.fastq, ../qc_quantify-all/fastq/TargetSeq-cpf1-RUX-21_RX-cas-7_demultiplex_R2.fastq
+    shell:
+        
+        cp ../TargetSeq-cpf1-RUX-21/demultiplex.fastq/RX-cas-7_demultiplex_R1.fastq ../qc_quantify-all/fastq/TargetSeq-cpf1-RUX-21_RX-cas-7_demultiplex_R1.fastq
+        cp ../TargetSeq-cpf1-RUX-21/demultiplex.fastq/RX-cas-7_demultiplex_R2.fastq ../qc_quantify-all/fastq/TargetSeq-cpf1-RUX-21_RX-cas-7_demultiplex_R2.fastq
+        
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+Removing output files of failed job cp since they might be corrupted:
+../qc_quantify-all/fastq/TargetSeq-cpf1-RUX-21_RX-cpf-5_demultiplex_R1.fastq
+Removing output files of failed job cp since they might be corrupted:
+../qc_quantify-all/fastq/TargetSeq-cpf1-RUX-21_RX-cas-8_demultiplex_R1.fastq
+Removing output files of failed job cp since they might be corrupted:
+../qc_quantify-all/fastq/TargetSeq-cpf1-RUX-21_RX-cpf-7_demultiplex_R1.fastq, ../qc_quantify-all/fastq/TargetSeq-cpf1-RUX-21_RX-cpf-7_demultiplex_R2.fastq
+Removing output files of failed job cp since they might be corrupted:
+../qc_quantify-all/fastq/TargetSeq-cpf1-RUX-21_RX-cas-5_demultiplex_R1.fastq
+Removing output files of failed job cp since they might be corrupted:
+../qc_quantify-all/fastq/TargetSeq-cas9-RUX-25_RX-Dig4_demultiplex_R1.fastq
+Removing output files of failed job cp since they might be corrupted:
+../qc_quantify-all/fastq/TargetSeq-cpf1-RUX-21_RX-Dig6_demultiplex_R1.fastq
+Removing output files of failed job cp since they might be corrupted:
+../qc_quantify-all/fastq/TargetSeq-cpf1-RUX-21_RX-Dig1_demultiplex_R1.fastq, ../qc_quantify-all/fastq/TargetSeq-cpf1-RUX-21_RX-Dig1_demultiplex_R2.fastq
+Removing output files of failed job cp since they might be corrupted:
+../qc_quantify-all/fastq/TargetSeq-cpf1-RUX-21_RX-Dig3_demultiplex_R1.fastq
+Removing output files of failed job cp since they might be corrupted:
+../qc_quantify-all/fastq/TargetSeq-cas9-RUX-25_RX-Dig2_demultiplex_R1.fastq
+Removing output files of failed job cp since they might be corrupted:
+../qc_quantify-all/fastq/TargetSeq-cpf1-RUX-21_RX-Dig2_demultiplex_R1.fastq
+Removing output files of failed job cp since they might be corrupted:
+../qc_quantify-all/fastq/TargetSeq-cas9-RUX-25_RX-cpf-5_demultiplex_R1.fastq
+Removing output files of failed job cp since they might be corrupted:
+../qc_quantify-all/fastq/TargetSeq-cpf1-RUX-21_RX-cpf-2_demultiplex_R1.fastq
+Removing output files of failed job cp since they might be corrupted:
+../qc_quantify-all/fastq/TargetSeq-cpf1-RUX-21_RX-cas-2_demultiplex_R1.fastq, ../qc_quantify-all/fastq/TargetSeq-cpf1-RUX-21_RX-cas-2_demultiplex_R2.fastq
+Removing output files of failed job cp since they might be corrupted:
+../qc_quantify-all/fastq/TargetSeq-cas9-RUX-25_RX-Dig6_demultiplex_R1.fastq
+Removing output files of failed job cp since they might be corrupted:
+../qc_quantify-all/fastq/TargetSeq-cpf1-RUX-21_RX-Dig4_demultiplex_R1.fastq
+Removing output files of failed job cp since they might be corrupted:
+../qc_quantify-all/fastq/TargetSeq-cas9-RUX-25_RX-cas-6_demultiplex_R1.fastq
+Removing output files of failed job cp since they might be corrupted:
+../qc_quantify-all/fastq/TargetSeq-cpf1-RUX-21_RX-cas-4_demultiplex_R1.fastq, ../qc_quantify-all/fastq/TargetSeq-cpf1-RUX-21_RX-cas-4_demultiplex_R2.fastq
+Removing output files of failed job cp since they might be corrupted:
+../qc_quantify-all/fastq/TargetSeq-cas9-RUX-25_RX-cas-7_demultiplex_R1.fastq
+Removing output files of failed job cp since they might be corrupted:
+../qc_quantify-all/fastq/TargetSeq-cas9-RUX-25_RX-cpf-7_demultiplex_R1.fastq
+Removing output files of failed job cp since they might be corrupted:
+../qc_quantify-all/fastq/TargetSeq-cas9-RUX-25_RX-cas-2_demultiplex_R1.fastq
+Removing output files of failed job cp since they might be corrupted:
+../qc_quantify-all/fastq/TargetSeq-cpf1-RUX-21_RX-Dig8_demultiplex_R1.fastq
+Removing output files of failed job cp since they might be corrupted:
+../qc_quantify-all/fastq/TargetSeq-cpf1-RUX-21_RX-cpf-11_demultiplex_R1.fastq, ../qc_quantify-all/fastq/TargetSeq-cpf1-RUX-21_RX-cpf-11_demultiplex_R2.fastq
+Removing output files of failed job cp since they might be corrupted:
+../qc_quantify-all/fastq/TargetSeq-cas9-RUX-25_RX-cpf-3_demultiplex_R1.fastq
+Removing output files of failed job cp since they might be corrupted:
+../qc_quantify-all/fastq/TargetSeq-cas9-RUX-25_RX-cpf-11_demultiplex_R1.fastq
+Removing output files of failed job cp since they might be corrupted:
+../qc_quantify-all/fastq/TargetSeq-cas9-RUX-25_RX-Dig5_demultiplex_R1.fastq
+Removing output files of failed job cp since they might be corrupted:
+../qc_quantify-all/fastq/TargetSeq-cpf1-RUX-21_RX-cas-6_demultiplex_R1.fastq
+Removing output files of failed job cp since they might be corrupted:
+../qc_quantify-all/fastq/TargetSeq-cas9-RUX-25_RX-cpf-6_demultiplex_R1.fastq
+Removing output files of failed job cp since they might be corrupted:
+../qc_quantify-all/fastq/TargetSeq-cpf1-RUX-21_RX-cas-7_demultiplex_R1.fastq
+[Sun Jan  3 13:49:06 2021]
+Error in rule cp:
+    jobid: 50
+    output: ../qc_quantify-all/fastq/TargetSeq-cas9-RUX-25_RX-cpf-9_demultiplex_R1.fastq, ../qc_quantify-all/fastq/TargetSeq-cas9-RUX-25_RX-cpf-9_demultiplex_R2.fastq
+    shell:
+        
+        cp ../TargetSeq-cas9-RUX-25/demultiplex.fastq/RX-cpf-9_demultiplex_R1.fastq ../qc_quantify-all/fastq/TargetSeq-cas9-RUX-25_RX-cpf-9_demultiplex_R1.fastq
+        cp ../TargetSeq-cas9-RUX-25/demultiplex.fastq/RX-cpf-9_demultiplex_R2.fastq ../qc_quantify-all/fastq/TargetSeq-cas9-RUX-25_RX-cpf-9_demultiplex_R2.fastq
+        
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+Removing output files of failed job cp since they might be corrupted:
+../qc_quantify-all/fastq/TargetSeq-cas9-RUX-25_RX-cpf-9_demultiplex_R1.fastq
+Complete log: /gpfs/user/zhaohuanan/3.project/25.2020-12_02_CBE_DetectSeq_paper_revise/TargetSeq_20201227/sub1_cpf1_cas9/snakepipes_target-seq/.snakemake/log/2021-01-03T134847.345127.snakemake.log

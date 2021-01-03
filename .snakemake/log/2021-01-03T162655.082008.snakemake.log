@@ -1,0 +1,4 @@
+Building DAG of jobs...
+MissingInputException in line 152 of /gpfs/user/zhaohuanan/3.project/25.2020-12_02_CBE_DetectSeq_paper_revise/TargetSeq_20201227/sub1_cpf1_cas9/snakepipes_target-seq/step.06.snk.merge_fastq_to_plot_pipline.cas9.py:
+Missing input files for rule bowtie_build_index:
+../reference.fasta/RX-cas-1.ref.upper.fa

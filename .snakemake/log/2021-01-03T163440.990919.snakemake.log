@@ -1,0 +1,1340 @@
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided cores: 48
+Rules claiming more threads will be scaled down.
+Job counts:
+	count	jobs
+	1	all
+	77	bmat_plot
+	49	parse_mpileup
+	18	samtools_index
+	9	samtools_sort_by_position
+	34	spike_in_mpileup
+	188
+
+[Sun Jan  3 16:34:42 2021]
+rule samtools_sort_by_position:
+    input: ../TargetSeq-cas9-RUX-25/cutoff_3/mapping/RX-Dig6_bt1.bam
+    output: ../TargetSeq-cas9-RUX-25/cutoff_3/mapping/RX-Dig6_bt1_sort.bam
+    jobid: 209
+    reason: Missing output files: ../TargetSeq-cas9-RUX-25/cutoff_3/mapping/RX-Dig6_bt1_sort.bam
+    wildcards: lib=cas9-RUX-25, cutoff=3, sample=RX-Dig6
+
+/home/zhaohuanan/zhaohn_HD/miniconda3/bin/samtools sort -O BAM -o ../TargetSeq-cas9-RUX-25/cutoff_3/mapping/RX-Dig6_bt1_sort.bam -T ../TargetSeq-cas9-RUX-25/cutoff_3/mapping/RX-Dig6_bt1_sort.bam.temp -@ 6 -m 2G ../TargetSeq-cas9-RUX-25/cutoff_3/mapping/RX-Dig6_bt1.bam
+
+[Sun Jan  3 16:34:42 2021]
+rule bmat_plot:
+    input: ../TargetSeq-cas9-RUX-25/cutoff_3/mapping/RX-cas-4_bt1_sort.bmat
+    output: ../all_plot/cutoff_3.ext50/TargetSeq-cas9-RUX-25_RX-cas-4_cutoff_3_indel.ext50.pdf
+    jobid: 582
+    reason: Missing output files: ../all_plot/cutoff_3.ext50/TargetSeq-cas9-RUX-25_RX-cas-4_cutoff_3_indel.ext50.pdf
+    wildcards: cutoff=3, lib=cas9-RUX-25, sample=RX-cas-4
+
+
+        if [[ `cat ../TargetSeq-cas9-RUX-25/cutoff_3/mapping/RX-cas-4_bt1_sort.bmat |wc -l` -eq 1 ]]; then 
+        echo "bmat is empty" 
+        echo "will touch a empty file" 
+        touch ../all_plot/cutoff_3.ext50/TargetSeq-cas9-RUX-25_RX-cas-4_cutoff_3_indel.ext50.pdf
+        touch ../all_plot/cutoff_3.ext50/TargetSeq-cas9-RUX-25_RX-cas-4_cutoff_3_indel.ext50.pdf.empty.log
+        echo "decrease the cutoff and try again" > ../all_plot/cutoff_3.ext50/TargetSeq-cas9-RUX-25_RX-cas-4_cutoff_3_indel.ext50.pdf.empty.log
+        else
+        echo "bmat is ok!"
+        echo "start to plot"
+        echo `cat TCCCCTCTGCTGGATACCTCTGG`
+        sgRNA=`cat TCCCCTCTGCTGGATACCTCTGG`
+        # sgRNA=TCCCCTCTGCTGGATACCTCTGG
+        /home/zhaohuanan/zhaohn_HD/miniconda3/envs/snakepipes_target-seq/bin/python ./program/plot-targetseq-bmat-V04.py -i ../TargetSeq-cas9-RUX-25/cutoff_3/mapping/RX-cas-4_bt1_sort.bmat -o ../all_plot/cutoff_3.ext50/TargetSeq-cas9-RUX-25_RX-cas-4_cutoff_3_indel.ext50.pdf --region_extend_length 50 --sgRNA $sgRNA
+        fi
+        
+
+[Sun Jan  3 16:34:42 2021]
+rule bmat_plot:
+    input: ../TargetSeq-cas9-RUX-25/cutoff_3/mapping/RX-Dig1_bt1_sort.bmat
+    output: ../all_plot/cutoff_3.ext50/TargetSeq-cas9-RUX-25_RX-Dig1_cutoff_3_indel.ext50.pdf
+    jobid: 597
+    reason: Missing output files: ../all_plot/cutoff_3.ext50/TargetSeq-cas9-RUX-25_RX-Dig1_cutoff_3_indel.ext50.pdf
+    wildcards: cutoff=3, lib=cas9-RUX-25, sample=RX-Dig1
+
+
+        if [[ `cat ../TargetSeq-cas9-RUX-25/cutoff_3/mapping/RX-Dig1_bt1_sort.bmat |wc -l` -eq 1 ]]; then 
+        echo "bmat is empty" 
+        echo "will touch a empty file" 
+        touch ../all_plot/cutoff_3.ext50/TargetSeq-cas9-RUX-25_RX-Dig1_cutoff_3_indel.ext50.pdf
+        touch ../all_plot/cutoff_3.ext50/TargetSeq-cas9-RUX-25_RX-Dig1_cutoff_3_indel.ext50.pdf.empty.log
+        echo "decrease the cutoff and try again" > ../all_plot/cutoff_3.ext50/TargetSeq-cas9-RUX-25_RX-Dig1_cutoff_3_indel.ext50.pdf.empty.log
+        else
+        echo "bmat is ok!"
+        echo "start to plot"
+        echo `cat TCCCCTCTGCTGGATACCTCTGG`
+        sgRNA=`cat TCCCCTCTGCTGGATACCTCTGG`
+        # sgRNA=TCCCCTCTGCTGGATACCTCTGG
+        /home/zhaohuanan/zhaohn_HD/miniconda3/envs/snakepipes_target-seq/bin/python ./program/plot-targetseq-bmat-V04.py -i ../TargetSeq-cas9-RUX-25/cutoff_3/mapping/RX-Dig1_bt1_sort.bmat -o ../all_plot/cutoff_3.ext50/TargetSeq-cas9-RUX-25_RX-Dig1_cutoff_3_indel.ext50.pdf --region_extend_length 50 --sgRNA $sgRNA
+        fi
+        
+
+[Sun Jan  3 16:34:42 2021]
+rule samtools_sort_by_position:
+    input: ../TargetSeq-cas9-RUX-25/cutoff_3/mapping/RX-cpf-3_bt1.bam
+    output: ../TargetSeq-cas9-RUX-25/cutoff_3/mapping/RX-cpf-3_bt1_sort.bam
+    jobid: 239
+    reason: Missing output files: ../TargetSeq-cas9-RUX-25/cutoff_3/mapping/RX-cpf-3_bt1_sort.bam
+    wildcards: lib=cas9-RUX-25, cutoff=3, sample=RX-cpf-3
+
+/home/zhaohuanan/zhaohn_HD/miniconda3/bin/samtools sort -O BAM -o ../TargetSeq-cas9-RUX-25/cutoff_3/mapping/RX-cpf-3_bt1_sort.bam -T ../TargetSeq-cas9-RUX-25/cutoff_3/mapping/RX-cpf-3_bt1_sort.bam.temp -@ 6 -m 2G ../TargetSeq-cas9-RUX-25/cutoff_3/mapping/RX-cpf-3_bt1.bam
+
+[Sun Jan  3 16:34:42 2021]
+rule parse_mpileup:
+    input: ../TargetSeq-cas9-RUX-25/cutoff_3/mapping/RX-cas-5_bt1_sort.mpileup
+    output: ../TargetSeq-cas9-RUX-25/cutoff_3/mapping/RX-cas-5_bt1_sort.bmat
+    jobid: 507
+    reason: Missing output files: ../TargetSeq-cas9-RUX-25/cutoff_3/mapping/RX-cas-5_bt1_sort.bmat
+    wildcards: lib=cas9-RUX-25, cutoff=3, sample=RX-cas-5
+
+/home/zhaohuanan/zhaohn_HD/miniconda3/envs/snakepipes_target-seq/bin/python ./program/parse-mpileup-V04.py -i ../TargetSeq-cas9-RUX-25/cutoff_3/mapping/RX-cas-5_bt1_sort.mpileup -o ../TargetSeq-cas9-RUX-25/cutoff_3/mapping/RX-cas-5_bt1_sort.bmat -n 0
+
+[Sun Jan  3 16:34:42 2021]
+rule bmat_plot:
+    input: ../TargetSeq-cas9-RUX-25/cutoff_3/mapping/RX-cpf-10_bt1_sort.bmat
+    output: ../all_plot/cutoff_3.ext50/TargetSeq-cas9-RUX-25_RX-cpf-10_cutoff_3_indel.ext50.pdf
+    jobid: 642
+    reason: Missing output files: ../all_plot/cutoff_3.ext50/TargetSeq-cas9-RUX-25_RX-cpf-10_cutoff_3_indel.ext50.pdf
+    wildcards: cutoff=3, lib=cas9-RUX-25, sample=RX-cpf-10
+
+
+        if [[ `cat ../TargetSeq-cas9-RUX-25/cutoff_3/mapping/RX-cpf-10_bt1_sort.bmat |wc -l` -eq 1 ]]; then 
+        echo "bmat is empty" 
+        echo "will touch a empty file" 
+        touch ../all_plot/cutoff_3.ext50/TargetSeq-cas9-RUX-25_RX-cpf-10_cutoff_3_indel.ext50.pdf
+        touch ../all_plot/cutoff_3.ext50/TargetSeq-cas9-RUX-25_RX-cpf-10_cutoff_3_indel.ext50.pdf.empty.log
+        echo "decrease the cutoff and try again" > ../all_plot/cutoff_3.ext50/TargetSeq-cas9-RUX-25_RX-cpf-10_cutoff_3_indel.ext50.pdf.empty.log
+        else
+        echo "bmat is ok!"
+        echo "start to plot"
+        echo `cat TCCCCTCTGCTGGATACCTCTGG`
+        sgRNA=`cat TCCCCTCTGCTGGATACCTCTGG`
+        # sgRNA=TCCCCTCTGCTGGATACCTCTGG
+        /home/zhaohuanan/zhaohn_HD/miniconda3/envs/snakepipes_target-seq/bin/python ./program/plot-targetseq-bmat-V04.py -i ../TargetSeq-cas9-RUX-25/cutoff_3/mapping/RX-cpf-10_bt1_sort.bmat -o ../all_plot/cutoff_3.ext50/TargetSeq-cas9-RUX-25_RX-cpf-10_cutoff_3_indel.ext50.pdf --region_extend_length 50 --sgRNA $sgRNA
+        fi
+        
+
+[Sun Jan  3 16:34:42 2021]
+rule bmat_plot:
+    input: ../TargetSeq-cas9-RUX-25/cutoff_10/mapping/RX-ontarget_bt1_sort.bmat
+    output: ../all_plot/cutoff_10.ext50/TargetSeq-cas9-RUX-25_RX-ontarget_cutoff_10_indel.ext50.pdf
+    jobid: 650
+    reason: Missing output files: ../all_plot/cutoff_10.ext50/TargetSeq-cas9-RUX-25_RX-ontarget_cutoff_10_indel.ext50.pdf
+    wildcards: cutoff=10, lib=cas9-RUX-25, sample=RX-ontarget
+
+
+        if [[ `cat ../TargetSeq-cas9-RUX-25/cutoff_10/mapping/RX-ontarget_bt1_sort.bmat |wc -l` -eq 1 ]]; then 
+        echo "bmat is empty" 
+        echo "will touch a empty file" 
+        touch ../all_plot/cutoff_10.ext50/TargetSeq-cas9-RUX-25_RX-ontarget_cutoff_10_indel.ext50.pdf
+        touch ../all_plot/cutoff_10.ext50/TargetSeq-cas9-RUX-25_RX-ontarget_cutoff_10_indel.ext50.pdf.empty.log
+        echo "decrease the cutoff and try again" > ../all_plot/cutoff_10.ext50/TargetSeq-cas9-RUX-25_RX-ontarget_cutoff_10_indel.ext50.pdf.empty.log
+        else
+        echo "bmat is ok!"
+        echo "start to plot"
+        echo `cat TCCCCTCTGCTGGATACCTCTGG`
+        sgRNA=`cat TCCCCTCTGCTGGATACCTCTGG`
+        # sgRNA=TCCCCTCTGCTGGATACCTCTGG
+        /home/zhaohuanan/zhaohn_HD/miniconda3/envs/snakepipes_target-seq/bin/python ./program/plot-targetseq-bmat-V04.py -i ../TargetSeq-cas9-RUX-25/cutoff_10/mapping/RX-ontarget_bt1_sort.bmat -o ../all_plot/cutoff_10.ext50/TargetSeq-cas9-RUX-25_RX-ontarget_cutoff_10_indel.ext50.pdf --region_extend_length 50 --sgRNA $sgRNA
+        fi
+        
+[Sun Jan  3 16:34:42 2021]
+Error in rule bmat_plot:
+    jobid: 582
+    output: ../all_plot/cutoff_3.ext50/TargetSeq-cas9-RUX-25_RX-cas-4_cutoff_3_indel.ext50.pdf
+    shell:
+        
+        if [[ `cat ../TargetSeq-cas9-RUX-25/cutoff_3/mapping/RX-cas-4_bt1_sort.bmat |wc -l` -eq 1 ]]; then 
+        echo "bmat is empty" 
+        echo "will touch a empty file" 
+        touch ../all_plot/cutoff_3.ext50/TargetSeq-cas9-RUX-25_RX-cas-4_cutoff_3_indel.ext50.pdf
+        touch ../all_plot/cutoff_3.ext50/TargetSeq-cas9-RUX-25_RX-cas-4_cutoff_3_indel.ext50.pdf.empty.log
+        echo "decrease the cutoff and try again" > ../all_plot/cutoff_3.ext50/TargetSeq-cas9-RUX-25_RX-cas-4_cutoff_3_indel.ext50.pdf.empty.log
+        else
+        echo "bmat is ok!"
+        echo "start to plot"
+        echo `cat TCCCCTCTGCTGGATACCTCTGG`
+        sgRNA=`cat TCCCCTCTGCTGGATACCTCTGG`
+        # sgRNA=TCCCCTCTGCTGGATACCTCTGG
+        /home/zhaohuanan/zhaohn_HD/miniconda3/envs/snakepipes_target-seq/bin/python ./program/plot-targetseq-bmat-V04.py -i ../TargetSeq-cas9-RUX-25/cutoff_3/mapping/RX-cas-4_bt1_sort.bmat -o ../all_plot/cutoff_3.ext50/TargetSeq-cas9-RUX-25_RX-cas-4_cutoff_3_indel.ext50.pdf --region_extend_length 50 --sgRNA $sgRNA
+        fi
+        
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+
+[Sun Jan  3 16:34:42 2021]
+rule parse_mpileup:
+    input: ../TargetSeq-cas9-RUX-25/cutoff_10/mapping/RX-cas-2_bt1_sort.mpileup
+    output: ../TargetSeq-cas9-RUX-25/cutoff_10/mapping/RX-cas-2_bt1_sort.bmat
+    jobid: 500
+    reason: Missing output files: ../TargetSeq-cas9-RUX-25/cutoff_10/mapping/RX-cas-2_bt1_sort.bmat
+    wildcards: lib=cas9-RUX-25, cutoff=10, sample=RX-cas-2
+
+/home/zhaohuanan/zhaohn_HD/miniconda3/envs/snakepipes_target-seq/bin/python ./program/parse-mpileup-V04.py -i ../TargetSeq-cas9-RUX-25/cutoff_10/mapping/RX-cas-2_bt1_sort.mpileup -o ../TargetSeq-cas9-RUX-25/cutoff_10/mapping/RX-cas-2_bt1_sort.bmat -n 0
+[Sun Jan  3 16:34:42 2021]
+Error in rule bmat_plot:
+    jobid: 597
+    output: ../all_plot/cutoff_3.ext50/TargetSeq-cas9-RUX-25_RX-Dig1_cutoff_3_indel.ext50.pdf
+    shell:
+        
+        if [[ `cat ../TargetSeq-cas9-RUX-25/cutoff_3/mapping/RX-Dig1_bt1_sort.bmat |wc -l` -eq 1 ]]; then 
+        echo "bmat is empty" 
+        echo "will touch a empty file" 
+        touch ../all_plot/cutoff_3.ext50/TargetSeq-cas9-RUX-25_RX-Dig1_cutoff_3_indel.ext50.pdf
+        touch ../all_plot/cutoff_3.ext50/TargetSeq-cas9-RUX-25_RX-Dig1_cutoff_3_indel.ext50.pdf.empty.log
+        echo "decrease the cutoff and try again" > ../all_plot/cutoff_3.ext50/TargetSeq-cas9-RUX-25_RX-Dig1_cutoff_3_indel.ext50.pdf.empty.log
+        else
+        echo "bmat is ok!"
+        echo "start to plot"
+        echo `cat TCCCCTCTGCTGGATACCTCTGG`
+        sgRNA=`cat TCCCCTCTGCTGGATACCTCTGG`
+        # sgRNA=TCCCCTCTGCTGGATACCTCTGG
+        /home/zhaohuanan/zhaohn_HD/miniconda3/envs/snakepipes_target-seq/bin/python ./program/plot-targetseq-bmat-V04.py -i ../TargetSeq-cas9-RUX-25/cutoff_3/mapping/RX-Dig1_bt1_sort.bmat -o ../all_plot/cutoff_3.ext50/TargetSeq-cas9-RUX-25_RX-Dig1_cutoff_3_indel.ext50.pdf --region_extend_length 50 --sgRNA $sgRNA
+        fi
+        
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+
+[Sun Jan  3 16:34:42 2021]
+rule spike_in_mpileup:
+    input: ../TargetSeq-cas9-RUX-25/cutoff_5/mapping/RX-Dig3_bt1_sort.bam, ../TargetSeq-cas9-RUX-25/cutoff_5/mapping/RX-Dig3_bt1_sort.bam.bai
+    output: ../TargetSeq-cas9-RUX-25/cutoff_5/mapping/RX-Dig3_bt1_sort.mpileup
+    jobid: 448
+    reason: Missing output files: ../TargetSeq-cas9-RUX-25/cutoff_5/mapping/RX-Dig3_bt1_sort.mpileup
+    wildcards: lib=cas9-RUX-25, cutoff=5, sample=RX-Dig3
+
+/home/zhaohuanan/zhaohn_HD/miniconda3/bin/samtools mpileup ../TargetSeq-cas9-RUX-25/cutoff_5/mapping/RX-Dig3_bt1_sort.bam --reference ../reference.fasta/RX-Dig3.ref.upper.fa --max-depth 10000000 -q 20 -Q 20 > ../TargetSeq-cas9-RUX-25/cutoff_5/mapping/RX-Dig3_bt1_sort.mpileup 
+
+[Sun Jan  3 16:34:42 2021]
+rule samtools_index:
+    input: ../TargetSeq-cas9-RUX-25/cutoff_5/mapping/RX-cas-7_bt1_sort.bam
+    output: ../TargetSeq-cas9-RUX-25/cutoff_5/mapping/RX-cas-7_bt1_sort.bam.bai
+    jobid: 358
+    reason: Missing output files: ../TargetSeq-cas9-RUX-25/cutoff_5/mapping/RX-cas-7_bt1_sort.bam.bai
+    wildcards: lib=cas9-RUX-25, cutoff=5, sample=RX-cas-7
+
+/home/zhaohuanan/zhaohn_HD/miniconda3/bin/samtools index -@ 6 ../TargetSeq-cas9-RUX-25/cutoff_5/mapping/RX-cas-7_bt1_sort.bam ../TargetSeq-cas9-RUX-25/cutoff_5/mapping/RX-cas-7_bt1_sort.bam.bai
+
+[Sun Jan  3 16:34:42 2021]
+rule parse_mpileup:
+    input: ../TargetSeq-cas9-RUX-25/cutoff_5/mapping/RX-Dig8_bt1_sort.mpileup
+    output: ../TargetSeq-cas9-RUX-25/cutoff_5/mapping/RX-Dig8_bt1_sort.bmat
+    jobid: 538
+    reason: Missing output files: ../TargetSeq-cas9-RUX-25/cutoff_5/mapping/RX-Dig8_bt1_sort.bmat
+    wildcards: lib=cas9-RUX-25, cutoff=5, sample=RX-Dig8
+
+/home/zhaohuanan/zhaohn_HD/miniconda3/envs/snakepipes_target-seq/bin/python ./program/parse-mpileup-V04.py -i ../TargetSeq-cas9-RUX-25/cutoff_5/mapping/RX-Dig8_bt1_sort.mpileup -o ../TargetSeq-cas9-RUX-25/cutoff_5/mapping/RX-Dig8_bt1_sort.bmat -n 0
+
+[Sun Jan  3 16:34:42 2021]
+rule parse_mpileup:
+    input: ../TargetSeq-cas9-RUX-25/cutoff_5/mapping/RX-cas-5_bt1_sort.mpileup
+    output: ../TargetSeq-cas9-RUX-25/cutoff_5/mapping/RX-cas-5_bt1_sort.bmat
+    jobid: 508
+    reason: Missing output files: ../TargetSeq-cas9-RUX-25/cutoff_5/mapping/RX-cas-5_bt1_sort.bmat
+    wildcards: lib=cas9-RUX-25, cutoff=5, sample=RX-cas-5
+
+/home/zhaohuanan/zhaohn_HD/miniconda3/envs/snakepipes_target-seq/bin/python ./program/parse-mpileup-V04.py -i ../TargetSeq-cas9-RUX-25/cutoff_5/mapping/RX-cas-5_bt1_sort.mpileup -o ../TargetSeq-cas9-RUX-25/cutoff_5/mapping/RX-cas-5_bt1_sort.bmat -n 0
+[Sun Jan  3 16:34:42 2021]
+Error in rule bmat_plot:
+    jobid: 642
+    output: ../all_plot/cutoff_3.ext50/TargetSeq-cas9-RUX-25_RX-cpf-10_cutoff_3_indel.ext50.pdf
+    shell:
+        
+        if [[ `cat ../TargetSeq-cas9-RUX-25/cutoff_3/mapping/RX-cpf-10_bt1_sort.bmat |wc -l` -eq 1 ]]; then 
+        echo "bmat is empty" 
+        echo "will touch a empty file" 
+        touch ../all_plot/cutoff_3.ext50/TargetSeq-cas9-RUX-25_RX-cpf-10_cutoff_3_indel.ext50.pdf
+        touch ../all_plot/cutoff_3.ext50/TargetSeq-cas9-RUX-25_RX-cpf-10_cutoff_3_indel.ext50.pdf.empty.log
+        echo "decrease the cutoff and try again" > ../all_plot/cutoff_3.ext50/TargetSeq-cas9-RUX-25_RX-cpf-10_cutoff_3_indel.ext50.pdf.empty.log
+        else
+        echo "bmat is ok!"
+        echo "start to plot"
+        echo `cat TCCCCTCTGCTGGATACCTCTGG`
+        sgRNA=`cat TCCCCTCTGCTGGATACCTCTGG`
+        # sgRNA=TCCCCTCTGCTGGATACCTCTGG
+        /home/zhaohuanan/zhaohn_HD/miniconda3/envs/snakepipes_target-seq/bin/python ./program/plot-targetseq-bmat-V04.py -i ../TargetSeq-cas9-RUX-25/cutoff_3/mapping/RX-cpf-10_bt1_sort.bmat -o ../all_plot/cutoff_3.ext50/TargetSeq-cas9-RUX-25_RX-cpf-10_cutoff_3_indel.ext50.pdf --region_extend_length 50 --sgRNA $sgRNA
+        fi
+        
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+[Sun Jan  3 16:34:42 2021]
+Finished job 209.
+1 of 188 steps (0.53%) done
+
+[Sun Jan  3 16:34:42 2021]
+rule parse_mpileup:
+    input: ../TargetSeq-cas9-RUX-25/cutoff_5/mapping/RX-cpf-6_bt1_sort.mpileup
+    output: ../TargetSeq-cas9-RUX-25/cutoff_5/mapping/RX-cpf-6_bt1_sort.bmat
+    jobid: 553
+    reason: Missing output files: ../TargetSeq-cas9-RUX-25/cutoff_5/mapping/RX-cpf-6_bt1_sort.bmat
+    wildcards: lib=cas9-RUX-25, cutoff=5, sample=RX-cpf-6
+[Sun Jan  3 16:34:42 2021]
+
+Error in rule bmat_plot:
+/home/zhaohuanan/zhaohn_HD/miniconda3/envs/snakepipes_target-seq/bin/python ./program/parse-mpileup-V04.py -i ../TargetSeq-cas9-RUX-25/cutoff_5/mapping/RX-cpf-6_bt1_sort.mpileup -o ../TargetSeq-cas9-RUX-25/cutoff_5/mapping/RX-cpf-6_bt1_sort.bmat -n 0
+    jobid: 650
+    output: ../all_plot/cutoff_10.ext50/TargetSeq-cas9-RUX-25_RX-ontarget_cutoff_10_indel.ext50.pdf
+    shell:
+        
+        if [[ `cat ../TargetSeq-cas9-RUX-25/cutoff_10/mapping/RX-ontarget_bt1_sort.bmat |wc -l` -eq 1 ]]; then 
+        echo "bmat is empty" 
+        echo "will touch a empty file" 
+        touch ../all_plot/cutoff_10.ext50/TargetSeq-cas9-RUX-25_RX-ontarget_cutoff_10_indel.ext50.pdf
+        touch ../all_plot/cutoff_10.ext50/TargetSeq-cas9-RUX-25_RX-ontarget_cutoff_10_indel.ext50.pdf.empty.log
+        echo "decrease the cutoff and try again" > ../all_plot/cutoff_10.ext50/TargetSeq-cas9-RUX-25_RX-ontarget_cutoff_10_indel.ext50.pdf.empty.log
+        else
+        echo "bmat is ok!"
+        echo "start to plot"
+        echo `cat TCCCCTCTGCTGGATACCTCTGG`
+        sgRNA=`cat TCCCCTCTGCTGGATACCTCTGG`
+        # sgRNA=TCCCCTCTGCTGGATACCTCTGG
+        /home/zhaohuanan/zhaohn_HD/miniconda3/envs/snakepipes_target-seq/bin/python ./program/plot-targetseq-bmat-V04.py -i ../TargetSeq-cas9-RUX-25/cutoff_10/mapping/RX-ontarget_bt1_sort.bmat -o ../all_plot/cutoff_10.ext50/TargetSeq-cas9-RUX-25_RX-ontarget_cutoff_10_indel.ext50.pdf --region_extend_length 50 --sgRNA $sgRNA
+        fi
+        
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+
+[Sun Jan  3 16:34:42 2021]
+rule bmat_plot:
+    input: ../TargetSeq-cas9-RUX-25/cutoff_5/mapping/RX-cpf-10_bt1_sort.bmat
+    output: ../all_plot/cutoff_5.ext50/TargetSeq-cas9-RUX-25_RX-cpf-10_cutoff_5_indel.ext50.pdf
+    jobid: 643
+    reason: Missing output files: ../all_plot/cutoff_5.ext50/TargetSeq-cas9-RUX-25_RX-cpf-10_cutoff_5_indel.ext50.pdf
+    wildcards: cutoff=5, lib=cas9-RUX-25, sample=RX-cpf-10
+
+
+        if [[ `cat ../TargetSeq-cas9-RUX-25/cutoff_5/mapping/RX-cpf-10_bt1_sort.bmat |wc -l` -eq 1 ]]; then 
+        echo "bmat is empty" 
+        echo "will touch a empty file" 
+        touch ../all_plot/cutoff_5.ext50/TargetSeq-cas9-RUX-25_RX-cpf-10_cutoff_5_indel.ext50.pdf
+        touch ../all_plot/cutoff_5.ext50/TargetSeq-cas9-RUX-25_RX-cpf-10_cutoff_5_indel.ext50.pdf.empty.log
+        echo "decrease the cutoff and try again" > ../all_plot/cutoff_5.ext50/TargetSeq-cas9-RUX-25_RX-cpf-10_cutoff_5_indel.ext50.pdf.empty.log
+        else
+        echo "bmat is ok!"
+        echo "start to plot"
+        echo `cat TCCCCTCTGCTGGATACCTCTGG`
+        sgRNA=`cat TCCCCTCTGCTGGATACCTCTGG`
+        # sgRNA=TCCCCTCTGCTGGATACCTCTGG
+        /home/zhaohuanan/zhaohn_HD/miniconda3/envs/snakepipes_target-seq/bin/python ./program/plot-targetseq-bmat-V04.py -i ../TargetSeq-cas9-RUX-25/cutoff_5/mapping/RX-cpf-10_bt1_sort.bmat -o ../all_plot/cutoff_5.ext50/TargetSeq-cas9-RUX-25_RX-cpf-10_cutoff_5_indel.ext50.pdf --region_extend_length 50 --sgRNA $sgRNA
+        fi
+        
+
+[Sun Jan  3 16:34:42 2021]
+rule samtools_index:
+    input: ../TargetSeq-cas9-RUX-25/cutoff_3/mapping/RX-cas-3_bt1_sort.bam
+    output: ../TargetSeq-cas9-RUX-25/cutoff_3/mapping/RX-cas-3_bt1_sort.bam.bai
+    jobid: 345
+    reason: Missing output files: ../TargetSeq-cas9-RUX-25/cutoff_3/mapping/RX-cas-3_bt1_sort.bam.bai
+    wildcards: lib=cas9-RUX-25, cutoff=3, sample=RX-cas-3
+
+/home/zhaohuanan/zhaohn_HD/miniconda3/bin/samtools index -@ 6 ../TargetSeq-cas9-RUX-25/cutoff_3/mapping/RX-cas-3_bt1_sort.bam ../TargetSeq-cas9-RUX-25/cutoff_3/mapping/RX-cas-3_bt1_sort.bam.bai
+
+[Sun Jan  3 16:34:42 2021]
+rule bmat_plot:
+    input: ../TargetSeq-cas9-RUX-25/cutoff_10/mapping/RX-cpf-5_bt1_sort.bmat
+    output: ../all_plot/cutoff_10.ext50/TargetSeq-cas9-RUX-25_RX-cpf-5_cutoff_10_indel.ext50.pdf
+    jobid: 629
+    reason: Missing output files: ../all_plot/cutoff_10.ext50/TargetSeq-cas9-RUX-25_RX-cpf-5_cutoff_10_indel.ext50.pdf
+    wildcards: cutoff=10, lib=cas9-RUX-25, sample=RX-cpf-5
+
+
+        if [[ `cat ../TargetSeq-cas9-RUX-25/cutoff_10/mapping/RX-cpf-5_bt1_sort.bmat |wc -l` -eq 1 ]]; then 
+        echo "bmat is empty" 
+        echo "will touch a empty file" 
+        touch ../all_plot/cutoff_10.ext50/TargetSeq-cas9-RUX-25_RX-cpf-5_cutoff_10_indel.ext50.pdf
+        touch ../all_plot/cutoff_10.ext50/TargetSeq-cas9-RUX-25_RX-cpf-5_cutoff_10_indel.ext50.pdf.empty.log
+        echo "decrease the cutoff and try again" > ../all_plot/cutoff_10.ext50/TargetSeq-cas9-RUX-25_RX-cpf-5_cutoff_10_indel.ext50.pdf.empty.log
+        else
+        echo "bmat is ok!"
+        echo "start to plot"
+        echo `cat TCCCCTCTGCTGGATACCTCTGG`
+        sgRNA=`cat TCCCCTCTGCTGGATACCTCTGG`
+        # sgRNA=TCCCCTCTGCTGGATACCTCTGG
+        /home/zhaohuanan/zhaohn_HD/miniconda3/envs/snakepipes_target-seq/bin/python ./program/plot-targetseq-bmat-V04.py -i ../TargetSeq-cas9-RUX-25/cutoff_10/mapping/RX-cpf-5_bt1_sort.bmat -o ../all_plot/cutoff_10.ext50/TargetSeq-cas9-RUX-25_RX-cpf-5_cutoff_10_indel.ext50.pdf --region_extend_length 50 --sgRNA $sgRNA
+        fi
+        
+
+[Sun Jan  3 16:34:42 2021]
+rule bmat_plot:
+    input: ../TargetSeq-cas9-RUX-25/cutoff_10/mapping/RX-cpf-10_bt1_sort.bmat
+    output: ../all_plot/cutoff_10.ext50/TargetSeq-cas9-RUX-25_RX-cpf-10_cutoff_10_indel.ext50.pdf
+    jobid: 644
+    reason: Missing output files: ../all_plot/cutoff_10.ext50/TargetSeq-cas9-RUX-25_RX-cpf-10_cutoff_10_indel.ext50.pdf
+    wildcards: cutoff=10, lib=cas9-RUX-25, sample=RX-cpf-10
+
+
+        if [[ `cat ../TargetSeq-cas9-RUX-25/cutoff_10/mapping/RX-cpf-10_bt1_sort.bmat |wc -l` -eq 1 ]]; then 
+        echo "bmat is empty" 
+        echo "will touch a empty file" 
+        touch ../all_plot/cutoff_10.ext50/TargetSeq-cas9-RUX-25_RX-cpf-10_cutoff_10_indel.ext50.pdf
+        touch ../all_plot/cutoff_10.ext50/TargetSeq-cas9-RUX-25_RX-cpf-10_cutoff_10_indel.ext50.pdf.empty.log
+        echo "decrease the cutoff and try again" > ../all_plot/cutoff_10.ext50/TargetSeq-cas9-RUX-25_RX-cpf-10_cutoff_10_indel.ext50.pdf.empty.log
+        else
+        echo "bmat is ok!"
+        echo "start to plot"
+        echo `cat TCCCCTCTGCTGGATACCTCTGG`
+        sgRNA=`cat TCCCCTCTGCTGGATACCTCTGG`
+        # sgRNA=TCCCCTCTGCTGGATACCTCTGG
+        /home/zhaohuanan/zhaohn_HD/miniconda3/envs/snakepipes_target-seq/bin/python ./program/plot-targetseq-bmat-V04.py -i ../TargetSeq-cas9-RUX-25/cutoff_10/mapping/RX-cpf-10_bt1_sort.bmat -o ../all_plot/cutoff_10.ext50/TargetSeq-cas9-RUX-25_RX-cpf-10_cutoff_10_indel.ext50.pdf --region_extend_length 50 --sgRNA $sgRNA
+        fi
+        
+
+[Sun Jan  3 16:34:42 2021]
+rule bmat_plot:
+    input: ../TargetSeq-cas9-RUX-25/cutoff_10/mapping/RX-cpf-3_bt1_sort.bmat
+    output: ../all_plot/cutoff_10.ext50/TargetSeq-cas9-RUX-25_RX-cpf-3_cutoff_10_indel.ext50.pdf
+    jobid: 623
+    reason: Missing output files: ../all_plot/cutoff_10.ext50/TargetSeq-cas9-RUX-25_RX-cpf-3_cutoff_10_indel.ext50.pdf
+    wildcards: cutoff=10, lib=cas9-RUX-25, sample=RX-cpf-3
+
+
+        if [[ `cat ../TargetSeq-cas9-RUX-25/cutoff_10/mapping/RX-cpf-3_bt1_sort.bmat |wc -l` -eq 1 ]]; then 
+        echo "bmat is empty" 
+        echo "will touch a empty file" 
+        touch ../all_plot/cutoff_10.ext50/TargetSeq-cas9-RUX-25_RX-cpf-3_cutoff_10_indel.ext50.pdf
+        touch ../all_plot/cutoff_10.ext50/TargetSeq-cas9-RUX-25_RX-cpf-3_cutoff_10_indel.ext50.pdf.empty.log
+        echo "decrease the cutoff and try again" > ../all_plot/cutoff_10.ext50/TargetSeq-cas9-RUX-25_RX-cpf-3_cutoff_10_indel.ext50.pdf.empty.log
+        else
+        echo "bmat is ok!"
+        echo "start to plot"
+        echo `cat TCCCCTCTGCTGGATACCTCTGG`
+        sgRNA=`cat TCCCCTCTGCTGGATACCTCTGG`
+        # sgRNA=TCCCCTCTGCTGGATACCTCTGG
+        /home/zhaohuanan/zhaohn_HD/miniconda3/envs/snakepipes_target-seq/bin/python ./program/plot-targetseq-bmat-V04.py -i ../TargetSeq-cas9-RUX-25/cutoff_10/mapping/RX-cpf-3_bt1_sort.bmat -o ../all_plot/cutoff_10.ext50/TargetSeq-cas9-RUX-25_RX-cpf-3_cutoff_10_indel.ext50.pdf --region_extend_length 50 --sgRNA $sgRNA
+        fi
+        
+
+[Sun Jan  3 16:34:42 2021]
+rule parse_mpileup:
+    input: ../TargetSeq-cas9-RUX-25/cutoff_3/mapping/RX-cas-6_bt1_sort.mpileup
+    output: ../TargetSeq-cas9-RUX-25/cutoff_3/mapping/RX-cas-6_bt1_sort.bmat
+    jobid: 510
+    reason: Missing output files: ../TargetSeq-cas9-RUX-25/cutoff_3/mapping/RX-cas-6_bt1_sort.bmat
+    wildcards: lib=cas9-RUX-25, cutoff=3, sample=RX-cas-6
+
+/home/zhaohuanan/zhaohn_HD/miniconda3/envs/snakepipes_target-seq/bin/python ./program/parse-mpileup-V04.py -i ../TargetSeq-cas9-RUX-25/cutoff_3/mapping/RX-cas-6_bt1_sort.mpileup -o ../TargetSeq-cas9-RUX-25/cutoff_3/mapping/RX-cas-6_bt1_sort.bmat -n 0
+
+[Sun Jan  3 16:34:42 2021]
+rule bmat_plot:
+    input: ../TargetSeq-cas9-RUX-25/cutoff_10/mapping/RX-cpf-8_bt1_sort.bmat
+    output: ../all_plot/cutoff_10.ext50/TargetSeq-cas9-RUX-25_RX-cpf-8_cutoff_10_indel.ext50.pdf
+    jobid: 638
+    reason: Missing output files: ../all_plot/cutoff_10.ext50/TargetSeq-cas9-RUX-25_RX-cpf-8_cutoff_10_indel.ext50.pdf
+    wildcards: cutoff=10, lib=cas9-RUX-25, sample=RX-cpf-8
+
+
+        if [[ `cat ../TargetSeq-cas9-RUX-25/cutoff_10/mapping/RX-cpf-8_bt1_sort.bmat |wc -l` -eq 1 ]]; then 
+        echo "bmat is empty" 
+        echo "will touch a empty file" 
+        touch ../all_plot/cutoff_10.ext50/TargetSeq-cas9-RUX-25_RX-cpf-8_cutoff_10_indel.ext50.pdf
+        touch ../all_plot/cutoff_10.ext50/TargetSeq-cas9-RUX-25_RX-cpf-8_cutoff_10_indel.ext50.pdf.empty.log
+        echo "decrease the cutoff and try again" > ../all_plot/cutoff_10.ext50/TargetSeq-cas9-RUX-25_RX-cpf-8_cutoff_10_indel.ext50.pdf.empty.log
+        else
+        echo "bmat is ok!"
+        echo "start to plot"
+        echo `cat TCCCCTCTGCTGGATACCTCTGG`
+        sgRNA=`cat TCCCCTCTGCTGGATACCTCTGG`
+        # sgRNA=TCCCCTCTGCTGGATACCTCTGG
+        /home/zhaohuanan/zhaohn_HD/miniconda3/envs/snakepipes_target-seq/bin/python ./program/plot-targetseq-bmat-V04.py -i ../TargetSeq-cas9-RUX-25/cutoff_10/mapping/RX-cpf-8_bt1_sort.bmat -o ../all_plot/cutoff_10.ext50/TargetSeq-cas9-RUX-25_RX-cpf-8_cutoff_10_indel.ext50.pdf --region_extend_length 50 --sgRNA $sgRNA
+        fi
+        
+[Sun Jan  3 16:34:42 2021]
+Error in rule bmat_plot:
+    jobid: 643
+    output: ../all_plot/cutoff_5.ext50/TargetSeq-cas9-RUX-25_RX-cpf-10_cutoff_5_indel.ext50.pdf
+    shell:
+        
+        if [[ `cat ../TargetSeq-cas9-RUX-25/cutoff_5/mapping/RX-cpf-10_bt1_sort.bmat |wc -l` -eq 1 ]]; then 
+        echo "bmat is empty" 
+        echo "will touch a empty file" 
+        touch ../all_plot/cutoff_5.ext50/TargetSeq-cas9-RUX-25_RX-cpf-10_cutoff_5_indel.ext50.pdf
+        touch ../all_plot/cutoff_5.ext50/TargetSeq-cas9-RUX-25_RX-cpf-10_cutoff_5_indel.ext50.pdf.empty.log
+        echo "decrease the cutoff and try again" > ../all_plot/cutoff_5.ext50/TargetSeq-cas9-RUX-25_RX-cpf-10_cutoff_5_indel.ext50.pdf.empty.log
+        else
+        echo "bmat is ok!"
+        echo "start to plot"
+        echo `cat TCCCCTCTGCTGGATACCTCTGG`
+        sgRNA=`cat TCCCCTCTGCTGGATACCTCTGG`
+        # sgRNA=TCCCCTCTGCTGGATACCTCTGG
+        /home/zhaohuanan/zhaohn_HD/miniconda3/envs/snakepipes_target-seq/bin/python ./program/plot-targetseq-bmat-V04.py -i ../TargetSeq-cas9-RUX-25/cutoff_5/mapping/RX-cpf-10_bt1_sort.bmat -o ../all_plot/cutoff_5.ext50/TargetSeq-cas9-RUX-25_RX-cpf-10_cutoff_5_indel.ext50.pdf --region_extend_length 50 --sgRNA $sgRNA
+        fi
+        
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+
+[Sun Jan  3 16:34:42 2021]
+rule spike_in_mpileup:
+    input: ../TargetSeq-cas9-RUX-25/cutoff_5/mapping/RX-cas-2_bt1_sort.bam, ../TargetSeq-cas9-RUX-25/cutoff_5/mapping/RX-cas-2_bt1_sort.bam.bai
+    output: ../TargetSeq-cas9-RUX-25/cutoff_5/mapping/RX-cas-2_bt1_sort.mpileup
+    jobid: 421
+    reason: Missing output files: ../TargetSeq-cas9-RUX-25/cutoff_5/mapping/RX-cas-2_bt1_sort.mpileup
+    wildcards: lib=cas9-RUX-25, cutoff=5, sample=RX-cas-2
+
+/home/zhaohuanan/zhaohn_HD/miniconda3/bin/samtools mpileup ../TargetSeq-cas9-RUX-25/cutoff_5/mapping/RX-cas-2_bt1_sort.bam --reference ../reference.fasta/RX-cas-2.ref.upper.fa --max-depth 10000000 -q 20 -Q 20 > ../TargetSeq-cas9-RUX-25/cutoff_5/mapping/RX-cas-2_bt1_sort.mpileup 
+[Sun Jan  3 16:34:42 2021]
+Error in rule bmat_plot:
+    jobid: 629
+    output: ../all_plot/cutoff_10.ext50/TargetSeq-cas9-RUX-25_RX-cpf-5_cutoff_10_indel.ext50.pdf
+    shell:
+        
+        if [[ `cat ../TargetSeq-cas9-RUX-25/cutoff_10/mapping/RX-cpf-5_bt1_sort.bmat |wc -l` -eq 1 ]]; then 
+        echo "bmat is empty" 
+        echo "will touch a empty file" 
+        touch ../all_plot/cutoff_10.ext50/TargetSeq-cas9-RUX-25_RX-cpf-5_cutoff_10_indel.ext50.pdf
+        touch ../all_plot/cutoff_10.ext50/TargetSeq-cas9-RUX-25_RX-cpf-5_cutoff_10_indel.ext50.pdf.empty.log
+        echo "decrease the cutoff and try again" > ../all_plot/cutoff_10.ext50/TargetSeq-cas9-RUX-25_RX-cpf-5_cutoff_10_indel.ext50.pdf.empty.log
+        else
+        echo "bmat is ok!"
+        echo "start to plot"
+        echo `cat TCCCCTCTGCTGGATACCTCTGG`
+        sgRNA=`cat TCCCCTCTGCTGGATACCTCTGG`
+        # sgRNA=TCCCCTCTGCTGGATACCTCTGG
+        /home/zhaohuanan/zhaohn_HD/miniconda3/envs/snakepipes_target-seq/bin/python ./program/plot-targetseq-bmat-V04.py -i ../TargetSeq-cas9-RUX-25/cutoff_10/mapping/RX-cpf-5_bt1_sort.bmat -o ../all_plot/cutoff_10.ext50/TargetSeq-cas9-RUX-25_RX-cpf-5_cutoff_10_indel.ext50.pdf --region_extend_length 50 --sgRNA $sgRNA
+        fi
+        
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+
+[Sun Jan  3 16:34:42 2021]
+rule parse_mpileup:
+    input: ../TargetSeq-cas9-RUX-25/cutoff_5/mapping/RX-cpf-2_bt1_sort.mpileup
+    output: ../TargetSeq-cas9-RUX-25/cutoff_5/mapping/RX-cpf-2_bt1_sort.bmat
+    jobid: 541
+    reason: Missing output files: ../TargetSeq-cas9-RUX-25/cutoff_5/mapping/RX-cpf-2_bt1_sort.bmat
+    wildcards: lib=cas9-RUX-25, cutoff=5, sample=RX-cpf-2
+
+/home/zhaohuanan/zhaohn_HD/miniconda3/envs/snakepipes_target-seq/bin/python ./program/parse-mpileup-V04.py -i ../TargetSeq-cas9-RUX-25/cutoff_5/mapping/RX-cpf-2_bt1_sort.mpileup -o ../TargetSeq-cas9-RUX-25/cutoff_5/mapping/RX-cpf-2_bt1_sort.bmat -n 0
+
+[Sun Jan  3 16:34:42 2021]
+rule spike_in_mpileup:
+    input: ../TargetSeq-cas9-RUX-25/cutoff_5/mapping/RX-cpf-3_bt1_sort.bam, ../TargetSeq-cas9-RUX-25/cutoff_5/mapping/RX-cpf-3_bt1_sort.bam.bai
+    output: ../TargetSeq-cas9-RUX-25/cutoff_5/mapping/RX-cpf-3_bt1_sort.mpileup
+    jobid: 466
+    reason: Missing output files: ../TargetSeq-cas9-RUX-25/cutoff_5/mapping/RX-cpf-3_bt1_sort.mpileup
+    wildcards: lib=cas9-RUX-25, cutoff=5, sample=RX-cpf-3
+
+/home/zhaohuanan/zhaohn_HD/miniconda3/bin/samtools mpileup ../TargetSeq-cas9-RUX-25/cutoff_5/mapping/RX-cpf-3_bt1_sort.bam --reference ../reference.fasta/RX-cpf-3.ref.upper.fa --max-depth 10000000 -q 20 -Q 20 > ../TargetSeq-cas9-RUX-25/cutoff_5/mapping/RX-cpf-3_bt1_sort.mpileup 
+[Sun Jan  3 16:34:42 2021]
+Error in rule bmat_plot:
+    jobid: 644
+    output: ../all_plot/cutoff_10.ext50/TargetSeq-cas9-RUX-25_RX-cpf-10_cutoff_10_indel.ext50.pdf
+    shell:
+        
+        if [[ `cat ../TargetSeq-cas9-RUX-25/cutoff_10/mapping/RX-cpf-10_bt1_sort.bmat |wc -l` -eq 1 ]]; then 
+        echo "bmat is empty" 
+        echo "will touch a empty file" 
+        touch ../all_plot/cutoff_10.ext50/TargetSeq-cas9-RUX-25_RX-cpf-10_cutoff_10_indel.ext50.pdf
+        touch ../all_plot/cutoff_10.ext50/TargetSeq-cas9-RUX-25_RX-cpf-10_cutoff_10_indel.ext50.pdf.empty.log
+        echo "decrease the cutoff and try again" > ../all_plot/cutoff_10.ext50/TargetSeq-cas9-RUX-25_RX-cpf-10_cutoff_10_indel.ext50.pdf.empty.log
+        else
+        echo "bmat is ok!"
+        echo "start to plot"
+        echo `cat TCCCCTCTGCTGGATACCTCTGG`
+        sgRNA=`cat TCCCCTCTGCTGGATACCTCTGG`
+        # sgRNA=TCCCCTCTGCTGGATACCTCTGG
+        /home/zhaohuanan/zhaohn_HD/miniconda3/envs/snakepipes_target-seq/bin/python ./program/plot-targetseq-bmat-V04.py -i ../TargetSeq-cas9-RUX-25/cutoff_10/mapping/RX-cpf-10_bt1_sort.bmat -o ../all_plot/cutoff_10.ext50/TargetSeq-cas9-RUX-25_RX-cpf-10_cutoff_10_indel.ext50.pdf --region_extend_length 50 --sgRNA $sgRNA
+        fi
+        
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+
+[Sun Jan  3 16:34:42 2021]
+rule bmat_plot:
+    input: ../TargetSeq-cas9-RUX-25/cutoff_5/mapping/RX-Dig2_bt1_sort.bmat
+    output: ../all_plot/cutoff_5.ext50/TargetSeq-cas9-RUX-25_RX-Dig2_cutoff_5_indel.ext50.pdf
+    jobid: 601
+    reason: Missing output files: ../all_plot/cutoff_5.ext50/TargetSeq-cas9-RUX-25_RX-Dig2_cutoff_5_indel.ext50.pdf
+    wildcards: cutoff=5, lib=cas9-RUX-25, sample=RX-Dig2
+
+
+        if [[ `cat ../TargetSeq-cas9-RUX-25/cutoff_5/mapping/RX-Dig2_bt1_sort.bmat |wc -l` -eq 1 ]]; then 
+        echo "bmat is empty" 
+        echo "will touch a empty file" 
+        touch ../all_plot/cutoff_5.ext50/TargetSeq-cas9-RUX-25_RX-Dig2_cutoff_5_indel.ext50.pdf
+        touch ../all_plot/cutoff_5.ext50/TargetSeq-cas9-RUX-25_RX-Dig2_cutoff_5_indel.ext50.pdf.empty.log
+        echo "decrease the cutoff and try again" > ../all_plot/cutoff_5.ext50/TargetSeq-cas9-RUX-25_RX-Dig2_cutoff_5_indel.ext50.pdf.empty.log
+        else
+        echo "bmat is ok!"
+        echo "start to plot"
+        echo `cat TCCCCTCTGCTGGATACCTCTGG`
+        sgRNA=`cat TCCCCTCTGCTGGATACCTCTGG`
+        # sgRNA=TCCCCTCTGCTGGATACCTCTGG
+        /home/zhaohuanan/zhaohn_HD/miniconda3/envs/snakepipes_target-seq/bin/python ./program/plot-targetseq-bmat-V04.py -i ../TargetSeq-cas9-RUX-25/cutoff_5/mapping/RX-Dig2_bt1_sort.bmat -o ../all_plot/cutoff_5.ext50/TargetSeq-cas9-RUX-25_RX-Dig2_cutoff_5_indel.ext50.pdf --region_extend_length 50 --sgRNA $sgRNA
+        fi
+        
+[Sun Jan  3 16:34:42 2021]
+Error in rule bmat_plot:
+    jobid: 623
+    output: ../all_plot/cutoff_10.ext50/TargetSeq-cas9-RUX-25_RX-cpf-3_cutoff_10_indel.ext50.pdf
+    shell:
+        
+        if [[ `cat ../TargetSeq-cas9-RUX-25/cutoff_10/mapping/RX-cpf-3_bt1_sort.bmat |wc -l` -eq 1 ]]; then 
+        echo "bmat is empty" 
+        echo "will touch a empty file" 
+        touch ../all_plot/cutoff_10.ext50/TargetSeq-cas9-RUX-25_RX-cpf-3_cutoff_10_indel.ext50.pdf
+        touch ../all_plot/cutoff_10.ext50/TargetSeq-cas9-RUX-25_RX-cpf-3_cutoff_10_indel.ext50.pdf.empty.log
+        echo "decrease the cutoff and try again" > ../all_plot/cutoff_10.ext50/TargetSeq-cas9-RUX-25_RX-cpf-3_cutoff_10_indel.ext50.pdf.empty.log
+        else
+        echo "bmat is ok!"
+        echo "start to plot"
+        echo `cat TCCCCTCTGCTGGATACCTCTGG`
+        sgRNA=`cat TCCCCTCTGCTGGATACCTCTGG`
+        # sgRNA=TCCCCTCTGCTGGATACCTCTGG
+        /home/zhaohuanan/zhaohn_HD/miniconda3/envs/snakepipes_target-seq/bin/python ./program/plot-targetseq-bmat-V04.py -i ../TargetSeq-cas9-RUX-25/cutoff_10/mapping/RX-cpf-3_bt1_sort.bmat -o ../all_plot/cutoff_10.ext50/TargetSeq-cas9-RUX-25_RX-cpf-3_cutoff_10_indel.ext50.pdf --region_extend_length 50 --sgRNA $sgRNA
+        fi
+        
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+
+[Sun Jan  3 16:34:42 2021]
+rule samtools_index:
+    input: ../TargetSeq-cas9-RUX-25/cutoff_3/mapping/RX-cpf-7_bt1_sort.bam
+    output: ../TargetSeq-cas9-RUX-25/cutoff_3/mapping/RX-cpf-7_bt1_sort.bam.bai
+    jobid: 399
+    reason: Missing output files: ../TargetSeq-cas9-RUX-25/cutoff_3/mapping/RX-cpf-7_bt1_sort.bam.bai
+    wildcards: lib=cas9-RUX-25, cutoff=3, sample=RX-cpf-7
+
+/home/zhaohuanan/zhaohn_HD/miniconda3/bin/samtools index -@ 6 ../TargetSeq-cas9-RUX-25/cutoff_3/mapping/RX-cpf-7_bt1_sort.bam ../TargetSeq-cas9-RUX-25/cutoff_3/mapping/RX-cpf-7_bt1_sort.bam.bai
+[Sun Jan  3 16:34:42 2021]
+Error in rule bmat_plot:
+    jobid: 638
+    output: ../all_plot/cutoff_10.ext50/TargetSeq-cas9-RUX-25_RX-cpf-8_cutoff_10_indel.ext50.pdf
+    shell:
+        
+        if [[ `cat ../TargetSeq-cas9-RUX-25/cutoff_10/mapping/RX-cpf-8_bt1_sort.bmat |wc -l` -eq 1 ]]; then 
+        echo "bmat is empty" 
+        echo "will touch a empty file" 
+        touch ../all_plot/cutoff_10.ext50/TargetSeq-cas9-RUX-25_RX-cpf-8_cutoff_10_indel.ext50.pdf
+        touch ../all_plot/cutoff_10.ext50/TargetSeq-cas9-RUX-25_RX-cpf-8_cutoff_10_indel.ext50.pdf.empty.log
+        echo "decrease the cutoff and try again" > ../all_plot/cutoff_10.ext50/TargetSeq-cas9-RUX-25_RX-cpf-8_cutoff_10_indel.ext50.pdf.empty.log
+        else
+        echo "bmat is ok!"
+        echo "start to plot"
+        echo `cat TCCCCTCTGCTGGATACCTCTGG`
+        sgRNA=`cat TCCCCTCTGCTGGATACCTCTGG`
+        # sgRNA=TCCCCTCTGCTGGATACCTCTGG
+        /home/zhaohuanan/zhaohn_HD/miniconda3/envs/snakepipes_target-seq/bin/python ./program/plot-targetseq-bmat-V04.py -i ../TargetSeq-cas9-RUX-25/cutoff_10/mapping/RX-cpf-8_bt1_sort.bmat -o ../all_plot/cutoff_10.ext50/TargetSeq-cas9-RUX-25_RX-cpf-8_cutoff_10_indel.ext50.pdf --region_extend_length 50 --sgRNA $sgRNA
+        fi
+        
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+
+[Sun Jan  3 16:34:42 2021]
+rule spike_in_mpileup:
+    input: ../TargetSeq-cas9-RUX-25/cutoff_3/mapping/RX-cpf-6_bt1_sort.bam, ../TargetSeq-cas9-RUX-25/cutoff_3/mapping/RX-cpf-6_bt1_sort.bam.bai
+    output: ../TargetSeq-cas9-RUX-25/cutoff_3/mapping/RX-cpf-6_bt1_sort.mpileup
+    jobid: 474
+    reason: Missing output files: ../TargetSeq-cas9-RUX-25/cutoff_3/mapping/RX-cpf-6_bt1_sort.mpileup
+    wildcards: lib=cas9-RUX-25, cutoff=3, sample=RX-cpf-6
+
+/home/zhaohuanan/zhaohn_HD/miniconda3/bin/samtools mpileup ../TargetSeq-cas9-RUX-25/cutoff_3/mapping/RX-cpf-6_bt1_sort.bam --reference ../reference.fasta/RX-cpf-6.ref.upper.fa --max-depth 10000000 -q 20 -Q 20 > ../TargetSeq-cas9-RUX-25/cutoff_3/mapping/RX-cpf-6_bt1_sort.mpileup 
+
+[Sun Jan  3 16:34:42 2021]
+rule bmat_plot:
+    input: ../TargetSeq-cas9-RUX-25/cutoff_3/mapping/RX-Dig5_bt1_sort.bmat
+    output: ../all_plot/cutoff_3.ext50/TargetSeq-cas9-RUX-25_RX-Dig5_cutoff_3_indel.ext50.pdf
+    jobid: 609
+    reason: Missing output files: ../all_plot/cutoff_3.ext50/TargetSeq-cas9-RUX-25_RX-Dig5_cutoff_3_indel.ext50.pdf
+    wildcards: cutoff=3, lib=cas9-RUX-25, sample=RX-Dig5
+
+
+        if [[ `cat ../TargetSeq-cas9-RUX-25/cutoff_3/mapping/RX-Dig5_bt1_sort.bmat |wc -l` -eq 1 ]]; then 
+        echo "bmat is empty" 
+        echo "will touch a empty file" 
+        touch ../all_plot/cutoff_3.ext50/TargetSeq-cas9-RUX-25_RX-Dig5_cutoff_3_indel.ext50.pdf
+        touch ../all_plot/cutoff_3.ext50/TargetSeq-cas9-RUX-25_RX-Dig5_cutoff_3_indel.ext50.pdf.empty.log
+        echo "decrease the cutoff and try again" > ../all_plot/cutoff_3.ext50/TargetSeq-cas9-RUX-25_RX-Dig5_cutoff_3_indel.ext50.pdf.empty.log
+        else
+        echo "bmat is ok!"
+        echo "start to plot"
+        echo `cat TCCCCTCTGCTGGATACCTCTGG`
+        sgRNA=`cat TCCCCTCTGCTGGATACCTCTGG`
+        # sgRNA=TCCCCTCTGCTGGATACCTCTGG
+        /home/zhaohuanan/zhaohn_HD/miniconda3/envs/snakepipes_target-seq/bin/python ./program/plot-targetseq-bmat-V04.py -i ../TargetSeq-cas9-RUX-25/cutoff_3/mapping/RX-Dig5_bt1_sort.bmat -o ../all_plot/cutoff_3.ext50/TargetSeq-cas9-RUX-25_RX-Dig5_cutoff_3_indel.ext50.pdf --region_extend_length 50 --sgRNA $sgRNA
+        fi
+        
+
+[Sun Jan  3 16:34:42 2021]
+rule spike_in_mpileup:
+    input: ../TargetSeq-cas9-RUX-25/cutoff_5/mapping/RX-cpf-8_bt1_sort.bam, ../TargetSeq-cas9-RUX-25/cutoff_5/mapping/RX-cpf-8_bt1_sort.bam.bai
+    output: ../TargetSeq-cas9-RUX-25/cutoff_5/mapping/RX-cpf-8_bt1_sort.mpileup
+    jobid: 481
+    reason: Missing output files: ../TargetSeq-cas9-RUX-25/cutoff_5/mapping/RX-cpf-8_bt1_sort.mpileup
+    wildcards: lib=cas9-RUX-25, cutoff=5, sample=RX-cpf-8
+
+/home/zhaohuanan/zhaohn_HD/miniconda3/bin/samtools mpileup ../TargetSeq-cas9-RUX-25/cutoff_5/mapping/RX-cpf-8_bt1_sort.bam --reference ../reference.fasta/RX-cpf-8.ref.upper.fa --max-depth 10000000 -q 20 -Q 20 > ../TargetSeq-cas9-RUX-25/cutoff_5/mapping/RX-cpf-8_bt1_sort.mpileup 
+[Sun Jan  3 16:34:42 2021]
+Error in rule bmat_plot:
+    jobid: 601
+    output: ../all_plot/cutoff_5.ext50/TargetSeq-cas9-RUX-25_RX-Dig2_cutoff_5_indel.ext50.pdf
+    shell:
+        
+        if [[ `cat ../TargetSeq-cas9-RUX-25/cutoff_5/mapping/RX-Dig2_bt1_sort.bmat |wc -l` -eq 1 ]]; then 
+        echo "bmat is empty" 
+        echo "will touch a empty file" 
+        touch ../all_plot/cutoff_5.ext50/TargetSeq-cas9-RUX-25_RX-Dig2_cutoff_5_indel.ext50.pdf
+        touch ../all_plot/cutoff_5.ext50/TargetSeq-cas9-RUX-25_RX-Dig2_cutoff_5_indel.ext50.pdf.empty.log
+        echo "decrease the cutoff and try again" > ../all_plot/cutoff_5.ext50/TargetSeq-cas9-RUX-25_RX-Dig2_cutoff_5_indel.ext50.pdf.empty.log
+        else
+        echo "bmat is ok!"
+        echo "start to plot"
+        echo `cat TCCCCTCTGCTGGATACCTCTGG`
+        sgRNA=`cat TCCCCTCTGCTGGATACCTCTGG`
+        # sgRNA=TCCCCTCTGCTGGATACCTCTGG
+        /home/zhaohuanan/zhaohn_HD/miniconda3/envs/snakepipes_target-seq/bin/python ./program/plot-targetseq-bmat-V04.py -i ../TargetSeq-cas9-RUX-25/cutoff_5/mapping/RX-Dig2_bt1_sort.bmat -o ../all_plot/cutoff_5.ext50/TargetSeq-cas9-RUX-25_RX-Dig2_cutoff_5_indel.ext50.pdf --region_extend_length 50 --sgRNA $sgRNA
+        fi
+        
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+
+[Sun Jan  3 16:34:42 2021]
+rule parse_mpileup:
+    input: ../TargetSeq-cas9-RUX-25/cutoff_5/mapping/RX-cas-6_bt1_sort.mpileup
+    output: ../TargetSeq-cas9-RUX-25/cutoff_5/mapping/RX-cas-6_bt1_sort.bmat
+    jobid: 511
+    reason: Missing output files: ../TargetSeq-cas9-RUX-25/cutoff_5/mapping/RX-cas-6_bt1_sort.bmat
+    wildcards: lib=cas9-RUX-25, cutoff=5, sample=RX-cas-6
+
+/home/zhaohuanan/zhaohn_HD/miniconda3/envs/snakepipes_target-seq/bin/python ./program/parse-mpileup-V04.py -i ../TargetSeq-cas9-RUX-25/cutoff_5/mapping/RX-cas-6_bt1_sort.mpileup -o ../TargetSeq-cas9-RUX-25/cutoff_5/mapping/RX-cas-6_bt1_sort.bmat -n 0
+
+[Sun Jan  3 16:34:42 2021]
+rule parse_mpileup:
+    input: ../TargetSeq-cas9-RUX-25/cutoff_5/mapping/RX-cas-1_bt1_sort.mpileup
+    output: ../TargetSeq-cas9-RUX-25/cutoff_5/mapping/RX-cas-1_bt1_sort.bmat
+    jobid: 496
+    reason: Missing output files: ../TargetSeq-cas9-RUX-25/cutoff_5/mapping/RX-cas-1_bt1_sort.bmat
+    wildcards: lib=cas9-RUX-25, cutoff=5, sample=RX-cas-1
+
+/home/zhaohuanan/zhaohn_HD/miniconda3/envs/snakepipes_target-seq/bin/python ./program/parse-mpileup-V04.py -i ../TargetSeq-cas9-RUX-25/cutoff_5/mapping/RX-cas-1_bt1_sort.mpileup -o ../TargetSeq-cas9-RUX-25/cutoff_5/mapping/RX-cas-1_bt1_sort.bmat -n 0
+
+[Sun Jan  3 16:34:42 2021]
+rule samtools_sort_by_position:
+    input: ../TargetSeq-cas9-RUX-25/cutoff_3/mapping/RX-cpf-8_bt1.bam
+    output: ../TargetSeq-cas9-RUX-25/cutoff_3/mapping/RX-cpf-8_bt1_sort.bam
+    jobid: 289
+    reason: Missing output files: ../TargetSeq-cas9-RUX-25/cutoff_3/mapping/RX-cpf-8_bt1_sort.bam
+    wildcards: lib=cas9-RUX-25, cutoff=3, sample=RX-cpf-8
+
+/home/zhaohuanan/zhaohn_HD/miniconda3/bin/samtools sort -O BAM -o ../TargetSeq-cas9-RUX-25/cutoff_3/mapping/RX-cpf-8_bt1_sort.bam -T ../TargetSeq-cas9-RUX-25/cutoff_3/mapping/RX-cpf-8_bt1_sort.bam.temp -@ 6 -m 2G ../TargetSeq-cas9-RUX-25/cutoff_3/mapping/RX-cpf-8_bt1.bam
+
+[Sun Jan  3 16:34:42 2021]
+rule samtools_sort_by_position:
+    input: ../TargetSeq-cas9-RUX-25/cutoff_3/mapping/RX-cpf-11_bt1.bam
+    output: ../TargetSeq-cas9-RUX-25/cutoff_3/mapping/RX-cpf-11_bt1_sort.bam
+    jobid: 319
+    reason: Missing output files: ../TargetSeq-cas9-RUX-25/cutoff_3/mapping/RX-cpf-11_bt1_sort.bam
+    wildcards: lib=cas9-RUX-25, cutoff=3, sample=RX-cpf-11
+
+/home/zhaohuanan/zhaohn_HD/miniconda3/bin/samtools sort -O BAM -o ../TargetSeq-cas9-RUX-25/cutoff_3/mapping/RX-cpf-11_bt1_sort.bam -T ../TargetSeq-cas9-RUX-25/cutoff_3/mapping/RX-cpf-11_bt1_sort.bam.temp -@ 6 -m 2G ../TargetSeq-cas9-RUX-25/cutoff_3/mapping/RX-cpf-11_bt1.bam
+
+[Sun Jan  3 16:34:42 2021]
+rule spike_in_mpileup:
+    input: ../TargetSeq-cas9-RUX-25/cutoff_10/mapping/RX-cas-7_bt1_sort.bam, ../TargetSeq-cas9-RUX-25/cutoff_10/mapping/RX-cas-7_bt1_sort.bam.bai
+    output: ../TargetSeq-cas9-RUX-25/cutoff_10/mapping/RX-cas-7_bt1_sort.mpileup
+    jobid: 437
+    reason: Missing output files: ../TargetSeq-cas9-RUX-25/cutoff_10/mapping/RX-cas-7_bt1_sort.mpileup
+    wildcards: lib=cas9-RUX-25, cutoff=10, sample=RX-cas-7
+[Sun Jan  3 16:34:42 2021]
+
+Finished job 358.
+/home/zhaohuanan/zhaohn_HD/miniconda3/bin/samtools mpileup ../TargetSeq-cas9-RUX-25/cutoff_10/mapping/RX-cas-7_bt1_sort.bam --reference ../reference.fasta/RX-cas-7.ref.upper.fa --max-depth 10000000 -q 20 -Q 20 > ../TargetSeq-cas9-RUX-25/cutoff_10/mapping/RX-cas-7_bt1_sort.mpileup 
+2 of 188 steps (1%) done
+
+[Sun Jan  3 16:34:42 2021]
+rule parse_mpileup:
+    input: ../TargetSeq-cas9-RUX-25/cutoff_10/mapping/RX-Dig3_bt1_sort.mpileup
+    output: ../TargetSeq-cas9-RUX-25/cutoff_10/mapping/RX-Dig3_bt1_sort.bmat
+    jobid: 527
+    reason: Missing output files: ../TargetSeq-cas9-RUX-25/cutoff_10/mapping/RX-Dig3_bt1_sort.bmat
+    wildcards: lib=cas9-RUX-25, cutoff=10, sample=RX-Dig3
+
+/home/zhaohuanan/zhaohn_HD/miniconda3/envs/snakepipes_target-seq/bin/python ./program/parse-mpileup-V04.py -i ../TargetSeq-cas9-RUX-25/cutoff_10/mapping/RX-Dig3_bt1_sort.mpileup -o ../TargetSeq-cas9-RUX-25/cutoff_10/mapping/RX-Dig3_bt1_sort.bmat -n 0
+
+[Sun Jan  3 16:34:42 2021]
+rule bmat_plot:
+    input: ../TargetSeq-cas9-RUX-25/cutoff_5/mapping/RX-cas-3_bt1_sort.bmat
+    output: ../all_plot/cutoff_5.ext50/TargetSeq-cas9-RUX-25_RX-cas-3_cutoff_5_indel.ext50.pdf
+    jobid: 580
+    reason: Missing output files: ../all_plot/cutoff_5.ext50/TargetSeq-cas9-RUX-25_RX-cas-3_cutoff_5_indel.ext50.pdf
+    wildcards: cutoff=5, lib=cas9-RUX-25, sample=RX-cas-3
+
+
+        if [[ `cat ../TargetSeq-cas9-RUX-25/cutoff_5/mapping/RX-cas-3_bt1_sort.bmat |wc -l` -eq 1 ]]; then 
+        echo "bmat is empty" 
+        echo "will touch a empty file" 
+        touch ../all_plot/cutoff_5.ext50/TargetSeq-cas9-RUX-25_RX-cas-3_cutoff_5_indel.ext50.pdf
+        touch ../all_plot/cutoff_5.ext50/TargetSeq-cas9-RUX-25_RX-cas-3_cutoff_5_indel.ext50.pdf.empty.log
+        echo "decrease the cutoff and try again" > ../all_plot/cutoff_5.ext50/TargetSeq-cas9-RUX-25_RX-cas-3_cutoff_5_indel.ext50.pdf.empty.log
+        else
+        echo "bmat is ok!"
+        echo "start to plot"
+        echo `cat TCCCCTCTGCTGGATACCTCTGG`
+        sgRNA=`cat TCCCCTCTGCTGGATACCTCTGG`
+        # sgRNA=TCCCCTCTGCTGGATACCTCTGG
+        /home/zhaohuanan/zhaohn_HD/miniconda3/envs/snakepipes_target-seq/bin/python ./program/plot-targetseq-bmat-V04.py -i ../TargetSeq-cas9-RUX-25/cutoff_5/mapping/RX-cas-3_bt1_sort.bmat -o ../all_plot/cutoff_5.ext50/TargetSeq-cas9-RUX-25_RX-cas-3_cutoff_5_indel.ext50.pdf --region_extend_length 50 --sgRNA $sgRNA
+        fi
+        
+[Sun Jan  3 16:34:42 2021]
+Finished job 609.
+3 of 188 steps (2%) done
+
+[Sun Jan  3 16:34:42 2021]
+rule bmat_plot:
+    input: ../TargetSeq-cas9-RUX-25/cutoff_5/mapping/RX-cas-8_bt1_sort.bmat
+    output: ../all_plot/cutoff_5.ext50/TargetSeq-cas9-RUX-25_RX-cas-8_cutoff_5_indel.ext50.pdf
+    jobid: 595
+    reason: Missing output files: ../all_plot/cutoff_5.ext50/TargetSeq-cas9-RUX-25_RX-cas-8_cutoff_5_indel.ext50.pdf
+    wildcards: cutoff=5, lib=cas9-RUX-25, sample=RX-cas-8
+
+
+        if [[ `cat ../TargetSeq-cas9-RUX-25/cutoff_5/mapping/RX-cas-8_bt1_sort.bmat |wc -l` -eq 1 ]]; then 
+        echo "bmat is empty" 
+        echo "will touch a empty file" 
+        touch ../all_plot/cutoff_5.ext50/TargetSeq-cas9-RUX-25_RX-cas-8_cutoff_5_indel.ext50.pdf
+        touch ../all_plot/cutoff_5.ext50/TargetSeq-cas9-RUX-25_RX-cas-8_cutoff_5_indel.ext50.pdf.empty.log
+        echo "decrease the cutoff and try again" > ../all_plot/cutoff_5.ext50/TargetSeq-cas9-RUX-25_RX-cas-8_cutoff_5_indel.ext50.pdf.empty.log
+        else
+        echo "bmat is ok!"
+        echo "start to plot"
+        echo `cat TCCCCTCTGCTGGATACCTCTGG`
+        sgRNA=`cat TCCCCTCTGCTGGATACCTCTGG`
+        # sgRNA=TCCCCTCTGCTGGATACCTCTGG
+        /home/zhaohuanan/zhaohn_HD/miniconda3/envs/snakepipes_target-seq/bin/python ./program/plot-targetseq-bmat-V04.py -i ../TargetSeq-cas9-RUX-25/cutoff_5/mapping/RX-cas-8_bt1_sort.bmat -o ../all_plot/cutoff_5.ext50/TargetSeq-cas9-RUX-25_RX-cas-8_cutoff_5_indel.ext50.pdf --region_extend_length 50 --sgRNA $sgRNA
+        fi
+        
+
+[Sun Jan  3 16:34:42 2021]
+rule samtools_sort_by_position:
+    input: ../TargetSeq-cas9-RUX-25/cutoff_3/mapping/RX-cpf-5_bt1.bam
+    output: ../TargetSeq-cas9-RUX-25/cutoff_3/mapping/RX-cpf-5_bt1_sort.bam
+    jobid: 259
+    reason: Missing output files: ../TargetSeq-cas9-RUX-25/cutoff_3/mapping/RX-cpf-5_bt1_sort.bam
+    wildcards: lib=cas9-RUX-25, cutoff=3, sample=RX-cpf-5
+
+/home/zhaohuanan/zhaohn_HD/miniconda3/bin/samtools sort -O BAM -o ../TargetSeq-cas9-RUX-25/cutoff_3/mapping/RX-cpf-5_bt1_sort.bam -T ../TargetSeq-cas9-RUX-25/cutoff_3/mapping/RX-cpf-5_bt1_sort.bam.temp -@ 6 -m 2G ../TargetSeq-cas9-RUX-25/cutoff_3/mapping/RX-cpf-5_bt1.bam
+[Sun Jan  3 16:34:42 2021]
+Finished job 345.
+4 of 188 steps (2%) done
+
+[Sun Jan  3 16:34:42 2021]
+rule bmat_plot:
+    input: ../TargetSeq-cas9-RUX-25/cutoff_10/mapping/RX-cpf-11_bt1_sort.bmat
+    output: ../all_plot/cutoff_10.ext50/TargetSeq-cas9-RUX-25_RX-cpf-11_cutoff_10_indel.ext50.pdf
+    jobid: 647
+    reason: Missing output files: ../all_plot/cutoff_10.ext50/TargetSeq-cas9-RUX-25_RX-cpf-11_cutoff_10_indel.ext50.pdf
+    wildcards: cutoff=10, lib=cas9-RUX-25, sample=RX-cpf-11
+
+
+        if [[ `cat ../TargetSeq-cas9-RUX-25/cutoff_10/mapping/RX-cpf-11_bt1_sort.bmat |wc -l` -eq 1 ]]; then 
+        echo "bmat is empty" 
+        echo "will touch a empty file" 
+        touch ../all_plot/cutoff_10.ext50/TargetSeq-cas9-RUX-25_RX-cpf-11_cutoff_10_indel.ext50.pdf
+        touch ../all_plot/cutoff_10.ext50/TargetSeq-cas9-RUX-25_RX-cpf-11_cutoff_10_indel.ext50.pdf.empty.log
+        echo "decrease the cutoff and try again" > ../all_plot/cutoff_10.ext50/TargetSeq-cas9-RUX-25_RX-cpf-11_cutoff_10_indel.ext50.pdf.empty.log
+        else
+        echo "bmat is ok!"
+        echo "start to plot"
+        echo `cat TCCCCTCTGCTGGATACCTCTGG`
+        sgRNA=`cat TCCCCTCTGCTGGATACCTCTGG`
+        # sgRNA=TCCCCTCTGCTGGATACCTCTGG
+        /home/zhaohuanan/zhaohn_HD/miniconda3/envs/snakepipes_target-seq/bin/python ./program/plot-targetseq-bmat-V04.py -i ../TargetSeq-cas9-RUX-25/cutoff_10/mapping/RX-cpf-11_bt1_sort.bmat -o ../all_plot/cutoff_10.ext50/TargetSeq-cas9-RUX-25_RX-cpf-11_cutoff_10_indel.ext50.pdf --region_extend_length 50 --sgRNA $sgRNA
+        fi
+        
+
+[Sun Jan  3 16:34:42 2021]
+rule parse_mpileup:
+    input: ../TargetSeq-cas9-RUX-25/cutoff_10/mapping/RX-cpf-7_bt1_sort.mpileup
+    output: ../TargetSeq-cas9-RUX-25/cutoff_10/mapping/RX-cpf-7_bt1_sort.bmat
+    jobid: 557
+    reason: Missing output files: ../TargetSeq-cas9-RUX-25/cutoff_10/mapping/RX-cpf-7_bt1_sort.bmat
+    wildcards: lib=cas9-RUX-25, cutoff=10, sample=RX-cpf-7
+
+/home/zhaohuanan/zhaohn_HD/miniconda3/envs/snakepipes_target-seq/bin/python ./program/parse-mpileup-V04.py -i ../TargetSeq-cas9-RUX-25/cutoff_10/mapping/RX-cpf-7_bt1_sort.mpileup -o ../TargetSeq-cas9-RUX-25/cutoff_10/mapping/RX-cpf-7_bt1_sort.bmat -n 0
+
+[Sun Jan  3 16:34:42 2021]
+rule parse_mpileup:
+    input: ../TargetSeq-cas9-RUX-25/cutoff_5/mapping/RX-cas-4_bt1_sort.mpileup
+    output: ../TargetSeq-cas9-RUX-25/cutoff_5/mapping/RX-cas-4_bt1_sort.bmat
+    jobid: 505
+    reason: Missing output files: ../TargetSeq-cas9-RUX-25/cutoff_5/mapping/RX-cas-4_bt1_sort.bmat
+    wildcards: lib=cas9-RUX-25, cutoff=5, sample=RX-cas-4
+
+/home/zhaohuanan/zhaohn_HD/miniconda3/envs/snakepipes_target-seq/bin/python ./program/parse-mpileup-V04.py -i ../TargetSeq-cas9-RUX-25/cutoff_5/mapping/RX-cas-4_bt1_sort.mpileup -o ../TargetSeq-cas9-RUX-25/cutoff_5/mapping/RX-cas-4_bt1_sort.bmat -n 0
+
+[Sun Jan  3 16:34:42 2021]
+rule spike_in_mpileup:
+    input: ../TargetSeq-cas9-RUX-25/cutoff_10/mapping/RX-cpf-6_bt1_sort.bam, ../TargetSeq-cas9-RUX-25/cutoff_10/mapping/RX-cpf-6_bt1_sort.bam.bai
+    output: ../TargetSeq-cas9-RUX-25/cutoff_10/mapping/RX-cpf-6_bt1_sort.mpileup
+    jobid: 476
+    reason: Missing output files: ../TargetSeq-cas9-RUX-25/cutoff_10/mapping/RX-cpf-6_bt1_sort.mpileup
+    wildcards: lib=cas9-RUX-25, cutoff=10, sample=RX-cpf-6
+
+/home/zhaohuanan/zhaohn_HD/miniconda3/bin/samtools mpileup ../TargetSeq-cas9-RUX-25/cutoff_10/mapping/RX-cpf-6_bt1_sort.bam --reference ../reference.fasta/RX-cpf-6.ref.upper.fa --max-depth 10000000 -q 20 -Q 20 > ../TargetSeq-cas9-RUX-25/cutoff_10/mapping/RX-cpf-6_bt1_sort.mpileup 
+[Sun Jan  3 16:34:42 2021]
+Error in rule bmat_plot:
+    jobid: 580
+    output: ../all_plot/cutoff_5.ext50/TargetSeq-cas9-RUX-25_RX-cas-3_cutoff_5_indel.ext50.pdf
+    shell:
+        
+        if [[ `cat ../TargetSeq-cas9-RUX-25/cutoff_5/mapping/RX-cas-3_bt1_sort.bmat |wc -l` -eq 1 ]]; then 
+        echo "bmat is empty" 
+        echo "will touch a empty file" 
+        touch ../all_plot/cutoff_5.ext50/TargetSeq-cas9-RUX-25_RX-cas-3_cutoff_5_indel.ext50.pdf
+        touch ../all_plot/cutoff_5.ext50/TargetSeq-cas9-RUX-25_RX-cas-3_cutoff_5_indel.ext50.pdf.empty.log
+        echo "decrease the cutoff and try again" > ../all_plot/cutoff_5.ext50/TargetSeq-cas9-RUX-25_RX-cas-3_cutoff_5_indel.ext50.pdf.empty.log
+        else
+        echo "bmat is ok!"
+        echo "start to plot"
+        echo `cat TCCCCTCTGCTGGATACCTCTGG`
+        sgRNA=`cat TCCCCTCTGCTGGATACCTCTGG`
+        # sgRNA=TCCCCTCTGCTGGATACCTCTGG
+        /home/zhaohuanan/zhaohn_HD/miniconda3/envs/snakepipes_target-seq/bin/python ./program/plot-targetseq-bmat-V04.py -i ../TargetSeq-cas9-RUX-25/cutoff_5/mapping/RX-cas-3_bt1_sort.bmat -o ../all_plot/cutoff_5.ext50/TargetSeq-cas9-RUX-25_RX-cas-3_cutoff_5_indel.ext50.pdf --region_extend_length 50 --sgRNA $sgRNA
+        fi
+        
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+
+[Sun Jan  3 16:34:42 2021]
+rule bmat_plot:
+    input: ../TargetSeq-cas9-RUX-25/cutoff_10/mapping/RX-cas-3_bt1_sort.bmat
+    output: ../all_plot/cutoff_10.ext50/TargetSeq-cas9-RUX-25_RX-cas-3_cutoff_10_indel.ext50.pdf
+    jobid: 581
+    reason: Missing output files: ../all_plot/cutoff_10.ext50/TargetSeq-cas9-RUX-25_RX-cas-3_cutoff_10_indel.ext50.pdf
+    wildcards: cutoff=10, lib=cas9-RUX-25, sample=RX-cas-3
+
+
+        if [[ `cat ../TargetSeq-cas9-RUX-25/cutoff_10/mapping/RX-cas-3_bt1_sort.bmat |wc -l` -eq 1 ]]; then 
+        echo "bmat is empty" 
+        echo "will touch a empty file" 
+        touch ../all_plot/cutoff_10.ext50/TargetSeq-cas9-RUX-25_RX-cas-3_cutoff_10_indel.ext50.pdf
+        touch ../all_plot/cutoff_10.ext50/TargetSeq-cas9-RUX-25_RX-cas-3_cutoff_10_indel.ext50.pdf.empty.log
+        echo "decrease the cutoff and try again" > ../all_plot/cutoff_10.ext50/TargetSeq-cas9-RUX-25_RX-cas-3_cutoff_10_indel.ext50.pdf.empty.log
+        else
+        echo "bmat is ok!"
+        echo "start to plot"
+        echo `cat TCCCCTCTGCTGGATACCTCTGG`
+        sgRNA=`cat TCCCCTCTGCTGGATACCTCTGG`
+        # sgRNA=TCCCCTCTGCTGGATACCTCTGG
+        /home/zhaohuanan/zhaohn_HD/miniconda3/envs/snakepipes_target-seq/bin/python ./program/plot-targetseq-bmat-V04.py -i ../TargetSeq-cas9-RUX-25/cutoff_10/mapping/RX-cas-3_bt1_sort.bmat -o ../all_plot/cutoff_10.ext50/TargetSeq-cas9-RUX-25_RX-cas-3_cutoff_10_indel.ext50.pdf --region_extend_length 50 --sgRNA $sgRNA
+        fi
+        
+
+[Sun Jan  3 16:34:42 2021]
+rule bmat_plot:
+    input: ../TargetSeq-cas9-RUX-25/cutoff_10/mapping/RX-cas-8_bt1_sort.bmat
+    output: ../all_plot/cutoff_10.ext50/TargetSeq-cas9-RUX-25_RX-cas-8_cutoff_10_indel.ext50.pdf
+    jobid: 596
+    reason: Missing output files: ../all_plot/cutoff_10.ext50/TargetSeq-cas9-RUX-25_RX-cas-8_cutoff_10_indel.ext50.pdf
+    wildcards: cutoff=10, lib=cas9-RUX-25, sample=RX-cas-8
+
+
+        if [[ `cat ../TargetSeq-cas9-RUX-25/cutoff_10/mapping/RX-cas-8_bt1_sort.bmat |wc -l` -eq 1 ]]; then 
+        echo "bmat is empty" 
+        echo "will touch a empty file" 
+        touch ../all_plot/cutoff_10.ext50/TargetSeq-cas9-RUX-25_RX-cas-8_cutoff_10_indel.ext50.pdf
+        touch ../all_plot/cutoff_10.ext50/TargetSeq-cas9-RUX-25_RX-cas-8_cutoff_10_indel.ext50.pdf.empty.log
+        echo "decrease the cutoff and try again" > ../all_plot/cutoff_10.ext50/TargetSeq-cas9-RUX-25_RX-cas-8_cutoff_10_indel.ext50.pdf.empty.log
+        else
+        echo "bmat is ok!"
+        echo "start to plot"
+        echo `cat TCCCCTCTGCTGGATACCTCTGG`
+        sgRNA=`cat TCCCCTCTGCTGGATACCTCTGG`
+        # sgRNA=TCCCCTCTGCTGGATACCTCTGG
+        /home/zhaohuanan/zhaohn_HD/miniconda3/envs/snakepipes_target-seq/bin/python ./program/plot-targetseq-bmat-V04.py -i ../TargetSeq-cas9-RUX-25/cutoff_10/mapping/RX-cas-8_bt1_sort.bmat -o ../all_plot/cutoff_10.ext50/TargetSeq-cas9-RUX-25_RX-cas-8_cutoff_10_indel.ext50.pdf --region_extend_length 50 --sgRNA $sgRNA
+        fi
+        
+[Sun Jan  3 16:34:42 2021]
+Error in rule bmat_plot:
+    jobid: 595
+    output: ../all_plot/cutoff_5.ext50/TargetSeq-cas9-RUX-25_RX-cas-8_cutoff_5_indel.ext50.pdf
+    shell:
+        
+        if [[ `cat ../TargetSeq-cas9-RUX-25/cutoff_5/mapping/RX-cas-8_bt1_sort.bmat |wc -l` -eq 1 ]]; then 
+        echo "bmat is empty" 
+        echo "will touch a empty file" 
+        touch ../all_plot/cutoff_5.ext50/TargetSeq-cas9-RUX-25_RX-cas-8_cutoff_5_indel.ext50.pdf
+        touch ../all_plot/cutoff_5.ext50/TargetSeq-cas9-RUX-25_RX-cas-8_cutoff_5_indel.ext50.pdf.empty.log
+        echo "decrease the cutoff and try again" > ../all_plot/cutoff_5.ext50/TargetSeq-cas9-RUX-25_RX-cas-8_cutoff_5_indel.ext50.pdf.empty.log
+        else
+        echo "bmat is ok!"
+        echo "start to plot"
+        echo `cat TCCCCTCTGCTGGATACCTCTGG`
+        sgRNA=`cat TCCCCTCTGCTGGATACCTCTGG`
+        # sgRNA=TCCCCTCTGCTGGATACCTCTGG
+        /home/zhaohuanan/zhaohn_HD/miniconda3/envs/snakepipes_target-seq/bin/python ./program/plot-targetseq-bmat-V04.py -i ../TargetSeq-cas9-RUX-25/cutoff_5/mapping/RX-cas-8_bt1_sort.bmat -o ../all_plot/cutoff_5.ext50/TargetSeq-cas9-RUX-25_RX-cas-8_cutoff_5_indel.ext50.pdf --region_extend_length 50 --sgRNA $sgRNA
+        fi
+        
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+
+[Sun Jan  3 16:34:42 2021]
+rule bmat_plot:
+    input: ../TargetSeq-cas9-RUX-25/cutoff_3/mapping/RX-ontarget_bt1_sort.bmat
+    output: ../all_plot/cutoff_3.ext50/TargetSeq-cas9-RUX-25_RX-ontarget_cutoff_3_indel.ext50.pdf
+    jobid: 648
+    reason: Missing output files: ../all_plot/cutoff_3.ext50/TargetSeq-cas9-RUX-25_RX-ontarget_cutoff_3_indel.ext50.pdf
+    wildcards: cutoff=3, lib=cas9-RUX-25, sample=RX-ontarget
+
+
+        if [[ `cat ../TargetSeq-cas9-RUX-25/cutoff_3/mapping/RX-ontarget_bt1_sort.bmat |wc -l` -eq 1 ]]; then 
+        echo "bmat is empty" 
+        echo "will touch a empty file" 
+        touch ../all_plot/cutoff_3.ext50/TargetSeq-cas9-RUX-25_RX-ontarget_cutoff_3_indel.ext50.pdf
+        touch ../all_plot/cutoff_3.ext50/TargetSeq-cas9-RUX-25_RX-ontarget_cutoff_3_indel.ext50.pdf.empty.log
+        echo "decrease the cutoff and try again" > ../all_plot/cutoff_3.ext50/TargetSeq-cas9-RUX-25_RX-ontarget_cutoff_3_indel.ext50.pdf.empty.log
+        else
+        echo "bmat is ok!"
+        echo "start to plot"
+        echo `cat TCCCCTCTGCTGGATACCTCTGG`
+        sgRNA=`cat TCCCCTCTGCTGGATACCTCTGG`
+        # sgRNA=TCCCCTCTGCTGGATACCTCTGG
+        /home/zhaohuanan/zhaohn_HD/miniconda3/envs/snakepipes_target-seq/bin/python ./program/plot-targetseq-bmat-V04.py -i ../TargetSeq-cas9-RUX-25/cutoff_3/mapping/RX-ontarget_bt1_sort.bmat -o ../all_plot/cutoff_3.ext50/TargetSeq-cas9-RUX-25_RX-ontarget_cutoff_3_indel.ext50.pdf --region_extend_length 50 --sgRNA $sgRNA
+        fi
+        
+
+[Sun Jan  3 16:34:42 2021]
+rule parse_mpileup:
+    input: ../TargetSeq-cas9-RUX-25/cutoff_10/mapping/RX-Dig1_bt1_sort.mpileup
+    output: ../TargetSeq-cas9-RUX-25/cutoff_10/mapping/RX-Dig1_bt1_sort.bmat
+    jobid: 521
+    reason: Missing output files: ../TargetSeq-cas9-RUX-25/cutoff_10/mapping/RX-Dig1_bt1_sort.bmat
+    wildcards: lib=cas9-RUX-25, cutoff=10, sample=RX-Dig1
+
+/home/zhaohuanan/zhaohn_HD/miniconda3/envs/snakepipes_target-seq/bin/python ./program/parse-mpileup-V04.py -i ../TargetSeq-cas9-RUX-25/cutoff_10/mapping/RX-Dig1_bt1_sort.mpileup -o ../TargetSeq-cas9-RUX-25/cutoff_10/mapping/RX-Dig1_bt1_sort.bmat -n 0
+
+[Sun Jan  3 16:34:42 2021]
+rule spike_in_mpileup:
+    input: ../TargetSeq-cas9-RUX-25/cutoff_5/mapping/RX-cpf-11_bt1_sort.bam, ../TargetSeq-cas9-RUX-25/cutoff_5/mapping/RX-cpf-11_bt1_sort.bam.bai
+    output: ../TargetSeq-cas9-RUX-25/cutoff_5/mapping/RX-cpf-11_bt1_sort.mpileup
+    jobid: 490
+    reason: Missing output files: ../TargetSeq-cas9-RUX-25/cutoff_5/mapping/RX-cpf-11_bt1_sort.mpileup
+    wildcards: lib=cas9-RUX-25, cutoff=5, sample=RX-cpf-11
+
+/home/zhaohuanan/zhaohn_HD/miniconda3/bin/samtools mpileup ../TargetSeq-cas9-RUX-25/cutoff_5/mapping/RX-cpf-11_bt1_sort.bam --reference ../reference.fasta/RX-cpf-11.ref.upper.fa --max-depth 10000000 -q 20 -Q 20 > ../TargetSeq-cas9-RUX-25/cutoff_5/mapping/RX-cpf-11_bt1_sort.mpileup 
+[Sun Jan  3 16:34:42 2021]
+Error in rule bmat_plot:
+    jobid: 647
+    output: ../all_plot/cutoff_10.ext50/TargetSeq-cas9-RUX-25_RX-cpf-11_cutoff_10_indel.ext50.pdf
+    shell:
+        
+        if [[ `cat ../TargetSeq-cas9-RUX-25/cutoff_10/mapping/RX-cpf-11_bt1_sort.bmat |wc -l` -eq 1 ]]; then 
+        echo "bmat is empty" 
+        echo "will touch a empty file" 
+        touch ../all_plot/cutoff_10.ext50/TargetSeq-cas9-RUX-25_RX-cpf-11_cutoff_10_indel.ext50.pdf
+        touch ../all_plot/cutoff_10.ext50/TargetSeq-cas9-RUX-25_RX-cpf-11_cutoff_10_indel.ext50.pdf.empty.log
+        echo "decrease the cutoff and try again" > ../all_plot/cutoff_10.ext50/TargetSeq-cas9-RUX-25_RX-cpf-11_cutoff_10_indel.ext50.pdf.empty.log
+        else
+        echo "bmat is ok!"
+        echo "start to plot"
+        echo `cat TCCCCTCTGCTGGATACCTCTGG`
+        sgRNA=`cat TCCCCTCTGCTGGATACCTCTGG`
+        # sgRNA=TCCCCTCTGCTGGATACCTCTGG
+        /home/zhaohuanan/zhaohn_HD/miniconda3/envs/snakepipes_target-seq/bin/python ./program/plot-targetseq-bmat-V04.py -i ../TargetSeq-cas9-RUX-25/cutoff_10/mapping/RX-cpf-11_bt1_sort.bmat -o ../all_plot/cutoff_10.ext50/TargetSeq-cas9-RUX-25_RX-cpf-11_cutoff_10_indel.ext50.pdf --region_extend_length 50 --sgRNA $sgRNA
+        fi
+        
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+
+[Sun Jan  3 16:34:42 2021]
+rule bmat_plot:
+    input: ../TargetSeq-cas9-RUX-25/cutoff_5/mapping/RX-cpf-7_bt1_sort.bmat
+    output: ../all_plot/cutoff_5.ext50/TargetSeq-cas9-RUX-25_RX-cpf-7_cutoff_5_indel.ext50.pdf
+    jobid: 634
+    reason: Missing output files: ../all_plot/cutoff_5.ext50/TargetSeq-cas9-RUX-25_RX-cpf-7_cutoff_5_indel.ext50.pdf
+    wildcards: cutoff=5, lib=cas9-RUX-25, sample=RX-cpf-7
+
+
+        if [[ `cat ../TargetSeq-cas9-RUX-25/cutoff_5/mapping/RX-cpf-7_bt1_sort.bmat |wc -l` -eq 1 ]]; then 
+        echo "bmat is empty" 
+        echo "will touch a empty file" 
+        touch ../all_plot/cutoff_5.ext50/TargetSeq-cas9-RUX-25_RX-cpf-7_cutoff_5_indel.ext50.pdf
+        touch ../all_plot/cutoff_5.ext50/TargetSeq-cas9-RUX-25_RX-cpf-7_cutoff_5_indel.ext50.pdf.empty.log
+        echo "decrease the cutoff and try again" > ../all_plot/cutoff_5.ext50/TargetSeq-cas9-RUX-25_RX-cpf-7_cutoff_5_indel.ext50.pdf.empty.log
+        else
+        echo "bmat is ok!"
+        echo "start to plot"
+        echo `cat TCCCCTCTGCTGGATACCTCTGG`
+        sgRNA=`cat TCCCCTCTGCTGGATACCTCTGG`
+        # sgRNA=TCCCCTCTGCTGGATACCTCTGG
+        /home/zhaohuanan/zhaohn_HD/miniconda3/envs/snakepipes_target-seq/bin/python ./program/plot-targetseq-bmat-V04.py -i ../TargetSeq-cas9-RUX-25/cutoff_5/mapping/RX-cpf-7_bt1_sort.bmat -o ../all_plot/cutoff_5.ext50/TargetSeq-cas9-RUX-25_RX-cpf-7_cutoff_5_indel.ext50.pdf --region_extend_length 50 --sgRNA $sgRNA
+        fi
+        
+[Sun Jan  3 16:34:42 2021]
+Error in rule bmat_plot:
+    jobid: 581
+    output: ../all_plot/cutoff_10.ext50/TargetSeq-cas9-RUX-25_RX-cas-3_cutoff_10_indel.ext50.pdf
+    shell:
+        
+        if [[ `cat ../TargetSeq-cas9-RUX-25/cutoff_10/mapping/RX-cas-3_bt1_sort.bmat |wc -l` -eq 1 ]]; then 
+        echo "bmat is empty" 
+        echo "will touch a empty file" 
+        touch ../all_plot/cutoff_10.ext50/TargetSeq-cas9-RUX-25_RX-cas-3_cutoff_10_indel.ext50.pdf
+        touch ../all_plot/cutoff_10.ext50/TargetSeq-cas9-RUX-25_RX-cas-3_cutoff_10_indel.ext50.pdf.empty.log
+        echo "decrease the cutoff and try again" > ../all_plot/cutoff_10.ext50/TargetSeq-cas9-RUX-25_RX-cas-3_cutoff_10_indel.ext50.pdf.empty.log
+        else
+        echo "bmat is ok!"
+        echo "start to plot"
+        echo `cat TCCCCTCTGCTGGATACCTCTGG`
+        sgRNA=`cat TCCCCTCTGCTGGATACCTCTGG`
+        # sgRNA=TCCCCTCTGCTGGATACCTCTGG
+        /home/zhaohuanan/zhaohn_HD/miniconda3/envs/snakepipes_target-seq/bin/python ./program/plot-targetseq-bmat-V04.py -i ../TargetSeq-cas9-RUX-25/cutoff_10/mapping/RX-cas-3_bt1_sort.bmat -o ../all_plot/cutoff_10.ext50/TargetSeq-cas9-RUX-25_RX-cas-3_cutoff_10_indel.ext50.pdf --region_extend_length 50 --sgRNA $sgRNA
+        fi
+        
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+
+[Sun Jan  3 16:34:42 2021]
+rule bmat_plot:
+    input: ../TargetSeq-cas9-RUX-25/cutoff_5/mapping/RX-ontarget_bt1_sort.bmat
+    output: ../all_plot/cutoff_5.ext50/TargetSeq-cas9-RUX-25_RX-ontarget_cutoff_5_indel.ext50.pdf
+    jobid: 649
+    reason: Missing output files: ../all_plot/cutoff_5.ext50/TargetSeq-cas9-RUX-25_RX-ontarget_cutoff_5_indel.ext50.pdf
+    wildcards: cutoff=5, lib=cas9-RUX-25, sample=RX-ontarget
+
+
+        if [[ `cat ../TargetSeq-cas9-RUX-25/cutoff_5/mapping/RX-ontarget_bt1_sort.bmat |wc -l` -eq 1 ]]; then 
+        echo "bmat is empty" 
+        echo "will touch a empty file" 
+        touch ../all_plot/cutoff_5.ext50/TargetSeq-cas9-RUX-25_RX-ontarget_cutoff_5_indel.ext50.pdf
+        touch ../all_plot/cutoff_5.ext50/TargetSeq-cas9-RUX-25_RX-ontarget_cutoff_5_indel.ext50.pdf.empty.log
+        echo "decrease the cutoff and try again" > ../all_plot/cutoff_5.ext50/TargetSeq-cas9-RUX-25_RX-ontarget_cutoff_5_indel.ext50.pdf.empty.log
+        else
+        echo "bmat is ok!"
+        echo "start to plot"
+        echo `cat TCCCCTCTGCTGGATACCTCTGG`
+        sgRNA=`cat TCCCCTCTGCTGGATACCTCTGG`
+        # sgRNA=TCCCCTCTGCTGGATACCTCTGG
+        /home/zhaohuanan/zhaohn_HD/miniconda3/envs/snakepipes_target-seq/bin/python ./program/plot-targetseq-bmat-V04.py -i ../TargetSeq-cas9-RUX-25/cutoff_5/mapping/RX-ontarget_bt1_sort.bmat -o ../all_plot/cutoff_5.ext50/TargetSeq-cas9-RUX-25_RX-ontarget_cutoff_5_indel.ext50.pdf --region_extend_length 50 --sgRNA $sgRNA
+        fi
+        
+[Sun Jan  3 16:34:42 2021]
+Error in rule bmat_plot:
+    jobid: 596
+    output: ../all_plot/cutoff_10.ext50/TargetSeq-cas9-RUX-25_RX-cas-8_cutoff_10_indel.ext50.pdf
+    shell:
+        
+        if [[ `cat ../TargetSeq-cas9-RUX-25/cutoff_10/mapping/RX-cas-8_bt1_sort.bmat |wc -l` -eq 1 ]]; then 
+        echo "bmat is empty" 
+        echo "will touch a empty file" 
+        touch ../all_plot/cutoff_10.ext50/TargetSeq-cas9-RUX-25_RX-cas-8_cutoff_10_indel.ext50.pdf
+        touch ../all_plot/cutoff_10.ext50/TargetSeq-cas9-RUX-25_RX-cas-8_cutoff_10_indel.ext50.pdf.empty.log
+        echo "decrease the cutoff and try again" > ../all_plot/cutoff_10.ext50/TargetSeq-cas9-RUX-25_RX-cas-8_cutoff_10_indel.ext50.pdf.empty.log
+        else
+        echo "bmat is ok!"
+        echo "start to plot"
+        echo `cat TCCCCTCTGCTGGATACCTCTGG`
+        sgRNA=`cat TCCCCTCTGCTGGATACCTCTGG`
+        # sgRNA=TCCCCTCTGCTGGATACCTCTGG
+        /home/zhaohuanan/zhaohn_HD/miniconda3/envs/snakepipes_target-seq/bin/python ./program/plot-targetseq-bmat-V04.py -i ../TargetSeq-cas9-RUX-25/cutoff_10/mapping/RX-cas-8_bt1_sort.bmat -o ../all_plot/cutoff_10.ext50/TargetSeq-cas9-RUX-25_RX-cas-8_cutoff_10_indel.ext50.pdf --region_extend_length 50 --sgRNA $sgRNA
+        fi
+        
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+[Sun Jan  3 16:34:42 2021]
+Error in rule bmat_plot:
+    jobid: 648
+    output: ../all_plot/cutoff_3.ext50/TargetSeq-cas9-RUX-25_RX-ontarget_cutoff_3_indel.ext50.pdf
+    shell:
+        
+        if [[ `cat ../TargetSeq-cas9-RUX-25/cutoff_3/mapping/RX-ontarget_bt1_sort.bmat |wc -l` -eq 1 ]]; then 
+        echo "bmat is empty" 
+        echo "will touch a empty file" 
+        touch ../all_plot/cutoff_3.ext50/TargetSeq-cas9-RUX-25_RX-ontarget_cutoff_3_indel.ext50.pdf
+        touch ../all_plot/cutoff_3.ext50/TargetSeq-cas9-RUX-25_RX-ontarget_cutoff_3_indel.ext50.pdf.empty.log
+        echo "decrease the cutoff and try again" > ../all_plot/cutoff_3.ext50/TargetSeq-cas9-RUX-25_RX-ontarget_cutoff_3_indel.ext50.pdf.empty.log
+        else
+        echo "bmat is ok!"
+        echo "start to plot"
+        echo `cat TCCCCTCTGCTGGATACCTCTGG`
+        sgRNA=`cat TCCCCTCTGCTGGATACCTCTGG`
+        # sgRNA=TCCCCTCTGCTGGATACCTCTGG
+        /home/zhaohuanan/zhaohn_HD/miniconda3/envs/snakepipes_target-seq/bin/python ./program/plot-targetseq-bmat-V04.py -i ../TargetSeq-cas9-RUX-25/cutoff_3/mapping/RX-ontarget_bt1_sort.bmat -o ../all_plot/cutoff_3.ext50/TargetSeq-cas9-RUX-25_RX-ontarget_cutoff_3_indel.ext50.pdf --region_extend_length 50 --sgRNA $sgRNA
+        fi
+        
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+[Sun Jan  3 16:34:43 2021]
+Finished job 399.
+5 of 188 steps (3%) done
+[Sun Jan  3 16:34:43 2021]
+Error in rule bmat_plot:
+    jobid: 634
+    output: ../all_plot/cutoff_5.ext50/TargetSeq-cas9-RUX-25_RX-cpf-7_cutoff_5_indel.ext50.pdf
+    shell:
+        
+        if [[ `cat ../TargetSeq-cas9-RUX-25/cutoff_5/mapping/RX-cpf-7_bt1_sort.bmat |wc -l` -eq 1 ]]; then 
+        echo "bmat is empty" 
+        echo "will touch a empty file" 
+        touch ../all_plot/cutoff_5.ext50/TargetSeq-cas9-RUX-25_RX-cpf-7_cutoff_5_indel.ext50.pdf
+        touch ../all_plot/cutoff_5.ext50/TargetSeq-cas9-RUX-25_RX-cpf-7_cutoff_5_indel.ext50.pdf.empty.log
+        echo "decrease the cutoff and try again" > ../all_plot/cutoff_5.ext50/TargetSeq-cas9-RUX-25_RX-cpf-7_cutoff_5_indel.ext50.pdf.empty.log
+        else
+        echo "bmat is ok!"
+        echo "start to plot"
+        echo `cat TCCCCTCTGCTGGATACCTCTGG`
+        sgRNA=`cat TCCCCTCTGCTGGATACCTCTGG`
+        # sgRNA=TCCCCTCTGCTGGATACCTCTGG
+        /home/zhaohuanan/zhaohn_HD/miniconda3/envs/snakepipes_target-seq/bin/python ./program/plot-targetseq-bmat-V04.py -i ../TargetSeq-cas9-RUX-25/cutoff_5/mapping/RX-cpf-7_bt1_sort.bmat -o ../all_plot/cutoff_5.ext50/TargetSeq-cas9-RUX-25_RX-cpf-7_cutoff_5_indel.ext50.pdf --region_extend_length 50 --sgRNA $sgRNA
+        fi
+        
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+[Sun Jan  3 16:34:43 2021]
+Error in rule bmat_plot:
+    jobid: 649
+    output: ../all_plot/cutoff_5.ext50/TargetSeq-cas9-RUX-25_RX-ontarget_cutoff_5_indel.ext50.pdf
+    shell:
+        
+        if [[ `cat ../TargetSeq-cas9-RUX-25/cutoff_5/mapping/RX-ontarget_bt1_sort.bmat |wc -l` -eq 1 ]]; then 
+        echo "bmat is empty" 
+        echo "will touch a empty file" 
+        touch ../all_plot/cutoff_5.ext50/TargetSeq-cas9-RUX-25_RX-ontarget_cutoff_5_indel.ext50.pdf
+        touch ../all_plot/cutoff_5.ext50/TargetSeq-cas9-RUX-25_RX-ontarget_cutoff_5_indel.ext50.pdf.empty.log
+        echo "decrease the cutoff and try again" > ../all_plot/cutoff_5.ext50/TargetSeq-cas9-RUX-25_RX-ontarget_cutoff_5_indel.ext50.pdf.empty.log
+        else
+        echo "bmat is ok!"
+        echo "start to plot"
+        echo `cat TCCCCTCTGCTGGATACCTCTGG`
+        sgRNA=`cat TCCCCTCTGCTGGATACCTCTGG`
+        # sgRNA=TCCCCTCTGCTGGATACCTCTGG
+        /home/zhaohuanan/zhaohn_HD/miniconda3/envs/snakepipes_target-seq/bin/python ./program/plot-targetseq-bmat-V04.py -i ../TargetSeq-cas9-RUX-25/cutoff_5/mapping/RX-ontarget_bt1_sort.bmat -o ../all_plot/cutoff_5.ext50/TargetSeq-cas9-RUX-25_RX-ontarget_cutoff_5_indel.ext50.pdf --region_extend_length 50 --sgRNA $sgRNA
+        fi
+        
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+[Sun Jan  3 16:34:43 2021]
+Finished job 259.
+6 of 188 steps (3%) done
+[Sun Jan  3 16:34:43 2021]
+Finished job 319.
+7 of 188 steps (4%) done
+[Sun Jan  3 16:34:44 2021]
+Finished job 239.
+8 of 188 steps (4%) done
+[Sun Jan  3 16:34:45 2021]
+Finished job 289.
+9 of 188 steps (5%) done
+[Sun Jan  3 16:34:47 2021]
+Finished job 496.
+10 of 188 steps (5%) done
+[Sun Jan  3 16:34:52 2021]
+Finished job 557.
+11 of 188 steps (6%) done
+[Sun Jan  3 16:34:53 2021]
+Finished job 521.
+12 of 188 steps (6%) done
+[Sun Jan  3 16:34:57 2021]
+Finished job 508.
+13 of 188 steps (7%) done
+[Sun Jan  3 16:34:57 2021]
+Finished job 541.
+14 of 188 steps (7%) done
+[Sun Jan  3 16:34:58 2021]
+Finished job 500.
+15 of 188 steps (8%) done
+[Sun Jan  3 16:34:58 2021]
+Finished job 507.
+16 of 188 steps (9%) done
+[Sun Jan  3 16:34:59 2021]
+Finished job 505.
+17 of 188 steps (9%) done
+[Sun Jan  3 16:35:03 2021]
+Finished job 538.
+18 of 188 steps (10%) done
+[Sun Jan  3 16:35:04 2021]
+Finished job 527.
+19 of 188 steps (10%) done
+[Sun Jan  3 16:35:05 2021]
+Finished job 511.
+20 of 188 steps (11%) done
+[Sun Jan  3 16:35:07 2021]
+Finished job 553.
+21 of 188 steps (11%) done
+[Sun Jan  3 16:35:09 2021]
+Finished job 510.
+22 of 188 steps (12%) done
+Terminating processes on user request, this might take some time.
+[Sun Jan  3 16:35:15 2021]
+[Sun Jan  3 16:35:15 2021]
+Error in rule spike_in_mpileup:
+Error in rule spike_in_mpileup:
+    jobid: 476
+    jobid: 474
+    output: ../TargetSeq-cas9-RUX-25/cutoff_10/mapping/RX-cpf-6_bt1_sort.mpileup
+    output: ../TargetSeq-cas9-RUX-25/cutoff_3/mapping/RX-cpf-6_bt1_sort.mpileup
+    shell:
+        /home/zhaohuanan/zhaohn_HD/miniconda3/bin/samtools mpileup ../TargetSeq-cas9-RUX-25/cutoff_10/mapping/RX-cpf-6_bt1_sort.bam --reference ../reference.fasta/RX-cpf-6.ref.upper.fa --max-depth 10000000 -q 20 -Q 20 > ../TargetSeq-cas9-RUX-25/cutoff_10/mapping/RX-cpf-6_bt1_sort.mpileup 
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+    shell:
+        /home/zhaohuanan/zhaohn_HD/miniconda3/bin/samtools mpileup ../TargetSeq-cas9-RUX-25/cutoff_3/mapping/RX-cpf-6_bt1_sort.bam --reference ../reference.fasta/RX-cpf-6.ref.upper.fa --max-depth 10000000 -q 20 -Q 20 > ../TargetSeq-cas9-RUX-25/cutoff_3/mapping/RX-cpf-6_bt1_sort.mpileup 
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+
+Removing output files of failed job spike_in_mpileup since they might be corrupted:
+../TargetSeq-cas9-RUX-25/cutoff_10/mapping/RX-cpf-6_bt1_sort.mpileup
+[Sun Jan  3 16:35:15 2021]
+Error in rule spike_in_mpileup:
+    jobid: 437
+    output: ../TargetSeq-cas9-RUX-25/cutoff_10/mapping/RX-cas-7_bt1_sort.mpileup
+    shell:
+        /home/zhaohuanan/zhaohn_HD/miniconda3/bin/samtools mpileup ../TargetSeq-cas9-RUX-25/cutoff_10/mapping/RX-cas-7_bt1_sort.bam --reference ../reference.fasta/RX-cas-7.ref.upper.fa --max-depth 10000000 -q 20 -Q 20 > ../TargetSeq-cas9-RUX-25/cutoff_10/mapping/RX-cas-7_bt1_sort.mpileup 
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+[Sun Jan  3 16:35:15 2021]
+[Sun Jan  3 16:35:15 2021]
+Error in rule spike_in_mpileup:
+Error in rule spike_in_mpileup:
+    jobid: 466
+    jobid: 448
+    output: ../TargetSeq-cas9-RUX-25/cutoff_5/mapping/RX-cpf-3_bt1_sort.mpileup
+    output: ../TargetSeq-cas9-RUX-25/cutoff_5/mapping/RX-Dig3_bt1_sort.mpileup
+    shell:
+        /home/zhaohuanan/zhaohn_HD/miniconda3/bin/samtools mpileup ../TargetSeq-cas9-RUX-25/cutoff_5/mapping/RX-cpf-3_bt1_sort.bam --reference ../reference.fasta/RX-cpf-3.ref.upper.fa --max-depth 10000000 -q 20 -Q 20 > ../TargetSeq-cas9-RUX-25/cutoff_5/mapping/RX-cpf-3_bt1_sort.mpileup 
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+    shell:
+        /home/zhaohuanan/zhaohn_HD/miniconda3/bin/samtools mpileup ../TargetSeq-cas9-RUX-25/cutoff_5/mapping/RX-Dig3_bt1_sort.bam --reference ../reference.fasta/RX-Dig3.ref.upper.fa --max-depth 10000000 -q 20 -Q 20 > ../TargetSeq-cas9-RUX-25/cutoff_5/mapping/RX-Dig3_bt1_sort.mpileup 
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+
+[Sun Jan  3 16:35:15 2021]
+[Sun Jan  3 16:35:15 2021]
+Error in rule spike_in_mpileup:
+Error in rule spike_in_mpileup:
+    jobid: 490
+    jobid: 421
+    output: ../TargetSeq-cas9-RUX-25/cutoff_5/mapping/RX-cpf-11_bt1_sort.mpileup
+    output: ../TargetSeq-cas9-RUX-25/cutoff_5/mapping/RX-cas-2_bt1_sort.mpileup
+    shell:
+        /home/zhaohuanan/zhaohn_HD/miniconda3/bin/samtools mpileup ../TargetSeq-cas9-RUX-25/cutoff_5/mapping/RX-cpf-11_bt1_sort.bam --reference ../reference.fasta/RX-cpf-11.ref.upper.fa --max-depth 10000000 -q 20 -Q 20 > ../TargetSeq-cas9-RUX-25/cutoff_5/mapping/RX-cpf-11_bt1_sort.mpileup 
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+    shell:
+        /home/zhaohuanan/zhaohn_HD/miniconda3/bin/samtools mpileup ../TargetSeq-cas9-RUX-25/cutoff_5/mapping/RX-cas-2_bt1_sort.bam --reference ../reference.fasta/RX-cas-2.ref.upper.fa --max-depth 10000000 -q 20 -Q 20 > ../TargetSeq-cas9-RUX-25/cutoff_5/mapping/RX-cas-2_bt1_sort.mpileup 
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+
+[Sun Jan  3 16:35:15 2021]
+Error in rule spike_in_mpileup:
+    jobid: 481
+    output: ../TargetSeq-cas9-RUX-25/cutoff_5/mapping/RX-cpf-8_bt1_sort.mpileup
+    shell:
+        /home/zhaohuanan/zhaohn_HD/miniconda3/bin/samtools mpileup ../TargetSeq-cas9-RUX-25/cutoff_5/mapping/RX-cpf-8_bt1_sort.bam --reference ../reference.fasta/RX-cpf-8.ref.upper.fa --max-depth 10000000 -q 20 -Q 20 > ../TargetSeq-cas9-RUX-25/cutoff_5/mapping/RX-cpf-8_bt1_sort.mpileup 
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+Removing output files of failed job spike_in_mpileup since they might be corrupted:
+../TargetSeq-cas9-RUX-25/cutoff_3/mapping/RX-cpf-6_bt1_sort.mpileup
+Removing output files of failed job spike_in_mpileup since they might be corrupted:
+../TargetSeq-cas9-RUX-25/cutoff_10/mapping/RX-cas-7_bt1_sort.mpileup
+Removing output files of failed job spike_in_mpileup since they might be corrupted:
+../TargetSeq-cas9-RUX-25/cutoff_5/mapping/RX-cpf-3_bt1_sort.mpileup
+Removing output files of failed job spike_in_mpileup since they might be corrupted:
+../TargetSeq-cas9-RUX-25/cutoff_5/mapping/RX-Dig3_bt1_sort.mpileup
+Removing output files of failed job spike_in_mpileup since they might be corrupted:
+../TargetSeq-cas9-RUX-25/cutoff_5/mapping/RX-cpf-11_bt1_sort.mpileup
+Removing output files of failed job spike_in_mpileup since they might be corrupted:
+../TargetSeq-cas9-RUX-25/cutoff_5/mapping/RX-cas-2_bt1_sort.mpileup
+Removing output files of failed job spike_in_mpileup since they might be corrupted:
+../TargetSeq-cas9-RUX-25/cutoff_5/mapping/RX-cpf-8_bt1_sort.mpileup
+Complete log: /gpfs/user/zhaohuanan/3.project/25.2020-12_02_CBE_DetectSeq_paper_revise/TargetSeq_20201227/sub1_cpf1_cas9/snakepipes_target-seq/.snakemake/log/2021-01-03T163440.990919.snakemake.log
