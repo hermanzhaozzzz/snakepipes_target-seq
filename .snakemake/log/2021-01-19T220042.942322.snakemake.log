@@ -1,3 +1,0 @@
-NameError in line 100 of /gpfs/user/zhaohuanan/3.project/2020_CBE_topic/25.2020-12_02_CBE_DetectSeq_paper_revise/TargetSeq_20201227/sub1_cpf1_cas9_recheck_bwa_20210119/snakepipes_target-seq/step.06.snk.merge_fastq_to_plot_pipline.py:
-name 'LIBS' is not defined
-  File "/gpfs/user/zhaohuanan/3.project/2020_CBE_topic/25.2020-12_02_CBE_DetectSeq_paper_revise/TargetSeq_20201227/sub1_cpf1_cas9_recheck_bwa_20210119/snakepipes_target-seq/step.06.snk.merge_fastq_to_plot_pipline.py", line 100, in <module>
