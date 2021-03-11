@@ -1131,7 +1131,6 @@ if __name__ == '__main__':
 #     ls_break = [0, 0.05, 0.1, 1, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60, 70, 80, 100]
 #     ls_break = [0, 0.005, 0.01, 0.02, 0.03, 0.04, 0.05, 0.06, 0.07, 0.08, 0.1, 0.2, 0.3, 0.5, 0.7, 1.0, 1.5, 2.0, 3.0]
 #     ls_break = [0, 0.003, 0.006, 0.009, 0.012, 0.015, 0.018, 0.022, 0.026, 0.030, 0.035, 0.040, 0.05, 0.06, 0.07, 0.08, 1.00, 2.00, 3.00]
-# todo!!!!!
     df_plot_rec = df_plot.applymap(float) * 100
     ls_max = []
     for i in df_plot_rec.values.tolist():
@@ -1164,7 +1163,6 @@ if __name__ == '__main__':
 #         '#0D3776',
 #         '#0A306A'
 #     ]
-
     # data for test
     # df_plot = pd.read_csv('./df_plot.csv', index_col=0)
     # df_onTarget_Ref_color = pd.read_csv('./df_onTarget_Ref_color.csv', index_col=0)
@@ -1194,6 +1192,10 @@ if __name__ == '__main__':
     plt.xlim([0, figure_width_heatmap + 5])
     plt.ylim([-figure_height_heatmap - 0.5, 0])
     plt.axis("off")
+    
+    # export heatmap values
+    print("export heatmap reference table...")
+    df_plot_rec.to_csv(heatmap_path.replace(".pdf",".csv").replace(".PDF",".csv"))
 
     for row in range(df_plot_rec.shape[0]):
         row_name = df_plot_rec.index[row]

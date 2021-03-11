@@ -11,13 +11,13 @@ PYTHON = "/home/zhaohuanan/zhaohn_HD/miniconda3/envs/snakepipes_target-seq/bin/p
 
 
 
-PRIMER_INFO = "./primer_table/cpf1_cas9.txt"
+PRIMER_INFO = "./primer_table/checking.txt"
 
 
 
 CUTOFF = ["3","5","10"]
 
-LIBS = ['cas9-RUX-25', 'cpf1-RUX-21']
+LIBS = ['N1-veri-2', 'N4-1333-2', 'N4-1397R-2', 'N4-veri-2', 'N5-3-veri-2']
 
 
 rule all:

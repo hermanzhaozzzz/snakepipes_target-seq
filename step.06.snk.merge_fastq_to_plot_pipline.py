@@ -8,40 +8,26 @@
 
 CUTOFF = ["3","5","10"]
 
-# LIBS = ['cas9-RUX-25', 'cpf1-RUX-21'] 
+LIBS = ['N1-veri-2', 'N4-1333-2', 'N4-1397R-2', 'N4-veri-2', 'N5-3-veri-2']
 
-SAMPLES = ['RX-cas-1',
- 'RX-cas-2',
- 'RX-cas-3',
- 'RX-cas-4',
- 'RX-cas-5',
- 'RX-cas-6',
- 'RX-cas-7',
- 'RX-cas-8',
- 'RX-Dig1',
- 'RX-Dig2',
- 'RX-Dig3',
- 'RX-Dig4',
- 'RX-Dig5',
- 'RX-Dig6',
- 'RX-Dig8',
- 'RX-cpf-2',
- 'RX-cpf-3',
- 'RX-cpf-4',
- 'RX-cpf-5',
- 'RX-cpf-6',
- 'RX-cpf-7',
- 'RX-cpf-8',
- 'RX-cpf-9',
- 'RX-cpf-10',
- 'RX-cpf-11',
- 'RX-ontarget']
+SAMPLES = ['ND516-share-2',
+ 'ND516-share-3',
+ 'ND516-share-4',
+ 'ND516-share-5',
+ 'ND516-share-6',
+ 'ND516-share-7',
+ 'ND516-share-8',
+ 'ND516-share-9',
+ 'ND516-share-10',
+ 'ND516-share-11',
+ 'ND516-share-12',
+ 'ND516-share-13']
 
 READ_IDX = ["1","2"]
 
-defult_sgRNA_dict_for_plot = {
-        "RX": "GAGTCCTAGAGAAGAAAAAGGG"
-}
+# defult_sgRNA_dict_for_plot = {
+#         "RX": "GAGTCCTAGAGAAGAAAAAGGG"
+# }
 
 # defult_sgRNA_dict_for_plot = {
 #     "ABESite7":"GAATACTAAGCATAGACTCC", # 这里指的ABE-Site-7-On-Target
@@ -237,8 +223,8 @@ rule bmat_plot:
     output:
         "../all_plot/cutoff_{cutoff}.ext50/TargetSeq-{lib}_{sample}_cutoff_{cutoff}_indel.ext50.pdf"
     params:
-        sgRNA_seq = lambda wildcards, input: defult_sgRNA_dict_for_plot[input[0].split("/")[4].split("-")[0]],
-#         sgRNA_seq = '../reference.fasta/{sample}.sgRNA.upper.fa.seq'
+#         sgRNA_seq = lambda wildcards, input: defult_sgRNA_dict_for_plot[input[0].split("/")[4].split("-")[0]],
+        sgRNA_seq = '../reference.fasta/{sample}.sgRNA.upper.fa.seq'
     shell:
         """
         if [[ `cat {input} |wc -l` -eq 1 ]]; then 

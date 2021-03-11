@@ -8,34 +8,18 @@ BEDTOOLS = "/home/zhaohuanan/zhaohn_HD/miniconda3/bin/bedtools"
 
 # 1.txt 2.txt 3.txt.......7.txt
 
-SAMPLES = [ 
-    'RX-Dig1',
-    'RX-Dig2',
-    'RX-Dig3',
-    'RX-Dig4',
-    'RX-Dig5',
-    'RX-Dig6',
-    'RX-Dig8',
-    'RX-cas-1',
-    'RX-cas-2',
-    'RX-cas-3',
-    'RX-cas-4',
-    'RX-cas-5',
-    'RX-cas-6',
-    'RX-cas-7',
-    'RX-cas-8',
-    'RX-cpf-10',
-    'RX-cpf-11',
-    'RX-cpf-2',
-    'RX-cpf-3',
-    'RX-cpf-4',
-    'RX-cpf-5',
-    'RX-cpf-6',
-    'RX-cpf-7',
-    'RX-cpf-8',
-    'RX-cpf-9',
-    'RX-ontarget'
-]
+SAMPLES = ['ND516-share-10',
+ 'ND516-share-11',
+ 'ND516-share-12',
+ 'ND516-share-13',
+ 'ND516-share-2',
+ 'ND516-share-3',
+ 'ND516-share-4',
+ 'ND516-share-5',
+ 'ND516-share-6',
+ 'ND516-share-7',
+ 'ND516-share-8',
+ 'ND516-share-9']
 
 rule all:
     input:
@@ -61,7 +45,7 @@ rule getbed:
         temp('../reference.fasta/{sample}.sgRNA.bed')
     run:
         import os
-        for tab in ['cpf1_cas9']:
+        for tab in ['checking']:
             path = './primer_table/{index}.txt'.format(index=tab)
             f = open(path,'r')
             ls = [x.split("\t") for x in f.readlines()][1:]

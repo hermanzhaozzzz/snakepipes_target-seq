@@ -16,9 +16,9 @@ PYTHON2=/home/zhaohuanan/zhaohn_HD/miniconda3/envs/snakepipes_target-seq/bin/pyt
 
 # ########################################################################
 
-for case_name in cas9-RUX-25 cpf1-RUX-21
+for case_name in N4-veri-2 N1-veri-2 N5-3-veri-2 N4-1333-2 N4-1397R-2
 do
-    PRIMER_INFO=./primer_table/cpf1_cas9.txt
+    PRIMER_INFO=./primer_table/checking.txt
     
     
     fq1=../fastq/${case_name}_combined_R1.fastq.gz
