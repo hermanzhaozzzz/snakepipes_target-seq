@@ -25,19 +25,22 @@ MULTIQC = "/home/zhaohuanan/zhaohn_HD/miniconda3/bin/multiqc"
 # --------------------------------------------------------------->>>>>>>
 # vars
 # --------------------------------------------------------------->>>>>>>
-LIB = ['N1-veri-2', 'N4-1333-2', 'N4-1397R-2', 'N4-veri-2', 'N5-3-veri-2']
-REGION = ['ND516-share-10',
- 'ND516-share-11',
- 'ND516-share-12',
- 'ND516-share-13',
- 'ND516-share-2',
- 'ND516-share-3',
- 'ND516-share-4',
- 'ND516-share-5',
- 'ND516-share-6',
- 'ND516-share-7',
- 'ND516-share-8',
- 'ND516-share-9']
+LIB = ['33A',
+ '33A-M2',
+ 'BE4',
+ 'M2',
+ 'UGI-1-M2',
+ 'UGI-2-M2',
+ 'UGI-3-M2',
+ 'YE1',
+ 'YE1-33A',
+ 'YE1-M2']
+REGION = ['EMX1-Guideseq-10',
+ 'EMX1-Guideseq-13',
+ 'EMX1-Guideseq-2',
+ 'EMX1-Guideseq-4',
+ 'EMX1-OffNo-02',
+ 'EMX1-On-Target']
 
 
 

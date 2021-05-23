@@ -1,4 +1,4 @@
-GENOME_HG38 = "/home/zhaohuanan/zhaohn_HD/2.database/bwa_hg38/hg38_only_chromosome.fa"
+GENOME_HG38 = "/home/zhaohuanan/zhaohn_HD/2.database/db_genomes/genome_fa/genome_ucsc_hg38/genome_ucsc_hg38.fa"
 
 
 BWA = "/home/zhaohuanan/zhaohn_HD/miniconda3//bin/bwa"
@@ -8,18 +8,12 @@ BEDTOOLS = "/home/zhaohuanan/zhaohn_HD/miniconda3/bin/bedtools"
 
 # 1.txt 2.txt 3.txt.......7.txt
 
-SAMPLES = ['ND516-share-10',
- 'ND516-share-11',
- 'ND516-share-12',
- 'ND516-share-13',
- 'ND516-share-2',
- 'ND516-share-3',
- 'ND516-share-4',
- 'ND516-share-5',
- 'ND516-share-6',
- 'ND516-share-7',
- 'ND516-share-8',
- 'ND516-share-9']
+SAMPLES = ['EMX1-Guideseq-10',
+ 'EMX1-Guideseq-13',
+ 'EMX1-Guideseq-2',
+ 'EMX1-Guideseq-4',
+ 'EMX1-OffNo-02',
+ 'EMX1-On-Target']
 
 rule all:
     input:
@@ -45,7 +39,7 @@ rule getbed:
         temp('../reference.fasta/{sample}.sgRNA.bed')
     run:
         import os
-        for tab in ['checking']:
+        for tab in ['lib1']:
             path = './primer_table/{index}.txt'.format(index=tab)
             f = open(path,'r')
             ls = [x.split("\t") for x in f.readlines()][1:]

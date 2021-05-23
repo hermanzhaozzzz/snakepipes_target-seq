@@ -8,26 +8,31 @@
 
 CUTOFF = ["3","5","10"]
 
-LIBS = ['N1-veri-2', 'N4-1333-2', 'N4-1397R-2', 'N4-veri-2', 'N5-3-veri-2']
+LIBS = ['33A',
+ '33A-M2',
+ 'BE4',
+ 'M2',
+ 'UGI-1-M2',
+ 'UGI-2-M2',
+ 'UGI-3-M2',
+ 'YE1',
+ 'YE1-33A',
+ 'YE1-M2']
 
-SAMPLES = ['ND516-share-2',
- 'ND516-share-3',
- 'ND516-share-4',
- 'ND516-share-5',
- 'ND516-share-6',
- 'ND516-share-7',
- 'ND516-share-8',
- 'ND516-share-9',
- 'ND516-share-10',
- 'ND516-share-11',
- 'ND516-share-12',
- 'ND516-share-13']
+SAMPLES = [
+    'EMX1-Guideseq-10',
+    'EMX1-Guideseq-13',
+    'EMX1-Guideseq-2',
+    'EMX1-Guideseq-4',
+    'EMX1-OffNo-02',
+    'EMX1-On-Target'
+]
 
 READ_IDX = ["1","2"]
 
-# defult_sgRNA_dict_for_plot = {
-#         "RX": "GAGTCCTAGAGAAGAAAAAGGG"
-# }
+defult_sgRNA_dict_for_plot = {
+    "EMX1": "GAGTCCGAGCAGAAGAAGAAGGG",
+}
 
 # defult_sgRNA_dict_for_plot = {
 #     "ABESite7":"GAATACTAAGCATAGACTCC", # 这里指的ABE-Site-7-On-Target
@@ -223,8 +228,8 @@ rule bmat_plot:
     output:
         "../all_plot/cutoff_{cutoff}.ext50/TargetSeq-{lib}_{sample}_cutoff_{cutoff}_indel.ext50.pdf"
     params:
-#         sgRNA_seq = lambda wildcards, input: defult_sgRNA_dict_for_plot[input[0].split("/")[4].split("-")[0]],
-        sgRNA_seq = '../reference.fasta/{sample}.sgRNA.upper.fa.seq'
+        sgRNA_seq = lambda wildcards, input: defult_sgRNA_dict_for_plot[input[0].split("/")[4].split("-")[0]],
+#         sgRNA_seq = '../reference.fasta/{sample}.sgRNA.upper.fa.seq'
     shell:
         """
         if [[ `cat {input} |wc -l` -eq 1 ]]; then 
@@ -236,9 +241,9 @@ rule bmat_plot:
         else
         echo "bmat is ok!"
         echo "start to plot"
-        echo `cat {params.sgRNA_seq}`
-        sgRNA=`cat {params.sgRNA_seq}`
-        # sgRNA={params.sgRNA_seq}
+        #echo `cat {params.sgRNA_seq}`
+        #sgRNA=`cat {params.sgRNA_seq}`
+        sgRNA={params.sgRNA_seq}
         {PYTHON} ./program/plot-targetseq-bmat-V04.py -i {input} -o {output} --region_extend_length 50 --sgRNA $sgRNA
         fi
         """

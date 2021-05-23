@@ -16,9 +16,9 @@ PYTHON2=/home/zhaohuanan/zhaohn_HD/miniconda3/envs/snakepipes_target-seq/bin/pyt
 
 # ########################################################################
 
-for case_name in N4-veri-2 N1-veri-2 N5-3-veri-2 N4-1333-2 N4-1397R-2
+for case_name in 33A-M2 33A BE4 M2 UGI-1-M2 UGI-2-M2 UGI-3-M2 YE1-33A YE1-M2 YE1
 do
-    PRIMER_INFO=./primer_table/checking.txt
+    PRIMER_INFO=./primer_table/lib1.txt
     
     
     fq1=../fastq/${case_name}_combined_R1.fastq.gz
@@ -37,3 +37,13 @@ done
 
 
 echo "all done"
+
+
+
+
+
+
+
+
+
+

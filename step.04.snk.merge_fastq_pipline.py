@@ -11,13 +11,23 @@ PYTHON = "/home/zhaohuanan/zhaohn_HD/miniconda3/envs/snakepipes_target-seq/bin/p
 
 
 
-PRIMER_INFO = "./primer_table/checking.txt"
+PRIMER_INFO = "./primer_table/lib1.txt"
 
 
 
 CUTOFF = ["3","5","10"]
 
-LIBS = ['N1-veri-2', 'N4-1333-2', 'N4-1397R-2', 'N4-veri-2', 'N5-3-veri-2']
+LIBS = ['33A',
+ '33A-M2',
+ 'BE4',
+ 'M2',
+ 'UGI-1-M2',
+ 'UGI-2-M2',
+ 'UGI-3-M2',
+ 'YE1',
+ 'YE1-33A',
+ 'YE1-M2']
+
 
 
 rule all:
