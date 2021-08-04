@@ -314,6 +314,8 @@ if __name__ == '__main__':
             fq_2_obj = FastqRead(fq_2_list, phred=33)
 
             if fq_1_obj.read_id != fq_2_obj.read_id:
+                # DBUG
+                sys.stderr.write("error read pair: r1: %s, r2: %s" % (fq_1_obj.read_id, fq_2_obj.read_id))
                 raise IOError("read1 file not match with read2 file!")
 
             # get barcode sequence

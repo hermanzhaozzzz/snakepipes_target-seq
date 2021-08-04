@@ -1,0 +1,93 @@
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided cluster nodes: 12
+Job counts:
+	count	jobs
+	3	MergeFastq
+	1	all
+	4
+Select jobs to execute...
+
+[Tue Aug  3 21:06:36 2021]
+rule MergeFastq:
+    input: ../TargetSeq-ABE-HEK4-rep2
+    output: ../TargetSeq-ABE-HEK4-rep2/cutoff_10/ABE-HEK4-rep2_cutoff_10.report
+    log: ../TargetSeq-ABE-HEK4-rep2/cutoff_10/ABE-HEK4-rep2_cutoff_10.log
+    jobid: 3
+    reason: Missing output files: ../TargetSeq-ABE-HEK4-rep2/cutoff_10/ABE-HEK4-rep2_cutoff_10.report
+    wildcards: lib=ABE-HEK4-rep2, cutoff=10
+
+
+        /lustre1/chengqiyi_pkuhpc/zhaohn/0.apps/miniconda3/envs/snakepipes_py27/bin/python ./program/target_seq_merge_fq_V03.py         -i ../TargetSeq-ABE-HEK4-rep2         -p ./primer_table/ABE.txt         -o ../TargetSeq-ABE-HEK4-rep2/cutoff_10         -r ../TargetSeq-ABE-HEK4-rep2/cutoff_10/ABE-HEK4-rep2_cutoff_10.report         --MinMergeReadNumCutoff 10  > ../TargetSeq-ABE-HEK4-rep2/cutoff_10/ABE-HEK4-rep2_cutoff_10.log 2>&1
+        
+Submitted job 3 with external jobid 'Submitted batch job 10093114'.
+
+[Tue Aug  3 21:06:36 2021]
+rule MergeFastq:
+    input: ../TargetSeq-ABE-HEK4-rep2
+    output: ../TargetSeq-ABE-HEK4-rep2/cutoff_3/ABE-HEK4-rep2_cutoff_3.report
+    log: ../TargetSeq-ABE-HEK4-rep2/cutoff_3/ABE-HEK4-rep2_cutoff_3.log
+    jobid: 1
+    reason: Missing output files: ../TargetSeq-ABE-HEK4-rep2/cutoff_3/ABE-HEK4-rep2_cutoff_3.report
+    wildcards: lib=ABE-HEK4-rep2, cutoff=3
+
+
+        /lustre1/chengqiyi_pkuhpc/zhaohn/0.apps/miniconda3/envs/snakepipes_py27/bin/python ./program/target_seq_merge_fq_V03.py         -i ../TargetSeq-ABE-HEK4-rep2         -p ./primer_table/ABE.txt         -o ../TargetSeq-ABE-HEK4-rep2/cutoff_3         -r ../TargetSeq-ABE-HEK4-rep2/cutoff_3/ABE-HEK4-rep2_cutoff_3.report         --MinMergeReadNumCutoff 3  > ../TargetSeq-ABE-HEK4-rep2/cutoff_3/ABE-HEK4-rep2_cutoff_3.log 2>&1
+        
+Submitted job 1 with external jobid 'Submitted batch job 10093115'.
+
+[Tue Aug  3 21:06:36 2021]
+rule MergeFastq:
+    input: ../TargetSeq-ABE-HEK4-rep2
+    output: ../TargetSeq-ABE-HEK4-rep2/cutoff_5/ABE-HEK4-rep2_cutoff_5.report
+    log: ../TargetSeq-ABE-HEK4-rep2/cutoff_5/ABE-HEK4-rep2_cutoff_5.log
+    jobid: 2
+    reason: Missing output files: ../TargetSeq-ABE-HEK4-rep2/cutoff_5/ABE-HEK4-rep2_cutoff_5.report
+    wildcards: lib=ABE-HEK4-rep2, cutoff=5
+
+
+        /lustre1/chengqiyi_pkuhpc/zhaohn/0.apps/miniconda3/envs/snakepipes_py27/bin/python ./program/target_seq_merge_fq_V03.py         -i ../TargetSeq-ABE-HEK4-rep2         -p ./primer_table/ABE.txt         -o ../TargetSeq-ABE-HEK4-rep2/cutoff_5         -r ../TargetSeq-ABE-HEK4-rep2/cutoff_5/ABE-HEK4-rep2_cutoff_5.report         --MinMergeReadNumCutoff 5  > ../TargetSeq-ABE-HEK4-rep2/cutoff_5/ABE-HEK4-rep2_cutoff_5.log 2>&1
+        
+Submitted job 2 with external jobid 'Submitted batch job 10093116'.
+[Tue Aug  3 21:07:36 2021]
+Error in rule MergeFastq:
+    jobid: 3
+    output: ../TargetSeq-ABE-HEK4-rep2/cutoff_10/ABE-HEK4-rep2_cutoff_10.report
+    log: ../TargetSeq-ABE-HEK4-rep2/cutoff_10/ABE-HEK4-rep2_cutoff_10.log (check log file(s) for error message)
+    shell:
+        
+        /lustre1/chengqiyi_pkuhpc/zhaohn/0.apps/miniconda3/envs/snakepipes_py27/bin/python ./program/target_seq_merge_fq_V03.py         -i ../TargetSeq-ABE-HEK4-rep2         -p ./primer_table/ABE.txt         -o ../TargetSeq-ABE-HEK4-rep2/cutoff_10         -r ../TargetSeq-ABE-HEK4-rep2/cutoff_10/ABE-HEK4-rep2_cutoff_10.report         --MinMergeReadNumCutoff 10  > ../TargetSeq-ABE-HEK4-rep2/cutoff_10/ABE-HEK4-rep2_cutoff_10.log 2>&1
+        
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+    cluster_jobid: Submitted batch job 10093114
+
+Error executing rule MergeFastq on cluster (jobid: 3, external: Submitted batch job 10093114, jobscript: /lustre1/chengqiyi_pkuhpc/zhaohn/3.project/2021_ABE_topic/20210727_TargetSeq_batch1_ABE_ABE8e_ACBE_CBE-HEK4/snakepipes_target-seq/.snakemake/tmp._51gzkhj/snakejob.MergeFastq.3.sh). For error details see the cluster log and the log files of the involved rule(s).
+[Tue Aug  3 21:07:46 2021]
+Error in rule MergeFastq:
+    jobid: 1
+    output: ../TargetSeq-ABE-HEK4-rep2/cutoff_3/ABE-HEK4-rep2_cutoff_3.report
+    log: ../TargetSeq-ABE-HEK4-rep2/cutoff_3/ABE-HEK4-rep2_cutoff_3.log (check log file(s) for error message)
+    shell:
+        
+        /lustre1/chengqiyi_pkuhpc/zhaohn/0.apps/miniconda3/envs/snakepipes_py27/bin/python ./program/target_seq_merge_fq_V03.py         -i ../TargetSeq-ABE-HEK4-rep2         -p ./primer_table/ABE.txt         -o ../TargetSeq-ABE-HEK4-rep2/cutoff_3         -r ../TargetSeq-ABE-HEK4-rep2/cutoff_3/ABE-HEK4-rep2_cutoff_3.report         --MinMergeReadNumCutoff 3  > ../TargetSeq-ABE-HEK4-rep2/cutoff_3/ABE-HEK4-rep2_cutoff_3.log 2>&1
+        
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+    cluster_jobid: Submitted batch job 10093115
+
+Error executing rule MergeFastq on cluster (jobid: 1, external: Submitted batch job 10093115, jobscript: /lustre1/chengqiyi_pkuhpc/zhaohn/3.project/2021_ABE_topic/20210727_TargetSeq_batch1_ABE_ABE8e_ACBE_CBE-HEK4/snakepipes_target-seq/.snakemake/tmp._51gzkhj/snakejob.MergeFastq.1.sh). For error details see the cluster log and the log files of the involved rule(s).
+[Tue Aug  3 21:07:46 2021]
+Error in rule MergeFastq:
+    jobid: 2
+    output: ../TargetSeq-ABE-HEK4-rep2/cutoff_5/ABE-HEK4-rep2_cutoff_5.report
+    log: ../TargetSeq-ABE-HEK4-rep2/cutoff_5/ABE-HEK4-rep2_cutoff_5.log (check log file(s) for error message)
+    shell:
+        
+        /lustre1/chengqiyi_pkuhpc/zhaohn/0.apps/miniconda3/envs/snakepipes_py27/bin/python ./program/target_seq_merge_fq_V03.py         -i ../TargetSeq-ABE-HEK4-rep2         -p ./primer_table/ABE.txt         -o ../TargetSeq-ABE-HEK4-rep2/cutoff_5         -r ../TargetSeq-ABE-HEK4-rep2/cutoff_5/ABE-HEK4-rep2_cutoff_5.report         --MinMergeReadNumCutoff 5  > ../TargetSeq-ABE-HEK4-rep2/cutoff_5/ABE-HEK4-rep2_cutoff_5.log 2>&1
+        
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+    cluster_jobid: Submitted batch job 10093116
+
+Error executing rule MergeFastq on cluster (jobid: 2, external: Submitted batch job 10093116, jobscript: /lustre1/chengqiyi_pkuhpc/zhaohn/3.project/2021_ABE_topic/20210727_TargetSeq_batch1_ABE_ABE8e_ACBE_CBE-HEK4/snakepipes_target-seq/.snakemake/tmp._51gzkhj/snakejob.MergeFastq.2.sh). For error details see the cluster log and the log files of the involved rule(s).
+Shutting down, this might take some time.
+Exiting because a job execution failed. Look above for error message
+Complete log: /lustre1/chengqiyi_pkuhpc/zhaohn/3.project/2021_ABE_topic/20210727_TargetSeq_batch1_ABE_ABE8e_ACBE_CBE-HEK4/snakepipes_target-seq/.snakemake/log/2021-08-03T210636.302775.snakemake.log

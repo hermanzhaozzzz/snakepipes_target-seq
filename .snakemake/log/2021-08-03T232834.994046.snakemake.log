@@ -1,0 +1,348 @@
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided cluster nodes: 24
+Job counts:
+	count	jobs
+	24	MergeFastq
+	1	all
+	25
+Select jobs to execute...
+
+[Tue Aug  3 23:28:35 2021]
+rule MergeFastq:
+    input: ../TargetSeq-ACBE-HEK4-rep2
+    output: ../TargetSeq-ACBE-HEK4-rep2/cutoff_5/ACBE-HEK4-rep2_cutoff_5.report
+    log: ../TargetSeq-ACBE-HEK4-rep2/cutoff_5/ACBE-HEK4-rep2_cutoff_5.log
+    jobid: 17
+    reason: Missing output files: ../TargetSeq-ACBE-HEK4-rep2/cutoff_5/ACBE-HEK4-rep2_cutoff_5.report
+    wildcards: lib=ACBE-HEK4-rep2, cutoff=5
+
+
+        /lustre1/chengqiyi_pkuhpc/zhaohn/0.apps/miniconda3/envs/snakepipes_py27/bin/python ./program/target_seq_merge_fq_V03.py         -i ../TargetSeq-ACBE-HEK4-rep2         -p ./primer_table/ABE.txt         -o ../TargetSeq-ACBE-HEK4-rep2/cutoff_5         -r ../TargetSeq-ACBE-HEK4-rep2/cutoff_5/ACBE-HEK4-rep2_cutoff_5.report         --MinMergeReadNumCutoff 5  > ../TargetSeq-ACBE-HEK4-rep2/cutoff_5/ACBE-HEK4-rep2_cutoff_5.log 2>&1
+        
+Submitted job 17 with external jobid 'Submitted batch job 10093688'.
+
+[Tue Aug  3 23:28:35 2021]
+rule MergeFastq:
+    input: ../TargetSeq-ABE-HEK4-rep1
+    output: ../TargetSeq-ABE-HEK4-rep1/cutoff_5/ABE-HEK4-rep1_cutoff_5.report
+    log: ../TargetSeq-ABE-HEK4-rep1/cutoff_5/ABE-HEK4-rep1_cutoff_5.log
+    jobid: 2
+    reason: Missing output files: ../TargetSeq-ABE-HEK4-rep1/cutoff_5/ABE-HEK4-rep1_cutoff_5.report
+    wildcards: lib=ABE-HEK4-rep1, cutoff=5
+
+
+        /lustre1/chengqiyi_pkuhpc/zhaohn/0.apps/miniconda3/envs/snakepipes_py27/bin/python ./program/target_seq_merge_fq_V03.py         -i ../TargetSeq-ABE-HEK4-rep1         -p ./primer_table/ABE.txt         -o ../TargetSeq-ABE-HEK4-rep1/cutoff_5         -r ../TargetSeq-ABE-HEK4-rep1/cutoff_5/ABE-HEK4-rep1_cutoff_5.report         --MinMergeReadNumCutoff 5  > ../TargetSeq-ABE-HEK4-rep1/cutoff_5/ABE-HEK4-rep1_cutoff_5.log 2>&1
+        
+Submitted job 2 with external jobid 'Submitted batch job 10093689'.
+
+[Tue Aug  3 23:28:35 2021]
+rule MergeFastq:
+    input: ../TargetSeq-ABE8e-HEK4-rep1
+    output: ../TargetSeq-ABE8e-HEK4-rep1/cutoff_10/ABE8e-HEK4-rep1_cutoff_10.report
+    log: ../TargetSeq-ABE8e-HEK4-rep1/cutoff_10/ABE8e-HEK4-rep1_cutoff_10.log
+    jobid: 9
+    reason: Missing output files: ../TargetSeq-ABE8e-HEK4-rep1/cutoff_10/ABE8e-HEK4-rep1_cutoff_10.report
+    wildcards: lib=ABE8e-HEK4-rep1, cutoff=10
+
+
+        /lustre1/chengqiyi_pkuhpc/zhaohn/0.apps/miniconda3/envs/snakepipes_py27/bin/python ./program/target_seq_merge_fq_V03.py         -i ../TargetSeq-ABE8e-HEK4-rep1         -p ./primer_table/ABE.txt         -o ../TargetSeq-ABE8e-HEK4-rep1/cutoff_10         -r ../TargetSeq-ABE8e-HEK4-rep1/cutoff_10/ABE8e-HEK4-rep1_cutoff_10.report         --MinMergeReadNumCutoff 10  > ../TargetSeq-ABE8e-HEK4-rep1/cutoff_10/ABE8e-HEK4-rep1_cutoff_10.log 2>&1
+        
+Submitted job 9 with external jobid 'Submitted batch job 10093690'.
+
+[Tue Aug  3 23:28:35 2021]
+rule MergeFastq:
+    input: ../TargetSeq-CBE-HEK4-rep2
+    output: ../TargetSeq-CBE-HEK4-rep2/cutoff_10/CBE-HEK4-rep2_cutoff_10.report
+    log: ../TargetSeq-CBE-HEK4-rep2/cutoff_10/CBE-HEK4-rep2_cutoff_10.log
+    jobid: 24
+    reason: Missing output files: ../TargetSeq-CBE-HEK4-rep2/cutoff_10/CBE-HEK4-rep2_cutoff_10.report
+    wildcards: lib=CBE-HEK4-rep2, cutoff=10
+
+
+        /lustre1/chengqiyi_pkuhpc/zhaohn/0.apps/miniconda3/envs/snakepipes_py27/bin/python ./program/target_seq_merge_fq_V03.py         -i ../TargetSeq-CBE-HEK4-rep2         -p ./primer_table/ABE.txt         -o ../TargetSeq-CBE-HEK4-rep2/cutoff_10         -r ../TargetSeq-CBE-HEK4-rep2/cutoff_10/CBE-HEK4-rep2_cutoff_10.report         --MinMergeReadNumCutoff 10  > ../TargetSeq-CBE-HEK4-rep2/cutoff_10/CBE-HEK4-rep2_cutoff_10.log 2>&1
+        
+Submitted job 24 with external jobid 'Submitted batch job 10093691'.
+
+[Tue Aug  3 23:28:35 2021]
+rule MergeFastq:
+    input: ../TargetSeq-ABE-HEK4-rep1
+    output: ../TargetSeq-ABE-HEK4-rep1/cutoff_10/ABE-HEK4-rep1_cutoff_10.report
+    log: ../TargetSeq-ABE-HEK4-rep1/cutoff_10/ABE-HEK4-rep1_cutoff_10.log
+    jobid: 3
+    reason: Missing output files: ../TargetSeq-ABE-HEK4-rep1/cutoff_10/ABE-HEK4-rep1_cutoff_10.report
+    wildcards: lib=ABE-HEK4-rep1, cutoff=10
+
+
+        /lustre1/chengqiyi_pkuhpc/zhaohn/0.apps/miniconda3/envs/snakepipes_py27/bin/python ./program/target_seq_merge_fq_V03.py         -i ../TargetSeq-ABE-HEK4-rep1         -p ./primer_table/ABE.txt         -o ../TargetSeq-ABE-HEK4-rep1/cutoff_10         -r ../TargetSeq-ABE-HEK4-rep1/cutoff_10/ABE-HEK4-rep1_cutoff_10.report         --MinMergeReadNumCutoff 10  > ../TargetSeq-ABE-HEK4-rep1/cutoff_10/ABE-HEK4-rep1_cutoff_10.log 2>&1
+        
+Submitted job 3 with external jobid 'Submitted batch job 10093692'.
+
+[Tue Aug  3 23:28:35 2021]
+rule MergeFastq:
+    input: ../TargetSeq-ABE8e-HEK4-rep2
+    output: ../TargetSeq-ABE8e-HEK4-rep2/cutoff_3/ABE8e-HEK4-rep2_cutoff_3.report
+    log: ../TargetSeq-ABE8e-HEK4-rep2/cutoff_3/ABE8e-HEK4-rep2_cutoff_3.log
+    jobid: 10
+    reason: Missing output files: ../TargetSeq-ABE8e-HEK4-rep2/cutoff_3/ABE8e-HEK4-rep2_cutoff_3.report
+    wildcards: lib=ABE8e-HEK4-rep2, cutoff=3
+
+
+        /lustre1/chengqiyi_pkuhpc/zhaohn/0.apps/miniconda3/envs/snakepipes_py27/bin/python ./program/target_seq_merge_fq_V03.py         -i ../TargetSeq-ABE8e-HEK4-rep2         -p ./primer_table/ABE.txt         -o ../TargetSeq-ABE8e-HEK4-rep2/cutoff_3         -r ../TargetSeq-ABE8e-HEK4-rep2/cutoff_3/ABE8e-HEK4-rep2_cutoff_3.report         --MinMergeReadNumCutoff 3  > ../TargetSeq-ABE8e-HEK4-rep2/cutoff_3/ABE8e-HEK4-rep2_cutoff_3.log 2>&1
+        
+Submitted job 10 with external jobid 'Submitted batch job 10093693'.
+
+[Tue Aug  3 23:28:35 2021]
+rule MergeFastq:
+    input: ../TargetSeq-ACBE-HEK4-rep2
+    output: ../TargetSeq-ACBE-HEK4-rep2/cutoff_10/ACBE-HEK4-rep2_cutoff_10.report
+    log: ../TargetSeq-ACBE-HEK4-rep2/cutoff_10/ACBE-HEK4-rep2_cutoff_10.log
+    jobid: 18
+    reason: Missing output files: ../TargetSeq-ACBE-HEK4-rep2/cutoff_10/ACBE-HEK4-rep2_cutoff_10.report
+    wildcards: lib=ACBE-HEK4-rep2, cutoff=10
+
+
+        /lustre1/chengqiyi_pkuhpc/zhaohn/0.apps/miniconda3/envs/snakepipes_py27/bin/python ./program/target_seq_merge_fq_V03.py         -i ../TargetSeq-ACBE-HEK4-rep2         -p ./primer_table/ABE.txt         -o ../TargetSeq-ACBE-HEK4-rep2/cutoff_10         -r ../TargetSeq-ACBE-HEK4-rep2/cutoff_10/ACBE-HEK4-rep2_cutoff_10.report         --MinMergeReadNumCutoff 10  > ../TargetSeq-ACBE-HEK4-rep2/cutoff_10/ACBE-HEK4-rep2_cutoff_10.log 2>&1
+        
+Submitted job 18 with external jobid 'Submitted batch job 10093694'.
+
+[Tue Aug  3 23:28:35 2021]
+rule MergeFastq:
+    input: ../TargetSeq-ABE-HEK4-rep2
+    output: ../TargetSeq-ABE-HEK4-rep2/cutoff_3/ABE-HEK4-rep2_cutoff_3.report
+    log: ../TargetSeq-ABE-HEK4-rep2/cutoff_3/ABE-HEK4-rep2_cutoff_3.log
+    jobid: 4
+    reason: Missing output files: ../TargetSeq-ABE-HEK4-rep2/cutoff_3/ABE-HEK4-rep2_cutoff_3.report
+    wildcards: lib=ABE-HEK4-rep2, cutoff=3
+
+
+        /lustre1/chengqiyi_pkuhpc/zhaohn/0.apps/miniconda3/envs/snakepipes_py27/bin/python ./program/target_seq_merge_fq_V03.py         -i ../TargetSeq-ABE-HEK4-rep2         -p ./primer_table/ABE.txt         -o ../TargetSeq-ABE-HEK4-rep2/cutoff_3         -r ../TargetSeq-ABE-HEK4-rep2/cutoff_3/ABE-HEK4-rep2_cutoff_3.report         --MinMergeReadNumCutoff 3  > ../TargetSeq-ABE-HEK4-rep2/cutoff_3/ABE-HEK4-rep2_cutoff_3.log 2>&1
+        
+Submitted job 4 with external jobid 'Submitted batch job 10093695'.
+
+[Tue Aug  3 23:28:35 2021]
+rule MergeFastq:
+    input: ../TargetSeq-ABE8e-HEK4-rep2
+    output: ../TargetSeq-ABE8e-HEK4-rep2/cutoff_5/ABE8e-HEK4-rep2_cutoff_5.report
+    log: ../TargetSeq-ABE8e-HEK4-rep2/cutoff_5/ABE8e-HEK4-rep2_cutoff_5.log
+    jobid: 11
+    reason: Missing output files: ../TargetSeq-ABE8e-HEK4-rep2/cutoff_5/ABE8e-HEK4-rep2_cutoff_5.report
+    wildcards: lib=ABE8e-HEK4-rep2, cutoff=5
+
+
+        /lustre1/chengqiyi_pkuhpc/zhaohn/0.apps/miniconda3/envs/snakepipes_py27/bin/python ./program/target_seq_merge_fq_V03.py         -i ../TargetSeq-ABE8e-HEK4-rep2         -p ./primer_table/ABE.txt         -o ../TargetSeq-ABE8e-HEK4-rep2/cutoff_5         -r ../TargetSeq-ABE8e-HEK4-rep2/cutoff_5/ABE8e-HEK4-rep2_cutoff_5.report         --MinMergeReadNumCutoff 5  > ../TargetSeq-ABE8e-HEK4-rep2/cutoff_5/ABE8e-HEK4-rep2_cutoff_5.log 2>&1
+        
+Submitted job 11 with external jobid 'Submitted batch job 10093696'.
+
+[Tue Aug  3 23:28:35 2021]
+rule MergeFastq:
+    input: ../TargetSeq-CBE-HEK4-rep1
+    output: ../TargetSeq-CBE-HEK4-rep1/cutoff_3/CBE-HEK4-rep1_cutoff_3.report
+    log: ../TargetSeq-CBE-HEK4-rep1/cutoff_3/CBE-HEK4-rep1_cutoff_3.log
+    jobid: 19
+    reason: Missing output files: ../TargetSeq-CBE-HEK4-rep1/cutoff_3/CBE-HEK4-rep1_cutoff_3.report
+    wildcards: lib=CBE-HEK4-rep1, cutoff=3
+
+
+        /lustre1/chengqiyi_pkuhpc/zhaohn/0.apps/miniconda3/envs/snakepipes_py27/bin/python ./program/target_seq_merge_fq_V03.py         -i ../TargetSeq-CBE-HEK4-rep1         -p ./primer_table/ABE.txt         -o ../TargetSeq-CBE-HEK4-rep1/cutoff_3         -r ../TargetSeq-CBE-HEK4-rep1/cutoff_3/CBE-HEK4-rep1_cutoff_3.report         --MinMergeReadNumCutoff 3  > ../TargetSeq-CBE-HEK4-rep1/cutoff_3/CBE-HEK4-rep1_cutoff_3.log 2>&1
+        
+Submitted job 19 with external jobid 'Submitted batch job 10093697'.
+
+[Tue Aug  3 23:28:35 2021]
+rule MergeFastq:
+    input: ../TargetSeq-ABE-HEK4-rep2
+    output: ../TargetSeq-ABE-HEK4-rep2/cutoff_5/ABE-HEK4-rep2_cutoff_5.report
+    log: ../TargetSeq-ABE-HEK4-rep2/cutoff_5/ABE-HEK4-rep2_cutoff_5.log
+    jobid: 5
+    reason: Missing output files: ../TargetSeq-ABE-HEK4-rep2/cutoff_5/ABE-HEK4-rep2_cutoff_5.report
+    wildcards: lib=ABE-HEK4-rep2, cutoff=5
+
+
+        /lustre1/chengqiyi_pkuhpc/zhaohn/0.apps/miniconda3/envs/snakepipes_py27/bin/python ./program/target_seq_merge_fq_V03.py         -i ../TargetSeq-ABE-HEK4-rep2         -p ./primer_table/ABE.txt         -o ../TargetSeq-ABE-HEK4-rep2/cutoff_5         -r ../TargetSeq-ABE-HEK4-rep2/cutoff_5/ABE-HEK4-rep2_cutoff_5.report         --MinMergeReadNumCutoff 5  > ../TargetSeq-ABE-HEK4-rep2/cutoff_5/ABE-HEK4-rep2_cutoff_5.log 2>&1
+        
+Submitted job 5 with external jobid 'Submitted batch job 10093698'.
+
+[Tue Aug  3 23:28:35 2021]
+rule MergeFastq:
+    input: ../TargetSeq-ABE8e-HEK4-rep2
+    output: ../TargetSeq-ABE8e-HEK4-rep2/cutoff_10/ABE8e-HEK4-rep2_cutoff_10.report
+    log: ../TargetSeq-ABE8e-HEK4-rep2/cutoff_10/ABE8e-HEK4-rep2_cutoff_10.log
+    jobid: 12
+    reason: Missing output files: ../TargetSeq-ABE8e-HEK4-rep2/cutoff_10/ABE8e-HEK4-rep2_cutoff_10.report
+    wildcards: lib=ABE8e-HEK4-rep2, cutoff=10
+
+
+        /lustre1/chengqiyi_pkuhpc/zhaohn/0.apps/miniconda3/envs/snakepipes_py27/bin/python ./program/target_seq_merge_fq_V03.py         -i ../TargetSeq-ABE8e-HEK4-rep2         -p ./primer_table/ABE.txt         -o ../TargetSeq-ABE8e-HEK4-rep2/cutoff_10         -r ../TargetSeq-ABE8e-HEK4-rep2/cutoff_10/ABE8e-HEK4-rep2_cutoff_10.report         --MinMergeReadNumCutoff 10  > ../TargetSeq-ABE8e-HEK4-rep2/cutoff_10/ABE8e-HEK4-rep2_cutoff_10.log 2>&1
+        
+Submitted job 12 with external jobid 'Submitted batch job 10093699'.
+
+[Tue Aug  3 23:28:35 2021]
+rule MergeFastq:
+    input: ../TargetSeq-CBE-HEK4-rep1
+    output: ../TargetSeq-CBE-HEK4-rep1/cutoff_5/CBE-HEK4-rep1_cutoff_5.report
+    log: ../TargetSeq-CBE-HEK4-rep1/cutoff_5/CBE-HEK4-rep1_cutoff_5.log
+    jobid: 20
+    reason: Missing output files: ../TargetSeq-CBE-HEK4-rep1/cutoff_5/CBE-HEK4-rep1_cutoff_5.report
+    wildcards: lib=CBE-HEK4-rep1, cutoff=5
+
+
+        /lustre1/chengqiyi_pkuhpc/zhaohn/0.apps/miniconda3/envs/snakepipes_py27/bin/python ./program/target_seq_merge_fq_V03.py         -i ../TargetSeq-CBE-HEK4-rep1         -p ./primer_table/ABE.txt         -o ../TargetSeq-CBE-HEK4-rep1/cutoff_5         -r ../TargetSeq-CBE-HEK4-rep1/cutoff_5/CBE-HEK4-rep1_cutoff_5.report         --MinMergeReadNumCutoff 5  > ../TargetSeq-CBE-HEK4-rep1/cutoff_5/CBE-HEK4-rep1_cutoff_5.log 2>&1
+        
+Submitted job 20 with external jobid 'Submitted batch job 10093700'.
+
+[Tue Aug  3 23:28:35 2021]
+rule MergeFastq:
+    input: ../TargetSeq-ABE-HEK4-rep2
+    output: ../TargetSeq-ABE-HEK4-rep2/cutoff_10/ABE-HEK4-rep2_cutoff_10.report
+    log: ../TargetSeq-ABE-HEK4-rep2/cutoff_10/ABE-HEK4-rep2_cutoff_10.log
+    jobid: 6
+    reason: Missing output files: ../TargetSeq-ABE-HEK4-rep2/cutoff_10/ABE-HEK4-rep2_cutoff_10.report
+    wildcards: lib=ABE-HEK4-rep2, cutoff=10
+
+
+        /lustre1/chengqiyi_pkuhpc/zhaohn/0.apps/miniconda3/envs/snakepipes_py27/bin/python ./program/target_seq_merge_fq_V03.py         -i ../TargetSeq-ABE-HEK4-rep2         -p ./primer_table/ABE.txt         -o ../TargetSeq-ABE-HEK4-rep2/cutoff_10         -r ../TargetSeq-ABE-HEK4-rep2/cutoff_10/ABE-HEK4-rep2_cutoff_10.report         --MinMergeReadNumCutoff 10  > ../TargetSeq-ABE-HEK4-rep2/cutoff_10/ABE-HEK4-rep2_cutoff_10.log 2>&1
+        
+Submitted job 6 with external jobid 'Submitted batch job 10093701'.
+
+[Tue Aug  3 23:28:36 2021]
+rule MergeFastq:
+    input: ../TargetSeq-ACBE-HEK4-rep1
+    output: ../TargetSeq-ACBE-HEK4-rep1/cutoff_3/ACBE-HEK4-rep1_cutoff_3.report
+    log: ../TargetSeq-ACBE-HEK4-rep1/cutoff_3/ACBE-HEK4-rep1_cutoff_3.log
+    jobid: 13
+    reason: Missing output files: ../TargetSeq-ACBE-HEK4-rep1/cutoff_3/ACBE-HEK4-rep1_cutoff_3.report
+    wildcards: lib=ACBE-HEK4-rep1, cutoff=3
+
+
+        /lustre1/chengqiyi_pkuhpc/zhaohn/0.apps/miniconda3/envs/snakepipes_py27/bin/python ./program/target_seq_merge_fq_V03.py         -i ../TargetSeq-ACBE-HEK4-rep1         -p ./primer_table/ABE.txt         -o ../TargetSeq-ACBE-HEK4-rep1/cutoff_3         -r ../TargetSeq-ACBE-HEK4-rep1/cutoff_3/ACBE-HEK4-rep1_cutoff_3.report         --MinMergeReadNumCutoff 3  > ../TargetSeq-ACBE-HEK4-rep1/cutoff_3/ACBE-HEK4-rep1_cutoff_3.log 2>&1
+        
+Submitted job 13 with external jobid 'Submitted batch job 10093702'.
+
+[Tue Aug  3 23:28:36 2021]
+rule MergeFastq:
+    input: ../TargetSeq-CBE-HEK4-rep1
+    output: ../TargetSeq-CBE-HEK4-rep1/cutoff_10/CBE-HEK4-rep1_cutoff_10.report
+    log: ../TargetSeq-CBE-HEK4-rep1/cutoff_10/CBE-HEK4-rep1_cutoff_10.log
+    jobid: 21
+    reason: Missing output files: ../TargetSeq-CBE-HEK4-rep1/cutoff_10/CBE-HEK4-rep1_cutoff_10.report
+    wildcards: lib=CBE-HEK4-rep1, cutoff=10
+
+
+        /lustre1/chengqiyi_pkuhpc/zhaohn/0.apps/miniconda3/envs/snakepipes_py27/bin/python ./program/target_seq_merge_fq_V03.py         -i ../TargetSeq-CBE-HEK4-rep1         -p ./primer_table/ABE.txt         -o ../TargetSeq-CBE-HEK4-rep1/cutoff_10         -r ../TargetSeq-CBE-HEK4-rep1/cutoff_10/CBE-HEK4-rep1_cutoff_10.report         --MinMergeReadNumCutoff 10  > ../TargetSeq-CBE-HEK4-rep1/cutoff_10/CBE-HEK4-rep1_cutoff_10.log 2>&1
+        
+Submitted job 21 with external jobid 'Submitted batch job 10093703'.
+
+[Tue Aug  3 23:28:36 2021]
+rule MergeFastq:
+    input: ../TargetSeq-ABE8e-HEK4-rep1
+    output: ../TargetSeq-ABE8e-HEK4-rep1/cutoff_3/ABE8e-HEK4-rep1_cutoff_3.report
+    log: ../TargetSeq-ABE8e-HEK4-rep1/cutoff_3/ABE8e-HEK4-rep1_cutoff_3.log
+    jobid: 7
+    reason: Missing output files: ../TargetSeq-ABE8e-HEK4-rep1/cutoff_3/ABE8e-HEK4-rep1_cutoff_3.report
+    wildcards: lib=ABE8e-HEK4-rep1, cutoff=3
+
+
+        /lustre1/chengqiyi_pkuhpc/zhaohn/0.apps/miniconda3/envs/snakepipes_py27/bin/python ./program/target_seq_merge_fq_V03.py         -i ../TargetSeq-ABE8e-HEK4-rep1         -p ./primer_table/ABE.txt         -o ../TargetSeq-ABE8e-HEK4-rep1/cutoff_3         -r ../TargetSeq-ABE8e-HEK4-rep1/cutoff_3/ABE8e-HEK4-rep1_cutoff_3.report         --MinMergeReadNumCutoff 3  > ../TargetSeq-ABE8e-HEK4-rep1/cutoff_3/ABE8e-HEK4-rep1_cutoff_3.log 2>&1
+        
+Submitted job 7 with external jobid 'Submitted batch job 10093704'.
+
+[Tue Aug  3 23:28:36 2021]
+rule MergeFastq:
+    input: ../TargetSeq-ACBE-HEK4-rep1
+    output: ../TargetSeq-ACBE-HEK4-rep1/cutoff_5/ACBE-HEK4-rep1_cutoff_5.report
+    log: ../TargetSeq-ACBE-HEK4-rep1/cutoff_5/ACBE-HEK4-rep1_cutoff_5.log
+    jobid: 14
+    reason: Missing output files: ../TargetSeq-ACBE-HEK4-rep1/cutoff_5/ACBE-HEK4-rep1_cutoff_5.report
+    wildcards: lib=ACBE-HEK4-rep1, cutoff=5
+
+
+        /lustre1/chengqiyi_pkuhpc/zhaohn/0.apps/miniconda3/envs/snakepipes_py27/bin/python ./program/target_seq_merge_fq_V03.py         -i ../TargetSeq-ACBE-HEK4-rep1         -p ./primer_table/ABE.txt         -o ../TargetSeq-ACBE-HEK4-rep1/cutoff_5         -r ../TargetSeq-ACBE-HEK4-rep1/cutoff_5/ACBE-HEK4-rep1_cutoff_5.report         --MinMergeReadNumCutoff 5  > ../TargetSeq-ACBE-HEK4-rep1/cutoff_5/ACBE-HEK4-rep1_cutoff_5.log 2>&1
+        
+Submitted job 14 with external jobid 'Submitted batch job 10093705'.
+
+[Tue Aug  3 23:28:36 2021]
+rule MergeFastq:
+    input: ../TargetSeq-CBE-HEK4-rep2
+    output: ../TargetSeq-CBE-HEK4-rep2/cutoff_3/CBE-HEK4-rep2_cutoff_3.report
+    log: ../TargetSeq-CBE-HEK4-rep2/cutoff_3/CBE-HEK4-rep2_cutoff_3.log
+    jobid: 22
+    reason: Missing output files: ../TargetSeq-CBE-HEK4-rep2/cutoff_3/CBE-HEK4-rep2_cutoff_3.report
+    wildcards: lib=CBE-HEK4-rep2, cutoff=3
+
+
+        /lustre1/chengqiyi_pkuhpc/zhaohn/0.apps/miniconda3/envs/snakepipes_py27/bin/python ./program/target_seq_merge_fq_V03.py         -i ../TargetSeq-CBE-HEK4-rep2         -p ./primer_table/ABE.txt         -o ../TargetSeq-CBE-HEK4-rep2/cutoff_3         -r ../TargetSeq-CBE-HEK4-rep2/cutoff_3/CBE-HEK4-rep2_cutoff_3.report         --MinMergeReadNumCutoff 3  > ../TargetSeq-CBE-HEK4-rep2/cutoff_3/CBE-HEK4-rep2_cutoff_3.log 2>&1
+        
+Submitted job 22 with external jobid 'Submitted batch job 10093706'.
+
+[Tue Aug  3 23:28:36 2021]
+rule MergeFastq:
+    input: ../TargetSeq-ABE-HEK4-rep1
+    output: ../TargetSeq-ABE-HEK4-rep1/cutoff_3/ABE-HEK4-rep1_cutoff_3.report
+    log: ../TargetSeq-ABE-HEK4-rep1/cutoff_3/ABE-HEK4-rep1_cutoff_3.log
+    jobid: 1
+    reason: Missing output files: ../TargetSeq-ABE-HEK4-rep1/cutoff_3/ABE-HEK4-rep1_cutoff_3.report
+    wildcards: lib=ABE-HEK4-rep1, cutoff=3
+
+
+        /lustre1/chengqiyi_pkuhpc/zhaohn/0.apps/miniconda3/envs/snakepipes_py27/bin/python ./program/target_seq_merge_fq_V03.py         -i ../TargetSeq-ABE-HEK4-rep1         -p ./primer_table/ABE.txt         -o ../TargetSeq-ABE-HEK4-rep1/cutoff_3         -r ../TargetSeq-ABE-HEK4-rep1/cutoff_3/ABE-HEK4-rep1_cutoff_3.report         --MinMergeReadNumCutoff 3  > ../TargetSeq-ABE-HEK4-rep1/cutoff_3/ABE-HEK4-rep1_cutoff_3.log 2>&1
+        
+Submitted job 1 with external jobid 'Submitted batch job 10093707'.
+
+[Tue Aug  3 23:28:36 2021]
+rule MergeFastq:
+    input: ../TargetSeq-ABE8e-HEK4-rep1
+    output: ../TargetSeq-ABE8e-HEK4-rep1/cutoff_5/ABE8e-HEK4-rep1_cutoff_5.report
+    log: ../TargetSeq-ABE8e-HEK4-rep1/cutoff_5/ABE8e-HEK4-rep1_cutoff_5.log
+    jobid: 8
+    reason: Missing output files: ../TargetSeq-ABE8e-HEK4-rep1/cutoff_5/ABE8e-HEK4-rep1_cutoff_5.report
+    wildcards: lib=ABE8e-HEK4-rep1, cutoff=5
+
+
+        /lustre1/chengqiyi_pkuhpc/zhaohn/0.apps/miniconda3/envs/snakepipes_py27/bin/python ./program/target_seq_merge_fq_V03.py         -i ../TargetSeq-ABE8e-HEK4-rep1         -p ./primer_table/ABE.txt         -o ../TargetSeq-ABE8e-HEK4-rep1/cutoff_5         -r ../TargetSeq-ABE8e-HEK4-rep1/cutoff_5/ABE8e-HEK4-rep1_cutoff_5.report         --MinMergeReadNumCutoff 5  > ../TargetSeq-ABE8e-HEK4-rep1/cutoff_5/ABE8e-HEK4-rep1_cutoff_5.log 2>&1
+        
+Submitted job 8 with external jobid 'Submitted batch job 10093708'.
+
+[Tue Aug  3 23:28:36 2021]
+rule MergeFastq:
+    input: ../TargetSeq-ACBE-HEK4-rep1
+    output: ../TargetSeq-ACBE-HEK4-rep1/cutoff_10/ACBE-HEK4-rep1_cutoff_10.report
+    log: ../TargetSeq-ACBE-HEK4-rep1/cutoff_10/ACBE-HEK4-rep1_cutoff_10.log
+    jobid: 15
+    reason: Missing output files: ../TargetSeq-ACBE-HEK4-rep1/cutoff_10/ACBE-HEK4-rep1_cutoff_10.report
+    wildcards: lib=ACBE-HEK4-rep1, cutoff=10
+
+
+        /lustre1/chengqiyi_pkuhpc/zhaohn/0.apps/miniconda3/envs/snakepipes_py27/bin/python ./program/target_seq_merge_fq_V03.py         -i ../TargetSeq-ACBE-HEK4-rep1         -p ./primer_table/ABE.txt         -o ../TargetSeq-ACBE-HEK4-rep1/cutoff_10         -r ../TargetSeq-ACBE-HEK4-rep1/cutoff_10/ACBE-HEK4-rep1_cutoff_10.report         --MinMergeReadNumCutoff 10  > ../TargetSeq-ACBE-HEK4-rep1/cutoff_10/ACBE-HEK4-rep1_cutoff_10.log 2>&1
+        
+Submitted job 15 with external jobid 'Submitted batch job 10093709'.
+
+[Tue Aug  3 23:28:36 2021]
+rule MergeFastq:
+    input: ../TargetSeq-CBE-HEK4-rep2
+    output: ../TargetSeq-CBE-HEK4-rep2/cutoff_5/CBE-HEK4-rep2_cutoff_5.report
+    log: ../TargetSeq-CBE-HEK4-rep2/cutoff_5/CBE-HEK4-rep2_cutoff_5.log
+    jobid: 23
+    reason: Missing output files: ../TargetSeq-CBE-HEK4-rep2/cutoff_5/CBE-HEK4-rep2_cutoff_5.report
+    wildcards: lib=CBE-HEK4-rep2, cutoff=5
+
+
+        /lustre1/chengqiyi_pkuhpc/zhaohn/0.apps/miniconda3/envs/snakepipes_py27/bin/python ./program/target_seq_merge_fq_V03.py         -i ../TargetSeq-CBE-HEK4-rep2         -p ./primer_table/ABE.txt         -o ../TargetSeq-CBE-HEK4-rep2/cutoff_5         -r ../TargetSeq-CBE-HEK4-rep2/cutoff_5/CBE-HEK4-rep2_cutoff_5.report         --MinMergeReadNumCutoff 5  > ../TargetSeq-CBE-HEK4-rep2/cutoff_5/CBE-HEK4-rep2_cutoff_5.log 2>&1
+        
+Submitted job 23 with external jobid 'Submitted batch job 10093710'.
+
+[Tue Aug  3 23:28:37 2021]
+rule MergeFastq:
+    input: ../TargetSeq-ACBE-HEK4-rep2
+    output: ../TargetSeq-ACBE-HEK4-rep2/cutoff_3/ACBE-HEK4-rep2_cutoff_3.report
+    log: ../TargetSeq-ACBE-HEK4-rep2/cutoff_3/ACBE-HEK4-rep2_cutoff_3.log
+    jobid: 16
+    reason: Missing output files: ../TargetSeq-ACBE-HEK4-rep2/cutoff_3/ACBE-HEK4-rep2_cutoff_3.report
+    wildcards: lib=ACBE-HEK4-rep2, cutoff=3
+
+
+        /lustre1/chengqiyi_pkuhpc/zhaohn/0.apps/miniconda3/envs/snakepipes_py27/bin/python ./program/target_seq_merge_fq_V03.py         -i ../TargetSeq-ACBE-HEK4-rep2         -p ./primer_table/ABE.txt         -o ../TargetSeq-ACBE-HEK4-rep2/cutoff_3         -r ../TargetSeq-ACBE-HEK4-rep2/cutoff_3/ACBE-HEK4-rep2_cutoff_3.report         --MinMergeReadNumCutoff 3  > ../TargetSeq-ACBE-HEK4-rep2/cutoff_3/ACBE-HEK4-rep2_cutoff_3.log 2>&1
+        
+Submitted job 16 with external jobid 'Submitted batch job 10093711'.
+Terminating processes on user request, this might take some time.
+Will exit after finishing currently running jobs.
+Complete log: /lustre1/chengqiyi_pkuhpc/zhaohn/3.project/2021_ABE_topic/20210727_TargetSeq_batch1_ABE_ABE8e_ACBE_CBE-HEK4/snakepipes_target-seq/.snakemake/log/2021-08-03T232834.994046.snakemake.log
