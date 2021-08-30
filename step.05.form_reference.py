@@ -32,7 +32,7 @@ THREADS = '20'
 # ------------------------------------------------------------------->>>>>>>>>>
 # DATABASE INFO
 # ------------------------------------------------------------------->>>>>>>>>>
-PRIMER_INFO = "./primer_table/ABE.txt"
+PRIMER_INFO = "./primer_table/primer.txt"
 GENOME_HG38 = "/lustre1/chengqiyi_pkuhpc/zhaohn/1.database/db_genomes/genome_fa/genome_ucsc_hg38/genome_ucsc_hg38.fa"
 # ------------------------------------------------------------------->>>>>>>>>>
 # SOFTWARE INFO

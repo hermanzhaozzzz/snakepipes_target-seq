@@ -17,17 +17,17 @@ Align	program/.ipynb_checkpoints/plot-targetseq-bmat-V02-checkpoint.py	/^from Bi
 Align	program/.ipynb_checkpoints/plot-targetseq-bmat-V04-checkpoint.py	/^from Bio import Align$/;"	i
 Align	program/multiplot-targetseq-bmat-heatmap-V3.py	/^from Bio import Align$/;"	i
 Align	program/plot-targetseq-bmat-V04.py	/^from Bio import Align$/;"	i
-BEDTOOLS	.ipynb_checkpoints/step.05.form_reference-checkpoint.py	/^BEDTOOLS = "\/home\/zhaohuanan\/zhaohn_HD\/miniconda3\/bin\/bedtools"$/;"	v
+BEDTOOLS	.ipynb_checkpoints/step.05.form_reference-checkpoint.py	/^    BEDTOOLS = path.read().strip()$/;"	v
 BEDTOOLS	.ipynb_checkpoints/step.06.mapping_to_local_and_plot-checkpoint.py	/^    BEDTOOLS = path.read().strip()$/;"	v
-BEDTOOLS	step.05.form_reference.py	/^BEDTOOLS = "\/home\/zhaohuanan\/zhaohn_HD\/miniconda3\/bin\/bedtools"$/;"	v
+BEDTOOLS	step.05.form_reference.py	/^    BEDTOOLS = path.read().strip()$/;"	v
 BEDTOOLS	step.06.mapping_to_local_and_plot.py	/^    BEDTOOLS = path.read().strip()$/;"	v
 BOWTIE	.ipynb_checkpoints/step.06.mapping_to_local_and_plot-checkpoint.py	/^    BOWTIE = path.read().strip()$/;"	v
 BOWTIE	step.06.mapping_to_local_and_plot.py	/^    BOWTIE = path.read().strip()$/;"	v
 BOWTIE_BUILD	.ipynb_checkpoints/step.06.mapping_to_local_and_plot-checkpoint.py	/^    BOWTIE_BUILD = BOWTIE + '-build'$/;"	v
 BOWTIE_BUILD	step.06.mapping_to_local_and_plot.py	/^    BOWTIE_BUILD = BOWTIE + '-build'$/;"	v
-BWA	.ipynb_checkpoints/step.05.form_reference-checkpoint.py	/^BWA = "\/home\/zhaohuanan\/zhaohn_HD\/miniconda3\/\/bin\/bwa"$/;"	v
+BWA	.ipynb_checkpoints/step.05.form_reference-checkpoint.py	/^    BWA = path.read().strip()$/;"	v
 BWA	.ipynb_checkpoints/step.06.mapping_to_local_and_plot-checkpoint.py	/^    BWA = path.read().strip()$/;"	v
-BWA	step.05.form_reference.py	/^BWA = "\/home\/zhaohuanan\/zhaohn_HD\/miniconda3\/\/bin\/bwa"$/;"	v
+BWA	step.05.form_reference.py	/^    BWA = path.read().strip()$/;"	v
 BWA	step.06.mapping_to_local_and_plot.py	/^    BWA = path.read().strip()$/;"	v
 Bio	program/.ipynb_checkpoints/plot-targetseq-bmat-V02-checkpoint.py	/^import Bio$/;"	i
 Bio	program/.ipynb_checkpoints/plot-targetseq-bmat-V04-checkpoint.py	/^import Bio$/;"	i
@@ -51,8 +51,10 @@ FastqRead	program/target_seq_demultiplex_fastq_V01.py	/^class FastqRead(object):
 FastqRead	program/target_seq_merge_fq_V03.py	/^class FastqRead(object):$/;"	c
 Flag	program/.ipynb_checkpoints/target_seq_demultiplex_fastq_V01-checkpoint.py	/^                    Flag = True$/;"	v
 Flag	program/target_seq_demultiplex_fastq_V01.py	/^                    Flag = True$/;"	v
-GENOME_HG38	.ipynb_checkpoints/step.05.form_reference-checkpoint.py	/^GENOME_HG38 = "\/home\/zhaohuanan\/zhaohn_HD\/2.database\/db_genomes\/genome_fa\/genome_ucsc_hg38\/genome_ucsc_hg38.fa"$/;"	v
-GENOME_HG38	step.05.form_reference.py	/^GENOME_HG38 = "\/home\/zhaohuanan\/zhaohn_HD\/2.database\/db_genomes\/genome_fa\/genome_ucsc_hg38\/genome_ucsc_hg38.fa"$/;"	v
+GENOME_HG38	.ipynb_checkpoints/step.05.form_reference-checkpoint.py	/^GENOME_HG38 = "\/lustre1\/chengqiyi_pkuhpc\/zhaohn\/1.database\/db_genomes\/genome_fa\/genome_ucsc_hg38\/genome_ucsc_hg38.fa"$/;"	v
+GENOME_HG38	.ipynb_checkpoints/step.06.mapping_to_local_and_plot-checkpoint.py	/^GENOME_HG38 = "\/lustre1\/chengqiyi_pkuhpc\/zhaohn\/1.database\/db_genomes\/genome_fa\/genome_ucsc_hg38\/genome_ucsc_hg38.fa"$/;"	v
+GENOME_HG38	step.05.form_reference.py	/^GENOME_HG38 = "\/lustre1\/chengqiyi_pkuhpc\/zhaohn\/1.database\/db_genomes\/genome_fa\/genome_ucsc_hg38\/genome_ucsc_hg38.fa"$/;"	v
+GENOME_HG38	step.06.mapping_to_local_and_plot.py	/^GENOME_HG38 = "\/lustre1\/chengqiyi_pkuhpc\/zhaohn\/1.database\/db_genomes\/genome_fa\/genome_ucsc_hg38\/genome_ucsc_hg38.fa"$/;"	v
 INPUT_FILE_PATH	program/parse-mpileup-V04.py	/^    INPUT_FILE_PATH = ARGS.Input$/;"	v
 IdentifyLength	program/.ipynb_checkpoints/target_seq_demultiplex_fastq_V01-checkpoint.py	/^        IdentifyLength=ARGS.IdentifyLength,$/;"	v
 IdentifyLength	program/target_seq_demultiplex_fastq_V01.py	/^        IdentifyLength=ARGS.IdentifyLength,$/;"	v
@@ -61,9 +63,9 @@ IdentifyMismatchCutoff	program/target_seq_demultiplex_fastq_V01.py	/^        Ide
 LIB	.ipynb_checkpoints/step.03.qc_for_regions-checkpoint.py	/^LIB = ['ABE-HEK4-rep1',$/;"	v
 LIB	step.03.qc_for_regions.py	/^LIB = ['ABE-HEK4-rep1',$/;"	v
 LIBS	.ipynb_checkpoints/step.04.merge_reads_for_regions-checkpoint.py	/^LIBS = [$/;"	v
-LIBS	.ipynb_checkpoints/step.06.mapping_to_local_and_plot-checkpoint.py	/^LIBS = ['33A',$/;"	v
+LIBS	.ipynb_checkpoints/step.06.mapping_to_local_and_plot-checkpoint.py	/^LIBS = ['ABE-HEK4-rep1',$/;"	v
 LIBS	step.04.merge_reads_for_regions.py	/^LIBS = [$/;"	v
-LIBS	step.06.mapping_to_local_and_plot.py	/^LIBS = ['33A',$/;"	v
+LIBS	step.06.mapping_to_local_and_plot.py	/^LIBS = ['ABE-HEK4-rep1',$/;"	v
 MULTIQC	.ipynb_checkpoints/step.03.qc_for_regions-checkpoint.py	/^    MULTIQC = path.read().strip()$/;"	v
 MULTIQC	step.03.qc_for_regions.py	/^    MULTIQC = path.read().strip()$/;"	v
 MUT_NUM	program/parse-mpileup-V04.py	/^    MUT_NUM = int(ARGS.MutNum)$/;"	v
@@ -76,11 +78,17 @@ MinMergeReadRatioCutoff	program/target_seq_merge_fq_V03.py	/^        MinMergeRea
 OUTPUT_FILE_PATH	program/parse-mpileup-V04.py	/^    OUTPUT_FILE_PATH = ARGS.Output$/;"	v
 PAM_ref_start_index	program/.ipynb_checkpoints/plot-targetseq-bmat-V02-checkpoint.py	/^        PAM_ref_start_index = sgRNA_start + align_index + 1 - ref_align_gap_count$/;"	v
 PRIMER_INFO	.ipynb_checkpoints/step.04.merge_reads_for_regions-checkpoint.py	/^PRIMER_INFO = ".\/primer_table\/ABE.txt"$/;"	v
+PRIMER_INFO	.ipynb_checkpoints/step.05.form_reference-checkpoint.py	/^PRIMER_INFO = ".\/primer_table\/ABE.txt"$/;"	v
+PRIMER_INFO	.ipynb_checkpoints/step.06.mapping_to_local_and_plot-checkpoint.py	/^PRIMER_INFO = ".\/primer_table\/ABE.txt"$/;"	v
 PRIMER_INFO	step.04.merge_reads_for_regions.py	/^PRIMER_INFO = ".\/primer_table\/ABE.txt"$/;"	v
+PRIMER_INFO	step.05.form_reference.py	/^PRIMER_INFO = ".\/primer_table\/ABE.txt"$/;"	v
+PRIMER_INFO	step.06.mapping_to_local_and_plot.py	/^PRIMER_INFO = ".\/primer_table\/ABE.txt"$/;"	v
 PYTHON	.ipynb_checkpoints/step.04.merge_reads_for_regions-checkpoint.py	/^PYTHON = "\/lustre1\/chengqiyi_pkuhpc\/zhaohn\/0.apps\/miniconda3\/envs\/snakepipes_py27\/bin\/python"$/;"	v
-PYTHON	.ipynb_checkpoints/step.06.mapping_to_local_and_plot-checkpoint.py	/^PYTHON = "\/home\/zhaohuanan\/zhaohn_HD\/miniconda3\/envs\/snakepipes_target-seq\/bin\/python" # ok$/;"	v
+PYTHON	.ipynb_checkpoints/step.05.form_reference-checkpoint.py	/^PYTHON = "\/lustre1\/chengqiyi_pkuhpc\/zhaohn\/0.apps\/miniconda3\/envs\/snakepipes_py27\/bin\/python"$/;"	v
+PYTHON	.ipynb_checkpoints/step.06.mapping_to_local_and_plot-checkpoint.py	/^PYTHON = "\/lustre1\/chengqiyi_pkuhpc\/zhaohn\/0.apps\/miniconda3\/envs\/snakepipes_py27\/bin\/python"$/;"	v
 PYTHON	step.04.merge_reads_for_regions.py	/^PYTHON = "\/lustre1\/chengqiyi_pkuhpc\/zhaohn\/0.apps\/miniconda3\/envs\/snakepipes_py27\/bin\/python"$/;"	v
-PYTHON	step.06.mapping_to_local_and_plot.py	/^PYTHON = "\/home\/zhaohuanan\/zhaohn_HD\/miniconda3\/envs\/snakepipes_target-seq\/bin\/python" # ok$/;"	v
+PYTHON	step.05.form_reference.py	/^PYTHON = "\/lustre1\/chengqiyi_pkuhpc\/zhaohn\/0.apps\/miniconda3\/envs\/snakepipes_py27\/bin\/python"$/;"	v
+PYTHON	step.06.mapping_to_local_and_plot.py	/^PYTHON = "\/lustre1\/chengqiyi_pkuhpc\/zhaohn\/0.apps\/miniconda3\/envs\/snakepipes_py27\/bin\/python"$/;"	v
 PatchCollection	program/.ipynb_checkpoints/plot-targetseq-bmat-V02-checkpoint.py	/^from matplotlib.collections import PatchCollection$/;"	i
 PatchCollection	program/.ipynb_checkpoints/plot-targetseq-bmat-V04-checkpoint.py	/^from matplotlib.collections import PatchCollection$/;"	i
 PatchCollection	program/multiplot-targetseq-bmat-heatmap-V3.py	/^from matplotlib.collections import PatchCollection$/;"	i
@@ -110,13 +118,13 @@ Rectangle	program/multiplot-targetseq-bmat-heatmap-V3.py	/^from matplotlib.patch
 Rectangle	program/plot-targetseq-bmat-V04.py	/^from matplotlib.patches import Rectangle$/;"	i
 SAMCLIP	.ipynb_checkpoints/step.06.mapping_to_local_and_plot-checkpoint.py	/^    SAMCLIP = path.read().strip()$/;"	v
 SAMCLIP	step.06.mapping_to_local_and_plot.py	/^    SAMCLIP = path.read().strip()$/;"	v
-SAMPLES	.ipynb_checkpoints/step.05.form_reference-checkpoint.py	/^SAMPLES = ['EMX1-Guideseq-10',$/;"	v
-SAMPLES	.ipynb_checkpoints/step.06.mapping_to_local_and_plot-checkpoint.py	/^SAMPLES = [$/;"	v
-SAMPLES	step.05.form_reference.py	/^SAMPLES = ['EMX1-Guideseq-10',$/;"	v
-SAMPLES	step.06.mapping_to_local_and_plot.py	/^SAMPLES = [$/;"	v
-SAMTOOLS	.ipynb_checkpoints/step.05.form_reference-checkpoint.py	/^SAMTOOLS = "\/home\/zhaohuanan\/zhaohn_HD\/miniconda3\/bin\/samtools"$/;"	v
+SAMPLES	.ipynb_checkpoints/step.05.form_reference-checkpoint.py	/^SAMPLES = ['HEK4-ABEABE8EACBECBEOUT-Detect1',$/;"	v
+SAMPLES	.ipynb_checkpoints/step.06.mapping_to_local_and_plot-checkpoint.py	/^SAMPLES = ['HEK4-abeABE8EACBECBEout-A1',$/;"	v
+SAMPLES	step.05.form_reference.py	/^SAMPLES = ['HEK4-ABEABE8EACBECBEOUT-Detect1',$/;"	v
+SAMPLES	step.06.mapping_to_local_and_plot.py	/^SAMPLES = ['HEK4-abeABE8EACBECBEout-A1',$/;"	v
+SAMTOOLS	.ipynb_checkpoints/step.05.form_reference-checkpoint.py	/^    SAMTOOLS = path.read().strip()$/;"	v
 SAMTOOLS	.ipynb_checkpoints/step.06.mapping_to_local_and_plot-checkpoint.py	/^    SAMTOOLS = path.read().strip()$/;"	v
-SAMTOOLS	step.05.form_reference.py	/^SAMTOOLS = "\/home\/zhaohuanan\/zhaohn_HD\/miniconda3\/bin\/samtools"$/;"	v
+SAMTOOLS	step.05.form_reference.py	/^    SAMTOOLS = path.read().strip()$/;"	v
 SAMTOOLS	step.06.mapping_to_local_and_plot.py	/^    SAMTOOLS = path.read().strip()$/;"	v
 SeqIO	program/.ipynb_checkpoints/plot-targetseq-bmat-V02-checkpoint.py	/^from Bio import SeqIO$/;"	i
 SeqIO	program/.ipynb_checkpoints/plot-targetseq-bmat-V04-checkpoint.py	/^from Bio import SeqIO$/;"	i
@@ -125,8 +133,12 @@ SeqIO	program/plot-targetseq-bmat-V04.py	/^from Bio import SeqIO$/;"	i
 TEMP_DIR	program/parse-mpileup-V04.py	/^    TEMP_DIR = ARGS.TempDir$/;"	v
 THREADS	.ipynb_checkpoints/step.03.qc_for_regions-checkpoint.py	/^THREADS = '20'$/;"	v
 THREADS	.ipynb_checkpoints/step.04.merge_reads_for_regions-checkpoint.py	/^THREADS = '20'$/;"	v
+THREADS	.ipynb_checkpoints/step.05.form_reference-checkpoint.py	/^THREADS = '20'$/;"	v
+THREADS	.ipynb_checkpoints/step.06.mapping_to_local_and_plot-checkpoint.py	/^THREADS = '20'$/;"	v
 THREADS	step.03.qc_for_regions.py	/^THREADS = '20'$/;"	v
 THREADS	step.04.merge_reads_for_regions.py	/^THREADS = '20'$/;"	v
+THREADS	step.05.form_reference.py	/^THREADS = '20'$/;"	v
+THREADS	step.06.mapping_to_local_and_plot.py	/^THREADS = '20'$/;"	v
 THREADS_NUM	program/parse-mpileup-V04.py	/^    THREADS_NUM = int(ARGS.Threads)$/;"	v
 __init__	program/.ipynb_checkpoints/target_seq_demultiplex_fastq_V01-checkpoint.py	/^    def __init__(self, fastq_read_list, phred=33):$/;"	m	class:FastqRead
 __init__	program/.ipynb_checkpoints/target_seq_demultiplex_fastq_V01-checkpoint.py	/^    def __init__(self, primer_line_list):$/;"	m	class:PrimerInfo
@@ -335,8 +347,6 @@ default_sgRNA_dict	program/.ipynb_checkpoints/plot-targetseq-bmat-V02-checkpoint
 default_sgRNA_dict	program/.ipynb_checkpoints/plot-targetseq-bmat-V04-checkpoint.py	/^default_sgRNA_dict = {$/;"	v
 default_sgRNA_dict	program/multiplot-targetseq-bmat-heatmap-V3.py	/^default_sgRNA_dict = {$/;"	v
 default_sgRNA_dict	program/plot-targetseq-bmat-V04.py	/^default_sgRNA_dict = {$/;"	v
-defult_sgRNA_dict_for_plot	.ipynb_checkpoints/step.06.mapping_to_local_and_plot-checkpoint.py	/^defult_sgRNA_dict_for_plot = {$/;"	v
-defult_sgRNA_dict_for_plot	step.06.mapping_to_local_and_plot.py	/^defult_sgRNA_dict_for_plot = {$/;"	v
 df_bmat_all	program/multiplot-targetseq-bmat-heatmap-V3.py	/^    df_bmat_all = df_tmp.copy()$/;"	v
 df_matrix	program/multiplot-targetseq-bmat-heatmap-V3.py	/^            df_matrix = df_matrix.loc[:, ls_plot_range]$/;"	v
 df_matrix	program/multiplot-targetseq-bmat-heatmap-V3.py	/^    df_matrix = pd.DataFrame(np.zeros((len(panel_height_coef), len(plot_data_list[0][1]))))$/;"	v
@@ -712,6 +722,8 @@ num_extend	program/multiplot-targetseq-bmat-heatmap-V3.py	/^        num_extend =
 os	.ipynb_checkpoints/step.03.qc_for_regions-checkpoint.py	/^import os$/;"	i
 os	.ipynb_checkpoints/step.04.merge_reads_for_regions-checkpoint.py	/^import os$/;"	i
 os	.ipynb_checkpoints/step.05.form_reference-checkpoint.py	/^        import os$/;"	i
+os	.ipynb_checkpoints/step.05.form_reference-checkpoint.py	/^import os$/;"	i
+os	.ipynb_checkpoints/step.06.mapping_to_local_and_plot-checkpoint.py	/^import os$/;"	i
 os	program/.ipynb_checkpoints/plot-targetseq-bmat-V02-checkpoint.py	/^import os $/;"	i
 os	program/.ipynb_checkpoints/plot-targetseq-bmat-V04-checkpoint.py	/^import os $/;"	i
 os	program/.ipynb_checkpoints/target_seq_demultiplex_fastq_V01-checkpoint.py	/^import os$/;"	i
@@ -724,6 +736,8 @@ os	program/target_seq_merge_fq_V03.py	/^import os$/;"	i
 os	step.03.qc_for_regions.py	/^import os$/;"	i
 os	step.04.merge_reads_for_regions.py	/^import os$/;"	i
 os	step.05.form_reference.py	/^        import os$/;"	i
+os	step.05.form_reference.py	/^import os$/;"	i
+os	step.06.mapping_to_local_and_plot.py	/^import os$/;"	i
 out_R1_list	program/.ipynb_checkpoints/target_seq_merge_fq_V03-checkpoint.py	/^                    out_R1_list = [out_head_R1, merge_R1_info[0], "+", merge_R1_info[1]]$/;"	v
 out_R1_list	program/target_seq_merge_fq_V03.py	/^                    out_R1_list = [out_head_R1, merge_R1_info[0], "+", merge_R1_info[1]]$/;"	v
 out_R2_list	program/.ipynb_checkpoints/target_seq_merge_fq_V03-checkpoint.py	/^                    out_R2_list = [out_head_R2, merge_R2_info[0], "+", merge_R2_info[1]]$/;"	v
@@ -1041,12 +1055,12 @@ sgRNA_full_length	program/multiplot-targetseq-bmat-heatmap-V3.py	/^        sgRNA
 sgRNA_full_length	program/multiplot-targetseq-bmat-heatmap-V3.py	/^        sgRNA_full_length = str(ARGS.sgRNA).upper()$/;"	v
 sgRNA_full_length	program/plot-targetseq-bmat-V04.py	/^        sgRNA_full_length = default_sgRNA_dict[ARGS.sgRNA]$/;"	v
 sgRNA_full_length	program/plot-targetseq-bmat-V04.py	/^        sgRNA_full_length = str(ARGS.sgRNA).upper()$/;"	v
-sgRNA_seq	.ipynb_checkpoints/step.06.mapping_to_local_and_plot-checkpoint.py	/^        sgRNA_seq = lambda wildcards, input: defult_sgRNA_dict_for_plot[input[0].split("\/")[4].split("-")[0]],$/;"	v
+sgRNA_seq	.ipynb_checkpoints/step.06.mapping_to_local_and_plot-checkpoint.py	/^        sgRNA_seq = '..\/reference.fasta\/{sample}.sgRNA.upper.fa.seq'$/;"	v
 sgRNA_seq	program/.ipynb_checkpoints/plot-targetseq-bmat-V02-checkpoint.py	/^    sgRNA_seq = sgRNA_full_length[:-3]$/;"	v
 sgRNA_seq	program/.ipynb_checkpoints/plot-targetseq-bmat-V04-checkpoint.py	/^    sgRNA_seq = sgRNA_full_length[:-3]$/;"	v
 sgRNA_seq	program/multiplot-targetseq-bmat-heatmap-V3.py	/^    sgRNA_seq = sgRNA_full_length[:-3]$/;"	v
 sgRNA_seq	program/plot-targetseq-bmat-V04.py	/^    sgRNA_seq = sgRNA_full_length[:-3]$/;"	v
-sgRNA_seq	step.06.mapping_to_local_and_plot.py	/^        sgRNA_seq = lambda wildcards, input: defult_sgRNA_dict_for_plot[input[0].split("\/")[4].split("-")[0]],$/;"	v
+sgRNA_seq	step.06.mapping_to_local_and_plot.py	/^        sgRNA_seq = '..\/reference.fasta\/{sample}.sgRNA.upper.fa.seq'$/;"	v
 sgRNA_start	program/.ipynb_checkpoints/plot-targetseq-bmat-V02-checkpoint.py	/^        sgRNA_start = final_align[4] $/;"	v
 sgRNA_start	program/.ipynb_checkpoints/plot-targetseq-bmat-V02-checkpoint.py	/^        sgRNA_start = final_align[9] - len(sgRNA_seq) - final_align_sgRNA_gap_count + final_align_ref_gap_count$/;"	v
 sgRNA_start	program/.ipynb_checkpoints/plot-targetseq-bmat-V04-checkpoint.py	/^        sgRNA_start = final_align[4]$/;"	v

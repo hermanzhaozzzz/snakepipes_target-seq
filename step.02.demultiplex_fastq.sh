@@ -6,7 +6,7 @@ CONDA_ENV=/lustre1/chengqiyi_pkuhpc/zhaohn/0.apps/miniconda3/envs/snakepipes_py2
 # abyss
 # CONDA_ENV=/home/zhaohuanan/zhaohn_HD/miniconda3/envs/snakepipes_target-seq
 
-PRIMER_INFO=./primer_table/ABE.txt
+PRIMER_INFO=./primer_table/primer.txt
 # ------------------------------------------------------------------->>>>>>>>>>
 # 脚本内容
 # ------------------------------------------------------------------->>>>>>>>>>
