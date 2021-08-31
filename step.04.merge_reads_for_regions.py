@@ -10,18 +10,11 @@ import os
 # ------------------------------------------------------------------->>>>>>>>>>
 # SAMPLE INFO
 # ------------------------------------------------------------------->>>>>>>>>>
-LIBS = [
-    'ABE-HEK4-rep1',
-    'ABE-HEK4-rep2',
-    'ABE8e-HEK4-rep1',
-    'ABE8e-HEK4-rep2',
-    'ACBE-HEK4-rep1',
-    'ACBE-HEK4-rep2',
-    'CBE-HEK4-rep1',
-    'CBE-HEK4-rep2'
-]
+LIBS = ['ON651-4142-rep1', 'ON651-4142-rep2', 'ON651-44Det-rep1', 'ON651-44Det-rep2']
 
-CUTOFF = ["3","5","10"]
+CUTOFF = ["0",
+#           "3","5","10"
+         ]
 
 
 # ------------------------------------------------------------------->>>>>>>>>>
@@ -62,11 +55,20 @@ rule MergeFastq:
         cutoff = "{cutoff}"
     shell:
         """
+        if [[  {wildcards.cutoff}==0 ]]; then 
+        echo "cutoff == 0!!" 
+        cp -r {input}/demultiplex.fastq {input}/cutoff_0/merge.fastq
+        cd {input}/demultiplex.fastq
+        zsh ../../snakepipes_target-seq/cutoff_0_rename.sh
+        cd -
+        touch {output}
+        else
         {PYTHON} ./program/target_seq_merge_fq_V03.py \
         -i {input[0]} \
         -p {PRIMER_INFO} \
         -o {params.out_dir} \
         -r {output} \
         --MinMergeReadNumCutoff {params.cutoff}  > {log} 2>&1
+        fi
         """
 
