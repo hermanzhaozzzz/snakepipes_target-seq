@@ -1,5 +1,6 @@
 /public/
 /.ipynb_checkpoints/
+/.idea/
 /.deploy_git/
 /.texpadtmp/
 /.Trash/
