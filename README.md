@@ -1,6 +1,14 @@
-# Env:
-```
-conda create -n snakepipes_py27 python=2.7.15 biopython=1.72 pandas=0.24.2 numpy=1.16.5 matplotlib bedtools=2.29.2 bwa
+# Environment:
+```shell
+conda create -n snakepipes_py27 \
+    python=2.7.15 \
+    biopython=1.72 \
+    pandas=0.24.2 \
+    numpy=1.16.5 \
+    matplotlib \
+    bedtools=2.29.2 \
+    bwa \
+    samtools
 ```
 
 # 1. primer design table -> primer amplicon region
