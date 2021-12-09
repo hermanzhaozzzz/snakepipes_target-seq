@@ -6,8 +6,8 @@
 /.Trash/
 /.snakemake/
 /tmpdir_*/
-sna*.err
-sna*.out
+*.err
+*.out
 job.srp*
 .DS_Store
 .Rhistory

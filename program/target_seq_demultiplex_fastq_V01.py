@@ -45,7 +45,15 @@ class FastqRead(object):
         self.quality = fastq_read_list[3]
         self.phred = phred
         self.length = len(self.sequence)
-        self.read_id = fastq_read_list[0].split(" ")[0]
+        read_id_raw = fastq_read_list[0]
+        if read_id_raw[-2] == '/':
+            # MGI reads
+            self.read_id = fastq_read_list[0].split("/")[0]
+        elif read_id_raw[-9] == '+':
+            # Illumina
+            self.read_id = fastq_read_list[0].split(" ")[0]
+        else:
+            raise OError("read1 file not match with read2 file! (Or parse read id failed, MGI or Illumina?)")
 
     def trimmer(self, start=0, end=None):
         # 返回trim的fastq read对象
