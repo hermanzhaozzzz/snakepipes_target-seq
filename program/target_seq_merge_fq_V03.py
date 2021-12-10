@@ -52,14 +52,15 @@ class FastqRead(object):
         self.quality = fastq_read_list[3]
         self.phred = phred
         self.length = len(self.sequence)
-        read_id_raw = fastq_read_list[0]
         
-        if ':' in read_id_raw:
+        if ':' in fastq_read_list[0]:
             # Illumina
             self.read_id = fastq_read_list[0].split(" ")[0]
+            self.read_id_tail = fastq_read_list[0].split(" ")[1]
         else:
             # MGI reads
             self.read_id = fastq_read_list[0].split("/")[0]
+            self.read_id_tail = fastq_read_list[0].split("/")[1]
         # elif read_id_raw[-2] == '/':
         #     # MGI reads
         #     self.read_id = fastq_read_list[0].split("/")[0]
@@ -350,15 +351,17 @@ if __name__ == '__main__':
             # ------------------------------------------------->>>>>>>>
             fq_1_obj_rm_barcode = fq_1_obj.trimmer(primer_dict[primer_key].left_barcode_length)
             fq_2_obj_rm_barcode = fq_2_obj.trimmer(primer_dict[primer_key].right_barcode_length)
-
+                            
             fq_1_obj_rm_barcode.head = fq_1_obj_rm_barcode.read_id + ":" + fq_1_obj.sequence[
                                                                            :primer_dict[primer_key].left_barcode_length] + ":" + fq_2_obj.sequence[
                                                                                                         :primer_dict[primer_key].right_barcode_length] + " " + \
-                                       fq_1_obj_rm_barcode.head.split(" ")[1]
+                                       fq_1_obj_rm_barcode.read_id_tail                                                  
+                                       # fq_1_obj_rm_barcode.head.split(" ")[1]
             fq_2_obj_rm_barcode.head = fq_1_obj_rm_barcode.read_id + ":" + fq_1_obj.sequence[
                                                                            :primer_dict[primer_key].left_barcode_length] + ":" + fq_2_obj.sequence[
                                                                                                         :primer_dict[primer_key].right_barcode_length] + " " + \
-                                       fq_2_obj_rm_barcode.head.split(" ")[1]
+                                       fq_2_obj_rm_barcode.read_id_tail
+                                       # fq_2_obj_rm_barcode.head.split(" ")[1]
 
             primer_temp_read_dict[temp_read_barcode_key][0].append(fq_1_obj_rm_barcode)
             primer_temp_read_dict[temp_read_barcode_key][1].append(fq_2_obj_rm_barcode)
