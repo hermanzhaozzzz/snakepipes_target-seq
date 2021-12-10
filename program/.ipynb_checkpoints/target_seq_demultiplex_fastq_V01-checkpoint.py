@@ -46,13 +46,16 @@ class FastqRead(object):
         self.phred = phred
         self.length = len(self.sequence)
         read_id_raw = fastq_read_list[0]
-        if read_id_raw[-2] == '/':
-            # MGI reads
-            self.read_id = fastq_read_list[0].split("/")[0]
-        # elif read_id_raw[-9] == '+':
-        else:
+        
+        if ':' in read_id_raw:
             # Illumina
             self.read_id = fastq_read_list[0].split(" ")[0]
+        else:
+            # MGI reads
+            self.read_id = fastq_read_list[0].split("/")[0]
+        # elif read_id_raw[-2] == '/':
+        #     # MGI reads
+        #     self.read_id = fastq_read_list[0].split("/")[0]
         # else:
             # raise OError("read1 file not match with read2 file! (Or parse read id failed, MGI or Illumina?)")
 
