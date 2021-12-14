@@ -10,10 +10,12 @@ import os
 # ------------------------------------------------------------------->>>>>>>>>>
 # SAMPLE INFO
 # ------------------------------------------------------------------->>>>>>>>>>
-LIBS = ['ON651-4142-rep1', 'ON651-4142-rep2', 'ON651-44Det-rep1', 'ON651-44Det-rep2']
+LIBS = ['untreated-rep1', 'untreated-rep2']
 
-CUTOFF = ["0",
-#           "3","5","10"
+
+CUTOFF = [
+    # "0",
+        "3","5","10"
          ]
 
 
@@ -55,20 +57,27 @@ rule MergeFastq:
         cutoff = "{cutoff}"
     shell:
         """
-        if [[  {wildcards.cutoff}==0 ]]; then 
-        echo "cutoff == 0!!" 
-        cp -r {input}/demultiplex.fastq {input}/cutoff_0/merge.fastq
-        cd {input}/demultiplex.fastq
-        zsh ../../snakepipes_target-seq/cutoff_0_rename.sh
-        cd -
-        touch {output}
-        else
         {PYTHON} ./program/target_seq_merge_fq_V03.py \
         -i {input[0]} \
         -p {PRIMER_INFO} \
         -o {params.out_dir} \
         -r {output} \
         --MinMergeReadNumCutoff {params.cutoff}  > {log} 2>&1
-        fi
         """
-
+        # """
+        # if [[  {wildcards.cutoff}==0 ]]; then 
+        # echo "cutoff == 0!!" 
+        # cp -r {input}/demultiplex.fastq {input}/cutoff_0/merge.fastq
+        # cd {input}/demultiplex.fastq
+        # zsh ../../snakepipes_target-seq/cutoff_0_rename.sh
+        # cd -
+        # touch {output}
+        # else
+        # {PYTHON} ./program/target_seq_merge_fq_V03.py \
+        # -i {input[0]} \
+        # -p {PRIMER_INFO} \
+        # -o {params.out_dir} \
+        # -r {output} \
+        # --MinMergeReadNumCutoff {params.cutoff}  > {log} 2>&1
+        # fi
+        # """
