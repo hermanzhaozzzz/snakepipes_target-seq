@@ -1,5 +1,7 @@
 /public/
 /.ipynb_checkpoints/
+/.ipynb_checkpoints/*
+*/.ipynb_checkpoints/*
 /.idea/
 /.deploy_git/
 /.texpadtmp/

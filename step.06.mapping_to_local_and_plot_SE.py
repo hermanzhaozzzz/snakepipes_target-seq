@@ -144,7 +144,7 @@ rule samtools_sort_by_position:
     output:
         "../TargetSeq-{lib}/cutoff_{cutoff}/mapping/{sample}_bwa_sort.bam"
     shell:
-        "{SAMTOOLS} sort -O BAM -o {output} -T {output}.temp -@ {THREADS} -m 2G {input}"
+        "{SAMTOOLS} sort -O BAM -o {output} -T {output}.temp -@ {THREADS} {input}"
 rule samtools_index:
     input:
         "../TargetSeq-{lib}/cutoff_{cutoff}/mapping/{sample}_bwa_sort.bam"

@@ -12,7 +12,10 @@ import os
 # ------------------------------------------------------------------->>>>>>>>>>
 
 
-CUTOFF = ["3","5","10"]
+CUTOFF = [
+    "3",
+    # "5","10"
+]
 
 LIBS = ['untreated-rep1', 'untreated-rep2']
 
@@ -35,7 +38,7 @@ SAMPLES = ['share-new-1',
  'share-new-16',
  'share-new-17',
  'share-new-18',
- # 'share-new-19',
+ # 'share-new-19', # extend
  'share-new-20',
  'share-new-21',
  'share-new-22',
@@ -282,7 +285,7 @@ rule samtools_sort_by_position:
     output:
         "../TargetSeq-{lib}/cutoff_{cutoff}/mapping/{sample}_bwa_sort.bam"
     shell:
-        "{SAMTOOLS} sort -O BAM -o {output} -T {output}.temp -@ {THREADS} -m 2G {input}"
+        "{SAMTOOLS} sort -O BAM -o {output} -T {output}.temp -@ {THREADS} {input}"
 
 
 rule samtools_index:
