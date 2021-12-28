@@ -57,27 +57,20 @@ rule MergeFastq:
         cutoff = "{cutoff}"
     shell:
         """
+        if [[  {wildcards.cutoff}==0 ]]; then 
+        echo "cutoff == 0!!" 
+        mkdir -p {input}/cutoff_0/merge.fastq
+        rsync -Ptrv {input}/demultiplex.fastq/* {input}/cutoff_0/merge.fastq
+        cd {input}/demultiplex.fastq
+        bash ../../snakepipes_target-seq/cutoff_0_rename.sh
+        cd -
+        touch {output}
+        else
         {PYTHON} ./program/target_seq_merge_fq_V03.py \
         -i {input[0]} \
         -p {PRIMER_INFO} \
         -o {params.out_dir} \
         -r {output} \
         --MinMergeReadNumCutoff {params.cutoff}  > {log} 2>&1
-        """
-        # """
-        # if [[  {wildcards.cutoff}==0 ]]; then 
-        # echo "cutoff == 0!!" 
-        # cp -r {input}/demultiplex.fastq {input}/cutoff_0/merge.fastq
-        # cd {input}/demultiplex.fastq
-        # zsh ../../snakepipes_target-seq/cutoff_0_rename.sh
-        # cd -
-        # touch {output}
-        # else
-        # {PYTHON} ./program/target_seq_merge_fq_V03.py \
-        # -i {input[0]} \
-        # -p {PRIMER_INFO} \
-        # -o {params.out_dir} \
-        # -r {output} \
-        # --MinMergeReadNumCutoff {params.cutoff}  > {log} 2>&1
-        # fi
+        fi
         # """
