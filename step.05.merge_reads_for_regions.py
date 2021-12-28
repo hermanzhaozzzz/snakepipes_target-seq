@@ -57,12 +57,12 @@ rule MergeFastq:
         cutoff = "{cutoff}"
     shell:
         """
-        if [[  {wildcards.cutoff}==0 ]]; then 
+        if (({wildcards.cutoff}==0)); then 
         echo "cutoff == 0!!" 
         mkdir -p {input}/cutoff_0/merge.fastq
         rsync -Ptrv {input}/demultiplex.fastq/* {input}/cutoff_0/merge.fastq
         cd {input}/demultiplex.fastq
-        bash ../../snakepipes_target-seq/cutoff_0_rename.sh
+        zsh ../../snakepipes_target-seq/cutoff_0_rename.sh
         cd -
         touch {output}
         else
@@ -73,4 +73,4 @@ rule MergeFastq:
         -r {output} \
         --MinMergeReadNumCutoff {params.cutoff}  > {log} 2>&1
         fi
-        # """
+        """
