@@ -2,6 +2,8 @@
 /.ipynb_checkpoints/
 /.ipynb_checkpoints/*
 */.ipynb_checkpoints/*
+/primer_table/.ipynb_checkpoints/ 
+/primer_table/.ipynb_checkpoints/*
 /.idea/
 /.deploy_git/
 /.texpadtmp/
