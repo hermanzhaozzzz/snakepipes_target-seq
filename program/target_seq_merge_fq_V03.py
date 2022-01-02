@@ -282,8 +282,8 @@ if __name__ == '__main__':
         primer_temp_read_dict = {}
         line_count = 0
         final_out_count = 0
-        in_fq_demultiplex_R1_filebase = 'demultiplex.fastq/{base_name}_demultiplex_R1.fastq'.format(base_name=primer_key)
-        in_fq_demultiplex_R2_filebase = 'demultiplex.fastq/{base_name}_demultiplex_R2.fastq'.format(base_name=primer_key)
+        in_fq_demultiplex_R1_filebase = 'demultiplex.fastq/{base_name}_demultiplex_R1.fastq.gz'.format(base_name=primer_key)
+        in_fq_demultiplex_R2_filebase = 'demultiplex.fastq/{base_name}_demultiplex_R2.fastq.gz'.format(base_name=primer_key)
 
         in_fq_demultiplex_R1_filename = os.path.join(os.path.abspath(base_dir), in_fq_demultiplex_R1_filebase)
         in_fq_demultiplex_R2_filename = os.path.join(os.path.abspath(base_dir), in_fq_demultiplex_R2_filebase)
@@ -372,14 +372,30 @@ if __name__ == '__main__':
         primer_key, line_count // 4, time.strftime("%Y-%m-%d %H:%M:%S", time.localtime())))
 
         # make output filename
-        out_fq_R1_filebase = 'merge.fastq/{base_name}_merge_barcode_R1.fastq'.format(base_name=primer_key)
-        out_fq_R2_filebase = 'merge.fastq/{base_name}_merge_barcode_R2.fastq'.format(base_name=primer_key)
+        out_fq_R1_filebase = 'merge.fastq/{base_name}_merge_barcode_R1.fastq.gz'.format(base_name=primer_key)
+        out_fq_R2_filebase = 'merge.fastq/{base_name}_merge_barcode_R2.fastq.gz'.format(base_name=primer_key)
 
         out_fq_R1_filename = os.path.join(os.path.abspath(out_base_dir), out_fq_R1_filebase)
         out_fq_R2_filename = os.path.join(os.path.abspath(out_base_dir), out_fq_R2_filebase)
-
-        out_fq_R1 = open(out_fq_R1_filename, "w")
-        out_fq_R2 = open(out_fq_R2_filename, "w")
+        
+        if in_fq_demultiplex_R1_filename[-3:] == ".gz":
+            try:
+                out_fq_R1 = gzip.open(out_fq_R1_filename, "r")
+            except IOError:
+                continue
+        else:
+            try:
+                out_fq_R1 = open(out_fq_R1_filename, "r")
+            except IOError:
+                continue
+                
+        if out_fq_R2[-3:] == ".gz":
+            out_fq_R2 = gzip.open(out_fq_R2_filename, "w")
+        else:
+            out_fq_R2 = open(out_fq_R2_filename, "w")
+                
+        # out_fq_R1 = open(out_fq_R1_filename, "w")
+        # out_fq_R2 = open(out_fq_R2_filename, "w")
 
         for barcode_info in primer_temp_read_dict.keys():
             if primer_temp_read_dict[barcode_info][2] >= min_read_count_cutoff:

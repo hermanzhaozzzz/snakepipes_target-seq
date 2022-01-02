@@ -138,8 +138,8 @@ else:
 rule all:
     # 有点特殊，输出和输入文件名只能有R1.fastq.gz和_fastqc.html的区别，前面不能有区别！要改就得全改！
     input:
-        expand("../TargetSeq-{lib}/demultiplex.fastq/{region}_demultiplex_R1.fastq",lib=LIB, region=REGION),
-        expand("../TargetSeq-{lib}/demultiplex.fastq/{region}_demultiplex_R2.fastq",lib=LIB, region=REGION),
+        expand("../IntactTargetSeq-{lib}/demultiplex.fastq/{region}_demultiplex_R1.fastq.gz",lib=LIB, region=REGION),
+        expand("../IntactTargetSeq-{lib}/demultiplex.fastq/{region}_demultiplex_R2.fastq.gz",lib=LIB, region=REGION),
         expand("../qc_quantify-all/fastqc/TargetSeq-{lib}_{region}",lib=LIB, region=REGION),
         "../qc_quantify-all/multiqc/multiqc_report.html"
 # ------------------------------------------------------------------------------------------>>>>>>>>>>
@@ -147,11 +147,11 @@ rule all:
 # ------------------------------------------------------------------------------------------>>>>>>>>>>
 rule cp:
     input: 
-        "../TargetSeq-{lib}/demultiplex.fastq/{region}_demultiplex_R1.fastq",
-        "../TargetSeq-{lib}/demultiplex.fastq/{region}_demultiplex_R2.fastq"
+        "../IntactTargetSeq-{lib}/demultiplex.fastq/{region}_demultiplex_R1.fastq.gz",
+        "../IntactTargetSeq-{lib}/demultiplex.fastq/{region}_demultiplex_R2.fastq.gz"
     output: 
-        temp("../qc_quantify-all/fastq/TargetSeq-{lib}_{region}_demultiplex_R1.fastq"),
-        temp("../qc_quantify-all/fastq/TargetSeq-{lib}_{region}_demultiplex_R2.fastq"),
+        temp("../qc_quantify-all/fastq/TargetSeq-{lib}_{region}_demultiplex_R1.fastq.gz"),
+        temp("../qc_quantify-all/fastq/TargetSeq-{lib}_{region}_demultiplex_R2.fastq.gz"),
     shell:
         """
         cp {input[0]} {output[0]}
@@ -159,8 +159,8 @@ rule cp:
         """
 rule fastqc: 
     input: 
-        "../qc_quantify-all/fastq/TargetSeq-{lib}_{region}_demultiplex_R1.fastq",
-        "../qc_quantify-all/fastq/TargetSeq-{lib}_{region}_demultiplex_R2.fastq",
+        "../qc_quantify-all/fastq/TargetSeq-{lib}_{region}_demultiplex_R1.fastq.gz",
+        "../qc_quantify-all/fastq/TargetSeq-{lib}_{region}_demultiplex_R2.fastq.gz",
     output: 
         directory("../qc_quantify-all/fastqc/TargetSeq-{lib}_{region}")
                 # the suffix _fastqc.zip is necessary the same with SAMPLES raw name suffix, for multiqc to find the file. 

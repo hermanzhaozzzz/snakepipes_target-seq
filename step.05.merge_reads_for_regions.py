@@ -14,8 +14,7 @@ LIBS = ['untreated-rep1', 'untreated-rep2']
 
 
 CUTOFF = [
-    # "0",
-        "3","5","10"
+    "0","3","5","10"
          ]
 
 
