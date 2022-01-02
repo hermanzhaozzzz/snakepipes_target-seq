@@ -17,7 +17,10 @@ VERSION_INFO = \
     Version-03:
       2019-10-10 merge barcode using demultiplex fastq as input file
 
+    Version-04:
+      2022-01-02 ZHAO Huanan, fix bugs for input(gz) and output(gz)
     E-Mail: meng_howard@126.com
+    E-Mail: hermanzhaozzzz@gmail.com
     """
 # Version information END ----------------------------------------------------
 
@@ -282,6 +285,8 @@ if __name__ == '__main__':
         primer_temp_read_dict = {}
         line_count = 0
         final_out_count = 0
+        # in_fq_demultiplex_R1_filebase = 'demultiplex.fastq/{base_name}_demultiplex_R1.fastq'.format(base_name=primer_key)
+        # in_fq_demultiplex_R2_filebase = 'demultiplex.fastq/{base_name}_demultiplex_R2.fastq'.format(base_name=primer_key)
         in_fq_demultiplex_R1_filebase = 'demultiplex.fastq/{base_name}_demultiplex_R1.fastq.gz'.format(base_name=primer_key)
         in_fq_demultiplex_R2_filebase = 'demultiplex.fastq/{base_name}_demultiplex_R2.fastq.gz'.format(base_name=primer_key)
 
@@ -372,6 +377,8 @@ if __name__ == '__main__':
         primer_key, line_count // 4, time.strftime("%Y-%m-%d %H:%M:%S", time.localtime())))
 
         # make output filename
+        # out_fq_R1_filebase = 'merge.fastq/{base_name}_merge_barcode_R1.fastq'.format(base_name=primer_key)
+        # out_fq_R2_filebase = 'merge.fastq/{base_name}_merge_barcode_R2.fastq'.format(base_name=primer_key)
         out_fq_R1_filebase = 'merge.fastq/{base_name}_merge_barcode_R1.fastq.gz'.format(base_name=primer_key)
         out_fq_R2_filebase = 'merge.fastq/{base_name}_merge_barcode_R2.fastq.gz'.format(base_name=primer_key)
 
