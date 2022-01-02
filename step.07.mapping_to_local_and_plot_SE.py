@@ -104,7 +104,7 @@ rule all:
         # expand('../reference.fasta/{sample}.sgRNA.upper.fa.seq',sample=SAMPLES)
 rule cutadapt:
     input:
-        "../TargetSeq-{lib}/cutoff_{cutoff}/merge.fastq/{sample}_merge_barcode_R1.fastq"
+        "../TargetSeq-{lib}/cutoff_{cutoff}/merge.fastq/{sample}_merge_barcode_R1.fastq.gz"
     output:
         "../TargetSeq-{lib}/cutoff_{cutoff}/mapping/{sample}_R1_cutadapt.fq.gz"
     log:
