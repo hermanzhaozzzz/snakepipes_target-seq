@@ -13,8 +13,7 @@ import os
 
 
 CUTOFF = [
-    "3",
-    # "5","10"
+    "0","3","5","10"
 ]
 
 LIBS = ['untreated-rep1', 'untreated-rep2']
@@ -38,7 +37,7 @@ SAMPLES = ['share-new-1',
  'share-new-16',
  'share-new-17',
  'share-new-18',
- # 'share-new-19', # extend
+ # 'share-new-19', # extend 30
  'share-new-20',
  'share-new-21',
  'share-new-22',
