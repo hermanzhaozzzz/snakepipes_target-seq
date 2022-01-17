@@ -12,7 +12,7 @@ PRIMER_INFO=./primer_table/primer.txt
 # ------------------------------------------------------------------->>>>>>>>>>
 PYTHON2=${CONDA_ENV}/bin/python
 
-for case_name in untreated-rep1 untreated-rep2
+for case_name in Q5U-56-rep1 Q5U-56-rep2 Q5U-mock-rep1 Q5U-mock-rep2
 do    
     fq1=../fastq/${case_name}_R1.fastq.gz
     fq2=../fastq/${case_name}_R2.fastq.gz
