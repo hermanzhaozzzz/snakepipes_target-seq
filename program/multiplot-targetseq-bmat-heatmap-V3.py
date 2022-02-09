@@ -824,12 +824,14 @@ if __name__ == '__main__':
             lambda x: x.sum(), axis=1)
 
         base_sum_count[base_sum_count == 0] = 1
-
+        
         # base_sum_count[np.where(base_sum_count == 0)[0]] = 1
-        total_sum_count[np.where(total_sum_count == 0)[0]] = 1
+        # total_sum_count[np.where(total_sum_count == 0)[0]] = 1
+        base_sum_count = base_sum_count + 1
+        total_sum_count = total_sum_count + 1
+        
         ls_base_sum_count.append(base_sum_count)
         ls_total_sum_count.append(total_sum_count)
-
     # make plot size
     plot_data_list = None
     panel_space_coef = None
@@ -1076,13 +1078,25 @@ if __name__ == '__main__':
 
         df_ratio_all = pd.DataFrame(ls_ratio).T
         df_ratio_all.columns = label_panel
-        df_ratio_all.index = df_matrix.T['Index'][ls_bl_select_df_sample].map(float).map(int).tolist()
+        
 
+        try:
+            df_ratio_all.index = df_matrix.T['Index'][ls_bl_select_df_sample].map(float).map(int).tolist()
+            df_ratio_all['On-target'] = df_matrix.T['On-target'][ls_bl_select_df_sample].tolist()
+            df_ratio_all['Ref'] = df_matrix.T['Ref'][ls_bl_select_df_sample].tolist()
+        except ValueError:
+            start_idx = df_matrix.T['Index'][ls_bl_select_df_sample].map(float).map(int).tolist()[0]
+            end_idx = start_idx + len(df_ratio_all.index.tolist())
+            df_ratio_all.index = np.arange(start_idx, end_idx)
+            df_ratio_all['On-target'] = df_matrix.T['On-target'].tolist()
+            df_ratio_all['Ref'] = df_matrix.T['Ref'].tolist()
+
+
+        
         # df_ratio_all.index = df_matrix.T['Index'].map(float).map(int).tolist()
-        df_ratio_all['On-target'] = df_matrix.T['On-target'][ls_bl_select_df_sample].tolist()
         # df_ratio_all['On-target'] = df_matrix.T['On-target'].tolist()
-        df_ratio_all['Ref'] = df_matrix.T['Ref'][ls_bl_select_df_sample].tolist()
         # df_ratio_all['Ref'] = df_matrix.T['Ref'].tolist()
+        
         df_ratio_all['On-Target'] = 0
         df_ratio_all['Reference'] = 0
         df_ratio_all = df_ratio_all[['On-target', 'Ref', 'On-Target', 'Reference'] + label_panel].T.copy()
