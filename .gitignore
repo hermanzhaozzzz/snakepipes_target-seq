@@ -9,6 +9,8 @@
 /.texpadtmp/
 /.Trash/
 /.snakemake/
+*/.snakemake/
+*/.snakemake/*
 /tmpdir_*/
 *.err
 *.out
