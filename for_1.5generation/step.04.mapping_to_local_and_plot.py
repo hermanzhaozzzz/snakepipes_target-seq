@@ -11,82 +11,12 @@ import os
 # SAMPLE INFO
 # ------------------------------------------------------------------->>>>>>>>>>
 SAMPLES = [
-    'ND1-on-target_ND1-L1397N-rep1-0301',
-    'ND1-on-target_ND1-L1397N-rep2-0301',
-    'ND1-on-target_untreated-rep1-0301',
-    'ND1-on-target_untreated-rep2-0301',
-    'ND4-on-target_ND4-2000-12-rep1-0301',
-    'ND4-on-target_ND4-2000-12-rep2-0301',
-    'ND4-on-target_ND4-L1333N-rep1-0301',
-    'ND4-on-target_ND4-L1333N-rep2-0301',
-    'ND4-on-target_ND4-L1397C-rep1-0301',
-    'ND4-on-target_ND4-L1397C-rep2-0301',
-    'ND4-on-target_untreated-rep1-0301',
-    'ND4-on-target_untreated-rep2-0301',
-    'ND5.1-on-target_DddA-NES-ND5.1-rep1-0301',
-    'ND5.1-on-target_DddA-NES-ND5.1-rep2-0301',
-    'ND5.1-on-target_ND5.1-1333-DddIA-rep1-0301',
-    'ND5.1-on-target_ND5.1-1333-DddIA-rep2-0301',
-    'ND5.1-on-target_ND5.1-1333-mapKNES-rep1-0301',
-    'ND5.1-on-target_ND5.1-1333-rep1-0301',
-    'ND5.1-on-target_ND5.1-1333-rep2-0301',
-    'ND5.1-on-target_ND5.1-2000-12-rep1-0301',
-    'ND5.1-on-target_ND5.1-2000-12-rep2-0301',
-    'ND5.1-on-target_TALE-NES-ND5.1-rep1-0301',
-    'ND5.1-on-target_TALE-NES-ND5.1-rep2-0301',
-    'ND5.1-on-target_UGI-NES-ND5.1-rep1-0301',
-    'ND5.1-on-target_UGI-NES-ND5.1-rep2-0301',
-    'ND5.1-on-target_WT-ND5.1-rep1-0301',
-    'ND5.1-on-target_WT-ND5.1-rep2-0301',
-    'ND5.1-on-target_untreated-rep1-0301',
-    'ND5.1-on-target_untreated-rep2-0301',
-    'ND5.3-on-target_ND5.3-L1397C-rep1-0301',
-    'ND5.3-on-target_ND5.3-L1397C-rep2-0301',
-    'ND5.3-on-target_untreated-rep1-0301',
-    'ND5.3-on-target_untreated-rep2-0301',
-    'ND6-on-target_DddA-NES-ND6-rep1',
-    'ND6-on-target_DddA-NES-ND6-rep2',
-    'ND6-on-target_DddIA-1-0.25-ND6-rep1',
-    'ND6-on-target_DddIA-1-0.25-ND6-rep2',
-    'ND6-on-target_DddIA-1-0.5-ND6-rep1',
-    'ND6-on-target_DddIA-1-0.5-ND6-rep2',
-    'ND6-on-target_DddIA-1-1-ND6-rep1',
-    'ND6-on-target_DddIA-1-1-ND6-rep2',
-    'ND6-on-target_DddIA-1-1.2-ND6-rep1',
-    'ND6-on-target_DddIA-1-1.2-ND6-rep2',
-    'ND6-on-target_DddIA-1-1.5-ND6-rep1',
-    'ND6-on-target_DddIA-1-1.5-ND6-rep2',
-    'ND6-on-target_G1309A-ND6-rep1',
-    'ND6-on-target_G1309A-ND6-rep2',
-    'ND6-on-target_N1308A-ND6-rep1',
-    'ND6-on-target_N1308A-ND6-rep2',
-    'ND6-on-target_N1367A-ND6-rep1',
-    'ND6-on-target_N1367A-ND6-rep2',
-    'ND6-on-target_N1368A-ND6-rep1',
-    'ND6-on-target_N1368A-ND6-rep2-0301',
-    'ND6-on-target_N6-2000-12-rep1-0301',
-    'ND6-on-target_N6-2000-12-rep2-0301',
-    'ND6-on-target_N6-LTX-12-rep1-0301',
-    'ND6-on-target_N6-LTX-12-rep2-0301',
-    'ND6-on-target_ND6-1397-DddIA-rep1-0301',
-    'ND6-on-target_ND6-1397-DddIA-rep2-0301',
-    'ND6-on-target_ND6-1397-hivNES-Q1310A-rep1-0301',
-    'ND6-on-target_ND6-1397-hivNES-Q1310A-rep2-0301',
-    'ND6-on-target_ND6-1397-hivNES-rep1-0301',
-    'ND6-on-target_ND6-1397-hivNES-rep2-0301',
-    'ND6-on-target_ND6-1397-rep1-0301',
-    'ND6-on-target_ND6-1397-rep2-0301',
-    'ND6-on-target_Q1310A-ND6-rep1',
-    'ND6-on-target_Q1310A-ND6-rep2',
-    'ND6-on-target_TALE-NES-ND6-rep1',
-    'ND6-on-target_TALE-NES-ND6-rep2',
-    'ND6-on-target_UGI-NES-ND6-rep1',
-    'ND6-on-target_UGI-NES-ND6-rep2',
-    'ND6-on-target_WT-ND6-rep1',
-    'ND6-on-target_WT-ND6-rep2',
-    'ND6-on-target_untreated-rep1',
-    'ND6-on-target_untreated-rep2',
-    # 'test'
+    'ND6-Q1310A-hivNES_DddIA-rep1',
+    'ND6-Q1310A-hivNES_DddIA-rep2',
+    'ND6-Q1310A_DddIA-rep1',
+    'ND6-Q1310A_DddIA-rep2',
+    'ND6-WT-rep1',
+    'ND6-WT-rep2'
 ]
 
 READ_IDX = ["1"]
@@ -104,16 +34,16 @@ GENOME_HG38 = "/lustre1/chengqiyi_pkuhpc/zhaohn/1.database/db_genomes/genome_fa/
 # SOFTWARE INFO
 # ------------------------------------------------------------------->>>>>>>>>>
 # polaris
-PYTHON = "/lustre1/chengqiyi_pkuhpc/zhaohn/miniconda3/envs/snakepipes_py27/bin/python"
+PYTHON = "/lustre1/chengqiyi_pkuhpc/zhaohn/0.apps/miniconda3/envs/snakepipes_py27/bin/python"
 # abyss
 # PYTHON = "/home/zhaohuanan/zhaohn_HD/miniconda3/envs/snakepipes_target-seq/bin/python"
 
 dt = {
-    "ND1-on-target": "ACTCAATCCTCTGATC",
-    "ND4-on-target": "CCTGATCAAATATC",
-    "ND5.1-on-target": "ACCTTTCCTCACAGGT",
-    "ND5.3-on-target": "CTACTCATCTTCCTAATT",
-    "ND6-on-target": "CCTCAGGATACTCCT"
+    # "ND1-on-target": "ACTCAATCCTCTGATC",
+    # "ND4-on-target": "CCTGATCAAATATC",
+    # "ND5.1-on-target": "ACCTTTCCTCACAGGT",
+    # "ND5.3-on-target": "CTACTCATCTTCCTAATT",
+    "ND6": "CCTCAGGATACTCCT"
 }
 
 # get the application path
@@ -169,7 +99,7 @@ rule bwa_mapping:
     output:
         temp("../../1.5generation/mapping/{sample}_bwa.sam")
     params:
-        ref = lambda wildcards, input: f"../../reference.fasta/{input[0].split('mapping/')[1].split('_')[0]}.ref.upper.fa",
+        ref = lambda wildcards, input: f"../../reference.fasta/{input[0].split('mapping/')[1].split('-')[0]}-on-target.ref.upper.fa",
     log:
         "../../1.5generation/mapping/{sample}_bwa.log"
     shell:
@@ -191,7 +121,7 @@ rule samtools_sort_by_position:
     output:
         "../../1.5generation/mapping/{sample}_bwa_sort.bam"
     shell:
-        "{SAMTOOLS} sort -O BAM -o {output} -T {output}.temp -@ {THREADS} -m 2G {input}"
+        "{SAMTOOLS} sort -O BAM -o {output} -T {output}.temp -@ {THREADS} {input}"
 rule samtools_index:
     input:
         "../../1.5generation/mapping/{sample}_bwa_sort.bam"
@@ -206,7 +136,7 @@ rule spike_in_mpileup:
     output:
         "../../1.5generation/mapping/{sample}_bwa_sort.mpileup"
     params:
-        ref = lambda wildcards, input: f"../../reference.fasta/{input[0].split('mapping/')[1].split('_')[0]}.ref.upper.fa",
+        ref = lambda wildcards, input: f"../../reference.fasta/{input[0].split('mapping/')[1].split('-')[0]}-on-target.ref.upper.fa",
     shell:
         "{SAMTOOLS} mpileup {input[0]} --reference {params.ref} --max-depth 10000000 -q 20 -Q 20 > {output} " 
 rule parse_mpileup:
@@ -222,7 +152,7 @@ rule bmat_plot:
     output:
         "../../all_plot/1.5generation/{sample}.ext50.pdf"
     params:
-        sgRNA_seq = lambda wildcards, input: dt[input[0].split("mapping/")[1].split("_")[0]],
+        sgRNA_seq = lambda wildcards, input: dt[input[0].split("mapping/")[1].split("-")[0]],
     shell:
         """
         if [[ `cat {input} |wc -l` -eq 1 ]]; then 
