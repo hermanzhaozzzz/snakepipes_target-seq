@@ -197,10 +197,10 @@ rule sam_to_bam:
         "../TargetSeq-{lib}/cutoff_{cutoff}/mapping/{sample}_bwa.bam"
     shell:
         """
-        {SAMTOOLS} view -h -f 1 -F 268 {input.sam} \
-        | {SAMCLIP} --ref {input.ref} --max 3 --progress 0 \
-        | awk 'function abs(v) {{return v < 0 ? -v : v}} $1~"@" || ($7 == "=" && abs($9) <= 600 ) {{print $0}}' \
-        | {SAMTOOLS} view -hb > {output}
+        {SAMTOOLS} sort -n {input.sam} | \
+        {SAMTOOLS} view -h -f 1 -F 268 -F 8  | \
+        python /lustre1/chengqiyi_pkuhpc/zhaohn/0.apps/BioinformaticAnalysisTools/Bam_Tools/remove_clip.py \
+            -b BAM -o {output}
         """
 
 
