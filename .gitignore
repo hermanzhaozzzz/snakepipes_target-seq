@@ -22,3 +22,8 @@ slurm-*.out
 template_for_step.01.csv.bwt_out*
 template_for_step.01.csv_R*.fasta
 .tags
+# output file
+*.html
+*.svg
+*.pdf
+*.bmats.csv
