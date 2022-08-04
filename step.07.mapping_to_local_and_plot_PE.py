@@ -199,7 +199,7 @@ rule sam_to_bam:
         """
         {SAMTOOLS} sort -n {input.sam} | \
         {SAMTOOLS} view -h -f 1 -F 268 -F 8  | \
-        python /lustre1/chengqiyi_pkuhpc/zhaohn/0.apps/BioinformaticAnalysisTools/Bam_Tools/remove_clip.py \
+        python /lustre1/chengqiyi_pkuhpc/zhaohn/0.apps/BioinformaticAnalysisTools/src/biat/bam/remove_clip.py \
             -b BAM -o {output}
         """
 
