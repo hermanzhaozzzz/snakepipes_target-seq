@@ -13,25 +13,26 @@ import os
 
 
 CUTOFF = [
-    "3"
+    "0"
 ]
 
-LIBS = ['Q5U-56-rep1', 'Q5U-56-rep2', 'Q5U-mock-rep1', 'Q5U-mock-rep2']
+LIBS = ['ND5.1-1333-DddIA-rep1',
+ 'ND5.1-1333-DddIA-rep2',
+ 'ND5.1-1333-mapKNES-rep1',
+ 'ND5.1-1333-mapKNES-rep2',
+ 'ND5.1-1333-rep1',
+ 'ND5.1-1333-rep2']
 
 
 
-SAMPLES = ['share-new-6',
- 'share-new-12',
- 'share-new-30',
- 'ND5.1-new-only11',
- 'ND5.1-new-only14',
- 'ND5.1-new-only17',
- 'ND6-new-only2',
- 'ND6-new-only4',
- 'ND6-new-only10',
- 'ND6-new-only14',
- 'ND6-new-only16',
- 'ND6-new-only17']
+SAMPLES = ['ND5.1-only-5',
+ 'ND5.1-only-6',
+ 'ND5.1-only-7',
+ 'ND516-share-2',
+ 'ND516-share-3',
+ 'ND516-share-4',
+ 'ND516-share-7',
+ 'ND516-share-10']
 
 READ_IDX = ["1","2"]
 
@@ -66,7 +67,7 @@ READ_IDX = ["1","2"]
 # ------------------------------------------------------------------->>>>>>>>>>
 # RUN INFO
 # ------------------------------------------------------------------->>>>>>>>>>
-THREADS = '20'
+THREADS = '4'
 
 # ------------------------------------------------------------------->>>>>>>>>>
 # DATABASE INFO
@@ -198,9 +199,10 @@ rule sam_to_bam:
     shell:
         """
         {SAMTOOLS} sort -n {input.sam} | \
-        {SAMTOOLS} view -h -f 1 -F 268 -F 8  | \
+        {SAMTOOLS} view -h -f 1 -F 268 | \
         python /lustre1/chengqiyi_pkuhpc/zhaohn/0.apps/BioinformaticAnalysisTools/src/biat/bam/remove_clip.py \
-            -b BAM -o {output}
+            -b BAM -o {output} -c 6
+        # -c 6 是因为使用 MGI 时会稳定有 4~6 个 softclip 在左边
         """
 
 
