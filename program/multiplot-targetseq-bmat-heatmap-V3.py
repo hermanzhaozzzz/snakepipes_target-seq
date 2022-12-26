@@ -1081,6 +1081,8 @@ if __name__ == '__main__':
         
 
         try:
+            print('Catch NA: {}'.format(df_ratio_all.isna().sum().sum()))
+            print(df_ratio_all.head())
             df_ratio_all.index = df_matrix.T['Index'][ls_bl_select_df_sample].map(float).map(int).tolist()
             df_ratio_all['On-target'] = df_matrix.T['On-target'][ls_bl_select_df_sample].tolist()
             df_ratio_all['Ref'] = df_matrix.T['Ref'][ls_bl_select_df_sample].tolist()
