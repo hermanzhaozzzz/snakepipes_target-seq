@@ -1151,7 +1151,10 @@ if __name__ == '__main__':
     ls_max = []
     for i in df_plot_rec.values.tolist():
         ls_max.extend(i)
-    ls_break = list(np.arange(0,max(ls_max),max(ls_max)/100))
+    try:
+        ls_break = list(np.arange(0,max(ls_max),max(ls_max)/100))
+    except ZeroDivisionError:
+        ls_break = [0, 0.003, 0.006, 0.009, 0.012, 0.015, 0.018, 0.022, 0.026, 0.030, 0.035, 0.040, 0.05, 0.06, 0.07, 0.08, 1.00, 2.00, 3.00]
     ls_color_middle = make_color_list(hex_to_rgb('#87BDDB'), hex_to_rgb('#0A306A'),length_out=80, back_format="Hex")
     ls_color_top = ['#0A306A'] * 20
     ls_color_bottom = ['#EFEFEF'] * 5 + ['#DDEAF6'] * 5 + ['#A9CEE4'] * 5 + ['#87BDDB'] * 5
