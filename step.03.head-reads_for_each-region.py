@@ -39,7 +39,7 @@ print(FQS)
 # 1.5M reads
 # 3M PE reads
 LINES = 10000000
-THREADS = 20
+THREADS = 4
 
 rule all:
     input:
