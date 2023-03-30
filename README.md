@@ -23,7 +23,7 @@ git clone git@github.com:hermanzhaozzzz/snakepipes_fastqc-multiqc.git
 # 接下来按照该仓库要求进行质控即可
 ```
 
-# step.01 `step.01.find_genome_region_info_for_primer_table.ipynb``
+# step.01 `step.01.find_genome_region_info_for_primer_table.ipynb`
 
 该步骤核心就是完善这个表`primer_table/primer.txt` 
 
