@@ -201,7 +201,7 @@ rule sam_to_bam:
         {SAMTOOLS} sort -n {input.sam} | \
         {SAMTOOLS} view -h -f 1 -F 268 | \
         bioat bam remove_clip \
-            --output_format BAM \
+            --output_fmt BAM \
             --max_clip 6 \
             --output {output}
         # -c 6 是因为使用 MGI 时会稳定有 4~6 个 softclip 在左边
