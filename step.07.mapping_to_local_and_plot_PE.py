@@ -244,7 +244,7 @@ rule parse_mpileup:
     output:
         "../TargetSeq-{lib}/cutoff_{cutoff}/mapping/{sample}_bwa_sort.bmat"
     shell:
-        "bioat bam mpileup_to_table {input} -o {output} -m 0"
+        "bioat bam mpileup_to_table {input} -o {output} --mutation_number_threshold 0"
 
 
 rule bmat_plot:
