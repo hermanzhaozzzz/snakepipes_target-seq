@@ -11,7 +11,8 @@ conda create -n snakepipes_py27 \
     matplotlib \
     bedtools=2.29.2 \
     bwa \
-    samtools
+    samtools \
+    seaborn
 ```
 
 # 先进行整体文库质控
