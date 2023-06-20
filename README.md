@@ -2,7 +2,7 @@
 ```shell
 # 使用仓库中的conda环境配置文件
 conda env create -f conda_env.yml
-# 或者手动创建环境
+# 由于脚本升级暂未完成，同时依赖一个python2.7环境，如手动创建环境
 conda create -n snakepipes_py27 \
     python=2.7.15 \
     biopython=1.72 \
