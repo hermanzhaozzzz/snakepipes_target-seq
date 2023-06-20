@@ -551,9 +551,9 @@ if __name__ == '__main__':
     # ---------------------------------------------------------------->>>>>
     # load .bmat file
     # ---------------------------------------------------------------->>>>>
-    label_panel = ARGS.label.replace(' ', '').split(',')
+    label_panel = ARGS.label.replace(' ', '').replace('\t', '').split(',')
     #
-    ls_bmat = [i.strip() for i in ARGS.input_bmat.split(',')]
+    ls_bmat = [i.strip() for i in ARGS.input_bmat.replace(' ', '').replace('\t', '').split(',')]
     ls_bmat_table = [pd.read_csv(path_bmat, sep='\t') for path_bmat in ls_bmat]
     for index, bmat in enumerate(ls_bmat_table):
         bmat['label'] = label_panel[index]
