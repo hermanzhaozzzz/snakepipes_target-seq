@@ -553,7 +553,7 @@ if __name__ == '__main__':
     # ---------------------------------------------------------------->>>>>
     label_panel = ARGS.label.replace(' ', '').replace('\t', '').split(',')
     #
-    ls_bmat = [i.strip() for i in ARGS.input_bmat.replace(' ', '').replace('\t', '').split(',')]
+    ls_bmat = [i.strip() for i in ARGS.input_bmat.replace('\t', '').split(',')]
     ls_bmat_table = [pd.read_csv(path_bmat, sep='\t') for path_bmat in ls_bmat]
     for index, bmat in enumerate(ls_bmat_table):
         bmat['label'] = label_panel[index]
@@ -999,6 +999,10 @@ if __name__ == '__main__':
             col = index
             df_matrix.iloc[row, col] = box_value
     df_matrix.index = ls_row_name
+    
+    # DEBUG
+    print(ARGS.plot_heatmap)
+    df_matrix.to_csv('{}_details.csv'.format(ARGS.plot_heatmap))
 
     if bool(ARGS.output_matrix):
         bmat_table_select = bmat_table_select.copy()
