@@ -190,6 +190,6 @@ rule bmat_plot:
         #echo `cat {params.sgRNA_seq}`
         # sgRNA=`cat {params.sgRNA_seq}`
         sgRNA={params.sgRNA_seq}
-        {PYTHON} ./program/plot-targetseq-bmat-V04.py -i {input} -o {output} --region_extend_length 50 --sgRNA $sgRNA
+        bioat target_seq region_heatmap --input_table {input} --output_fig {output} --region_extend_length 50 --target_seq $sgRNA
         fi
         """
