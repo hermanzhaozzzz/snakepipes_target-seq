@@ -53,9 +53,9 @@ else:
 
 rule all:
     input:
-        expand('../../reference.fasta/{region_id}.bed',region_id=REGION_ID),
-        expand('../../reference.fasta/{region_id}.ref.fa',region_id=REGION_ID),
-        expand('../../reference.fasta/{region_id}.ref.tmp.fa',region_id=REGION_ID),
+        # expand('../../reference.fasta/{region_id}.bed',region_id=REGION_ID),
+        # expand('../../reference.fasta/{region_id}.ref.fa',region_id=REGION_ID),
+        # expand('../../reference.fasta/{region_id}.ref.tmp.fa',region_id=REGION_ID),
         expand('../../reference.fasta/{region_id}.ref.upper.fa',region_id=REGION_ID),
         expand('../../reference.fasta/{region_id}.ref.upper.fa.fai',region_id=REGION_ID),
         expand('../../reference.fasta/{region_id}.ref.upper.fa.amb',region_id=REGION_ID),
