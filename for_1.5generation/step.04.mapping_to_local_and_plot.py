@@ -11,12 +11,19 @@ import os
 # SAMPLE INFO
 # ------------------------------------------------------------------->>>>>>>>>>
 SAMPLES = [
-    'BAN10_A04_A04_i10',  # 2
-    'BAN10_B04_B04_i10',  # 4
-    'BAN10_C04_C04_i10',  # 10
-    'BAN10_D04_D04_i10',  # 12
-    'BAN10_E04_E04_i10',  # si
-    'BAN10_F04_F04_i10'   # ba
+    '2024-03-07_10',
+    '2024-03-07_12',
+    '2024-03-07_2',
+    '2024-03-07_4',
+    '2024-03-07_ba',
+    '2024-03-07_si',
+    '2024-03-14_B1-1',
+    '2024-03-14_B1-2',
+    '2024-03-14_B3-1',
+    '2024-03-14_B4-1',
+    '2024-03-14_B4-2',
+    '2024-03-14_C3',
+    '2024-03-14_G11-ctrl'
 ]
 
 READ_IDX = ["1"]
@@ -25,51 +32,6 @@ READ_IDX = ["1"]
 # ------------------------------------------------------------------->>>>>>>>>>
 THREADS = '20'
 
-# ------------------------------------------------------------------->>>>>>>>>>
-# DATABASE INFO
-# ------------------------------------------------------------------->>>>>>>>>>
-# ------------------------------------------------------------------->>>>>>>>>>
-# SOFTWARE INFO
-# ------------------------------------------------------------------->>>>>>>>>>
-# polaris
-# PYTHON = "/lustre1/chengqiyi_pkuhpc/zhaohn/0.apps/miniconda3/envs/snakepipes_py27/bin/python"
-# abyss
-# PYTHON = "/home/zhaohuanan/zhaohn_HD/miniconda3/envs/snakepipes_target-seq/bin/python"
-
-dt = {
-    # "ND1-on-target": "ACTCAATCCTCTGATC",
-    # "ND4-on-target": "CCTGATCAAATATC",
-    # "ND5.1-on-target": "ACCTTTCCTCACAGGT",
-    # "ND5.3-on-target": "CTACTCATCTTCCTAATT",
-    "ND6": "CCTCAGGATACTCCT"
-}
-
-# get the application path
-# with os.popen("which cutadapt") as path:
-#     CUTADAPT = path.read().strip()
-#     print('PATH cutadapt:', CUTADAPT)
-# with os.popen("which bwa") as path:
-#     BWA = path.read().strip()
-#     print('PATH bwa:', BWA)
-# with os.popen("which bowtie") as path:
-#     BOWTIE = path.read().strip()
-#     BOWTIE_BUILD = BOWTIE + '-build'
-#     print('PATH bowtie:', BOWTIE)
-#     print('PATH bowtie-build:', BOWTIE_BUILD)
-# with os.popen("which samtools") as path:
-#     SAMTOOLS = path.read().strip()
-#     print('PATH samtools:', SAMTOOLS)    
-# with os.popen("which bedtools") as path:
-#     BEDTOOLS = path.read().strip()
-#     print('PATH bedtools:', BEDTOOLS)    
-# with os.popen("which samclip") as path:
-#     SAMCLIP = path.read().strip()
-#     print('PATH samclip:', SAMCLIP)
-    
-# if "" in [BWA, CUTADAPT, BOWTIE, SAMTOOLS, SAMCLIP]:
-#     raise ValueError("The necessary software path is missing!!!")
-# else:
-#     print("pass software check...\n")
 CUTADAPT = "~/0.apps/micromamba/envs/snakepipes_target-seq/bin/cutadapt"
 BWA = "~/0.apps/micromamba/envs/snakepipes_target-seq/bin/cutadapt/bwa"
 
@@ -89,9 +51,11 @@ rule cutadapt:
     log:
         "../../1.5generation/mapping/{sample}_cutadapt.log"
     shell:
+        # nextera CTGTCTCTTATACACATCT
+        # truseq AGATCGGAAGAGCACACGTCTGAACTCCAGTCAC
         """
         {CUTADAPT} -j {THREADS} --times 1  -e 0.1  -O 3  --quality-cutoff 25 \
-        -m 100 -a AGATCGGAAGAGCACACGTCTGAACTCCAGTCAC \
+        -m 100 -a CTGTCTCTTATACACATCT \
         -o {output} {input} > {log} 2>&1
         """
 rule bwa_mapping:
