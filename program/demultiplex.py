@@ -1,289 +1,181 @@
+#!/usr/bin/env python3
 import gzip
 import os
-import sys
 import time
-
+from collections import defaultdict
 import fire
 
+class Primer:
+    def __init__(self, line):
+        fields = line.strip().split('\t')
+        self.region_index = fields[3]
+        self.left_barcode_length = int(fields[4])
+        self.right_barcode_length = int(fields[5])
+        self.left_primer = fields[6].upper()
+        self.right_primer = fields[7].upper()
+        
+        # Precompute primer properties
+        self.left_len = len(self.left_primer)
+        self.right_len = len(self.right_primer)
+        self.left_prefix = self.left_primer[:4]  # First 4 bases for quick check
+        self.right_prefix = self.right_primer[:4]  # First 4 bases for quick check
 
-class FastqRead(object):
-    """Define fastq read object"""
+class FastqWriter:
+    def __init__(self, output_dir, buffer_size=100000, max_reads=5000000):
+        self.max_reads = max_reads
+        self.output_dir = output_dir
+        self.buffer_size = buffer_size
+        self.buffers = defaultdict(lambda: {'R1': [], 'R2': []})
+        self.handles = {}
+        self.counts = defaultdict(int)  # Track read counts per primer
+        
+        os.makedirs(output_dir, exist_ok=True)
 
-    def __init__(self, fastq_read_list, phred=33):
-        self.head = fastq_read_list[0]
-        self.sequence = fastq_read_list[1]
-        self.info = fastq_read_list[2]
-        self.quality = fastq_read_list[3]
-        self.phred = phred
-        self.length = len(self.sequence)
-        read_id_raw = fastq_read_list[0]
+    def add_read(self, primer_id, r1, r2):
+        # Skip if already reached limit
+        if self.counts[primer_id] >= self.max_reads:
+            return
+        
+        # Check if adding this read would exceed limit
+        if self.counts[primer_id] + 1 > self.max_reads:
+            return
+        
+        self.buffers[primer_id]['R1'].append(r1)
+        self.buffers[primer_id]['R2'].append(r2)
+        self.counts[primer_id] += 1  # Increment immediately to ensure atomicity
+        
+        if len(self.buffers[primer_id]['R1']) >= self.buffer_size:
+            self._flush_buffer(primer_id)
 
-        if ":" in read_id_raw:
-            # Illumina
-            self.read_id = fastq_read_list[0].split(" ")[0]
-        else:
-            # MGI reads
-            self.read_id = fastq_read_list[0].split("/")[0]
+    def _flush_buffer(self, primer_id):
+        if primer_id not in self.handles:
+            r1_path = os.path.join(self.output_dir, f"{primer_id}_R1.fastq.gz")
+            r2_path = os.path.join(self.output_dir, f"{primer_id}_R2.fastq.gz")
+            self.handles[primer_id] = {
+                'R1': gzip.open(r1_path, 'at'),
+                'R2': gzip.open(r2_path, 'at')
+            }
+            
+        h = self.handles[primer_id]
+        for read in self.buffers[primer_id]['R1']:
+            h['R1'].write('\n'.join(read) + '\n')
+        for read in self.buffers[primer_id]['R2']:
+            h['R2'].write('\n'.join(read) + '\n')
+        
+        self.buffers[primer_id]['R1'].clear()
+        self.buffers[primer_id]['R2'].clear()
 
-    def trimmer(self, start=0, end=None):
-        if (start < 0) or (start >= self.length):
-            start = 0
-        if (end is None) or (end >= self.length) or (end <= start):
-            end = None
-        trim_sequence = self.sequence[start:end]
-        trim_quality = self.quality[start:end]
-        trim_info = self.info
-        trim_read = [self.head, trim_sequence, trim_info, trim_quality]
-        return FastqRead(trim_read, phred=self.phred)
+    def close_all(self):
+        for pid in list(self.buffers.keys()):
+            self._flush_buffer(pid)
+        for h in self.handles.values():
+            h['R1'].close()
+            h['R2'].close()
 
-    def get_phred(self):
-        self.phred_score = [ord(x) - self.phred for x in self.quality]
-        return self.phred_score
+    def is_full(self, primer_id):
+        return self.counts.get(primer_id, 0) >= self.max_reads
 
-    def write_format(self):
-        write_str = "{0}\n{1}\n{2}\n{3}\n".format(
-            self.head, self.sequence, self.info, self.quality
-        )
-        return write_str
+def fastq_reader(file_path):
+    opener = gzip.open if file_path.endswith('.gz') else open
+    with opener(file_path, 'rt') as f:
+        while True:
+            header = f.readline().strip()
+            if not header: break
+            seq = f.readline().strip()
+            _ = f.readline()  # +
+            qual = f.readline().strip()
+            yield (header, seq, qual)
 
+def match_primer(seq, primer_seq, primer_prefix, max_mismatch):
+    # Quick prefix check
+    prefix = seq[:4]
+    mismatches = sum(c1 != c2 for c1, c2 in zip(prefix, primer_prefix))
+    if mismatches > max_mismatch:
+        return False
+    
+    # Full sequence check
+    mismatches = 0
+    for c1, c2 in zip(seq, primer_seq):
+        if c1 != c2:
+            mismatches += 1
+            if mismatches > max_mismatch:
+                return False
+    return True
 
-class PrimerInfo(object):
-    """For target-seq primer info"""
+def process_pairs(primers, r1_path, r2_path, output_dir, max_mismatch=1, buffer_size=100000, max_reads=5000000):
+    writer = FastqWriter(output_dir, buffer_size=buffer_size, max_reads=max_reads)
+    r1_gen = fastq_reader(r1_path)
+    r2_gen = fastq_reader(r2_path)
+    
+    full_primers = set()
+    
+    for (h1, s1, q1), (h2, s2, q2) in zip(r1_gen, r2_gen):
+        # Early exit if all primers are full
+        if len(full_primers) == len(primers):
+            break
+            
+        s1, s2 = s1.upper(), s2.upper()
+        found = False
+        
+        for primer in primers:
+            if primer.region_index in full_primers:
+                continue
+                
+            # Extract primer regions
+            r1_start = primer.left_barcode_length
+            r1_end = r1_start + primer.left_len
+            if r1_end > len(s1): continue
+            
+            r2_start = primer.right_barcode_length
+            r2_end = r2_start + primer.right_len
+            if r2_end > len(s2): continue
+            
+            r1_sub = s1[r1_start:r1_end]
+            r2_sub = s2[r2_start:r2_end]
+            
+            # Check match
+            if (match_primer(r1_sub, primer.left_primer, primer.left_prefix, max_mismatch) and
+                match_primer(r2_sub, primer.right_primer, primer.right_prefix, max_mismatch)):
+                writer.add_read(primer.region_index, 
+                              [h1, s1, '+', q1],
+                              [h2, s2, '+', q2])
+                
+                # Check if this primer just became full
+                if writer.is_full(primer.region_index):
+                    full_primers.add(primer.region_index)
+                
+                found = True
+                break  # First match policy
+        
+        if not found:
+            # Optional: Handle unmatched reads
+            pass
+    
+    writer.close_all()
 
-    def __init__(self, primer_line_list):
-        self.chr_name = primer_line_list[0]
-        self.region_start = int(primer_line_list[1])
-        self.region_end = int(primer_line_list[2])
-        self.region_id = primer_line_list[3]
-        self.left_barcode_length = int(primer_line_list[4])
-        self.right_barcode_length = int(primer_line_list[5])
-        self.upstream_primer = primer_line_list[6].upper()
-        self.downstream_primer = primer_line_list[7].upper()
-        self.target_strand = primer_line_list[8]
-
-
-def main(
-    fastq_read1: str,
-    fastq_read2: str,
-    primer_info_file: str,
-    output_dir: str = None,
-    read1_barcode_len: int = 4,
-    read2_barcode_len: int = 6,
-    identify_length: int = 10,
-    identify_mismatch_cutoff: int = 1,
-    max_read_num_load: int = 1000000,
-):
+def main(primer_table: str, r1: str, r2: str, output_dir: str, mismatch=1, buffer_size=100000, max_reads=5000000):
     """
-    Target-seq数据分选主函数
+    Demultiplex paired-end fastq files based on primer sequences.
 
     Args:
-        fastq_read1:       输入read1 FASTQ路径（支持.gz）
-        fastq_read2:       输入read2 FASTQ路径（支持.gz）
-        primer_info_file:  引物信息文件路径
-        output_dir:        输出目录（默认输入文件所在目录）
-        read1_barcode_len: Read1 Barcode长度（默认4）
-        read2_barcode_len: Read2 Barcode长度（默认6）
-        identify_length:   引物识别区域长度（默认10）
-        identify_mismatch_cutoff: 允许的最大错配数（默认1）
-        max_read_num_load: 单次加载最大reads数（默认1000000）
+        primer_table (str): Path to the primer table file.
+        r1 (str): Path to the forward read fastq file.
+        r2 (str): Path to the reverse read fastq file.
+        output_dir (str): Directory to save demultiplexed fastq files.
+        mismatch (int): Maximum number of mismatches allowed for primer matching.
+        buffer_size (int): Number of reads to buffer before writing to disk.
+        max_reads (int): Maximum number of reads per primer region.
     """
-    # 参数预处理
-    identify_match_num = identify_length - identify_mismatch_cutoff - 1
-    base_dir = _prepare_output_dir(output_dir, fastq_read1)
+    start_time = time.time()
+    
+    # Load primers
+    with open(primer_table) as f:
+        headers = f.readline()  # Skip header
+        primers = [Primer(line) for line in f]
+    
+    print(f"Loaded {len(primers)} primers")
+    process_pairs(primers, r1, r2, output_dir, mismatch, buffer_size=buffer_size, max_reads=max_reads)
+    print(f"Completed in {time.time()-start_time:.2f} seconds")
 
-    # 加载引物信息
-    primer_dict = load_primer_info(primer_info_file)
-
-    # 处理Fastq文件
-    process_fastq_files(
-        fastq_read1,
-        fastq_read2,
-        primer_dict,
-        base_dir,
-        read1_barcode_len,
-        read2_barcode_len,
-        identify_length,
-        identify_mismatch_cutoff,
-        identify_match_num,
-        max_read_num_load,
-    )
-
-
-def _prepare_output_dir(output_dir, input_path):
-    """处理输出目录"""
-    if not output_dir:
-        base_dir = os.path.abspath(os.path.dirname(input_path))
-    else:
-        base_dir = os.path.abspath(output_dir)
-
-    os.makedirs(os.path.join(base_dir, "demultiplex.fastq"), exist_ok=True)
-    return base_dir
-
-
-def load_primer_info(primer_file):
-    """加载引物信息文件"""
-    primer_dict = {}
-    with open(primer_file, "r") as f:
-        next(f)  # 跳过标题行
-        for line in f:
-            parts = line.strip().split("\t")
-            if len(parts) >= 9:
-                primer = PrimerInfo(parts)
-                primer_dict[primer.region_id] = primer
-    return primer_dict
-
-
-def process_fastq_files(
-    r1_path,
-    r2_path,
-    primer_dict,
-    base_dir,
-    r1_barcode_len,
-    r2_barcode_len,
-    identify_len,
-    mismatch_cutoff,
-    match_num,
-    max_reads,
-):
-    """核心处理逻辑"""
-    # 打开文件
-    with (
-        gzip.open(r1_path, "rt") if r1_path.endswith(".gz") else open(r1_path) as fq1,
-        gzip.open(r2_path, "rt") if r2_path.endswith(".gz") else open(r2_path) as fq2,
-    ):
-        temp_data = {}
-        line_count = 0
-
-        while True:
-            # 读取批次数据
-            batch = read_batch(fq1, fq2, max_reads)
-            if not batch:
-                break
-
-            # 处理每个read pair
-            for fq1_obj, fq2_obj in batch:
-                line_count += 1
-                process_read_pair(
-                    fq1_obj,
-                    fq2_obj,
-                    temp_data,
-                    r1_barcode_len,
-                    r2_barcode_len,
-                    identify_len,
-                    mismatch_cutoff,
-                    match_num,
-                    primer_dict,
-                )
-
-            # 定期保存数据
-            save_data(temp_data, base_dir)
-            log_progress(line_count)
-
-        # 保存剩余数据
-        save_data(temp_data, base_dir)
-        log_final(line_count)
-
-
-def read_batch(fq1, fq2, max_reads):
-    """读取一批reads"""
-    batch = []
-    for _ in range(max_reads):
-        r1_lines = [fq1.readline().strip() for _ in range(4)]
-        r2_lines = [fq2.readline().strip() for _ in range(4)]
-
-        if not all(r1_lines) or not all(r2_lines):
-            break
-
-        batch.append((FastqRead(r1_lines), FastqRead(r2_lines)))
-    return batch
-
-
-def get_primer_region_index(
-    query_seq,
-    primer_dict,
-    fastq_state="read1",
-    identify_mismatch_num=1,
-    identify_match_num=9,
-):
-    """
-    <HELP>
-        back reads belong to which primer_dict key
-    <INPUT>
-        primer_dict, key= primer_name, value= pirmer_obj
-    <RETURN>
-        primer_dict key OR None
-    """
-    query_seq = query_seq.upper()
-    for primer_key in primer_dict:
-        if fastq_state == "read1":
-            primer_seq = primer_dict[primer_key].upstream_primer
-        elif fastq_state == "read2":
-            primer_seq = primer_dict[primer_key].downstream_primer
-        else:
-            raise ValueError("fastq_state should be read1 or read2")
-        mismatch_count = 0
-        match_count = 0
-        for index in range(min(len(query_seq), len(primer_seq))):
-            if query_seq[index] != primer_seq[index]:
-                mismatch_count += 1
-            else:
-                match_count += 1
-            if mismatch_count > identify_mismatch_num:
-                break
-        if (mismatch_count <= identify_mismatch_num) and (
-            match_count >= identify_match_num
-        ):
-            return (primer_key, mismatch_count, match_count)
-    return (None, 0, 0)
-
-
-def process_read_pair(
-    r1, r2, temp_data, r1_len, r2_len, ident_len, mismatch, match_num, primers
-):
-    """处理单个read pair"""
-    # 提取识别序列
-    r1_seq = r1.sequence[r1_len : r1_len + ident_len]
-    r2_seq = r2.sequence[r2_len : r2_len + ident_len]
-
-    # 引物识别
-    r1_primer = get_primer_region_index(r1_seq, primers, "read1", mismatch, match_num)
-    r2_primer = get_primer_region_index(r2_seq, primers, "read2", mismatch, match_num)
-
-    # 有效分选
-    if r1_primer[0] and r2_primer[0] and (r1_primer[0] == r2_primer[0]):
-        primer_id = r1_primer[0]
-        if primer_id not in temp_data:
-            temp_data[primer_id] = {"R1": [], "R2": []}
-        temp_data[primer_id]["R1"].append(r1)
-        temp_data[primer_id]["R2"].append(r2)
-
-
-def save_data(data_dict, base_dir):
-    """保存分选数据"""
-    for pid, data in data_dict.items():
-        r1_path = os.path.join(base_dir, f"demultiplex.fastq/{pid}_R1.fastq")
-        r2_path = os.path.join(base_dir, f"demultiplex.fastq/{pid}_R2.fastq")
-
-        with open(r1_path, "a") as f1, open(r2_path, "a") as f2:
-            for read in data["R1"]:
-                f1.write(read.write_format())
-            for read in data["R2"]:
-                f2.write(read.write_format())
-
-    data_dict.clear()
-
-
-def log_progress(count):
-    """记录处理进度"""
-    sys.stderr.write(f"\rProcessed {count} read pairs...")
-    sys.stderr.flush()
-
-
-def log_final(total):
-    """最终日志"""
-    sys.stderr.write(f"\nTotal processed: {total} read pairs\n")
-    sys.stderr.write(f"Completed at: {time.strftime('%Y-%m-%d %H:%M:%S')}\n")
-
-
-if __name__ == "__main__":
+if __name__ == '__main__':
     fire.Fire(main)

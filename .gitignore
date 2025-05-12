@@ -27,3 +27,4 @@ template_for_step.01.csv_R*.fasta
 *.svg
 *.pdf
 *.bmats.csv
+config.yaml

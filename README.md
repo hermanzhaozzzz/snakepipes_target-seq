@@ -2,31 +2,12 @@
 ```shell
 # 使用仓库中的conda环境配置文件
 conda env create -f conda_env.yml
-pip install bioat --upgrade
-# 由于脚本升级暂未完成，同时依赖一个python2.7环境，如手动创建环境
-conda create -n snakepipes_py27 \
-    python=2.7.15 \
-    biopython=1.72 \
-    pandas=0.24.2 \
-    numpy=1.16.5 \
-    matplotlib \
-    bedtools=2.29.2 \
-    bwa \
-    samtools \
-    seaborn
-
+conda activate snakepipes_target-seq
+python -m ipykernel install --user --name snakepipes_target-seq # for notebook usage
 ```
 
-# 先进行整体文库质控
-整体质控先跑一次，直接使用之前写的snakepipes
-https://github.com/hermanzhaozzzz/snakepipes_fastqc-multiqc
-```shell
-git clone git@github.com:hermanzhaozzzz/snakepipes_fastqc-multiqc.git
 
-# 接下来按照该仓库要求进行质控即可
-```
-
-# step.01 `step.01.find_genome_region_info_for_primer_table.ipynb`
+# step.01 step.01.find_genome_region_info_for_primer_table.ipynb
 
 该步骤核心就是完善这个表`primer_table/primer.txt` 
 
@@ -45,82 +26,12 @@ git clone git@github.com:hermanzhaozzzz/snakepipes_fastqc-multiqc.git
 
 
 
-
-
-
-# step.02 split raw FASTQ
-- 接下来跑脚本按照primer info拆分不同的target位点
-- Python2的`[TODO] 这里打算整合到bioat里`
-- 这一步是脚本一次性扔到后台去跑
+# step.02.target_seq.smk.py
+- 对 config.yaml进行必要设置
+- 然后运行整个项目
 
 ```
-bash step.02.sh.01.demultiplex_fastq_pipline.sh
+snakemake -p -j 50 -s step.02.demultiplex_fastq.smk.py --rerun-incomplete --cores 8 -n
 ```
-```
-tail -f ../TargetSeq*/*.log
-# 北极星会将日志重写到stderr
-tail -f *.err
-```
-
-
-
-# step.03 sampling raw reads
-```
-# 直接取一定量的测序结果继续分析
-# 也可把测序数据全用上，但没必要，比较耗时和耗内存
-# target deep sequencing 达到一定深度即可
-
-# local
-snakemake -pr -j 100 -s step.03.head-reads_for_each-region.py -n
-# polaris (根据内存和核心数目适当调用队列、核心数目、任务数量)
-snakemake --cluster "pkurun-cnlong 1 4" -pr -j 100 -s step.03.head-reads_for_each-region.py -n
-
-```
-# step.04 单位点质控
-
-```shell
-# local
-snakemake -pr -j 15 -s step.04.qc_for_regions.py -n
-# polaris
-snakemake --cluster 'pkurun-cnnl 1 20' -pr -j 15 -s step.04.qc_for_regions.py -n
-```
-
-在`../qc_quantify-all/multiqc/multiqc_report.html`查看单位点质量，双端raw reads总量不足1.5M提示可能实验无效或者不准确，结合最终有效mapping reads数进行判断
-
-# step.05 UMI 校正测序错误和PCR错误
-- 这一步是通过barcode来merge duplicate和校正测序错误、PCR错误
-- 注意选择cutoff！默认选`cutoff=3`
-- check一下cutoff取值的区别【cutoff越高越严格，意思是几个reads互相校正】
-```
-# local 注意内存开销
-snakemake -pr -j 2 step.05.merge_reads_for_regions.py -n
-tail -f ../TargetSeq*/cutoff*/*.log
-# polaris
-snakemake --cluster 'pkurun-cnnl 1 20' -pr -j 6 step.05.merge_reads_for_regions.py -n
-tail -f ../TargetSeq*/cutoff*/*.log
-```
-# step.06 生成扩增位点reference信息
-```
-# 不耗资源直接login节点或者本地运行即可
-# local
-snakemake -pr -j 100 -s step.06.form_reference.py -n
-```
-
-# step.07 计算单碱基高精度突变信息并绘制target plot
-
-```
-# local
-snakemake -pr -j 10 -s step.07.mapping_to_local_and_plot_PE.py -n
-
-# polaris
-snakemake --cluster "pkurun-cnlong 1 4" -pr -j 100 -s step.07.mapping_to_local_and_plot_PE.py -n
-
-```
-
-
-
-`step.07.mapping_to_local_and_plot_SE.py`为1.5代测序所用，没用到时不需要了解
-
-# step.08 绘制multi-treatment target plot
-
-`详见README.ipynb`
+# step.03.complicated_analysis.ipynb
+- 顾名思义,后期处理的一些示例代码
