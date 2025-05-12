@@ -27,7 +27,7 @@ regions:  # 不同靶点,至少一个,名称和 primer_table中的靶点一致
   - "ABE-Site-16"
 merge_cutoff:
   - 0  # 0 就不 merge
-  # - 3
+  - 3
   # - 5
   # - 10
 
