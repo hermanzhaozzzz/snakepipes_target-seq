@@ -5,7 +5,7 @@ genome_hg38: "/data_disk/zhaohuanan/1.database/db_genomes/genome_fa/genome_ucsc_
 input_dir: "../fastq"
 output_base: "../results_target-seq"
 mismatch: 1
-max_reads: 250000
+max_reads: 1000000
 primer_info: "primer_table/primer.txt"
 cutadapt_r1: "AGATCGGAAGAGCACACGTCTGAACTCCAGTCAC"
 cutadapt_r2: "AGATCGGAAGAGCGTCGTGTAGGGAAAGAGTGTAGATCTCGGTGGTCGCCGTATCATT"
