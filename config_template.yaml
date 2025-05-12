@@ -1,0 +1,60 @@
+# ------------------------------------------------------------------->>>>>>>>>>
+# 勿动下列信息
+# ------------------------------------------------------------------->>>>>>>>>>
+genome_hg38: "/data_disk/zhaohuanan/1.database/db_genomes/genome_fa/genome_ucsc_hg38/genome_ucsc_hg38.fa"
+input_dir: "../fastq"
+output_base: "../results_target-seq"
+mismatch: 1
+max_reads: 1000000
+primer_info: "primer_table/primer.txt"
+cutadapt_r1: "AGATCGGAAGAGCACACGTCTGAACTCCAGTCAC"
+cutadapt_r2: "AGATCGGAAGAGCGTCGTGTAGGGAAAGAGTGTAGATCTCGGTGGTCGCCGTATCATT"
+# ------------------------------------------------------------------->>>>>>>>>>
+# 更新下列信息即可
+# ------------------------------------------------------------------->>>>>>>>>>
+mut_direction: "AG,TC"
+cases:  # 不同处理条件,至少一个
+  - "2_1"
+  - "2_2"
+  - "2_3"
+  - "2_4"
+  - "2_5"
+  - "2_6"
+regions:  # 不同靶点,至少一个,名称和 primer_table中的靶点一致
+  - "ABE-Site-5"
+  - "ABE-Site-8"
+  - "ABE-Site-13"
+  - "ABE-Site-16"
+merge_cutoff:
+  - 0  # 0 就不 merge
+  - 3
+  # - 5
+  # - 10
+
+
+# defult_sgRNA_dict_for_plot = {
+#     "EMX1": "GAGTCCGAGCAGAAGAAGAAGGG",
+# }
+
+# defult_sgRNA_dict_for_plot = {
+#     "ABESite7":"GAATACTAAGCATAGACTCC", # 这里指的ABE-Site-7-On-Target
+#     "EMX1": "GAGTCCGAGCAGAAGAAGAAGGG",
+#     'EMX1Site2': "GTATTCACCTGAAAGTGTGC", 
+#     'HEK2':'GAACACAAAGCATAGACTGC',
+#     'HEK3': "GGCCCAGACTGAGCACGTGATGG", 
+#     "HEK4":"GGCACTGCGGCTGGAGGTGGGGG", 
+#     "HEK5":'CTGGCCTGGGTCAATCCTTG',
+#     "MTND4P12":"TGCTAGTAACCACATTCTCCTGATCAAATATCACTCTCCTACTTACAGGA",
+#     "MTND5P11":"TAGCATTGGCAGGAATACCCTTCCTCACAGGTTTCTACTCCAAAGA",
+#     "MTND6P4":"TGACCCCCATGCCTCAGGATACTCCTCAATAGCCACCG",
+#     "PP2":"GGCACTCGGGGGCGAGAGGA",
+#     "PP6":"GGGGCTCAACATCGGAAGAG",
+#     "RNF2":"GTCATCTTAGTCATTACCTGAGG",
+#     'VEGFA': "GACCCCCTCCACCCCGCCTCCGG",
+#     "FANCF": "GGAATCCCTTCTGCAGCACC",
+#     "ND6":"TGACCCCCATGCCTCAGGATACTCCTCAATAGCCATCG",
+#     "ND5.1":"TAGCATTAGCAGGAATACCTTTCCTCACAGGTTTCTACTCCAAAGA",
+#     "ND4":"TGCTAGTAACCACGTTCTCCTGATCAAATATCACTCTCCTACTTACAGGA",
+#     "ND516":"TAGCATTAGCAGGAATACCTTTC7CTCACAGGTTTCTACTCCAAAGA", # run ND5.1 genome use ND5.1 on-target sequence
+#     "ND516":"TGACCCCCATGCCTCAGGATACTCCTCAATAGCCATCG", # run ND6 genome use ND6 on-target sequence
+# }
