@@ -6,6 +6,7 @@ input_dir: "../fastq"
 output_base: "../results_target-seq"
 mismatch: 1
 max_reads: 1000000
+# max_reads: 10000
 primer_info: "primer_table/primer.txt"
 cutadapt_r1: "AGATCGGAAGAGCACACGTCTGAACTCCAGTCAC"
 cutadapt_r2: "AGATCGGAAGAGCGTCGTGTAGGGAAAGAGTGTAGATCTCGGTGGTCGCCGTATCATT"
@@ -27,9 +28,10 @@ regions:  # 不同靶点,至少一个,名称和 primer_table中的靶点一致
   - "ABE-Site-16"
 merge_cutoff:
   - 0  # 0 就不 merge
-  - 3
-  # - 5
-  # - 10
+  # - 3  # <0.5%
+  # - 5  # <0.5%
+  # - 10 # <0.5%
+
 
 
 # defult_sgRNA_dict_for_plot = {

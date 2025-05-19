@@ -1,4 +1,4 @@
-# snakemake -p -j 50 -s step.02.demultiplex_fastq.smk --rerun-incomplete --cores 8
+# snakemake -p -j 20 -s step.02.target_seq.smk.py --rerun-incomplete --cores 8 -n
 configfile: "config.yaml"
 
 # 从配置中获取参数
