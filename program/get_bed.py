@@ -14,6 +14,7 @@ def generate_bed_files(
         output_focus_bed: 输出sgRNA bed文件路径
         region_name: 目标区域名称
     """
+    region_name = str(region_name)
     with open(primer_table) as f:
         header = f.readline().strip().split("\t")
         for line in f:
