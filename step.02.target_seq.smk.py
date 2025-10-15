@@ -293,8 +293,9 @@ rule bwa_mapping:
     threads: 4
     shell:
         """
-        bwa mem {input.ref} {input.r1} {input.r2} -t {threads} -M > {output.sam} 2>{log}
+        bwa mem {input.ref} {input.r1} {input.r2} > {output.sam} 2>{log}
         """
+        # bwa mem {input.ref} {input.r1} {input.r2} -t {threads} -M > {output.sam} 2>{log}
         # #         {BOWTIE} -x {input[2]} -1 {input[0]} -2 {input[1]} -p {THREADS} -S {output} 2>{log} not good!
 rule sam_to_bam:
     input:
