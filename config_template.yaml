@@ -9,6 +9,7 @@ max_reads: 1000000
 primer_info: "primer_table/primer.txt"
 cutadapt_r1: "AGATCGGAAGAGCACACGTCTGAACTCCAGTCAC"
 cutadapt_r2: "AGATCGGAAGAGCGTCGTGTAGGGAAAGAGTGTAGATCTCGGTGGTCGCCGTATCATT"
+use_flash_merge: False  # 启用这个参数你最好知道你要做什么，假设 PE150，那么你的扩增区域，包括引物在内的 Fragment 不能长于 288，需要消耗 12 个 bp 来判断 R1 和 R2 merge
 # ------------------------------------------------------------------->>>>>>>>>>
 # 更新下列信息即可
 # ------------------------------------------------------------------->>>>>>>>>>

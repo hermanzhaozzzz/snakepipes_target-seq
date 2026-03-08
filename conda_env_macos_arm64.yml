@@ -61,6 +61,7 @@ dependencies:
 - executing=2.2.1=pyhd8ed1ab_0
 - fastqc=0.12.1=hdfd78af_0
 - fire=0.7.1=pyhd8ed1ab_0
+- flash=1.2.11=h93a6450_2
 - font-ttf-dejavu-sans-mono=2.37=hab24e00_0
 - fontconfig=2.15.0=h1383a14_1
 - fonttools=4.60.1=py312h5748b74_0

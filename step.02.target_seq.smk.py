@@ -14,6 +14,17 @@ genome_hg38 = config["genome_hg38"]
 cutadapt_r1 = config["cutadapt_r1"]
 cutadapt_r2 = config["cutadapt_r2"]
 mut_direction = config["mut_direction"]
+use_flash_merge = config["use_flash_merge"]
+
+flash_merge_targets = []
+if use_flash_merge:
+    flash_merge_targets.extend(expand("{output_base}/flash_merged_SE/{case}/{region}_cutoff_{cutoff}_SE.fastq.gz", output_base=output_base, case=cases, region=regions, cutoff=merge_cutoff))
+    flash_merge_targets.extend(expand("{output_base}/mapping/{region}/{region}_{case}_cutoff_{cutoff}_flash_SE_bwa_sort.bam", output_base=output_base, case=cases, region=regions, cutoff=merge_cutoff))
+    flash_merge_targets.extend(expand("{output_base}/mapping/{region}/{region}_{case}_cutoff_{cutoff}_flash_SE_bwa_sort.bam.bai", output_base=output_base, case=cases, region=regions, cutoff=merge_cutoff))
+
+wildcard_constraints:
+    cutoff = r"\d+"  # cutoff 只能是纯数字
+
 rule all:
     input:
         # Demultiplex输出文件（按case+region展开）
@@ -48,6 +59,7 @@ rule all:
         expand("{output_base}/plots/multi/{region}.multiplot.cutoff_{cutoff}.base_mut.heatmap.csv", output_base=output_base, region=regions, cutoff=merge_cutoff),
         expand("{output_base}/plots/multi/{region}.multiplot.cutoff_{cutoff}.base_mut.count_ratio.pdf", output_base=output_base, region=regions, cutoff=merge_cutoff),
         expand("{output_base}/plots/multi/{region}.multiplot.cutoff_{cutoff}.base_mut.count_ratio.csv", output_base=output_base, region=regions, cutoff=merge_cutoff),
+        flash_merge_targets,
 
 
 # ------------------------------------------------------------------------------------------
@@ -167,6 +179,35 @@ rule group_files:
         cp $path_r2 {output.r2}
         """
 # ------------------------------------------------------------------------------------------
+# FLASH merge 成单端 fastq 文件
+# ------------------------------------------------------------------------------------------
+rule flash_merge_fastq_to_SE:
+    input:
+        r1 = "{output_base}/merged/{case}/{region}_cutoff_{cutoff}_R1.fastq.gz",
+        r2 = "{output_base}/merged/{case}/{region}_cutoff_{cutoff}_R2.fastq.gz",
+    output:
+        se = "{output_base}/flash_merged_SE/{case}/{region}_cutoff_{cutoff}_SE.fastq.gz",
+        not_combined_r1 = "{output_base}/flash_merged_SE/{case}/{region}_cutoff_{cutoff}_SE.notCombined_1.fastq.gz",
+        not_combined_r2 = "{output_base}/flash_merged_SE/{case}/{region}_cutoff_{cutoff}_SE.notCombined_2.fastq.gz",
+        hist = "{output_base}/flash_merged_SE/{case}/{region}_cutoff_{cutoff}_SE.hist",
+        histogram = "{output_base}/flash_merged_SE/{case}/{region}_cutoff_{cutoff}_SE.histogram",
+    log:
+        "{output_base}/flash_merged_SE/{case}/{region}_cutoff_{cutoff}_SE.flash.log"
+    params:
+        output_dir = "{output_base}/flash_merged_SE/{case}",
+        output_prefix = "{region}_cutoff_{cutoff}_SE",
+        extended_frags = "{output_base}/flash_merged_SE/{case}/{region}_cutoff_{cutoff}_SE.extendedFrags.fastq.gz",
+    threads: 2
+    shell:
+        """
+        mkdir -p {params.output_dir}
+        flash {input.r1} {input.r2} \
+            -o {params.output_prefix} \
+            -d {params.output_dir} \
+            -m 12 -M 120 -x 0.15 -t {threads} -z > {log} 2>&1
+        mv -f {params.extended_frags} {output.se}
+        """
+# ------------------------------------------------------------------------------------------
 # 参考基因组索引文件
 # ------------------------------------------------------------------------------------------
 rule get_bed:
@@ -281,6 +322,68 @@ rule cutadapt:
         -A {params.cutadapt_r2} \
         -o {output.r1} -p {output.r2} {input.r1} {input.r2} > {log} 2>&1
         """
+# ------------------------------------------------------------------------------------------
+# FLASH merge 后的单端 cutadapt / bwa / bam
+# ------------------------------------------------------------------------------------------
+# FLASH 的 extendedFrags 本质上已经是重建后的插入片段，再额外剪 adapter 尤其是 5' 端，更容易误伤真实扩增子序列
+rule cutadapt_flash_SE:
+    input:
+        se = rules.flash_merge_fastq_to_SE.output.se,
+    output:
+        se = temp("{output_base}/mapping/{region}/{region}_{case}_cutoff_{cutoff}_flash_SE_cutadapt.fastq.gz"),
+    log:
+        "{output_base}/mapping/{region}/{region}_{case}_cutoff_{cutoff}_flash_SE_cutadapt.log"
+    threads: 4
+    shell:
+        """
+        cutadapt -j {threads} --quality-cutoff 25 \
+        -m 100 \
+        -o {output.se} {input.se} > {log} 2>&1
+        """
+rule bwa_mapping_flash_SE:
+    input:
+        se = rules.cutadapt_flash_SE.output.se,
+        ref = rules.letter2LETTER.output.region_fa_upper
+    output:
+        sam = temp("{output_base}/mapping/{region}/{region}_{case}_cutoff_{cutoff}_flash_SE_bwa.sam")
+    log:
+        "{output_base}/mapping/{region}/{region}_{case}_cutoff_{cutoff}_flash_SE_bwa.log"
+    threads: 4
+    shell:
+        """
+        bwa mem {input.ref} {input.se} > {output.sam} 2>{log}
+        """
+rule sam_to_bam_flash_SE:
+    input:
+        sam = rules.bwa_mapping_flash_SE.output.sam,
+    output:
+        bam = temp("{output_base}/mapping/{region}/{region}_{case}_cutoff_{cutoff}_flash_SE_bwa.bam")
+    shell:
+        """
+        samtools sort -n {input.sam} | \
+        samtools view -h -F 260 | \
+        bioat bam remove_clip \
+            --output_fmt BAM \
+            --max_clip 6 \
+            --output {output.bam}
+        # -c 6 是因为使用 MGI 时会稳定有 4~6 个 softclip 在左边
+        """
+rule samtools_sort_by_position_flash_SE:
+    input:
+        bam = rules.sam_to_bam_flash_SE.output.bam,
+    output:
+        bam_sort = "{output_base}/mapping/{region}/{region}_{case}_cutoff_{cutoff}_flash_SE_bwa_sort.bam"
+    threads: 4
+    shell:
+        "samtools sort -O BAM -o {output.bam_sort} -T {output.bam_sort}.temp -@ {threads} {input.bam}"
+rule samtools_index_flash_SE:
+    input:
+        bam = rules.samtools_sort_by_position_flash_SE.output.bam_sort
+    output:
+        bai = "{output_base}/mapping/{region}/{region}_{case}_cutoff_{cutoff}_flash_SE_bwa_sort.bam.bai"
+    threads: 4
+    shell:
+        "samtools index -@ {threads} {input.bam} {output.bai}"
 rule bwa_mapping:
     input:
         r1 = rules.cutadapt.output.r1,
