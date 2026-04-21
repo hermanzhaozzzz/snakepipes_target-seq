@@ -59,7 +59,7 @@ rule all:
         expand("{output_base}/plots/multi/{region}.multiplot.cutoff_{cutoff}.base_mut.heatmap.csv", output_base=output_base, region=regions, cutoff=merge_cutoff),
         expand("{output_base}/plots/multi/{region}.multiplot.cutoff_{cutoff}.base_mut.count_ratio.pdf", output_base=output_base, region=regions, cutoff=merge_cutoff),
         expand("{output_base}/plots/multi/{region}.multiplot.cutoff_{cutoff}.base_mut.count_ratio.csv", output_base=output_base, region=regions, cutoff=merge_cutoff),
-        flash_merge_targets,
+        _merge_targets,
 
 
 # ------------------------------------------------------------------------------------------
@@ -179,7 +179,7 @@ rule group_files:
         cp $path_r2 {output.r2}
         """
 # ------------------------------------------------------------------------------------------
-# FLASH merge 成单端 fastq 文件
+#  merge 成单端 fastq 文件
 # ------------------------------------------------------------------------------------------
 rule flash_merge_fastq_to_SE:
     input:
@@ -204,7 +204,7 @@ rule flash_merge_fastq_to_SE:
         flash {input.r1} {input.r2} \
             -o {params.output_prefix} \
             -d {params.output_dir} \
-            -m 12 -M 120 -x 0.15 -t {threads} -z > {log} 2>&1
+            -m 12 -M 150 -x 0.15 -t {threads} -z > {log} 2>&1
         mv -f {params.extended_frags} {output.se}
         """
 # ------------------------------------------------------------------------------------------
